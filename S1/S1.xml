@@ -43,6 +43,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <pretext  xml:lang="pt-BR">
 
     <docinfo>
+     <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png"/>
         <macros>
         \newcommand{\doubler}[1]{2#1}
         \newcommand{\dd}{\mathrm{d}}
