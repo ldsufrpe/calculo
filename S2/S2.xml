@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
+
+
+
+        <macros>
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-integral-1">
+        <title>Cálculo Integral: S2</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
+        </introduction>
+    <section>
+    <title>Área e o Teorema Fundamental do Cálculo</title>
+    <subsection xml:id="sec-TFC">
+            <title>Área e a integral definida </title>
+        <objectives>
+            <title>Estrutura</title>
+            <introduction>
+                <p>
+                    Aqui vamos por os objetivos
+                </p>
+            </introduction>
+            <ol>
+                <li>
+                    <p>
+                        Primeiro
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Segundo
+                    </p>
+                </li>
+            </ol>
+            
+        </objectives>
+
+    <definition xml:id="def-area">
+    <title>Área</title>
+    <statement>
+        <p>
+            Seja <m>f</m> não negativa e contínua no intervalo fechado <m>[a,b]</m>. A área limitada pelo gráfico 
+            de <m>f</m>, pelo eixo <m>x</m> e pelas retas <m>x=a</m> e <m>x=b</m> é denotado por
+            <sidebyside widths="60% 30%"  valign="mindle mindle"> 
+                
+            <p>
+                <md>
+                    <mrow> \text{Área} =  \integrald{f(x)}{a}{b}{x} </mrow>.
+                </md>
+        A expressão    <m> \int_a^b f(x)\dd </m> é chamada de <term> integral definida</term> de <m>a</m> até <m>b</m>, em que <m>a</m>  e <m>b</m>
+        são os limites inferior e superior de  integração, respectivamente.
+            </p>
+                
+            
+            <figure xml:id="fig-area">
+            <caption>Área sob o gráfico de <m>f(x)</m> entre <m>a</m> e <m>b</m>.</caption>            
+               
+            <image source="images/area-integral-definida" width="30%"/>
+           
+            </figure>
+        </sidebyside>                 
+        
+        
+               
+    </p>
+    </statement>
+    </definition> 
+
+   <!-- <figure xml:id="fig-area">
+            <caption>Área sob <m>f</m> entre <m>a</m> e <m>b</m></caption>
+            
+    <description>Teste</description>      
+    <image source="images/area-integral-definida" width="50%"/>
+           
+    </figure>-->
+
+    <technology>
+    <title>Faça você mesmo</title>
+    
+    <statement>
+        <p>
+            Para visualizar a região sob o gráfico de um função <em>não negativa</em> entre <m>a</m> e <m>b</m> se diriga até 
+             a calculadora gráfica abaixo e siga os seguntes passos:
+
+             <ol>
+                 <li>
+                     <p>
+                         Insira uma função contínua pelo menos no intervalo <m>[-10,10]</m> ou em qualquer sebintervalo deste.
+                          Por exemplo, <m>[0,1].</m> 
+                     </p>
+                 </li>
+                 <li>
+                     <p>
+                         Olhando para o gráfico, faça ajustes no intervalo para garatir que 
+                         o gráfico de <m>f(x)</m> inserido no passo anterior (por padão você verá o gráfico da função <m>y=x^2</m>)
+                          esteja sempre acima do eixo <m>x</m>.
+                     </p>
+                 </li>
+                 <li>
+                     <p>
+                         Marque a opção para mostrar a região pretendida.
+                     </p>
+                 </li>
+             </ol>
+            Seguindo os passos acima você encontra a região cuja <term> área</term>  é igual a <me>\integrald{f(x)}{a}{b}{x}</me>.
+        </p>
+    </statement>
+
+    <figure xml:id="figure-interactive-numerical-integral">
+                    <caption>Região sob o gráfico de uma função</caption>
+
+                    <interactive xml:id="interactive-numerical-integral" platform="sage" width="95%" aspect="1:1" >
+                    <slate surface="sage">                    
+                    @interact
+                    def _(
+                            f=input_box(x^2 , width=20, 
+                            label="f(x) ="), 
+                            x_range=range_slider(-10,10,1,(0,10), label='[a, b]'),
+                            area = checkbox(False, label='Região')):
+                            a = x_range[0] ; b = x_range[1]
+                            p = plot(f,(x, a , b), axes_labels=['x', 'y'], figsize=[3,3], fill=area, ticks=[[a, b],[]])  
+                            p.show()
+                    </slate>
+                    </interactive>
+                </figure>
+    </technology>
+
+    
+
+     <note>
+    Outra forma de introduzir a integral definida é através do limite de somas. Mais adiante daremos mais detalhes sobre essa abordagem.
+    </note>  
+
+
+ <example xml:id="ex1-area">
+     <statement>
+         <p>
+             Calcule a área da região limitada pelo gráfico de pelo gráfico de  <m> f(x)=x^2 </m>, pelo eixo <m>x</m> 
+             e pelas retas <m>x=a</m> e <m>x=b</m>.
+         </p>
+     </statement>
+     <solution>
+         <p>
+             depois
+         </p>
+     </solution>
+ </example>
+
+
+<exercise xml:id="exe1-area">
+
+<statement>
+    <p>Calcule a integral definida <m>\integrald{4x}{0}{3}{x}</m> usando uma fórmula geométrica. Ilustre sua resposta
+    com um gráfico apropriado.</p>
+</statement>
+
+<hint>
+    <p>Just a little help.</p>
+</hint>
+
+<answer>
+    <p>The result, but no help in getting there.</p>
+</answer>
+
+<solution>
+    <p>Everything to get it all done, in detail.</p>
+</solution>
+
+
+</exercise>
+</subsection>
+
+    <subsection xml:id="sec-TFC">
+        <title>Teorema Fundamental do Cálculo</title>
+        <objectives>
+            <title>Estrutura</title>
+            <introduction>
+                <p>
+                    Aqui vamos por os objetivos
+                </p>
+            </introduction>
+            <ol>
+                <li>
+                    <p>
+                        Primeiro
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Segundo
+                    </p>
+                </li>
+            </ol>
+                   
+        </objectives>
+        
+    <theorem xml:id="thm-TFC">
+    <title>Teorema Fundamental do Cálculo</title>
+        <statement>
+            <p>
+                Se <m>f(x)</m> é contínua no intervalo <m>[a,b]</m>, e a derivada de   <m>F(x)</m> é igual a <m>f(x)</m> para todo <m>x</m> nesse intervalo, então
+                <md>
+                    <mrow> \integrald{f(x)}{a}{b}{x}= F(b) - F(a), </mrow>
+                </md>               
+            </p>
+        
+        <proof>
+            <p>
+                depois
+            </p>
+        </proof>
+        </statement>
+    </theorem>
+
+  
+    <assemblage xml:id="assemblage-definida-indefinida">
+        <title>Atenção</title>
+        <p>
+            Diferença entre integrais definidas e indefinidas
+        </p>
+    </assemblage>
+    <example xml:id="ex2-tfc">
+        <statement>
+            <p>
+                Usando o Teorema Fundamental do Cálculo  resolva  a integral 
+                
+                <md>
+                    <mrow>\integrald{2x}{0}{2}{x}. </mrow>
+                </md>
+               
+
+            </p>
+        </statement>
+        <solution>
+            <p>
+                depois
+            </p>
+        </solution>
+    </example>
+    <exercise xml:id="exe2-TFC">
+    <title>Usando o Teorema Fundamental do Cálculo</title>
+    
+    
+         <statement>
+         <p>
+        Usando o <xref ref="thm-TFC"/>   resolva  a integral 
+                <md>
+                    <mrow>\integrald{4x}{0}{3}{x}.</mrow>
+                </md>
+                </p>
+        </statement>
+    <hint>
+    <p>Just a little help.</p>
+    </hint>
+
+    <answer>
+        <p>The result, but no help in getting there.</p>
+    </answer>
+
+    <solution>
+        <p>Everything to get it all done, in detail.</p>
+    </solution>   
+    </exercise>
+     
+    <assemblage xml:id="assemblage-notacao">
+        <title>Notação útil</title>
+        <p>Quando usamos o Teorema Fundamntal do Cálculo é util usar a notação
+
+        <md>
+            <mrow> \integrald{f(x)}{a}{b}{x}=F(x)\biggr\rvert_a^b= F(b) - F(a).</mrow>
+        </md>
+        
+        </p>
+    </assemblage>
+
+    <investigation> 
+    <title> Onde está a constante <m>C</m>?</title>
+    <statement>
+        <p>
+              Revise o <xref ref="thm-TFC" text="title"> </xref> e justifique o "sumiço" da constante <m>C</m> que forma a primitiva <m>F</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            depois
+        </p>
+    </hint>
+      <solution>
+          <p>
+              depois
+          </p>
+      </solution>
+    </investigation>
+
+    <assemblage xml:id="assemblage-definida-propriedade">
+        <title>Propriedades da integral definida</title>
+        <p> Sejam <m>f</m> e <m>g</m> contínuas no intervalo <m>[a,b]</m> e <m>k</m> uma constante.
+            <ol label="I)">
+                <li xml:id="p-constante">
+                    <p>
+                        <m>\integrald{kf(x)}{a}{b}{x} = k \integrald{f(x)}{a}{b}{x}</m>
+                    </p>
+                </li>
+                <li xml:id="p-soma">
+                    <p>
+                        <m>\integrald{\left[f(x)+ g(x)\right]}{a}{b}{x} = \integrald{f(x)}{a}{b}{x} + \integrald{g(x)}{a}{b}{x}</m>
+
+                    </p>
+                </li>
+                <li xml:id="p-sub">
+                    <p>
+                        <m>\integrald{\left[f(x)- g(x)\right]}{a}{b}{x} = \integrald{f(x)}{a}{b}{x} - \integrald{g(x)}{a}{b}{x}</m>
+
+                    </p>
+                </li>
+                <li xml:id="p-acb">
+                    <p>
+                        <m>\integrald{f(x)}{a}{b}{x} = \integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x} \quad a &lt; c &lt; b </m>
+
+                    </p>
+                </li>
+            </ol>
+        </p>
+        
+    </assemblage>
+
+    
+    <example xml:id="ex3-area">
+        <statement>
+            <p>
+                Determine a área sob o gráfico de <m>f(x)=x^2-1</m> entre <m>1</m> e <m>2</m>.
+            </p>
+        </statement>
+        <solution>
+            <p> Note que ....plotar o gráfico logo à esquerda
+
+            <figure xml:id="fig-area1">          
+   
+            <image source="images/exemplo-area-1" width="40%">
+                
+            </image>
+                
+            </figure>          
+
+                <md>
+                    <mrow> \text{Área}  \amp = \integrald{(x^2-1)}{1}{2}{x} \amp \amp \text{Integral definida}</mrow>
+                    <mrow>      \amp =\left(\frac{x^3}{3}-x\right)\Biggr\rvert_1^2 \amp \amp \text{Calcule a primitiva} </mrow>
+                    <mrow> \amp = \left(\frac{2^3}{3}-2\right)- \left(\frac{1^3}{3}-1\right)  \amp \amp \text{Aplique o} \, <xref ref="thm-TFC"/> </mrow>
+                    <mrow> \amp = \frac{4}{3} </mrow>
+                </md>       
+            </p>
+        </solution>
+    </example>
+    <exercise xml:id="exe3-area">
+    <title>Cálculo da área</title>
+        <statement>
+            <p>
+                Determine a área da região limitada pelo eixo <m>x</m>, pelas retas <m>x=2</m>, <m>x=3</m>
+                e pelo gráfico de <m>f(x)=x^2+1.</m>
+            </p>
+        </statement>
+        <hint>
+            <p>
+                depois
+            </p>
+        </hint>
+        <answer>
+            <p>
+                depois
+            </p>
+        </answer>
+        <solution>
+            <p>
+                depois
+            </p>
+        </solution>
+    </exercise>
+    <example xml:id="ex4-area">
+        <statement>
+            <p>
+                <task>
+                    <p>
+                        Calcule a integral definida <m>\integrald{(4t+1)^2}{0}{1}{t}</m>
+                    </p>
+                     <solution>
+                        <p>
+                            depois
+                        </p>
+                    </solution>
+                </task>
+                <task>
+                    <p> Esboce um gráfico da região cuja a área representa a integral acima.
+                        <figure xml:id="fig-area2">
+                            <caption></caption>
+                            <image source="images/exemplo-area-2" width="40%">
+                                <description>(for accessibility)</description>
+                            </image>
+                        </figure>
+                    </p>
+                </task>
+            </p>
+        </statement>       
+    </example>
+    <exercise xml:id="exe4-integral-definida">
+    <title>Cálculo da integral definida</title>
+        <statement>
+            <p>
+                Calcule a integral definida <m>\integrald{(2t+3)^3}{0}{1}{t}</m>.
+            </p>
+        </statement>
+        <hint>
+            <p>
+                depois
+            </p>
+        </hint>
+        <answer>
+            <p>
+                depois
+            </p>
+        </answer>
+        <solution>
+            <p>
+                depois
+            </p>
+        </solution>
+    </exercise>
+    <example xml:id="ex5-integral-definida">
+        <statement>
+            <p>
+                <task>
+                    <p>
+                        <m>\integrald{e^{2x}}{0}{3}{x}</m>
+                    </p>
+                <solution>
+                    <p>
+                        depois
+                    </p>
+                </solution>
+                </task>
+                <task>
+                    <p>
+                        <m>\integrald{\frac{1}{x}}{1}{2}{x}</m>
+                    </p>
+                    <solution>
+                        <p>
+                            depois
+                        </p>
+                    </solution>
+                </task>
+                <task>
+                    <p>
+                        <m>\integrald{-3\sqrt{t}}{1}{4}{t}</m>
+                    </p>
+                    <solution>
+                        <p>
+                            depois
+                        </p>
+                    </solution>
+                </task>
+            </p>
+        </statement>
+        
+    </example>
+    <exercise xml:id="exe5-log-exp">
+        <title>Logaritmos e exponenciais</title>
+        <statement>
+            <p>
+                Calcule cada integral definida.
+                <task>
+                    <p>
+                        <m>\integrald{e^{4x}}{0}{1}{x}</m>
+                    </p>
+                    <hint>
+                        <p>
+                            depois
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                            depois
+                        </p>
+                    </answer>
+                    <solution>
+                        <p>
+                            depois
+                        </p>
+                    </solution>
+                </task>
+                <task>
+                    <p>
+                        <m>\integrald{-\frac{1}{x}}{2}{5}{x}</m>
+                    </p>
+                     <hint>
+                        <p>
+                            depois
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                            depois
+                        </p>
+                    </answer>
+                    <solution>
+                        <p>
+                            depois
+                        </p>
+                    </solution>
+                </task>
+                
+            </p>
+        </statement>
+    </exercise>
+    <example xml:id="ex6-integral-definida">
+        <statement>
+            <p>
+                Calcule <m>\integrald{|2x-1|}{0}{2}{x}</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                depois
+            </p>
+        </solution>
+    </example>
+    
+<activity>
+<title>Valor absoluto</title>
+    <prelude>
+    <p>Algum texto.</p>
+    </prelude>
+    <statement>
+    <p>           
+          
+    <task xml:id="exe-a">
+        <p>
+            Determine a região determinada pelo gráfico de <m>f(x)=|x-2|</m>, pelas as retas <m>x=0</m> e <m>x=2</m>
+            e o eixo <m>x</m>.
+        </p>
+    </task>
+    <task xml:id="exe-b">
+        <p>
+            Calcule a área da região descrita na <xref ref="exe-a"/> usando fórmulas geométricas.
+        </p>
+    </task>
+    <task xml:id="exe-c">
+    <p>
+        Calcule  <m>\integrald{|x-2|}{0}{5}{x}</m> e compare com a <xref ref="exe-b"/>.
+    </p>    
+    </task>
+    </p>
+    </statement>
+   <postlude>
+  <p> Algum texto</p>
+   </postlude>
+   <hint>
+       <p>
+           depos
+       </p>
+   </hint>
+   <answer>
+       <p>
+           depois
+       </p>
+   </answer>
+<solution>
+    <p>
+        <figure>
+        <image source="images/exe-area-absoluto" width="40%">
+            <description>(for accessibility)</description>
+        </image>
+        </figure>
+    </p>
+</solution>
+</activity>
+
+<investigation xml:id="inv-propriedades">
+    
+    <statement>
+        <p>
+           Use os recursos matemáticos apresentados até aqui para mostrar que as
+            <xref ref="assemblage-definida-propriedade" text="title"> </xref> são verdadeiras.          
+        </p>
+    </statement>
+</investigation>
+
+
+
+</subsection>
+<subsection xml:id="subsec-simetria">
+       
+        
+    <title>Integrando funções com gráficos simétricos</title>
+
+     <introduction>
+         <p>
+            Gráficos de funções são úteis para analisar várias propriedades importanetes.
+        Diversas funções possuem  simetria em relação em relação ao eixo <m>y</m>, como na <xref ref="fig-par"/> e 
+        outras apresentam simetria em relação ao eixo <m>x</m>, como na <xref ref="fig-impar"/>. No primeiro caso,
+        a função é dita <term> par</term> e satisfaz <m>f(-x)=f(x)</m>, e no segundo a função é dita <term>ímpar</term> e satisfaz
+         <m>f(-x)=-f(x)</m>.
+         </p>
+     
+       </introduction>
+
+      
+
+<figure>
+<sidebyside widths="48% 48%" valigns="middle middle" >
+    
+<figure xml:id="fig-par">
+<caption>Simetria em relação ao eixo y</caption>
+<image source="images/f-par" width="50%">
+<description></description>    
+</image>
+</figure>
+
+<figure xml:id="fig-impar">
+<caption>Simetria em relação ao eixo x</caption>
+<image source="images/f-impar" width="50%">
+<description>Simetria em relação ao eixo x</description>    
+</image>
+</figure>
+</sidebyside> 
+</figure> 
+
+<assemblage xml:id="assemblage-par-impar">
+    <title> Integração com funções pares e ímpares</title>    
+     <prelude>
+     <p>Testandooooooo</p>
+     </prelude>                   
+   <p>
+   <ol label="I)">
+       <li xml:id="fact-par-1">
+           <p>
+               Se <m>f</m> for uma função <term>par</term>, então 
+            <m>\integrald{f(x)}{-a}{a}{x}=2\integrald{f(x)}{0}{a}{x}</m>
+           </p>
+       </li>
+       <li xml:id="fact-impar-2">
+           <p>
+                Se <m>f</m> for uma função <term>ímpar</term>, então 
+            <m>\integrald{f(x)}{-a}{a}{x}=0</m>
+           </p>
+       </li>
+   </ol>
+   
+  
+    </p> 
+     
+ </assemblage>
+
+<example xml:id="ex-par-impar">
+    <statement>
+        <p>Calcule a integral definida
+            
+            <task>
+                <p>
+                    <m>\integrald{x^2}{-2}{2}{x}</m>
+                </p>
+                <solution>
+                    <p>
+                        depois
+                    </p>
+                </solution>   
+            </task>
+             
+            <task>
+                    <p>
+                       <m>\integrald{t^3}{-2}{2}{t}</m>
+                    </p>
+                <solution>
+                    <p>
+                        depois
+                    </p>
+                </solution>     
+            </task>
+                       
+        </p>
+    </statement>
+    
+</example>
+
+ 
+<exercise xml:id="exe7-par-impar">
+    <statement>
+        <p>
+            <task>
+                <p>
+                    <m>\integrald{t^4}{-1}{1}{t}</m>   
+                  
+                </p>
+                <hint>
+                <p>
+                    depois
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    depois
+                </p>
+            </answer>          
+            </task>  
+            
+            
+                  
+         
+            <task>
+                <p>
+                    <m>\integrald{x^5}{-1}{1}{x}</m>
+                </p>
+                <hint>
+                <p>
+                    depois
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    depois
+                </p>
+            </answer>
+            </task>
+             
+        </p>
+    </statement>
+</exercise>
+
+
+<investigation xml:id="act-par-impar">
+ <title>Sobre a integral de funções pares e ímpares</title>
+    <statement>
+        <p>
+        Use os recursos matemáticos apresentados até aqui para mostrar que o <xref ref="fact-par-1"/> e 
+        o <xref ref="fact-impar-2"/> são verdadeiros.  
+     </p>
+ </statement>                
+         
+ <hint>
+     <p>
+         depois
+     </p>
+ </hint>
+ <solution>
+     <p>
+         depois
+     </p>
+ </solution>
+ </investigation> 
+
+<technology>
+<title>Sage</title>
+<introduction>
+    <p>
+    Softwares podem ser úteis para calcular as integrais definidas complicadas. Um ótima opção é utilizar sistema
+de computação algébrica <em>SageMath</em>. Usando o comando <c>integral(f, (x, a, b))</c> é possível 
+calcular a integral definida de <m>f(x)</m> <m>a</m> até <m>b</m>. Lembre-se que você pode editar a célula abaixo para inserir 
+seus comandos.
+    </p>
+</introduction>
+
+<sage>
+    <input>
+        integral(x^2, (x, -1, 1))
+    </input>
+    <output>
+        2/3
+    </output>
+</sage>
+
+<p> É importante lembrar que se a função estiver definida em uma variável simbólica diferente de <m>x</m> 
+você terá duas opções:
+<ol>
+    <li>
+        <p>
+            substituir essa variável por <m>x</m> quando for inserir o comando na célula.
+        </p>
+    </li>
+   <li>
+       <p>
+           Definir a nova variável usando comando <c>var()</c>.
+       </p>
+   </li>
+</ol>
+ </p>
+<p> Logo abaixo vamos cálcular a integral <m>\integrald{t^5}{-1}{1}{t}</m> de ambas as formas.</p>
+
+<paragraphs>
+    <title>Usando a variável <m>x</m></title>
+<sage>
+    <input>
+        integral(x^5, (x,-1, 1))
+    </input>
+    <output>
+        0
+    </output>
+</sage>    
+</paragraphs>
+<paragraphs>
+    <title>Usando a variável apresentada no problema</title>
+
+
+<sage>
+    <input>
+    var('t')
+    integral(t^5, (t,-1, 1))
+    </input>
+    <output>
+        0
+    </output>
+</sage>
+</paragraphs>
+<activity xml:id="sage-integral-definida">
+<p>Utilize a célular abaixo para calcular as integrais dos exemplos desta seção.</p>
+<sage>
+    <input>        
+
+    </input>
+    <output>
+        (for static output)
+    </output>
+</sage>
+
+</activity>
+
+</technology>
+
+
+</subsection>
+</section>
+
+
+</article>
+
+</pretext>
+
