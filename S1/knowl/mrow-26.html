@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-16T03:34:22-03:00       *-->
+<!--*       on 2020-08-16T19:02:07-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,10 +16,10 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integral{\frac{x^2+ 2x^4}{x^4}}{x} = \amp \integral{\left(\frac{1}{x^2}+2\right)}{x} \quad \amp \text{(reescrevendo o integrando)}\\
-\amp =\integral{x^{-2}}{x}-\integral{2}{x} \amp \knowl{./knowl/thm-prop-integral-indefinida-b.html}{\text{Propriedade II}}\\
-\amp =\frac{x^{-1}}{-1}+2x + C  \amp \knowl{./knowl/tabela2-integrais.html}{\text{Tabela 1.21}}\\
-\amp =-\frac{1}{x}+2x + C \amp \text{(simplificando)}
+\integral{\frac{x^2}{x^2+1}}{x} \amp = \integral{\left(\frac{x^2+1}{x^2+1}-\frac{1}{x^2+1}\right)}{x} \amp \color{gray}{\text{(reescrevendo o integrando)}}\\
+\amp =\integral{\left(1-\frac{1}{x^2+1}\right)}{x} \\
+\amp = \integral{1}{x} - \integral{\left(\frac{1}{x^2+1}\right)}{x} \quad \amp \knowl{./knowl/thm-prop-integral-indefinida-c.html}{\text{Propriedade III}}\\
+\amp = x - \arctan{x} + C \quad  \quad \amp \knowl{./knowl/tabela2-integrais.html}{\text{Tabela 1.21}}
 \end{align*}
 </div>
 <span class="incontext"><a href="sec-integral-indefinida.html#mjx-eqn-mrow-26">[incontext]</a></span>
