@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-15T22:24:15-03:00       *-->
+<!--*       on 2020-08-16T03:34:21-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,36 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><p xmlns:svg="http://www.w3.org/2000/svg">depois</p></div></body>
+<body><div class="solution solution-like">
+<p>A fórmula da <a class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="[assemblage]: Integral da função potência">Integral da função potência</a> não é válida para \(x=-1\text{.}\) Logo não é possivel utilizá-la para obter a integral indefinida de \(1/x\text{.}\) O passo natural é encontrar uma função cuja derivada seja \(1/x\text{.}\) Sabe-se que</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{\dd}{\dd x}\ln{x}= \frac{1}{x}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Então,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">De fato o logaritmo natual não está definido para valores menores que zero. Mas,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x},
+\end{equation*}
+</div>
+<p data-braille="continuation">para \(x \lt 0\text{.}\) Então,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\integral{\frac{1}{x}}{x}  \ln{(-x)} + C, \quad x \lt 0 \text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">De XXXX e XXXX concluimos que \(\ln{x}\) é primitiva de  \(\sfrac{1}{x}\) se \(x\gt 0\) e que  \(\ln{(-x)}\) é primitiva de \(1/x\) se \(x\lt 0\text{.}\) Mais diretamente, podemos afirmar que \(\ln{|x|}\) é uma primitiva de \(1/x\text{.}\) Portanto,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\integral{\frac{1}{x}}{x} = \ln{|x|} + C\text{.}
+\end{equation*}
+</div>
+</div></body>
 </html>

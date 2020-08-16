@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-15T22:24:16-03:00       *-->
+<!--*       on 2020-08-16T03:34:22-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,14 +16,33 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">b.1</span><span class="period">.</span>
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.17.1</span><span class="period">.</span>
 </h6>
+<p>A família de primitivas de \(F''(x)\) é naturalmente</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integral{\frac{x^2+ 2x^4}{x^4}}{x} = \amp \integral{\left(\frac{1}{x^2}+2\right)}{x} \quad \amp \text{(reescrevendo o integrando)}\\
-\amp =\integral{x^{-2}}{x}-\integral{2}{x} \amp \knowl{./knowl/thm-prop-integral-indefinida-b.html}{\text{Propriedade II}}\\
-\amp =\frac{x^{-1}}{-1}+2x + C  \amp \knowl{./knowl/tabela2-integrais.html}{\text{Tabela 1.17}}\\
-\amp =-\frac{1}{x}+2x + C \amp \text{(simplificando)}
+F'(x) \amp = 12\frac{x^4}{4} + 6\frac{x^2}{2} -4x+ C \amp  \color{gray}{\frac{\dd}{\dd x}\left[F'(x)\right]=F''(x)} \\
+\amp =4x^3 + 3x^2-4x+C 
+\end{align*}
+</div>
+<p data-braille="continuation">Assim como todas as primitivas de \(F'(x)\) tem a forma</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+F(x)\amp = 4\frac{x^4}{4} + 6\frac{x^3}{3} -4\frac{x^2}{2} + Cx + D \amp \color{gray}{\frac{\dd}{\dd x}\left[F(x)\right]=F'(x)} \\
+\amp = x^4 + 3x^3-2x^2+Cx+D 
+\end{align*}
+</div>
+<p data-braille="continuation">Uma vez que \(F\) deve satisfazer \(F(0)=4\) e \(F(1)=1\) temos</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+F(0)  \amp = 0+D =4 \\
+F(1) \amp = 1+ 1-2+C+4=1 
+\end{align*}
+</div>
+<p data-braille="continuation">que nos fornece \(D=4\) e \(C=-3\text{.}\) Por fim, encontramaos</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+F(x) = x^4+ x^3-2x^2-3x+4 \amp \text{.}
 \end{align*}
 </div>
 </div>

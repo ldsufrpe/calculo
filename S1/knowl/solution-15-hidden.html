@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-15T22:24:16-03:00       *-->
+<!--*       on 2020-08-16T03:34:22-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,15 +13,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">Somando e subtraindo 1 do numerador do integrando, podemos reescrever a integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integral{\frac{x^2}{x^2+1}}{x} \amp = \integral{\left(\frac{x^2+1}{x^2+1}-\frac{1}{x^2+1}\right)}{x} \amp \text{(reescrevendo o integrando)}\\
-\amp =\integral{\left(1-\frac{1}{x^2+1}\right)}{x} \\
-\amp = \integral{1}{x} - \integral{\left(\frac{1}{x^2+1}\right)}{x} \quad \amp \knowl{./knowl/thm-prop-integral-indefinida-c.html}{\text{Propriedade III}}\\
-\amp = x - \arctan{x} + C \quad  \quad \amp \knowl{./knowl/tabela2-integrais.html}{\text{Tabela 1.17}}
+\integral{(t^5 + 2t^3 - t + 1)}{t}\amp = 
+\integral{t^5}{t} + 2\integral{t^3}{t} - \integral{t}{t} +
+\integral{1}{t}
+\amp \knowl{./knowl/thm-prop-integral-indefinida.html}{\text{Propriedadades da Integral Indefinida}} \\
+\amp = \frac{t^{6}}{6}  + \frac{t^{4}}{2} - \frac{t^{2} }{2}  + t + C \amp \knowl{./knowl/prob-integral-funcao-potencia.html}{\text{Integral da função potência}}
 \end{align*}
-</div>
-</div></body>
+</div></div></body>
 </html>
