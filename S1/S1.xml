@@ -363,21 +363,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <ol label="I)" >
                        <li xml:id="thm-prop-integral-indefinida-a">
                         <p>
-                             <m>\integral{kf(x)}{x}=k\integral{f(x)}{x}</m> 
+                             <m>\small{\integral{kf(x)}{x}=k\integral{f(x)}{x}}</m> 
                         </p>
                        </li>
                    
                         <li xml:id="thm-prop-integral-indefinida-b">
                         <p>
-                            <m>\integral{\left[ f(x) + g(x)\right]}{x}=\integral{f(x)}{x} + \integral{g(x)}{x} + C</m>
+                            <m>\small{\integral{\left[ f(x) + g(x)\right]}{x}=\integral{f(x)}{x} + \integral{g(x)}{x} + C}</m>
                         </p>
                         </li>
                     
                         <li xml:id="thm-prop-integral-indefinida-c" >
                         <p>
-                            <m>\integral{\left[f(x) - g(x)\right]}{x}=\integral{f(x)}{x} - \integral{g(x)}{x} + C</m>
+                            <m>\small{\integral{\left[f(x) - g(x)\right]}{x}=\integral{f(x)}{x} - \integral{g(x)}{x} + C}</m>
                         </p>
                         </li>
+                        
                     </ol>
                 </p>
             
@@ -458,7 +459,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
   
      <subsection xml:id="subsec-tabela-integrais">
         <title>Tabela de integrais </title>
-    <sidebyside widths="50% 50%" >
+  
          <table xml:id="tabela1-integrais">
         <title>Tabela de integração</title>
             <tabular top="major" halign="left">
@@ -494,7 +495,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <cell><m>\integral{\frac{1}{x\sqrt{x^2-1}}}{x}=\arcsec{|x|} + C</m></cell></row>
     </tabular>            
     </table>
-   </sidebyside> 
+   
 
 <example xml:id="ex3-prop-integral-indefinida">
             <statement>
