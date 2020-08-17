@@ -367,6 +367,24 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      <exercise>
          <statement>
              <p>
+                  Para a função <m>f(x)=2(x-1)</m>, encontre a primitiva, <m>F(x)</m>, que satisfaça <m>F(3)=2</m>.
+             </p>
+         </statement>
+         <hint>
+             <p>
+                  Revise o <xref ref="exer-primitiva-particular"/>
+             </p>
+         </hint>
+         <answer>
+             <p>
+                 <m>x^2-2x-1</m>
+             </p>
+         </answer>
+     </exercise>
+
+     <exercise>
+         <statement>
+             <p>
                  Para a função <m>f(x)=x^{-\frac{1}{3}}-1</m>, encontre a primitiva, <m>F(x)</m>, que satisfaça <m>F(8)=4</m>.
              </p>
          </statement>
@@ -382,6 +400,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
              </p>
          </answer>
      </exercise>
+     
     <activity>
         <title>Verificando fatos</title>
         <statement>
@@ -1092,6 +1111,24 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
     </solution>
 </example>
 
+<exercise xml:id="exer1-sol-geral">
+    <statement>
+        <p>
+            Encontre a solução geral da equação <m>\frac{\dd y}{\dd t}=10e^t</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Revise <xref ref="ex-diferencial-2"/>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+           <m> y(t)= 10e^t + C</m>.
+        </p>
+    </answer>
+</exercise>
+
 <p>Frequentemente estamos interssados em encontrar uma única solução para a  equação diferencial. Por exemplo, no <xref ref="ex1-curvas-integrais"/> encontramaos a equação da para uma
  <xref ref="curvas-integrais" text="custom"> curva integral</xref> que passa por <m>(2,1)</m>. O Problema de encontrar uma função    <m>y(x)</m>, que satisfaça <xref ref="eq-diferencial"/> e cuja curva integral 
    passa pelo ponto <m>(x_0,y_0)</m>  é denominado    <term>problema de valor inicial </term> e geralmente apresentado da forma
@@ -1174,7 +1211,49 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
             </p>
         </solution>
     </example>
-
+<exercise xml:id="exer-pvi-1">
+    <statement>
+        <p>
+            Encontre a solução do problema de valor inicial
+        </p>
+        <task>
+         <statement>
+             <p>
+                 <m>\frac{\dd y}{\dd t}=10e^t, \quad y(0)=25</m>
+             </p>
+         </statement>
+         
+           <hint>
+               <p>
+                   Revise <xref ref="exer1-sol-geral"/>.
+               </p>
+           </hint>
+           <answer>
+               <p>
+                   <m>10e^t + 15</m>
+               </p>
+           </answer>
+           </task>
+           <task>
+              <statement>
+                  <p>
+                     <m> \frac{\dd y}{\dd t} = 2+ \sin{t}, \quad  y(0)=5</m>
+                  </p>
+              </statement>
+              <hint>
+                  <p>
+                       Revise <xref ref="ex2-pvi"/>.
+                  </p>
+              </hint>
+              <answer>
+                  <p>
+                     <m>2t-\cos{t} + 6</m> 
+                  </p>
+              </answer>
+           </task>
+       
+    </statement>
+</exercise>
 </subsection> 
     <subsection xml:id="subsec-resolvendo-e-diferenciais">
     <title>Campos de Direções</title>
@@ -1273,25 +1352,35 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
             </p>
         </introduction>
         <exercise>
-            <m>\frac{dy}{dx}=3x-1\quad \text{e} \quad y(0)=2</m>
+            <m>\frac{\dd y}{\dd x}=3x-1\quad \text{e} \quad y(0)=2</m>
         </exercise>
         <exercise>
-            <m>\frac{dy}{dx}=\cos{x} \quad \text{e} \quad y(0)=0</m>
+            <m>\frac{\dd y}{\dd x}=\cos{x} \quad \text{e} \quad y(0)=0</m>
         </exercise>
         <exercise>
-            <m>\frac{dy}{dx}=x^3-x+1 \quad \text{e}\quad  y(1)=1</m>
+            <m>\frac{\dd y}{\dd x}=x^3-x+1 \quad \text{e}\quad  y(1)=1</m>
         </exercise>
         <exercise>
-            <m>\frac{dy}{dx}=e^{-x} \quad \text{e}\quad  y(0)=1</m>
+            <m>\frac{\dd y}{\dd x}=e^{-x} \quad \text{e}\quad  y(0)=1</m>
         </exercise>
         <exercise>
-            <m>\frac{dy}{dx}=\frac{1}{x^2}\quad  \text{e}\quad  y(1)=1\quad (x>0)</m>
+            <m>\frac{\dd y}{\dd x}=\frac{1}{x^2}\quad  \text{e}\quad  y(1)=1\quad (x>0)</m>
         </exercise>
         <exercise>
-           <m> \frac{dy}{dx}=3 + \frac{1}{x}\quad  \text{e}\quad  y(1)=2\quad(x>0)</m>
+           <m> \frac{\dd y}{\dd x}=3 + \frac{1}{x}\quad  \text{e}\quad  y(1)=2\quad(x>0)</m>
         </exercise>
         </exercisegroup>
+    
+    <exercise>
+       <p>Mostre que <m>y=xe^{-x} + 2</m> é uma solução do problema de valor inicial</p>
+       <me>
+           \frac{\dd y}{\dd x} = (1-x)e^{-x}, \quad y(0)=2.
+       </me>       
+   </exercise>
+
+
     </exercises>
+   
    
     </section>
 
