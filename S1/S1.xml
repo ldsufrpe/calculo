@@ -902,6 +902,9 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
 
 </section>
 
+
+<!--          inicio de nova seção               -->
+
     <section xml:id="sec-eq-diferenciais">
         <title>Equações Diferenciais</title>
 
@@ -940,27 +943,56 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
             <task>
             <statement>
                 <p>
-                 Encontre a equação da curva integral da função <m>f(x)=x</m> que passe pelo ponto <m>(2,1)</m>.
+                 Encontre a equação da curva integral, <m>y=y(x)</m>, da função <m>f(x)=x</m> que passe pelo ponto <m>(2,1)</m>.
                 </p>
             </statement>
                
                 <solution>
                     <p>
-                        depois
+                        Segue da <xref ref="curvas-integrais"/> que a curva integral de um função <m>f(x)</m> é a 
+                        sua primitiva mais uma constante. Neste caso,
+
+                        <me>
+                            y(x)= \frac{x^2}{2} + C
+                        </me>.
+                        O próximo passo é encontra o valor de <m>C</m> que garanta que qua a curva integral passe pelo ponto 
+                        <m>(2,1)</m>. Para isso, fazemos
+                        <me>
+                            y(2)= \frac{2^2}{2} + C = 1
+                        </me>
+                        e obtemos <m>C=-1</m>. Portanto,
+                        <me>
+                            y=\frac{x^2}{2} -3
+                        </me>
+                        é a curva solicitada.
                     </p>
                 </solution>
             </task>
             <task>
             <statement>
                 <p>
-                    Encontre a equação da curva integral  da função <m>f(x)=x^2</m> que passe pelo ponto <m>(2,1)</m>.
+                    Encontre a equação da curva integral, <m>y=y(x)</m>,  da função <m>f(x)=x^2</m> que passe pelo ponto <m>(2,1)</m>.
                 </p>
             </statement>
                 
                 <solution>
                     <p>
-                        depois
+                        Uma vez que <m>\frac{x^3}{3}</m> é uma primitiva de <m>x^2</m>, a curva integral é dada por
+                        <me>
+                            y(x)= \frac{x^3}{3} + C
+                        </me>.
+                        O valor de <m>C</m> para que  a curva integral passe pelo ponto 
+                        <m>(2,1)</m> satisfaz
+                        <me>
+                            y(2)= \frac{3^3}{3} + C = 1
+                        </me>,
+                        logo <m>C=-8</m>. Portanto,
+                        <me>
+                            y=\frac{x^3}{3} -8
+                        </me>
+                        é a curva solicitada.
                     </p>
+                    
                 </solution>
             </task>
                 
@@ -968,7 +1000,23 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
         </statement>
         
     </example>
-    
+    <exercise>
+        <statement>
+            <p>
+                 Encontre a equação da curva integral, <m>y=y(x)</m>,  da função <m>f(x)=2x-2</m> que passe pelo ponto <m>(1,2)</m>.
+            </p>
+        </statement>
+        <hint>
+            <p>
+                Revise <xref ref="ex1-curvas-integrais"/>.
+            </p>
+        </hint>
+        <answer>
+            <p>
+                <m>y=x^2-2x+3</m>.
+            </p>
+        </answer>
+    </exercise>
     </subsection>
     <subsection xml:id="subsec-integral-ed">
         <title>Integral e Equações diferenciais</title>
@@ -979,19 +1027,35 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
     <md>
         <mrow> \frac{\dd y}{\dd x} = x^2 </mrow>
     </md>
-    é uma equação diferencial. Nesse caso, a função desconhecida <m>y(x)</m> pode ser encontrada usando a integral indefinida 
-    (veja a Equação <xref ref="eq-integral-indefinida"/>) como a seguir
+    é uma equação diferencial. Nesse caso, a função desconhecida <m>y(x)</m> pode ser encontrada usando a <xref ref="eq-integral-indefinida" text="custom">integral indefinida </xref> 
+   como a seguir
     <md>
         <mrow> y(x) = \integral{x^2}{x}=\frac{1}{3}x^3 +C.</mrow>
     </md>
     Portanto, dizemos a função <m>y(x)=\frac{1}{3}x^3 +C</m> é uma <term> solução geral</term> da equação diferencial <m>\frac{\dd y}{\dd x} = x^2</m>.
     De forma geral, dada uma função conhecida <m>f(x)</m> a igualdade
-    <mdn>
+    <assemblage xml:id="assemblage-eq-diferencial">        
+        <p>
+            <mdn>
         <mrow xml:id="eq-diferencial"> \frac{\dd y}{\dd x} = f(x)</mrow>
     </mdn>
+        </p>
+    </assemblage>
+    
+    
     é uma denominada <term> equação diferencial</term> e resolvê-la significa encontrar a função <m>y(x)</m> que  satisfaça <xref ref="eq-diferencial"/>. 
-    Isto é, obter a <xref ref="def-primitiva" text="custom"> primitiva </xref> de <m>f(x)</m>.
-     </p>
+    Isto é, obter a <xref ref="def-primitiva" text="custom"> primitiva </xref> de <m>f(x)</m>. Mais diretamente, a solução geral
+    da equação diferencial <xref ref="eq-diferencial"/> é dada por
+   </p>
+        <assemblage xml:id="asse-sol-eq-diferencial"> 
+           
+        <p>
+            <mdn xml:id="sol-eq-diferencial">
+            <mrow> y(x)=\integral{f(x)}{x}</mrow>
+        </mdn>.
+        </p>
+    </assemblage>
+   
 
 <example xml:id="ex-diferencial-1">
     <statement>
@@ -1001,7 +1065,11 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
     </statement>
     <solution>
         <p>
-            depois
+            Já que <m>\sin{x}</m> é uma primitiva de <m>\cos{x}</m>, a solução para a equação diferencial é 
+            <me>
+                y(x) = \sin{x} + C.
+            </me>
+            
         </p>
     </solution>
 </example>
@@ -1013,7 +1081,13 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
     </statement>
     <solution>
         <p>
-            depois
+            Resolver a equação diferencial <m> \frac{\dd y}{\dd x} = 2 + \sin{x}</m> é equivalente a econcontrar 
+            a integral
+            <md>
+               <mrow>  y(x) \amp = \integral{\left(2+ \sin{x}\right)}{x} \amp \quad <xref ref="asse-sol-eq-diferencial" text="custom">Fórmula da solução geral </xref> </mrow>
+               <mrow> \amp =\integral{2}{x} + \integral{\sin{x}}{x}</mrow>
+               <mrow> \amp = 2x -\cos{x} + C</mrow>
+            </md>.            
         </p>
     </solution>
 </example>
@@ -1035,15 +1109,26 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
     <example xml:id="ex1-pvi">
         <statement>
             <p>
+            Resolva o seguinte problema de valor inicial
             <md>
                 <mrow> \frac{\dd y}{\dd x}=\cos{x}, \qquad y(0)=0 </mrow>
-            </md>
+            </md>.
                 
             </p>
         </statement>
         <solution>
             <p>
-                depois
+                No <xref ref="ex-diferencial-1"/> encontramos a solução geral <m>y(x)=\sin{x}+C</m>
+                da equação diferencial <m>\frac{\dd y}{\dd x}=\cos{x}</m>. Para resolver o problema de valor inicial
+                deve-se obter o valor de <m>C</m> para que <m>y(0)=0</m>. Nota-se que <m>C=0</m>, pois 
+                <me>
+                    y(0)=\sin{0} + C=0
+                </me>.
+                Logo, a curva integral procurada é 
+                <me>
+                    y(x)=\sin{x}
+                </me>.             
+                
             </p>
         </solution>
     </example>
@@ -1051,15 +1136,41 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
     <example xml:id="ex2-pvi">
         <statement>
             <p>
+             Resolva o seguinte problema de valor inicial
+            
             <md>
                 <mrow> \frac{\dd y}{\dd x}= 2+ \sin{x} \qquad y(3)=5 </mrow>
-            </md>
+            </md>.
                 
             </p>
         </statement>
         <solution>
             <p>
-                depois
+                Sabe-se do <xref ref="ex-diferencial-2"/> que a solução geral <m>y(x)=2x - \cos{x} +C</m>
+                da equação diferencial <m> \frac{\dd y}{\dd x}= 2+ \sin{x}</m>. Como a curva deve satisfazer <m>y(3)=5</m>, obtemos
+                <me>
+                    y(3)=2\cdot 3-\cos{3} + C=5
+                </me>
+                de modo que <m>C</m> vale 
+                <me>
+                    C = 5+\cos{3}-6 \approx -1.99 \quad \color{gray}{\text{calculadora científica}}
+                </me>.
+                Portanto a solução é
+                <me>
+                    y(x)= 2x - \cos{x} - 1.99
+                </me>.
+                <figure xml:id="fig-pvi2">
+                    <caption>Curva integral <m>y(x)= 2x - \cos{x} - 1.99</m> que passa pelo ponto <m>(3,5)</m>. </caption>
+                    <image xml:id="curva-integra-pvi2" width="50%">
+                        
+                        <sageplot>
+                            P = plot(2*x-cos(x)-1.99, (x,-1, 4), axes_labels=['$x$', '$y$'], gridlines=True)
+                            P+=point((3,5),size=25)
+                            P+=text('(3,5)',(2.8,5.1)) 
+                            P
+                        </sageplot>
+                    </image>
+                </figure>
             </p>
         </solution>
     </example>
@@ -1081,7 +1192,7 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
                 <image xml:id="sageplot-campo-direcoes" width="50%">
                           
                     <sageplot>                  
-                    plot_slope_field(x^2, (-5,5), (-5,5))
+                    plot_slope_field(x^2, (-5,5), (-5,5), color='lightgray')
                     </sageplot>
                 </image>
             </figure>   
@@ -1099,7 +1210,7 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
                     p3 = plot(h, (x, a, b), color='green')
                     p4 = plot(s, (x, a, b), color='magenta') 
                     p5 = plot(t, (x, a, b), color='black')                    
-                    p6 = plot_slope_field(x^2, (-5,5), (-5,5))
+                    p6 = plot_slope_field(x^2, (-5,5), (-5,5), color='lightgray')
                     p1 + p2 + p3 + p4 + p5 + p6
                     </sageplot>
                 </image>
@@ -1113,31 +1224,40 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
 
                     <interactive xml:id="interactive-numerical-integral" platform="sage" width="100%" aspect="1:1.2" >
                     <slate surface="sage">                    
-                    @interact
-                    def _(
-                            f=input_box(x^2 , width=20,  
-                            label="dy/dx ="), 
-                            x_range=range_slider(-10,10,1,(-5,5), label='[a, b]'),C = slider(-5, 5, 1,0, label='C'),
-                            direcoes = checkbox(False, label='Campo de Direções'), 
-                            familia =  checkbox(False, label='Curvas integrais')):
-                            
-                            a = x_range[0] ; b = x_range[1]
-                            F = integral(f, x)
-                            p = plot( F + C, (x, a , b), axes_labels=['x', 'y'], ymax=b, ymin=a, figsize=[5,4]) 
-                            if direcoes:
-                                p+= plot_slope_field(f, (a,b), (a,b), color="lightgrey")
-                            if familia:
-                                if C==0:
-                                    print("Escolha C diferente de 0")
-                                    return p.show()
-                                elif C>0:
-                                    lst= srange(-C, C)
-                                else:
-                                    lst= srange(C, -C)
-                                for c in lst:
-                                    p+=plot(F + c, (x, a , b), color = hue(c/10),axes_labels=['x', 'y'], ymax=b, ymin=a)
-                            
-                            p.show()
+            @interact
+            def _(
+                    f=input_box(x^2 , width=20,  
+                    label="dy/dx ="), 
+                    x_range=range_slider(-10,10,1,(-5,5), label='[a, b]'),c = slider(-5, 5, 1,0, label='C'),
+                    direcoes = checkbox(False, label='Campo de Direções'), 
+                    familia =  checkbox(False, label='Curvas integrais')):
+
+                    a = x_range[0] ; b = x_range[1]
+                    F = integral(f, x)
+                    p = plot(F + c, (x, a , b), axes_labels=['x', 'y'], ymax=b, ymin=a, figsize=[5,4])
+                    F1 = function('F')(x)
+                    if familia==False:
+                        show(F1 == F + c)       
+                        
+                    
+                    if direcoes:
+                        p+= plot_slope_field(f, (a,b), (a,b), color="lightgrey")
+                    if familia:
+                        if c==0:
+                            print("Escolha C diferente de 0")
+                            return p.show()
+                        elif c>0:
+                            lst= srange(-c, c)
+                        else:
+                            lst= srange(c, -c)
+                        for c0 in lst:
+                            p+=plot(F + c0, (x, a , b), color = hue(c0/10),axes_labels=['x', 'y'], ymax=b, ymin=a)
+                        C = var('C')
+                        show(F1 == F + C)
+                    
+
+                    p.show()
+
                     </slate>
                     </interactive>
                 </figure>
@@ -1145,9 +1265,34 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
 
     </subsection>
    
-    
-
-    
+    <exercises xml:id="exercises-eq-diferencial">
+        <exercisegroup >
+        <introduction>
+            <p>
+                Determine a função <m> y=y(x)</m>, <m> x\in\mathbb{R}</m>, para cada condição dada.
+            </p>
+        </introduction>
+        <exercise>
+            <m>\frac{dy}{dx}=3x-1\quad \text{e} \quad y(0)=2</m>
+        </exercise>
+        <exercise>
+            <m>\frac{dy}{dx}=\cos{x} \quad \text{e} \quad y(0)=0</m>
+        </exercise>
+        <exercise>
+            <m>\frac{dy}{dx}=x^3-x+1 \quad \text{e}\quad  y(1)=1</m>
+        </exercise>
+        <exercise>
+            <m>\frac{dy}{dx}=e^{-x} \quad \text{e}\quad  y(0)=1</m>
+        </exercise>
+        <exercise>
+            <m>\frac{dy}{dx}=\frac{1}{x^2}\quad  \text{e}\quad  y(1)=1\quad (x>0)</m>
+        </exercise>
+        <exercise>
+           <m> \frac{dy}{dx}=3 + \frac{1}{x}\quad  \text{e}\quad  y(1)=2\quad(x>0)</m>
+        </exercise>
+        </exercisegroup>
+    </exercises>
+   
     </section>
 
     </article>

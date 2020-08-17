@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-16T19:02:08-03:00       *-->
+<!--*       on 2020-08-17T01:44:47-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -74,26 +74,34 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 def _(
         f=input_box(x^2 , width=20,  
         label="dy/dx ="), 
-        x_range=range_slider(-10,10,1,(-5,5), label='[a, b]'),C = slider(-5, 5, 1,0, label='C'),
+        x_range=range_slider(-10,10,1,(-5,5), label='[a, b]'),c = slider(-5, 5, 1,0, label='C'),
         direcoes = checkbox(False, label='Campo de Direções'), 
         familia =  checkbox(False, label='Curvas integrais')):
-        
+
         a = x_range[0] ; b = x_range[1]
         F = integral(f, x)
-        p = plot( F + C, (x, a , b), axes_labels=['x', 'y'], ymax=b, ymin=a, figsize=[5,4]) 
+        p = plot(F + c, (x, a , b), axes_labels=['x', 'y'], ymax=b, ymin=a, figsize=[5,4])
+        F1 = function('F')(x)
+        if familia==False:
+            show(F1 == F + c)       
+            
+        
         if direcoes:
             p+= plot_slope_field(f, (a,b), (a,b), color="lightgrey")
         if familia:
-            if C==0:
+            if c==0:
                 print("Escolha C diferente de 0")
                 return p.show()
-            elif C>0:
-                lst= srange(-C, C)
+            elif c>0:
+                lst= srange(-c, c)
             else:
-                lst= srange(C, -C)
-            for c in lst:
-                p+=plot(F + c, (x, a , b), color = hue(c/10),axes_labels=['x', 'y'], ymax=b, ymin=a)
+                lst= srange(c, -c)
+            for c0 in lst:
+                p+=plot(F + c0, (x, a , b), color = hue(c0/10),axes_labels=['x', 'y'], ymax=b, ymin=a)
+            C = var('C')
+            show(F1 == F + C)
         
+
         p.show()
 </script></div></div></body>
 </html>
