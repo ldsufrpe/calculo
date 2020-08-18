@@ -43,6 +43,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <pretext  xml:lang="pt-BR">
 
     <docinfo>
+    <latex-preamble>
+    <package>cancel</package>    
+    </latex-preamble>
+    
      <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png"/>
         <macros>
         \newcommand{\doubler}[1]{2#1}
@@ -58,9 +62,37 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \DeclareMathOperator{\arctan}{arc\,tg}
         \DeclareMathOperator{\cot}{cotg}
         </macros>
+        <html>           
+        <!-- Several embedded calculators are available            -->
+        <!-- Use "none" to turn this off (or remove the element)   -->
+        <calculator model="geogebra-classic"/>
+        <!-- @xml:id of a page to be target of index.html redirect -->
+        <!-- This is the @xml:id of the "article", which is not    -->
+        <!-- default behavior, but we do this as a test and as an  -->
+        <!-- illustration                                          -->
+        <index-page ref="integral"/>
+        <!-- specify the style of the html by giving names to      -->
+        <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
+        <!-- put <css style="oscarlevin"/>                         -->
+        <!-- @colors currently unimplementd.                       -->
+        <css style="default" colors="blue_green"/>
+        <!-- Magic IDs identify HTML pages to analytics services   -->
+        <!-- Presence implies relevant Javascript will be added    -->
+        <!-- StatCounter requires both values to be set            -->
+        <analytics google-gst="UA-48811660-1"
+                   statcounter-project="9664088"
+                   statcounter-security="6e60c510"/>
+        <!-- Google search, via masthead textbox is switched on    -->
+        <!-- and associated with a Google account via CX number    -->
+        <!-- <search google-cx=""/> -->
+        <!-- Request fewer tracking cookies for YouTube videos     -->
+        <!-- This is the default, here for documentation/testing   -->
+        <video privacy="yes"/>
+        
+        </html>
     </docinfo>
 
-    <article xml:id="calc-integral">
+    <article xml:id="integral">
         <title>Cálculo Integral: S1</title>
 
         <frontmatter>
@@ -75,13 +107,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </titlepage>
 
             <abstract>
-                <p>Aqui faremos um resumo das atividades da semana.</p>
+                <p>Nesta semana vamos apresentar o conteúdo referente ao cálculo integral e as equações diferenciais.</p>
             </abstract>
 
         </frontmatter>
 
         <introduction>
-            <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
+            <p>Cálculo integral e equações diferenciais.</p>
         </introduction>
         <section xml:id="sec-integral-indefinida">
         <title> A integral </title>
@@ -124,6 +156,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <p>É comum reescrever <xref ref="eq-primitiva"/> como <m>F'(x)=f(x)</m>.</p>
         </note>
         <example xml:id="ex-primitiva1">
+        <title>Determinando Primitivas</title>
             <statement>
                 <p>
                    A primitiva de <m>f(x)=x^2</m> em <m>(-\infty, +\infty)</m> é <m>F(x)=\frac{1}{3}x^3</m>.
@@ -140,6 +173,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </solution>
         </example>
         <example xml:id="ex-primitiva2">
+        <title>Primitivas mais gerais</title>
             <statement>
                 <p>
                     Considere <m>C \in \mathbb{R}</m>. A função <m>G(x)= \frac{1}{3}x^3 + C</m> é, também,
@@ -228,8 +262,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
        </note>
      
      <example xml:id="ex-integral-indefinida-1">
+     <title>Determinação de integrais indefinidas</title>
          
-             <p>Calcule cada integral a seguir:
+             <p>Determine cada integral a seguir:
              <task>
              <statement>
                  <p>
@@ -289,6 +324,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
               
      </example>
      <example xml:id="exer-primitiva-particular">
+     <title>Primitiva particular</title>
         <statement>
             <p>
             
@@ -312,7 +348,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 F(x)= 3\left(\frac{x^2}{2}\right) + x - 4
             </me>.
             
-
+            
             </p>
         </solution>
     </example>
@@ -326,6 +362,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
          
      </assemblage > 
      <example xml:id="ex-integral-indefinida-2">
+     <title>Integração da função potência</title>
          <statement>
              <p>
              <task>
@@ -423,8 +460,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      <title><m>\integral{\frac{1}{x}}{x}</m></title>
          <statement>
              <p>
-
+                Integral da função potência para <m>q=-1</m>:
                 <me>
+                    
                              \integral{\frac{1}{x}}{x} = \ln{|x|} + C
                </me>.        
     
@@ -468,7 +506,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <example>
     <title><m>\integral{e^x}{x}</m></title>
         <statement>
-            <p>
+            <p>Integral da função exponencial:
                 <me>\integral{e^x}{x}=e^x + C </me>
                 </p>
         </statement>
@@ -487,7 +525,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title><m>\integral{\sin{x}}{x}</m> e <m>\integral{\cos{x}}{x}</m></title>
         <statement>
             <p>
-
+            A integral das funções seno e cosseno:
             <md xml:id="int-sen-cos">
                 
                 <mrow xml:id="int-sen">
@@ -545,9 +583,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             
         </assemblage>        
         <example xml:id="ex1-prop-integral-indefinida">
+        <title>Aplicando propriedades</title>
             <statement>
                 <p>
-                    Calcule cada integral:
+                    Determine cada integral:
                         <task>
                             <statement>
                             <p>
@@ -569,14 +608,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         <task>
                             <statement>
                             <p>
-                                <m>\integral{(x^2+x)}{x}</m>.
+                                <m>\integral{(x^2+ e^x)}{x}</m>.
                             </p>
                             </statement>
                             <solution>
                             <p>
                                 <md>
-                                    <mrow> \integral{(x^2+x)}{x}\amp = \integral{x^2}{x} + \integral{x}{x} \amp <xref ref="thm-prop-integral-indefinida-b" text="custom">Propriedade II</xref></mrow>
-                                    <mrow> \amp = \frac{x^3}{3} + \frac{x^2}{2} + C \amp <xref ref="prob-integral-funcao-potencia" text="title"></xref></mrow>
+                                    <mrow> \integral{(x^2+ e^x)}{x}\amp = \integral{x^2}{x} + \integral{e^x}{x} \amp <xref ref="thm-prop-integral-indefinida-b" text="custom">Propriedade II</xref></mrow>
+                                    <mrow> \amp = \frac{x^3}{3} + e^x + C \amp <xref ref="prob-integral-funcao-potencia" text="title"></xref></mrow>
                                 </md>
                             </p>
                         </solution>                           
@@ -586,11 +625,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>            
         </example>
         <example xml:id="ex2-prop-integral-indefinida">
+        <title>Integração de funções polinomiais</title>
+         
             <statement>
-                <p>
-                    Calcule <m>\integral{(t^5 + 2t^3 - t + 1)}{t}</m>.
+            <p>
+             Determine cada integral.
+            <task>
+            <statement>
+                 <p>
+                     <m>\integral{(t^5 + 2t^3 - t + 1)}{t}</m>.
                 </p>
             </statement>
+               
+            </task>           
+            
             <solution>
                 <p>
                     <md>
@@ -603,9 +651,27 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </md>
                 </p>
             </solution>
+        <task>
+            <statement>
+            <p>
+                <m>\integral{(x^2+x)}{x}</m>.
+            </p>
+            </statement>
+            <solution>
+            <p>
+                <md>
+                    <mrow> \integral{(x^2+x)}{x}\amp = \integral{x^2}{x} + \integral{x}{x} \amp <xref ref="thm-prop-integral-indefinida-b" text="custom">Propriedade II</xref></mrow>
+                    <mrow> \amp = \frac{x^3}{3} + \frac{x^2}{2} + C \amp <xref ref="prob-integral-funcao-potencia" text="title"></xref></mrow>
+                </md>
+            </p>
+        </solution>                           
+        </task>
+         </p>               
+        </statement>    
         </example>
 
         <example xml:id="primitiva-segunda-derivada">
+        <title>Primitiva particular</title>
             <statement>
                 <p>
                     Encontre <m>F(x)</m> sabendo que <m>F''(x)=12x^2+6x-4</m> , <m>F(0)=4</m> e <m>F(1)=1</m>.
@@ -638,6 +704,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
         <exercise xml:id="exe-trig">
+       
             <statement>
                 <p>
                     Determine <m>\integral{\left(\sin{t}+3\cos{t}\right)}{t}</m> 
@@ -714,6 +781,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
    
 
 <example xml:id="ex3-prop-integral-indefinida">
+<title>Reescrever antes de integrar</title>
             <statement>
                 <p>
                 <task>
@@ -766,6 +834,7 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
 
 
 <example xml:id="ex4">
+<title> Identidades trionométricas</title>
     <statement>
         <p>
           Determine <m>\integral{\frac{\cos{x}}{\sin^2{x}}}{x}</m>
@@ -828,8 +897,8 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
 <introduction>
     <p>
     Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema
-    de computação algébrica  <url href="https://www.sagemath.org">SageMath</url>. Com uma sintaxe simples e baseada em <em>python</em><fn>Linguagem de programação.</fn> 
-     SageMath (abreviaremos como <em> Sage </em>) <em>open-source</em> tem sido bastante utilizado por professores e  estudantes de todos
+    de computação algébrica  <url href="https://www.sagemath.org">SageMath</url>. Com uma sintaxe simples e baseada em <em>Python</em><fn>Linguagem de programação.</fn> 
+     O <em> SageMath</em> (abreviaremos como <em> Sage </em>) <em>open-source</em> <fn>Uso gratuito e de código aberto.</fn> tem sido bastante utilizado por professores e  estudantes de todos
       os níveis para conferir cálculos algébricos complicados. Uma boa referência em lingua portuguesa para este software pode ser
       encontrado na página  <url href="https://www.sagectu.com.br"/>. Detalhes sobre os comandos são resumidos em 
       <url href="https://sagectu.com.br/sagecell.html"/>.    
@@ -837,7 +906,7 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
 </introduction>
    
 <paragraphs>
-    <title>Sintaxe</title>
+    <title>Sintaxe dos comandos</title>
     <p>Com o <em> SageMath</em>, usando o comando <c>integral(f, x)</c> é possível 
 calcular a integral indefinida de <m>f(x)</m> em relação a variável <m>x</m>. 
 Por exemplo, o <xref ref="ex4"/> pode ser resolvida com o comando:
@@ -861,7 +930,7 @@ declarar a variável <m>t</m> usando o comando <c>var('t')</c>.
        1/4*t^4 - 2/3*t^3 + 3/2*t^2 + t
     </output>
 </sage>
-Para obter a saída do comando no formato usual, o <em> Sage</em> possui o comando <c>show</c>, observe:
+Para obter a integral com a notação matemática usual, o <em> Sage</em> possui o comando <c>show</c>, observe:
 <sage>
     <input>
     var('t')
@@ -884,7 +953,8 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
 <activity>
     <statement>
         <p>
-            Usando a célula do Sage abaixo, confira todas as integrais apresentadas até aqui.
+            Usando a célula do <em>Sage</em> abaixo, confira todas as integrais apresentadas até aqui.
+            Se a resposta produzida  não estiver de acordo com a sua, mostre que elas são equivalentes.
             <sage>
                 <input>
                     
@@ -904,7 +974,7 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
 
     <statement>
         <p>
-            Softwares matemáticos tornou possível calcular vários tipos de integrais 
+            O avanço dos softwares matemáticos tornou possível calcular vários tipos de integrais 
             que dariam muito trabalho se feitos à mão. 
 
             <task>
@@ -1070,8 +1140,10 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
         </figure>
         </sidebyside>
     <example xml:id="ex1-curvas-integrais">
+    <title>Curvas integrais</title>
         <statement>
             <p>
+
             <task>
             <statement>
                 <p>
@@ -1188,8 +1260,12 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
         </p>
     </assemblage>
    
+<paragraphs>
+    <title>Resolvendo equações diferênciais</title>
+    
 
 <example xml:id="ex-diferencial-1">
+    
     <statement>
         <p>
             Encontre a solução geral da equação diferencial  <m> \frac{\dd y}{\dd x} = \cos{x}</m>.
@@ -1241,6 +1317,10 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
         </p>
     </answer>
 </exercise>
+</paragraphs>
+<paragraphs>
+    <title>Problema de valor inicial</title>
+    
 
 <p>Frequentemente estamos interssados em encontrar uma única solução para a  equação diferencial. Por exemplo, no <xref ref="ex1-curvas-integrais"/> encontramaos a equação da para uma
  <xref ref="curvas-integrais" text="custom"> curva integral</xref> que passa por <m>(2,1)</m>. O Problema de encontrar uma função    <m>y(x)</m>, que satisfaça <xref ref="eq-diferencial"/> e cuja curva integral 
@@ -1255,6 +1335,10 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
   </assemblage>
   
     </p>
+</paragraphs>
+<paragraphs>
+    <title>Resolvendo problemas de valor inicial</title>
+    
 
     <example xml:id="ex1-pvi">
         <statement>
@@ -1369,6 +1453,7 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
        
     </statement>
 </exercise>
+</paragraphs>
 </subsection> 
     <subsection xml:id="subsec-resolvendo-e-diferenciais">
     <title>Campos de Direções</title>
@@ -1411,7 +1496,7 @@ Para obter a saída do comando no formato usual, o <em> Sage</em> possui o coman
             </figure> 
     </sidebyside>
      
-     <technology>
+     <technology xml:id="campos-curvas-sageinterativo">
      <title>Faça você mesmo</title>
     <figure xml:id="figure-interactive-numerical-integral">
                     <caption>Curvas integrais e campos de direções</caption>
@@ -1514,8 +1599,8 @@ passa pelo ponto <m>(0, 2)</m>.</p>
 
  <exercisegroup>
  <introduction>
-     <p>
-         Use um recurso gráfico computacional para gerar um campo de direções de cada equação diferencial:
+     <p>     
+         Use um recurso gráfico computacional (<xref ref="campos-curvas-sageinterativo"/>) para gerar um campo de direções de cada equação diferencial:
      </p>
  </introduction>
  <exercise>
