@@ -25,7 +25,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
 <!--     pdflatex minimal.tex                                                                     -->
 <!--     xelatex minimal.tex                                                                      -->
-<!--                                                                                              -->
+<!--   xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl minimal.xml                                                                                                -->
 <!-- (2) HTML:                                                                                    -->
 <!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
 <!--     <browser>  minimal.html                                                                  -->
@@ -821,6 +821,119 @@ integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
 
   </subsection>
 
+
+<technology>
+<title>Usando o software SageMath</title>
+
+<introduction>
+    <p>
+    Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema
+    de computação algébrica  <url href="https://www.sagemath.org">SageMath</url>. Com uma sintaxe simples e baseada em <em>python</em><fn>Linguagem de programação.</fn> 
+     SageMath (abreviaremos como <em> Sage </em>) <em>open-source</em> tem sido bastante utilizado por professores e  estudantes de todos
+      os níveis para conferir cálculos algébricos complicados. Uma boa referência em lingua portuguesa para este software pode ser
+      encontrado na página  <url href="https://www.sagectu.com.br"/>. Detalhes sobre os comandos são resumidos em 
+      <url href="https://sagectu.com.br/sagecell.html"/>.    
+    </p>
+</introduction>
+   
+<paragraphs>
+    <title>Sintaxe</title>
+    <p>Com o <em> SageMath</em>, usando o comando <c>integral(f, x)</c> é possível 
+calcular a integral indefinida de <m>f(x)</m> em relação a variável <m>x</m>. 
+Por exemplo, o <xref ref="ex4"/> pode ser resolvida com o comando:
+<sage>
+    <input>
+        integral(x^2/(x^2+1), x)
+    </input>
+    <output>
+        x - arctan(x)
+    </output>
+</sage>
+Mas se a função estiver depedente da variável <m>t</m>, por exemplo, <m>f(t)=t^3-2t^2+ 3t + 1 </m>? Basta 
+declarar a variável <m>t</m> usando o comando <c>var('t')</c>. 
+
+<sage>
+    <input>
+    var('t')
+    integral(t^3-2*t^2+ 3*t + 1, t )
+    </input>
+    <output>
+       1/4*t^4 - 2/3*t^3 + 3/2*t^2 + t
+    </output>
+</sage>
+Para obter a saída do comando no formato usual, o <em> Sage</em> possui o comando <c>show</c>, observe:
+<sage>
+    <input>
+    var('t')
+    F = integral(t^3-2*t^2+ 3*t + 1, t)
+    show(F)
+    </input>
+    <output>
+      
+            \frac{1}{4}  t^{4} - \frac{2}{3}  t^{3} + \frac{3}{2}  t^{2} + t        
+        
+    </output>
+</sage>
+</p>
+<p>
+    Nas células acima pode-se notar que os comandos <c>/</c>, <c>*</c>, <c>^</c> <c>+</c>, <c>-</c>, representam a operações de 
+    divisão, multiplicação, potenciação,  soma e subtração, respectvamente. Existe muitos outros comandos de oparações 
+    matemáticas importantes, confira em <url href="https://sagectu.com.br/sagecell.html"/>.
+</p>
+
+<activity>
+    <statement>
+        <p>
+            Usando a célula do Sage abaixo, confira todas as integrais apresentadas até aqui.
+            <sage>
+                <input>
+                    
+                </input>
+                <output>
+                    (for static output)
+                </output>
+            </sage>
+            
+        </p>
+    </statement>
+</activity>
+
+
+<activity>
+<title>Faça você mesmo</title>
+
+    <statement>
+        <p>
+            Softwares matemáticos tornou possível calcular vários tipos de integrais 
+            que dariam muito trabalho se feitos à mão. 
+
+            <task>
+                <p>
+                    Usando o conteúdo aprendido até aqui encontre  <me>\integral{\frac{5x^2}{(1+x)^{1/3}}}{x} </me>.
+                </p>
+            </task>
+            <task>
+                <p>
+                    Use <em> Sage</em> para encontrar a integral do item anterior.
+                </p>
+            </task>
+            <sage>
+                <input>
+                    
+                </input>
+                <output>
+                    (for static output)
+                </output>
+            </sage>
+            
+        </p>
+    </statement>
+    
+</activity>
+</paragraphs>
+</technology>
+
+
 <exercises>
 <title>Exercícios</title>
 
@@ -1397,13 +1510,32 @@ passa pelo ponto <m>(−3, 0)</m>.</p>
 passa pelo ponto <m>(0, 2)</m>.</p>
         </exercise>
     </exercisegroup>
-<exercise>
-    <p>Use um recurso gráfico computacional para gerar um campo de direções da equação diferencial <m>\frac{\dd y}{\dd x} = x</m> na região
+
+
+ <exercisegroup>
+ <introduction>
+     <p>
+         Use um recurso gráfico computacional para gerar um campo de direções de cada equação diferencial:
+     </p>
+ </introduction>
+ <exercise>
+    <p>  <m>\frac{\dd y}{\dd x} = x</m> na região
 <m> −5 \leq x \leq 5</m> e <m> −5 \leq y \leq 5.</m></p>
 </exercise>
 
-    </exercises>
-   
+<exercise>
+    <p>  <m>\frac{\dd y}{\dd x} = \sin{x}</m> na região
+<m> −6 \leq x \leq 6</m> e <m> −6 \leq y \leq 6.</m></p>
+</exercise>
+
+<exercise>
+    <p>  <m>\frac{\dd y}{\dd x} = e^x</m> na região
+<m> −6 \leq x \leq 6</m> e <m> −2 \leq y \leq 2</m></p>
+</exercise>
+
+</exercisegroup>
+
+    </exercises>    
    
     </section>
 

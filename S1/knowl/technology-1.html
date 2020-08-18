@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-17T21:00:08-03:00       *-->
+<!--*       on 2020-08-18T02:59:51-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,11 +12,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Avalie (Sage)'});
+});
+</script>
 </head>
 <body>
 <article class="technology computation-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
+<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o software SageMath.</span>
 </h6>
-<figure class="figure figure-like"><iframe xmlns:svg="http://www.w3.org/2000/svg" id="interactive-numerical-integral" width="600" height="720" src="interactive-numerical-integral-if.html"></iframe><figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.15<span class="period">.</span></span><span class="space"> </span>Curvas integrais e campos de direções</figcaption></figure></article><span class="incontext"><a href="sec-eq-diferenciais.html#technology-1">[incontext]</a></span>
+<div class="introduction"><p xmlns:svg="http://www.w3.org/2000/svg">Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema de computação algébrica  <a class="external" href="https://www.sagemath.org" target="_blank">SageMath</a>. Com uma sintaxe simples e baseada em <em class="emphasis">python</em><a class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a> SageMath (abreviaremos como <em class="emphasis">Sage</em>) <em class="emphasis">open-source</em> tem sido bastante utilizado por professores e  estudantes de todos os níveis para conferir cálculos algébricos complicados. Uma boa referência em lingua portuguesa para este software pode ser encontrado na página  <a class="external" href="https://www.sagectu.com.br" target="_blank"><code class="code-inline tex2jax_ignore">https://www.sagectu.com.br</code></a>. Detalhes sobre os comandos são resumidos em <a class="external" href="https://sagectu.com.br/sagecell.html" target="_blank"><code class="code-inline tex2jax_ignore">https://sagectu.com.br/sagecell.html</code></a>.</p></div>
+<article class="paragraphs"><h5 class="heading"><span class="title">Sintaxe.</span></h5>
+<p xmlns:svg="http://www.w3.org/2000/svg">Com o <em class="emphasis">SageMath</em>, usando o comando <code class="code-inline tex2jax_ignore">integral(f, x)</code> é possível calcular a integral indefinida de \(f(x)\) em relação a variável \(x\text{.}\) Por exemplo, o <a class="xref" data-knowl="./knowl/ex4.html" title="Exemplo 1.24">Exemplo 1.24</a> pode ser resolvida com o comando: <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">integral(x^2/(x^2+1), x)
+</script></div> Mas se a função estiver depedente da variável \(t\text{,}\) por exemplo, \(f(t)=t^3-2t^2+ 3t + 1 \text{?}\) Basta declarar a variável \(t\) usando o comando <code class="code-inline tex2jax_ignore">var('t')</code>. <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">var('t')
+integral(t^3-2*t^2+ 3*t + 1, t )
+</script></div> Para obter a saída do comando no formato usual, o <em class="emphasis">Sage</em> possui o comando <code class="code-inline tex2jax_ignore">show</code>, observe: <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">var('t')
+F = integral(t^3-2*t^2+ 3*t + 1, t)
+show(F)
+</script></div></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Nas células acima pode-se notar que os comandos <code class="code-inline tex2jax_ignore">/</code>, <code class="code-inline tex2jax_ignore">*</code>, <code class="code-inline tex2jax_ignore">^</code> <code class="code-inline tex2jax_ignore">+</code>, <code class="code-inline tex2jax_ignore">-</code>, representam a operações de divisão, multiplicação, potenciação,  soma e subtração, respectvamente. Existe muitos outros comandos de oparações matemáticas importantes, confira em <a class="external" href="https://sagectu.com.br/sagecell.html" target="_blank"><code class="code-inline tex2jax_ignore">https://sagectu.com.br/sagecell.html</code></a>.</p>
+<article class="activity project-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Usando a célula do Sage abaixo, confira todas as integrais apresentadas até aqui. <div class="sagecell-sage" id="sage-4"><script type="text/x-sage">
+</script></div></p></article><article class="activity project-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Softwares matemáticos tornou possível calcular vários tipos de integrais que dariam muito trabalho se feitos à mão. <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p>Usando o conteúdo aprendido até aqui encontre</p>
+<div class="displaymath">
+\begin{equation*}
+\integral{\frac{5x^2}{(1+x)^{1/3}}}{x} \text{.}
+\end{equation*}
+</div></article> <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>Use <em class="emphasis">Sage</em> para encontrar a integral do item anterior.</p></article> <div class="sagecell-sage" id="sage-5"><script type="text/x-sage">
+</script></div></p></article></article></article><span class="incontext"><a href="sec-integral-indefinida.html#technology-1">[incontext]</a></span>
 </body>
 </html>

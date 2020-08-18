@@ -838,8 +838,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <title>Sage</title>
 <introduction>
     <p>
-    Softwares podem ser úteis para calcular as integrais definidas complicadas. Um ótima opção é utilizar sistema
-de computação algébrica <em>SageMath</em>. Usando o comando <c>integral(f, (x, a, b))</c> é possível 
+   No SageMath, usando o comando <c>integral(f, (x, a, b))</c> é possível 
 calcular a integral definida de <m>f(x)</m> <m>a</m> até <m>b</m>. Lembre-se que você pode editar a célula abaixo para inserir 
 seus comandos.
     </p>
