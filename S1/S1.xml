@@ -360,7 +360,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
              </p>
          
          
-     </assemblage > 
+     </assemblage >
      <example xml:id="ex-integral-indefinida-2">
      <title>Integração da função potência</title>
          <statement>
@@ -368,7 +368,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
              <task>
              <statement>
                  <p>
-                      Calcule <m>\integral{t^7}{t}</m>.
+                      Determine <m>\integral{t^7}{t}</m>.
                  </p>
              </statement>
                  
@@ -383,7 +383,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <task>
                 <statement>
                     <p>
-                        Calcule <m>\integral{x^{-2}}{x}</m>.
+                        Determine <m>\integral{x^{-2}}{x}</m>.
                     </p>
                 </statement>
                     
