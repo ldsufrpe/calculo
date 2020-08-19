@@ -356,7 +356,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      <title>Integral da função potência</title>
         
              <p>
-                  <me>\integral{x^q}{x} = \frac{x^{q+1}}{q+1} + C, \qquad q\neq 1.</me>
+                  <me>\integral{x^q}{x} = \frac{x^{q+1}}{q+1} + C, \qquad q\neq - 1.</me>
              </p>
          
          
