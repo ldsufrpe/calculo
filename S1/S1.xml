@@ -792,7 +792,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </statement>
                 <solution>
                 <p>Somando e subtraindo 1 do numerador do integrando, podemos reescrever a
-integral de modo. Os passos seguintes são ilustramos logo abaixo:</p>
+integral de a poder aplicar as fórmulas sugeridas na <xref ref="tabela2-integrais"/>. Os passos seguintes são ilustramos logo abaixo:</p>
                     <p>
                         <md>
                             <mrow>\integral{\frac{x^2}{x^2+1}}{x} \amp = \integral{\left(\frac{x^2+1}{x^2+1}-\frac{1}{x^2+1}\right)}{x} \amp \color{gray}{\text{(reescrevendo o integrando)}}</mrow>
