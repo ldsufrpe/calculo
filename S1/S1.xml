@@ -1224,7 +1224,11 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     </subsection>
     <subsection xml:id="subsec-integral-ed">
         <title>Integral e Equações diferenciais</title>
-        
+    <paragraphs>
+    <statement>  
+       
+       
+     
    
     <p>Uma <term>equação diferencial</term>  é uma igualdade matemática que envolve   derivadas e uma função desconhecida <m>y(x)</m>. 
     Por exemplo, a igualdade 
@@ -1245,12 +1249,13 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     </mdn>
         </p>
     </assemblage>
-    
-    
+       
     é uma denominada <term> equação diferencial</term> e resolvê-la significa encontrar a função <m>y(x)</m> que  satisfaça <xref ref="eq-diferencial"/>. 
     Isto é, obter a <xref ref="def-primitiva" text="custom"> primitiva </xref> de <m>f(x)</m>. Mais diretamente, a solução geral
     da equação diferencial <xref ref="eq-diferencial"/> é dada por
    </p>
+   </statement> 
+    </paragraphs>  
         <assemblage xml:id="asse-sol-eq-diferencial"> 
            
         <p>
