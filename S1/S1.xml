@@ -142,7 +142,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <definition xml:id="def-primitiva">
             <statement>
                 <p>
-                    Seja <m>f</m> uma função definida em um intervalo aberto<fn>Definir intervalo aberto, exemplo etc...</fn> <m>I</m>. 
+                    Seja <m>f</m> uma função definida em um intervalo aberto<fn> veja em <url href="https://pt.wikipedia.org/wiki/Intervalo_(matem%C3%A1tica)">wikipedia</url></fn> <m>I</m>. 
                     Uma <term> primitiva </term> é uma função <m>F</m> definida em <m>I</m>, de modo que 
                     <mdn>
                         <mrow xml:id="eq-primitiva"> \frac{\dd}{\dd x}\left[F(x)\right]=f(x). </mrow> 
@@ -233,8 +233,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <term>integral indefinida</term>  de <m>f(x)</m> em relação a <m>x</m>. Como todas as primitivas de <m>f(x)</m>
         são da forma <m>F(x) + C</m>, usaremos a notação 
         <mdn >
-            <mrow xml:id="eq-integral-indefinida"> \integral{f(x)}{x}=F(x) + C </mrow>,
-        </mdn>
+            <mrow xml:id="eq-integral-indefinida"> \integral{f(x)}{x}=F(x) + C </mrow>
+        </mdn>,
         na qual <m>f(x)</m> é chamada de <term>integrando</term>  e <m>C</m>  de <term>constante de integração</term>.</p>
         
        <assemblage xml:id="assemblage-integral-indefinida">
@@ -255,7 +255,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
         <p>
         O símbolo de <term> diferencial</term> <m>\dd x</m> serve para identificar a variável independente.
-       Neste contexto, quando estamos diante da diferencial <m>dx</m> devemos calcular a integral
+       Neste contexto, quando estamos diante da diferencial <m>\dd x</m> devemos calcular a integral
        em relação a <m>x</m>, assim como <m>\dd t</m> indica integração em relação a variável <m>t</m>.
         </p>
         </statement>
@@ -471,7 +471,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
          </statement>
          <solution>
              <p>
-                 A fórmula da <xref ref="prob-integral-funcao-potencia" text="title"></xref> não é válida para <m>x=-1</m>.
+                 A fórmula da <xref ref="prob-integral-funcao-potencia" text="title"></xref> não é válida para <m>q=-1</m>.
                  Logo não é possivel utilizá-la para obter a integral indefinida de <m>1/x</m>.
                  O passo natural é encontrar uma função cuja derivada seja <m>1/x</m>. Sabe-se que
                      
@@ -482,7 +482,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <md>
                     <mrow xml:id="ln-primitiva-positiva" tag="star"> \integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  </mrow>
                 </md>.
-                De fato o logaritmo natual não está definido para valores menores que zero. Mas,
+                De fato o logaritmo natural não está definido para valores menores que zero. Mas,
                 <md>
                    <mrow xml:id="ln-primitiva-negativa" tag="dstar">  \frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x}  </mrow>
                 </md>,
@@ -493,7 +493,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </me>.
                         
 
-            De <xref ref="ln-primitiva-positiva"/> e <xref ref="ln-primitiva-negativa"/> concluimos que <m>\ln{x}</m> é primitiva de  <m>\sfrac{1}{x}</m> se 
+            De <xref ref="ln-primitiva-positiva"/> e <xref ref="ln-primitiva-negativa"/> concluímos que <m>\ln{x}</m> é primitiva de  <m>\sfrac{1}{x}</m> se 
             <m>x\gt 0</m> e que  <m>\ln{(-x)}</m> é primitiva de <m>1/x</m> se <m>x\lt 0</m>. Mais diretamente,
             podemos afirmar que <m> \ln{|x|}</m> é uma primitiva de <m>1/x</m>. Portanto,
             
@@ -513,7 +513,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <solution>
             <p>
                 Como <m>\frac{\dd }{\dd x}[e^x]=e^x</m>, 
-                concluimos que a função exponencial é sua própria primitiva. Logo,
+                concluímos que a função exponencial é sua própria primitiva. Logo,
 
                 <me>
                     \integral{e^x}{x}= e^x + C.
@@ -694,7 +694,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <mrow>F(0)  \amp = 0+D =4 </mrow>
                     <mrow>F(1) \amp = 1+ 1-2+C+4=1 </mrow>
                 </md>
-                que nos fornece <m>D=4</m> e <m>C=-3</m>. Por fim, encontramaos
+                que nos fornece <m>D=4</m> e <m>C=-3</m>. Por fim, encontramos
                 <md>
                     <mrow>F(x) = x^4+ x^3-2x^2-3x+4 \amp </mrow>
                 </md>.
@@ -792,7 +792,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </statement>
                 <solution>
                 <p>Somando e subtraindo 1 do numerador do integrando, podemos reescrever a
-integral de a poder aplicar as fórmulas sugeridas na <xref ref="tabela2-integrais"/>. Os passos seguintes são ilustramos logo abaixo:</p>
+integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-integrais"/>. Os passos seguintes são ilustramos logo abaixo:</p>
                     <p>
                         <md>
                             <mrow>\integral{\frac{x^2}{x^2+1}}{x} \amp = \integral{\left(\frac{x^2+1}{x^2+1}-\frac{1}{x^2+1}\right)}{x} \amp \color{gray}{\text{(reescrevendo o integrando)}}</mrow>
@@ -898,8 +898,8 @@ integral de a poder aplicar as fórmulas sugeridas na <xref ref="tabela2-integra
     <p>
     Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema
     de computação algébrica  <url href="https://www.sagemath.org">SageMath</url>. Com uma sintaxe simples e baseada em <em>Python</em><fn>Linguagem de programação.</fn> 
-     O <em> SageMath</em> (abreviaremos como <em> Sage </em>) <em>open-source</em> <fn>Uso gratuito e de código aberto.</fn> tem sido bastante utilizado por professores e  estudantes de todos
-      os níveis para conferir cálculos algébricos complicados. Uma boa referência em lingua portuguesa para este software pode ser
+     O <em> SageMath</em> (abreviaremos como <em> Sage </em>) é <em>open-source</em> <fn>Uso gratuito e de código aberto.</fn> e tem sido bastante utilizado por professores e  estudantes de todos
+      os níveis para conferir cálculos algébricos complicados. Uma boa referência em língua portuguesa para este software pode ser
       encontrado na página  <url href="https://www.sagectu.com.br"/>. Detalhes sobre os comandos são resumidos em 
       <url href="https://sagectu.com.br/sagecell.html"/>.    
     </p>
@@ -1113,7 +1113,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     <subsection xml:id="subsec-curvas-integrais">
         <title>Curvas Integrais</title>
         <definition xml:id="curvas-integrais">
-        Se <m>F(x)</m> é uma primitiva da função <m>f(x)</m> então os gráficos de <m>y=F(x)+C</m> são
+        Se <m>F(x)</m> é uma primitiva da função <m>f(x)</m> então os gráficos de <m>y=F(x)+C</m> 
         são denominados  <term> curvas integrais</term> de <m>f(x)</m>.
         </definition>
         
@@ -1240,7 +1240,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     <md>
         <mrow> y(x) = \integral{x^2}{x}=\frac{1}{3}x^3 +C.</mrow>
     </md>
-    Portanto, dizemos a função <m>y(x)=\frac{1}{3}x^3 +C</m> é uma <term> solução geral</term> da equação diferencial <m>\frac{\dd y}{\dd x} = x^2</m>.
+    Portanto, dizemos que a função <m>y(x)=\frac{1}{3}x^3 +C</m> é uma <term> solução geral</term> da equação diferencial <m>\frac{\dd y}{\dd x} = x^2</m>.
     De forma geral, dada uma função conhecida <m>f(x)</m> a igualdade
     <assemblage xml:id="assemblage-eq-diferencial">        
         <p>
@@ -1327,7 +1327,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     <title>Problema de valor inicial</title>
     
 
-<p>Frequentemente estamos interssados em encontrar uma única solução para a  equação diferencial. Por exemplo, no <xref ref="ex1-curvas-integrais"/> encontramaos a equação da para uma
+<p>Frequentemente estamos interssados em encontrar uma única solução para a  equação diferencial. Por exemplo, no <xref ref="ex1-curvas-integrais"/> encontramos a equação para uma
  <xref ref="curvas-integrais" text="custom"> curva integral</xref> que passa por <m>(2,1)</m>. O Problema de encontrar uma função    <m>y(x)</m>, que satisfaça <xref ref="eq-diferencial"/> e cuja curva integral 
    passa pelo ponto <m>(x_0,y_0)</m>  é denominado    <term>problema de valor inicial </term> e geralmente apresentado da forma
   
@@ -1465,10 +1465,10 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     <p>
     Sabe-se  a inclinação da reta tangente à curva  <m>y=y(x)</m> em dado ponto <m>(x, y)</m> é dada por <m>\dd y/\dd x</m> para cada <m>x</m>.
     A Equação <xref ref="eq-diferencial"/> revela que a inclinação das retas tangentes às curvas integrais de <m>f</m> no ponto <m>(x_0, y_0)</m> 
-    é exatamente  <m>f(x_0)</m>. Com isso é possível entender as "direções" das curvas integrais plotando pequanas porções de suas retas 
+    é exatamente  <m>f(x_0)</m>. Com isso é possível entender as "direções" das curvas integrais plotando pequenas porções de suas retas 
     tangentes em cada ponto <m>(x,y)</m>  de uma região retangular. Como resultado teremos o que denominamos de <term>campo de direções</term>.
     Na <xref first="fig-campo-direcoes" last="fig-campo-direcoes-curva"/> podemos observar que  mesmo não conhecendo a curva integral 
-    é possível ter a pespectiva geometrica do seu gráfico.
+    é possível ter a pespectiva geométrica do seu gráfico.
     </p>
     <sidebyside widths="48% 48%" valigns="middle middle" xml:id="fig">
             <figure xml:id="fig-campo-direcoes">
