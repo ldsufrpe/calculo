@@ -1463,9 +1463,9 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     <subsection xml:id="subsec-resolvendo-e-diferenciais">
     <title>Campos de Direções</title>
     <p>
-    Sabe-se  a inclinação da reta tangente à curva  <m>y=y(x)</m> em dado ponto <m>(x, y)</m> é dada por <m>\dd y/\dd x</m> para cada <m>x</m>.
+    Sabe-se que a inclinação da reta tangente à curva  <m>y=y(x)</m> em dado ponto <m>(x, y)</m> é dada por <m>\dd y/\dd x</m> para cada <m>x</m>.
     A Equação <xref ref="eq-diferencial"/> revela que a inclinação das retas tangentes às curvas integrais de <m>f</m> no ponto <m>(x_0, y_0)</m> 
-    é exatamente  <m>f(x_0)</m>. Com isso é possível entender as "direções" das curvas integrais plotando pequenas porções de suas retas 
+    é exatamente  <m>f(x_0)</m>. Com isso é possível visualizar as "direções" das curvas integrais plotando pequenas porções de suas retas 
     tangentes em cada ponto <m>(x,y)</m>  de uma região retangular. Como resultado teremos o que denominamos de <term>campo de direções</term>.
     Na <xref first="fig-campo-direcoes" last="fig-campo-direcoes-curva"/> podemos observar que  mesmo não conhecendo a curva integral 
     é possível ter a pespectiva geométrica do seu gráfico.
