@@ -229,7 +229,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         É comum se referir a expressão <m>F(x)+C</m> como a <term>família</term>  de primitivas de <m>f(x)</m>.
         </p>
 
-        <p>O processo para encontrar a primitiva de uma função <m>f(x)</m> defini uma operação denominada
+        <p>O processo para encontrar a primitiva de uma função <m>f(x)</m> define uma operação denominada
         <term>integral indefinida</term>  de <m>f(x)</m> em relação a <m>x</m>. Como todas as primitivas de <m>f(x)</m>
         são da forma <m>F(x) + C</m>, usaremos a notação 
         <mdn >
