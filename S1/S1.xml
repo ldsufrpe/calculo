@@ -755,9 +755,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <row> <cell><m>\integral{\cos{x}}{x}=\sin{x} + C</m></cell></row>
                <row>  <cell><m>\integral{\sin{x}}{x}=-\cos{x} + C</m></cell></row>
                 <row>  <cell><m>\integral{\sec^2{x}}{x}=\tan{x} + C</m></cell></row>
-                <row>  <cell><m>\integral{\csc^2{x}}{x}=\cot{x} + C</m></cell></row>
+                <row>  <cell><m>\integral{\csc^2{x}}{x}=-\cot{x} + C</m></cell></row>
                 <row bottom="medium">
-                        <cell><m>\integral{\csc{x}\tan{x}}{x}=\sec{x} + C</m></cell></row>
+                        <cell><m>\integral{\sec{x}\tan{x}}{x}=\sec{x} + C</m></cell></row>
             </tabular>            
         </table>
 
