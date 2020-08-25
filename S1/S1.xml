@@ -392,7 +392,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <p>
                         
                         Novamente usando a fórmula da <xref ref="prob-integral-funcao-potencia" text="title"></xref>  resultamos em
-                        <m>\frac{x^{-1}}{-1} + C</m>, que de forma simplificada se torna igual a <m>-\frac{1}{t} + C</m>.
+                        <m>\frac{x^{-1}}{-1} + C</m>, que de forma simplificada se torna igual a <m>-\frac{1}{x} + C</m>.
                     </p>
                  </solution>
             </task>
@@ -1166,7 +1166,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
                         </me>
                         e obtemos <m>C=-1</m>. Portanto,
                         <me>
-                            y=\frac{x^2}{2} -3
+                            y=\frac{x^2}{2} -1
                         </me>
                         é a curva solicitada.
                     </p>
@@ -1175,7 +1175,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
             <task>
             <statement>
                 <p>
-                    Encontre a equação da curva integral, <m>y=y(x)</m>,  da função <m>f(x)=x^2</m> que passe pelo ponto <m>(2,1)</m>.
+                    Encontre a equação da curva integral, <m>y=y(x)</m>,  da função <m>f(x)=x^2</m> que passe pelo ponto <m>(3,1)</m>.
                 </p>
             </statement>
                 

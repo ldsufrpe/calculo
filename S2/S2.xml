@@ -54,6 +54,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \newcommand{\doubler}[1]{2#1}
         \newcommand{\dd}{\mathrm{d}}
         \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
         \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
         \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
         \DeclareMathOperator{\arcsec}{arc \,sec}
@@ -128,7 +129,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <subsection xml:id="subsec-integracao-substituicao">
         <title>O método de substituição</title>
-        <paragraphs>
+        
             <p>
             A integração por susbstituição consiste em um método para encontrar primitivas por meio de uma
             substituição conveniente da variável do integrando, de tal forma, a transformar o problema de 
@@ -158,7 +159,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
            O processo de converter a integral na variável <m>x</m>  para uma integral em outra variável, digamos, <m>u</m> é denominado
            de  <term> método de substituição <m>u</m></term>. 
            </p>       
-        </paragraphs>
+      
         
         <example xml:id="ex-potencia-01" >
         <title>Regra da potência</title>      
@@ -304,7 +305,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     
 
         <example xml:id="ex-reescrevendo-02" >
-        <title>Reescrevendo o Integrando</title>
+        <title>Reescrevendo o integrando</title>
         <task>
             <statement>
                 <p>
@@ -343,12 +344,27 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Nem sempre é possível</title>
     <statement>
         <p>
-            teste
+           Determine <m> \integral{-8(3-4x^2)^2}{x} .</m>
         </p>
     </statement>
     <solution>
         <p>
-            
+             A escolha <m>u=3-4x^2</m>  gera <m>\dd u/\dd x=-8x </m>, isto é, 
+             <m>du=(-8x)\dd x</m>. Note a escolha de <m>u</m> quando combinada com <m>\dd u</m>, não permite o usar o método de substituição, 
+             uma vez que não produz uma integral em relação a <m>u</m>. No  <xref ref="ex-reescrevendo-02"/> rescrevemos o integrando usando a estratégia 
+             de multiplicar e dividir por uma constante e então retirar a constante do integrando. O fato é que isso
+             não é possível quando trata-se de variáveis já que
+
+             <me>
+                 \integral{-8(3-4x^2)^2}{x} \neq \frac{1}{x}\integral{(3-4x^2)^2(-8x)}{x}.
+             </me>
+             
+             Nesse caso a melhor estégia é expandir o integrando para gerar um polinômio e depois aplicar a regra da potência em cada parcela.
+
+             <md>
+                 <mrow> \integral{-8(3-4x^2)^2}{x}  \amp = \integral{(-128x^4+192x^2-72)}{dx} </mrow>
+                 <mrow> \amp = -72x+64x^3-\frac{128}{5}x^5 + C </mrow>
+             </md>.
         </p>
     </solution>
         
@@ -358,16 +374,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
     <example xml:id="ex-subs-04" >
-        <title>Substituições imediatas</title>
+        <title>Envolvendo funções trigonométricas</title>
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\sin{(x+9)}}{x}</m>
                 </p>
             </statement>
             <solution>
             <p>
-                
+                <md>
+                    <mrow>\integral{\sin{(x+9)}}{x} \amp = \integral{\sin{\ob{(x+9)}{u}\cdot \ob{1}{\dd u /\dd x}}}{x} \amp \ctm{\dd u=1\dd x}</mrow>
+                    <mrow> \amp = \integral{\sin{u}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}  </mrow>
+                    <mrow> \amp = -\cos{u} + C \amp \ct{Primitivas da função cosseno}</mrow>
+                    <mrow> \amp = -\cos(x+9) + C \amp  \ct{Retorna à variável}\, \ctm{x.}</mrow>
+                </md>
             </p>
         </solution>
         </task>
@@ -375,30 +396,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\cos{(5x)}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
+                <md>
+                    <mrow>\integral{\cos{(5x)}}{x} \amp = \integral{\frac{1}{5}\cos{\ob{(5x)}{u}}\ob{5}{\dd u / \dd x}}{x} \amp \ct{Multiplicando e dividindo por 5.} </mrow>
+                    <mrow> \amp =\frac{1}{5}\integral{\cos{u}}{u}\amp \ct{Integral em relação a}\, \ctm{u.}  </mrow>
+                    <mrow> \amp = \frac{1}{5}\sin{u} + C \amp \ct{Primitivas da função seno.}</mrow>
+                    <mrow> \amp = \frac{1}{5}\sin{5x} + C  \amp \ct{Retorna à variável}\, \ctm{x.}</mrow>
+                </md>
             </p>
         </solution>
-        </task>       
+        </task>      
            
         </example>
 
 
         <example xml:id="ex-subs-05" >
-        <title>Substituições complicadas</title>
+        <title>Envolvendo funções exponenciais</title>
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\frac{e^{\sqrt{x}}}{\sqrt{x}}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
+                <md>
+                    <mrow> \integral{\frac{e^{\sqrt{x}}}{\sqrt{x}}}{x}\amp = \integral{\left(2e^{\ob{\sqrt{x}}{u}}\right)\ob{\left(\frac{1}{2\sqrt{x}}\right)}{\dd u /\dd x}}{x}\amp \ct{Multiplicando e dividindo por 2.}</mrow>
+                    <mrow> \amp = \integral{2e^u}{u}=2\integral{e^u}{u}\amp \ct{Integral em relação a}\, \ctm{u.}  </mrow>
+                    <mrow> \amp =2e^u + C \amp \ct{Primitiva da função exponêncial.}</mrow>
+                    <mrow> \amp = 2e^{\sqrt{x}} + C \amp \ct{Retorna à variável}\, \ctm{x.} </mrow>
+                </md>
             </p>
         </solution>
         </task>
@@ -406,12 +437,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\frac{e^x}{\sqrt{1-e^{2x}}}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
+               Escolhendo <m>u=e^3</m>, temos <m>du=e^x\dd x</m>. Então
+                <md>
+                    <mrow>\integral{\frac{e^x}{\sqrt{1-e^{2x}}}}{x} \amp = \integral{\frac{1}{\sqrt{1-u^2}}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}</mrow>
+                    <mrow> \amp = \arcsin{u} + C \amp \ct{Tabela de integrais.}</mrow>
+                    <mrow> \amp =\arcsin{e^x} + C \amp \ct{Retorna à variável}\, \ctm{x.}</mrow>
+                </md>
             </p>
         </solution>
         </task>       
@@ -480,7 +516,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-   <example xml:id="ex-subs-05" >
+   <example xml:id="ex-subsu-05" >
         <title>Integração por substituição</title>
         <task>
             <statement>
