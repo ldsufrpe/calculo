@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-25T19:45:41-03:00       *-->
+<!--*       on 2020-08-26T16:51:28-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Integração por substituição</title>
+<title>Integração por substituição de variáveis</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
@@ -104,7 +104,7 @@ MathJax.Hub.Config({
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Pré-textual</span></a></li>
 <li class="link active">
-<a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Integração por substituição</span></a><ul>
+<a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Integração por substituição de variáveis</span></a><ul>
 <li><a href="section-1.html#subsec-integracao-substituicao" data-scroll="subsec-integracao-substituicao">O método de substituição</a></li>
 <li><a href="section-1.html#subsec-substituicoes-trigonometricas" data-scroll="subsec-substituicoes-trigonometricas">Substituições Trigonométricas</a></li>
 </ul>
@@ -112,7 +112,7 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Integração por substituição</span>
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Integração por substituição de variáveis</span>
 </h2>
 <article class="objectives goal-like" id="objectives-1"><h6 class="heading">
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
@@ -124,8 +124,15 @@ MathJax.Hub.Config({
 </ol></article><section class="subsection" id="subsec-integracao-substituicao"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">O método de substituição</span>
 </h3>
-<p id="p-6">A integração por susbstituição consiste em um método para encontrar primitivas por meio de uma substituição conveniente da variável do integrando, de tal forma, a transformar o problema de integração, inicialmente complicado, em um mais simples.</p>
-<p id="p-7">Para exemplificar o método, vamos considerar resolver a integral indefinida \(\integral{2x(x^2+1)^3}{x}\text{.}\) Com criativida podemos conjecturar <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> que \(\frac{(x^2+1)^4}{4}\)  é uma primitiva de para \(2x(x^2+1)^3\)   e verificar usando a operação de derivada combinada com a <dfn class="terminology">regra da cadeia</dfn>:</p>
+<section class="introduction" id="introduction-3"><p id="p-6"><figure class="figure figure-like" id="figure-1"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="kanh-1" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/fkQ40Ph0Qkg?&amp;modestbranding=1&amp;rel=0"></iframe></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span>Exemplo de motivação</figcaption></figure></p></section><p id="p-7">A integração por susbstituição consiste em um método para encontrar primitivas por meio de uma substituição conveniente da variável do integrando, de tal forma, a transformar o problema de integração, inicialmente complicado, em um mais simples.</p>
+<p id="p-8">Para exemplificar o método, vamos considerar resolver a integral indefinida</p>
+<div class="displaymath">
+\begin{equation*}
+\integral{2x(x^2+1)^3}{x}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Com criativida podemos conjecturar <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> que \(\frac{(x^2+1)^4}{4}\)  é uma primitiva  para \(2x(x^2+1)^3\)   e depois confirmar usando a operação de derivada combinada com a <dfn class="terminology">regra da cadeia</dfn>:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{\dd}{\dd x}\left[\frac{(x^2+1)^4}{4}\right] = (x^2+1)^3(2x) \amp \text{.}
@@ -137,63 +144,74 @@ MathJax.Hub.Config({
 \integral{2x(x^2+1)^3}{x}= \frac{(x^2+1)^4}{4} + C \text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Agora, pensando em termos da regra da cadeia, seria útil tomar \(u=(x^2+1)\) e transformar o integrando em uma função do tipo potência na variável \(u\text{,}\) isto é, \(u^3\text{.}\) O próximo passo é verificar se com essa mudança de variável é possível encontrar \(\dd u\text{,}\) em termos da variável \(x\text{,}\) de tal forma que</p>
+<p data-braille="continuation">Agora, pensando em simplificar o problema, seria útil tomar \(u=(x^2+1)\) e transformar o integrando em uma função do tipo potência na variável \(u\text{,}\) neste caso, \(u^3\text{.}\) O próximo passo é verificar se a partir da substituição para variável \(u\) é possível encontrar \(\dd u\text{,}\) em termos da variável \(x\text{,}\) de tal forma que</p>
 <div class="displaymath">
 \begin{equation*}
 2x(x^2+1)^3\dd x=u^3 \dd u\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">O que em neste caso é verdadeiro pois \(\dd u/\dd x= 2x\text{,}\) que na forma diferencial se escreve \(\dd u= (2x)\dd x\) Então, usando a substituição \(u=(x^2+1)\) a integral é convertida para a forma</p>
+<p data-braille="continuation">O que em nesse caso é verdadeiro pois, \(\dd u/\dd x= 2x\text{,}\) que pode ser reescrito como \(\dd u= (2x)\dd x\text{.}\) Então, usando a substituição \(u=(x^2+1)\text{,}\) a integral é convertida para a forma</p>
 <div class="displaymath">
 \begin{align*}
 \integral{2x(x^2+1)^3}{x} \amp = \integral{u^3}{u} \amp \quad \color{gray}{\text{Substituição para variável}\, u.}\\
-\amp = \frac{u^4}{4} +C \amp \quad \color{gray}{\text{Regra da potência.}}\\
-\amp = \frac{(x^2+1)^4}{4} + C \amp  \color{gray}{\text{Solução.}}\text{.}
+\amp = \frac{u^4}{4} +C \amp \quad \ct{Usando regra já conhecida.}\\
+\amp = \frac{(x^2+1)^4}{4} + C \amp  \ct{Retorna à variável} \, \ctm{x}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">O processo de converter a integral na variável \(x\)  para uma integral em outra variável, digamos, \(u\) é denominado de  <dfn class="terminology">método de substituição \(u\)</dfn>.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">depois</div></div>
+<p data-braille="continuation">O processo de converter a integral na variável \(x\)  para uma integral em outra variável, digamos \(u\text{,}\) é denominado de  <dfn class="terminology">método de substituição por \(u\)</dfn>.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Ação ou efeito de deduzir algo, baseando-se em palpites, intuições, provas inconclusas ou suposições.</div></div>
 <article class="example example-like" id="ex-potencia-01"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Regra da potência.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Regra da potência.</span>
 </h6>
 <article class="task exercise-like" id="task-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-8">\(\integral{3(3x-1)^4}{x}\)</p>
+<p id="p-9">\(\integral{3(3x-1)^4}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><div class="displaymath" id="p-9">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-10">Escolha \(u=3x-1\text{.}\) Então,  \(\frac{\dd u}{\dd x}=3\) e \(\dd u = 3\dd x\text{.}\) Logo,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{3(3x-1)^4}{x} \amp = \integral{\ob{(3x-1)^4}{u^4}\ob{(3)}{\dd u /\dd x}}{x}\amp  \ctm{\dd u= 3dx.} \\
 \amp =\integral{u^4}{u} \amp \ct{Integral em relação a}\, \ctm{u.}\\
 \amp = \frac{u^5}{5}+ C\amp \ct{Regra da potência.}\\
 \amp = \frac{(3x-1)^5}{5} + C \amp \ct{Retorna  à variável}\, \ctm{x.}
 \end{align*}
-</div></div></div>
+</div>
+</div></div>
 </div></article><article class="task exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-10">\(\integral{(2x+1)(x^2+x)}{x}\)</p>
+<p id="p-11">\(\integral{(2x+1)(x^2+x)}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><div class="displaymath" id="p-11">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-12">Escolha \(u=x^2-x\text{.}\) Então,  \(\frac{\dd u}{\dd x}=2x+1\) e \(\dd u = (2x+1)\dd x\text{.}\) Logo,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{(2x+1)(x^2+x)}{x} \amp = \integral{\ob{(x^2+x)}{u}\ob{(2x+1)}{\dd u/\dd x}}{x}  \amp \ctm{\dd u= (2x+1)\dd x}\\
 \amp = \integral{u}{u} \amp \ct{Integral em relação a u.} \\
 \amp= \frac{u^2}{2} + C \amp \ct{Regra da potência.}\\
 \amp = \frac{(x^2+x)^2}{2} + C \amp \ct{Retorna à variável}\, \ctm{x.} 
 \end{align*}
-</div></div></div>
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-12">É possivel evitar o uso do méetodo de  substituição expandindo \((2x+1)(x^2+x)\) e utilizando a regra da potência.</p></div></div>
+</div>
+</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-13">É possivel evitar o uso do méetodo de  substituição expandindo \((2x+1)(x^2+x)\) e utilizando a regra da potência.</p></div></div>
 </div></article><article class="task exercise-like" id="task-3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-13">\(\integral{3x^2\sqrt{x^3-2}}{x}\)</p>
+<p id="p-14">\(\integral{3x^2\sqrt{x^3-2}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><div class="displaymath" id="p-14">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-15">Escolha \(u=x^3-2\text{.}\) Então,  \(\frac{\dd u}{\dd x}=3x^2\) e \(\dd u = (3x^2)\dd x\text{.}\) Logo,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{3x^2\sqrt{x^3-2}}{x} \amp = \integral{\ob{(x^3-2)^{1/2}}{u^{1/2}}\ob{(3x^2)}{\dd u / \dd x}}{x} \amp \ctm{\dd u=3x^2\dd x.} \\
 \amp = \integral{u^{1/2}}{u} \amp \ct{Integral em relação a} \,\ctm{u.}\\
 \amp = \frac{u^{3/2}}{3/2} + C  \amp  \ct{Regra da potência}\\
 \amp = \frac{2}{3}(x^3-2)^{3/2} +C \amp  \ct{Retorna à variável} \, \ctm{x.}
 \end{align*}
-</div></div></div>
+</div>
+</div></div>
 </div></article><article class="task exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-15">\(\integral{\frac{-4x}{(1-2x^2)^2}}{x}\)</p>
+<p id="p-16">\(\integral{\frac{-4x}{(1-2x^2)^2}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><div class="displaymath" id="p-16">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-17">Escolha \(u=1-2x^2\text{.}\) Então,  \(\frac{\dd u}{\dd x}=-4x\) e \(\dd u = (-4x)\dd x\text{.}\) Logo,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{\frac{-4x}{(1-2x^2)^2}}{x}\amp =\integral{\ob{(1-2x^2)^{-2}}{u^{-2}}\ob{(-4x)}{\dd u / \dd x} }{x} \amp \ctm{\dd u=(-4x)\dd x}\\
 \amp =\integral{u^{-2}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}\\
@@ -201,35 +219,37 @@ MathJax.Hub.Config({
 \amp =  \frac{(1-2x^2)^{-1}}{(-1)} + C\amp \ct{Retorna à variável} \, \ctm{x.}\\
 \amp = -\frac{1}{1-2x^2} + C \amp \ct{Simplifique.}
 \end{align*}
-</div></div></div>
+</div>
+</div></div>
 </div></article></article><article class="exercise exercise-like" id="exer-potencia-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-potencia-01"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-potencia-01"><article class="exercise exercise-like"><p id="p-17">Determine  \(\integral{2x(x^2+1)^8}{x}\text{.}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-potencia-01"><article class="exercise exercise-like"><p id="p-18">Determine  \(\integral{2x(x^2+1)^3}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-18">Revise <a class="xref" data-knowl="./knowl/ex-potencia-01.html" title="Exemplo 1.1: Regra da potência">Exemplo 1.1</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-19">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-19">Revise <a class="xref" data-knowl="./knowl/ex-potencia-01.html" title="Exemplo 1.2: Regra da potência">Exemplo 1.2</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-20">\(\frac{2}{7} \, x^{7} + \frac{6}{5} \, x^{5} + 2 \, x^{3} + 2 \, x +C\)</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exer-potencia-02"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-potencia-02"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-potencia-02"><article class="exercise exercise-like"><p id="p-20">Determine  \(\integral{3x\sqrt{x^3-2}}{x}\text{.}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-potencia-02"><article class="exercise exercise-like"><p id="p-21">Determine  \(\integral{3x^2\sqrt{x^3-2}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-21">Revise <a class="xref" data-knowl="./knowl/ex-potencia-01.html" title="Exemplo 1.1: Regra da potência">Exemplo 1.1</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-22">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-22">Revise <a class="xref" data-knowl="./knowl/ex-potencia-01.html" title="Exemplo 1.2: Regra da potência">Exemplo 1.2</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-23">\(2/3(x^3-2)^{3/2} + C\)</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exer-potencia-03"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-potencia-03"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-potencia-03"><article class="exercise exercise-like"><p id="p-23">Determine  \(\integral{(3x^2+6)(x^3+6x)^2}{x}\text{.}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-potencia-03"><article class="exercise exercise-like"><p id="p-24">Determine  \(\integral{(3x^2+6)(x^3+6x)^2}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-24">Revise <a class="xref" data-knowl="./knowl/ex-potencia-01.html" title="Exemplo 1.1: Regra da potência">Exemplo 1.1</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-25">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-25">Revise <a class="xref" data-knowl="./knowl/ex-potencia-01.html" title="Exemplo 1.2: Regra da potência">Exemplo 1.2</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-26">\(\frac{1}{3} \, {\left(x^{3} + 6 \, x\right)}^{3}+C\)</p></div></div>
 </div></article></div>
 <article class="example example-like" id="ex-reescrevendo-02"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Reescrevendo o integrando.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Reescrevendo o integrando.</span>
 </h6>
-<article class="task exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-26">Determine \(\integral{x(3-4x^2)^2}{x}\text{.}\)</p>
+<p id="p-27">Determine \(\integral{x(3-4x^2)^2}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><div class="displaymath" id="p-27">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-28">Escolha \(u=3-4x^2\text{.}\) Então,  \(\frac{\dd u}{\dd x}=-8x\) e \(\dd u = (-8x)\dd x\text{.}\) Então,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{x(3-4x^2)^2}{x} \amp = \integral{\left(-\frac{1}{8}\right)\ob{(3-4x^2)^2}{u^2}\ob{(-8x)}{\dd u / \dd x}}{x} \amp \ct{Multiplique e divida por}\, \ctm{-8}. \\
 \amp =\integral{-\frac{1}{8}u^2}{u} = -\frac{1}{8}\integral{u^2}{u} \amp \ct{Integral em relação a} \, \ctm{u.}\\
@@ -237,75 +257,87 @@ MathJax.Hub.Config({
 \amp = -\frac{1}{8}\frac{(3-4x^2)^3}{3} + C\amp  \ct{Retorna à variável}\, \ctm{x.}\\
 \amp = -\frac{(3-4x^2)^3}{24} + C \amp \ct{Simplifique.}
 \end{align*}
-</div></div></div>
-</div></article><article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-28">criar outro exemplo...</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-29"></p></div></div>
-</div></article></article><article class="example example-like" id="ex-subs-03"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Nem sempre é possível.</span>
+</div>
+</div></div>
+</div></article><article class="example example-like" id="ex-subs-03"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Nem sempre é possível.</span>
 </h6>
-<p id="p-30">Determine \(\integral{-8(3-4x^2)^2}{x} .\)</p>
+<p id="p-29">Determine \(\integral{-8(3-4x^2)^2}{x} .\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-31">A escolha \(u=3-4x^2\)  gera \(\dd u/\dd x=-8x \text{,}\) isto é, \(du=(-8x)\dd x\text{.}\) Note a escolha de \(u\) quando combinada com \(\dd u\text{,}\) não permite o usar o método de substituição, uma vez que não produz uma integral em relação a \(u\text{.}\) No  <a class="xref" data-knowl="./knowl/ex-reescrevendo-02.html" title="Exemplo 1.5: Reescrevendo o integrando">Exemplo 1.5</a> rescrevemos o integrando usando a estratégia de multiplicar e dividir por uma constante e então retirar a constante do integrando. O fato é que isso não é possível quando trata-se de variáveis já que</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-30">A escolha \(u=3-4x^2\)  gera \(\dd u/\dd x=-8x \) e</p>
+<div class="displaymath">
+\begin{equation*}
+du=(-8x)\dd x\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Note que a escolha de \(u\) combinada com a expressão de \(\dd u\) não permite o usar o método de substituição, uma vez que não produz uma integral em relação a \(u\text{.}\) No  <a class="xref" data-knowl="./knowl/ex-reescrevendo-02.html" title="Exemplo 1.6: Reescrevendo o integrando">Exemplo 1.6</a> reescrevemos o integrando usando a estratégia de multiplicar e dividir por uma constante e então retirar a constante do integrando. O fato é que isso não é possível quando trata-se de variáveis, observe:</p>
 <div class="displaymath">
 \begin{equation*}
 \integral{-8(3-4x^2)^2}{x} \neq \frac{1}{x}\integral{(3-4x^2)^2(-8x)}{x}.
 \end{equation*}
 </div>
-<p data-braille="continuation">Nesse caso a melhor estégia é expandir o integrando para gerar um polinômio e depois aplicar a regra da potência em cada parcela.</p>
+<p data-braille="continuation">Nesse caso, a melhor estégia é expandir o integrando  e depois aplicar a regra da potência em cada parte.</p>
 <div class="displaymath">
 \begin{align*}
 \integral{-8(3-4x^2)^2}{x}  \amp = \integral{(-128x^4+192x^2-72)}{dx} \\
-\amp = -72x+64x^3-\frac{128}{5}x^5 + C \text{.}
+\amp = -\frac{128}{5}x^5 + 64x^3 - 72x+ C \text{.}
 \end{align*}
 </div>
 </div></div>
 </div></article><article class="example example-like" id="ex-subs-04"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Envolvendo funções trigonométricas.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Envolvendo funções trigonométricas.</span>
 </h6>
-<article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-32">Determine \(\integral{\sin{(x+9)}}{x}\)</p>
+<article class="task exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-31">Determine \(\integral{\sin{(x+9)}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="displaymath" id="p-33">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-32">Escolha \(u=x+9\text{.}\) Então,  \(\frac{\dd u}{\dd x}=1\) e \(\dd u = \dd x\text{.}\) Logo,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{\sin{(x+9)}}{x} \amp = \integral{\sin{\ob{(x+9)}{u}\cdot \ob{1}{\dd u /\dd x}}}{x} \amp \ctm{\dd u=1\dd x}\\
 \amp = \integral{\sin{u}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}  \\
 \amp = -\cos{u} + C \amp \ct{Primitivas da função cosseno}\\
 \amp = -\cos(x+9) + C \amp  \ct{Retorna à variável}\, \ctm{x.}
 \end{align*}
-</div></div></div>
-</div></article><article class="task exercise-like" id="task-8"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-34">Determine \(\integral{\cos{(5x)}}{x}\text{.}\)</p>
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-33">Determine \(\integral{\cos{(5x)}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><div class="displaymath" id="p-35">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-34">Escolha \(u=5x\text{.}\) Então,  \(\frac{\dd u}{\dd x}=5\) e \(\dd u = 5\dd x\text{.}\) Logo,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{\cos{(5x)}}{x} \amp = \integral{\frac{1}{5}\cos{\ob{(5x)}{u}}\ob{5}{\dd u / \dd x}}{x} \amp \ct{Multiplicando e dividindo por 5.} \\
 \amp =\frac{1}{5}\integral{\cos{u}}{u}\amp \ct{Integral em relação a}\, \ctm{u.}  \\
 \amp = \frac{1}{5}\sin{u} + C \amp \ct{Primitivas da função seno.}\\
 \amp = \frac{1}{5}\sin{5x} + C  \amp \ct{Retorna à variável}\, \ctm{x.}
 \end{align*}
-</div></div></div>
+</div>
+</div></div>
 </div></article></article><article class="example example-like" id="ex-subs-05"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Envolvendo funções exponenciais.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Envolvendo funções exponenciais.</span>
 </h6>
-<article class="task exercise-like" id="task-9"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-36">Determine \(\integral{\frac{e^{\sqrt{x}}}{\sqrt{x}}}{x}\text{.}\)</p>
+<article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-35">Determine \(\integral{\frac{e^{\sqrt{x}}}{\sqrt{x}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><div class="displaymath" id="p-37">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-36">Escolha \(u=\sqrt{x}\text{.}\) Então,  \(\frac{\dd u}{\dd x}=\frac{1}{2\sqrt{x}}\) e \(\dd u = \frac{1}{2\sqrt{x}}\dd x\text{.}\) Logo,</p>
+<div class="displaymath">
 \begin{align*}
 \integral{\frac{e^{\sqrt{x}}}{\sqrt{x}}}{x}\amp = \integral{\left(2e^{\ob{\sqrt{x}}{u}}\right)\ob{\left(\frac{1}{2\sqrt{x}}\right)}{\dd u /\dd x}}{x}\amp \ct{Multiplicando e dividindo por 2.}\\
 \amp = \integral{2e^u}{u}=2\integral{e^u}{u}\amp \ct{Integral em relação a}\, \ctm{u.}  \\
 \amp =2e^u + C \amp \ct{Primitiva da função exponêncial.}\\
 \amp = 2e^{\sqrt{x}} + C \amp \ct{Retorna à variável}\, \ctm{x.} 
 \end{align*}
-</div></div></div>
-</div></article><article class="task exercise-like" id="task-10"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-38">Determine \(\integral{\frac{e^x}{\sqrt{1-e^{2x}}}}{x}\text{.}\)</p>
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-8"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-37">Determine \(\integral{\frac{e^x}{\sqrt{1-e^{2x}}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
-<p id="p-39">Escolhendo \(u=e^3\text{,}\) temos \(du=e^x\dd x\text{.}\) Então</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-38">Escolha \(u=e^x\text{.}\) Então, \(\frac{\dd u}{\dd x}\) e \(du=e^x\dd x\text{.}\) Logo,</p>
 <div class="displaymath">
 \begin{align*}
 \integral{\frac{e^x}{\sqrt{1-e^{2x}}}}{x} \amp = \integral{\frac{1}{\sqrt{1-u^2}}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}\\
@@ -315,32 +347,32 @@ MathJax.Hub.Config({
 </div>
 </div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-4"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-40">Determine \(\integral{\cos(x+3)}{x}\text{.}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-39">Determine \(\integral{\cos(t+3)}{t}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-41">Revise <a class="xref" data-knowl="./knowl/ex-subs-04.html" title="Exemplo 1.7: Envolvendo funções trigonométricas">Exemplo 1.7</a></p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-42">\(\sin(t + 3)\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-40">Revise <a class="xref" data-knowl="./knowl/ex-subs-04.html" title="Exemplo 1.8: Envolvendo funções trigonométricas">Exemplo 1.8</a></p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-41">\(\sin(t + 3)+C\)</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-5"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-43">Determine \(\integral{e^{-5x}}{x}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-42">Determine \(\integral{e^{-5x}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-44">Use \(u=-5x\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-45">\(-1/5e^{-5t}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-43">Use \(u=-5x\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-44">\(-1/5e^{-5x}+C\)</p></div></div>
 </div></article></div>
 <article class="assemblage assemblage-like" id="assemblage-roteiro"><h6 class="heading"><span class="title">Roteiro do método de substituição.</span></h6>
-<ul id="p-46" class="disc">
-<li id="li-3"><p id="p-47">passo 1</p></li>
-<li id="li-4"><p id="p-48">passo 2</p></li>
-<li id="li-5"><p id="p-49">Passo 3</p></li>
-</ul></article><article class="example example-like" id="ex-subsu-05"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Mais integração por substituição \(u\).</span>
+<ol id="p-45" class="decimal">
+<li id="li-3"><p id="p-46">Escolha \(u\) como uma função de \(x\) e escreva \(\dd x\) como função de \(\dd u\text{.}\)</p></li>
+<li id="li-4"><p id="p-47">Converta toda a integral para a variável \(u\text{.}\)</p></li>
+<li id="li-5"><p id="p-48">Após a integração, reescreva a primitiva como uma função de \(x\text{.}\)</p></li>
+</ol></article><article class="example example-like" id="ex-subsu-05"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Mais integração por substituição \(u\).</span>
 </h6>
-<article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-50">Determine \(\integral{\sin{x}^2\cos{x}}{x}\text{.}\)</p>
+<article class="task exercise-like" id="task-9"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-49">Determine \(\integral{\sin{x}^2\cos{x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
-<p id="p-51">Fazendo a escolha \(u=\sin{x}\text{,}\) temos</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-50">Escolha \(u=\sin{x}\text{.}\) Então,  \(\frac{\dd u}{\dd x}=\cos{x}\) e \(\dd u = \cos{x}\dd x\text{.}\) Logo,</p>
 <div class="displaymath">
 \begin{align*}
 \integral{\sin^2{x}\cos{x}}{x}\amp = \integral{\ub{\sin^2{x}}{u^2}\ob{\cos{x}}{\dd u/\dd x}}{x} \amp \ctm{\dd u=\cos{x}\dd x.} \\
@@ -350,17 +382,17 @@ MathJax.Hub.Config({
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-52">Determine \(\integral{x^2\sqrt{x-1}}{x}\)</p>
+</div></article><article class="task exercise-like" id="task-10"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-51">Determine \(\integral{x^2\sqrt{x-1}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
-<p id="p-53">Neste caso a composição \(\sqrt{x-1}\) sugere a substituição</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-52">A composição \(\sqrt{x-1}\) sugere a substituição</p>
 <div class="displaymath">
-\begin{align}
-u=x-1,  \amp \,\text{gerando} \,  \dd u=\dd x\text{.}\label{exsub1}\tag{\(\star\)}
-\end{align}
+\begin{gather}
+u=x-1 \label{exsub1}\tag{\(\star\)}
+\end{gather}
 </div>
-<p data-braille="continuation">Logo percebe-se que devemos expressar o termo \(x^2\) do integrando também em termos de \(u\text{.}\) Para isso, a partir de <a class="xref" data-knowl="./knowl/exsub1.html" title="[mrow]">(\(\star\))</a>, fazemos \(x=u+1\) para obter</p>
+<p data-braille="continuation">que implica em  \(\dd u=\dd x\text{.}\) Percebe-se que devemos expressar o termo \(x^2\text{,}\) do integrando, também em termos de \(u\text{.}\) Para isso, a partir de <a class="xref" data-knowl="./knowl/exsub1.html" title="[mrow]">(\(\star\))</a>, fazemos \(x=u+1\) para obter</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 = (u+1)^2=u^2+2u+1
@@ -377,23 +409,24 @@ x^2 = (u+1)^2=u^2+2u+1
 </div>
 </div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-6"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-54">Determine \(\integral{\sin{t} \cos^{2}{t}}{t}\text{.}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-53">Determine \(\integral{\sin{t} \cos^{2}{t}}{t}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-55">Revise <a class="xref" data-knowl="./knowl/ex-subsu-05.html" title="Exemplo 1.11: Mais integração por substituição \(u\)">Exemplo 1.11</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-56">\(-1/3\cos^3{t}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-54">Revise <a class="xref" data-knowl="./knowl/ex-subsu-05.html" title="Exemplo 1.12: Mais integração por substituição \(u\)">Exemplo 1.12</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-55">\(-1/3\cos^3{t} +C\)</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exer-regras-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-regras-01"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-regras-01"><article class="exercise exercise-like"><p id="p-57">Determine \(\integral{t^2\sqrt{t+1}}{t}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-regras-01"><article class="exercise exercise-like"><p id="p-56">Determine \(\integral{t^2\sqrt{t+1}}{t}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-58">Revise <a class="xref" data-knowl="./knowl/ex-subsu-05.html" title="Exemplo 1.11: Mais integração por substituição \(u\)">Exemplo 1.11</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-59">\(2/7(t + 1)^{7/2} - 4/5(t + 1)^{5/2} + 2/3(t + 1)^{3/2} + C\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-57">Revise <a class="xref" data-knowl="./knowl/ex-subsu-05.html" title="Exemplo 1.12: Mais integração por substituição \(u\)">Exemplo 1.12</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-58">\(2/7(t + 1)^{7/2} - 4/5(t + 1)^{5/2} + 2/3(t + 1)^{3/2} + C\)</p></div></div>
 </div></article></div></section><section class="subsection" id="subsec-substituicoes-trigonometricas"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Substituições Trigonométricas</span>
 </h3>
-<p id="p-60">Integrando que envolvem raízes quadradas de polinômios admitem uma substituição por \(u\) de forma implicita. Por exemplo, \(x=\sin{u}\) e \(x=\tan{u}\text{.}\) Essas substituições são denominadas de <dfn class="terminology">substituições trigonometricas</dfn>.</p>
-<p id="p-61">As substituições que envolvem os tipos citados em geral fazem uso da identdade trigonométrica</p>
+<p id="p-59">O integrando que envolve raízes quadradas de polinômios e polinômios não fatoráveis <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a> admitem uma substituição por \(u\) de forma implicita. Por exemplo, \(x=\sin{u}\) e \(x=\tan{u}\text{.}\) Essas substituições são denominadas de <dfn class="terminology">substituições trigonometricas</dfn>.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Informalmente, são polinômios que não pode ser obtido por produtos de dois polinômios não constantes. Por exemplo, \(4+x^2.\)</div></div>
+<p id="p-60">As simplificações necessárias nas subsutituições trigonométricas fazem uso  da identidade</p>
 <div class="displaymath">
 \begin{gather}
 \cos^2{u} + \sin^2{u} =1 \label{idf}\tag{1.1}
@@ -412,23 +445,21 @@ a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}\tag{1.3}
 \end{gather}
 </div>
 <p data-braille="continuation">para subsitituções por \(\tan{u}\text{.}\)</p>
-<article class="remark remark-like" id="remark-1"><h6 class="heading">
-<span class="type">Observação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
-</h6></article><article class="example example-like" id="ex-seno-01"><h6 class="heading">
+<article class="example example-like" id="ex-seno-01"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Substituição usando o seno.</span>
 </h6>
-<article class="task exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-62">Determine \(\integral{\frac{1}{\sqrt{1-x^2}}}{x}\text{.}\)</p>
+<article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-61">Determine \(\integral{\frac{1}{\sqrt{1-x^2}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
-<p id="p-63">A escolha \(x=\sin{u}\) fornece</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-62">Escolha \(x=\sin{u}\text{.}\) Então, \(\frac{\dd x}{\dd u}=\cos{x}\) e \(\dd x=\cos{u}\dd u\text{.}\) Logo,</p>
 <div class="displaymath">
 \begin{align*}
 \integral{\frac{1}{\sqrt{1-x^2}}}{x}\amp = \integral{\frac{1}{\sqrt{1-\sin^2{u}}}}{u} \\
 \amp = \integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp \ct{usamos a identidade}\, \knowl{./knowl/idf.html}{\text{(1.1)}} \text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Já que \(-\pi/2\leq u\leq  \pi/2 \text{,}\) temos</p>
+<p data-braille="continuation">Escolhendo  \(-\pi/2\leq u\leq  \pi/2 \text{,}\) temos</p>
 <div class="displaymath">
 \begin{equation*}
 \sqrt{\cos^2{u}}=\cos{u}\text{.}
@@ -444,11 +475,11 @@ a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}\tag{1.3}
 </div>
 <p data-braille="continuation">A última igualdade acima segue do fato de que  \(u=\arcsin{x} \) se \(x=\sin{u}\text{,}\) no qual \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p>
 </div></div>
-</div></article><article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-64">Determine \(\integral{\frac{1}{\sqrt{4-x^2}}}{x}\text{.}\)</p>
+</div></article><article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-63">Determine \(\integral{\frac{1}{\sqrt{4-x^2}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
-<p id="p-65">O integrando acima sugere a escolha \(x=a\sin{u}\text{,}\) para que seja possível obter</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-64">O integrando acima sugere a escolha \(x=a\sin{u}\text{,}\) para que seja possível obter</p>
 <div class="displaymath">
 \begin{align*}
 \sqrt{4-x^2}\amp = \sqrt{4-4\sin^{u}} \\
@@ -466,27 +497,29 @@ a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}\tag{1.3}
 </div>
 </div></div>
 </div></article></article><article class="assemblage assemblage-like" id="assemblage-"><h6 class="heading"><span class="title">Regra geral para substituições por \(\sin{u}\).</span></h6>
-<p id="p-66">Para integrando envolvendo \(\sqrt{a^2-x^2}\text{,}\) sendo \(a\) uma constante, tente a escolha \(x=a\sin{u}\text{,}\) com  \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-8"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-67">Determine \(\integral{\frac{1}{\sqrt{9-x^2}}}{x}\)</p>
+<p id="p-65">Para integrando envolvendo \(\sqrt{a^2-x^2}\text{,}\) sendo \(a\) uma constante, tente a substituição a partir de \(x=a\sin{u}\text{,}\) com  \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></article><article class="remark remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Observação</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
+</h6>É importante enfatizar que \(\sqrt{a^2-x^2}\) só está definida no intervalo \([-a,a]\text{.}\) Supondo que o domínio do integrando é \([-a,a]\) a substituição \(x=a\sin{u}\text{,}\)  com  \(-\pi/2\leq u\leq  \pi/2\) é válida para todo \(x\) do domínio, uma vez que a imagem é \([-a,a]\) e tem inversa \(\arcsin{\left(\frac{x}{a}\right)}\) em \([-a,a]\text{.}\)</article><article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-8"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-66">Determine \(\integral{\frac{1}{\sqrt{9-x^2}}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-68">Use a substituição \(x=3\sin{u}\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-69">\(\arcsin\left(\frac{1}{3}x\right)\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-67">Use a substituição \(x=3\sin{u}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-68">\(\arcsin\left(\frac{1}{3}x\right)+C\)</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-9"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-9"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-70">Determine \(\integral{\frac{1}{\sqrt{9-4x^2}}}{x}\text{.}\)</p>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-69">Determine \(\integral{\frac{1}{\sqrt{9-4x^2}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-71">Use a substituição \(x=\frac{3}{2}\sin{u}\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-72">\(\frac{1}{2}\arcsin\left(\frac{2}{3}x\right)\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-70">Use a substituição \(x=\frac{3}{2}\sin{u}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-71">\(\frac{1}{2}\arcsin\left(\frac{2}{3}x\right) +C\)</p></div></div>
 </div></article></div>
 <article class="example example-like" id="ex-tangente-02"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Substituições usando tangente.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Substituições usando tangente.</span>
 </h6>
-<p id="p-73">Determine \(\integral{\frac{1}{x^2+9}}{x}\text{.}\)</p>
+<p id="p-72">Determine \(\integral{\frac{1}{x^2+9}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
-<p id="p-74">A substituição \(x=3\tan{u}\text{,}\) fornece</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-73">A substituição \(x=3\tan{u}\text{,}\) fornece</p>
 <div class="displaymath">
 \begin{equation*}
 \dd x = \left(\frac{3}{\cos^2{u}}\right)\dd u\text{.}
@@ -504,17 +537,19 @@ a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}\tag{1.3}
 <p data-braille="continuation">A última igualdade acima segue do fato de que \(u= \arctan{\left(\frac{x}{a}\right)}\) se \(x=a\tan{x}\text{,}\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p>
 </div></div>
 </div></article><article class="assemblage assemblage-like" id="assemblage-tangente"><h6 class="heading"><span class="title">Regra geral para substituições por \(\tan{u}\).</span></h6>
-<p id="p-75">Para o integrando encolvendo \(a^2+ x^2\) ou \(\sqrt{a^2+ x^2}\text{,}\) sendo \(a\) constante, tente \(x=\tan{u},\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></article><article class="exercise exercise-like" id="exer-substrig-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-substrig-01"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-substrig-01"><article class="exercise exercise-like"><p id="p-76">Determine \(\integral{\frac{1}{x^2+16}}{x}\text{.}\)</p>
+<p id="p-74">Para o integrando encolvendo \(a^2+ x^2\) ou \(\sqrt{a^2+ x^2}\text{,}\) sendo \(a\) constante, tente \(x=\tan{u},\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></article><article class="remark remark-like" id="remark-2"><h6 class="heading">
+<span class="type">Observação</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
+</h6>É importante enfatizar que \(a^2+x^2\) e \(\sqrt{a^2+x^2}\) estão definida no intervalo \((-\infty,+\infty)\text{.}\) Supondo que o domínio do integrando é \((-\infty,+\infty)\) a substituição \(x=a\tan{u}\text{,}\)  com  \(-\pi/2\leq u\leq  \pi/2\) é válida para todo \(x\) do domínio, uma vez que a imagem é \((-\infty,+\infty)\) e tem inversa \(\arctan{\left(\frac{x}{a}\right)}\) em \((-\infty,+\infty)\text{.}\)</article><article class="exercise exercise-like" id="exer-substrig-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-substrig-01"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-substrig-01"><article class="exercise exercise-like"><p id="p-75">Determine \(\integral{\frac{1}{x^2+16}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-77">Use a substituição por \(u=4\tan{u}\text{,}\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-78">\(1/3x^3 + 16x\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-76">Use a substituição por \(u=4\tan{u}\text{,}\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-77">\(1/3x^3 + 16x +C\)</p></div></div>
 </div></article></div>
-<article class="activity project-like" id="activity-1"><h6 class="heading">
-<span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o recurso computacional.</span>
+<article class="technology computation-like" id="technology-1"><h6 class="heading">
+<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o recurso computacional.</span>
 </h6>
-<p id="p-79">Os sistemas de computação algébrica precisam, algumas vezes, de ajuda dos seres humanos. Tente calcular</p>
+<p id="p-78">Os sistemas de computação algébrica precisam, algumas vezes, de ajuda dos seres humanos. Tente calcular</p>
 <div class="displaymath">
 \begin{equation*}
 \integral{(1+\ln{x})\sqrt{1+(x\ln x)^2}}{x}\text{.}
@@ -522,8 +557,27 @@ a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}\tag{1.3}
 </div>
 <p data-braille="continuation">Se ele o <em class="emphasis">Sage</em> não retornar  uma resposta, faça uma substituição que mude a integral para uma daquelas que o sistema pode calcular. <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">
 </script></div></p></article><section class="exercises" id="exercises-subs-trig"><h4 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.2.1</span> <span class="title">Exercício</span>
-</h4></section></section></section></div></main>
+<span class="type">Exercícios</span> <span class="codenumber">1.2.1</span> <span class="title">Exercícios</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-1">
+<div class="introduction" id="introduction-4"><p id="p-79">Use a técnica de substituição para calcular as seguintes integrais indefinidas.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>\(\displaystyle\int 5t\sqrt[3]{1-t^2}\,\dd t\)</article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>\(\displaystyle\int \sqrt[3]{1-2x^2}(-4x)\,\dd x\)</article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>\(\displaystyle\int t\cos{t^2}\,\dd t\)</article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>\(\displaystyle\int \sin{2x}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>\(\displaystyle\int \left(t^3 + 5t\right)^8\,\dd t\)</article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>\(\displaystyle\int e^{5x}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>\(\displaystyle\int x^2e^{-x^2}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>\(\displaystyle\int\dfrac{1}{\sqrt{4-x}}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>\(\displaystyle\int \dfrac{1}{t+5}\,\dd t\)</article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>\(\displaystyle\int \dfrac{x^2}{(1+x^3)^2}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>\(\displaystyle\int \dfrac{x+1}{(x^2+2x-3)^2}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>\(\displaystyle\int \dfrac{x-2}{\sqrt{x^2-4x+3}}\,\dd x\)</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-2">
+<div class="introduction" id="introduction-5"><p id="p-80">Use a técnica de substituições trigonométricas para calcular as seguintes integrais.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>\(\integral{\sqrt{1-x^2}}{x}\)</article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>\(\integral{\sqrt{1+x^2}}{x}\)</article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>\(\integral{\sqrt{1-(t-1)^2}}{t}\)</article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>\(\integral{\sqrt{y^2+2y+2}}{y}\)</article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>\(\integral{\frac{1}{\sqrt{9-4x^2}}}{x}\)</article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>\(\integral{\frac{3}{\sqrt{2x-x^2}}}{x}\)</article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>\(\integral{\frac{1}{x^2+ 4x + 5}}{x}\)</article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>\(\integral{\frac{1}{\sqrt{4x - 3 -x^2}}}{x}\)</article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<p id="p-81">Use o <em class="emphasis">Sage</em> para calcular \(\integral{x(x^2+5)^8}{x}\text{.}\)</p>
+<div class="sagecell-sage" id="sage-2"><script type="text/x-sage">
+</script></div></article><article class="exercise exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p id="p-82">Use o <em class="emphasis">Sage</em> para calcular \(\integral{\sin^5{x}\cos{x}^2}{x}\text{.}\)</p>
+<div class="sagecell-sage" id="sage-3"><script type="text/x-sage">
+</script></div></article></section></section></section></div></main>
 </div>
 </body>
 </html>

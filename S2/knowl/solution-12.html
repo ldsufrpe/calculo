@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-25T19:45:41-03:00       *-->
+<!--*       on 2020-08-26T16:51:29-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,14 +16,15 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.8.b.1</span><span class="period">.</span>
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.12.a.1</span><span class="period">.</span>
 </h6>
-<p>Escolhendo \(u=e^3\text{,}\) temos \(du=e^x\dd x\text{.}\) Então</p>
+<p>Escolha \(u=\sin{x}\text{.}\) Então,  \(\frac{\dd u}{\dd x}=\cos{x}\) e \(\dd u = \cos{x}\dd x\text{.}\) Logo,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integral{\frac{e^x}{\sqrt{1-e^{2x}}}}{x} \amp = \integral{\frac{1}{\sqrt{1-u^2}}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}\\
-\amp = \arcsin{u} + C \amp \ct{Tabela de integrais.}\\
-\amp =\arcsin{e^x} + C \amp \ct{Retorna à variável}\, \ctm{x.}
+\integral{\sin^2{x}\cos{x}}{x}\amp = \integral{\ub{\sin^2{x}}{u^2}\ob{\cos{x}}{\dd u/\dd x}}{x} \amp \ctm{\dd u=\cos{x}\dd x.} \\
+\amp = \integral{u^2}{u} \amp \ct{Integral em relação a}\, \ctm{u.}\\
+\amp  =\frac{u^3}{3}+C \amp \ct{Regra da potência.} \\
+\amp=\frac{\sin^3{x}}{3}+C \amp \ct{Retorna à variável}\, \ctm{x.} 
 \end{align*}
 </div>
 </div>

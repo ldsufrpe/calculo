@@ -104,7 +104,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
         </introduction>
     <section>
-    <title> Integração por substituição</title>
+    <title> Integração por substituição de variáveis</title>
          <objectives>
             <title>Estrutura</title>
             <introduction>
@@ -129,6 +129,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <subsection xml:id="subsec-integracao-substituicao">
         <title>O método de substituição</title>
+        <introduction>
+            <p>
+                <figure>
+                    <title>Substituição por <m>u</m> </title>
+                    <caption>Exemplo de motivação</caption>
+                    <video xml:id="kanh-1" youtube="fkQ40Ph0Qkg" />
+                </figure>
+            </p>
+        </introduction>
         
             <p>
             A integração por susbstituição consiste em um método para encontrar primitivas por meio de uma
@@ -137,27 +146,26 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </p>
 
             <p>
-             Para exemplificar o método, vamos considerar resolver a integral indefinida <m>\integral{2x(x^2+1)^3}{x}</m>.
-            Com criativida podemos conjecturar <fn>depois</fn> que <m>\frac{(x^2+1)^4}{4}</m>  é uma primitiva de para 
-            <m>2x(x^2+1)^3</m>   e verificar usando a operação de derivada combinada com a <term>regra da cadeia</term>:
+             Para exemplificar o método, vamos considerar resolver a integral indefinida <me>\integral{2x(x^2+1)^3}{x}</me>.
+            Com criativida podemos conjecturar <fn>Ação ou efeito de deduzir algo, baseando-se em palpites, intuições, provas inconclusas ou suposições.</fn> que <m>\frac{(x^2+1)^4}{4}</m>  é uma primitiva  para 
+            <m>2x(x^2+1)^3</m>   e depois confirmar usando a operação de derivada combinada com a <term>regra da cadeia</term>:
             
             <md>
                 <mrow>\frac{\dd}{\dd x}\left[\frac{(x^2+1)^4}{4}\right] = (x^2+1)^3(2x) \amp </mrow>
             </md>.
             Dessa forma, a solução da integral é <me>\integral{2x(x^2+1)^3}{x}= \frac{(x^2+1)^4}{4} + C </me>.
-            Agora, pensando em termos da regra da cadeia, seria útil tomar <m>u=(x^2+1)</m> e transformar o integrando em uma função 
-            do tipo potência na variável <m>u</m>, isto é, <m>u^3</m>. O próximo passo é verificar se com essa mudança de variável
-            é possível encontrar <m>\dd u</m>, em termos da variável <m>x</m>, de tal forma que <me>2x(x^2+1)^3\dd x=u^3 \dd u</me>. O que 
-            em neste caso é verdadeiro pois <m>\dd u/\dd x= 2x</m>, que na forma diferencial se escreve
-            <m>\dd u= (2x)\dd x</m> Então, usando a substituição <m>u=(x^2+1)</m> a integral é convertida para a forma
+            Agora, pensando em simplificar o problema, seria útil tomar <m>u=(x^2+1)</m> e transformar o integrando em uma função 
+            do tipo potência na variável <m>u</m>, neste caso, <m>u^3</m>. O próximo passo é verificar se a partir da substituição para variável <m>u</m>
+            é possível encontrar <m>\dd u</m>, em termos da variável <m>x</m>, de tal forma que <me>2x(x^2+1)^3\dd x=u^3 \dd u</me>.
+            O que em nesse caso é verdadeiro pois, <m>\dd u/\dd x= 2x</m>, que pode ser reescrito como <m>\dd u= (2x)\dd x</m>. Então, usando a substituição <m>u=(x^2+1)</m>, a integral é convertida para a forma
 
            <md>
                <mrow> \integral{2x(x^2+1)^3}{x} \amp = \integral{u^3}{u} \amp \quad \color{gray}{\text{Substituição para variável}\, u.}</mrow>
-               <mrow> \amp = \frac{u^4}{4} +C \amp \quad \color{gray}{\text{Regra da potência.}}</mrow>
-               <mrow>  \amp = \frac{(x^2+1)^4}{4} + C \amp  \color{gray}{\text{Solução.}}</mrow>
+               <mrow> \amp = \frac{u^4}{4} +C \amp \quad \ct{Usando regra já conhecida.}</mrow>
+               <mrow>  \amp = \frac{(x^2+1)^4}{4} + C \amp  \ct{Retorna à variável} \, \ctm{x}</mrow>
            </md>.      
-           O processo de converter a integral na variável <m>x</m>  para uma integral em outra variável, digamos, <m>u</m> é denominado
-           de  <term> método de substituição <m>u</m></term>. 
+           O processo de converter a integral na variável <m>x</m>  para uma integral em outra variável, digamos <m>u</m>,
+            é denominado de  <term> método de substituição por <m>u</m></term>. 
            </p>       
       
         
@@ -172,6 +180,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
+            Escolha <m>u=3x-1</m>. Então,  <m>\frac{\dd u}{\dd x}=3</m> e <m>\dd u = 3\dd x</m>. Logo,
                 <md>
                     <mrow>\integral{3(3x-1)^4}{x} \amp = \integral{\ob{(3x-1)^4}{u^4}\ob{(3)}{\dd u /\dd x}}{x}\amp  \ctm{\dd u= 3dx.} </mrow>
                    <mrow> \amp =\integral{u^4}{u} \amp \ct{Integral em relação a}\, \ctm{u.}</mrow>
@@ -191,6 +200,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <solution>
             <p>
+            Escolha <m>u=x^2-x</m>. Então,  <m>\frac{\dd u}{\dd x}=2x+1</m> e <m>\dd u = (2x+1)\dd x</m>. Logo,
             <md>
                 <mrow>\integral{(2x+1)(x^2+x)}{x} \amp = \integral{\ob{(x^2+x)}{u}\ob{(2x+1)}{\dd u/\dd x}}{x}  \amp \ctm{\dd u= (2x+1)\dd x}</mrow>
                 <mrow> \amp = \integral{u}{u} \amp \ct{Integral em relação a u.} </mrow>
@@ -210,11 +220,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <task>
             <statement>
                 <p>
+                 
                    <m> \integral{3x^2\sqrt{x^3-2}}{x}</m>
                 </p>
             </statement>
             <solution>
             <p>
+            Escolha <m>u=x^3-2</m>. Então,  <m>\frac{\dd u}{\dd x}=3x^2</m> e <m>\dd u = (3x^2)\dd x</m>. Logo,
                 <md>
                     <mrow>\integral{3x^2\sqrt{x^3-2}}{x} \amp = \integral{\ob{(x^3-2)^{1/2}}{u^{1/2}}\ob{(3x^2)}{\dd u / \dd x}}{x} \amp \ctm{\dd u=3x^2\dd x.} </mrow>
                     <mrow> \amp = \integral{u^{1/2}}{u} \amp \ct{Integral em relação a} \,\ctm{u.}</mrow>
@@ -234,6 +246,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
+            Escolha <m>u=1-2x^2</m>. Então,  <m>\frac{\dd u}{\dd x}=-4x</m> e <m>\dd u = (-4x)\dd x</m>. Logo,
                 <md>
                     <mrow> \integral{\frac{-4x}{(1-2x^2)^2}}{x}\amp =\integral{\ob{(1-2x^2)^{-2}}{u^{-2}}\ob{(-4x)}{\dd u / \dd x} }{x} \amp \ctm{\dd u=(-4x)\dd x}</mrow>
                     <mrow> \amp =\integral{u^{-2}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}</mrow>
@@ -250,7 +263,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise xml:id="exer-potencia-01">
             <statement>
                 <p>
-                   Determine  <m>\integral{2x(x^2+1)^8}{x}</m>.
+                   Determine  <m>\integral{2x(x^2+1)^3}{x}</m>.
                 </p>
             </statement>
             <hint>
@@ -260,7 +273,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    depois
+                  <m>  \frac{2}{7} \, x^{7} + \frac{6}{5} \, x^{5} + 2 \, x^{3} + 2 \, x +C</m>
                 </p>
             </answer>
         </exercise>
@@ -269,7 +282,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise xml:id="exer-potencia-02">
             <statement>
                 <p>
-                   Determine  <m>\integral{3x\sqrt{x^3-2}}{x}</m>.
+                   Determine  <m>\integral{3x^2\sqrt{x^3-2}}{x}</m>.
                 </p>
             </statement>
             <hint>
@@ -279,7 +292,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    depois
+                    <m>2/3(x^3-2)^{3/2} + C</m>
                 </p>
             </answer>
         </exercise>
@@ -298,7 +311,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    depois
+                    <m>\frac{1}{3} \, {\left(x^{3} + 6 \, x\right)}^{3}+C</m>
                 </p>
             </answer>
         </exercise>
@@ -306,7 +319,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <example xml:id="ex-reescrevendo-02" >
         <title>Reescrevendo o integrando</title>
-        <task>
+       
             <statement>
                 <p>
                     Determine <m>\integral{x(3-4x^2)^2}{x}</m>.
@@ -314,6 +327,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
+            Escolha <m>u=3-4x^2</m>. Então,  <m>\frac{\dd u}{\dd x}=-8x</m> e <m>\dd u = (-8x)\dd x</m>. Então,
                 <md>
                     <mrow>\integral{x(3-4x^2)^2}{x} \amp = \integral{\left(-\frac{1}{8}\right)\ob{(3-4x^2)^2}{u^2}\ob{(-8x)}{\dd u / \dd x}}{x} \amp \ct{Multiplique e divida por}\, \ctm{-8}. </mrow>
                     <mrow> \amp =\integral{-\frac{1}{8}u^2}{u} = -\frac{1}{8}\integral{u^2}{u} \amp \ct{Integral em relação a} \, \ctm{u.}</mrow>
@@ -323,21 +337,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </md>
             </p>
         </solution>
-        </task>
+       
 
-        <task>
-            <statement>
-                <p>
-                    criar outro exemplo...
-                </p>
-            </statement>
-            <solution>
-            <p>
-                
-            </p>
-        </solution>
-        </task>       
-           
+       
         </example>
 
     <example xml:id="ex-subs-03">
@@ -349,21 +351,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </statement>
     <solution>
         <p>
-             A escolha <m>u=3-4x^2</m>  gera <m>\dd u/\dd x=-8x </m>, isto é, 
-             <m>du=(-8x)\dd x</m>. Note a escolha de <m>u</m> quando combinada com <m>\dd u</m>, não permite o usar o método de substituição, 
-             uma vez que não produz uma integral em relação a <m>u</m>. No  <xref ref="ex-reescrevendo-02"/> rescrevemos o integrando usando a estratégia 
-             de multiplicar e dividir por uma constante e então retirar a constante do integrando. O fato é que isso
-             não é possível quando trata-se de variáveis já que
+             A escolha <m>u=3-4x^2</m>  gera <m>\dd u/\dd x=-8x </m> e   <me>du=(-8x)\dd x</me>.  Note que a escolha de <m>u</m> combinada com a expressão de 
+             <m>\dd u</m> não permite o usar o método de substituição, uma vez que não produz uma integral em relação a <m>u</m>. No  <xref ref="ex-reescrevendo-02"/> 
+             reescrevemos o integrando usando a estratégia de multiplicar e dividir por uma constante e então retirar a constante do integrando. O fato é que isso
+             não é possível quando trata-se de variáveis, observe:
 
              <me>
                  \integral{-8(3-4x^2)^2}{x} \neq \frac{1}{x}\integral{(3-4x^2)^2(-8x)}{x}.
              </me>
              
-             Nesse caso a melhor estégia é expandir o integrando para gerar um polinômio e depois aplicar a regra da potência em cada parcela.
+             Nesse caso, a melhor estégia é expandir o integrando  e depois aplicar a regra da potência em cada parte.
 
              <md>
                  <mrow> \integral{-8(3-4x^2)^2}{x}  \amp = \integral{(-128x^4+192x^2-72)}{dx} </mrow>
-                 <mrow> \amp = -72x+64x^3-\frac{128}{5}x^5 + C </mrow>
+                 <mrow> \amp = -\frac{128}{5}x^5 + 64x^3 - 72x+ C </mrow>
              </md>.
         </p>
     </solution>
@@ -383,6 +384,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
+            Escolha <m>u=x+9</m>. Então,  <m>\frac{\dd u}{\dd x}=1</m> e <m>\dd u = \dd x</m>. Logo,
                 <md>
                     <mrow>\integral{\sin{(x+9)}}{x} \amp = \integral{\sin{\ob{(x+9)}{u}\cdot \ob{1}{\dd u /\dd x}}}{x} \amp \ctm{\dd u=1\dd x}</mrow>
                     <mrow> \amp = \integral{\sin{u}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}  </mrow>
@@ -401,6 +403,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
+            Escolha <m>u=5x</m>. Então,  <m>\frac{\dd u}{\dd x}=5</m> e <m>\dd u = 5\dd x</m>. Logo,
                 <md>
                     <mrow>\integral{\cos{(5x)}}{x} \amp = \integral{\frac{1}{5}\cos{\ob{(5x)}{u}}\ob{5}{\dd u / \dd x}}{x} \amp \ct{Multiplicando e dividindo por 5.} </mrow>
                     <mrow> \amp =\frac{1}{5}\integral{\cos{u}}{u}\amp \ct{Integral em relação a}\, \ctm{u.}  </mrow>
@@ -424,6 +427,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
+             Escolha <m>u=\sqrt{x}</m>. Então,  <m>\frac{\dd u}{\dd x}=\frac{1}{2\sqrt{x}}</m> e <m>\dd u = \frac{1}{2\sqrt{x}}\dd x</m>. Logo,
+                
+            
                 <md>
                     <mrow> \integral{\frac{e^{\sqrt{x}}}{\sqrt{x}}}{x}\amp = \integral{\left(2e^{\ob{\sqrt{x}}{u}}\right)\ob{\left(\frac{1}{2\sqrt{x}}\right)}{\dd u /\dd x}}{x}\amp \ct{Multiplicando e dividindo por 2.}</mrow>
                     <mrow> \amp = \integral{2e^u}{u}=2\integral{e^u}{u}\amp \ct{Integral em relação a}\, \ctm{u.}  </mrow>
@@ -442,7 +448,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
-               Escolhendo <m>u=e^3</m>, temos <m>du=e^x\dd x</m>. Então
+                
+            
+            
+               Escolha <m>u=e^x</m>. Então, <m>\frac{\dd u}{\dd x}</m> e <m>du=e^x\dd x</m>. Logo,
                 <md>
                     <mrow>\integral{\frac{e^x}{\sqrt{1-e^{2x}}}}{x} \amp = \integral{\frac{1}{\sqrt{1-u^2}}}{u} \amp \ct{Integral em relação a}\, \ctm{u.}</mrow>
                     <mrow> \amp = \arcsin{u} + C \amp \ct{Tabela de integrais.}</mrow>
@@ -457,7 +466,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise>
             <statement>
                 <p>
-                    Determine <m>\integral{\cos(x+3)}{x}</m>.
+                    Determine <m>\integral{\cos(t+3)}{t}</m>.
                 </p>
             </statement>
             <hint>
@@ -467,7 +476,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                   <m>\sin(t + 3)</m>
+                   <m>\sin(t + 3)+C</m>
                 </p>
             </answer>
         </exercise>
@@ -484,31 +493,31 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    <m>-1/5e^{-5t}</m>
+                    <m>-1/5e^{-5x}+C</m>
                 </p>
             </answer>
         </exercise>
     <assemblage xml:id="assemblage-roteiro">
         <title>Roteiro do método de substituição</title>
         <p>
-            <ul>
+            <ol>
                 <li>
                     <p>
-                        passo 1
+                        Escolha <m> u</m> como uma função de <m>x</m> e escreva <m>\dd x</m> como função de <m>\dd u</m>.
                     </p>
                 </li>
 
                 <li>
                     <p>
-                        passo 2 
+                        Converta toda a integral para a variável <m>u</m>.
                     </p>
                 </li>
                 <li>
                     <p>
-                        Passo 3
+                        Após a integração, reescreva a primitiva como uma função de <m>x</m>.
                     </p>
                 </li>
-            </ul>
+            </ol>
         </p>
     </assemblage>
 
@@ -527,7 +536,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
-            Fazendo a escolha <m>u=\sin{x}</m>, temos
+             Escolha <m>u=\sin{x}</m>. Então,  <m>\frac{\dd u}{\dd x}=\cos{x}</m> e <m>\dd u = \cos{x}\dd x</m>. Logo,           
+            
                 <md>
                     <mrow> \integral{\sin^2{x}\cos{x}}{x}\amp = \integral{\ub{\sin^2{x}}{u^2}\ob{\cos{x}}{\dd u/\dd x}}{x} \amp \ctm{\dd u=\cos{x}\dd x.} </mrow>
                     <mrow> \amp = \integral{u^2}{u} \amp \ct{Integral em relação a}\, \ctm{u.}</mrow> 
@@ -546,14 +556,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
-                Neste caso a composição <m>\sqrt{x-1}</m> sugere a substituição 
+               A composição <m>\sqrt{x-1}</m> sugere a substituição 
                 
                 <mdn >
-                    <mrow  xml:id="exsub1"  tag="star"> u=x-1,  \amp \,\text{gerando} \,  \dd u=\dd x</mrow>
-                </mdn>.
+                    <mrow  xml:id="exsub1"  tag="star"> u=x-1 </mrow>,
+                </mdn>
                 
                 
-                Logo percebe-se que devemos expressar o termo <m>x^2</m> do integrando também em termos de <m>u</m>. Para isso, a partir de <xref ref="exsub1"/>, 
+               que implica em  <m>\dd u=\dd x</m>. Percebe-se que devemos expressar o termo <m>x^2</m>, do integrando, também em termos de <m>u</m>. Para isso, a partir de <xref ref="exsub1"/>, 
                 fazemos <m>x=u+1</m> para obter
 
                 <me>
@@ -585,7 +595,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    <m>-1/3\cos^3{t}</m>
+                    <m>-1/3\cos^3{t} +C</m>
                 </p>
             </answer>
         </exercise>
@@ -609,18 +619,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </answer>
 </exercise>
 
-        
+       
     </subsection>
     <subsection xml:id="subsec-substituicoes-trigonometricas">
         <title>Substituições Trigonométricas</title>
 
         <p>
-         Integrando que envolvem raízes quadradas de polinômios admitem uma substituição por <m>u</m> de forma implicita. Por exemplo, 
+         O integrando que envolve raízes quadradas de polinômios e polinômios não fatoráveis <fn>Informalmente, são polinômios que 
+         não pode ser obtido por produtos de dois polinômios não constantes. Por exemplo, <m>4+x^2.</m></fn> admitem uma substituição por <m>u</m> de forma implicita. Por exemplo, 
          <m>x=\sin{u}</m> e <m>x=\tan{u}</m>. Essas substituições são denominadas de <term>substituições trigonometricas</term>.          
         </p>
 
         <p>
-        As substituições que envolvem os tipos citados em geral fazem uso da identdade trigonométrica
+        As simplificações necessárias nas subsutituições trigonométricas fazem uso  da identidade
         
         <mdn >
             <mrow xml:id="idf"> \cos^2{u} + \sin^2{u} =1 </mrow>
@@ -637,9 +648,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </mdn>
             para subsitituções por <m>\tan{u}</m>.
         </p>
-        <remark> 
         
-        </remark>    
 
        <example xml:id="ex-seno-01" >
         <title>Substituição usando o seno</title>
@@ -651,13 +660,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
             <p>
-                A escolha <m>x=\sin{u}</m> fornece
+            
+                Escolha <m>x=\sin{u}</m>. Então, <m>\frac{\dd x}{\dd u}=\cos{x}</m> e <m>\dd x=\cos{u}\dd u</m>. Logo,
 
                 <md>
                     <mrow> \integral{\frac{1}{\sqrt{1-x^2}}}{x}\amp = \integral{\frac{1}{\sqrt{1-\sin^2{u}}}}{u} </mrow>
                     <mrow> \amp = \integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp \ct{usamos a identidade}\, <xref ref="idf"/> </mrow>
                 </md>.
-            Já que <m> -\pi/2\leq u\leq  \pi/2 </m>, temos <me>\sqrt{\cos^2{u}}=\cos{u}</me>. Então,
+           Escolhendo  <m> -\pi/2\leq u\leq  \pi/2 </m>, temos <me>\sqrt{\cos^2{u}}=\cos{u}</me>. Então,
 
             <md>
                 <mrow> \integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp = \integral{\frac{\cos{u}}{\cos{u}}}{u}</mrow>
@@ -701,9 +711,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <title>Regra geral para substituições por <m>\sin{u}</m> </title>
             <p>
                 Para integrando envolvendo <m>\sqrt{a^2-x^2}</m>, sendo <m>a</m> uma constante,
-                tente a escolha <m>x=a\sin{u}</m>, com  <m> -\pi/2\leq u\leq  \pi/2</m>.
+                tente a substituição a partir de <m>x=a\sin{u}</m>, com  <m> -\pi/2\leq u\leq  \pi/2</m>.
             </p>
         </assemblage>
+
+        <remark> 
+        É importante enfatizar que <m>\sqrt{a^2-x^2}</m> só está definida no intervalo <m>[-a,a]</m>. Supondo que 
+        o domínio do integrando é <m>[-a,a]</m> a substituição <m>x=a\sin{u}</m>,  com  <m> -\pi/2\leq u\leq  \pi/2</m> 
+        é válida para todo <m>x</m> do domínio, uma vez que a imagem é <m>[-a,a]</m> e tem inversa 
+        <m>\arcsin{\left(\frac{x}{a}\right)}</m> em <m>[-a,a]</m>.
+        </remark>    
         <exercise>
             <statement>
                 <p>
@@ -717,7 +734,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                  <m>  \arcsin\left(\frac{1}{3}x\right)</m>
+                  <m>  \arcsin\left(\frac{1}{3}x\right)+C</m>
                 </p>
             </answer>
         </exercise>
@@ -735,7 +752,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                  <m> \frac{1}{2}\arcsin\left(\frac{2}{3}x\right)</m>
+                  <m> \frac{1}{2}\arcsin\left(\frac{2}{3}x\right) +C</m>
                 </p>
             </answer>
         </exercise>
@@ -804,7 +821,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
          Para o integrando encolvendo <m>a^2+ x^2</m> ou <m>\sqrt{a^2+ x^2}</m>, sendo <m>a</m> constante,
          tente <m>x=\tan{u},</m> com <m> -\pi/2\leq u\leq  \pi/2</m>.
      </p>
- </assemblage>       
+ </assemblage>  
+   <remark> 
+        É importante enfatizar que <m>a^2+x^2</m> e <m>\sqrt{a^2+x^2}</m> estão definida no intervalo <m>(-\infty,+\infty)</m>. Supondo que 
+        o domínio do integrando é <m>(-\infty,+\infty)</m> a substituição <m>x=a\tan{u}</m>,  com  <m> -\pi/2\leq u\leq  \pi/2</m> 
+        é válida para todo <m>x</m> do domínio, uma vez que a imagem é <m>(-\infty,+\infty)</m> e tem inversa 
+        <m>\arctan{\left(\frac{x}{a}\right)}</m> em <m>(-\infty,+\infty)</m>.
+        </remark>         
 <exercise xml:id="exer-substrig-01">
 
     <statement>
@@ -819,12 +842,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </hint>
     <answer>
         <p>
-            <m>1/3x^3 + 16x</m>
+            <m>1/3x^3 + 16x +C</m>
         </p>
     </answer>
 </exercise>
 
-<activity>
+<technology>
     <title>Usando o recurso computacional</title>
    <statement>
        <p>
@@ -847,13 +870,119 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         
        </p>
    </statement>
-</activity>
+</technology>
 
 <exercises xml:id="exercises-subs-trig">
 <title>Exercícios</title>
 
-    
+<exercisegroup cols="2">
+<introduction>
+    <p>
+        Use a técnica de substituição para calcular as seguintes integrais indefinidas.
+    </p>
+</introduction>
+<exercise>
+    <m>\displaystyle\int 5t\sqrt[3]{1-t^2}\,\dd t</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int \sqrt[3]{1-2x^2}(-4x)\,\dd x</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int t\cos{t^2}\,\dd t</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int \sin{2x}\,\dd x</m>
+</exercise>
+<exercise>
+ <m>\displaystyle\int \left(t^3 + 5t\right)^8\,\dd t</m>
+</exercise>
+    <exercise>
+        <m>\displaystyle\int e^{5x}\,\dd x</m>
+    </exercise>
+    <exercise>
+        <m>\displaystyle\int x^2e^{-x^2}\,\dd x</m>
+    </exercise>
+    <exercise>
+        <m>\displaystyle\int\dfrac{1}{\sqrt{4-x}}\,\dd x</m>
+    </exercise>
+    <exercise>
+        <m>\displaystyle\int \dfrac{1}{t+5}\,\dd t</m>
+    </exercise>
+    <exercise>
+        <m>\displaystyle\int \dfrac{x^2}{(1+x^3)^2}\,\dd x</m>
+    </exercise>
+    <exercise>
+        <m>\displaystyle\int \dfrac{x+1}{(x^2+2x-3)^2}\,\dd x</m>
+    </exercise>
+    <exercise>
+        <m>\displaystyle\int \dfrac{x-2}{\sqrt{x^2-4x+3}}\,\dd x</m>
+    </exercise>
+</exercisegroup>
+ <exercisegroup cols="2">
+    <introduction>
+    <p>
+       Use a técnica de substituições trigonométricas para calcular as seguintes integrais.
+    </p>
+   </introduction>
+   <exercise>
+       <m>\integral{\sqrt{1-x^2}}{x}</m>
+   </exercise>
+   <exercise>
+       <m>\integral{\sqrt{1+x^2}}{x}</m>
+   </exercise>
+   <exercise>
+       <m>\integral{\sqrt{1-(t-1)^2}}{t}</m>
+   </exercise>
+   <exercise>
+       <m>\integral{\sqrt{y^2+2y+2}}{y}</m>
+   </exercise>
+   <exercise>
+       <m>\integral{\frac{1}{\sqrt{9-4x^2}}}{x}</m>
+   </exercise>
+   <exercise>
+       <m>\integral{\frac{3}{\sqrt{2x-x^2}}}{x}</m>
+   </exercise>
+   <exercise>
+       <m>\integral{\frac{1}{x^2+ 4x + 5}}{x}</m>
+   </exercise>
+   <exercise>
+       <m>\integral{\frac{1}{\sqrt{4x - 3 -x^2}}}{x}</m>
+   </exercise>
+<!--   <exercise>
+       <m>\integral{\frac{y^2}{25+y^2}}{y}</m>
+   </exercise>-->
+   </exercisegroup>
+<exercise>
+<p>
+    Use o <em> Sage </em> para calcular <m>\integral{x(x^2+5)^8}{x}</m>.
+</p>
+<sage>
+    <input>
+        
+    </input>
+    <output>
+        (for static output)
+    </output>
+</sage>
+
+</exercise>
+<exercise>
+<p>
+    Use o <em> Sage </em> para calcular <m>\integral{\sin^5{x}\cos{x}^2}{x}</m>.
+</p>
+<sage>
+    <input>
+        
+    </input>
+    <output>
+        (for static output)
+    </output>
+</sage>
+
+</exercise>
 </exercises>
+    
+
     </subsection>
     
 
@@ -862,4 +991,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </article>
 
 </pretext>
+
+
 
