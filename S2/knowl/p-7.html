@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-26T16:51:28-03:00       *-->
+<!--*       on 2020-08-26T17:07:10-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,39 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Parágrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">A integração por susbstituição consiste em um método para encontrar primitivas por meio de uma substituição conveniente da variável do integrando, de tal forma, a transformar o problema de integração, inicialmente complicado, em um mais simples.</p>
+<p>Para exemplificar o método, vamos considerar resolver a integral indefinida</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\integral{2x(x^2+1)^3}{x}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Com criativida podemos conjecturar <a class="fn-knowl original" data-knowl="./knowl/fn-1-hidden.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a> que \(\frac{(x^2+1)^4}{4}\)  é uma primitiva  para \(2x(x^2+1)^3\)   e depois confirmar usando a operação de derivada combinada com a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">regra da cadeia</dfn>:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{\dd}{\dd x}\left[\frac{(x^2+1)^4}{4}\right] = (x^2+1)^3(2x) \amp \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Dessa forma, a solução da integral é</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\integral{2x(x^2+1)^3}{x}= \frac{(x^2+1)^4}{4} + C \text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Agora, pensando em simplificar o problema, seria útil tomar \(u=(x^2+1)\) e transformar o integrando em uma função do tipo potência na variável \(u\text{,}\) neste caso, \(u^3\text{.}\) O próximo passo é verificar se a partir da substituição para variável \(u\) é possível encontrar \(\dd u\text{,}\) em termos da variável \(x\text{,}\) de tal forma que</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2x(x^2+1)^3\dd x=u^3 \dd u\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">O que em nesse caso é verdadeiro pois, \(\dd u/\dd x= 2x\text{,}\) que pode ser reescrito como \(\dd u= (2x)\dd x\text{.}\) Então, usando a substituição \(u=(x^2+1)\text{,}\) a integral é convertida para a forma</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integral{2x(x^2+1)^3}{x} \amp = \integral{u^3}{u} \amp \quad \color{gray}{\text{Substituição para variável}\, u.}\\
+\amp = \frac{u^4}{4} +C \amp \quad \ct{Usando regra já conhecida.}\\
+\amp = \frac{(x^2+1)^4}{4} + C \amp  \ct{Retorna à variável} \, \ctm{x}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">O processo de converter a integral na variável \(x\)  para uma integral em outra variável, digamos \(u\text{,}\) é denominado de  <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">método de substituição por \(u\)</dfn>.</p>
 <span class="incontext"><a href="section-1.html#p-7">[incontext]</a></span>
 </body>
 </html>
