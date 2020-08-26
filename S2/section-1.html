@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-25T00:48:16-03:00       *-->
+<!--*       on 2020-08-25T19:45:41-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <title>Integração por substituição</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -43,7 +43,15 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Avalie (Sage)';
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Avalie (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Avalie (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
@@ -306,92 +314,216 @@ MathJax.Hub.Config({
 \end{align*}
 </div>
 </div></div>
-</div></article></article><article class="assemblage assemblage-like" id="assemblage-roteiro"><h6 class="heading"><span class="title">Roteiro do método de substituição.</span></h6>
-<ul id="p-40" class="disc">
-<li id="li-3"><p id="p-41">passo 1</p></li>
-<li id="li-4"><p id="p-42">passo 2</p></li>
-<li id="li-5"><p id="p-43">Passo 3</p></li>
-</ul></article><article class="exercise exercise-like" id="exer-subsu-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-subsu-01"><h6 class="heading">
+</div></article></article><article class="exercise exercise-like" id="exercise-4"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-subsu-01"><article class="exercise exercise-like"><p id="p-44">depois</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-40">Determine \(\integral{\cos(x+3)}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-45">depois</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-46">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-41">Revise <a class="xref" data-knowl="./knowl/ex-subs-04.html" title="Exemplo 1.7: Envolvendo funções trigonométricas">Exemplo 1.7</a></p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-42">\(\sin(t + 3)\)</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exer-subsu-02"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-subsu-02"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-5"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-subsu-02"><article class="exercise exercise-like"><p id="p-47">depois</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-43">Determine \(\integral{e^{-5x}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-48">depois</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-49">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-44">Use \(u=-5x\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-45">\(-1/5e^{-5t}\)</p></div></div>
 </div></article></div>
-<article class="example example-like" id="ex-subsu-05"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Integração por substituição.</span>
+<article class="assemblage assemblage-like" id="assemblage-roteiro"><h6 class="heading"><span class="title">Roteiro do método de substituição.</span></h6>
+<ul id="p-46" class="disc">
+<li id="li-3"><p id="p-47">passo 1</p></li>
+<li id="li-4"><p id="p-48">passo 2</p></li>
+<li id="li-5"><p id="p-49">Passo 3</p></li>
+</ul></article><article class="example example-like" id="ex-subsu-05"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Mais integração por substituição \(u\).</span>
 </h6>
 <article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-50">teste</p>
+<p id="p-50">Determine \(\integral{\sin{x}^2\cos{x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><p id="p-51"></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-51">Fazendo a escolha \(u=\sin{x}\text{,}\) temos</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\sin^2{x}\cos{x}}{x}\amp = \integral{\ub{\sin^2{x}}{u^2}\ob{\cos{x}}{\dd u/\dd x}}{x} \amp \ctm{\dd u=\cos{x}\dd x.} \\
+\amp = \integral{u^2}{u} \amp \ct{Integral em relação a}\, \ctm{u.}\\
+\amp  =\frac{u^3}{3}+C \amp \ct{Regra da potência.} \\
+\amp=\frac{\sin^3{x}}{3}+C \amp \ct{Retorna à variável}\, \ctm{x.} 
+\end{align*}
+</div>
+</div></div>
 </div></article><article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-52">teste</p>
+<p id="p-52">Determine \(\integral{x^2\sqrt{x-1}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><p id="p-53"></p></div></div>
-</div></article></article><article class="exercise exercise-like" id="exer-regras-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-regras-01"><h6 class="heading">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-53">Neste caso a composição \(\sqrt{x-1}\) sugere a substituição</p>
+<div class="displaymath">
+\begin{align}
+u=x-1,  \amp \,\text{gerando} \,  \dd u=\dd x\text{.}\label{exsub1}\tag{\(\star\)}
+\end{align}
+</div>
+<p data-braille="continuation">Logo percebe-se que devemos expressar o termo \(x^2\) do integrando também em termos de \(u\text{.}\) Para isso, a partir de <a class="xref" data-knowl="./knowl/exsub1.html" title="[mrow]">(\(\star\))</a>, fazemos \(x=u+1\) para obter</p>
+<div class="displaymath">
+\begin{equation*}
+x^2 = (u+1)^2=u^2+2u+1
+\end{equation*}
+</div>
+<p data-braille="continuation">e então calcular a integral como segue:</p>
+<div class="displaymath">
+\begin{align*}
+\integral{x^2\sqrt{x-1}}{x}\amp = \integral{(u^2+2u+1)\sqrt{u}}{u}\\
+\amp \integral{(u^{5/2}+ 2u^{3/2}+ u^{1/2})}{u}\\
+\amp = \frac{2}{7}u^{7/2} + \frac{4}{5}u^{5/2}+ \frac{2}{3}u^{3/2} +C\\
+\amp = \frac{2}{7}(x-1)^{7/2} + \frac{4}{5}(x-1)^{5/2}+ \frac{2}{3}(x-1)^{3/2} +C 
+\end{align*}
+</div>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-6"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-regras-01"><article class="exercise exercise-like"><p id="p-54">depois</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-54">Determine \(\integral{\sin{t} \cos^{2}{t}}{t}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-55">depois</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-56">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-55">Revise <a class="xref" data-knowl="./knowl/ex-subsu-05.html" title="Exemplo 1.11: Mais integração por substituição \(u\)">Exemplo 1.11</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-56">\(-1/3\cos^3{t}\)</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer-regras-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-regras-01"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-regras-01"><article class="exercise exercise-like"><p id="p-57">Determine \(\integral{t^2\sqrt{t+1}}{t}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-58">Revise <a class="xref" data-knowl="./knowl/ex-subsu-05.html" title="Exemplo 1.11: Mais integração por substituição \(u\)">Exemplo 1.11</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-59">\(2/7(t + 1)^{7/2} - 4/5(t + 1)^{5/2} + 2/3(t + 1)^{3/2} + C\)</p></div></div>
 </div></article></div></section><section class="subsection" id="subsec-substituicoes-trigonometricas"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Substituições Trigonométricas</span>
 </h3>
-<article class="example example-like" id="ex-seno-01"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Usando seno.</span>
+<p id="p-60">Integrando que envolvem raízes quadradas de polinômios admitem uma substituição por \(u\) de forma implicita. Por exemplo, \(x=\sin{u}\) e \(x=\tan{u}\text{.}\) Essas substituições são denominadas de <dfn class="terminology">substituições trigonometricas</dfn>.</p>
+<p id="p-61">As substituições que envolvem os tipos citados em geral fazem uso da identdade trigonométrica</p>
+<div class="displaymath">
+\begin{gather}
+\cos^2{u} + \sin^2{u} =1 \label{idf}\tag{1.1}
+\end{gather}
+</div>
+<p data-braille="continuation">para integrandos que envovem a expressões do tipo</p>
+<div class="displaymath">
+\begin{gather}
+\sqrt{a-x^2} \text{,}\tag{1.2}
+\end{gather}
+</div>
+<p data-braille="continuation">no caso da substitução por \(\sin{u}\) e</p>
+<div class="displaymath">
+\begin{gather}
+a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}\tag{1.3}
+\end{gather}
+</div>
+<p data-braille="continuation">para subsitituções por \(\tan{u}\text{.}\)</p>
+<article class="remark remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Observação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+</h6></article><article class="example example-like" id="ex-seno-01"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Substituição usando o seno.</span>
 </h6>
 <article class="task exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-57">teste</p>
+<p id="p-62">Determine \(\integral{\frac{1}{\sqrt{1-x^2}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><p id="p-58"></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-63">A escolha \(x=\sin{u}\) fornece</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\frac{1}{\sqrt{1-x^2}}}{x}\amp = \integral{\frac{1}{\sqrt{1-\sin^2{u}}}}{u} \\
+\amp = \integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp \ct{usamos a identidade}\, \knowl{./knowl/idf.html}{\text{(1.1)}} \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Já que \(-\pi/2\leq u\leq  \pi/2 \text{,}\) temos</p>
+<div class="displaymath">
+\begin{equation*}
+\sqrt{\cos^2{u}}=\cos{u}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Então,</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp = \integral{\frac{\cos{u}}{\cos{u}}}{u}\\
+\amp  = \integral{1}{u}= u+C\\
+\amp= \arcsin{x} + C
+\end{align*}
+</div>
+<p data-braille="continuation">A última igualdade acima segue do fato de que  \(u=\arcsin{x} \) se \(x=\sin{u}\text{,}\) no qual \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p>
+</div></div>
 </div></article><article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-59">teste</p>
+<p id="p-64">Determine \(\integral{\frac{1}{\sqrt{4-x^2}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><p id="p-60"></p></div></div>
-</div></article></article><article class="example example-like" id="ex-tangente-02"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Usando Tangente.</span>
-</h6>
-<article class="task exercise-like" id="task-15"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-61">teste</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><p id="p-62"></p></div></div>
-</div></article><article class="task exercise-like" id="task-16"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-63">teste</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-64"></p></div></div>
-</div></article></article><article class="example example-like" id="ex-outras-03"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Completando quadrados.</span>
-</h6>
-<article class="task exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-65">teste</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><p id="p-66"></p></div></div>
-</div></article><article class="task exercise-like" id="task-18"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-67">teste</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><p id="p-68"></p></div></div>
-</div></article></article><article class="exercise exercise-like" id="exer-substrig-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-substrig-01"><h6 class="heading">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-65">O integrando acima sugere a escolha \(x=a\sin{u}\text{,}\) para que seja possível obter</p>
+<div class="displaymath">
+\begin{align*}
+\sqrt{4-x^2}\amp = \sqrt{4-4\sin^{u}} \\
+\amp 2\sqrt{1-\sin^2{u}}=2\sqrt{\cos^2{u}} \\
+\amp = 2\cos{u} \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Dessa forma,</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\frac{1}{\sqrt{4-x^2}}}{x} \amp = \integral{\frac{1}{2\cos{u}}\cdot 2\cos{u}}{u}\amp  \ctm{\dd x= 2 \cos{u}\dd u} \\
+\amp = \integral{1}{u}  \\
+\amp= u+C = \arcsin{\frac{x}{2} +C}
+\end{align*}
+</div>
+</div></div>
+</div></article></article><article class="assemblage assemblage-like" id="assemblage-"><h6 class="heading"><span class="title">Regra geral para substituições por \(\sin{u}\).</span></h6>
+<p id="p-66">Para integrando envolvendo \(\sqrt{a^2-x^2}\text{,}\) sendo \(a\) uma constante, tente a escolha \(x=a\sin{u}\text{,}\) com  \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-8"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-substrig-01"><article class="exercise exercise-like"><p id="p-69">depois</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-67">Determine \(\integral{\frac{1}{\sqrt{9-x^2}}}{x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-70">depois</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-71">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-68">Use a substituição \(x=3\sin{u}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-69">\(\arcsin\left(\frac{1}{3}x\right)\)</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exer-substrig-02"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-substrig-02"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-9"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-9"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-substrig-02"><article class="exercise exercise-like"><p id="p-72">depois</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-70">Determine \(\integral{\frac{1}{\sqrt{9-4x^2}}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-73">depois</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-74">depois</p></div></div>
-</div></article></div></section></section></div></main>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-71">Use a substituição \(x=\frac{3}{2}\sin{u}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-72">\(\frac{1}{2}\arcsin\left(\frac{2}{3}x\right)\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex-tangente-02"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Substituições usando tangente.</span>
+</h6>
+<p id="p-73">Determine \(\integral{\frac{1}{x^2+9}}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-74">A substituição \(x=3\tan{u}\text{,}\) fornece</p>
+<div class="displaymath">
+\begin{equation*}
+\dd x = \left(\frac{3}{\cos^2{u}}\right)\dd u\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Daí,</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\frac{1}{x^2+9}}{x}\amp =\integral{\left(\frac{1}{9 + 9\tan^2{u}}\right)\left(\frac{3}{\cos^2{u}}\right)}{u} \\
+\amp = \frac{1}{3}\integral{\frac{1}{\left( \frac{\sin^2{u}}{\cos^2{u}}+1\right)\cos^2{u}}} {u}\\
+\amp =\frac{1}{3}\integral{\frac{1}{\sin^2{u}+ \cos^2{u}}}{u}=\frac{1}{3}\integral{1}{u} \\
+\amp = \frac{1}{3}u+ C=\frac{1}{3}\arctan{\left(\frac{x}{3}\right)} + C\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">A última igualdade acima segue do fato de que \(u= \arctan{\left(\frac{x}{a}\right)}\) se \(x=a\tan{x}\text{,}\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p>
+</div></div>
+</div></article><article class="assemblage assemblage-like" id="assemblage-tangente"><h6 class="heading"><span class="title">Regra geral para substituições por \(\tan{u}\).</span></h6>
+<p id="p-75">Para o integrando encolvendo \(a^2+ x^2\) ou \(\sqrt{a^2+ x^2}\text{,}\) sendo \(a\) constante, tente \(x=\tan{u},\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></article><article class="exercise exercise-like" id="exer-substrig-01"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-substrig-01"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-substrig-01"><article class="exercise exercise-like"><p id="p-76">Determine \(\integral{\frac{1}{x^2+16}}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-77">Use a substituição por \(u=4\tan{u}\text{,}\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-78">\(1/3x^3 + 16x\)</p></div></div>
+</div></article></div>
+<article class="activity project-like" id="activity-1"><h6 class="heading">
+<span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o recurso computacional.</span>
+</h6>
+<p id="p-79">Os sistemas de computação algébrica precisam, algumas vezes, de ajuda dos seres humanos. Tente calcular</p>
+<div class="displaymath">
+\begin{equation*}
+\integral{(1+\ln{x})\sqrt{1+(x\ln x)^2}}{x}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Se ele o <em class="emphasis">Sage</em> não retornar  uma resposta, faça uma substituição que mude a integral para uma daquelas que o sistema pode calcular. <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">
+</script></div></p></article><section class="exercises" id="exercises-subs-trig"><h4 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.2.1</span> <span class="title">Exercício</span>
+</h4></section></section></section></div></main>
 </div>
 </body>
 </html>

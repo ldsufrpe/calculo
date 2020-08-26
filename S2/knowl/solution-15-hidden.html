@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-25T00:48:17-03:00       *-->
+<!--*       on 2020-08-25T19:45:42-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><p xmlns:svg="http://www.w3.org/2000/svg"></p></div></body>
+<body><div class="solution solution-like">
+<p>A escolha \(x=\sin{u}\) fornece</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integral{\frac{1}{\sqrt{1-x^2}}}{x}\amp = \integral{\frac{1}{\sqrt{1-\sin^2{u}}}}{u} \\
+\amp = \integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp \ct{usamos a identidade}\, \knowl{./knowl/idf.html}{\text{(1.1)}} \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Já que \(-\pi/2\leq u\leq  \pi/2 \text{,}\) temos</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sqrt{\cos^2{u}}=\cos{u}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Então,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp = \integral{\frac{\cos{u}}{\cos{u}}}{u}\\
+\amp  = \integral{1}{u}= u+C\\
+\amp= \arcsin{x} + C
+\end{align*}
+</div>
+<p data-braille="continuation">A última igualdade acima segue do fato de que  \(u=\arcsin{x} \) se \(x=\sin{u}\text{,}\) no qual \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p>
+</div></body>
 </html>

@@ -453,6 +453,41 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </task>       
            
         </example>
+
+        <exercise>
+            <statement>
+                <p>
+                    Determine <m>\integral{\cos(x+3)}{x}</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Revise <xref ref="ex-subs-04"/>
+                </p>
+            </hint>
+            <answer>
+                <p>
+                   <m>\sin(t + 3)</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Determine <m>\integral{e^{-5x}}{x}</m>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Use <m>u=-5x</m>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>-1/5e^{-5t}</m>
+                </p>
+            </answer>
+        </exercise>
     <assemblage xml:id="assemblage-roteiro">
         <title>Roteiro do método de substituição</title>
         <p>
@@ -477,56 +512,28 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </assemblage>
 
-    <exercise xml:id="exer-subsu-01">
+    
 
-    <statement>
-        <p>
-            depois
-        </p>
-    </statement>
-    <hint>
-        <p>
-            depois
-        </p>
-    </hint>
-    <answer>
-        <p>
-            depois
-        </p>
-    </answer>
-</exercise>
-<exercise xml:id="exer-subsu-02">
-
-    <statement>
-        <p>
-            depois
-        </p>
-    </statement>
-    <hint>
-        <p>
-            depois
-        </p>
-    </hint>
-    <answer>
-        <p>
-            depois
-        </p>
-    </answer>
-</exercise>
 
 
 
    <example xml:id="ex-subsu-05" >
-        <title>Integração por substituição</title>
+        <title>Mais integração por substituição <m>u</m></title>
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\sin{x}^2\cos{x}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
+            Fazendo a escolha <m>u=\sin{x}</m>, temos
+                <md>
+                    <mrow> \integral{\sin^2{x}\cos{x}}{x}\amp = \integral{\ub{\sin^2{x}}{u^2}\ob{\cos{x}}{\dd u/\dd x}}{x} \amp \ctm{\dd u=\cos{x}\dd x.} </mrow>
+                    <mrow> \amp = \integral{u^2}{u} \amp \ct{Integral em relação a}\, \ctm{u.}</mrow> 
+                    <mrow> \amp  =\frac{u^3}{3}+C \amp \ct{Regra da potência.} </mrow>
+                    <mrow> \amp=\frac{\sin^3{x}}{3}+C \amp \ct{Retorna à variável}\, \ctm{x.} </mrow>
+                </md>
             </p>
         </solution>
         </task>
@@ -534,33 +541,70 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{x^2\sqrt{x-1}}{x}</m>
                 </p>
             </statement>
             <solution>
             <p>
+                Neste caso a composição <m>\sqrt{x-1}</m> sugere a substituição 
                 
+                <mdn >
+                    <mrow  xml:id="exsub1"  tag="star"> u=x-1,  \amp \,\text{gerando} \,  \dd u=\dd x</mrow>
+                </mdn>.
+                
+                
+                Logo percebe-se que devemos expressar o termo <m>x^2</m> do integrando também em termos de <m>u</m>. Para isso, a partir de <xref ref="exsub1"/>, 
+                fazemos <m>x=u+1</m> para obter
+
+                <me>
+                    x^2 = (u+1)^2=u^2+2u+1
+                </me>
+            e então calcular a integral como segue: 
+            <md>
+                <mrow> \integral{x^2\sqrt{x-1}}{x}\amp = \integral{(u^2+2u+1)\sqrt{u}}{u}</mrow>
+                <mrow> \amp \integral{(u^{5/2}+ 2u^{3/2}+ u^{1/2})}{u}</mrow>
+                <mrow> \amp = \frac{2}{7}u^{7/2} + \frac{4}{5}u^{5/2}+ \frac{2}{3}u^{3/2} +C</mrow>
+                <mrow> \amp = \frac{2}{7}(x-1)^{7/2} + \frac{4}{5}(x-1)^{5/2}+ \frac{2}{3}(x-1)^{3/2} +C </mrow>
+            </md>                   
             </p>
         </solution>
         </task>       
            
         </example>  
 
+        <exercise>
+            <statement>
+                <p>
+                    Determine <m>\integral{\sin{t} \cos^{2}{t}}{t}</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Revise <xref ref="ex-subsu-05"/>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>-1/3\cos^3{t}</m>
+                </p>
+            </answer>
+        </exercise>
+
     <exercise xml:id="exer-regras-01">
 
     <statement>
         <p>
-            depois
+            Determine <m>\integral{t^2\sqrt{t+1}}{t}</m> 
         </p>
     </statement>
     <hint>
         <p>
-            depois
+            Revise <xref ref="ex-subsu-05"/>.
         </p>
     </hint>
     <answer>
         <p>
-            depois
+          <m> 2/7(t + 1)^{7/2} - 4/5(t + 1)^{5/2} + 2/3(t + 1)^{3/2} + C</m>
         </p>
     </answer>
 </exercise>
@@ -570,17 +614,58 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <subsection xml:id="subsec-substituicoes-trigonometricas">
         <title>Substituições Trigonométricas</title>
 
+        <p>
+         Integrando que envolvem raízes quadradas de polinômios admitem uma substituição por <m>u</m> de forma implicita. Por exemplo, 
+         <m>x=\sin{u}</m> e <m>x=\tan{u}</m>. Essas substituições são denominadas de <term>substituições trigonometricas</term>.          
+        </p>
+
+        <p>
+        As substituições que envolvem os tipos citados em geral fazem uso da identdade trigonométrica
+        
+        <mdn >
+            <mrow xml:id="idf"> \cos^2{u} + \sin^2{u} =1 </mrow>
+        </mdn>
+            
+        
+        para integrandos que envovem a expressões do tipo
+
+        <mdn xml:id="integra-subs-trig">
+            <mrow> \sqrt{a-x^2} </mrow>
+        </mdn>, no caso da substitução por <m>\sin{u}</m> e
+        <mdn>
+            <mrow> a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}</mrow>
+        </mdn>
+            para subsitituções por <m>\tan{u}</m>.
+        </p>
+        <remark> 
+        
+        </remark>    
+
        <example xml:id="ex-seno-01" >
-        <title>Usando seno</title>
+        <title>Substituição usando o seno</title>
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\frac{1}{\sqrt{1-x^2}}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
+                A escolha <m>x=\sin{u}</m> fornece
+
+                <md>
+                    <mrow> \integral{\frac{1}{\sqrt{1-x^2}}}{x}\amp = \integral{\frac{1}{\sqrt{1-\sin^2{u}}}}{u} </mrow>
+                    <mrow> \amp = \integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp \ct{usamos a identidade}\, <xref ref="idf"/> </mrow>
+                </md>.
+            Já que <m> -\pi/2\leq u\leq  \pi/2 </m>, temos <me>\sqrt{\cos^2{u}}=\cos{u}</me>. Então,
+
+            <md>
+                <mrow> \integral{\frac{\cos{u}}{\sqrt{\cos^2{u}}}}{u} \amp = \integral{\frac{\cos{u}}{\cos{u}}}{u}</mrow>
+                <mrow> \amp  = \integral{1}{u}= u+C</mrow>
+                <mrow> \amp= \arcsin{x} + C</mrow>                
+            </md>
+            A última igualdade acima segue do fato de que  <m>u=\arcsin{x} </m> se <m>x=\sin{u}</m>, no qual 
+             <m> -\pi/2\leq u\leq  \pi/2</m>.
             </p>
         </solution>
         </task>
@@ -588,119 +673,190 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\frac{1}{\sqrt{4-x^2}}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
+                O integrando acima sugere a escolha <m>x=a\sin{u}</m>, para que seja possível obter 
+
+                <md>
+                    <mrow> \sqrt{4-x^2}\amp = \sqrt{4-4\sin^{u}} </mrow>
+                    <mrow> \amp 2\sqrt{1-\sin^2{u}}=2\sqrt{\cos^2{u}} </mrow>
+                    <mrow>  \amp = 2\cos{u} </mrow>
+                </md>.
+
+            Dessa forma,
+            <md>
+                <mrow>\integral{\frac{1}{\sqrt{4-x^2}}}{x} \amp = \integral{\frac{1}{2\cos{u}}\cdot 2\cos{u}}{u}\amp  \ctm{\dd x= 2 \cos{u}\dd u} </mrow>
+                <mrow> \amp = \integral{1}{u}  </mrow>
+                <mrow> \amp= u+C = \arcsin{\frac{x}{2} +C}</mrow>
+            </md>
             </p>
         </solution>
         </task>       
            
         </example>
+        <assemblage xml:id="assemblage-">
+            <title>Regra geral para substituições por <m>\sin{u}</m> </title>
+            <p>
+                Para integrando envolvendo <m>\sqrt{a^2-x^2}</m>, sendo <m>a</m> uma constante,
+                tente a escolha <m>x=a\sin{u}</m>, com  <m> -\pi/2\leq u\leq  \pi/2</m>.
+            </p>
+        </assemblage>
+        <exercise>
+            <statement>
+                <p>
+                    Determine <m>\integral{\frac{1}{\sqrt{9-x^2}}}{x}</m>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Use a substituição <m>x=3\sin{u}</m>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                  <m>  \arcsin\left(\frac{1}{3}x\right)</m>
+                </p>
+            </answer>
+        </exercise>
 
+        <exercise>
+            <statement>
+                <p>
+                     Determine <m>\integral{\frac{1}{\sqrt{9-4x^2}}}{x}</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Use a substituição <m>x=\frac{3}{2}\sin{u}</m>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                  <m> \frac{1}{2}\arcsin\left(\frac{2}{3}x\right)</m>
+                </p>
+            </answer>
+        </exercise>
 
         <example xml:id="ex-tangente-02" >
-        <title>Usando Tangente</title>
-        <task>
+        <title>Substituições usando tangente</title>
+        
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\frac{1}{x^2+9}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
+                A substituição <m>x=3\tan{u}</m>, fornece <me>\dd x = \left(\frac{3}{\cos^2{u}}\right)\dd u</me>.
+                Daí,
+
+                <md>
+                    <mrow> \integral{\frac{1}{x^2+9}}{x}\amp =\integral{\left(\frac{1}{9 + 9\tan^2{u}}\right)\left(\frac{3}{\cos^2{u}}\right)}{u} </mrow>
+                    <mrow>  \amp = \frac{1}{3}\integral{\frac{1}{\left( \frac{\sin^2{u}}{\cos^2{u}}+1\right)\cos^2{u}}} {u}</mrow>
+                    <mrow> \amp =\frac{1}{3}\integral{\frac{1}{\sin^2{u}+ \cos^2{u}}}{u}=\frac{1}{3}\integral{1}{u} </mrow>
+                    <mrow> \amp = \frac{1}{3}u+ C=\frac{1}{3}\arctan{\left(\frac{x}{3}\right)} + C</mrow>
+
+                </md>.
+                A última igualdade acima segue do fato de que <m>u= \arctan{\left(\frac{x}{a}\right)}</m> se <m>x=a\tan{x}</m>, com <m> -\pi/2\leq u\leq  \pi/2</m>.
             </p>
         </solution>
-        </task>
+       </example>
+<!---
 
         <task>
             <statement>
                 <p>
-                    teste
+                    Determine <m>\integral{\sqrt{1+x^2}}{x}</m>.
                 </p>
             </statement>
             <solution>
             <p>
-                
-            </p>
-        </solution>
-        </task>       
-           
-        </example>
+                A escolha <m>x=\tan{u}</m> implica em 
 
-
-        <example xml:id="ex-outras-03" >
-        <title>Completando quadrados</title>
-        <task>
-            <statement>
-                <p>
-                    teste
-                </p>
-            </statement>
-            <solution>
-            <p>
+                <md>
+                    <mrow xml:id="du-tang-1" tag="star" >\dd x= \left(\frac{1}{\cos^2{u}}\right)\dd u </mrow>
+                </md>
                 
-            </p>
-        </solution>
-        </task>
+               
+                <md>
+                    <mrow xml:id="sintegrado-tan-2" tag="dstar"> \sqrt{1+x^2} = \sqrt{1+\frac{\sin^2{u}}{\cos^2{u}}}=\sqrt{\frac{\cos^2{u}+ \sin^2{u}}{\cos^2{u}}}=\frac{1}{\cos{u}} </mrow>
+                </md>
 
-        <task>
-            <statement>
-                <p>
-                    teste
-                </p>
-            </statement>
-            <solution>
-            <p>
-                
+                De <xref first="du-tang-1" last="sintegrado-tan-2"/> segue que 
+
+                <md>
+                    <mrow> \integral{\sqrt{1+x^2}}{x}\amp=\integral{\frac{1}{\cos^3{u}}}{u} </mrow>
+                    <mrow> \amp =\integral{\sec^3{u}</mrow>
+                </md>
             </p>
         </solution>
         </task>       
            
         </example>
+  -->
+
+ <assemblage xml:id="assemblage-tangente">
+     <title>Regra geral para substituições por <m>\tan{u}</m></title>
+     <p>
+         Para o integrando encolvendo <m>a^2+ x^2</m> ou <m>\sqrt{a^2+ x^2}</m>, sendo <m>a</m> constante,
+         tente <m>x=\tan{u},</m> com <m> -\pi/2\leq u\leq  \pi/2</m>.
+     </p>
+ </assemblage>       
 <exercise xml:id="exer-substrig-01">
 
     <statement>
         <p>
-            depois
+            Determine <m> \integral{\frac{1}{x^2+16}}{x}</m>.
         </p>
     </statement>
     <hint>
         <p>
-            depois
+            Use a substituição por <m>u=4\tan{u}</m>, com <m> -\pi/2\leq u\leq  \pi/2</m>.
         </p>
     </hint>
     <answer>
         <p>
-            depois
+            <m>1/3x^3 + 16x</m>
         </p>
     </answer>
 </exercise>
 
-<exercise xml:id="exer-substrig-02">
-
-    <statement>
-        <p>
-            depois
-        </p>
-    </statement>
-    <hint>
-        <p>
-            depois
-        </p>
-    </hint>
-    <answer>
-        <p>
-            depois
-        </p>
-    </answer>
-</exercise>
-    
+<activity>
+    <title>Usando o recurso computacional</title>
+   <statement>
+       <p>
+           Os sistemas de computação algébrica precisam, algumas vezes,
+            de ajuda dos seres humanos. Tente calcular
+            <me>
+                 \integral{(1+\ln{x})\sqrt{1+(x\ln x)^2}}{x}
+            </me>.
+           
+            Se ele o <em> Sage</em> não retornar  uma resposta, faça uma substituição que mude a integral para uma 
+            daquelas que o sistema pode calcular.
+        <sage>        
+            <input>
+                
+            </input>
+            <output>
+                (for static output)
+            </output>
+        </sage>
         
+       </p>
+   </statement>
+</activity>
+
+<exercises xml:id="exercises-subs-trig">
+<title>Exercícios</title>
+
+    
+</exercises>
     </subsection>
+    
+
 </section>
 
 </article>

@@ -686,7 +686,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </md>
                 Assim como todas as primitivas de <m>F'(x)</m> tem a forma
                 <md>
-                    <mrow>F(x)\amp = 4\frac{x^4}{4} + 6\frac{x^3}{3} -4\frac{x^2}{2} + Cx + D \amp \color{gray}{\frac{\dd}{\dd x}\left[F(x)\right]=F'(x)} </mrow>
+                    <mrow>F(x)\amp = 4\frac{x^4}{4} + 3\frac{x^3}{3} -4\frac{x^2}{2} + Cx + D \amp \color{gray}{\frac{\dd}{\dd x}\left[F(x)\right]=F'(x)} </mrow>
                     <mrow> \amp = x^4 + x^3-2x^2+Cx+D </mrow>
                 </md>
                 Uma vez que <m>F</m> deve satisfazer <m>F(0)=4</m> e <m>F(1)=1</m> temos 
