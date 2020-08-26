@@ -160,12 +160,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             é denominado de  <term> método de substituição por <m>u</m></term>. 
            </p>       
         <paragraphs>
-            <title>Khan Academy</title>
+            <title>Momento Khan Academy</title>
             <p>
                 <figure>
                     <title>Substituição por <m>u</m> </title>
-                    <caption>Exemplo de motivação</caption>
-                    <video xml:id="kanh-1" youtube="fkQ40Ph0Qkg" />
+                    
+                    <video xml:id="kanh-1" youtube="fkQ40Ph0Qkg" width="80%"  preview="images/prev-video-1.png"/>
                 </figure>
             </p>
         </paragraphs>
@@ -651,12 +651,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
         
         <paragraphs>
-            <title>Khan Academy</title>
+            <title>Momento Khan Academy</title>
             <p>
                 <figure>
-                    <title>Substituição trigonométrica </title>
-                    <caption>Motivação Matemática para uso do método</caption>
-                    <video xml:id="kanh-2" youtube="6DTzTjBVveQ" />
+                    <title>Substituição trigonométrica </title>                    
+                    <video xml:id="kanh-2" youtube="6DTzTjBVveQ" width="80%"  preview="images/prev-video-2.png"/>
                 </figure>
             </p>
         </paragraphs>
@@ -858,33 +857,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </answer>
 </exercise>
 
-<technology>
-    <title>Usando o recurso computacional</title>
-   <statement>
-       <p>
-           Os sistemas de computação algébrica precisam, algumas vezes,
-            de ajuda dos seres humanos. Tente calcular
-            <me>
-                 \integral{(1+\ln{x})\sqrt{1+(x\ln x)^2}}{x}
-            </me>.
-           
-            Se ele o <em> Sage</em> não retornar  uma resposta, faça uma substituição que mude a integral para uma 
-            daquelas que o sistema pode calcular.
-        <sage>        
-            <input>
-                
-            </input>
-            <output>
-                (for static output)
-            </output>
-        </sage>
-        
-       </p>
-   </statement>
-</technology>
+
+</subsection>
+
+    
 
 <exercises xml:id="exercises-subs-trig">
-<title>Exercícios</title>
+
 
 <exercisegroup cols="2">
 <introduction>
@@ -991,10 +970,31 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </sage>
 
 </exercise>
+<exercise>
+    <p>
+           Os sistemas de computação algébrica precisam, algumas vezes,
+            de ajuda dos seres humanos. Tente calcular
+            <me>
+                 \integral{(1+\ln{x})\sqrt{1+(x\ln x)^2}}{x}
+            </me>.
+           
+            Se ele o <em> Sage</em> não retornar  uma resposta, faça uma substituição que mude a integral para uma 
+            daquelas que o sistema pode calcular.
+        <sage>        
+            <input>
+                
+            </input>
+            <output>
+                (for static output)
+            </output>
+        </sage>
+        
+       </p>
+</exercise>
 </exercises>
     
 
-    </subsection>
+    
     
 
 </section>
