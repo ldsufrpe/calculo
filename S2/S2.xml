@@ -129,15 +129,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <subsection xml:id="subsec-integracao-substituicao">
         <title>O método de substituição</title>
-        <introduction>
-            <p>
-                <figure>
-                    <title>Substituição por <m>u</m> </title>
-                    <caption>Exemplo de motivação</caption>
-                    <video xml:id="kanh-1" youtube="fkQ40Ph0Qkg" />
-                </figure>
-            </p>
-        </introduction>
+        
         
             <p>
             A integração por susbstituição consiste em um método para encontrar primitivas por meio de uma
@@ -167,7 +159,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
            O processo de converter a integral na variável <m>x</m>  para uma integral em outra variável, digamos <m>u</m>,
             é denominado de  <term> método de substituição por <m>u</m></term>. 
            </p>       
-      
+        <paragraphs>
+            <title>Khan Academy</title>
+            <p>
+                <figure>
+                    <title>Substituição por <m>u</m> </title>
+                    <caption>Exemplo de motivação</caption>
+                    <video xml:id="kanh-1" youtube="fkQ40Ph0Qkg" />
+                </figure>
+            </p>
+        </paragraphs>
         
         <example xml:id="ex-potencia-01" >
         <title>Regra da potência</title>      
@@ -649,6 +650,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             para subsitituções por <m>\tan{u}</m>.
         </p>
         
+        <paragraphs>
+            <title>Khan Academy</title>
+            <p>
+                <figure>
+                    <title>Substituição trigonométrica </title>
+                    <caption>Motivação Matemática para uso do método</caption>
+                    <video xml:id="kanh-2" youtube="6DTzTjBVveQ" />
+                </figure>
+            </p>
+        </paragraphs>
 
        <example xml:id="ex-seno-01" >
         <title>Substituição usando o seno</title>
