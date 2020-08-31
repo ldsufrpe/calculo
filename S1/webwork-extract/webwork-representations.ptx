@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg">
+      <statement>
+        <p>Use the properties of exponents to simplify the following</p>
+        <p><m>{x^{4}}\cdot{x^{16}} =</m>
+        <fillin name="AnSwEr0001" characters="12"/></p>
+      </statement>
+      <answer>
+        <p><m>x^{20}</m></p>
+      </answer>
+      <solution>
+        <p>We <em>add</em> the exponents as follows</p>
+        <p><m>\begin{aligned}
+                   x^{4}\cdot x^{16}\amp =x^{4+16}\\
+                                     \amp =x^{20}
+               \end{aligned}</m></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
+    <pg source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg"/>
+  </webwork-reps>
+ </webwork-representations>

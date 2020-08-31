@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg">
+      <statement>
+        <p><alert> Note:</alert> You can get full credit for this problem by just answering the last
+        question correctly. The initial questions are meant as hints towards the final
+        answer and also allow you the opportunity to get partial credit.</p>
+        <p>Consider the indefinite integral 
+        <m>\displaystyle \int x^{3}\left(3+13 x^{4}\right)^{12}\, dx</m></p>
+        <p>Then the most appropriate substitution to simplify this integral is</p>
+        <p><m>u</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
+        <p>Then <m>dx = f(x)\,du</m> where</p>
+        <p><m>f(x)</m> =  <fillin name="AnSwEr0002" characters="20"/></p>
+        <p>After making the substitution we obtain the integral <m>\displaystyle \int g(u)\,du</m> where</p>
+        <p><m>g(u)</m> =  <fillin name="AnSwEr0003" characters="20"/></p>
+        <p>This last integral is:
+         =  <fillin name="AnSwEr0004" characters="20"/> <m>+ C</m></p>
+        <p>(Leave out constant of integration from your answer.)</p>
+        <p>After substituting back for <m>u</m> we obtain the following final form of the answer:</p>
+        <p>=  <fillin name="AnSwEr0005" characters="20"/> <m>+ C</m></p>
+        <p>(Leave out constant of integration from your answer.)</p>
+      </statement>
+      <answer>
+        <p><m>3+13x^{4}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{1}{52x^{3}}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{u^{12}}{52}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{u^{13}}{676}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{\left(3+13x^{4}\right)^{13}}{676}</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
+    <pg source="Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg">
+      <statement>
+        <p>Calculate the following definite integral.</p>
+        <p><m>\displaystyle \int_0^1 x^2\sqrt{5 x + 7}\,dx</m> =  <fillin name="AnSwEr0001" characters="REF(0x55c788eb8ff0)"/></p>
+      </statement>
+      <answer>
+        <p><m>1.09174514710436</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
+    <pg source="Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg">
+      <statement>
+        <p>Using the method of u-substitution,</p>
+        <p><m>\displaystyle 
+        \int_{2}^{3} x^{2} (1 + 2 x^{3})^{2} \, dx = \int_{a}^{b} f(u) \, du</m></p>
+        <p>where</p>
+        <p>u = <fillin name="optional0" characters="30"/> (enter a function of x)</p>
+        <p>du = <fillin name="optional1" characters="30"/> dx  (enter a function of x)</p>
+        <p>a = <fillin name="optional2" characters="30"/> (enter a number)</p>
+        <p>b = <fillin name="optional3" characters="30"/> (enter a number)</p>
+        <p>f(u) = <fillin name="optional4" characters="30"/> (enter a function of u).</p>
+        <p>The value of the original integral is <fillin name="AnSwEr0001" characters="30"/>.</p>
+        <p><em><alert>Note:</alert> You can earn full credit if the last answer box   
+        is correct and all other answer boxes are either blank or correct.</em></p>
+      </statement>
+      <answer>
+        <p><m>8970.11111111111</m></p>
+      </answer>
+      <answer>
+        <p><m>1+2x^{3}</m></p>
+      </answer>
+      <answer>
+        <p><m>6x^{2}</m></p>
+      </answer>
+      <answer>
+        <p><m>17</m></p>
+      </answer>
+      <answer>
+        <p><m>55</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{u^{2}}{6}</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
+    <pg source="Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg">
+      <statement>
+        <p><alert> Note:</alert> You can get full credit for this problem by just entering the
+        answer to the last question correctly. The initial questions are meant as
+        hints towards the final answer and also allow you the opportunity to get
+        partial credit.</p>
+        <p>Consider the indefinite integral <m>\displaystyle \int \cos^{13}(5 t)\sin(5 t)\, dt</m></p>
+        <p>Then the most appropriate substitution to simplify this integral is</p>
+        <p><m>u</m> =  <fillin name="AnSwEr0001" characters="20"/>
+        Then <m>dt = f(t)\,du</m> where</p>
+        <p><m>f(t)</m> =  <fillin name="AnSwEr0002" characters="20"/></p>
+        <p>After making the substitution we obtain the integral <m>\displaystyle \int g(u)\,du</m> where</p>
+        <p><m>g(u)</m> =  <fillin name="AnSwEr0003" characters="20"/></p>
+        <p>This last integral is:
+         =  <fillin name="AnSwEr0004" characters="20"/> <m>+ C</m></p>
+        <p>(Leave out constant of integration from your answer.)</p>
+        <p>After substituting back for <m>u</m> we obtain the following final form of the answer:</p>
+        <p>=  <fillin name="AnSwEr0005" characters="20"/> <m>+ C</m></p>
+        <p>(Leave out constant of integration from your answer.)</p>
+      </statement>
+      <answer>
+        <p><m>\cos\!\left(5t\right)</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{-1}{5\sin\!\left(5t\right)}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{-u^{13}}{5}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{-u^{14}}{70}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{-\left(\cos^{14}\!\left(5t\right)\right)}{70}</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
+    <pg source="Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="Library/ma122DB/set12/s5_4_26.pg">
+      <statement>
+        <p><m>\displaystyle \int_0^{3} (3 e^x+5 \sin x)\, dx</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>67.2065732525652</m></p>
+      </answer>
+      <solution>
+        <p>SOLUTION</p>
+        <p><me>\begin{array}{rcl} \displaystyle \int_0^{3} (3 e^x+5 \sin x)\, dx \amp =\amp   
+        \displaystyle  3 e^x-5 \cos x  \Big]_0^{3}
+        \\ \amp =\amp  (3 e^{3} - 5 \cos 3) - (3 e^0 - 5 \cos0 ) 
+        \\ \amp =\amp  3 e^{3} - 5 \cos 3  + 2 
+        \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <pg source="Library/ma122DB/set12/s5_4_26.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6">
+      <statement>
+        <p>Calcule a seguinte integral definida.</p>
+        <p><m>\displaystyle \int \frac{2}{\left(t-6\right)^{7}} \, dt =</m>
+        <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>-\frac{1}{3}\!\left(t-6\right)^{-6}+C</m></p>
+      </answer>
+      <solution>
+        <p>Integração por substituição
+        <me>\int \frac{2}{\left(t-6\right)^{7}} \, dt
+        = \frac{2}{-6} (t-6)^{-6} + C
+        \textstyle = -\frac{1}{3}\!\left(t-6\right)^{-6}+C.</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+    <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###       on 2020-08-31T13:28:04-03:00       
+###   A recent stable commit (2020-08-09):   
+### 98f21740783f166a773df4dc83cab5293ab63a4a 
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.30)
+## Author()
+## Institution()
+## Language(pt-BR)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserFormulaUpToConstant.pl",
+  "contextFraction.pl",
+  "PGcourse.pl",
+);
+COMMENT('Feito com PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+                TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$a = random(2,9,1);
+$b = random(2,7,1);
+$c = non_zero_random(-13, 13);
+
+$am1 = $a - 1;
+
+Context('Fraction');
+$coeff = Fraction(-$b, $am1)->reduce;
+
+Context('Numeric')->variables->are(
+	t => [ 'Real', limits => [ -$c-0.1, -$c + 0.1 ] ]
+);
+Context()->flags->set(
+	reduceConstants => 0
+);
+$l = Formula("t + $c")->reduce;
+$f = Formula("$b / ($l)^($a)")->reduce;
+$F = FormulaUpToConstant(
+	( $coeff > 0 ? '' : '-' )
+	. ( ($coeff)**2 == 1 ? '' : abs($coeff) )
+	.  "($l)^(-$am1)"
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+Calcule a seguinte integral definida.
+$BR $BR
+\( \displaystyle \int $f \, dt = \)
+\{ans_rule() \}
+END_TEXT
+Context()->normalStrings;
+
+ANS($F->cmp);
+
+Context()->texStrings;
+BEGIN_SOLUTION
+Integração por substituição
+\[
+\int $f \, dt
+= \frac{$b}{-$am1} ($l)^{-$am1} + C
+\textstyle = $F.
+\]
+END_SOLUTION
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="Library/ma122DB/set12/s5_4_26.pg">
+      <statement>
+        <p><m>\displaystyle \int_0^{4} (4 e^x+4 \sin x)\, dx</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>221.007174616031</m></p>
+      </answer>
+      <solution>
+        <p>SOLUTION</p>
+        <p><me>\begin{array}{rcl} \displaystyle \int_0^{4} (4 e^x+4 \sin x)\, dx \amp =\amp   
+        \displaystyle  4 e^x-4 \cos x  \Big]_0^{4}
+        \\ \amp =\amp  (4 e^{4} - 4 \cos 4) - (4 e^0 - 4 \cos0 ) 
+        \\ \amp =\amp  4 e^{4} - 4 \cos 4 - 0 
+        \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <pg source="Library/ma122DB/set12/s5_4_26.pg"/>
+  </webwork-reps>
+ </webwork-representations>

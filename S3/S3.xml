@@ -258,7 +258,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </exercise>
 </subsection>
 
-    <subsection xml:id="sec-TFC">
+    <subsection xml:id="sec-TFC2">
         <title>Teorema Fundamental do Cálculo</title>
         <objectives>
             <title>Estrutura</title>
@@ -909,9 +909,509 @@ você terá duas opções:
 </activity>
 
 </technology>
+<subsection xml:id="subsec-Lista">
+    <title>Lista Problemas WebWork</title>
+   
+
+<!-- <exercise xml:id='problem-00'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg' /></exercise>
+<exercise xml:id='problem-1'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_26.pg' /></exercise>
+<exercise xml:id='problem-2'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_35.pg' /></exercise>
+<exercise xml:id='problem-3'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_33a.pg' /></exercise>
+<exercise xml:id='problem-4'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_49.pg' /></exercise>
+<exercise xml:id='problem-5'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_1.pg' /></exercise>
+<exercise xml:id='problem-6'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_8.pg' /></exercise>
+<exercise xml:id='problem-7'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_44_mo.pg' /></exercise>
+<exercise xml:id='problem-8'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_39.pg' /></exercise>
+<exercise xml:id='problem-9'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_5.pg' /></exercise>
+<exercise xml:id='problem-10'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_17.pg' /></exercise>
+<exercise xml:id='problem-11'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_20.pg' /></exercise>
+<exercise xml:id='problem-12'><webwork source='Library/Rochester/setIntegrals14Substitution/c4s5p2.pg' /></exercise>
+<exercise xml:id='problem-13'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_15.pg' /></exercise>
+<exercise xml:id='problem-14'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_9.pg' /></exercise>
+<exercise xml:id='problem-15'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP01b.pg' /></exercise>
+<exercise xml:id='problem-16'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_29a.pg' /></exercise>
+<exercise xml:id='problem-17'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_4.pg' /></exercise>
+<exercise xml:id='problem-18'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_33.pg' /></exercise>
+<exercise xml:id='problem-19'><webwork source='Library/Rochester/setIntegrals14Substitution/ur_in_14_13.pg' /></exercise>
+<exercise xml:id='problem-20'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_11.pg' /></exercise>
+<exercise xml:id='problem-21'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_44.pg' /></exercise>
+<exercise xml:id='problem-22'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP06.pg' /></exercise>
+<exercise xml:id='problem-23'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_14.pg' /></exercise>
+<exercise xml:id='problem-24'><webwork source='Library/Rochester/setIntegrals14Substitution/mec_int3.pg' /></exercise>
+<exercise xml:id='problem-25'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_20_mo.pg' /></exercise>
+<exercise xml:id='problem-26'><webwork source='Library/Rochester/setIntegrals14Substitution/mec_int2_mo.pg' /></exercise>
+<exercise xml:id='problem-27'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_32.pg' /></exercise>
+<exercise xml:id='problem-28'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_8_mo.pg' /></exercise>
+<exercise xml:id='problem-29'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_6.pg' /></exercise>
+<exercise xml:id='problem-30'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_7.pg' /></exercise>
+<exercise xml:id='problem-31'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_8a.pg' /></exercise>
+<exercise xml:id='problem-32'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP12.pg' /></exercise>
+<exercise xml:id='problem-33'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP01a.pg' /></exercise>
+<exercise xml:id='problem-34'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_24.pg' /></exercise>
+<exercise xml:id='problem-35'><webwork source='Library/Rochester/setIntegrals14Substitution/mec_int2.pg' /></exercise>
+<exercise xml:id='problem-36'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_6.pg' /></exercise>
+<exercise xml:id='problem-37'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_18.pg' /></exercise>
+<exercise xml:id='problem-38'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_32a.pg' /></exercise>
+<exercise xml:id='problem-39'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02a.pg' /></exercise>
+<exercise xml:id='problem-40'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_10.pg' /></exercise>
+<exercise xml:id='problem-41'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_8.pg' /></exercise>
+<exercise xml:id='problem-42'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_31.pg' /></exercise>
+<exercise xml:id='problem-43'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_51.pg' /></exercise>
+<exercise xml:id='problem-44'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_101.pg' /></exercise>
+<exercise xml:id='problem-46'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_16.pg' /></exercise>
+<exercise xml:id='problem-47'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_57.pg' /></exercise>
+<exercise xml:id='problem-48'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_38.pg' /></exercise>
+<exercise xml:id='problem-49'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_13.pg' /></exercise>
+<exercise xml:id='problem-50'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_12.pg' /></exercise>
+<exercise xml:id='problem-51'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_7.pg' /></exercise>
+<exercise xml:id='problem-52'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP13.pg' /></exercise>
+<exercise xml:id='problem-53'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_29.pg' /></exercise>
+<exercise xml:id='problem-54'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_25.pg' /></exercise>
+<exercise xml:id='problem-55'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_25_mo.pg' /></exercise>
+<exercise xml:id='problem-56'><webwork source='Library/Rochester/setIntegrals14Substitution/csuf_in_14_1.pg' /></exercise>
+<exercise xml:id='problem-57'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_3.pg' /></exercise>
+<exercise xml:id='problem-58'><webwork source='Library/Rochester/setIntegrals14Substitution/sc5_5_4.pg' /></exercise>
+<exercise xml:id='problem-60'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg' /></exercise>
+<exercise xml:id='problem-61'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg' /></exercise>
+<exercise xml:id='problem-62'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg' /></exercise>
+
+        -->
+
+​
+
+​<exercise xml:id='problem-62'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg' /></exercise>
+
+        
+<exercise xml:id='problem-60'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg' /></exercise>
+<exercise xml:id='problem-61'><webwork source='Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg' /></exercise>
+​
+
+​
+    
+</subsection>
+
+<exercise xml:id='problem-0'><webwork source='Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg' /></exercise>
+
+<exercise xml:id="ww-antiderivatives-0">
+                    <title>Teorema Fundamental do Cálculo</title>
+
+                    <introduction>
+                        <p>Testando Webwork.</p>
+                    </introduction>
+
+                    <webwork source="Library/ma122DB/set12/s5_4_26.pg" />
+                   
+                </exercise>
+
+<!-- <exercise xml:id="ww-antiderivatives-">
+                    <title>Teorema Fundamental do Cálculo</title>
+
+                    <introduction>
+                        <p>Testando Webwork.</p>
+                    </introduction>
+
+                    <webwork source="local/trigSub1.pg" />
+                   
+</exercise> -->
+
+
+<!-- <exercise>
+    <title>Teste Local</title>
+<webwork>
+    <setup>
+        <pg-code>
+
+$showPartialCorrectAnswers = 1;
+
+$a = random(3,7,1);
+$m = random(8,15,1);
+$b = $a*($m+1);
+$c = $m+1;
+
+TEXT(beginproblem());
+BEGIN_TEXT
+$BBOLD Nota:$EBOLD Aqui eu escrevo o que eu quizer.....
+$PAR
+Consider the indefinite integral \( \displaystyle \int \cos^{$m}($a t)\sin($a t)\, dt\)
+$BR
+Then the most appropriate substitution to simplify this integral is
+$BR
+\(u\) =  \{ ans_rule()\}
+Then \(dt = f(t)\,du\) where
+$BR
+\(f(t)\) =  \{ ans_rule()\}
+$PAR
+After making the substitution we obtain the integral \( \displaystyle \int g(u)\,du\) where
+$BR
+\(g(u)\) =  \{ ans_rule()\}
+$PAR
+This last integral is:
+ =  \{ ans_rule()\} \(+ C\)
+$BR
+(Leave out constant of integration from your answer.)
+$PAR
+After substituting back for \(u\) we obtain the following final form of the answer:
+$BR
+ =  \{ ans_rule()\} \(+ C\)
+$BR
+(Leave out constant of integration from your answer.)
+$PAR
+END_TEXT
+
+ANS(fun_cmp("cos($a*t)", vars=>"t"));
+ANS(fun_cmp("-1/($a*sin($a*t))", vars=>"t"));
+ANS(fun_cmp("-u**$m/$a", vars=>"u"));
+ANS(fun_cmp("-u**($m+1)/$b", mode=>"antider", vars=>"u"));
+ANS(fun_cmp("-(cos($a*t))**($c)/$b", mode=>"antider", vars=>"t"));
+
+##set $PG_environment{'textbook'} in webworkCourse.ph
+if (defined($textbook)) {
+   if ($textbook eq "EllisGulick5") {
+BEGIN_TEXT
+END_TEXT
+}
+}
+
+
+        </pg-code>
+    </setup>
+
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+</webwork>
+</exercise>
+
+<exercise>
+    <webwork>
+        
+            <pg-code>
+
+
+
+TEXT(beginproblem());
+# $showPartialCorrectAnswers = 1;
+
+$a = random(5,50,1);
+$b = random(3,6,1);
+$c = $b - 1;
+$d = random(1,11,1);
+$power = $a + 1;
+$funct = "1/($power * $b) * (x^$b - $d)^$power";
+
+$lb = ($d)**(1/$b);
+$ub = ($d+1.1)**(1/$b);
+
+BEGIN_TEXT
+Calcule a integral
+\[ \int x^$c (x^$b - $d)^{$a} dx ,  \]
+fazendo a substituição \( u = x^$b -$d \).
+$BR $BR \{ans_rule(30) \} \(+C\)
+$BR$BR
+$BBOLD Nota:$EBOLD  Sua resposta deve ser em termos de  \(x\) e não \(u\).
+END_TEXT
+
+
+# (internal data $lb and $ub)
+ANS(fun_cmp($funct,  mode=>'antider',
+ limits=>[[$lb, $ub]]
+));
+
+      
+             
+
+
+            </pg-code>
+       
+    
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </webwork>
+</exercise>
+
+
+<exercise>
+    <title>teste novo</title>
+    <webwork>
+        <setup>
+            <pg-code>
+ 
+##Note this uses Mike Gage's custom full_partial_grader
+##contained in file PGgraders.pl
+install_problem_grader(~~\ampfull_partial_grader);
+
+$showPartialCorrectAnswers = 1;
+
+$a = random(3,7,1);
+$b = random(4,15,1);
+$m = random(3,7,1);
+$m1 = $m+1;
+$n = random(8,12,1);
+
+TEXT(beginproblem());
+BEGIN_TEXT
+$BBOLD Note:$EBOLD You can get full credit for this problem by just answering the last
+question correctly. The initial questions are meant as hints towards the final
+answer and also allow you the opportunity to get partial credit.
+$PAR
+Consider the indefinite integral 
+\( \displaystyle \int x^{$m}\left($a+$b x^{$m1}\right)^{$n}\, dx\)
+$BR
+Then the most appropriate substitution to simplify this integral is
+$BR
+\(u\) =  \{ ans_rule()\}
+$PAR
+Then \(dx = f(x)\,du\) where
+$BR
+\(f(x)\) =  \{ ans_rule()\}
+$PAR
+After making the substitution we obtain the integral \( \displaystyle \int g(u)\,du\) where
+$BR
+\(g(u)\) =  \{ ans_rule()\}
+$PAR
+This last integral is:
+ =  \{ ans_rule()\} \(+ C\)
+$BR
+(Leave out constant of integration from your answer.)
+$PAR
+After substituting back for \(u\) we obtain the following final form of the answer:
+$BR
+ =  \{ ans_rule()\} \(+ C\)
+$BR
+(Leave out constant of integration from your answer.)
+$PAR
+END_TEXT
+
+ANS(fun_cmp("$a+$b*x^($m+1)", vars=>"x"));
+ANS(fun_cmp("1/($b*($m+1)*x^$m)", vars=>"x"));
+ANS(fun_cmp("u^$n/($b*($m+1))", vars=>"u"));
+
+#ANS(fun_cmp("1/($b*($m+1)*x^$m)",var=>["x"], debug =>1  ));
+#ANS(fun_cmp("u^$n/($b*($m+1))",var=>["u"] ,  debug =>1 ));
+
+ANS(fun_cmp("u^($n+1)/($b*($m+1)*($n+1))", mode=>"antider", vars=>"u"));
+ANS(fun_cmp("($a+$b*x^($m+1))^($n+1)/($b*($m+1)*($n+1))", mode=>"antider", vars=>"x"));
+
+
+
+            </pg-code>
+        </setup>
+    
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </webwork>
+</exercise> -->
+
+<!-- <exercise xml:id="teste22">
+<title>Teste</title>
+    <webwork>
+        
+            <pg-code>
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "contextFraction.pl",
+  "parserFormulaUpToConstant.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+sub str {
+	my $x = shift;
+	return ( $x \gt 0 ? '' : '-' )
+	. ( ($x)**2 == 1 ? '' : abs($x) )
+}
+
+do {
+	$a = random(-1, 1, 2) * random(2, 9);
+	$b = non_zero_random(-15, 15);
+} until (
+	gcd($a, $b) == 1
+	and ($a*$b \lt 0 or $a \gt 0)
+);
+$p = random(2, 9);
+$c = non_zero_random(-25, 25);
+$pm1 = $p - 1;
+
+Context('Fraction');
+$du_coeff = Fraction(1, $a)->reduce;
+$coeff = Fraction(-$c, ($p - 1)*$a)->reduce;
+$i_coeff = Fraction($c, $a)->reduce;
+
+Context('Numeric')->flags->set(
+	reduceConstants => 0
+);
+$ep1 = (1.1 - $b)/$a; $ep2 = (0.9 - $b)/$a;
+$limits = [
+	min($ep1, $ep2),
+	max($ep1, $ep2)
+];
+Context()->variables->set(
+	x => { limits => $limits }
+);
+
+$l = Formula("$a*x + $b")->reduce;
+$den = ($l**($p))->reduce;
+
+$f = Formula(
+	"$c / $den"
+);
+
+$F = FormulaUpToConstant(
+	str($coeff) . "($l)^(-$pm1)"
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+Evaluate the following indefinite integral
+using the substitution \( u = $l \).
+$BR $BR
+\( \displaystyle \int $f \, dx = \)
+\{ ans_rule() \}
+END_TEXT
+Context()->normalStrings;
+
+ANS($F->cmp);
+
+Context()->texStrings;
+$raw = ( $i_coeff == 1
+	? ''
+	: "=" . str($i_coeff)
+		. "\bigl( -\frac{1}{$pm1} \bigr)
+		u^{-$pm1} + C"
+);
+
+BEGIN_SOLUTION
+If \( u = $l \) then \( du = $a \, dx \),
+or \( dx = $du_coeff \, du \), and so
+\[
+\int \frac{$c}{$den} \, dx
+= \int \frac{$c}{$a u^{$p}} \, du
+= \{ str($i_coeff) \} \int u^{-$p} \, du.
+\]
+Integrating now gives
+\[
+\{ str($i_coeff) \} \int u^{-$p} \, du
+\textstyle $raw
+= \{ str($coeff) \} u^{-$pm1} + C.
+\]
+Therefore,
+\[
+\int \frac{$c}{$den} \, dx
+= \textstyle $F.
+\]
+END_SOLUTION
+
+ENDDOCUMENT();
+            </pg-code>
+       
+    
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </webwork>
+</exercise> -->
+
+<exercise>
+    <webwork>
+        <setup>
+            <pg-code>
+                TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$a = random(2,9,1);
+$b = random(2,7,1);
+$c = non_zero_random(-13, 13);
+
+$am1 = $a - 1;
+
+Context('Fraction');
+$coeff = Fraction(-$b, $am1)->reduce;
+
+Context('Numeric')->variables->are(
+	t => [ 'Real', limits => [ -$c-0.1, -$c + 0.1 ] ]
+);
+Context()->flags->set(
+	reduceConstants => 0
+);
+$l = Formula("t + $c")->reduce;
+$f = Formula("$b / ($l)^($a)")->reduce;
+$F = FormulaUpToConstant(
+	( $coeff > 0 ? '' : '-' )
+	. ( ($coeff)**2 == 1 ? '' : abs($coeff) )
+	.  "($l)^(-$am1)"
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+Calcule a seguinte integral definida.
+$BR $BR
+\( \displaystyle \int $f \, dt = \)
+\{ans_rule() \}
+END_TEXT
+Context()->normalStrings;
+
+ANS($F->cmp);
+
+Context()->texStrings;
+BEGIN_SOLUTION
+Integração por substituição
+\[
+\int $f \, dt
+= \frac{$b}{-$am1} ($l)^{-$am1} + C
+\textstyle = $F.
+\]
+END_SOLUTION
+            </pg-code>
+        </setup>
+    
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </webwork>
+</exercise>
+
+
+
+
+
+
+
 
 
 </subsection>
+
+<exercises xml:id="exercises">
+
+  <exercise xml:id="ww-antiderivatives">
+                    <title>Teorema Fundamental do Cálculo</title>
+
+                    <introduction>
+                        <p>Testando Webwork.</p>
+                    </introduction>
+
+                    <webwork source="Library/ma122DB/set12/s5_4_26.pg" />
+                   
+                </exercise>
+
+   
+</exercises>
 </section>
 
 

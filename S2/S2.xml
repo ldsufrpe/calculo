@@ -852,7 +852,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </hint>
     <answer>
         <p>
-            <m>1/3x^3 + 16x +C</m>
+            <m>\frac{1}{4} \, \arctan\left(\frac{1}{4} \, x\right)</m>
         </p>
     </answer>
 </exercise>
@@ -860,7 +860,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 </subsection>
 
+
+
     
+
+
+
 
 <exercises xml:id="exercises-subs-trig">
 
@@ -1002,10 +1007,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <references xml:id="references-backmatter">
     <title>Referências</title>   
-    <biblio type="raw" xml:id="biblio-lay-article">LARSON, Ron, <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage</journal>, 2011.</biblio>
-    <biblio type="raw" xml:id="biblio-lay-article">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
-    <biblio type="raw" xml:id="biblio-lay-article">HUGHES, Hallet et al., <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
-    <biblio type="raw" xml:id="biblio-lay-article">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron, <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al., <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
 Matemática com SageMath. </title> <journal>SBM</journal>, 2008.</biblio>
 
 

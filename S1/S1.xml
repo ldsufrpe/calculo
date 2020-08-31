@@ -1585,7 +1585,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
        </me>       
    </exercise>
     <exercisegroup>
-    \<introduction>
+    <introduction>
         <p>
         Encontre uma equação da curva que satisfaz as condições
 dadas.
@@ -1625,19 +1625,25 @@ passa pelo ponto <m>(0, 2)</m>.</p>
 
 </exercisegroup>
 
-    </exercises>    
-   
+ <!-- <exercise>
+<webwork source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg" />
+</exercise>
+
+    -->
+
+
+   </exercises> 
     </section>
 
 
 <references xml:id="references-backmatter">
     <title>Referências</title> 
-        <biblio type="raw" xml:id="biblio-lay-article">STEWART, James. <title>Cálculo, v. 1,2. </title> <journal>Cengage Learning</journal>, 2013.</biblio>
+        <biblio type="raw" xml:id="biblio-1">STEWART, James. <title>Cálculo, v. 1,2. </title> <journal>Cengage Learning</journal>, 2013.</biblio>
   
-    <biblio type="raw" xml:id="biblio-lay-article">LARSON, Ron, <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
-    <biblio type="raw" xml:id="biblio-lay-article">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
-    <biblio type="raw" xml:id="biblio-lay-article">HUGHES, Hallet et al., <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
-    <biblio type="raw" xml:id="biblio-lay-article">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+    <biblio type="raw" xml:id="biblio-2">LARSON, Ron, <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-3">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-4">HUGHES, Hallet et al., <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-5">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
 Matemática com SageMath. </title> <journal>SBM</journal>, 2008.</biblio>
 </references>
  
