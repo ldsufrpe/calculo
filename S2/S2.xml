@@ -264,7 +264,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise xml:id="exer-potencia-01">
             <statement>
                 <p>
-                   Determine  <m>\integral{2x(x^2+1)^3}{x}</m>.
+                   Determine  <m>\integral{2(x^2+1)^3}{x}</m>.
                 </p>
             </statement>
             <hint>
@@ -701,7 +701,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 O integrando acima sugere a escolha <m>x=a\sin{u}</m>, para que seja possível obter 
 
                 <md>
-                    <mrow> \sqrt{4-x^2}\amp = \sqrt{4-4\sin^{u}} </mrow>
+                    <mrow> \sqrt{4-x^2}\amp = \sqrt{4-4\sin^2{u}} </mrow>
                     <mrow> \amp 2\sqrt{1-\sin^2{u}}=2\sqrt{\cos^2{u}} </mrow>
                     <mrow>  \amp = 2\cos{u} </mrow>
                 </md>.
@@ -829,7 +829,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      <title>Regra geral para substituições por <m>\tan{u}</m></title>
      <p>
          Para o integrando encolvendo <m>a^2+ x^2</m> ou <m>\sqrt{a^2+ x^2}</m>, sendo <m>a</m> constante,
-         tente <m>x=\tan{u},</m> com <m> -\pi/2\leq u\leq  \pi/2</m>.
+         tente <m>x=a\tan{u},</m> com <m> -\pi/2\leq u\leq  \pi/2</m>.
      </p>
  </assemblage>  
    <remark> 
