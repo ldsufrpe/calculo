@@ -888,14 +888,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise>
     <m>\displaystyle\int \sin{2x}\,\dd x</m>
 </exercise>
-<exercise>
+<!-- <exercise>
  <m>\displaystyle\int \left(t^3 + 5t\right)^8\,\dd t</m>
-</exercise>
+</exercise> -->
     <exercise>
         <m>\displaystyle\int e^{5x}\,\dd x</m>
     </exercise>
     <exercise>
-        <m>\displaystyle\int x^2e^{-x^2}\,\dd x</m>
+        <m>\displaystyle\int xe^{-x^2}\,\dd x</m>
     </exercise>
     <exercise>
         <m>\displaystyle\int\dfrac{1}{\sqrt{4-x}}\,\dd x</m>
