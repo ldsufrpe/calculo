@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-01T22:56:12-03:00       *-->
+<!--*       on 2020-09-01T23:39:58-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,10 +16,23 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">a.1</span><span class="period">.</span>
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">b.1</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="figure figure-like"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sageplot-ex6-madular.svg" role="img" style="width: 100%; height: auto;" alt="Um função modular \(|2x-1|\) em \([0,2]\)" onerror="this.src='images/sageplot-ex6-madular.png';this.onerror=null;"></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.18<span class="period">.</span></span><span class="space"> </span>Região determinada por \(f(x)=|x-2|\text{,}\) o eixo \(x\) e as reta \(x=0\) e \(x=2\)</figcaption></figure></p>
+<p>A partir da definição de valor absoluto, o integrando \(|2x-1|\) pode ser escrito em duas partes, a saber:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|2x-1| = \begin{cases} -(2x-1), \amp x\lt 1/2 \\
+2x-1, \amp x \geq 1/2 \end{cases}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Usando <a class="xref" data-knowl="./knowl/p-acb.html" title="Item IV">Item IV</a> das proriedades de integral definida, podemos reescrever a integral como duas outras de modo que a soma seja igual a integral desejada.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integrald{|2x-1|}{0}{2}{x}\amp = \integrald{-(2x-1)}{0}{1/2}{x} +  \integrald{(2x-1)}{1/2}{2}{x} \\
+\amp = \left(-x^2+ x\right)\Biggr\rvert_0^{1/2} + \left(x^2-x\right)\Biggr\rvert_{1/2}^{2} \\
+\amp = \left(-\frac{1}{4}+ \frac{1}{2}\right) - (0 +0) + (4-2)-\left(\frac{1}{4}-\frac{1}{2}\right)=\frac{5}{2} \text{.}
+\end{align*}
+</div>
 </div>
 <span class="incontext"><a href="section-1.html#solution-8">[incontext]</a></span>
 </body>

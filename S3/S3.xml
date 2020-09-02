@@ -388,16 +388,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
               Revise o <xref ref="thm-TFC" text="custom"> TFC</xref> e justifique o "sumiço" da constante <m>C</m> que forma a primitiva <m>F</m>.
         </p>
     </statement>
-    <hint>
-        <p>
-            depois
-        </p>
-    </hint>
-      <solution>
-          <p>
-              depois
-          </p>
-      </solution>
+
     </investigation>
 
     <assemblage xml:id="assemblage-definida-propriedade">
@@ -883,12 +874,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
               
                 <hint>
                 <p>
-                    depois
+                    Verifique se <m>t^4</m> é par ou ímpar em <m>[-1,1]</m> e depois  use  as 
+                    propriedades da <xref ref="assemblage-par-impar" text="title"/>.
                 </p>
             </hint>
             <answer>
                 <p>
-                    depois
+                    <m>\frac{2}{5}</m>
                 </p>
             </answer>          
             </task>  
@@ -897,17 +889,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                   
          
             <task>
+            <statement>
                 <p>
                     <m>\integrald{x^5}{-1}{1}{x}</m>
                 </p>
+            </statement>
+                
                 <hint>
                 <p>
-                    depois
+                    Verifique se <m>x^5</m> é par ou ímpar em <m>[-1,1]</m> e depois  use 
+                     as propriedades da <xref ref="assemblage-par-impar" text="title"/>.
                 </p>
             </hint>
             <answer>
                 <p>
-                    depois
+                    0
                 </p>
             </answer>
             </task>
@@ -925,17 +921,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         o <xref ref="fact-impar-2"/> são verdadeiros.  
      </p>
  </statement>                
-         
- <hint>
-     <p>
-         depois
-     </p>
- </hint>
- <solution>
-     <p>
-         depois
-     </p>
- </solution>
+ 
  </investigation> 
 </subsection>
 
@@ -1256,7 +1242,14 @@ você terá duas opções:
 </exercises>
 
 </section>
-
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
 
 </article>
 
