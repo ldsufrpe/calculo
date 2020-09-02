@@ -201,7 +201,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <solution>
             <p>
-            Escolha <m>u=x^2-x</m>. Então,  <m>\frac{\dd u}{\dd x}=2x+1</m> e <m>\dd u = (2x+1)\dd x</m>. Logo,
+            Escolha <m>u=x^2+x</m>. Então,  <m>\frac{\dd u}{\dd x}=2x+1</m> e <m>\dd u = (2x+1)\dd x</m>. Logo,
             <md>
                 <mrow>\integral{(2x+1)(x^2+x)}{x} \amp = \integral{\ob{(x^2+x)}{u}\ob{(2x+1)}{\dd u/\dd x}}{x}  \amp \ctm{\dd u= (2x+1)\dd x}</mrow>
                 <mrow> \amp = \integral{u}{u} \amp \ct{Integral em relação a u.} </mrow>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-31T16:03:37-03:00       *-->
+<!--*       on 2020-09-01T22:56:11-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -60,10 +60,16 @@ MathJax.Hub.Config({
 def _(
         f=input_box(x^2 , width=20, 
         label="f(x) ="), 
-        x_range=range_slider(-10,10,1,(0,10), label='[a, b]'),
+        x_range=range_slider(-10,10,1,(0,1), label='[a, b]'),
         area = checkbox(False, label='Região')):
-        a = x_range[0] ; b = x_range[1]
-        p = plot(f,(x, a , b), axes_labels=['x', 'y'], figsize=[3,3], fill=area, ticks=[[a, b],[]])  
-        p.show()
+        a = x_range[0] ; b = x_range[1] 
+        if area:
+            
+            text = "Região entre $y={}$, o eixo x e as retas x = {} e x = {}.".format(latex(f), a, b)
+            integral = '$\\displaystyle\\int_{}^{}{}dx$'.format(a,b, latex(f))
+            pretty_print(html(text))
+            #pretty_print(html(integral)) 
+        p = plot(f,(x, a , b), axes_labels=['$x$', '$y$'], figsize=[3,3], fill=area, ticks=[[a, b],[]])  
+        p.show(figsize=[3,3])
 </script></div></div></body>
 </html>
