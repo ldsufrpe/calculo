@@ -946,7 +946,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
 </p>
 <p>
     Nas células acima pode-se notar que os comandos <c>/</c>, <c>*</c>, <c>^</c> <c>+</c>, <c>-</c>, representam a operações de 
-    divisão, multiplicação, potenciação,  soma e subtração, respectvamente. Existe muitos outros comandos de oparações 
+    divisão, multiplicação, potenciação,  soma e subtração, respectvamente. Existe muitos outros comandos de operações 
     matemáticas importantes, confira em <url href="https://sagectu.com.br/sagecell.html"/>.
 </p>
 
