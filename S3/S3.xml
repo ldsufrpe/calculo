@@ -143,7 +143,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <md>
                     <mrow> \text{Área} =  \integrald{f(x)}{a}{b}{x} </mrow>
                 </md>.
-        A expressão    <m> \integral{f(x)}{a}{b}{x} </m> é chamada de <term> integral definida</term> de <m>a</m> até <m>b</m>, em que <m>a</m>  e <m>b</m>
+        A expressão    <m> \integrald{f(x)}{a}{b}{x} </m> é chamada de <term> integral definida</term> de <m>a</m> até <m>b</m>, em que <m>a</m>  e <m>b</m>
         são os limites inferior e superior de  integração, respectivamente.
             </p>
                 
@@ -242,7 +242,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                  </li>
                  <li>
                      <p>
-                         Olhando para o gráfico, faça ajustes no intervalo para garatir que 
+                         Olhando para o gráfico, faça ajustes no intervalo para garantir que 
                          o gráfico de <m>y=f(x)</m>, inserido no passo anterior, esteja sempre acima do eixo <m>x</m>. (A função deve ser não negatica, lembra?)
                      </p>
                  </li>
@@ -532,7 +532,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                            <m>F(x)=\ln|{x}</m>.Assim,
 
                            <md>
-                               <mrow>\integrald{\frac{1}{x}}{3}{6}{x} \amp = \ln{x}\Biggr\rvert_0^2 =\ln{6} - \ln{2} </mrow>
+                               <mrow>\integrald{\frac{1}{x}}{3}{6}{x} \amp = \ln{x}\Biggr\rvert_3^6 =\ln{6} - \ln{2} </mrow>
                                <mrow> \amp = \ln{\frac{6}{2}} = \ln{2} \approx 0.6931 </mrow>
                            </md>
                         </p>
@@ -800,7 +800,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title> Integração com funções pares e ímpares</title>    
      <prelude>
      <p>
-     A partir da definição se uma função é par ou ímpar, poderemos fazer uso de própriedade importantes 
+     A partir da definição se uma função é par ou ímpar, poderemos fazer uso de propriedade importantes 
      para o cálculo de integrais definidas. 
      </p>
      </prelude>                   
@@ -945,7 +945,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  <title>Sobre a integral de funções pares e ímpares</title>
     <statement>
         <p>
-        Encontre uma justificativa geométrica mostrar que <xref first="fact-par-1"  last="fact-impar-2"/>  são válidos.  
+        Encontre uma justificativa geométrica para as afirmações <xref first="fact-par-1"  last="fact-impar-2"/>.  
      </p>
  </statement>               
  
@@ -958,9 +958,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      <title>Integrais definidas por substituição</title>
      <introduction>
          <p>
-             Existem duas formas de encontrar o valor da integral indefinida por substituição. A primeira covida você a 
+             Existem duas formas de encontrar o valor da integral indefinida por substituição. A primeira, covida você a 
              determinar uma primitiva e então aplicar o <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref>.
-              A segunda consiste em mudar os limites de integração de acordo com a substituição escolhida e, só depois, aplicar o teorema. 
+             Enquanto na segunda é necessário  mudar os limites de integração de acordo com a substituição escolhida e, só depois, aplicar o teorema. 
              O exemplo a seguir apresentamos duas soluções, cada uma ilutra uma das  possibilidades.
             
          </p>
@@ -1062,7 +1062,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </assemblage>
 <note>
 Embora as duas maneiras apresentadas para encontrar integrais definidas, por substituição, funcionem. É comum, por geralmente simplificar os cálculo, 
-fazer uso da mudança dos limites de integração para a nova varável.
+fazer uso da mudança dos limites de integração para a nova variável.
 </note>
 
     
@@ -1447,7 +1447,7 @@ calcular a integral definida de <m>f(x)</m> de <m>a</m> até <m>b</m>.
     <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
     <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
     <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
-    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
     <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
 Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
 </references>
