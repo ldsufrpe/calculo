@@ -1637,16 +1637,15 @@ passa pelo ponto <m>(0, 2)</m>.</p>
 
 
 <references xml:id="references-backmatter">
-    <title>Referências</title> 
-        <biblio type="raw" xml:id="biblio-1">STEWART, James. <title>Cálculo, v. 1,2. </title> <journal>Cengage Learning</journal>, 2013.</biblio>
-  
-    <biblio type="raw" xml:id="biblio-2">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
-    <biblio type="raw" xml:id="biblio-3">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
-    <biblio type="raw" xml:id="biblio-4">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
-    <biblio type="raw" xml:id="biblio-5">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
 Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
 </references>
- 
+
 
 
     </article>
