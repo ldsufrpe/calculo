@@ -78,10 +78,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \usetikzlibrary{arrows,matrix}
         \usetikzlibrary{positioning}        % for Dave R's worksheet
         \usepackage{circuitikz}             % for Virgil P's worksheet
-        \usepackage{polynom}
-         \polyset{vars=XYZ\xi,
-             \xiintovariablesstyle=C,
-             delims={[}{]}}
+        
         </latex-image-preamble>
     </docinfo>
 
@@ -352,7 +349,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
        Daí, a <xref ref="assemblage-integral-partes" text="custom"> fórmula de integração por partes </xref> produz
 
         <mdn >
-            <mrow xml:id="1vez2">\integral{e^x\sin{x}}{x}  \amp = e^x(-\cos{x}) - \integral{e^x(-\cos{x})}{x}   \amp  \ct{Integração por partes nª 1.}</mrow>
+            <mrow xml:id="1vez2">
+                \integral{e^x\sin{x}}{x}  \amp = e^x(-\cos{x}) - \integral{e^x(-\cos{x})}{x}   \amp  \ct{Integração por partes nª 1.}</mrow>
             <mrow> \amp = -e^x\cos{x} + \integral{e^x\cos{x}}{x}</mrow>
         </mdn>
         A integral do lado direito,  <m>\integral{e^x(-\cos{x})}{x}</m>, requer o uso da integração por partes mais uma vez. Agora, escolheremos 
