@@ -1018,7 +1018,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
     <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
     <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
-    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
     <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
 Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
 </references>
