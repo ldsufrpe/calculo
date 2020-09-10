@@ -145,7 +145,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         Considerando duas funções deriváveis <m>f(x)</m> e <m>g(x)</m> podemos derivar  <m>f(x)g(x)</m> e obter
 
         <md>
-            <mrow>\frac{\dd}{\dd x}\left[f(x)g(x)\right] = f(x)g'(x) + f'(x)g(x) \amp \ct{Regra do Produto.} </mrow>           
+            <mrow>\frac{\dd}{\dd x}\left[f(x)g(x)\right] = f(x)g'(x) + f'(x)g(x) \amp \qquad \ct{Regra do Produto.} </mrow>           
         </md>.
 
         A integral de ambos os lados da imguadade acima produz
