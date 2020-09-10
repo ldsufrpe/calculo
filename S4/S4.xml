@@ -134,7 +134,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  <title>Integração por Partes</title>
     <introduction>
         <p>
-          A técnica   <em>integração por partes</em> baseia-se na Regra do Produto da derivação. É geralmente aplicada em integrandos quem
+          A técnica de  <em>integração por partes</em> baseia-se na Regra do Produto da derivação. É geralmente aplicada em integrandos quem
         quem envolvam produtos de de funções do tipo potência, exponenciais, logarítimicas e trigonométricas. Por exemplo,
         as integrais dos tipos
         <md>
@@ -179,11 +179,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <example xml:id="ex-part-1">
 <title><m>\integral{xe^x}{x}</m></title>
-    <statement>
-        <p>
-            Determine <m>\integral{xe^x}{x}</m>.
-        </p>
-    </statement>
+    
     <solution>
         <p>
             Para utilizar <xref ref="assemblage-integral-partes" text="title"/> devemos escolher com sabedoria, a partir do produto 
@@ -233,11 +229,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <example xml:id="ex-part-2">
 <title><m>\integral{x\sin{x}}{x}</m></title>
-    <statement>
-        <p>
-            Determine <m>\integral{x\sin{x}}{x}</m>.
-        </p>
-    </statement>
+    
     <solution>
         <p>
            Escolha, <m>\dd v =\sin{x}\,\dd x</m> e <m>u=x</m>. Então,
@@ -291,11 +283,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <example xml:id="ex-part-4a">
 <title><m>\integral{x^2e^x}{x}</m></title>
     
-    <statement>
-        <p>
-            Determine <m>\integral{x^2e^x}{x}</m>.
-        </p>
-    </statement>
+    
     <solution>
         <p>
            Escolha <m>\dd v=e^x\,\dd x</m> e <m>u=x^2</m>. Então,
@@ -348,32 +336,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </solution>
 </example> -->
 
-<exercise xml:id= "exer-part-4">
 
-    <statement>
-        <p>
-            Determine <m>\integral{t^3e^t}{t}</m>.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            Inicie escolhendo <m>u=t^3</m>.
-        </p>
-    </hint>
-    <answer>
-        <p>
-            <m>e^t(t^3-3t^2+6t-6) +C</m>
-        </p>
-    </answer>
-</exercise> 
 
 <example xml:id="exer-part-4b">
 <title><m>\integral{e^x\sin{x}}{x}</m></title>
-    <statement>
-        <p>
-            Determine <m>\integral{e^x\sin{x}}{x}</m>.
-        </p>
-    </statement>
+    
     <solution>
         <p>
         Escolha <m>\dd v=\sin{x}\,\dd x</m> e <m>u=e^x</m>. Então,
@@ -419,6 +386,25 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </solution>
 </example>
+
+<exercise xml:id= "exer-part-4">
+
+    <statement>
+        <p>
+            Determine <m>\integral{t^3e^t}{t}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Inicie escolhendo <m>u=t^3</m>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>e^t(t^3-3t^2+6t-6) +C</m>
+        </p>
+    </answer>
+</exercise> 
 </paragraphs>
 <assemblage xml:id="assemblage-integral-partes-definida">
     <title>Integração por partes de uma integral definida</title>
@@ -499,7 +485,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <statement>
                 <p>
                 Não escolhemos <m>\dd v=\ln{x}</m>, embora ela seja uma função mais complicada do que <m>x^2</m>, 
-                porque não e imediato saber quem seria <m>v</m>. Contudo, usando <m>u=\ln{x}</m>, nos leva a <m>\dd u= (1/x)</m>, 
+                porque não é imediato saber quem seria <m>v</m>. Contudo, usando <m>u=\ln{x}</m>, nos leva a <m>\dd u= (1/x)</m>, 
                 que geralmente parece ser mais simples do que <m>u=\ln{x}</m>.
                 </p>
             </statement>
@@ -722,7 +708,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <mrow> A+B =1\amp </mrow>
         </md>.
         Resolvendo essas equações , obtemos <m>A=2</m> e <m>B=-1</m>. Finalmente, substituimos o integrando pela decomposição 
-        de frações paraciais e aplicamos a integral:
+        de frações parciais e aplicamos a integral:
         
             <md>
                 <mrow>\integral{\frac{x+7}{x^2-x+6}}{x} \amp = \integral{\left(\frac{2}{x-3}-\frac{1}{x+2}\right)}{x} </mrow>
@@ -1002,27 +988,27 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <exercises xml:id="exercises-integral-por-partes">
-<exercisegroup>
+<!-- <exercisegroup>
 <introduction>
     <p>
-      introdução do problema.  
+      Introdução do problema.  
     </p>
 </introduction>
 <exercise>
     <p>
-    teste
+    em breve
     </p>
 </exercise>
 <exercise>
-<p>teste</p>
+<p>em breve</p>
 </exercise>
 <exercise>
     <p>
-    teste
+    em breve
     
     </p>
 </exercise>
-</exercisegroup>
+</exercisegroup> -->
    
 </exercises>
 

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-09T22:43:18-03:00       *-->
+<!--*       on 2020-09-09T22:57:52-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Parágrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Determine \(\integral{xe^x}{x}\text{.}\)</p>
+<p>Para utilizar <a class="xref" data-knowl="./knowl/assemblage-integral-partes.html" title="[assemblage]: Fórmula da integração por partes">Fórmula da integração por partes</a> devemos escolher com sabedoria, a partir do produto \(x\cdot e^x\,\dd x\text{,}\) o representante de \(u\) e \(\dd v\) que torne a integral mais simples. Em geral, escolhe-se como \(\dd v\) a parte mais complexa do integrando cuja a integral seja conhecida, neste caso, tomamos \(\dd v = e^x\dd x\text{,}\) e, por exclusão, \(u=x\text{.}\)  Agora, encontramos \(v\) aplicando a integral</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+v = \integral{}{v} = \integral{e^x}{x}=e^x.
+\end{equation*}
+</div>
+<p data-braille="continuation">e \(\dd u\) aplicado a derivada</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{\dd u}{\dd x}= 1 \amp \implies  \dd u = \dd x \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">De posse das informações sobre \(\dd v\text{,}\) \(u\) , \(v\) e \(\dd u\text{,}\) é possível aplicar a fórmula de integração por partes  e obter</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\int\ub{x}{u}\ub{e^x\dd x}{\dd v} \amp  = \ub{x}{u}\ub{e^x}{v} - \int \ub{e^x}{v}\, \ub{\dd x}{\dd u} \amp \ctm{\small\left(\integral{u}{v} = uv - \integral{v}{u}\right)} \\
+\amp = xe^x - e^x + C \text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="section-1.html#p-7">[incontext]</a></span>
 </body>
 </html>
