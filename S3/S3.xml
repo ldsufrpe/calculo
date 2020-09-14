@@ -767,7 +767,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
          <p>
             Gráficos de funções são úteis para analisar várias propriedades importanetes.
         Diversas funções possuem  simetria em relação em relação ao eixo <m>y</m>, como na <xref ref="fig-par"/> e 
-        outras apresentam simetria em relação ao eixo <m>x</m>, como na <xref ref="fig-impar"/>. No primeiro caso,
+        outras apresentam simetria em relação a origem, como na <xref ref="fig-impar"/>. No primeiro caso,
         a função é dita <term> par</term> e satisfaz <m>f(-x)=f(x)</m> em <m>[-a,a]</m>, e no segundo a função é dita <term>ímpar</term> e satisfaz
          <m>f(-x)=-f(x)</m> em <m>[-a,a]</m>.
          </p>
@@ -788,9 +788,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </figure>
 
 <figure xml:id="fig-impar">
-<caption>Simetria em relação ao eixo x</caption>
+<caption>Simetria em relação a origem</caption>
 <image source="images/f-impar" width="50%">
-<description>Simetria em relação ao eixo x</description>    
+<description>Simetria em relação a origem</description>    
 </image>
 </figure>
 </sidebyside> 
