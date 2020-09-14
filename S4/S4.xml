@@ -838,21 +838,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <statement>
     
         <p>
-            Determine <m>\integral{\frac{2x^2-x-1}{x^3-x^2+x-2}}{x}</m>.
+            Determine <m>\integral{\frac{2x^2-x-1}{x^3-2x^2+x-2}}{x}</m>.
         </p>
     </statement>
     <solution>
         <p>
-          Uma estratégia para fatorar o denominador <m>x^3-x^2+x-2</m> é encontrando uma de suas raizes  <m>\alpha</m> e
+          Uma estratégia para fatorar o denominador <m>x^3-2x^2+x-2</m> é encontrando uma de suas raizes  <m>\alpha</m> e
            depois efetuar a  divisão  por <m>x-\alpha</m>. Observe que
 
 
         <md>
-            <mrow> (2)^3-(2)^2+2-2=0</mrow>
+            <mrow> (2)^3-2\cdot(2)^2+2-2=0</mrow>
         </md>.
         Logo, <m>\alpha=2</m> é uma raíz e 
         <me>
-            (x^3-x^2+x-2) \div (x-2) = (x^2+1).
+            (x^3-2x^2+x-2) \div (x-2) = (x^2+1).
         </me>
         
           
@@ -860,7 +860,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
            
                     
             <me>
-                x^3-x^2+x-2 = (x^2+1)(x-2).
+                x^3-2x^2+x-2 = (x^2+1)(x-2).
             </me>
 
         Já que existe um fator linear sem repetição e um fator de grau dois que não pode ser mais fatorado, 
@@ -884,7 +884,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </md>
         que fornece <m>A=B=C=1</m>. Portanto,
         <md>
-            <mrow>\integral{\frac{2x^2-x-1}{x^3-x^2+x-1}}{x} \amp = \integral{\left(\frac{x+1}{x^2+1} + \frac{1}{x-2}\right)}{x}</mrow>
+            <mrow>\integral{\frac{2x^2-x-1}{x^3-2x^2+x-1}}{x} \amp = \integral{\left(\frac{x+1}{x^2+1} + \frac{1}{x-2}\right)}{x}</mrow>
         </md>
         Mas,
         <me>
@@ -892,7 +892,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </me>
         Logo, 
         <md>
-            <mrow>\integral{\frac{2x^2-x-1}{x^3-x^2+x-1}}{x} \amp = \integral{\frac{x}{x^2+1}}{x} + \integral{\frac{1}{x^2+1}}{x} + \integral{\frac{1}{x-2}}{x} </mrow>
+            <mrow>\integral{\frac{2x^2-x-1}{x^3-2x^2+x-1}}{x} \amp = \integral{\frac{x}{x^2+1}}{x} + \integral{\frac{1}{x^2+1}}{x} + \integral{\frac{1}{x-2}}{x} </mrow>
             <mrow> \amp = \ln{|x^2-1|} + \arctan{x} + \ln{|x-2|} + C</mrow>.
         </md>
         </p>
