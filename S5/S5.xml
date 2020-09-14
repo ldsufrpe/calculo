@@ -116,7 +116,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                         xxxxxxxxxxxxxxxxxxx
+                         calcular áreas de regiões sob gráficos de funções.
                     </p>
                 </li>
                 <li>
@@ -132,9 +132,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  <title>Área entre curvas</title>
     <introduction>
         <p>
-          
+          Suponha que <m>f</m> e <m>g</m> são funções contínuas em <m>[a,b]</m> tais que <m>f(x)\geqleq</m> para todo <m>x</m> entre <m>a</m> e <m>b</m>. 
+          Estamos interessados em encontrar a área da região delimitadas pelas curvas <m>y=f(x)</m> e  <m>y=g(x)</m> e as retas verticais <m> x=a</m> e <m>x=b</m>. (Veja a Figura)
 
-        </p>
+
+           <figure xml:id="figure-sage-area-entre-curvas">
+                    <caption>Área entre o gráfico de <m>f(x)=3x</m>, o eixo <m>x</m> e a reta <m>x=2</m> </caption>
+                    <image xml:id="sageplot-f-sob-g" width="35%">
+                        
+                        <sageplot>
+                        f(x) =                         
+                        plot(f, (x, 0, 2), fill=True, gridlines=True, axes_labels=['$x$','$y$'])
+                        </sageplot>
+                    </image>
+                </figure>
     </introduction>
 </subsection>
 

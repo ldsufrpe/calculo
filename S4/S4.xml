@@ -902,14 +902,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise xml:id= "exer-frac-3">
     <statement>
         <p>
-            Determine <m>\integral{\frac{x^5+x-1}{x^4-x}}{x}</m>.
+            Determine <m>\integral{\frac{x^5+x-1}{x^4-x^3}}{x}</m>.
         </p>
     </statement>
     <hint>
         <p>
             Dividindo o numerador pelo denominador: 
             <me>
-                \frac{x^5+x-1}{x^4-x}=x+1+ \frac{x^3+x-1}{x^4-x^3}.
+                \frac{x^5+x-1}{x^4-x^3}=x+1+ \frac{x^3+x-1}{x^4-x^3}.
             </me>
             
         </p>
