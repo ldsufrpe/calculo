@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-14T12:09:05-03:00       *-->
+<!--*       on 2020-09-15T23:02:03-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -129,16 +129,100 @@ true);
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h6>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">xxxxxxxxxxxxxxxxxxx</p></li>
+<li id="li-1"><p id="p-3">calcular áreas de regiões sob gráficos de funções.</p></li>
 <li id="li-2"><p id="p-4">xxxxxxxxxxxxxxxxxxxx</p></li>
 </ol></article><section class="subsection" id="subsec-area-entre-curvas"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Área entre curvas</span>
 </h3>
-<section class="introduction" id="introduction-2"><p id="p-5"></p></section></section><section class="subsection" id="subsec-volume"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-2"><p id="p-5">Suponha que \(f\) e \(g\) são funções contínuas em \([a,b]\) tais que \(f(x)\geq g(x)\) para todo \(x\) entre \(a\) e \(b\text{.}\) Estamos interessados em encontrar a área da região delimitadas pelas curvas \(y=f(x)\) e  \(y=g(x)\) e as retas verticais \(x=a\) e \(x=b\text{.}\) (Veja a Figura)</p>
+<figure class="figure figure-like" id="figure-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:54.7368421052632%;justify-content:flex-end;"><figure class="figure figure-like" id="figure-sage-area-entre-curvas"><img src="images/sageplot-f-sob-g-x.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-f-sob-g-x.png';this.onerror=null;"><figcaption><span class="codenumber">(a)</span><span class="space"> </span></figcaption></figure></div>
+<div class="sbspanel" style="width:40%;justify-content:flex-end;"><figure class="figure figure-like" id="figure-3"><img src="images/sageplot-f-sob-g-y.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-f-sob-g-y.png';this.onerror=null;"><figcaption><span class="codenumber">(b)</span><span class="space"> </span></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><article class="assemblage assemblage-like" id="assemblage-area-entre-curvas"><h6 class="heading"><span class="title">Fórmula para Área.</span></h6>
+<p id="p-6">A área da região  entre as curvas \(y=f(x)\text{,}\) \(y=g(x)\text{,}\) e limitadas lateralmente pelas retas \(x=a\) e \(x=b\text{,}\) na qual \(f\) e \(g\)  são contínuas e \(f(x)\geq g(x)\) para todo \(x\) em \([a,b]\text{,}\) é</p>
+<div class="displaymath">
+\begin{equation*}
+\text{Área} = \integrald{\left[f(x)-g(x)\right]}{a}{b}{x}.
+\end{equation*}
+</div></article><article class="example example-like" id="ex1-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex1-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1-f-sob-g"><article class="example example-like"><p id="p-7">Encontre a área da região entre as curvas \(y = x + 6\text{,}\) \(y = x^2 \) e limitada nas laterais pelas retas \(x = 0 \) e \(x = 2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-8"><figure class="figure figure-like" id="figure-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-fsobg.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-fsobg.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe1-f-sob-g"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe1-f-sob-g"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe1-f-sob-g"><article class="exercise exercise-like"><p id="p-9">Encontre a área da região entre as curvas \(y = x^2 + 2\text{,}\) \(y = x \) e limitada nas laterais pelas retas \(x = 0 \) e \(x = 1\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-10">Comece por esboçar os gráficos de ambas as funções.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-11">\(\frac{11}{6}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex2-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex2-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2-f-sob-g"><article class="example example-like"><p id="p-12">Determine a área da região limitada pelos gráficos de \(y=2-x^2\) e \(y=x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-13">cálculo rapido <figure class="figure figure-like" id="fig-ex2-f-sob-g"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-ex2-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-ex2-f-sob-g.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe2-f-sob-g"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe2-f-sob-g"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe2-f-sob-g"><article class="exercise exercise-like"><p id="p-14">Encontre a área da região englobada pelas curvas \(y = x^2\) e \(y = x +6\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-15">Comece por esboçar os gráficos de ambas as funções.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-16">\(\frac{125}{6}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex3-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex3-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex3-f-sob-g"><article class="example example-like"><p id="p-17">Encontre a área da região limitada .....</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-18">depois</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe3-f-sob-g"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe3-f-sob-g"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe3-f-sob-g"><article class="exercise exercise-like"><p id="p-19"></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-20">depois</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-21">depois</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex4-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex4-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex4-f-sob-g"><article class="example example-like"><p id="p-22">Encontre a área da região limitada pelas curvas \(x = y^2\) e  \(y = x − 2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><p id="p-23">anton, exemplo 4 pg 417 <figure class="figure figure-like" id="fig-ex4-f-sob-g"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-exe4-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-exe4-f-sob-g.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex5-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex5-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex5-f-sob-g"><article class="example example-like"><p id="p-24">Determine a área da região limitada pelas curvas \(y=3x^2-x^2-10x\) e \(y=-x^2+2x\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-25">cálculo rapido ex4 pdf 370 <figure class="figure figure-like" id="fig-ex5-f-sob-g"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-ex5-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-ex5-f-sob-g.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe5-f-sob-g"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe5-f-sob-g"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe5-f-sob-g"><article class="exercise exercise-like"><p id="p-26">Determine a área de uma região limitada pelas curvas \(y=x^3+2x^2-3x\) e \(y=x^2+ 3x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-27">Esboce o gráfico da região.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-28">depois</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex6-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex6-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex6-f-sob-g"><article class="example example-like"><p id="p-29">Encontre a área aproximada da região limitada pelas curvas \(y=\frac{x}{\sqrt{x^2+1}\) e \(y=x^4-x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-30">james, ex3 pdf 383</p></div></div>
+</div></article></div></section><section class="subsection" id="subsec-volume"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Volume</span>
-</h3></section><section class="subsection" id="subsec-outras-aplicacoes"><h3 class="heading hide-type">
+</h3>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><div class="asymptote-box" style="padding-top: 135.810810810811%"><iframe src="images/revolucao-x.html" class="asymptote"></iframe></div></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><div class="asymptote-box" style="padding-top: 160.8%"><iframe src="images/revolucao-y.html" class="asymptote"></iframe></div></div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><div class="asymptote-box" style="padding-top: 143.571428571429%"><iframe src="images/revolucao-regiao.html" class="asymptote"></iframe></div></div></section><section class="subsection" id="subsec-outras-aplicacoes"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Outras Aplicações</span>
-</h3></section><section class="exercises" id="exercises-integral-por-partes"><h3 class="heading hide-type">
+</h3>
+<section class="subsubsection" id="subsubsec-comprimento-curvas"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.3.1</span> <span class="title">Comprimento de curvas</span>
+</h4></section></section><section class="exercises" id="exercises-integral-por-partes"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.4</span> <span class="title">Exercícios</span>
 </h3></section></section></div></main>
 </div>

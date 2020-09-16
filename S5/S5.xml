@@ -132,26 +132,490 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  <title>Área entre curvas</title>
     <introduction>
         <p>
-          Suponha que <m>f</m> e <m>g</m> são funções contínuas em <m>[a,b]</m> tais que <m>f(x)\geqleq</m> para todo <m>x</m> entre <m>a</m> e <m>b</m>. 
-          Estamos interessados em encontrar a área da região delimitadas pelas curvas <m>y=f(x)</m> e  <m>y=g(x)</m> e as retas verticais <m> x=a</m> e <m>x=b</m>. (Veja a Figura)
+          Suponha que <m>f</m> e <m>g</m> são funções contínuas em <m>[a,b]</m> tais que <m>f(x)\geq g(x)</m> para todo <m>x</m> entre <m>a</m> e <m>b</m>. 
+          Estamos interessados em encontrar a área da região delimitadas pelas curvas <m>y=f(x)</m> e  <m>y=g(x)</m> e as retas verticais <m> x=a</m> e 
+          <m>x=b</m>. (Veja a Figura)
 
-
+        </p>
+        <figure>
+        <sidebyside widths="52% 38%"  valign="bottom bottom">
+            
+        
            <figure xml:id="figure-sage-area-entre-curvas">
-                    <caption>Área entre o gráfico de <m>f(x)=3x</m>, o eixo <m>x</m> e a reta <m>x=2</m> </caption>
-                    <image xml:id="sageplot-f-sob-g" width="35%">
+                    <!-- <caption>Área entre o gráfico de <m>f(x)=3x</m>, o eixo <m>x</m> e a reta <m>x=2</m> </caption> -->
+                    <image xml:id="sageplot-f-sob-g-x" width="55%">
                         
                         <sageplot>
-                        f(x) =                         
-                        plot(f, (x, 0, 2), fill=True, gridlines=True, axes_labels=['$x$','$y$'])
+                        f = x^3 - x+1.5
+                        g = x^2
+                        a = -1
+                        b = 1
+
+                        linestyle = 'dashed'
+                        axes_labels = ['$x$','$y$']
+                        ticks =[[a,b],[]]
+                        tick_formatter = [['$a$', '$b$'],[]]
+                        ymax, xmax = find_local_maximum(f, a,b)
+                        ymin, xmin = find_local_minimum(g, a,b)
+
+                        p = plot(f, (x, a, b), color='red', fill=g, axes_labels=axes_labels, ticks=ticks,
+                                tick_formatter=tick_formatter, fillcolor="#cde0eb", thickness=1.5, figsize=[3.5,3.5], aspect_ratio=2/3) 
+                        p += plot(g, (x, a, b), color='blue', axes_labels=axes_labels, thickness=1.5) 
+                        p += line([(a, g(a)), (a,f(a))], color='black')
+                        p += line([(b, g(b)), (b,f(b))], color='black')
+                        p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+                        p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+                        p += text('$y=f(x)$' ,  (xmax+0.22, ymax+0.15), color="red", fontsize=15)
+                        p += text('$y=g(x)$', (xmin+0.7, ymin+0.15), fontsize=15)
+                        p.fontsize(15)
+                        p
+           
                         </sageplot>
                     </image>
                 </figure>
+
+                <figure>
+                <image xml:id="sageplot-f-sob-g-y"  width="45%">
+                    <description></description>
+                <sageplot>
+                    f = x
+                    g = x^4
+                    a = 0
+                    b = 1
+
+                    linestyle = 'dashed'
+                    axes_labels = ['$x$','$y$']
+                    ticks =[[-0.001, 0.001],[a,b]]
+                    tick_formatter = [['$c$', '$c$'],['$c$', '$d$']]
+                    # ymax, xmax = (-0.15, 1/8)
+                    # ymin, xmin = (0.7, 0.15)
+                    ymax, xmax = find_local_maximum(f, a,b)
+                    ymin, xmin = find_local_minimum(g, a,b)
+                    p = plot(f, (x, a, b), color='red', fill=g, axes_labels=axes_labels, ticks=ticks,
+                            tick_formatter=tick_formatter, fillcolor="#cde0eb", thickness=1.5, figsize=[3.5,3.5], aspect_ratio=1.25) 
+                    p += plot(g, (x, a, b), color='blue', axes_labels=axes_labels, thickness=1.5) 
+                    p += line([(g(a), a), (f(a),a)], color='black')
+                    p += line([(g(b), b), (f(b),b)], color='black')
+                    p += line([(0, a), (g(a),a)], color="lightgray", linestyle=linestyle)
+                    p += line([(0, b), (g(b),b)], color="lightgray", linestyle=linestyle)
+                    p += text('$x=f(y)$' ,  (xmax-4/5, ymax-3/5), color="red", fontsize=15)
+                    p += text('$x=g(y)$', (xmin+0.8, ymin+0.15), fontsize=15)
+                    p.fontsize(15)
+                    p
+                </sageplot>
+                    
+                </image>
+                </figure>
+ </sidebyside>
+ </figure>
+
+
     </introduction>
+
+    <assemblage xml:id="assemblage-area-entre-curvas">
+        <title>Fórmula para Área</title>
+        <p>
+            A área da região  entre as curvas <m>y=f(x)</m>, <m>y=g(x)</m>, e limitadas lateralmente 
+            pelas retas <m>x=a</m> e <m>x=b</m>, na qual <m>f</m> e <m>g</m>  são contínuas e 
+            <m>f(x)\geq g(x)</m> para todo <m>x</m> em <m>[a,b]</m>, é
+            
+
+            <me>
+                \text{Área} = \integrald{\left[f(x)-g(x)\right]}{a}{b}{x}.
+            </me>
+            
+        </p>
+    </assemblage>
+
+<example xml:id="ex1-f-sob-g">
+    <statement>
+        <p>
+         Encontre a área da região entre as curvas <m>y = x + 6</m>, <m> y = x^2 </m> e limitada 
+            nas laterais pelas retas <m> x = 0 </m> e <m>x = 2</m>.
+
+          
+        </p>
+    </statement>
+    <solution>
+        <p>
+
+        <figure>
+<image xml:id="sageplot-fsobg"  width="50%">
+    <description></description>
+<sageplot>
+f = x+ 6
+g = x^2
+a = 0
+b = 2
+c = 0
+d = 6
+linestyle = 'dashed'
+axes = ['$x$','$y$']
+ticks =[[a,b],[c,d]]
+tick_formatter = [['$a$', '$b$'],[]]
+p = plot([f, g],(x,a,b),fill={0:[1]}, fillcolor="#cde0eb", axes_labels=axes, ticks=ticks, figsize=[3.5,3.5])
+p += plot(g, (x, a-1, b+0.2*b))
+p += plot(f, (x, a-1, b+0.2*b), color='red')
+p += line([(a, g(a)), (a,f(a))], color='black')
+p += line([(b, g(b)), (b,f(b))], color='black')
+p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+p
+</sageplot>
+    
+</image>
+</figure>
+            
+        </p>
+        
+    </solution>
+</example>
+
+<exercise xml:id="exe1-f-sob-g">
+    <statement>
+        <p>
+             Encontre a área da região entre as curvas <m>y = x^2 + 2</m>, <m> y = x </m> e limitada 
+            nas laterais pelas retas <m> x = 0 </m> e <m>x = 1</m>.
+        </p>
+    </statement>
+ <hint>
+     <p>
+        Comece por esboçar os gráficos de ambas as funções.
+     </p>
+ </hint>
+ <answer>
+     <p>
+       <m> \frac{11}{6}</m>
+     </p>
+ </answer>
+</exercise>
+
+
+<example xml:id="ex2-f-sob-g">
+    <statement>
+        <p>
+          Determine a área da região limitada pelos gráficos de <m>y=2-x^2</m> e <m>y=x</m>.
+        </p>
+       
+    </statement>
+    <solution>
+        <p>
+            cálculo rapido
+
+        <figure xml:id="fig-ex2-f-sob-g">
+            <caption></caption>
+        <image xml:id="sageplot-ex2-f-sob-g" width="50%">
+            <description></description>
+        <sageplot>
+            f = 2-x^2
+            g = x
+            a = -2
+            b = 1
+            x0 =-2 
+            y0 = 1
+            c=g(-2)
+            d=g(1)
+            linestyle = 'dashed'
+            axes_labels = ['$x$','$y$']
+            ticks =[[a,b],[c,d]]
+            tick_formatter = [['$a$', '$b$'],[]]
+            p = plot([f, g],(x,a,b),fill={0:[1]},fillcolor="#cde0eb", axes_labels=axes_labels, ticks=ticks, figsize=[3.5,3.5], thickness=1.5)
+            p += plot(g, (x, a-1/4, b+0.2*b), thickness=1.5)
+            p += plot(f, (x, a-1/4, b+0.2*b), color='red', thickness=1.5)
+            #p += line([(a, g(a)), (a,f(a))], color='black')
+            #p += line([(b, g(b)), (b,f(b))], color='black')
+            #p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+            #p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+            p += text('$y=2-x^2$', (-1.5, f(-1.2)+0.6), color='red', fontsize=12)
+            p += text('$y=x$', (-1., g(-1.2)-0.45), fontsize=12) 
+            p
+        </sageplot>
+            
+        </image>
+        </figure>
+
+        </p>
+    </solution>
+</example>
+
+
+<exercise xml:id="exe2-f-sob-g">
+    <statement>
+        <p>
+        Encontre a área da região englobada pelas curvas <m> y = x^2</m> e <m> y = x +6</m>.
+        </p>   
+    </statement>
+ <hint>
+     <p>
+         Comece por esboçar os gráficos de ambas as funções.
+     </p>
+ </hint>
+ <answer>
+     <p>
+         <m>\frac{125}{6}</m>
+     </p>
+ </answer>
+</exercise>
+
+
+<example xml:id="ex3-f-sob-g">
+    <statement>
+        <p>
+          Encontre a área da região limitada ..... 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            depois
+        </p>
+    </solution>
+</example>
+
+
+<exercise xml:id="exe3-f-sob-g">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+ <hint>
+     <p>
+         depois
+     </p>
+ </hint>
+ <answer>
+     <p>
+         depois
+     </p>
+ </answer>
+</exercise>
+
+
+<example xml:id="ex4-f-sob-g">
+    <statement>
+        <p>          
+             Encontre a área da região limitada pelas curvas <m>x = y^2</m> e  <m>y = x − 2</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            anton, exemplo 4 pg 417
+
+            <figure xml:id="fig-ex4-f-sob-g">
+                <caption></caption>
+            <image xml:id="sageplot-exe4-f-sob-g" width="50%">
+                <description></description>
+                <sageplot>
+                    f = sqrt(x)
+                    h = -sqrt(x)
+                    g = x-2
+
+                    a = 0
+                    b = 4
+                    c = -1
+                    d = 2
+                    axes = ['$x$','$y$']
+                    ticks =[[a,b],[c,d]]
+
+                    p = plot(f, (x,0,4.4), figsize=[3,3], axes_labels=axes, ticks=ticks, color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(h, (0, 3/2), color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(g, (x, 1/2, 4.5), thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(g, (x, 1, 4), fill=f, thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(f, (x, 0, 1), fill=True, color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(h, (0, 1), fill=True, color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += text('$x=y^2$', (2, 2), color='red', fontsize=12)
+                    p += text('$x=y+2$', (2.5, -1), fontsize=12) 
+                    p
+
+                </sageplot>
+            </image>
+            </figure>
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex5-f-sob-g">
+    <statement>
+        <p>
+            Determine a área da região limitada pelas curvas <m>y=3x^2-x^2-10x</m> e <m>y=-x^2+2x</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            cálculo rapido ex4 pdf 370
+
+        <figure xml:id="fig-ex5-f-sob-g">
+            <caption></caption>
+            <image xml:id="sageplot-ex5-f-sob-g" width="50%">
+                <description></description>
+                <sageplot>
+                    f = 3*x^3-x^2-10*x
+                    g = -x^2+2*x
+                    a = -2
+                    b = 2                    
+                    c = g(-2)
+                    d = g(2)
+                    linestyle = 'dashed'
+                    axes = ['$x$','$y$']
+                    ticks =[[a,b],[c,d]]
+                    tick_formatter = [['$a$', '$b$'],[]]
+                    p = plot([f, g],(x,a,b),fill={0:[1]}, axes_labels=axes, ticks=ticks, thickness=1.5, figsize=[3.5,3], fillcolor="#cde0eb")
+                    p += plot(g, (x, a-1/4, b+0.2*b),thickness=1.5)
+                    p += plot(f, (x, a-1/4, b+0.2*b), color='red',thickness=1.5)
+                    #p += line([(a, g(a)), (a,f(a))], color='black',thickness=1.5)
+                    #p += line([(b, g(b)), (b,f(b))], color='black')
+                    #p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+                    #p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+                    p += text('$y= 3x^3-x^2-10x$', (-1.7, f(-1.2)+1.99), color='red', fontsize=12)
+                    p += text('$y= -x^2+2x$', (1, g(1)+2), fontsize=12) 
+                    p
+                </sageplot>
+            </image>
+        </figure>
+
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exe5-f-sob-g">
+    <statement>
+        <p>
+            Determine a área de uma região limitada pelas curvas <m>y=x^3+2x^2-3x</m> e <m>y=x^2+ 3x</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Esboce o gráfico da região.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            depois
+        </p>
+    </answer>
+</exercise>
+
+<example xml:id="ex6-f-sob-g">
+    <statement>
+        <p>
+            Encontre a área aproximada da região limitada pelas curvas <m>y=\frac{x}{\sqrt{x^2+1}</m> e 
+            <m>y=x^4-x</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            james, ex3 pdf 383
+        </p>
+    </solution>
+</example>
+
 </subsection>
 
 <subsection xml:id="subsec-volume">
     <title>Volume</title>
     
+    <image xml:id="revolucao-x" width="35%">
+        <description></description>
+        <asymptote>
+        import graph3;
+        import solids;
+        size(0,200);
+        currentprojection=perspective(1.5,0,10,Y);
+        pen color=lightblue+opacity(0.55);
+
+        real f(real x){return sqrt(x);}
+        pair F(real x){return (x,f(x));}
+        triple F3(real x){return (x,f(x),0);}
+
+        path p=graph(F,0,1,n=20,operator ..);
+        path3 p3=path3(p);
+
+        revolution a=revolution(p3,X,0,360);
+        draw(surface(a),color,render(compression=Low,merge=true));
+        draw(p3,blue);
+
+        real x=relpoint(p,0.5).x;
+
+        xaxis3(Label("$x$",1),xmax=1.5,dashed,Arrow3);
+        yaxis3(Label("$y$",1),Arrow3);
+        dot(Label("$(1,1)$"),(1,1,0));
+        arrow(Label("$y=\sqrt{x}$"),F3(0.7),Y,0.75cm,red);
+        draw(arc(1.2X,0.4,90,90,175,-40,CW),Arrow3);
+        draw("$r$",(x,0,0)--F3(x),red,Arrow3,PenMargin3);
+        
+        </asymptote>
+        
+    </image>
+ 
+  <image xml:id="revolucao-y" width="35%">
+      <description></description>
+    <asymptote>
+    import graph3;
+    import solids;
+    size(300,200);
+    //currentprojection=perspective(1.5,0,10,Y);
+    currentprojection=perspective(-1.5,0,10,Y);
+    pen color=lightblue+opacity(0.55);
+
+    real f(real x){return x^3;}
+    pair F(real x){return (x,f(x));}
+    triple F3(real x){return (x,f(x),0);}
+
+    path p=graph(F,0,2,n=20,operator ..);
+    path3 p3=path3(p);
+
+    revolution a=revolution(p3,Y,0,360);
+    draw(surface(a),color,render(compression=0,merge=true));
+    draw(p3,blue);
+
+    real x=relpoint( p,1).x;
+    xaxis3(Label("$x$",1),xmax=2,Arrow3);
+    yaxis3(Label("$y$",1),ymin=-0.5,ymax=10,dashed,Arrow3);
+    dot(Label("$(2,8)$"),(2,8,0),X);
+    draw(arc(9Y,1,90,0,7.5,180),Arrow3);   
+    arrow(Label("$y=x^3$"),(1.5, 3,0),X,0.75cm,red);    
+    draw("$r$",(0,f(1.7),0)--F3(1.7),red,Arrow3,PenMargin3);
+    </asymptote>
+  </image>
+
+
+  <image xml:id="revolucao-regiao" width="40%">
+      <description></description>
+      <asymptote>
+    mport graph3;
+    import solids;
+    size(0,200);
+    currentprojection=perspective(2,0,10,up=Y);
+    pen color=lightblue+opacity(0.25);
+    pen color=lightblue+opacity(0.35);
+    real alpha=360;
+
+    real f(real x) {return x^2;}
+    pair F(real x) {return (x,f(x));}
+    triple F3(real x) {return (x,f(x),0);}
+
+    path p=graph(F,0,1,n=10,operator ..)--cycle;
+    path3 p3=path3(p);
+
+    revolution a=revolution(p3,X,-alpha,0);
+    render render=render(compression=0,merge=true);
+    draw(surface(a),color,render);
+    surface s=surface(p);
+    draw(s,color,render);
+    draw(rotate(-alpha,X)*s,color,render);
+
+    draw(p3, red);
+
+    xaxis3(Label("$x$",1),xmax=1.25,dashed,Arrow3);
+    yaxis3(Label("$y$",1),Arrow3);
+    dot(Label("$(1,1)$"),(1,1,0),X+Y);
+    arrow("$y=x$",(0.7,0.7,0),Y,0.75cm,red);
+    arrow("$y=x^2$",F3(0.7),X,0.75cm,red);
+    draw(arc(1.1X,0.3,90,90,3,-90),Arrow3);
+      </asymptote>
+  </image>
+
 </subsection>
 
 
