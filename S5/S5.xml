@@ -631,7 +631,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
     </solution>
 </example>
 
-<subsubsection xml:id="subsubsec-Videos sugeridos">
+<subsubsection xml:id="subsubsec-videos-sugeridos-area">
     <title>Sugestão de vídeos</title>
     <ul>
         <li>
@@ -974,7 +974,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
     </exercise>
     
 
-<subsubsection xml:id="subsubsec-Videos sugeridos">
+<subsubsection xml:id="subsubsec-videos-sugeridos-volume">
     <title>Sugestão de vídeos</title>
     <ul>
         <li>
@@ -1046,7 +1046,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         p += line([(b, g(b)), (b,f(b))], color='black')
         #p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
         p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
-        p += text('$y=2-x^2$', (-1.5, f(-1.2)+0.6), color='red', fontsize=12)
+        p += text('$y=x^2+1$', (-1.5, f(-1.2)+0.6), color='red', fontsize=12)
         p += text('$y=x$', (-1., g(-1.2)-0.45), fontsize=12) 
         p 
     </sageplot>
