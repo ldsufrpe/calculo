@@ -631,6 +631,22 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
     </solution>
 </example>
 
+<subsubsection xml:id="subsubsec-Videos sugeridos">
+    <title>Sugestão de vídeos</title>
+    <ul>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/JvEvOa6jA3c"> Área entre curvas que se intersectam.</url>
+            </p>
+        </li>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/IPyRysdu6FM"> Área composta de duas regiões.</url>
+            </p>
+        </li>
+    </ul>
+    
+</subsubsection>
 </subsection>
 
 <subsection xml:id="subsec-volume">
@@ -794,7 +810,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
             <p>
             
              O  sólido resultante é mostrado na <xref ref="solido-ex2-volume"/>. Como a região é girada em torno do eixo <m> y</m>, faz sentido 
-             obter as regiões transversais ao  sólido perpendicularmente ao  eixo <m> y</m> e, portanto, integrar em relação a <m> y</m>. Para cada <m>y</m> a área da seção transversal é um disco circular de raio 
+             obter as regiões transversais ao  sólido perpendicularmente ao  eixo <m> y</m> e, portanto, integrar em relação a <m> y</m>. Para cada <m>y</m> a área da secção transversal é um disco circular de raio 
             <m>r=\sqrt[3]{y}</m>. Então,
 
             <md>
@@ -874,8 +890,8 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         </statement>
         <solution>
             <p> 
-            As curvas <m> y=x </m> e <m> y=x^2</m> se interceptam nos pontos <m>(0,0)</m> e <m>(1,1)</m>. A região entre esses pontos, 
-            o sólido de rotação e a secção transversal perpendicular ao eixo x são mostrados
+            As curvas <m> y=x </m> e <m> y=x^2</m> se intersectam nos pontos <m>(0,0)</m> e <m>(1,1)</m>. A região entre esses pontos, 
+            o sólido de rotação e a secção transversal perpendicular ao eixo  <m>x</m> são mostrados
             na <xref ref="solido-exe3-volume"/>. A secção transversal perpendicular ao eixo <m>x</m> tem o formato de uma arruela (um anel) com
             raio interno <m>r_1=x^2</m> e raio externo <m>r_2=x</m>, de modo que calculamos a área da secção transversal subtraindo
             a área do círculo interno da área do círculo externo:
@@ -958,7 +974,33 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
     </exercise>
     
 
+<subsubsection xml:id="subsubsec-Videos sugeridos">
+    <title>Sugestão de vídeos</title>
+    <ul>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/SASVpFGryUk"> Revolução ao redor do eixo <m>x</m>.</url>
+            </p>
+        </li>
 
+        <li>
+            <p>
+                 Problema resolvido: <url href="https://youtu.be/YYtN5ckrseI"> Generalização do giro ao redor do eixo <m>x</m>.</url>
+            </p>
+        </li>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/MNOGpk6yEl4"> Revolução ao redor do eixo <m>y</m>.</url>
+            </p>
+        </li>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/EhwNTt-DMc0"> Sólido de revolução entre duas funções.</url>
+            </p>
+        </li>
+    </ul>
+    
+</subsubsection>
  
 </subsection>
 
