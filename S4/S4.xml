@@ -292,9 +292,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         Assim, aplicando a <xref ref="assemblage-integral-partes" text="title"/>:
 
         <md>
-            <mrow xml:id="1vez" tag="star"> \integral{x^2e^x}{x}\amp = x^2e^x-\integral{2xe^x}{x} \amp \ct{Integração por partes nª 1.}</mrow>
+            <mrow xml:id="vez1" tag="star"> \integral{x^2e^x}{x}\amp = x^2e^x-\integral{2xe^x}{x} \amp \ct{Integração por partes nª 1.}</mrow>
         </md>
-    Para calcular a integral do lado direito de <xref ref="1vez"/>, precisamos apricar novamente a fórmula de integração por partes. Para isso,
+    Para calcular a integral do lado direito de <xref ref="vez1"/>, precisamos apricar novamente a fórmula de integração por partes. Para isso,
     escolhemos <m>\dd v = e^x\,\dd x</m> e <m>u=2\dd x</m>. Logo,
 
             <md>
@@ -304,10 +304,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         Daí, 
 
      <md>
-            <mrow xml:id="2vez" tag="dstar"> \integral{2xe^x}{x} \amp = 2xe^x - \integral{2e^x}{x} \amp  \ct{Integração por partes nª 2}</mrow>
+            <mrow xml:id="vez2" tag="dstar"> \integral{2xe^x}{x} \amp = 2xe^x - \integral{2e^x}{x} \amp  \ct{Integração por partes nª 2}</mrow>
        
      </md>.
-    Finalmente, a substituição de  <xref ref="2vez"/> em <xref ref="1vez"/> fornece
+    Finalmente, a substituição de  <xref ref="vez2"/> em <xref ref="vez1"/> fornece
 
     <md>
         <mrow>\integral{x^2e^x}{x} \amp = x^2e^x-\integral{2xe^x}{x} </mrow>
@@ -349,7 +349,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
        Daí, a <xref ref="assemblage-integral-partes" text="custom"> fórmula de integração por partes </xref> produz
 
         <mdn >
-            <mrow xml:id="1vez2">
+            <mrow xml:id="vez12">
                 \integral{e^x\sin{x}}{x}  \amp = e^x(-\cos{x}) - \integral{e^x(-\cos{x})}{x}   \amp  \ct{Integração por partes nª 1.}</mrow>
             <mrow> \amp = -e^x\cos{x} + \integral{e^x\cos{x}}{x}</mrow>
         </mdn>
@@ -364,9 +364,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
          <mdn >
-             <mrow xml:id="2vez2"> \integral{e^x\cos{x}}{x}\amp = e^x\sin{x}-\integral{e^x\sin{x}}{x}  \amp  \ct{Integração por partes nª 2} </mrow>
+             <mrow xml:id="vez22"> \integral{e^x\cos{x}}{x}\amp = e^x\sin{x}-\integral{e^x\sin{x}}{x}  \amp  \ct{Integração por partes nª 2} </mrow>
          </mdn>.
-      Substituindo  <xref ref="2vez2"/> em <xref ref="1vez2"/>, obtemos
+      Substituindo  <xref ref="vez22"/> em <xref ref="vez12"/>, obtemos
 
         <md>
             <mrow>\integral{e^x\sin{x}}{x} \amp = -e^x\cos{x} + e^x\sin{x}-\integral{e^x\sin{x}}{x}</mrow>
@@ -979,35 +979,129 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </task>
 </statement>
 </activity>
-
-
-     
+    
  </subsection>
 
 
+
+
+
 <exercises xml:id="exercises-integral-por-partes">
-<!-- <exercisegroup>
+
+<exercisegroup cols="2">
 <introduction>
     <p>
-      Introdução do problema.  
+        Use a técnica de integração por partes para calcular as seguintes integrais indefinidas.
+    </p>
+</introduction>
+
+<exercise>
+    <p><m>\integral{te^{2t}}{t}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{x^2e^{t}}{t}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{t\sin{t}}{t}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{x^2\sin{x}}{x}</m></p>
+</exercise>
+
+<exercise>
+    <p><m> \integral{y\ln{y}}{y}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{x^3\ln{x}}{x}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{(\ln{y})^2}{y}</m></p>
+</exercise>
+<exercise>
+    <p><m>\integral{\sin^2{x}}{x}</m></p>
+</exercise>
+<exercise>
+    <p><m>\integral{\frac{y}{e^y}}{y}</m></p>
+</exercise>
+
+
+
+</exercisegroup>
+
+<exercisegroup cols="2">
+<introduction>
+    <p>
+        Use a técnica de integração por partes e o Teorema Fundamental do Cálculo para calcular as seguintes integrais definidas.
+    </p>
+</introduction>
+<exercise>
+    <p><m>\integrald{xe^x}{0}{1}{x}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integrald{\ln t}{1}{5}{t}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integrald{e^x\cos{x}}{0}{\frac{\pi}{2}}{x}</m></p>
+</exercise>
+
+<exercise>
+    <p><m> \integrald{ye^{-y}}{0}{1}{y}</m></p>
+</exercise>
+
+
+</exercisegroup>
+
+<exercisegroup cols="2">
+<introduction>
+    <p>
+       Use a técnica a frações parciais para calcular as seguintes integrais.
     </p>
 </introduction>
 <exercise>
     <p>
-    em breve
+    <m>\integral{\frac{x + 2}{x^{2} - 5x + 6}}{x}</m>
     </p>
 </exercise>
 <exercise>
-<p>em breve</p>
+<p> <m>\integral{\frac{x + 1}{x^{2} + 4x + 4}}{x}</m></p>
 </exercise>
 <exercise>
-    <p>
-    em breve
+    <p><m>
+    \integral{\frac{4{\left(x + 1\right)}}{2x^{2} + 3x - 2}}{x}
     
-    </p>
+    </m></p>
 </exercise>
-</exercisegroup> -->
-   
+<exercise>
+    <p><m>\integral{\frac{x^2+2}{x^2-3x+2}}{x}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{\frac{3x}{x^{2} + 2x}}{x}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{\frac{t-2}{t^2+t^4}}{t}</m></p>
+</exercise>
+
+<exercise>
+    <p><m>\integral{\frac{3x^{2} + 1}{x^{3} + x^{2} - 2x}}{x}</m></p>
+</exercise>
+<exercise>
+    <p><m>\integral{\frac{x^{2} + 2x + 3}{x^{3} + 2x^{2} - x - 2}}{x}</m></p>
+</exercise>
+<exercise>
+    <p><m>\integral{\frac{x^{2} + 2x + 1}{x^{3} + 4x^{2} + 5x + 2}}{x}</m></p>
+</exercise>
+</exercisegroup>
+
+  
 </exercises>
 
 </section>
