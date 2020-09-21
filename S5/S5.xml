@@ -475,7 +475,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 <example xml:id="ex5-f-sob-g">
     <statement>
         <p>
-            Determine a área da região limitada pelas curvas <m>y=3x^2-x^2-10x</m> e <m>y=-x^2+2x</m>
+            Determine a área da região limitada pelas curvas <m>y=3x^3-x^2-10x</m> e <m>y=-x^2+2x</m>
         </p>
     </statement>
     <solution>
@@ -513,20 +513,20 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         pontos satisfazem a igualdade
 
         <md>
-            <mrow>(x, 3x^2-x^2-10x)=(x, -x^2+2x) \amp </mrow>
+            <mrow>(x, 3x^3-x^2-10x)=(x, -x^2+2x) \amp </mrow>
         </md>
         que resulta em
         <md>
-            <mrow> 3x^2-x^2-10x \amp = -x^2+2x\amp </mrow>
-            <mrow>3x^2-12x\amp =0  </mrow>
+            <mrow> 3x^3-x^2-10x \amp = -x^2+2x\amp </mrow>
+            <mrow>3x^3-12x\amp =0  </mrow>
             <mrow>3x(x^2-4)\amp =0  </mrow>
             <mrow>3x(x-2)(x+2) \amp=0 </mrow>
         </md>.
     Resolvendo a última igualdade  obtemos <m>x=0</m>, <m>x=2</m> e <m>x=-2</m>. 
     Esboçando as curvas no intervalo que contenha <m>[-2,2]</m> (veja <xref ref="fig-ex5-f-sob-g"/>) 
     podemos notar que a região pode ser dividida em duas: a primeira determinada pelo intervalo
-   <m>[-2,0]</m>, no qual <m>3x^2-x^2-10x\geq -x^2+2x</m> e a segunda pelo intervalo <m>[0,2]</m>, 
-    no qual <m>3x^2-x^2-10x\leq -x^2+2x</m>. Portanto, fazendo <m>f(x)=3x^2-x^2-10x</m> e 
+   <m>[-2,0]</m>, no qual <m>3x^3-x^2-10x\geq -x^2+2x</m> e a segunda pelo intervalo <m>[0,2]</m>, 
+    no qual <m>3x^3-x^2-10x\leq -x^2+2x</m>. Portanto, fazendo <m>f(x)=3x^3-x^2-10x</m> e 
     <m>g(x)=-x^2+2x</m>, temos
 
     <md>
@@ -534,7 +534,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         <mrow> \amp = \integrald{(3x^3-12x)}{-2}{0}{x}  + \integrald{(-3x^2+12x)}{0}{2}{x}</mrow>
         <mrow> \amp = \left.\left(\frac{3x^4}{4}-6x^2\right)\right|_{-2}^0 + \left.\left(-\frac{3x^4}{4}+ 6x^2\right)\right|_0^2 </mrow>
         <mrow> \amp = 12 + 12 =24 </mrow>
-    </md>
+    </md>.
 
 
 
