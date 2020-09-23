@@ -1023,7 +1023,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 
 <exercise>
     <p>
-    Encontre a área da regioa sombreada.
+    Encontre a área da região sombreada.
     <image xml:id="sageplot-exer-group-1" width="50%">
         <description></description>
     <sageplot>
@@ -1059,7 +1059,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 <exercisegroup>
 <introduction>
     <p>
-        Sobre áres entre curvas respondam o item a seguir.
+        Sobre área entre curvas respondam o item a seguir.
     </p>
 </introduction>
 <exercise>

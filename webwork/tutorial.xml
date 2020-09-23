@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
+
+
+
+       
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        <!-- \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg} -->
+        </macros>
+       
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="webwork-tutorial">
+        <title>WeBWorK: Funções Disponíveis</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Resumo das principais funções matemáticas diponíveis no sistema WeBWork.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Baseado no artigo link... </p>
+        </introduction>
+    <section>
+    <title>Funções e Símbolos</title>
+    
+         
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                         Apresentar a funções matemáticas aceitas em WeBWork.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       Apresentar a Simtaxe para inserir os comandos nas respostas da lição de casa.
+                    </p>
+                </li>
+                
+            </ol>
+            
+        </objectives>
+
+<subsection xml:id="subsec-">
+    <title>Símbolos Matemáticos disponíveis em WeBWork</title>
+
+    
+       <table xml:id="tabela0">
+        <title>Operações</title>
+            <tabular top="major" halign="left" >
+                <row bottom="minor" halign="center">
+                    <cell>Símbolo</cell>     <cell halign="left">Operação</cell>    <cell halign="left">Exemplo</cell>
+                </row>  
+                
+                <row> 
+                <cell><m>+</m></cell> <cell>Adição</cell> <cell> 2 + 1</cell>
+                </row>
+                <row>
+                    <cell>  <m>-</m> </cell> <cell>Subtração</cell> <cell>4 - 1</cell>
+                </row>
+                <row>
+                    <cell> <m>*</m> </cell> <cell>Multiplicação </cell> <cell>2*x  </cell>                    
+                </row>
+                <row>
+                    <cell><m>/</m> </cell> <cell>Divisão</cell> <cell>6/2</cell>
+                </row>
+                <row bottom="medium">
+                    <cell>^ ou **</cell> <cell>Exponenciação</cell> <cell>2^3 ou 2**3</cell>
+                </row>
+                              
+            </tabular>            
+        </table>
+
+<note>
+<ul>
+    <li>
+        <p>
+         <term> Multiplicação </term>  <m>*</m>: pode ser substituido por espaço ou simplemente ignorado. 
+            Exemplo: <m>2</m> <m>x</m>  ou <m>2x</m>  são válidos. Além disso, <m>2(3+4)</m> é permitido.
+
+        </p>
+    </li>
+    <li>
+        <p>
+           <term> Parenteses <m>()</m></term>:  podem ser substituidos por colchetes <m>[]</m>, e chaves <m>{}</m> combinar expressões.
+            Exemplo: <m> (1+2)/[2(3+4)] </m>.
+        </p>
+    </li>
+    <li>
+        <p>
+           <term> Atenção</term>: <m>1/2x</m> é avaliada da esquerda para direita. Isso significa <m>\frac{1}{2}x</m>
+            o que pode não ser o que você quis dizer.
+        </p>
+    </li>
+</ul>
+</note>
+</subsection>
+
+<subsection xml:id="subsec-sintaxe">
+    <title>Sintaxe para escrever expressões</title>
+
+<ul>
+    <li>
+        <p>
+            Use o <term> "Botão de Pré-Visualização" </term> para ver exatamente como sua entrada aparece.
+            Exemplo: Toara notar a diferença entre <m> 1+2/3*4 </m> e <m>(1+2)/(3*4)</m> pressione
+            o  <term> "Botão de Pré-Visualização"</term>.
+
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Às vezes, usar o símbolo <m>*</m> para indicar a multiplicação torna as coisas mais fáceis de ler.
+            Por exemplo <m> (1+2)*(3+4)</m> e <m>(1+2)(3+4)</m> são válidas. Assim como <m>3*4</m> e <m>3</m> <m>4</m> (3 espaço 4 e não 34)
+            mas usando um <m>*</m> torna as coisas mais claras.
+        </p>
+
+    </li>
+    <li>
+        <p>
+            Não entre com <m>2/4+5</m> (que é 5.5) quando realmente quer <m>2/(4+5)</m> (que é <m>2/9</m>).
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Não entre com <m>2/3*4</m> (que é <m>8/3</m>) quando realmente quer <m>2/(3*4)</m> (que é <m>2/12</m>).
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Inserir  grandes razões com colchetes, por exemplo <m>[1+2+3+4]/[5+6+7+8]</m>,
+            é uma boa prática. 
+            
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Fique atento ao inserir funções. É sempre uma boa prática usar parênteses quando inserir funções nas respostas.
+            Escreva <m>\sin{(t)}</m> (<term> sim, WeBWorK não aceita  <m>\mathrm{sen}(t)</m></term>) ao invés de <m>\mathrm{sint}</m>  ou 
+            <m>\sin{t}</m> mesmo que o WeBWorK seja <term>geralmente</term>  suficientemente esperto para entender <m>\sin{t}</m> ou 
+            mesmo <m>\mathrm{sint}</m>. Por exemplo, <m>\sin{2t}</m> é interpretado como <m>\mathrm{sin}(2)t</m>, isto é, <m> (\mathrm{sin}(2))*t </m>,
+            por isso tenha muita atenção.      
+
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Você pode inserir sin^2(t) alternitivamente, embora  matematicamente falando falando seja uma abreviação para (sin(t))^2 (o quadrado de seno de <m>t</m>)
+            Você pode inseri-lo sin(t)^2 ou mesmo sint^2, mas não tente essas formas a menos <term>realmente</term>
+            entedam a precedência das operações. Neste caso, a operação "sin" é sempre executada primeiro, usando a variável (t) como argumento. Emtão, só em seguida o resultado é elevado ao quadrado.
+            Recomendamos sempre usar o "Botão de Pré-Visualização" para ver uma versão da expressão que você inseriu e verificar se o que você escreveu é o 
+            você estava pensando.
+        </p>
+        </li>
+
+     <li>
+        <p>
+            Por exemplo, 2 + 3sin^2(4x) funcionará e equivale a 2 + 3(sin(4x))^2 ou 2 + 3sin(4x)^2. Por que a última expressão funciona? Porque as contas entre parenteses são sempre realizadas 
+            primeiro [isto é, (4x)], depois todas funçõe, como  sin, são calculadas [aqui sin(4x)], em seguida todos os expoêntes são avaliados [sin(4x)^2], depois as multiplicações e divisões são realizadas na ordem 
+            da esquerda para a direita [dando 3sin(4x)^2] e, por fim, todas as adições e subtrações são realizadas [resultando em 2 + 3sin (4x) ^ 2].
+        </p>
+    </li>
+
+
+    <li>
+        <p>
+            -5^2 é positivo ou negativo? É <term>negativo</term>. Isso ocorre porque a operação de exponenciação é feita antes que o sinal negativo seja aplicado.
+            Use (-5)^2 se quiser elevar -5 ao quadrado.
+
+        </p>
+    </li>
+
+    <li>
+        <p>
+          <term>  Prefira sempre usar os parênteses!!!.</term>
+        </p>
+    </li>
+
+ <li>
+        <p>
+            Use o <term>"Botão Pré-Visualizar"</term> para ver exatamente como sua entrada se parece. Por exemplo, para saber a diferença entre
+            1 + 2/3*4 e [1+4]/[3*4], pressione o botão de <term>"Botão Pré-Visualizar"</term>.
+        </p>
+    </li>
+</ul>
+  <assemblage xml:id="assemblage-">
+      <title>Regra para precedência de operações</title>
+      <p>
+         Além das citadas acima, são: 
+
+<ul>
+    <li>
+        <p>
+            Adições e subtrações são realizadas da esquerda para a direita:            
+                     1 - 2 + 3 = (1-2) + 3 = 2.
+        </p>
+    </li>
+    <li>
+        <p>
+            Multiplicações e divisões são executadas da esquerda para a direita: 2/3*4 = (2/3)*4=8/3.
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Os expoentes são levados da direita para a esquerda: 2 ^ 3 ^ 4 = 2 ^ (3 ^ 4) = 2 ^ 81 = um grande número.
+        </p>
+    </li>
+   
+</ul>
+
+      </p>
+
+      
+  </assemblage> 
+</subsection>
+<subsection xml:id="subsec-constantes">
+    <title>Constantes disponíveis em WeBWorK</title>
+<ul>
+    <li>
+        <p>
+            pi representa 3,14159265358979, por exemplo, cos (pi) é -1
+        </p>
+    </li>
+    <li>
+        <p>
+            e representa 2.71828182845905, por exemplo, ln(e*2) is 1 + ln(2)
+        </p>
+    </li>
+</ul>
+    
+</subsection>
+
+<subsection xml:id="subsec-notacao-cientifica">
+    <title>Notação-científica</title>
+
+    <ul>
+        <li>
+            <p>
+                2.1E2 é o mesmo que 210
+            </p>
+        </li>
+
+        <li>
+            <p>
+                2.1E-2 é igual a 0.021
+            </p>
+        </li>
+    </ul>
+    
+</subsection>
+
+<subsection xml:id="subsec-funcoes">
+    <title>Funções matemáticas disponíveis em WeBWorK</title>
+    <p>
+     
+    A menos que especificado de outra forma, todas as funções 
+    listadas abaixo são ativadas por padrão No entanto, às vezes,
+    uma ou mais dessas funções são desabilitadas para um problema específico do WeBWorK 
+    porque o professor deseja que você calcule a resposta por algum meio diferente do que 
+    apenas usar uma função predefinda.
+    </p>
+
+
+     <table xml:id="tabela1">
+        <title>Radiciação e valor absoluto</title>
+            <tabular top="major" halign="left" >
+                <row bottom="minor" halign="left">
+                    <cell>Função</cell>     <cell halign="left">Operação</cell>  
+                </row>  
+                               
+                <row>
+                    <cell> sqrt(x) ou x^(1/2)</cell> <cell> Raiz quadrada de x.</cell>                  
+                </row>
+                
+                <row bottom="medium">
+                    <cell> abs(x) ou |x| </cell>   <cell> O valor absoluto de x.</cell>
+                </row>
+               
+                              
+            </tabular>            
+        </table>
+
+    <table xml:id="tabela-2">
+        <title>Funções Exponenciais e logarítmicas </title>
+            <tabular top="major" halign="left" >
+                <row bottom="minor" halign="left">
+                    <cell>Função</cell>     <cell halign="left">Operação</cell>  
+                </row>  
+                               
+                <row>
+                    <cell> exp(x) ou e^x</cell> <cell> exponencial de  x na base e.</cell>                  
+                </row>
+                
+                <row >
+                    <cell>log(x) ou ln(x) </cell>   <cell>Logaritimo natural <fn>Seu professor pode ter redefinido isso como log para a base 10</fn> de x. <term> Sim, ambos!</term></cell>
+               </row>
+               <row bottom="medium">
+                   <cell>logten(x)</cell> <cell>O log de x na base 10</cell>
+               </row>         
+            </tabular>            
+        </table>
+
+
+
+
+<table xml:id="tabela5">
+        <title>Funções Trigonométricas </title>
+            <tabular top="major" halign="left" >
+                <row bottom="minor" halign="left">
+                    <cell>Função</cell>     <cell halign="left">Operação</cell>  
+                </row>  
+                               
+                <row>
+                    <cell>sin(x) </cell> <cell> Seno de x</cell>                  
+                </row>
+                <row>
+                    <cell>cos(x)</cell> <cell>Cosseno de x</cell>
+                </row>
+                <row>
+                    <cell>tan(x)</cell> <cell>Tangente de x</cell>
+                </row>
+                <row>
+                    <cell>cot(x)</cell> <cell>Cotangente de x</cell>
+                </row>
+                <row>
+                    <cell>csc(x)</cell> <cell> cossecante de x</cell>
+                </row>
+
+                <row>
+                    <cell>arcsin(x), asin(x), or sin^-1(x)</cell> <cell>Arco Seno</cell>
+                </row>
+
+                <row>
+                    <cell>arccos(x), acos(x), or cos^-1(x)</cell> <cell>Arco cosseno</cell>
+                </row>
+                <row>
+                    <cell>arctan(x), atan(x), or tan^-1(x)</cell> <cell>Arco Tangente</cell>
+                </row>
+                <row>
+                    <cell>arccot(x), acot(x), or cot^-1(x)</cell> <cell>Arco Cotangente</cell>
+                </row>
+                <row>
+                    <cell>arcsec(x), asec(x), or sec^-1(x)</cell> <cell>Arco Secante</cell>
+                </row>
+               
+               <row  bottom="medium">
+                   <cell>arccsc(x), acsc(x), or csc^-1(x)</cell> <cell>Arco Cossecante</cell>
+               </row>         
+            </tabular>            
+        </table>
+
+<table xml:id="tabela4">
+        <title>Funções Trigonométricas  Hiperbólicas</title>
+            <tabular top="major" halign="left" >
+                <row bottom="minor" halign="center">
+                    <cell>Função</cell>     <cell halign="left">Operação</cell>  
+                </row>  
+                               
+                <row>
+                    <cell> sinh(x)</cell> <cell> Seno Hiperbólico de x</cell>                  
+                </row>
+                
+                <row>
+                    <cell>cosh(x) </cell>   <cell>Cosseno Hiperbólico de x </cell>
+               </row>
+               <row>
+                   <cell>tanh(x)</cell> <cell>Tangente Hiperbólica</cell>
+               </row>
+               <row>
+                   <cell>sech(x)</cell> <cell>Secante Hiperbólica</cell>
+               </row>
+               <row>
+                   <cell>csch(x)</cell> <cell>Cossecante Hiperbólica</cell>
+               </row>
+               <row>
+                   <cell>coth(x)</cell> <cell>Cotangente Hiperbólico</cell>
+               </row>
+               <row>
+                   <cell>arcsinh(x), asinh(x), or sinh^-1(x)</cell> <cell>Arco Seno Hiperbólico</cell>
+               </row>
+               <row>
+                   <cell>arccosh(x), acosh(x), or cosh^-1(x)</cell> <cell>Arco Cosseno Hiperbólico</cell>
+               </row>
+               <row>
+                   <cell>arctanh(x), atanh(x), or tanh^-1(x)</cell> <cell>Arco Tangente Hiperbólico </cell>
+               </row>
+               <row>
+                   <cell></cell>
+               </row>
+               <row  >
+                   <cell>arcsech(x), asech(x), or sech^-1(x)</cell> <cell> Arco Secante Hiperbólico </cell>
+               </row>    
+               <row>
+                   <cell>arccsch(x), acsch(x), or csch^-1(x)</cell> <cell>Arco Cossecante Hiperbólico</cell>
+               </row> 
+               <row bottom="medium">
+                   <cell>arccoth(x), acoth(x), or coth^-1(x)</cell> <cell>Arco Cotangente Hiperbólico</cell>
+               </row>    
+            </tabular>            
+        </table>
+
+
+</subsection>
+
+<subsection xml:id="subsec-outras-funcoes">
+    <title>Outras Funcões</title>
+
+    <ul>
+        <li>
+            <p>
+                n! ou fact(n) -- Fatorial de n (para valores inteiros não negativos).
+            </p>
+        </li>
+        <li>
+            <p>
+                sgn(x) -- Função sinal, isto é:
+
+                <me>
+                     \mathrm{sgn}(x)=\begin{cases}
+                                     1 \, \text{se} \,x \gt 0,\\
+                                     0 \, \text{se} \, x=0,\\
+                                     -1 \, \text{se} \, x.\lt 0
+                                     \end{cases}
+                   
+                </me>
+            </p>
+        </li>
+    </ul>
+    
+</subsection>
+</section>
+<!-- <references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references> -->
+
+</article>
+
+</pretext>
+
