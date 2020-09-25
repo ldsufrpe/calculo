@@ -191,7 +191,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <li>
         <p>
             Use o <term> "Botão de Pré-Visualização" </term> para ver exatamente como sua entrada aparece.
-            Exemplo: Toara notar a diferença entre <m> 1+2/3*4 </m> e <m>(1+2)/(3*4)</m> pressione
+            Exemplo: Para notar a diferença entre <m> 1+2/3*4 </m> e <m>(1+2)/(3*4)</m> pressione
             o  <term> "Botão de Pré-Visualização"</term>.
 
         </p>
@@ -241,14 +241,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             Você pode inserir sin^2(t) alternativamente, embora  matematicamente falando falando seja uma abreviação para (sin(t))^2 (o quadrado de seno de <m>t</m>)
             Você pode inseri-lo sin(t)^2 ou mesmo sint^2, mas não tente essas formas a menos <term>realmente</term>
             entedam a precedência das operações. Neste caso, a operação "sin" é sempre executada primeiro, usando a variável (t) como argumento. Então, só em seguida o resultado é elevado ao quadrado.
-            Recomendamos sempre usar o "Botão de Pré-Visualização" para ver uma versão da expressão que você inseriu e verificar se o que você escreveu é o 
+            Recomendamos sempre usar o <term>"Botão de Pré-Visualização"</term> para ver uma versão da expressão que você inseriu e verificar se o que você escreveu é o 
             você estava pensando.
         </p>
         </li>
 
      <li>
         <p>
-            Por exemplo, 2 + 3sin^2(4x) funcionará e equivale a 2 + 3(sin(4x))^2 ou 2 + 3sin(4x)^2. Por que a última expressão funciona? Porque as contas entre parenteses são sempre realizadas 
+            Por exemplo, 2 + 3sin^2(4x) funcionará e equivale a 2 + 3(sin(4x))^2 ou 2 + 3sin(4x)^2. Por que a última expressão funciona? Porque as contas entre parênteses são sempre realizadas 
             primeiro [isto é, (4x)], depois todas funçõe, como  sin, são calculadas [aqui sin(4x)], em seguida todos os expoêntes são avaliados [sin(4x)^2], depois as multiplicações e divisões são realizadas na ordem 
             da esquerda para a direita [dando 3sin(4x)^2] e, por fim, todas as adições e subtrações são realizadas [resultando em 2 + 3sin (4x) ^ 2].
         </p>
@@ -348,7 +348,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <p>
      
     A menos que especificado de outra forma, todas as funções 
-    listadas abaixo são ativadas por padrão No entanto, às vezes,
+    listadas abaixo são ativadas por padrão. No entanto, às vezes,
     uma ou mais dessas funções são desabilitadas para um problema específico do WeBWorK 
     porque o professor deseja que você calcule a resposta por algum meio diferente do que 
     apenas usar uma função predefinda.
