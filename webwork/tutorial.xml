@@ -238,9 +238,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <li>
         <p>
-            Você pode inserir sin^2(t) alternitivamente, embora  matematicamente falando falando seja uma abreviação para (sin(t))^2 (o quadrado de seno de <m>t</m>)
+            Você pode inserir sin^2(t) alternativamente, embora  matematicamente falando falando seja uma abreviação para (sin(t))^2 (o quadrado de seno de <m>t</m>)
             Você pode inseri-lo sin(t)^2 ou mesmo sint^2, mas não tente essas formas a menos <term>realmente</term>
-            entedam a precedência das operações. Neste caso, a operação "sin" é sempre executada primeiro, usando a variável (t) como argumento. Emtão, só em seguida o resultado é elevado ao quadrado.
+            entedam a precedência das operações. Neste caso, a operação "sin" é sempre executada primeiro, usando a variável (t) como argumento. Então, só em seguida o resultado é elevado ao quadrado.
             Recomendamos sempre usar o "Botão de Pré-Visualização" para ver uma versão da expressão que você inseriu e verificar se o que você escreveu é o 
             você estava pensando.
         </p>
