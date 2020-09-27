@@ -131,8 +131,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  <title>Integração por Partes</title>
     <introduction>
         <p>
-          A técnica de  <em>integração por partes</em> baseia-se na Regra do Produto da derivação. É geralmente aplicada em integrandos quem
-        quem envolvam produtos de de funções do tipo potência, exponenciais, logarítimicas e trigonométricas. Por exemplo,
+          A técnica de  <em>integração por partes</em> baseia-se na Regra do Produto da derivação. É geralmente aplicada em integrandos 
+        que envolvam produtos de funções do tipo potência, exponenciais, logarítimicas e trigonométricas. Por exemplo,
         as integrais dos tipos
         <md>
             <mrow>\integral{ x^ne^x}{x}, \qquad \integral{x^n\ln{x}}{x}\quad \text{e}\qquad  \integral{e^x\sin{x}}{x}   </mrow>
@@ -145,7 +145,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <mrow>\frac{\dd}{\dd x}\left[f(x)g(x)\right] = f(x)g'(x) + f'(x)g(x) \amp \qquad \ct{Regra do Produto} </mrow>           
         </md>.
 
-        A integral de ambos os lados da imguadade acima produz
+        A integral de ambos os lados da igualdade acima produz
 
         <md>
             <mrow>f(x)g(x) + C \amp = \integral{f(x)g'(x)}{x} + \integral{f(x)g(x)}{x}</mrow>
