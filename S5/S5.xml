@@ -687,7 +687,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         
     </introduction>
 
-    <technology>
+    <!-- <technology>
     <title>Faça você mesmo</title>
     <p>Para visualizar o sólido obtido pela rotação de uma curva <m>y=f(x)</m> em relação aos eixos <m>x</m>,  ou <m>z</m> 
     se dirija  até a calculadora gráfica abaixo e siga os seguntes passos:
@@ -738,7 +738,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
                 </figure>
     
     
-    </technology>
+    </technology> -->
    
     <example>
         <statement>
