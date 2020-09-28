@@ -686,6 +686,59 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 
         
     </introduction>
+
+    <technology>
+    <title>Faça você mesmo</title>
+    <p>Para visualizar o sólido obtido pela rotação de uma curva <m>y=f(x)</m> em relação aos eixos <m>x</m>,  ou <m>z</m> 
+    se dirija  até a calculadora gráfica abaixo e siga os seguntes passos:
+     <ol>
+         <li>
+             <p>
+                 Insira a curva <m>y=f(x)</m>, ela será uma curva no plano  <m>xy</m>
+             </p>
+         </li>
+         
+         <li>
+             <p>
+                 Ajuste o intevalo <m> [a,b]</m>.
+             </p>
+         </li>
+         <li>
+             <p>
+                 Escolha o eixo de revolução.
+             </p>
+         </li>
+
+         <li>
+             <p>
+                 Controle a posição e o zoom (<em>scroll</em>) com o mause ou  toques na tela.
+             </p>
+         </li>
+     </ol>
+    
+    </p>
+        <figure xml:id="figure-interactive-revolucao">
+                    <caption>Curvas integrais e campos de direções</caption>
+
+                    <interactive xml:id="interactive-revolucao" platform="sage" width="100%"  aspect="1:1.2">
+                    <slate surface="sage">                    
+                    @interact(layout=dict(top=[["f"],["x_range"],["eixo"]], bottom=[["auto"]]))
+                    def _(
+                            f=input_box(x^2 , width=20,  
+                            label= "y = "), 
+                            x_range=range_slider(-10,10,1,(0,1), label='[a, b]'),
+                            eixo = selector(["x","z"], default="z", label="Eixo de Revolução ", buttons=True)):
+                            
+                            p = revolution_plot3d(f, (x,x_range[0],x_range[1]), show_curve=True, opacity=0.7, parallel_axis=eixo)       
+                            
+                            p.show(aspect_ratio=(1,1,1), frame=False, axes=True, figsize=1)
+
+                    </slate>
+                    </interactive>
+                </figure>
+    
+    
+    </technology>
    
     <example>
         <statement>
