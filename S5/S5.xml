@@ -687,6 +687,16 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         
     </introduction>
 
+    <!-- <aside>
+    <title> What is my OS build?</title>
+    <p>
+    An easy way to find your OS Build:
+    Hold down the Windows key and R key simultaneously.
+    Enter <c>winver.exe</c> in the resulting new window.
+    The next window that opens will have the OS Build in small type near the top.
+        </p>
+    </aside> -->
+
     <!-- <technology>
     <title>Faça você mesmo</title>
     <p>Para visualizar o sólido obtido pela rotação de uma curva <m>y=f(x)</m> em relação aos eixos <m>x</m>,  ou <m>z</m> 

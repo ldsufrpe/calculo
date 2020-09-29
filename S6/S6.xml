@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
+
+
+
+       
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+       
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-riemann">
+        <title>Cálculo Integral: S6</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária </p>
+        </introduction>
+    <section>
+    <title>Soma de Riemann</title>
+    
+         
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                         xxxxxxxx.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        xxxxxxxxxxxxx.
+                    </p>
+                </li>
+                
+            </ol>
+            
+        </objectives>
+
+<subsection xml:id="subsec-notacao-sigma">
+    <title>Somatório</title>
+<introduction>
+    <p>
+        
+
+    A letra grega <m>\Sigma</m> (sigma) é utilizada para expressar somatórios de grande quantidade de números
+    de maneira simplificada e compacta. Por exemplo, a soma
+
+    <me>
+        1 + 2 + 3 + \cdots + 100
+    </me>
+    
+pode ser expressada como 
+ 
+ <me>
+     \sum_{k=1}^{100}k = 1 + 2 + 3 + \cdots + 100,
+ </me>
+ Neste caso, dizemos que o somatório dos 100 primeiros naturais está expresso na <term> notação sigma</term>
+ <m>\sum_{k=1}^{100}k </m>, a qual se lê "somatório de <m>k</m>, com <m>k</m> variando de 1 a 5". 
+
+Mais geralmente, considere <m>f</m> uma função definida um intervalo <m>[a,b]</m> e seja 
+<m>x_1, x_2 ,\ldots x_n </m> números reais, todos em <m>[a,b]</m>. Então a soma
+
+
+<me>
+      f(x_1) + f(x_2) + \cdots + f(x_n)
+</me>
+ 
+ pode ser  expressa na notação sigma da forma
+ 
+<me>
+    \sum_{k=1}^{n}f(x_k)
+</me>
+
+<aside>
+ <title>Notação Sigma</title>
+ <ul>
+     <li>
+         <p>
+            O número  <m>n</m> significa o valor final para <m>k</m>
+         </p>
+     </li>
+     <li>
+         <p>
+             O valor de <m>k</m> não necessariamente é iniciado por 1.
+         </p>
+     </li>
+ </ul>
+</aside>
+
+</p>
+</introduction>
+
+<example>
+<statement>
+    <p>
+        Escrever
+    </p>
+</statement>
+    <statement>
+        <p>         
+        <task>
+    <statement>
+        <p>
+           <m> 4 + 8 + 16 + 32 + \cdots + 256</m>
+        </p>
+    </statement>
+        
+     <solution>
+        <p>
+            pensar
+        </p>
+    </solution>
+    </task>
+
+    <task>
+    <statement>
+        <p>
+          <m> 2 + 4 + 6 + 8 + 10</m>
+        </p>
+    </statement>
+        
+     <solution>
+        <p>
+            pensar
+        </p>
+    </solution>
+    </task>
+    <task>
+       <statement>
+           <p>
+          <m> 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6}</m>
+        </p>
+       </statement>
+         <solution>
+        <p>
+            pensar
+        </p>
+    </solution>
+    </task>
+   </p>
+    </statement>
+   
+</example>
+
+
+<example>
+    <statement>
+        <p>
+            escrever
+        </p>
+    </statement>
+
+    <statement>
+        <p>
+            <task>
+                <statement>
+                    <p>
+                       <m> \displaystyle\sum_{k=0}^5(-1)^k(2k+1)</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        depois
+                    </p>
+                </solution>
+            </task>
+            
+            <task>
+                <statement>
+                    <p>
+                       <m> \displaystyle\sum_{k=1}^6\frac{1}{2^k}</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        depois
+                    </p>
+                </solution>
+            </task>
+            <task>
+                
+                    <statement>
+                        <p>
+                           <m> \displaystyle\sum_{k=1}^3 = k\sin{\left(\frac{k\pi}{5}\right)}</m>
+                        </p>
+                    </statement>
+                
+                <solution>
+                    <p>
+                        depois
+                    </p>
+                </solution>
+            </task>
+        </p>
+    </statement>   
+</example>
+
+
+
+<subsubsection xml:id="subsubsec-sugestao-video-somatorio">
+    <title>Sugestão de vídeo</title>
+<ul>
+    <li>
+        <p>
+          Problema Resolvido:  <url href="https://youtu.be/kCbfPGFQlOY"> Alguns somatórios comuns.</url>
+        </p>
+    </li>
+</ul>    
+</subsubsection>
+</subsection>
+<subsection xml:id="subsec-soma-riemann">
+    <title>Soma de Riemann</title>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <interactive xml:id="interactive-numerical-integral" platform="sage" width="100%" aspect="1:2" >
+<slate surface="sage">                    
+<![CDATA[ 
+var('x')
+@interact(layout=dict(top=[["f"],["interval"],["number_of_subdivisions"],["endpoint_rule"]]))
+def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
+    interval=range_slider(0, 10, 1, default=(0, 4), label="[a,b]"),
+    number_of_subdivisions = slider(1, 20, 1, default=4, label="Número de retângulos"),
+    endpoint_rule = selector(['Ponto Médio', 'Esquerda', 'Direita'], nrows=1, label="Regra", buttons=True)):
+
+    a, b = map(QQ, interval)
+    t = var('t')
+    func = fast_callable(f(x=t), RDF, vars=[t])
+    dx = ZZ(b-a)/ZZ(number_of_subdivisions)
+   
+    xs = []
+    ys = []
+    for q in range(number_of_subdivisions):
+        if endpoint_rule == 'Esquerda':
+            xs.append(q*dx + a)
+        elif endpoint_rule == 'Ponto Médio':
+            xs.append(q*dx + a + dx/2)
+        elif endpoint_rule == 'Direita':
+            xs.append(q*dx + a + dx)
+        elif endpoint_rule == 'Upper':
+            x = find_local_maximum(func, q*dx + a, q*dx + dx + a)[1]
+            xs.append(x)
+        elif endpoint_rule == 'Lower':
+            x = find_local_minimum(func, q*dx + a, q*dx + dx + a)[1]
+            xs.append(x)
+    ys = [ func(x) for x in xs ]
+         
+    rects = Graphics()
+    for q in range(number_of_subdivisions):
+        xm = q*dx + dx/2 + a
+        x = xs[q]
+        y = ys[q]
+        rects += line([[xm-dx/2,0],[xm-dx/2,y],[xm+dx/2,y],[xm+dx/2,0]], rgbcolor = (1,0,0))
+        rects += point((x, y), rgbcolor = (1,0,0))
+    min_y = min(0, find_local_minimum(func,a,b)[0])
+    max_y = max(0, find_local_maximum(func,a,b)[0])
+
+    pretty_print(html('<h3>Soma de Riemann {} rule</h3>'.format(endpoint_rule)))
+    show(plot(func,a,b) + rects, xmin = a, xmax = b, ymin = min_y, ymax = max_y, figsize=[3.5,3.5])
+    
+    def cap(x):
+        # print only a few digits of precision
+        if x < 1e-4:
+            return 0
+        return QQ(x)
+    sum_html = "%s \\cdot \\left[ %s \\right]" % (dx, ' + '.join([ "f(%s)" % cap(i) for i in xs ]))
+    num_html = "%s \\cdot \\left[ %s \\right]" % (dx, ' + '.join([ str(cap(i)) for i in ys ]))
+    
+    numerical_answer = integral_numerical(func,a,b,max_points = 200)[0]
+    estimated_answer = dx * sum([ ys[q] for q in range(number_of_subdivisions)])
+
+    pretty_print(html(r'''
+    <div class="math"> 
+    \begin{align*} 
+    \sum_{i=1}^{%s} {f(x_i) \, \Delta x} & = %s \\\ 
+    & = %s \\\ 
+    & = %s . \end{align*} </div>''' 
+                      % (number_of_subdivisions, sum_html, num_html, estimated_answer)))
+]]>    
+
+                    </slate>
+                    </interactive> -->
+
+<subsubsection xml:id="subsubsec-sugestao-videos-soma-riemann">
+    <title>Sugestão de vídeos</title>
+<ul>
+    <li>
+        <p>
+          Problema Resolvido:  <url href="https://youtu.be/3ZhUdleD1lQ"> Somas de Riemann em notação de somatório.</url>
+        </p>
+    </li>
+</ul>        
+</subsubsection>
+</subsection>
+
+<subsection xml:id="subsec-Integral-soma-riemann">
+    <title>Integral definida como limite de uma soma de Riemann</title>
+
+<subsubsection xml:id="subsubsec-sugestao-videos-integral-defi-riemann">
+    <title>Sugestão de vídeos</title>
+<ul>
+    <li>
+        <p>
+          Problema Resolvido:  <url href="https://youtu.be/KvLsQLQqDsg"> Integral definida como o limite de uma soma de Riemann
+.</url>
+        </p>
+    </li>
+</ul>        
+</subsubsection>
+
+<exercise>
+<introduction>
+    <p>
+        introdução
+    </p>
+</introduction>
+     <webwork source="Library/ma122DB/set12/s5_4_26.pg" />
+<conclusion>
+    <p>
+        texto
+    </p>
+</conclusion>
+ </exercise>
+
+ <exercise>
+<statement>
+    <p>
+        <webwork source="local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg"/>
+    </p>
+</statement>
+   
+ 
+</exercise>
+</subsection>
+
+<subsection xml:id="subsec-prova-TFC">
+    <title>Demonstração do Teorema Fundamental do Cálculo</title>
+ <introduction>
+     <p>
+         texto
+     </p>
+ </introduction>   
+
+
+
+
+</subsection>
+ <exercises xml:id="exercises-soma-rieamann">
+ <exercise>
+     <webwork source="Library/ma122DB/set12/s5_4_26.pg" />
+ </exercise>
+
+
+
+ </exercises>
+
+
+</section>
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+</article>
+
+</pretext>
+

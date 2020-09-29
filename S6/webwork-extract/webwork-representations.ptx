@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="Library/ma122DB/set12/s5_4_26.pg">
+      <statement>
+        <p><m>\displaystyle \int_0^{1} (5 e^x+2 \sin x)\, dx</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>9.51080453055895</m></p>
+      </answer>
+      <solution>
+        <p>SOLUTION</p>
+        <p><me>\begin{array}{rcl} \displaystyle \int_0^{1} (5 e^x+2 \sin x)\, dx \amp =\amp   
+        \displaystyle  5 e^x-2 \cos x  \Big]_0^{1}
+        \\ \amp =\amp  (5 e^{1} - 2 \cos 1) - (5 e^0 - 2 \cos0 ) 
+        \\ \amp =\amp  5 e^{1} - 2 \cos 1 - 3 
+        \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
+    <pg source="Library/ma122DB/set12/s5_4_26.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg">
+      <statement>
+        <p>Esboce a área da região entre <m>y =  x^2 +x - 2</m>
+        e o eixo <m>x</m> sobre o intervalo <m>[-6,4 ]</m>.</p>
+        <p>Encontre a área da região.</p>
+        <p>A área é <fillin name="AnSwEr0001" characters="25"/>.</p>
+      </statement>
+      <answer>
+        <p><m>72.3333333333333</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62/">http://54.39.15.62//webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg</server-url>
+    <pg source="local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg"/>
+  </webwork-reps>
+ </webwork-representations>
