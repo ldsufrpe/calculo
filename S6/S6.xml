@@ -427,7 +427,8 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
  <exercise>
 <statement>
     <p>
-        <webwork source="local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg"/>
+        <!-- <webwork source="local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg"/> -->
+    <webwork source="local/Library/UMN/calculusStewartCCC/s_5_5_16.pg" />
     </p>
 </statement>
    
