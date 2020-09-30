@@ -1503,10 +1503,10 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
      
      <technology xml:id="campos-curvas-sageinterativo">
      <title>Faça você mesmo</title>
-    <figure xml:id="figure-interactive-numerical-integral">
+    <figure xml:id="figure-interactive-campos">
                     <caption>Curvas integrais e campos de direções</caption>
 
-                    <interactive xml:id="interactive-numerical-integral" platform="sage" width="100%" aspect="1:1.2" >
+                    <interactive xml:id="interactive-campos" platform="sage" width="100%" aspect="1:1.2" >
                     <slate surface="sage">                    
             @interact
             def _(

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-29T13:38:04-03:00       *-->
+<!--*       on 2020-09-30T00:50:32-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -116,7 +116,7 @@ true);
 <a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Soma de Riemann</span></a><ul>
 <li><a href="section-1.html#subsec-notacao-sigma" data-scroll="subsec-notacao-sigma">Somatório</a></li>
 <li><a href="section-1.html#subsec-soma-riemann" data-scroll="subsec-soma-riemann">Soma de Riemann</a></li>
-<li><a href="section-1.html#subsec-Integral-soma-riemann" data-scroll="subsec-Integral-soma-riemann">Integral definida como limite de uma soma de Riemann</a></li>
+<li><a href="section-1.html#subsec-Integral-soma-riemann" data-scroll="subsec-Integral-soma-riemann">Integral definida como limite de uma Soma de Riemann</a></li>
 <li><a href="section-1.html#subsec-prova-TFC" data-scroll="subsec-prova-TFC">Demonstração do Teorema Fundamental do Cálculo</a></li>
 <li><a href="section-1.html#exercises-soma-rieamann" data-scroll="exercises-soma-rieamann">Exercícios</a></li>
 </ul>
@@ -202,43 +202,127 @@ f(x_1) + f(x_2) + \cdots + f(x_n)
 <ul class="disc"><li id="li-5"><p id="p-24">Problema Resolvido:  <a class="external" href="https://youtu.be/kCbfPGFQlOY" target="_blank">Alguns somatórios comuns.</a></p></li></ul></section></section><section class="subsection" id="subsec-soma-riemann"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Soma de Riemann</span>
 </h3>
-<section class="subsubsection" id="subsubsec-sugestao-videos-soma-riemann"><h4 class="heading hide-type">
+<p id="p-25">Uma <dfn class="terminology">partição</dfn> do intervalo \([a,b]\) é uma coleção de números reais</p>
+<div class="displaymath">
+\begin{equation*}
+x_0=a\lt x_1 \lt x_2 \lt\cdots\lt x_{k-1} \lt x_n=b
+\end{equation*}
+</div>
+<p data-braille="continuation">que dividem o intervalo \([a,b]\)  em \(n\) subintervalos de comprimentos</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta x_1=x_0-x_1, \, \Delta x_2=x_2-x_1, \, \Delta x_3-x_2, \, \ldots,\, \Delta x_n = x_n-x_{n-1}
+\end{equation*}
+</div>
+<p data-braille="continuation">Para simplificar é comum usar subintervalos de mesmo comprimentos, de modo que</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta x_k = \Delta x = \frac{b-a}{n}. 
+\end{equation*}
+</div>
+<p data-braille="continuation">Sejam \(x_1{\ast}, x_2^{\ast}, \ldots, x_n^{\ast} \) números arbitrários nesses subintervalos, de forma que \(x_k^{\ast}\) pertença ao k-ésimo subintervalo \([x_{k-1}, x_k]\text{.}\) Se \(f(x)\) é uma função definida em \([a,b]\text{,}\) então a soma</p>
+<div class="displaymath">
+\begin{align}
+\amp  \sum_{k=1}^{n}f(x_k^{\ast})\Delta x.\tag{1.1}
+\end{align}
+</div>
+<p data-braille="continuation">é denominada <dfn class="terminology">Soma de Riemann</dfn> de \(f\) sobre \([a,b]\) na partição \(\{x_0, x_1, \ldots, x_{n}\}\text{.}\)</p>
+<p id="p-26">Se \(f\)  for positiva, então a soma de Riemann pode ser interpretada como uma soma de áreas de retângulos cuja base vale \(\Delta x\) e sua altura é \(f(x_k^{\ast})\) (veja a Figura 1). Se \(f\) assumir valores positivos e negativos, como na Figura 3, então a soma de Riemann é a diferênca entre as áreas dos retângulos que estão acima do eixo \(x\) e as áreas dos retângulos que estão abaixo do eixo \(x\text{.}\)</p>
+<article class="example example-like" id="example-3"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Soma de Riemann à Esquerda.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-27"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/figure_area_esquerda.svg" style="width: 100%; height: auto;" alt="(for accessibility)"></div></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-28"></p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-4"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Soma de Riemann à Direita.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-29"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/figure_area_direita.svg" style="width: 100%; height: auto;" alt="(for accessibility)"></div></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><p id="p-30"></p></div></div>
+</div></article></div>
+<article class="assemblage assemblage-like" id="assemblage-RPM"><h6 class="heading"><span class="title">Regra do Ponto Médio.</span></h6>
+<p id="p-31"></p></article><article class="example example-like" id="example-5"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-32"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/figure_area_medio.svg" style="width: 100%; height: auto;" alt="(for accessibility)"></div></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><p id="p-33"></p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-6"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-34"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/figure_area_medio.svg" style="width: 100%; height: auto;" alt="(for accessibility)"></div></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><p id="p-35"></p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-7"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-36"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/figure_area_medio3.svg" style="width: 100%; height: auto;" alt="(for accessibility)"></div></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><p id="p-37"></p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-8"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-38"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/figure_area_medio2.svg" style="width: 100%; height: auto;" alt="(for accessibility)"></div></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-39"></p></div></div>
+</div></article></div>
+<article class="technology computation-like" id="technology-1"><h6 class="heading">
+<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo..</span>
+</h6>
+<figure class="figure figure-like" id="fig-soma-riemann"><iframe id="interactive-soma-riemann" width="600" height="780" src="interactive-soma-riemann-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><section class="subsubsection" id="subsubsec-sugestao-videos-soma-riemann"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">1.2.1</span> <span class="title">Sugestão de vídeos</span>
 </h4>
-<ul class="disc"><li id="li-6"><p id="p-25">Problema Resolvido:  <a class="external" href="https://youtu.be/3ZhUdleD1lQ" target="_blank">Somas de Riemann em notação de somatório.</a></p></li></ul></section></section><section class="subsection" id="subsec-Integral-soma-riemann"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Integral definida como limite de uma soma de Riemann</span>
+<section class="introduction" id="introduction-3"><p id="p-40">teste</p></section><ul class="disc"><li id="li-6"><p id="p-41">Problema Resolvido:  <a class="external" href="https://youtu.be/3ZhUdleD1lQ" target="_blank">Somas de Riemann em notação de somatório.</a></p></li></ul></section></section><section class="subsection" id="subsec-Integral-soma-riemann"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Integral definida como limite de uma Soma de Riemann</span>
 </h3>
+<article class="definition definition-like" id="def-lim-soma-riemann"><h6 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h6>
+<p id="p-42">Seja \(f\) uma função contínua definida em \([a,b]\text{.}\) A integral definida de \(f\) de \(a\) até \(b\) é</p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{f(x)}{a}{b}{x} = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k^{\ast})\Delta x,
+\end{equation*}
+</div>
+<p data-braille="continuation">na qual \(\{x_0, x_1, \ldots, x_{n}\}\) é uma partição regular de \([a,b]\) e \(x_k^{\ast} \in [x_{k-1}, x_k]\text{.}\)</p></article><article class="note remark-like" id="note-1"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h6>
+<p id="p-43">A continuidade de  \(f\) no intervalo \([a,b]\) garante que o limite da soma de Riemann, expresso na definição, exista e dê o mesmo valor para todas as possíveis escolhas dos número \(x_k^{\ast}\text{.}\) Funções que têm um número finito de descontínuidade em \([a,b]\) gozam dessa propriedade.  Em ambos os casos, dizemos que \(f\)  é integrável em \([a,b]\text{.}\)</p></article><p id="p-44">Já que para toda função integrável a escolha dos números \(x_k^{\ast}\) não altera o valor do limite da Soma de Riemann. O teorema a seguir simplificva a definição de integral definida.</p>
+<article class="theorem theorem-like" id="thm-soma-riemann-direita"><h6 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
+</h6>
+<p id="p-45">Se \(f\) for integrável  em \([a,b]\)    então</p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{f(x)}{a}{b}{x} = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k)\Delta x,
+\end{equation*}
+</div>
+<p data-braille="continuation">na qual \(\Delta x = \frac{b-a}{n} \)     e \(x_k = a+ k\Delta x\)  \(\ct{(Extremidade direita)}\text{.}\)</p></article><article class="example example-like" id="example-9"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-46">Usando o <a class="xref" data-knowl="./knowl/thm-soma-riemann-direita.html" title="Teorema 1.13">Teorema 1.13</a>  calcule</p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{(x^3-6x)}{0}{3}{x}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><p id="p-47"></p></div></div>
+</div></article></div>
 <section class="subsubsection" id="subsubsec-sugestao-videos-integral-defi-riemann"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">1.3.1</span> <span class="title">Sugestão de vídeos</span>
 </h4>
-<ul class="disc"><li id="li-7"><p id="p-26">Problema Resolvido:  <a class="external" href="https://youtu.be/KvLsQLQqDsg" target="_blank">Integral definida como o limite de uma soma de Riemann .</a></p></li></ul></section><article class="exercise exercise-like" id="exercise-1"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><div class="introduction" id="introduction-3"><p id="p-27">introdução</p></div>
-<iframe name="webwork-1" width="600" src="http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg" data-seed="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["http://54.39.15.62"]})</script><div class="conclusion" id="conclusion-1"><p id="p-32">texto</p></div></article></div>
-<article class="exercise exercise-like" id="exercise-2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-33"> <iframe name="webwork-2" width="600" src="http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartCCC/s_5_5_16.pg" data-seed="2"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["http://54.39.15.62"]})</script></p></article></div></section><section class="subsection" id="subsec-prova-TFC"><h3 class="heading hide-type">
+<ul class="disc"><li id="li-7"><p id="p-48">Problema Resolvido:  <a class="external" href="https://youtu.be/KvLsQLQqDsg" target="_blank">Integral definida como o limite de uma soma de Riemann .</a></p></li></ul></section></section><section class="subsection" id="subsec-prova-TFC"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Demonstração do Teorema Fundamental do Cálculo</span>
 </h3>
-<section class="introduction" id="introduction-4"><p id="p-37">texto</p></section></section><section class="exercises" id="exercises-soma-rieamann"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-4"><p id="p-49">texto</p></section></section><section class="exercises" id="exercises-soma-rieamann"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.5</span> <span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-38">\(\displaystyle \int_0^{2} (2 e^x+2 \sin x)\, dx\) =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-50">Calcule a soma:</p>
+<p id="p-51">\(\sum\limits_{k=50}^{300} k^3 =\)  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-39">\(15.6104058709556\)</p></div></div>
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-40">SOLUTION</p>
-<div class="displaymath" id="p-41">
-\begin{equation*}
-\begin{array}{rcl} \displaystyle \int_0^{2} (2 e^x+2 \sin x)\, dx \amp =\amp   
-\displaystyle  2 e^x-2 \cos x  \Big]_0^{2}
-\\ \amp =\amp  (2 e^{2} - 2 \cos 2) - (2 e^0 - 2 \cos0 ) 
-\\ \amp =\amp  2 e^{2} - 2 \cos 2 - 0 
-\end{array}
-\end{equation*}
-</div>
-</div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-52">\(2037021875\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<em class="alert">Solução:</em> Reescrevendo a soma como uma diferença de duas somas de potência, \(\sum\limits_{k=50}^{300} k^3 = \sum\limits_{k=1}^{300} k^3 - \sum\limits_{k=1}^{49} k^3\)\(\qquad = \left(\frac {300^4}{4} + \frac {300^3}{2}+ \frac {300^2}{4}\right) - \left(\frac {49^4}{4} + \frac {49^3}{2}+ \frac {49^2}{4}\right)\)\(\qquad = 2037021875\)</div></div>
 </div></article></section></section></div></main>
 </div>
 </body>

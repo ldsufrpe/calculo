@@ -301,29 +301,170 @@ Mais geralmente, considere <m>f</m> uma função definida um intervalo <m>[a,b]<
 </ul>    
 </subsubsection>
 </subsection>
+
+
 <subsection xml:id="subsec-soma-riemann">
     <title>Soma de Riemann</title>
 
+    <p>
+    Uma <term>partição</term> do intervalo <m>[a,b]</m> é uma coleção
+    de números reais 
+
+   <me>
+       x_0=a\lt x_1 \lt x_2 \lt\cdots\lt x_{k-1} \lt x_n=b
+   </me>
+   
+que dividem o intervalo <m>[a,b]</m>  em <m>n</m> subintervalos de comprimentos
+
+<me>
+    \Delta x_1=x_0-x_1, \, \Delta x_2=x_2-x_1, \, \Delta x_3-x_2, \, \ldots,\, \Delta x_n = x_n-x_{n-1}
+</me>
+Para simplificar é comum usar subintervalos de mesmo comprimentos, de modo que
+
+<me>
+    \Delta x_k = \Delta x = \frac{b-a}{n}. 
+    
+</me>
+Sejam <m>x_1{\ast}, x_2^{\ast}, \ldots, x_n^{\ast} </m> números arbitrários 
+    nesses subintervalos, de forma que <m>x_k^{\ast}</m> pertença ao k-ésimo subintervalo <m>[x_{k-1}, x_k]</m>. Se <m>f(x)</m>
+    é uma função definida em <m>[a,b]</m>, então a soma
+
+<mdn>
+   <mrow> \amp  \sum_{k=1}^{n}f(x_k^{\ast})\Delta x.</mrow>
+</mdn>
+
+é denominada <term>Soma de Riemann</term> de <m>f</m> sobre <m>[a,b]</m> na partição <m>\{x_0, x_1, \ldots, x_{n}\}</m>.
+
+</p>
+
+<p>
+Se <m>f</m>  for positiva, então a soma de Riemann pode ser interpretada como uma
+soma de áreas de retângulos cuja base vale <m>\Delta x</m> e sua altura é <m>f(x_k^{\ast})</m> (veja a Figura 1).
+
+Se <m>f</m> assumir valores positivos e negativos, como na Figura 3, então a soma de Riemann
+é a diferênca entre as áreas dos retângulos que estão acima do eixo <m>x</m> e as áreas dos retângulos 
+que estão abaixo do eixo <m>x</m>.
+
+</p>
+<example>
+<title>Soma de Riemann à Esquerda</title>
+    <statement>
+        <p>
+            <image source="images/figure_area_esquerda.svg" width="40%">
+                <description>(for accessibility)</description>
+            </image>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example>
+<title>Soma de Riemann à Direita</title>
+    <statement>
+        <p>
+            <image source="images/figure_area_direita.svg" width="40%">
+                <description>(for accessibility)</description>
+            </image>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<assemblage xml:id="assemblage-RPM">
+    <title> Regra do Ponto Médio</title>
+    <p>
+        
+    </p>
+</assemblage>
+<example>
+<title></title>
+    <statement>
+        <p>
+            <image source="images/figure_area_medio.svg" width="40%">
+                <description>(for accessibility)</description>
+            </image>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
 
 
 
+<example>
+<title></title>
+    <statement>
+        <p>
+            <image source="images/figure_area_medio.svg" width="40%">
+                <description>(for accessibility)</description>
+            </image>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
 
 
+<example>
+<title></title>
+    <statement>
+        <p>
+            <image source="images/figure_area_medio3.svg" width="40%">
+                <description>(for accessibility)</description>
+            </image>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
 
+<example>
+<title></title>
+    <statement>
+        <p>
+            <image source="images/figure_area_medio2.svg" width="40%">
+                <description>(for accessibility)</description>
+            </image>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
 
+<technology>
+<title>Faça você mesmo.</title>
 
+<figure xml:id="fig-soma-riemann">
+    <caption></caption>
 
-
-
-<!-- <interactive xml:id="interactive-numerical-integral" platform="sage" width="100%" aspect="1:2" >
+<interactive xml:id="interactive-soma-riemann" platform="sage" width="100%" aspect="1:1.3" >
 <slate surface="sage">                    
 <![CDATA[ 
 var('x')
 @interact(layout=dict(top=[["f"],["interval"],["number_of_subdivisions"],["endpoint_rule"]]))
-def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
-    interval=range_slider(0, 10, 1, default=(0, 4), label="[a,b]"),
-    number_of_subdivisions = slider(1, 20, 1, default=4, label="Número de retângulos"),
-    endpoint_rule = selector(['Ponto Médio', 'Esquerda', 'Direita'], nrows=1, label="Regra", buttons=True)):
+def midpoint(f = input_box(default = x^3-6*x, type = SR, width=20, label="f(x)="),
+    interval=range_slider(0, 10, 1, default=(0, 3), label="[a,b]"),
+    number_of_subdivisions = slider(1, 30, 1, default=4, label="Número de retângulos"),
+    endpoint_rule = selector(['Esquerda', 'Direita', 'Ponto Médio'], nrows=1, label="Regra", buttons=True)):
 
     a, b = map(QQ, interval)
     t = var('t')
@@ -346,19 +487,24 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
             x = find_local_minimum(func, q*dx + a, q*dx + dx + a)[1]
             xs.append(x)
     ys = [ func(x) for x in xs ]
-         
+    
+    xaxis = []
+    yaxis = [n(func(a), 2), n(func(b), 2)]         
     rects = Graphics()
     for q in range(number_of_subdivisions):
         xm = q*dx + dx/2 + a
         x = xs[q]
+        xaxis.append(QQ(x))
         y = ys[q]
         rects += line([[xm-dx/2,0],[xm-dx/2,y],[xm+dx/2,y],[xm+dx/2,0]], rgbcolor = (1,0,0))
         rects += point((x, y), rgbcolor = (1,0,0))
+        rects += plot(y, xm-dx/2, xm+dx/2, fill='axis', rgbcolor=(1,0,0), fillcolor="#cde0eb")
     min_y = min(0, find_local_minimum(func,a,b)[0])
     max_y = max(0, find_local_maximum(func,a,b)[0])
-
-    pretty_print(html('<h3>Soma de Riemann {} rule</h3>'.format(endpoint_rule)))
-    show(plot(func,a,b) + rects, xmin = a, xmax = b, ymin = min_y, ymax = max_y, figsize=[3.5,3.5])
+    axes_labels = ['$x$','$y$']
+    tick_formatter = [list(map(QQ, xaxis)), yaxis ]
+    pretty_print(html('<h3>Soma de Riemann {} </h3>'.format(endpoint_rule)))
+    show(plot(func,a,b) + rects, xmin = a, xmax = b, ymin = min_y, ymax = max_y, figsize=[3.5,3.5], axes_labels=axes_labels)
     
     def cap(x):
         # print only a few digits of precision
@@ -374,17 +520,24 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
     pretty_print(html(r'''
     <div class="math"> 
     \begin{align*} 
-    \sum_{i=1}^{%s} {f(x_i) \, \Delta x} & = %s \\\ 
-    & = %s \\\ 
-    & = %s . \end{align*} </div>''' 
-                      % (number_of_subdivisions, sum_html, num_html, estimated_answer)))
+    \sum_{i=1}^{%s} {f(x_i) \, \Delta x} & = %s \\\     
+   \end{align*} </div>''' 
+                      % (number_of_subdivisions,   estimated_answer)))
 ]]>    
 
-                    </slate>
-                    </interactive> -->
+</slate>
+</interactive>
+</figure>
+</technology>
+
 
 <subsubsection xml:id="subsubsec-sugestao-videos-soma-riemann">
     <title>Sugestão de vídeos</title>
+    <introduction>
+        <p>
+            teste
+        </p>
+    </introduction>
 <ul>
     <li>
         <p>
@@ -396,7 +549,64 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
 </subsection>
 
 <subsection xml:id="subsec-Integral-soma-riemann">
-    <title>Integral definida como limite de uma soma de Riemann</title>
+    <title>Integral definida como limite de uma Soma de Riemann</title>
+
+    <definition xml:id="def-lim-soma-riemann">
+    <statement>
+        <p>
+          Seja <m>f</m> uma função contínua definida em <m>[a,b]</m>. A integral definida de <m>f</m> de <m>a</m> até <m>b</m>
+          é 
+
+          <me>
+              \integrald{f(x)}{a}{b}{x} = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k^{\ast})\Delta x,
+          </me>
+          na qual <m>\{x_0, x_1, \ldots, x_{n}\}</m> é uma partição regular de <m>[a,b]</m> e <m>x_k^{\ast} \in [x_{k-1}, x_k]</m>.
+        </p>
+    </statement>
+    </definition>
+
+<note>
+<statement>
+    <p>
+   A continuidade de  <m>f</m> no intervalo <m>[a,b]</m> garante que o limite da soma de Riemann, expresso na definição,
+ exista e dê o mesmo valor para todas as possíveis escolhas dos número <m>x_k^{\ast}</m>. Funções que têm um número finito de descontínuidade em 
+ <m>[a,b]</m> gozam dessa propriedade.  Em ambos os casos, dizemos que <m>f</m>  é integrável em <m>[a,b]</m>.
+    </p>
+</statement>
+</note>
+
+<p>
+Já que para toda função integrável a escolha dos números <m>x_k^{\ast}</m> não altera o valor do limite da Soma de Riemann. O teorema
+a seguir simplificva a definição de integral definida.
+</p>
+
+
+<theorem xml:id="thm-soma-riemann-direita">
+<statement>
+    <p>
+        Se <m>f</m> for integrável  em <m>[a,b]</m>    então 
+
+        <me>
+             \integrald{f(x)}{a}{b}{x} = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k)\Delta x,
+        </me>
+    na qual <m>\Delta x = \frac{b-a}{n} </m>     e <m> x_k = a+ k\Delta x</m>  <m> \ct{(Extremidade direita)}</m>.
+    </p>
+</statement>
+</theorem>
+
+<example>
+    <statement>
+        <p>
+         Usando o <xref ref="thm-soma-riemann-direita"/>  calcule <me>\integrald{(x^3-6x)}{0}{3}{x}</me>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
 
 <subsubsection xml:id="subsubsec-sugestao-videos-integral-defi-riemann">
     <title>Sugestão de vídeos</title>
@@ -410,30 +620,8 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
 </ul>        
 </subsubsection>
 
-<exercise>
-<introduction>
-    <p>
-        introdução
-    </p>
-</introduction>
-     <webwork source="Library/ma122DB/set12/s5_4_26.pg" />
-<conclusion>
-    <p>
-        texto
-    </p>
-</conclusion>
- </exercise>
 
- <exercise>
-<statement>
-    <p>
-        <!-- <webwork source="local/Library/AlfredUniv/anton8e/chapter6/6.5/mummert2.pg"/> -->
-    <webwork source="local/Library/UMN/calculusStewartCCC/s_5_5_16.pg" />
-    </p>
-</statement>
-   
- 
-</exercise>
+
 </subsection>
 
 <subsection xml:id="subsec-prova-TFC">
@@ -450,7 +638,7 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
 </subsection>
  <exercises xml:id="exercises-soma-rieamann">
  <exercise>
-     <webwork source="Library/ma122DB/set12/s5_4_26.pg" />
+     <webwork source="local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg" />
  </exercise>
 
 

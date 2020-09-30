@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-29T02:22:47-03:00       *-->
+<!--*       on 2020-09-29T23:21:49-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -58,9 +58,9 @@ MathJax.Hub.Config({
 </head>
 <body class="pretext-content"><div style="width:600px; height:1200px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div xmlns:svg="http://www.w3.org/2000/svg" class="sage-interact"><script type="text/x-sage">var('x')
 @interact(layout=dict(top=[["f"],["interval"],["number_of_subdivisions"],["endpoint_rule"]]))
-def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
+def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20, label="$f(x)=$"),
     interval=range_slider(0, 10, 1, default=(0, 4), label="[a,b]"),
-    number_of_subdivisions = slider(1, 20, 1, default=4, label="Número de retângulos"),
+    number_of_subdivisions = slider(1, 30, 1, default=4, label="Número de retângulos"),
     endpoint_rule = selector(['Ponto Médio', 'Esquerda', 'Direita'], nrows=1, label="Regra", buttons=True)):
 
     a, b = map(QQ, interval)
@@ -84,19 +84,24 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
             x = find_local_minimum(func, q*dx + a, q*dx + dx + a)[1]
             xs.append(x)
     ys = [ func(x) for x in xs ]
-         
+    
+    xaxis = []
+    yaxis = [n(func(a), 2), n(func(b), 2)]         
     rects = Graphics()
     for q in range(number_of_subdivisions):
         xm = q*dx + dx/2 + a
         x = xs[q]
+        xaxis.append(QQ(x))
         y = ys[q]
         rects += line([[xm-dx/2,0],[xm-dx/2,y],[xm+dx/2,y],[xm+dx/2,0]], rgbcolor = (1,0,0))
         rects += point((x, y), rgbcolor = (1,0,0))
+        rects += plot(y, xm-dx/2, xm+dx/2, fill='axis', rgbcolor=(1,0,0), fillcolor="#cde0eb")
     min_y = min(0, find_local_minimum(func,a,b)[0])
     max_y = max(0, find_local_maximum(func,a,b)[0])
-
-    pretty_print(html('<h3>Soma de Riemann {} rule</h3>'.format(endpoint_rule)))
-    show(plot(func,a,b) + rects, xmin = a, xmax = b, ymin = min_y, ymax = max_y, figsize=[3.5,3.5])
+    axes_labels = ['$x$','$y$']
+    tick_formatter = [list(map(QQ, xaxis)), yaxis ]
+    pretty_print(html('<h3>Soma de Riemann {} </h3>'.format(endpoint_rule)))
+    show(plot(func,a,b) + rects, xmin = a, xmax = b, ymin = min_y, ymax = max_y, figsize=[3.5,3.5], axes_labels=axes_labels)
     
     def cap(x):
         # print only a few digits of precision
@@ -112,9 +117,8 @@ def midpoint(f = input_box(default = sin(x^2) + 2, type = SR, width=20),
     pretty_print(html(r'''
     <div class="math"> 
     \begin{align*} 
-    \sum_{i=1}^{%s} {f(x_i) \, \Delta x} & = %s \\\ 
-    & = %s \\\ 
-    & = %s . \end{align*} </div>''' 
-                      % (number_of_subdivisions, sum_html, num_html, estimated_answer)))
+    \sum_{i=1}^{%s} {f(x_i) \, \Delta x} & = %s \\\     
+   \end{align*} </div>''' 
+                      % (number_of_subdivisions,   estimated_answer)))
 </script></div></div></body>
 </html>
