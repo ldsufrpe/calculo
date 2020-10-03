@@ -1470,7 +1470,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     Na <xref first="fig-campo-direcoes" last="fig-campo-direcoes-curva"/> podemos observar que  mesmo não conhecendo a curva integral 
     é possível ter a pespectiva geométrica do seu gráfico.
     </p>
-    <sidebyside widths="48% 48%" valigns="middle middle" xml:id="fig">
+    <sidebyside widths="45% 45%" valigns="middle middle" xml:id="fig">
             <figure xml:id="fig-campo-direcoes">
                 <caption> Campo de direções das curvas integrais de <m>f(x)=x^2</m>.</caption>
                 <image xml:id="sageplot-campo-direcoes" width="50%">

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-30T00:50:33-03:00       *-->
+<!--*       on 2020-10-02T22:01:42-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><p xmlns:svg="http://www.w3.org/2000/svg"></p></div></body>
+<body><div class="solution solution-like">
+<p>Já que usaremos extremidades à direita para escolha de \(x_k\text{,}\) fazendo \(\Delta x = \frac{b-a}{n} = \frac{3}{n}\)  encontramos \(x_k=3k/n\text{.}\) Portanto,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integrald{(x^3-6x)}{0}{3}{x} \amp = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k)\Delta x  \\
+\amp =  \lim_{n \to \infty}\sum_{k=1}^{n}f\left(\frac{3k}{n}\right)\cdot\frac{3}{n}\\
+\amp = \lim_{n \to \infty}\frac{3}{n}\sum_{k=1}^{n}\left[ \left(\frac{3k}{n}\right)^3- 6\left(\frac{3k}{n}\right)\right] \\
+\amp = \lim_{n \to \infty}\frac{3}{n}\sum_{k=1}^{n}\left[ \frac{27}{n}k^3- \frac{18}{n}k\right]  \\
+\amp =\lim_{n \to \infty} \left[ \frac{81}{n^4}\sum_{k=1}^{n}k^3  - \frac{54}{n^2}\sum_{k=1}^{n}k\right]  \\
+\amp =\lim_{n \to \infty} \left\{\frac{81}{n^4}\left[\frac{n(n+1)}{2}\right]^2   - \frac{54}{n^2}\frac{n(n+1)}{2}\right\} \qquad  \ct{Somatórios} \, \knowl{./knowl/sk3.html}{\text{Item III}} - \knowl{./knowl/sk.html}{\text{Item I}}   \\
+\amp =\lim_{n \to \infty}\left[\frac{81}{4}\left(1+ \frac{1}{n}\right)^2 - 27\left(1+ \frac{1}{n}\right) \right] \\
+\amp = -\frac{27}{4}=-6,75 \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation"><article class="note remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span>
+</h6>É importante destacar que essa integral não pode ser interpretada como uma área, pois \(f\) assume valores positivos e negativos. Entretanto, ela pode ser interpretada como a diferença de áreas acima e abaixo do eixo \(x\) que estão limitadas pelo gráfico de \(f(x)=x^3-6x\) entre \(0\) e \(3\text{.}\)</article></p>
+</div></body>
 </html>
