@@ -239,7 +239,7 @@ Mais geralmente, considere <m>f</m> uma função definida um intervalo <m>[a,b]<
         
      <solution>
         <p>
-            Note que <me> 4 + 8 + 16 + 32 + \cdots + 256 = 2^2 + 2^3 + 2^4 + \cdots + 2^8</me>. Logo, na notação sigma  o somatório toma a forma             <me>
+            Note que o  somatório pode ser reescrito como <me> 2^2 + 2^3 + 2^4 + \cdots + 2^8</me>. Logo, na notação sigma  o somatório toma a forma             <me>
                 \sum_{k=2}^8 2^k.
             </me>
             
@@ -256,7 +256,7 @@ Mais geralmente, considere <m>f</m> uma função definida um intervalo <m>[a,b]<
         
      <solution>
         <p>
-               Note que <me> 2 + 4 + 6 + 8 + 10 = 2 \cdot 1+ 2\cdot 2 + 2\cdot3 + 2\cdot 4 \cdot 5</me>. Logo, na notação sigma  o somatório toma a forma             <me>
+               Note que o  somatório pode ser reescrito como <me> 2 \cdot 1+ 2\cdot 2 + 2\cdot3 + 2\cdot 4 \cdot 5</me>. Logo, na notação sigma  o somatório toma a forma             <me>
                 \sum_{k=1}^5 2k.
             </me>
         </p>
