@@ -116,37 +116,120 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                         xxxxxxxx.
+                         Reconhecer integrais impróprias
                     </p>
                 </li>
                 <li>
                     <p>
-                        xxxxxxxxxxxxx.
+                       Calcular integrais impróprias com limites infinitos de integração.
                     </p>
                 </li>
-                
+                <li>
+                    <p>
+                        Calcular integrais impróprias com integrandos infinitos.
+                    </p>
+                </li>
+
             </ol>
             
         </objectives>
 
-<subsection xml:id="subsec-intervalos-infinitos">
-    <title>Intervalos infinitos</title>
   <introduction>
         <p>
-            introdução
+            Vimos anteriormente que uma função <m>f(x)</m> é integrável em um intervalo <m>[a,b]</m>, 
+            quando é contínua nesse intervalo. Aqui estamos interessados em calcular
+                   integrais em que um ou ambos os lados do intevalo é infinito. Como por exemplo,
+
+            <aside>
+            <statement>
+                <p>
+                   Em poucas palavras, <m>f(x)</m> integrável em <m>[a,b]</m> quer dizer que 
+                   <m>\integrald{f(x)}{a}{b}{x}</m> existe e é um número.
+                </p>   
+               
+                </statement>
+                </aside>                
+                
+                
+                   <me>
+                       \integrald{\frac{1}{x^2}}{1}{\infty}{x}.
+                   </me>
+                   
+                Outro caso de minteresse  é quando  <m>f</m> tende ao infinito em algum valor do intervalo se integração, como é o caso a seguir
+               
+               <me>
+                   \integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}.
+               </me>
+               
+        As integrais que possuem uma dessas características são chamadas  <term> integrais impróprias</term>. 
+        Entre outras utilidades, as integrais impróprias permite determinar se uma região infinita que está sob a curva
+        <m>\frac{1}{x^2}</m>, como ilustado na <xref ref="fig-intro-impropria-sageplot"/>, possui ou não área infinita.          
+            
+
+    <figure xml:id="fig-intro-impropria-sageplot">
+        <caption></caption>
+    <image xml:id="image-sage-plot" width="45%">
+        <description></description>
+    <sageplot>
+    f = 1/x^2
+    a = 1
+    b=5
+    c = f(x=a)
+    d = f(x=b)
+    axes = ['$x$','$y$']
+    ticks =[[a,],[]]
+    tick_formatter = [['$a$', '$b$'],[]]
+    p = plot(f, (x,a,b),  axes_labels=axes, ticks=ticks, fill=True, fillcolor="#cde0eb", aspect_ratio=1.8, thickness=1.5)
+    p +=plot(f,(x,2/3,b), thickness=1.5)
+    p += plot(2, (x,0,b), linestyle='')
+    p+= text("$y=\\dfrac{1}{x^2}$", (1.5,1.3), fontsize=15, figsize=[3.5,3.5])
+    p
+    </sageplot>
+        
+    </image>
+
+    </figure>
+
         </p>
     </introduction>
 
 
-<assemblage xml:id="assemblage-impropria-1">
+<subsection xml:id="subsec-intervalos-infinitos">
+    <title>Intervalos infinitos</title>
+
+
+<assemblage xml:id="assemblage-impropria-intervalo-infinito">
     <title></title>
     <p>
-        Se <m>f</m> for contínua no intervalo <m>[a, \infty)</m>, então 
+    <ul >
+    <li xml:id="assemblage-impropria-1">
+        <p>
+            Se <m>f</m> for contínua no intervalo <m>[a, \infty)</m>, então 
 
         <me>\integrald{f(x)}{a}{\infty}{x} = \lim_{b\to\infty} \integrald{f(x)}{a}{b}{x} </me>
-   
+        </p>
+    </li>
+        
+    
+    <li xml:id="assemblage-impropria-2">
+        <p>
+             Se <m>f</m> for contínua no intervalo <m>(-\infty,a]</m>, então 
+
+        <me>\integrald{f(x)}{-\infty}{b}{x} = \lim_{a\to -\infty} \integrald{f(x)}{a}{b}{x} </me>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Se qualquer das integrais acima for um número, dizemos que a integral é <term> convergente</term>. Por outro lado,
+            se o resultado for <m>\pm \infty</m> a integral é dita <term>divergente</term>.
+        </p>
+    </li>
+    </ul>
     </p>
 </assemblage>
+
+
 <example xml:id="ex-impropria-1">
     <statement>
         <p>
@@ -161,7 +244,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <mrow> \amp =\lim_{b\to\infty}\left(\left. -\frac{1}{x} \right]_1^b\right)\amp \quad \ct{Teorema Fundamental do Cálculo.}</mrow>
             <mrow> \amp = \lim_{b\to\infty}\left(1-\frac{1}{b}\right) =1 \amp\quad \ct{calcule o limite.} </mrow>
             </md>
-            
+          Logo a integral é convergente.  
         </p>
     </solution>
 </example>
@@ -182,9 +265,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <mrow> \amp = \lim_{b\to\infty}\left(\frac{4}{3} {\left(b + 1\right)}^{\frac{3}{4}} - \frac{4}{3}  \right) \amp \quad \ct{Calcule o limite}</mrow>
             <mrow> \amp = \infty - \frac{4}{3} = \infty </mrow>
         </md>
+        Nesse caso a integral é divergente.
         </p>
     </solution>
 </example>
+
+
 
 <exercise>
     <statement>
@@ -228,16 +314,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-
-<assemblage xml:id="assemblage-impropria-2">
-    <title></title>
-    <p>
-        Se <m>f</m> for contínua no intervalo <m>(-\infty,a]</m>, então 
-
-        <me>\integrald{f(x)}{-\infty}{b}{x} = \lim_{a\to -\infty} \integrald{f(x)}{a}{b}{x} </me>
-   
-    </p>
-</assemblage>
 <example xml:id="ex-impropria-3">
     <statement>
         <p>
@@ -272,7 +348,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <md>
                 <mrow> \integrald{xe^x}{-\infty}{0}{x}\amp = \lim_{a\to -\infty}\integrald{xe^x}{a}{0}{x} </mrow>
             </md>
-        A integral acima requer a aplicação do método de integração por partes. Fazendo   <m>u=x</m>, <m>\dd u</m>, obtemos
+        A integral acima requer a aplicação do método de integração por partes. Fazendo   <m>u=x</m>, <m>\dd v=e^x</m>, obtemos
         <m>\dd u=dx</m>, <m>v=e^x</m>. Então,
 
         <md>
@@ -310,7 +386,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <answer>
     <p>
-        <m>\infty</m>
+        <m>divergente</m>
     </p>
 </answer>
 </exercise>
@@ -336,20 +412,36 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </exercise>
 
 
-
-<assemblage xml:id="assemblage-impropria-3">
+<assemblage >
     <title></title>
-    <p>
-        Se <m>f</m> for contínua no intervalo <m>(-\infty, \infty)</m>, então 
+   
+         <p>
+            
+   
+    <ul>
+        <li xml:id="assemblage-impropria-3">
+            <p>
+                Se <m>f</m> for contínua no intervalo <m>(-\infty, \infty)</m>, então 
 
         <me>\integrald{f(x)}{-\infty}{\infty}{x} = \integrald{f(x)}{-\infty}{c}{x} + \integrald{f(x)}{c}{\infty}{x}  </me>
    
-    </p>
+            </p>
+        </li>
+
+        <li>
+        <p>
+            Se qualquer das integrais acima for um número, dizemos que a integral é <term> convergente</term>. Por outro lado,
+            se o resultado for <m>\pm \infty</m> a integral é dita <term>divergente</term>.
+        </p>
+    </li>
+    </ul>
+     </p>
+
 </assemblage>
 <example>
     <statement>
         <p>
-            Determine <m>\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}</m>.
+            Determine <m>\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}</m> é convergente ou divergente.
         </p>
     </statement>
     <solution>
@@ -380,6 +472,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <me>\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}=\frac{\pi}{2}+\frac{\pi}{2}=\pi.</me>
 
+        Nesse caso a integral é convergente.
 
         </p>
     </solution>
@@ -432,11 +525,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <subsection xml:id="subsec-notacao-integrando-descontinuo">
     <title>Integrando descontínuo</title>
-<introduction>
-        <p>
-            introdução
-        </p>
-    </introduction>
 
 <assemblage xml:id="assemblage-impropria-4">
     <title></title>
@@ -464,10 +552,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </assemblage>
 
 
-<example>
+<example xml:id="ex-impropria-6">
     <statement>
         <p>
-         Determine <m>\integrald{\frac{3}{x^2-3x}}{1}{3}{x}</m>.
+         Determine se a integral <m>\integrald{\frac{3}{x^2-3x}}{1}{3}{x}</m> é convergente ou divergente.
 
 
         </p>
@@ -483,26 +571,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </solution>
 </example>
 
-<exercise>
-    <statement>
-        <p>
-            depois
-        </p>
-    </statement>
-    <hint>
-        <p>
-            depois
-        </p>
-    </hint>
-
-<answer>
-    <p>
-        depois
-    </p>
-</answer>
-</exercise>
-
-
 
 <!-- <assemblage xml:id="assemblage-impropria-5">
     <title></title>
@@ -511,7 +579,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
    
     </p>
 </assemblage> -->
-<example>
+<example xml:id="ex-impropria-7">
     <statement>
         <p>
             
@@ -530,38 +598,65 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </solution>
 </example>
 
-
-
 <exercise>
     <statement>
         <p>
-            depois
+            Verifique se <m>\integrald{5}{x^2-5x}{1}{5}{x}</m> converge ou diverge.
         </p>
     </statement>
     <hint>
         <p>
-            depois
+            Revise <xref ref="ex-impropria-7"/>.
         </p>
     </hint>
 
 <answer>
     <p>
-        depois
+      A integral imprópria é  divergente
     </p>
 </answer>
 </exercise>
 
 
 
-<assemblage xml:id="assemblage-impropria-5">
+<exercise>
+    <statement>
+        <p>
+            Determine <m>\integrald{\frac{1}{\sqrt{x-2}}}{2}{5}{x}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            <m>f(x)=\frac{1}{\sqrt{x-2}}</m> tem assíntota vertical em <m>x=2</m>.
+        </p>
+    </hint>
+
+<answer>
+    <p>
+        <m>2\sqrt{3}</m>
+    </p>
+</answer>
+</exercise>
+
+
+
+<assemblage >
     <title></title>
     <p>
-       Se <m>f</m> for contínua no intervalo <m>[a,b]</m>, exceto para algum <m>c</m> 
+
+    <ul>
+        <li xml:id="assemblage-impropria-5">
+            <p>
+                  Se <m>f</m> for contínua no intervalo <m>[a,b]</m>, exceto para algum <m>c</m> 
        em <m>(a,b)</m> no qual <m>f</m> tende a infnito, então
 
        <me>
            \integrald{f(x)}{a}{b}{x}=\integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x}.
        </me>
+            </p>
+        </li>
+    </ul>
+     
        
     </p>
 </assemblage>
@@ -590,7 +685,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </solution>
 </example>
 
-<example>
+<!-- <example>
     <statement>
         <p>
             depois
@@ -601,30 +696,30 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             depois
         </p>
     </solution>
-</example>
+</example> -->
 
-<!-- <exercise>
+<exercise>
     <statement>
         <p>
-            depois
+            Determine <m>\integrald{\ln{x}}{0}{1}{x}</m>.
         </p>
     </statement>
     <hint>
         <p>
-            depois
+            Use integral por partes com <m>u=\ln{x}</m> e <m>\dd v= \dd x</m>.
         </p>
     </hint>
 
 <answer>
     <p>
-        depois
+        <m>-1</m>
     </p>
 </answer>
-</exercise> -->
+</exercise>
 
 
 
-<subsubsection xml:id="subsubsec-sugestao-video-integrando-descontinuo">
+<!-- <subsubsection xml:id="subsubsec-sugestao-video-integrando-descontinuo">
     <title>Sugestão de vídeo</title>
     <introduction>
         <p>
@@ -638,10 +733,33 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </li>
 </ul>    
-</subsubsection>
+</subsubsection> -->
 </subsection>
 
  <exercises xml:id="exercises-impropia">
+
+    
+    <exercise>
+        <webwork source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg" />
+    </exercise>
+     <exercise>
+         <webwork source="local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg" />
+     </exercise>
+    
+    <exercise>
+        <webwork source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg" />
+    </exercise>
+    <exercise>
+         <webwork source="local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg" />
+     </exercise>
+    
+    <exercise>
+        <webwork source="local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg" />
+    </exercise>
+
+    <exercise>
+        <webwork source="local/Library/UMN/calculusStewartET/s_7_8_35.pg" />
+    </exercise>
      
  </exercises>
 

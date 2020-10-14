@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg">
+      <statement>
+        <p>Avalie as integrais que convergem, insira 'divergente' se a integral diverge.</p>
+        <p>Determine a integral imprópria</p>
+        <p><m>\displaystyle  \int_{-\infty}^{1}  \frac{7}{x^{2}+4} \;dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="20"/> 
+        insira 'divergente' se a integral não convergir.</p>
+      </statement>
+      <answer>
+        <p><m>\frac{7\tan^{-1}\!\left(\frac{1}{2}\right)}{2}+\frac{7\pi }{4}</m></p>
+      </answer>
+      <solution>
+        <me>\displaystyle\int_{-\infty}^{1}  \frac{7}{x^{2}+4} \;dx=\lim_{a\to -\infty}\int_{a}^{1}  \frac{7}{x^{2}+4} \;dx=\lim_{a\to -\infty} \left[\frac{7\tan^{-1}\!\left(\frac{x}{2}\right)}{2}\right]_{a}^{1}=\lim_{a\to -\infty}\left[{\textstyle\frac{7}{2}}\tan^{-1}({\textstyle\frac{1}{2}})-\frac{7\tan^{-1}\!\left(\frac{a}{2}\right)}{2}\right]={\textstyle\frac{7}{2}}\tan^{-1}({\textstyle\frac{1}{2}})+\frac{7\pi }{4}</me>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
+    <pg source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg">
+      <statement>
+        <p>Determine se a integral é divergente ou convergente.
+         Se for convergente, calcule. Caso contrário, dê a resposta -1.</p>
+        <p><me>\int_{6}^{\infty} x e^{-4x} dx</me></p>
+        <p><fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>5.89864772543609\times 10^{-11}</m></p>
+      </answer>
+      <solution>
+        <me>\int u \; dv = u v - \int v \; du</me>
+        Neste caso vamos usar as seguintes substituições:
+        <m>u = x</m>, <m>du = dx</m>, <m>dv = e^{-4 x} dx</m>,
+        e <m>v = \frac{-1}{4} e^{-4 x}</m>.
+        
+        <me>\begin{aligned}
+        \int_{6}^{\infty} x e^{-4 x} \; dx
+        \amp =	\int_{6}^{\infty} u dv	\\\\
+        \amp =	\left. u v \right|_{6}^{\infty} - \int_{6}^{\infty} v \; du	\\\\
+        \amp =	\left. \frac{-x}{4} e^{-4 x} \right|_{6}^{\infty}
+        		+ \frac{1}{4} \int_{6}^{\infty} e^{-4 x} \; dx	\\\\
+        \amp =	\left. \frac{-x}{4} e^{-4 x} \right|_{6}^{\infty}
+        		- \left. \frac{1}{4^2} e^{-4 x} \right|_{6}^{\infty}	\\\\
+        \amp =	\left( \frac{-x}{4} e^{-4 x} 
+        		- \left. \frac{1}{4^2} e^{-4 x} \right) \right|_{6}^{\infty}	\\\\
+        \amp =	\left. \left( \frac{-4 x - 1}{4^2} \right)
+        		e^{-4 x} \right|_{6}^{\infty}	\\\\
+        \amp =	\lim_{x\to\infty} \left( \frac{-4 x - 1}{4^2} \right) e^{-4 x}
+        		- \left( \frac{-4 \cdot 6 - 1}{4^2} \right) e^{-4 \cdot 6}	\\\\
+        \amp =	\frac{24 + 1}{4^2} e^{-24}
+        \end{aligned}</me>
+        
+        
+        (O limite  acima desapareceu porque o termo <m>e^{4 x}</m> em seu denominador cresce muito mais rápido do que qualquer polinômio, especialmente o linear <m>-4 x - 1</m>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
+    <pg source="local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg">
+      <statement>
+        <p>Verifique se a integral abaixo converge, informe 'divergente' se for divergente.</p>
+        <p><m>\displaystyle  \int_{-\infty}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>0</m></p>
+      </answer>
+      <solution>
+        <me>\displaystyle\int_{-\infty}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx=\int_{-\infty}^{c}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx+\int_{c}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx=\lim_{a\to -\infty}\int_{a}^{c}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx+\lim_{b\to +\infty}\int_{c}^{b}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx</me><me>=\lim_{a\to -\infty} \left[-\frac{3}{2\!\left(x^{2}+1\right)}\right]_{a}^{c}+\lim_{b\to +\infty} \left[-\frac{3}{2\!\left(x^{2}+1\right)}\right]_{c}^{b}=0</me>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
+    <pg source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg">
+      <statement>
+        <p>Determine se a integral é divergente ou convergente. Se for convergente, calcule. Se não,  responda como "divergente".</p>
+        <p><me>\int_{-\infty}^{\infty} (-1 x^2 + 4 x  - 1) dx</me></p>
+        <p><fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p>divergente</p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
+    <pg source="local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg">
+      <statement>
+        <p>Considere a integral
+        <me>\int_{0}^{\,2} {\frac{-6 x  + 18}{2x-3}}\, dx</me>
+        Se a integral é divergente ponha o "D" maiusculo. Caso contrário, calcule a integral.</p>
+        <p><fillin name="AnSwEr0001" characters="45"/></p>
+      </statement>
+      <answer>
+        <p><m>\text{D}</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
+    <pg source="local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="local/Library/UMN/calculusStewartET/s_7_8_35.pg">
+      <statement>
+        <p>Calcule o valor da integral imprópria a seguir. Se for divergente ponha, 'divergente'.</p>
+        <p><me>\int_{0}^{2}\! \frac{dx}{x^{2}-6x+5}</me>
+        Resposta: <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>\text{divergente}</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
+    <pg source="local/Library/UMN/calculusStewartET/s_7_8_35.pg"/>
+  </webwork-reps>
+ </webwork-representations>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-13T01:04:29-03:00       *-->
+<!--*       on 2020-10-14T02:46:32-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,36 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Parágrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Problema Resolvido:  <a class="external" href="https://youtu.be/0snA6YXf-hE" target="_blank">Dois limites infinitos.</a></p>
+<p>Aqui vamos escolher \(c=0\) em <a class="xref" data-knowl="./knowl/assemblage-impropria-3.html" title="Item">Item </a>. Dessa forma,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}\amp = \integrald{\frac{1}{1+ x^2}}{-\infty}{0}{x}
++  \integrald{\frac{1}{1+ x^2}}{0}{\infty}{x}\\
+\amp = \lim_{a\to -\infty}\integrald{\frac{1}{1+ x^2}}{a}{0}{x} + 
+\lim_{b\to \infty}\integrald{\frac{1}{1+ x^2}}{0}{b}{x} \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Uma vez que</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\lim_{a\to -\infty}\integrald{\frac{1}{1+ x^2}}{a}{0}{x} \amp =  \lim_{a\to -\infty}  \left(\left. \arctan{x} \right]_a^0\right) \\
+\amp =  \lim_{a\to -\infty}(-\arctan{a})=\frac{\pi}{2}
+\end{align*}
+</div>
+<p data-braille="continuation">e</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\lim_{b\to \infty}\integrald{\frac{1}{1+ x^2}}{0}{b}{x} \amp=  \lim_{b\to \infty}  \left(\left. \arctan{x} \right]_0^b\right) \\
+\amp =  \lim_{b\to \infty}(\arctan{a})=\frac{\pi}{2}\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">o valor da integral imprópria desejada é</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}=\frac{\pi}{2}+\frac{\pi}{2}=\pi.
+\end{equation*}
+</div>
+<p data-braille="continuation">Nesse caso a integral é convergente.</p>
 <span class="incontext"><a href="section-1.html#p-36">[incontext]</a></span>
 </body>
 </html>
