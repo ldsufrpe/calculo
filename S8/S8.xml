@@ -601,7 +601,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise>
     <statement>
         <p>
-            Verifique se <m>\integrald{5}{x^2-5x}{1}{5}{x}</m> converge ou diverge.
+            Verifique se <m>\integrald{x^2-5x}{1}{5}{x}</m> converge ou diverge.
         </p>
     </statement>
     <hint>
@@ -612,7 +612,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <answer>
     <p>
-      A integral imprópria é  divergente
+      A integral é imprópria e  divergente.
     </p>
 </answer>
 </exercise>
