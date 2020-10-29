@@ -1,8 +1,10 @@
+por Leon Silva
 ### Cálculo Integral em 10 Semanas
 
+
 - [S1 - Integral Indefinida](https://ldsufrpe.github.io/calculo/S1/).
-- [S2 - Integral por Substituição](https://ldsufrpe.github.io/calculo/S2/).
-- [S3 - Integral Integral Definida](https://ldsufrpe.github.io/calculo/S3/).
+- [S2 - Integração por Substituição](https://ldsufrpe.github.io/calculo/S2/).
+- [S3 - Integral Definida](https://ldsufrpe.github.io/calculo/S3/).
 - [S4 - Técnicas: Integração Partes e por Frações Parciais](https://ldsufrpe.github.io/calculo/S4/).
 - [S5 - Aplicações: Área e Volume](https://ldsufrpe.github.io/calculo/S5/).
 - [S6 - Soma de Riemann](https://ldsufrpe.github.io/calculo/S6/).
