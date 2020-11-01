@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-03T00:15:46-03:00       *-->
+<!--*       on 2020-11-01T18:56:30-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -121,8 +121,8 @@ true);
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Pré-textual</span></a></li>
 <li class="link">
-<a href="sec-integral-indefinida.html" data-scroll="sec-integral-indefinida"><span class="codenumber">1</span> <span class="title">A integral</span></a><ul>
-<li><a href="sec-integral-indefinida.html#subsec-integral-indefinida" data-scroll="subsec-integral-indefinida">Integral Indefinida</a></li>
+<a href="sec-integral-indefinida.html" data-scroll="sec-integral-indefinida"><span class="codenumber">1</span> <span class="title">Integral Indefinida</span></a><ul>
+<li><a href="sec-integral-indefinida.html#subsec-integral-indefinida" data-scroll="subsec-integral-indefinida">Primitiva</a></li>
 <li><a href="sec-integral-indefinida.html#subsec-tabela-integrais" data-scroll="subsec-tabela-integrais">Tabela de integrais</a></li>
 <li><a href="sec-integral-indefinida.html#exercises-1" data-scroll="exercises-1">Exercícios</a></li>
 </ul>
@@ -356,14 +356,14 @@ y(x)= 2x - \cos{x} - 1.99\text{.}
 <span class="type">Subseção</span> <span class="codenumber">2.3</span> <span class="title">Campos de Direções</span>
 </h3>
 <p id="p-127">Sabe-se que a inclinação da reta tangente à curva  \(y=y(x)\) em dado ponto \((x, y)\) é dada por \(\dd y/\dd x\) para cada \(x\text{.}\) A Equação <a class="xref" data-knowl="./knowl/eq-diferencial.html" title="[mrow] 2.1">(2.1)</a> revela que a inclinação das retas tangentes às curvas integrais de \(f\) no ponto \((x_0, y_0)\) é exatamente  \(f(x_0)\text{.}\) Com isso é possível visualizar as "direções" das curvas integrais plotando pequenas porções de suas retas tangentes em cada ponto \((x,y)\)  de uma região retangular. Como resultado teremos o que denominamos de <dfn class="terminology">campo de direções</dfn>. Na <a class="xref" data-knowl="./knowl/fig-campo-direcoes.html" title="Figura 2.12">Figura 2.12–2.13</a> podemos observar que  mesmo não conhecendo a curva integral é possível ter a pespectiva geométrica do seu gráfico.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:1%;margin-right:1%;">
-<div class="sbspanel" style="width:48.9795918367347%;justify-content:center;"><figure class="figure figure-like" id="fig-campo-direcoes"><img src="images/sageplot-campo-direcoes.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-campo-direcoes.png';this.onerror=null;"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.12<span class="period">.</span></span><span class="space"> </span>Campo de direções das curvas integrais de \(f(x)=x^2\text{.}\)</figcaption></figure></div>
-<div class="sbspanel" style="width:48.9795918367347%;justify-content:center;"><figure class="figure figure-like" id="fig-campo-direcoes-curva"><img src="images/sageplot-campo-direcoes-curva.svg" role="img" style="width: 100%; height: auto;" alt="Teste" onerror="this.src='images/sageplot-campo-direcoes-curva.png';this.onerror=null;"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.13<span class="period">.</span></span><span class="space"> </span>Campo de direções e as curvas integrais da função \(f(x)=x^2\text{.}\)</figcaption></figure></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:center;"><figure class="figure figure-like" id="fig-campo-direcoes"><img src="images/sageplot-campo-direcoes.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-campo-direcoes.png';this.onerror=null;"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.12<span class="period">.</span></span><span class="space"> </span>Campo de direções das curvas integrais de \(f(x)=x^2\text{.}\)</figcaption></figure></div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:center;"><figure class="figure figure-like" id="fig-campo-direcoes-curva"><img src="images/sageplot-campo-direcoes-curva.svg" role="img" style="width: 100%; height: auto;" alt="Teste" onerror="this.src='images/sageplot-campo-direcoes-curva.png';this.onerror=null;"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.13<span class="period">.</span></span><span class="space"> </span>Campo de direções e as curvas integrais da função \(f(x)=x^2\text{.}\)</figcaption></figure></div>
 </div></div>
 <article class="technology computation-like" id="campos-curvas-sageinterativo"><h6 class="heading">
 <span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
 </h6>
-<figure class="figure figure-like" id="figure-interactive-numerical-integral"><iframe id="interactive-numerical-integral" width="600" height="720" src="interactive-numerical-integral-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.15<span class="period">.</span></span><span class="space"> </span>Curvas integrais e campos de direções</figcaption></figure></article></section><section class="exercises" id="exercises-eq-diferencial"><h3 class="heading hide-type">
+<figure class="figure figure-like" id="figure-interactive-campos"><iframe id="interactive-campos" width="600" height="720" src="interactive-campos-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.15<span class="period">.</span></span><span class="space"> </span>Curvas integrais e campos de direções</figcaption></figure></article></section><section class="exercises" id="exercises-eq-diferencial"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">2.4</span> <span class="title">Exercícios</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-3">

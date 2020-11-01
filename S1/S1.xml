@@ -116,7 +116,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Cálculo integral e equações diferenciais.</p>
         </introduction>
         <section xml:id="sec-integral-indefinida">
-        <title> A integral </title>
+        <title> Integral Indefinida </title>
          
             <objectives>
             <title>Estrutura</title>
@@ -137,7 +137,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </objectives>
         
         <subsection xml:id="subsec-integral-indefinida">
-           <title>Integral Indefinida</title>
+           <title>Primitiva</title>
 
         <definition xml:id="def-primitiva">
             <statement>
