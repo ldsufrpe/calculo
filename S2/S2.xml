@@ -104,7 +104,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
         </introduction>
     <section>
-    <title> Integração por substituição de variáveis</title>
+    <title> Integração por substituição</title>
          <objectives>
             <title>Estrutura</title>
             <introduction>
@@ -128,7 +128,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </objectives>
 
     <subsection xml:id="subsec-integracao-substituicao">
-        <title>O método de substituição</title>
+        <title>O método de substituição <m> u </m></title>
         
         
             <p>
