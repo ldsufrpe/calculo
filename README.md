@@ -1,4 +1,4 @@
-por Leon Silva
+por Leon Silva e Deibsom Silva
 ### Cálculo Integral em 10 Semanas
 
 
