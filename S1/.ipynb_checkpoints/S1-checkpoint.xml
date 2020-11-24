@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--   xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl minimal.xml                                                                                                -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <latex-preamble>
+    <package>cancel</package>    
+    </latex-preamble>
+    
+     <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png"/>
+        <macros>
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+        <html>           
+        <!-- Several embedded calculators are available            -->
+        <!-- Use "none" to turn this off (or remove the element)   -->
+        <calculator model="geogebra-classic"/>
+        <!-- @xml:id of a page to be target of index.html redirect -->
+        <!-- This is the @xml:id of the "article", which is not    -->
+        <!-- default behavior, but we do this as a test and as an  -->
+        <!-- illustration                                          -->
+        <index-page ref="integral"/>
+        <!-- specify the style of the html by giving names to      -->
+        <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
+        <!-- put <css style="oscarlevin"/>                         -->
+        <!-- @colors currently unimplementd.                       -->
+        <css style="default" colors="blue_green"/>
+        <!-- Magic IDs identify HTML pages to analytics services   -->
+        <!-- Presence implies relevant Javascript will be added    -->
+        <!-- StatCounter requires both values to be set            -->
+        <analytics google-gst="UA-48811660-1"
+                   statcounter-project="9664088"
+                   statcounter-security="6e60c510"/>
+        <!-- Google search, via masthead textbox is switched on    -->
+        <!-- and associated with a Google account via CX number    -->
+        <!-- <search google-cx=""/> -->
+        <!-- Request fewer tracking cookies for YouTube videos     -->
+        <!-- This is the default, here for documentation/testing   -->
+        <video privacy="yes"/>
+        
+        </html>
+    </docinfo>
+
+    <article xml:id="integral">
+        <title>Cálculo Integral: S1</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Nesta semana vamos apresentar o conteúdo referente ao cálculo integral e as equações diferenciais.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Cálculo integral e equações diferenciais.</p>
+        </introduction>
+        <section xml:id="sec-integral-indefinida">
+        <title> Integral Indefinida </title>
+         
+            <objectives>
+            <title>Estrutura</title>
+            
+            <ol>
+                <li>
+                    <p>
+                        Primeiro
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Segundo
+                    </p>
+                </li>
+            </ol>
+            
+        </objectives>
+        
+        <subsection xml:id="subsec-integral-indefinida">
+           <title>Primitiva</title>
+
+        <definition xml:id="def-primitiva">
+            <statement>
+                <p>
+                    Seja <m>f</m> uma função definida em um intervalo aberto<fn> veja em <url href="https://pt.wikipedia.org/wiki/Intervalo_(matem%C3%A1tica)">wikipedia</url></fn> <m>I</m>. 
+                    Uma <term> primitiva </term> é uma função <m>F</m> definida em <m>I</m>, de modo que 
+                    <mdn>
+                        <mrow xml:id="eq-primitiva"> \frac{\dd}{\dd x}\left[F(x)\right]=f(x). </mrow> 
+                    </mdn>
+                para todo <m>x</m> em <m>I</m>.
+                </p>
+            </statement>
+           
+        </definition> 
+        <note>        
+        <p>É comum reescrever <xref ref="eq-primitiva"/> como <m>F'(x)=f(x)</m>.</p>
+        </note>
+        <example xml:id="ex-primitiva1">
+        <title>Determinando Primitivas</title>
+            <statement>
+                <p>
+                   A primitiva de <m>f(x)=x^2</m> em <m>(-\infty, +\infty)</m> é <m>F(x)=\frac{1}{3}x^3</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                     De fato, uma vez que, para todo <m>x</m>,
+                    <md>
+                        <mrow> \frac{\dd}{\dd x}\left[\frac{1}{3}x^3\right]\amp = x^2</mrow>
+                    </md>
+                   para todo <m>x</m> em <m>(-\infty, +\infty)</m>.
+                </p>
+            </solution>
+        </example>
+        <example xml:id="ex-primitiva2">
+        <title>Primitivas mais gerais</title>
+            <statement>
+                <p>
+                    Considere <m>C \in \mathbb{R}</m>. A função <m>G(x)= \frac{1}{3}x^3 + C</m> é, também,
+                    uma primitiva de <m>f(x)=x^2</m> em <m>(-\infty, +\infty)</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Segue do fato de <m>\frac{\dd}{\dd x}(C)=0</m>, seja qual for o número <m>C</m>.
+                </p>
+            </solution>
+        </example>
+        <exercise xml:id="exc-primitiva1">
+            <statement>
+                <p>
+                    Encontre pelo menos 3 primitivas para a função constante <m>f(x)=k</m>.
+                  </p>
+            </statement>
+                <answer>
+                    <p>
+                        <m>F(x)=kx</m>, <m>G(x)=kx +1</m>, <m>H(x)=kx+\frac{1}{2}</m>.
+                    </p>
+                </answer>
+                <solution>
+                    <p>
+                        Se <m>k</m> é constante então a derivada de <m>kx</m> é <m>k</m>, logo <m>F(x)=kx</m> é uma primitiva de <m>f(x)=k</m>. 
+                        O mesmo acontence  para <m>G(x)=kx +1</m> e <m>H(x)=kx+\frac{1}{2}</m>. É fácil perceber que <m>kx+C</m>, na qual 
+                        <m>C</m> é uma constante, é uma primitiva de f para qualquer que seja o valor de <m>C</m>.
+                    </p>
+                </solution>
+            
+        </exercise>
+        <paragraphs>
+            <title>Quantas  primitivas pode ter uma função? </title>            
+        </paragraphs>
+        <theorem xml:id="thm-primitiva">
+            <statement>
+                <p>
+                    Se  <m>F(x)</m> é uma primitiva de <m>f(x)</m> em um intervalo aberto <m>I</m> , então <m>F(x) + C</m>, 
+                    seja qual for o valor da constante <m>C</m>, é também uma primitiva de <m>f(x)</m> em <m>I</m>.                 
+                </p>     
+              <proof>
+                <p>
+                    Testando a prova
+                </p>
+            </proof>           
+            </statement>
+          
+        </theorem>
+                        
+       <p>O  <xref ref="thm-primitiva"/> garante que uma vez conhecida uma primitiva de um função, todas 
+        as outras são iguais, a menos de uma constante, como o leitor pôde verificar no <xref ref="exc-primitiva1"/>. 
+        É comum se referir a expressão <m>F(x)+C</m> como a <term>família</term>  de primitivas de <m>f(x)</m>.
+        </p>
+
+        <p>O processo para encontrar a primitiva de uma função <m>f(x)</m> define uma operação denominada
+        <term>integral indefinida</term>  de <m>f(x)</m> em relação a <m>x</m>. Como todas as primitivas de <m>f(x)</m>
+        são da forma <m>F(x) + C</m>, usaremos a notação 
+        <mdn >
+            <mrow xml:id="eq-integral-indefinida"> \integral{f(x)}{x}=F(x) + C </mrow>
+        </mdn>,
+        na qual <m>f(x)</m> é chamada de <term>integrando</term>  e <m>C</m>  de <term>constante de integração</term>.</p>
+        
+       <assemblage xml:id="assemblage-integral-indefinida">
+       <title>Como se lê </title>
+       
+                   <p><me> \integral{f(x)}{x}=F(x) + C</me></p>
+           <p>
+              A integral de <m>f(x)</m> em relação a <m>x</m> é igual a <m>F(x)</m> mais uma constante.
+           </p>
+       </assemblage>
+       <note> 
+       <title>O símbolo <m>(\displaystyle\int)</m> e o símbolo <m>(\dd x)</m></title>
+       <statement>        
+       
+       <p>O símbolo que parece um "S esticado verticalmente" é denominado <term> sinal de integral</term>.
+         Sua origem vem da palavra <em>sum</em> (soma, em português) que diz respeito a definição de integral
+         definida, tópico que será apresentado no momento adequado.
+        </p>
+        <p>
+        O símbolo de <term> diferencial</term> <m>\dd x</m> serve para identificar a variável independente.
+       Neste contexto, quando estamos diante da diferencial <m>\dd x</m> devemos calcular a integral
+       em relação a <m>x</m>, assim como <m>\dd t</m> indica integração em relação a variável <m>t</m>.
+        </p>
+        </statement>
+       </note>
+     
+     <example xml:id="ex-integral-indefinida-1">
+     <title>Determinação de integrais indefinidas</title>
+         
+             <p>Determine cada integral a seguir:
+             <task>
+             <statement>
+                 <p>
+                      <m>\integral{2}{x}.</m>
+                 </p>
+             </statement>
+                 
+                 <solution>
+                    <p> Já que <m>F(x)=2x</m> é uma primitiva para <m>f(x)=2</m>, 
+                    segue da igualdade <xref ref="eq-integral-indefinida"/> que
+                       <me>
+                           \integral{2}{x}=2x + C
+                       </me>.
+                       
+                    </p>
+                 </solution>
+             </task>
+             <task>
+             <statement>
+                   <p>
+                      <m>\integral{x}{x}</m>
+                 </p>
+             </statement>
+               
+                  <solution>
+                    <p>
+                    Uma vez que <m>\frac{\dd}{\dd x}[\frac{x^2}{2}]=x</m>, obtem-se
+                    <me>
+                        \integral{x}{x}=\frac{x^2}{2} + C
+                    </me>.
+                    
+
+                    </p>
+                 </solution>
+             </task>
+                
+             <task>
+             <statement>
+                 <p>
+                      <m>\integral{x^2}{x}</m>
+                 </p>
+             </statement>
+                 
+                  <solution>
+                    <p>
+                       Como <m>\frac{x^3}{3}</m> é uma primitiva de <m>x^2</m>, pois <m>\frac{\dd}{\dd x}[\frac{x^3}{3}]=x^2</m>, 
+                       concluimos que 
+                       <me>
+                           \integral{x^2}{x}=\frac{x^3}{3} +C
+                       </me>.
+                       
+
+                    </p>
+                 </solution>
+             </task>    
+             </p> 
+              
+     </example>
+     <example xml:id="exer-primitiva-particular">
+     <title>Primitiva particular</title>
+        <statement>
+            <p>
+            
+              Para a função <m>f(x)=3x+1</m>, determine a primitiva, <m>F(x)</m>, que satisfaça <m>F(2)=4</m>.
+
+            </p>
+        </statement>
+        <solution>
+            <p>
+                A função <m>F(x)= 3\left(\frac{x^2}{2}\right) + x+ C</m> é a família de primitivas, uma vez que 
+                <md>
+                  <mrow>   \frac{\dd }{\dd x}\left[3\left(\frac{x^2}{2}\right) + x+ C\right]= 3x+1 \amp \quad \color{gray}{(\text{veja Equação} \,\,  <xref ref="eq-primitiva"/>)}</mrow>
+                </md>.
+            A condição <m> F(2)=4</m> nos fornece a possibilidade de detrminar o valor de <m>C</m>
+            fazendo
+             <me>
+                F(2)=   3\left(\frac{2^2}{2}\right) + 2 + C = 4
+            </me>    
+            para obter <m>C=-4</m>. Portanto, a primitiva desejada é 
+            <me>
+                F(x)= 3\left(\frac{x^2}{2}\right) + x - 4
+            </me>.
+            
+            
+            </p>
+        </solution>
+    </example>
+     <assemblage xml:id="prob-integral-funcao-potencia">
+     <title>Integral da função potência</title>
+        
+             <p>
+                  <me>\integral{x^q}{x} = \frac{x^{q+1}}{q+1} + C, \qquad q\neq - 1.</me>
+             </p>
+         
+         
+     </assemblage >
+     <example xml:id="ex-integral-indefinida-2">
+     <title>Integração da função potência</title>
+         <statement>
+             <p>
+             <task>
+             <statement>
+                 <p>
+                      Determine <m>\integral{t^7}{t}</m>.
+                 </p>
+             </statement>
+                 
+                 <solution>
+                    <p>
+                        O integrando é uma função potência, então basta usar a <xref ref="prob-integral-funcao-potencia" text="custom"> fórmula adequada</xref> e obter
+                        <m>\frac{t^8}{8} + C</m>.
+                        
+                    </p>
+                 </solution>
+             </task>
+            <task>
+                <statement>
+                    <p>
+                        Determine <m>\integral{x^{-2}}{x}</m>.
+                    </p>
+                </statement>
+                    
+                
+                <solution>
+                    <p>
+                        
+                        Novamente usando a fórmula da <xref ref="prob-integral-funcao-potencia" text="title"></xref>  resultamos em
+                        <m>\frac{x^{-1}}{-1} + C</m>, que de forma simplificada se torna igual a <m>-\frac{1}{x} + C</m>.
+                    </p>
+                 </solution>
+            </task>
+             </p>
+         </statement>
+         
+     </example>  
+
+     <exercise>
+         <statement>
+             <p>
+                  Para a função <m>f(x)=2(x-1)</m>, encontre a primitiva, <m>F(x)</m>, que satisfaça <m>F(3)=2</m>.
+             </p>
+         </statement>
+         <hint>
+             <p>
+                  Revise o <xref ref="exer-primitiva-particular"/>
+             </p>
+         </hint>
+         <answer>
+             <p>
+                 <m>x^2-2x-1</m>
+             </p>
+         </answer>
+     </exercise>
+
+     <exercise>
+         <statement>
+             <p>
+                 Para a função <m>f(x)=x^{-\frac{1}{3}}-1</m>, encontre a primitiva, <m>F(x)</m>, que satisfaça <m>F(8)=4</m>.
+             </p>
+         </statement>
+         <hint>
+     
+             <p>
+                 Revise o <xref ref="exer-primitiva-particular"/>
+             </p>
+         </hint>
+         <answer>
+             <p>
+                 <m> \frac{3}{2}  x^{\frac{2}{3}} - x + 6</m>
+             </p>
+         </answer>
+     </exercise>
+     
+    <activity>
+        <title>Verificando fatos</title>
+        <statement>
+            
+       
+        <p>
+        
+        Usando o que foi aprendido até aqui, faça uma demonstração da 
+        <xref ref="prob-integral-funcao-potencia" text="title"> </xref>.
+         </p>
+         </statement>
+    <hint>
+        <p>
+            Experimente derivar o lado direito da igualdade solicitada.
+        </p>
+    </hint>
+   
+    </activity>
+     <example xml:id="ex-integral-indefinida-3"> 
+     <title><m>\integral{\frac{1}{x}}{x}</m></title>
+         <statement>
+             <p>
+                Integral da função potência para <m>q=-1</m>:
+                <me>
+                    
+                             \integral{\frac{1}{x}}{x} = \ln{|x|} + C
+               </me>.        
+    
+
+             </p>
+         </statement>
+         <solution>
+             <p>
+                 A fórmula da <xref ref="prob-integral-funcao-potencia" text="title"></xref> não é válida para <m>q=-1</m>.
+                 Logo não é possivel utilizá-la para obter a integral indefinida de <m>1/x</m>.
+                 O passo natural é encontrar uma função cuja derivada seja <m>1/x</m>. Sabe-se que
+                     
+                <me> \frac{\dd}{\dd x}\ln{x}= \frac{1}{x}</me>.
+                     
+                Então, 
+
+                <md>
+                    <mrow xml:id="ln-primitiva-positiva" tag="star"> \integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  </mrow>
+                </md>.
+                De fato o logaritmo natural não está definido para valores menores que zero. Mas,
+                <md>
+                   <mrow xml:id="ln-primitiva-negativa" tag="dstar">  \frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x}  </mrow>
+                </md>,
+
+               para <m>x \lt 0</m>. Então, 
+                        <me>
+                             \integral{\frac{1}{x}}{x}  \ln{(-x)} + C, \quad x \lt 0 
+                        </me>.
+                        
+
+            De <xref ref="ln-primitiva-positiva"/> e <xref ref="ln-primitiva-negativa"/> concluímos que <m>\ln{x}</m> é primitiva de  <m>\sfrac{1}{x}</m> se 
+            <m>x\gt 0</m> e que  <m>\ln{(-x)}</m> é primitiva de <m>1/x</m> se <m>x\lt 0</m>. Mais diretamente,
+            podemos afirmar que <m> \ln{|x|}</m> é uma primitiva de <m>1/x</m>. Portanto,
+            
+                <me>
+                             \integral{\frac{1}{x}}{x} = \ln{|x|} + C
+                </me>.
+             </p>
+         </solution>
+     </example>
+    <example>
+    <title><m>\integral{e^x}{x}</m></title>
+        <statement>
+            <p>Integral da função exponencial:
+                <me>\integral{e^x}{x}=e^x + C </me>
+                </p>
+        </statement>
+        <solution>
+            <p>
+                Como <m>\frac{\dd }{\dd x}[e^x]=e^x</m>, 
+                concluímos que a função exponencial é sua própria primitiva. Logo,
+
+                <me>
+                    \integral{e^x}{x}= e^x + C.
+                </me>                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="ex-integral-indefinida4">
+    <title><m>\integral{\sin{x}}{x}</m> e <m>\integral{\cos{x}}{x}</m></title>
+        <statement>
+            <p>
+            A integral das funções seno e cosseno:
+            <md xml:id="int-sen-cos">
+                
+                <mrow xml:id="int-sen">
+                    \integral{\sin{x}}{x}\amp =-\cos{x}+C
+                </mrow >
+                <mrow xml:id="int-cos"> \integral{\cos{x}}{x} \amp=\sin{x}+C </mrow>
+                
+              </md>  
+            </p>
+         </statement>
+        <solution>
+            <p>
+                Seguem do fato de
+                  <md>
+                        <mrow>  \frac{\dd }{\dd x}[\cos{x}]=-\sin{x} \amp \quad  \text{e} \quad \frac{\dd }{\dd x}[\sin{x}]=\cos{x}</mrow>
+                    </md>.
+               
+                
+            </p>
+        </solution>
+   
+    </example>
+
+    
+
+    
+        
+        <assemblage xml:id="thm-prop-integral-indefinida">
+        <title>Propriedadades da Integral Indefinida</title>
+            
+                <p>
+                    Se  <m>k</m> uma constante e <m>F(x)</m> e <m>G(x)</m> são primitivas de <m>f(x)</m> e <m>g(x)</m>, 
+                    respectvamente, então
+                    <ol label="I)" >
+                       <li xml:id="thm-prop-integral-indefinida-a">
+                        <p>
+                             <m>\small{\integral{kf(x)}{x}=k\integral{f(x)}{x}}</m> 
+                        </p>
+                       </li>
+                   
+                        <li xml:id="thm-prop-integral-indefinida-b">
+                        <p>
+                            <m>\small{\integral{\left[ f(x) + g(x)\right]}{x}=\integral{f(x)}{x} + \integral{g(x)}{x}}</m>
+                        </p>
+                        </li>
+                    
+                        <li xml:id="thm-prop-integral-indefinida-c" >
+                        <p>
+                            <m>\small{\integral{\left[f(x) - g(x)\right]}{x}=\integral{f(x)}{x} - \integral{g(x)}{x}}</m>
+                        </p>
+                        </li>
+                        
+                    </ol>
+                </p>
+            
+        </assemblage>        
+        <example xml:id="ex1-prop-integral-indefinida">
+        <title>Aplicando propriedades</title>
+            <statement>
+                <p>
+                    Determine cada integral:
+                        <task>
+                            <statement>
+                            <p>
+                                <m>\integral{2\cos{x}}{x}</m>.
+                            </p>
+                            </statement>
+                            <solution>
+                            <p>
+                            <md>
+                                <mrow> \integral{2\cos{x}}{x} \amp = 2\integral{\cos{x}}{x} \amp <xref ref="thm-prop-integral-indefinida-a" text="custom">Propriedade I</xref></mrow>
+                                <mrow> \amp = 2\sin{x} + C\amp \color{gray}{\frac{\dd}{\dd x}\left[\cos{x}\right]=\sin{x}} </mrow>
+                            </md>
+                                
+                            </p>
+                        </solution>
+                        
+                        </task>
+                        
+                        <task>
+                            <statement>
+                            <p>
+                                <m>\integral{(x^2+ e^x)}{x}</m>.
+                            </p>
+                            </statement>
+                            <solution>
+                            <p>
+                                <md>
+                                    <mrow> \integral{(x^2+ e^x)}{x}\amp = \integral{x^2}{x} + \integral{e^x}{x} \amp <xref ref="thm-prop-integral-indefinida-b" text="custom">Propriedade II</xref></mrow>
+                                    <mrow> \amp = \frac{x^3}{3} + e^x + C \amp <xref ref="prob-integral-funcao-potencia" text="title"></xref></mrow>
+                                </md>
+                            </p>
+                        </solution>                           
+                        </task>
+                        
+                </p>
+            </statement>            
+        </example>
+        <example xml:id="ex2-prop-integral-indefinida">
+        <title>Integração de funções polinomiais</title>
+         
+            <statement>
+            <p>
+             Determine cada integral.
+            <task>
+            <statement>
+                 <p>
+                     <m>\integral{(t^5 + 2t^3 - t + 1)}{t}</m>.
+                </p>
+            </statement>
+               
+            </task>           
+            
+            <solution>
+                <p>
+                    <md>
+                        <mrow> \integral{(t^5 + 2t^3 - t + 1)}{t}\amp = 
+                        \integral{t^5}{t} + 2\integral{t^3}{t} - \integral{t}{t} +
+                        \integral{1}{t}
+                        \amp <xref ref="thm-prop-integral-indefinida" text="title"></xref> 
+                        </mrow>
+                        <mrow> \amp = \frac{t^{6}}{6}  + \frac{t^{4}}{2} - \frac{t^{2} }{2}  + t + C \amp <xref ref="prob-integral-funcao-potencia" text="title"></xref></mrow>
+                    </md>
+                </p>
+            </solution>
+        <task>
+            <statement>
+            <p>
+                <m>\integral{(x^2+x)}{x}</m>.
+            </p>
+            </statement>
+            <solution>
+            <p>
+                <md>
+                    <mrow> \integral{(x^2+x)}{x}\amp = \integral{x^2}{x} + \integral{x}{x} \amp <xref ref="thm-prop-integral-indefinida-b" text="custom">Propriedade II</xref></mrow>
+                    <mrow> \amp = \frac{x^3}{3} + \frac{x^2}{2} + C \amp <xref ref="prob-integral-funcao-potencia" text="title"></xref></mrow>
+                </md>
+            </p>
+        </solution>                           
+        </task>
+         </p>               
+        </statement>    
+        </example>
+
+        <example xml:id="primitiva-segunda-derivada">
+        <title>Primitiva particular</title>
+            <statement>
+                <p>
+                    Encontre <m>F(x)</m> sabendo que <m>F''(x)=12x^2+6x-4</m> , <m>F(0)=4</m> e <m>F(1)=1</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    A família de primitivas de <m>F''(x)</m> é naturalmente 
+                    <md>
+                        <mrow> F'(x) \amp = 12\frac{x^4}{4} + 6\frac{x^2}{2} -4x+ C \amp  \color{gray}{\frac{\dd}{\dd x}\left[F'(x)\right]=F''(x)} </mrow>
+                        <mrow> \amp =4x^3 + 3x^2-4x+C </mrow>
+                    </md>
+                Assim como todas as primitivas de <m>F'(x)</m> tem a forma
+                <md>
+                    <mrow>F(x)\amp = 4\frac{x^4}{4} + 3\frac{x^3}{3} -4\frac{x^2}{2} + Cx + D \amp \color{gray}{\frac{\dd}{\dd x}\left[F(x)\right]=F'(x)} </mrow>
+                    <mrow> \amp = x^4 + x^3-2x^2+Cx+D </mrow>
+                </md>
+                Uma vez que <m>F</m> deve satisfazer <m>F(0)=4</m> e <m>F(1)=1</m> temos 
+                <md>
+                    <mrow>F(0)  \amp = 0+D =4 </mrow>
+                    <mrow>F(1) \amp = 1+ 1-2+C+4=1 </mrow>
+                </md>
+                que nos fornece <m>D=4</m> e <m>C=-3</m>. Por fim, encontramos
+                <md>
+                    <mrow>F(x) = x^4+ x^3-2x^2-3x+4 \amp </mrow>
+                </md>.
+                </p>
+            </solution>
+        </example>
+
+
+        <exercise xml:id="exe-trig">
+       
+            <statement>
+                <p>
+                    Determine <m>\integral{\left(\sin{t}+3\cos{t}\right)}{t}</m> 
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Revise o <xref ref="ex-integral-indefinida4"/> e <xref ref="thm-prop-integral-indefinida" text="title"/>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                   <m>-\cos{t} + 3\sin{t} + C</m> 
+                </p>
+            </answer>
+        </exercise>
+        
+        <exercise xml:id="exe-primitiva-segunda-derivada">
+        <statement>
+            <p>
+                Encontre <m>F(x)</m> sabendo que <m>F''(x)=\frac{6}{\sqrt{x}} + 3</m> , <m>F'(1)=12</m> e <m>F(4)=56</m>.
+            </p>
+        </statement>
+            <hint>
+                <p>
+                    Revise  o <xref ref="primitiva-segunda-derivada"/> e <xref  ref="prob-integral-funcao-potencia" text="title"></xref>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>\frac{3}{2}x^{2} + 8x^{\frac{3}{2}} - 3x - 20</m>
+                </p>
+            </answer>
+        </exercise>
+     </subsection>
+     <subsection xml:id="subsec-tabela-integrais">
+        <title>Tabela de integrais </title>
+  
+         <table xml:id="tabela1-integrais">
+        <title>Tabela de integração</title>
+            <tabular top="major" halign="left">
+                <row bottom="minor" halign="center">
+                    <cell>Fórmula</cell>                   
+                  
+                </row>
+                <row> <cell><m>\integral{}{x}=x+ C</m></cell></row>
+                <row> <cell><m>\integral{x^q}{x}=\frac{x^{q+1}}{q+1} + C,\,q\neq -1</m></cell></row>
+                <row> <cell><m>\integral{\cos{x}}{x}=\sin{x} + C</m></cell></row>
+               <row>  <cell><m>\integral{\sin{x}}{x}=-\cos{x} + C</m></cell></row>
+                <row>  <cell><m>\integral{\sec^2{x}}{x}=\tan{x} + C</m></cell></row>
+                <row>  <cell><m>\integral{\csc^2{x}}{x}=-\cot{x} + C</m></cell></row>
+                <row bottom="medium">
+                        <cell><m>\integral{\sec{x}\tan{x}}{x}=\sec{x} + C</m></cell></row>
+            </tabular>            
+        </table>
+
+    <table xml:id="tabela2-integrais">
+        <title>Tabela de integração</title>
+    <tabular top="major" halign="left">
+        <row bottom="minor" halign="center">
+            <cell>Fórmula</cell>                   
+            
+        </row>
+        <row > <cell><m>\integral{\csc{x}\cot{x}}{x}=-\csc{x} + C</m></cell></row>
+        <row> <cell><m>\integral{e^x}{x} = e^x + C</m></cell></row>
+        <row> <cell><m>\integral{b^x}{x}= \frac{b^x}{\ln{b}} + C\, (b>0, b\neq 1)</m></cell></row>
+        <row>  <cell><m>\integral{\frac{1}{x}}{x}=\ln{|x|} + C</m></cell></row>
+        <row>  <cell><m>\integral{\frac{1}{1+x^2}}{x}=\arctan{x} + C</m></cell></row>
+        <row>  <cell><m>\integral{\frac{1}{\sqrt{1-x^2}}}{x}=\arcsin{x} + C</m></cell></row>
+        <row bottom="medium">
+                <cell><m>\integral{\frac{1}{x\sqrt{x^2-1}}}{x}=\arcsec{|x|} + C</m></cell></row>
+    </tabular>            
+    </table>
+   
+
+<example xml:id="ex3-prop-integral-indefinida">
+<title>Reescrever antes de integrar</title>
+            <statement>
+                <p>
+                <task>
+                <statement>           
+                   <p>
+                        <m>\integral{\frac{x^2}{x^2+1}}{x}</m>.
+                    </p>
+                </statement>
+                <solution>
+                <p>Somando e subtraindo 1 do numerador do integrando, podemos reescrever a
+integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-integrais"/>. Os passos seguintes são ilustramos logo abaixo:</p>
+                    <p>
+                        <md>
+                            <mrow>\integral{\frac{x^2}{x^2+1}}{x} \amp = \integral{\left(\frac{x^2+1}{x^2+1}-\frac{1}{x^2+1}\right)}{x} \amp \color{gray}{\text{(reescrevendo o integrando)}}</mrow>
+                            <mrow> \amp =\integral{\left(1-\frac{1}{x^2+1}\right)}{x} </mrow>
+                            <mrow> \amp = \integral{1}{x} - \integral{\left(\frac{1}{x^2+1}\right)}{x} \quad \amp <xref ref="thm-prop-integral-indefinida-c" text="custom"> Propriedade III</xref></mrow>
+                            <mrow> \amp = x - \arctan{x} + C \quad  \quad \amp <xref ref="tabela2-integrais"/></mrow>
+                        </md>
+                        
+                    </p>
+                    </solution>    
+                </task>
+                
+                <task>
+                    <statement>
+                         <p>
+                         <m>\integral{\frac{x^2- 2x^4}{x^4}}{x}</m>.
+                     </p>
+                    </statement>
+                    
+                     <solution>
+                    <p>
+                       <md>
+                           <mrow>\integral{\frac{x^2+ 2x^4}{x^4}}{x} = \amp \integral{\left(\frac{1}{x^2}+2\right)}{x} \quad \amp \color{gray}{\text{(reescrevendo o integrando)}}</mrow>
+                            <mrow> \amp =\integral{x^{-2}}{x}-\integral{2}{x} \amp <xref ref="thm-prop-integral-indefinida-b" text="custom"> Propriedade II</xref></mrow>
+                            
+                            <mrow> \amp =\frac{x^{-1}}{-1}+2x + C  \amp <xref ref="tabela2-integrais"/></mrow>
+                            <mrow> \amp =-\frac{1}{x}+2x + C \amp \color{gray}{\text{(simplificando)}}</mrow>
+                       </md>
+                    </p>
+                </solution>  
+                </task> 
+               
+                </p>
+            </statement>
+            
+        </example>
+
+
+
+
+<example xml:id="ex4">
+<title> Identidades trionométricas</title>
+    <statement>
+        <p>
+          Determine <m>\integral{\frac{\cos{x}}{\sin^2{x}}}{x}</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <md>
+                <mrow> \integral{\frac{\cos{x}}{\sin^2{x}}}{x}\amp = \integral{\left(\frac{1}{\sin{x}}\frac{\cos{x}}{\sin{x}}\right)}{x} \quad \amp\color{gray}{\text{(reescrevendo o integrando)}}</mrow>
+                <mrow> \amp = \integral{\csc{x}\cot{x}}{x} \amp \color{gray}{\text{(identidades trigonométricas)}}</mrow> 
+                <mrow> \amp = -\csc{x} + C \quad \amp <xref ref="tabela2-integrais" /></mrow>
+            </md>
+        </p>
+    </solution>
+</example>
+
+
+<exercise>
+    <statement>
+        <p>
+            Determine <m>\integral{\frac{x^5+ 2x-1}{x^4}}{x}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Verifique que a igualdade  <me>\frac{x^5+ 2x-1}{x^4}=-\frac{1}{x^4}+ \frac{2}{x^3} + x</me>
+            é verdadeira.
+        </p>
+    </hint>
+    <answer>
+        <p>
+             <m>\frac{3x^5-6x+2}{6x^3} + C</m>
+        </p>
+    </answer>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Determine <m>\integral{\left(\frac{2}{x}+3e^x\right)}{x}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+           Consulte a <xref ref="tabela2-integrais"/>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>3 e^{x} + 2 \log{x} + C</m>
+        </p>
+    </answer>
+</exercise>
+
+  </subsection>
+
+
+<technology>
+<title>Usando o software SageMath</title>
+
+<introduction>
+    <p>
+    Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema
+    de computação algébrica  <url href="https://www.sagemath.org">SageMath</url>. Com uma sintaxe simples e baseada em <em>Python</em><fn>Linguagem de programação.</fn> 
+     O <em> SageMath</em> (abreviaremos como <em> Sage </em>) é <em>open-source</em> <fn>Uso gratuito e de código aberto.</fn> e tem sido bastante utilizado por professores e  estudantes de todos
+      os níveis para conferir cálculos algébricos complicados. Uma boa referência em língua portuguesa para este software pode ser
+      encontrado na página  <url href="https://www.sagectu.com.br"/>. Detalhes sobre os comandos são resumidos em 
+      <url href="https://sagectu.com.br/sagecell.html"/>.    
+    </p>
+</introduction>
+   
+<paragraphs>
+    <title>Sintaxe dos comandos</title>
+    <p>Com o <em> SageMath</em>, usando o comando <c>integral(f, x)</c> é possível 
+calcular a integral indefinida de <m>f(x)</m> em relação a variável <m>x</m>. 
+Por exemplo, o <xref ref="ex4"/> pode ser resolvida com o comando:
+<sage>
+    <input>
+        integral(x^2/(x^2+1), x)
+    </input>
+    <output>
+        x - arctan(x)
+    </output>
+</sage>
+Mas se a função estiver depedente da variável <m>t</m>, por exemplo, <m>f(t)=t^3-2t^2+ 3t + 1 </m>? Basta 
+declarar a variável <m>t</m> usando o comando <c>var('t')</c>. 
+
+<sage>
+    <input>
+    var('t')
+    integral(t^3-2*t^2+ 3*t + 1, t )
+    </input>
+    <output>
+       1/4*t^4 - 2/3*t^3 + 3/2*t^2 + t
+    </output>
+</sage>
+Para obter a integral com a notação matemática usual, o <em> Sage</em> possui o comando <c>show</c>, observe:
+<sage>
+    <input>
+    var('t')
+    F = integral(t^3-2*t^2+ 3*t + 1, t)
+    show(F)
+    </input>
+    <output>
+      
+            \frac{1}{4}  t^{4} - \frac{2}{3}  t^{3} + \frac{3}{2}  t^{2} + t        
+        
+    </output>
+</sage>
+</p>
+<p>
+    Nas células acima pode-se notar que os comandos <c>/</c>, <c>*</c>, <c>^</c> <c>+</c>, <c>-</c>, representam a operações de 
+    divisão, multiplicação, potenciação,  soma e subtração, respectvamente. Existe muitos outros comandos de operações 
+    matemáticas importantes, confira em <url href="https://sagectu.com.br/sagecell.html"/>.
+</p>
+
+<activity>
+    <statement>
+        <p>
+            Usando a célula do <em>Sage</em> abaixo, confira todas as integrais apresentadas até aqui.
+            Se a resposta produzida  não estiver de acordo com a sua, mostre que elas são equivalentes.
+            <sage>
+                <input>
+                    
+                </input>
+                <output>
+                    (for static output)
+                </output>
+            </sage>
+            
+        </p>
+    </statement>
+</activity>
+
+
+<activity>
+<title>Faça você mesmo</title>
+
+    <statement>
+        <p>
+            O avanço dos softwares matemáticos tornou possível calcular vários tipos de integrais 
+            que dariam muito trabalho se feitos à mão. 
+
+            <task>
+                <p>
+                    Usando o conteúdo aprendido até aqui encontre  <me>\integral{\frac{5x^2}{(1+x)^{1/3}}}{x} </me>.
+                </p>
+            </task>
+            <task>
+                <p>
+                    Use <em> Sage</em> para encontrar a integral do item anterior.
+                </p>
+            </task>
+            <sage>
+                <input>
+                    
+                </input>
+                <output>
+                    (for static output)
+                </output>
+            </sage>
+            
+        </p>
+    </statement>
+    
+</activity>
+</paragraphs>
+</technology>
+
+
+<exercises>
+<title>Exercícios</title>
+
+    <exercisegroup cols="2">
+    <introduction>
+    <p>
+       Encontre a primitiva das seguintes funções.
+    </p>
+   </introduction>
+        <exercise>
+            <m>f(x) = x - 3</m>
+        </exercise>
+        <exercise>
+            <m>f(x) = \dfrac{1}{2} + \dfrac{3}{4}x^2 - \dfrac{4}{5}x^3</m>
+        </exercise>
+        <exercise>
+            <m>f(x) = 7x^{2/5} + 8 x^{-4/5}</m>
+        </exercise>
+       <exercise>
+           <m>f(x) = \sqrt{2}</m>
+       </exercise>
+       <exercise>
+         <m>  f(x) = 3 \sqrt{x} - 2\sqrt[3]{x} </m>
+       </exercise>
+        <exercise>
+           <m> f(x) = \dfrac{1}{5} - \dfrac{2}{x}</m>
+        </exercise>
+        <exercise>
+           <m> f(\theta) = 2 \sin (\theta) - \sec^2(\theta)</m>
+        </exercise>
+        <exercise>
+          <m>f(x) = \dfrac{x^5 - x^3 + 2x}{x^4}</m>
+        </exercise>
+        <exercise>
+            <m>f(x) = \dfrac{1}{2}x^2 - 2x + 6</m>
+            
+        </exercise>
+        <exercise>
+         <m>f(x) = 8x^9 - 3 x^6 + 12 x^3</m>
+        </exercise>
+
+        <exercise>
+         <m> f(x) = x^{3,4} - 2x^{\sqrt{2}-1}</m>
+        </exercise>
+        <exercise>
+            <m>f(x) =e^2</m>
+        </exercise>
+        <exercise>
+            <m>f(x) = \sqrt[3]{x^2} + x \sqrt{x}</m>
+        </exercise>
+       
+        <exercise>
+           <m> f(x) = 2\sqrt{x} + 6 \cos x</m>
+        </exercise>
+        <exercise>
+            <m>f(t) = \dfrac{3t^4 - t^3+6t^2}{t^4}</m>
+        </exercise>
+        <exercise>
+            <m>f(x) = \dfrac{2}{1+x^2}</m>
+        </exercise>
+    </exercisegroup>
+<exercisegroup cols="2">
+<introduction>
+    <p>
+       Encontre as integrais indefinidas.  
+    </p>
+</introduction>
+
+<exercise>
+    <m>\displaystyle\int\sin{2x}\,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int \left(x^3-2\right)\,\dd x</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int\cos(x+1)\,\dd x</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int\left(t^2 + \dfrac{2}{t^2}\right)\,\dd t</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int\sin(x+1)\;\dd x</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int\left(1-\dfrac{1}{\sqrt[3]{x^2}}\right)\;\dd x</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int\dfrac{1}{e^t}\,\dd t</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int 4\sqrt{x}\left(x-3\right)\,\dd x</m>
+</exercise>
+ 
+</exercisegroup>
+</exercises>
+
+</section>
+
+
+<!--          inicio de nova seção               -->
+
+    <section xml:id="sec-eq-diferenciais">
+        <title>Equações Diferenciais</title>
+
+    <subsection xml:id="subsec-curvas-integrais">
+        <title>Curvas Integrais</title>
+        <definition xml:id="curvas-integrais">
+        Se <m>F(x)</m> é uma primitiva da função <m>f(x)</m> então os gráficos de <m>y=F(x)+C</m> 
+        são denominados  <term> curvas integrais</term> de <m>f(x)</m>.
+        </definition>
+        
+        <sidebyside widths="58% 40%" valigns="middle middle ">
+        <p>Na <xref ref="fig-familia-primitiva"/> mostramos as curvas integrais da função <m>f(x)=x^2</m>
+         para alguns valores da constante <m>C</m>.  Observe que as curvas integrais são translações 
+         <fn>Deslocamentos verticas e horizontais do gráfico de uma função conhecida.</fn> da curva <m>y=\frac{1}{3}x^3</m>.
+        </p>
+        <figure xml:id="fig-familia-primitiva">
+            <caption> Curvas integrais da função <m>f(x)=x^2</m>.</caption>
+            <image xml:id="sageplot-primitivas" >
+                <description>Teste</description>      
+                <sageplot>
+                    f = x^3/3; g = f + 1; h = f + 2 ; s = f - 1; t = f - 2
+                    a = -3; b = 3
+                    p1 = plot(f, (x, a, b),ymax=5.1, ymin=-5.1, axes_labels=['$x$', '$y$']) + text('$C=0$', (0.25, f(1)), fontsize=14)
+                    p2 = plot(g, (x, a, b), color='red') + text('$C=1$', (-0.5, g(1)), fontsize=14)
+                    p3 = plot(h, (x, a, b), color='green') + text('$C=2$', (-1.4, h(-1)), fontsize=14)
+                    p4 = plot(s, (x, a, b), color='magenta') + text('$C=-1$', (0.5, s(1.1)), fontsize=14)
+                    p5 = plot(t, (x, a, b), color='black') + text('$C=-2$', (0.4, t(0.95)), fontsize=14)
+                    p1 + p2 + p3 + p4 + p5
+                </sageplot>
+            </image>
+        </figure>
+        </sidebyside>
+    <example xml:id="ex1-curvas-integrais">
+    <title>Curvas integrais</title>
+        <statement>
+            <p>
+
+            <task>
+            <statement>
+                <p>
+                 Encontre a equação da curva integral, <m>y=y(x)</m>, da função <m>f(x)=x</m> que passe pelo ponto <m>(2,1)</m>.
+                </p>
+            </statement>
+               
+                <solution>
+                    <p>
+                        Segue da <xref ref="curvas-integrais"/> que a curva integral de um função <m>f(x)</m> é a 
+                        sua primitiva mais uma constante. Neste caso,
+
+                        <me>
+                            y(x)= \frac{x^2}{2} + C
+                        </me>.
+                        O próximo passo é encontra o valor de <m>C</m> que garanta que qua a curva integral passe pelo ponto 
+                        <m>(2,1)</m>. Para isso, fazemos
+                        <me>
+                            y(2)= \frac{2^2}{2} + C = 1
+                        </me>
+                        e obtemos <m>C=-1</m>. Portanto,
+                        <me>
+                            y=\frac{x^2}{2} -1
+                        </me>
+                        é a curva solicitada.
+                    </p>
+                </solution>
+            </task>
+            <task>
+            <statement>
+                <p>
+                    Encontre a equação da curva integral, <m>y=y(x)</m>,  da função <m>f(x)=x^2</m> que passe pelo ponto <m>(3,1)</m>.
+                </p>
+            </statement>
+                
+                <solution>
+                    <p>
+                        Uma vez que <m>\frac{x^3}{3}</m> é uma primitiva de <m>x^2</m>, a curva integral é dada por
+                        <me>
+                            y(x)= \frac{x^3}{3} + C
+                        </me>.
+                        O valor de <m>C</m> para que  a curva integral passe pelo ponto 
+                        <m>(2,1)</m> satisfaz
+                        <me>
+                            y(2)= \frac{3^3}{3} + C = 1
+                        </me>,
+                        logo <m>C=-8</m>. Portanto,
+                        <me>
+                            y=\frac{x^3}{3} -8
+                        </me>
+                        é a curva solicitada.
+                    </p>
+                    
+                </solution>
+            </task>
+                
+            </p>
+        </statement>
+        
+    </example>
+    <exercise>
+        <statement>
+            <p>
+                 Encontre a equação da curva integral, <m>y=y(x)</m>,  da função <m>f(x)=2x-2</m> que passe pelo ponto <m>(1,2)</m>.
+            </p>
+        </statement>
+        <hint>
+            <p>
+                Revise <xref ref="ex1-curvas-integrais"/>.
+            </p>
+        </hint>
+        <answer>
+            <p>
+                <m>y=x^2-2x+3</m>.
+            </p>
+        </answer>
+    </exercise>
+    </subsection>
+    <subsection xml:id="subsec-integral-ed">
+        <title>Integral e Equações diferenciais</title>
+    <paragraphs>
+    <statement>  
+       
+       
+     
+   
+    <p>Uma <term>equação diferencial</term>  é uma igualdade matemática que envolve   derivadas e uma função desconhecida <m>y(x)</m>. 
+    Por exemplo, a igualdade 
+    <md>
+        <mrow> \frac{\dd y}{\dd x} = x^2 </mrow>
+    </md>
+    é uma equação diferencial. Nesse caso, a função desconhecida <m>y(x)</m> pode ser encontrada usando a <xref ref="eq-integral-indefinida" text="custom">integral indefinida </xref> 
+   como a seguir
+    <md>
+        <mrow> y(x) = \integral{x^2}{x}=\frac{1}{3}x^3 +C.</mrow>
+    </md>
+    Portanto, dizemos que a função <m>y(x)=\frac{1}{3}x^3 +C</m> é uma <term> solução geral</term> da equação diferencial <m>\frac{\dd y}{\dd x} = x^2</m>.
+    De forma geral, dada uma função conhecida <m>f(x)</m> a igualdade
+    <assemblage xml:id="assemblage-eq-diferencial">        
+        <p>
+            <mdn>
+        <mrow xml:id="eq-diferencial"> \frac{\dd y}{\dd x} = f(x)</mrow>
+    </mdn>
+        </p>
+    </assemblage>
+       
+    é uma denominada <term> equação diferencial</term> e resolvê-la significa encontrar a função <m>y(x)</m> que  satisfaça <xref ref="eq-diferencial"/>. 
+    Isto é, obter a <xref ref="def-primitiva" text="custom"> primitiva </xref> de <m>f(x)</m>. Mais diretamente, a solução geral
+    da equação diferencial <xref ref="eq-diferencial"/> é dada por
+   </p>
+   </statement> 
+    </paragraphs>  
+        <assemblage xml:id="asse-sol-eq-diferencial"> 
+           
+        <p>
+            <mdn xml:id="sol-eq-diferencial">
+            <mrow> y(x)=\integral{f(x)}{x}</mrow>
+        </mdn>.
+        </p>
+    </assemblage>
+   
+<paragraphs>
+    <title>Resolvendo equações diferênciais</title>
+    
+
+<example xml:id="ex-diferencial-1">
+    
+    <statement>
+        <p>
+            Encontre a solução geral da equação diferencial  <m> \frac{\dd y}{\dd x} = \cos{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Já que <m>\sin{x}</m> é uma primitiva de <m>\cos{x}</m>, a solução para a equação diferencial é 
+            <me>
+                y(x) = \sin{x} + C.
+            </me>
+            
+        </p>
+    </solution>
+</example>
+<example xml:id="ex-diferencial-2">
+    <statement>
+        <p>
+            Resolva a equação diferencial <m> \frac{\dd y}{\dd x} = 2 + \sin{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Resolver a equação diferencial <m> \frac{\dd y}{\dd x} = 2 + \sin{x}</m> é equivalente a econcontrar 
+            a integral
+            <md>
+               <mrow>  y(x) \amp = \integral{\left(2+ \sin{x}\right)}{x} \amp \quad <xref ref="asse-sol-eq-diferencial" text="custom">Fórmula da solução geral </xref> </mrow>
+               <mrow> \amp =\integral{2}{x} + \integral{\sin{x}}{x}</mrow>
+               <mrow> \amp = 2x -\cos{x} + C</mrow>
+            </md>.            
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exer1-sol-geral">
+    <statement>
+        <p>
+            Encontre a solução geral da equação <m>\frac{\dd y}{\dd t}=10e^t</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Revise <xref ref="ex-diferencial-2"/>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+           <m> y(t)= 10e^t + C</m>.
+        </p>
+    </answer>
+</exercise>
+</paragraphs>
+<paragraphs>
+    <title>Problema de valor inicial</title>
+    
+
+<p>Frequentemente estamos interssados em encontrar uma única solução para a  equação diferencial. Por exemplo, no <xref ref="ex1-curvas-integrais"/> encontramos a equação para uma
+ <xref ref="curvas-integrais" text="custom"> curva integral</xref> que passa por <m>(2,1)</m>. O Problema de encontrar uma função    <m>y(x)</m>, que satisfaça <xref ref="eq-diferencial"/> e cuja curva integral 
+   passa pelo ponto <m>(x_0,y_0)</m>  é denominado    <term>problema de valor inicial </term> e geralmente apresentado da forma
+  
+  <assemblage xml:id="assemblage-">      
+      <p>
+          <mdn>
+      <mrow xml:id="eq-pvi">   \frac{\dd y}{\dd x}=f(x), \qquad y(x_0)=y_0</mrow>
+  </mdn>
+      </p>
+  </assemblage>
+  
+    </p>
+</paragraphs>
+<paragraphs>
+    <title>Resolvendo problemas de valor inicial</title>
+    
+
+    <example xml:id="ex1-pvi">
+        <statement>
+            <p>
+            Resolva o seguinte problema de valor inicial
+            <md>
+                <mrow> \frac{\dd y}{\dd x}=\cos{x}, \qquad y(0)=0 </mrow>
+            </md>.
+                
+            </p>
+        </statement>
+        <solution>
+            <p>
+                No <xref ref="ex-diferencial-1"/> encontramos a solução geral <m>y(x)=\sin{x}+C</m>
+                da equação diferencial <m>\frac{\dd y}{\dd x}=\cos{x}</m>. Para resolver o problema de valor inicial
+                deve-se obter o valor de <m>C</m> para que <m>y(0)=0</m>. Nota-se que <m>C=0</m>, pois 
+                <me>
+                    y(0)=\sin{0} + C=0
+                </me>.
+                Logo, a curva integral procurada é 
+                <me>
+                    y(x)=\sin{x}
+                </me>.             
+                
+            </p>
+        </solution>
+    </example>
+
+    <example xml:id="ex2-pvi">
+        <statement>
+            <p>
+             Resolva o seguinte problema de valor inicial
+            
+            <md>
+                <mrow> \frac{\dd y}{\dd x}= 2+ \sin{x} \qquad y(3)=5 </mrow>
+            </md>.
+                
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Sabe-se do <xref ref="ex-diferencial-2"/> que a solução geral <m>y(x)=2x - \cos{x} +C</m>
+                da equação diferencial <m> \frac{\dd y}{\dd x}= 2+ \sin{x}</m>. Como a curva deve satisfazer <m>y(3)=5</m>, obtemos
+                <me>
+                    y(3)=2\cdot 3-\cos{3} + C=5
+                </me>
+                de modo que <m>C</m> vale 
+                <me>
+                    C = 5+\cos{3}-6 \approx -1.99 \quad \color{gray}{\text{calculadora científica}}
+                </me>.
+                Portanto a solução é
+                <me>
+                    y(x)= 2x - \cos{x} - 1.99
+                </me>.
+                <figure xml:id="fig-pvi2">
+                    <caption>Curva integral <m>y(x)= 2x - \cos{x} - 1.99</m> que passa pelo ponto <m>(3,5)</m>. </caption>
+                    <image xml:id="curva-integra-pvi2" width="50%">
+                        
+                        <sageplot>
+                            P = plot(2*x-cos(x)-1.99, (x,-1, 4), axes_labels=['$x$', '$y$'], gridlines=True)
+                            P+=point((3,5),size=25)
+                            P+=text('(3,5)',(2.8,5.1)) 
+                            P
+                        </sageplot>
+                    </image>
+                </figure>
+            </p>
+        </solution>
+    </example>
+<exercise xml:id="exer-pvi-1">
+    <statement>
+                  
+        
+        <task>
+         <statement>
+             <p>
+             Encontre a solução do problema de valor inicial
+                 <me>\frac{\dd y}{\dd t}=10e^t, \quad y(0)=25</me>.
+             </p>
+         </statement>
+         
+           <hint>
+               <p>
+                   Revise <xref ref="exer1-sol-geral"/>.
+               </p>
+           </hint>
+           <answer>
+               <p>
+                   <m>10e^t + 15</m>
+               </p>
+           </answer>
+           </task>
+           <task>
+              <statement>
+                
+                  <p>
+                  Encontre a solução do problema de valor inicial
+                     <me> \frac{\dd y}{\dd t} = 2+ \sin{t}, \quad  y(0)=5</me>.
+                  </p>
+              </statement>
+              <hint>
+                  <p>
+                       Revise <xref ref="ex2-pvi"/>.
+                  </p>
+              </hint>
+              <answer>
+                  <p>
+                     <m>2t-\cos{t} + 6</m> 
+                  </p>
+              </answer>
+           </task>
+       
+    </statement>
+</exercise>
+</paragraphs>
+</subsection> 
+    <subsection xml:id="subsec-resolvendo-e-diferenciais">
+    <title>Campos de Direções</title>
+    <p>
+    Sabe-se que a inclinação da reta tangente à curva  <m>y=y(x)</m> em dado ponto <m>(x, y)</m> é dada por <m>\dd y/\dd x</m> para cada <m>x</m>.
+    A Equação <xref ref="eq-diferencial"/> revela que a inclinação das retas tangentes às curvas integrais de <m>f</m> no ponto <m>(x_0, y_0)</m> 
+    é exatamente  <m>f(x_0)</m>. Com isso é possível visualizar as "direções" das curvas integrais plotando pequenas porções de suas retas 
+    tangentes em cada ponto <m>(x,y)</m>  de uma região retangular. Como resultado teremos o que denominamos de <term>campo de direções</term>.
+    Na <xref first="fig-campo-direcoes" last="fig-campo-direcoes-curva"/> podemos observar que  mesmo não conhecendo a curva integral 
+    é possível ter a pespectiva geométrica do seu gráfico.
+    </p>
+    <sidebyside widths="45% 45%" valigns="middle middle" xml:id="fig">
+            <figure xml:id="fig-campo-direcoes">
+                <caption> Campo de direções das curvas integrais de <m>f(x)=x^2</m>.</caption>
+                <image xml:id="sageplot-campo-direcoes" width="50%">
+                          
+                    <sageplot>                  
+                    plot_slope_field(x^2, (-5,5), (-5,5), color='lightgray')
+                    </sageplot>
+                </image>
+            </figure>   
+    
+    
+            <figure xml:id="fig-campo-direcoes-curva">
+                <caption> Campo de direções e as curvas integrais da função <m>f(x)=x^2</m>.</caption>
+                <image xml:id="sageplot-campo-direcoes-curva" width="50%">
+                    <description>Teste</description>      
+                    <sageplot>
+                    f = x^3/3; g = f + 1; h = f + 2 ; s = f - 1; t = f - 2
+                    a = -3; b = 3
+                    p1 = plot(f, (x, a, b), ymax=5, ymin=-5) 
+                    p2 = plot(g, (x, a, b), color='red') 
+                    p3 = plot(h, (x, a, b), color='green')
+                    p4 = plot(s, (x, a, b), color='magenta') 
+                    p5 = plot(t, (x, a, b), color='black')                    
+                    p6 = plot_slope_field(x^2, (-5,5), (-5,5), color='lightgray')
+                    p1 + p2 + p3 + p4 + p5 + p6
+                    </sageplot>
+                </image>
+            </figure> 
+    </sidebyside>
+     
+     <technology xml:id="campos-curvas-sageinterativo">
+     <title>Faça você mesmo</title>
+    <figure xml:id="figure-interactive-campos">
+                    <caption>Curvas integrais e campos de direções</caption>
+
+                    <interactive xml:id="interactive-campos" platform="sage" width="100%" aspect="1:1.2" >
+                    <slate surface="sage">                    
+            @interact
+            def _(
+                    f=input_box(x^2 , width=20,  
+                    label="dy/dx ="), 
+                    x_range=range_slider(-10,10,1,(-5,5), label='[a, b]'),c = slider(-5, 5, 1,0, label='C'),
+                    direcoes = checkbox(False, label='Campo de Direções'), 
+                    familia =  checkbox(False, label='Curvas integrais')):
+
+                    a = x_range[0] ; b = x_range[1]
+                    F = integral(f, x)
+                    p = plot(F + c, (x, a , b), axes_labels=['x', 'y'], ymax=b, ymin=a, figsize=[5,4])
+                    F1 = function('F')(x)
+                    if familia==False:
+                        show(F1 == F + c)       
+                        
+                    
+                    if direcoes:
+                        p+= plot_slope_field(f, (a,b), (a,b), color="lightgrey")
+                    if familia:
+                        if c==0:
+                            print("Escolha C diferente de 0")
+                            return p.show()
+                        elif c>0:
+                            lst= srange(-c, c)
+                        else:
+                            lst= srange(c, -c)
+                        for c0 in lst:
+                            p+=plot(F + c0, (x, a , b), color = hue(c0/10),axes_labels=['x', 'y'], ymax=b, ymin=a)
+                        C = var('C')
+                        show(F1 == F + C)
+                    
+
+                    p.show()
+
+                    </slate>
+                    </interactive>
+                </figure>
+    </technology>
+
+    </subsection>
+   
+    <exercises xml:id="exercises-eq-diferencial">
+        <exercisegroup >
+        <introduction>
+            <p>
+                Determine a função <m> y=y(x)</m>, <m> x\in\mathbb{R}</m>, para cada condição dada.
+            </p>
+        </introduction>
+        <exercise>
+            <m>\frac{\dd y}{\dd x}=3x-1\quad \text{e} \quad y(0)=2</m>
+        </exercise>
+        <exercise>
+            <m>\frac{\dd y}{\dd x}=\cos{x} \quad \text{e} \quad y(0)=0</m>
+        </exercise>
+        <exercise>
+            <m>\frac{\dd y}{\dd x}=x^3-x+1 \quad \text{e}\quad  y(1)=1</m>
+        </exercise>
+        <exercise>
+            <m>\frac{\dd y}{\dd x}=e^{-x} \quad \text{e}\quad  y(0)=1</m>
+        </exercise>
+        <exercise>
+            <m>\frac{\dd y}{\dd x}=\frac{1}{x^2}\quad  \text{e}\quad  y(1)=1\quad (x>0)</m>
+        </exercise>
+        <exercise>
+           <m> \frac{\dd y}{\dd x}=3 + \frac{1}{x}\quad  \text{e}\quad  y(1)=2\quad(x>0)</m>
+        </exercise>
+        </exercisegroup>
+    <exercise>
+    <p>Encontre uma função <m>F</m> tal que <m> F(x) = x + \cos{x}</m> e, além disso, <m> F (0) = 1</m> e <m>F'(0) = 2</m>.</p>
+    </exercise>
+    <exercise>
+       <p>Mostre que <m>y=xe^{-x} + 2</m> é uma solução do problema de valor inicial</p>
+       <me>
+           \frac{\dd y}{\dd x} = (1-x)e^{-x}, \quad y(0)=2.
+       </me>       
+   </exercise>
+    <exercisegroup>
+    <introduction>
+        <p>
+        Encontre uma equação da curva que satisfaz as condições
+dadas.
+        </p>
+    </introduction>
+        <exercise>
+          <p>  Em cada ponto <m>(x, y)</m> da curva, a inclinação é <m> 2x + 1</m>; a curva
+passa pelo ponto <m>(−3, 0)</m>.</p>
+        </exercise>
+        <exercise>
+        <p>    Em cada ponto <m>(x, y)</m> da curva, a inclinação é <m> −\sin{x} </m>; a curva
+passa pelo ponto <m>(0, 2)</m>.</p>
+        </exercise>
+    </exercisegroup>
+
+
+ <exercisegroup>
+ <introduction>
+     <p>     
+         Use um recurso gráfico computacional (<xref ref="campos-curvas-sageinterativo"/>) para gerar um campo de direções de cada equação diferencial:
+     </p>
+ </introduction>
+ <exercise>
+    <p>  <m>\frac{\dd y}{\dd x} = x</m> na região
+<m> −5 \leq x \leq 5</m> e <m> −5 \leq y \leq 5.</m></p>
+</exercise>
+
+<exercise>
+    <p>  <m>\frac{\dd y}{\dd x} = \sin{x}</m> na região
+<m> −6 \leq x \leq 6</m> e <m> −6 \leq y \leq 6.</m></p>
+</exercise>
+
+<exercise>
+    <p>  <m>\frac{\dd y}{\dd x} = e^x</m> na região
+<m> −6 \leq x \leq 6</m> e <m> −2 \leq y \leq 2</m></p>
+</exercise>
+
+</exercisegroup>
+
+ <!-- <exercise>
+<webwork source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg" />
+</exercise>
+
+    -->
+
+
+   </exercises> 
+    </section>
+
+
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+
+
+    </article>
+
+</pretext>
+

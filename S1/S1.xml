@@ -99,7 +99,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <titlepage>
                 <author>
-                    <personname>Leon Silva</personname>
+                    <personname>Leon Silva</personname>                 
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+
+                <author>
+                    <personname>Deibsom Silva</personname>
                     <department>Departamento de Matemática</department>                    
                     <institution>Universidade Federal Rural de Pernanbuco</institution>
                 </author>
@@ -150,7 +156,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 para todo <m>x</m> em <m>I</m>.
                 </p>
             </statement>
-           
+        
         </definition> 
         <note>        
         <p>É comum reescrever <xref ref="eq-primitiva"/> como <m>F'(x)=f(x)</m>.</p>
@@ -173,10 +179,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </solution>
         </example>
         <example xml:id="ex-primitiva2">
-        <title>Primitivas mais gerais</title>
+        <title>Primitivas mais gerais </title>
             <statement>
                 <p>
-                    Considere <m>C \in \mathbb{R}</m>. A função <m>G(x)= \frac{1}{3}x^3 + C</m> é, também,
+                   <icon name="arrow-circle-right" /> Considere <m>C \in \mathbb{R}</m>. A função <m>G(x)= \frac{1}{3}x^3 + C</m> é, também,
                     uma primitiva de <m>f(x)=x^2</m> em <m>(-\infty, +\infty)</m>.
                 </p>
             </statement>
