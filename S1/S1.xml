@@ -926,7 +926,10 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
 
   </subsection>
 
-
+<subsubsection xml:id="subsubsec-teconologia">
+    <title>Tecnologia</title>
+    
+</subsubsection>
 <technology>
 <title>Usando o software SageMath</title>
 
@@ -1495,6 +1498,17 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     </statement>
 </exercise>
 </paragraphs>
+
+<subsubsection xml:id="subsubsec-videos-eq">
+    <title>Vídeos</title>
+    <ul>
+        <li>
+            <p>
+                Equações Diferenciais: <url href="https://youtu.be/xZYZkgOUM7s"> </url>
+            </p>
+        </li>
+    </ul>
+</subsubsection>
 </subsection> 
     <subsection xml:id="subsec-resolvendo-e-diferenciais">
     <title>Campos de Direções</title>
@@ -1582,6 +1596,19 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
                     </interactive>
                 </figure>
     </technology>
+
+    <subsubsection xml:id="subsubsec-videos">
+        <title>Vídeos</title>
+     <ul> 
+        
+        <li>
+            <p>
+               Campos de Direções: <url href="https://youtu.be/xZYZkgOUM7s"> </url>
+            </p>
+        </li>       
+       
+    </ul>
+    </subsubsection>
 
     </subsection>
    
