@@ -108,6 +108,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <personname>Deibsom Silva</personname>
                     <department>Departamento de Matemática</department>                    
                     <institution>Universidade Federal Rural de Pernanbuco</institution>
+                   
                 </author>
                 <date><today /></date>
             </titlepage>
@@ -117,25 +118,27 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </abstract>
 
         </frontmatter>
-
-        <introduction>
-            <p>Cálculo integral e equações diferenciais.</p>
-        </introduction>
+     
         <section xml:id="sec-integral-indefinida">
         <title> Integral Indefinida </title>
-         
-            <objectives>
+         <objectives>
             <title>Estrutura</title>
             
             <ol>
                 <li>
                     <p>
-                        Primeiro
+                        Calcular a primitiva de uma função.
                     </p>
                 </li>
                 <li>
                     <p>
-                        Segundo
+                        Definir a integral indefinida.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Introduzir o conceito de equações diferenciais.
                     </p>
                 </li>
             </ol>
@@ -145,6 +148,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <subsection xml:id="subsec-integral-indefinida">
            <title>Primitiva</title>
 
+         
         <definition xml:id="def-primitiva">
             <statement>
                 <p>
@@ -746,6 +750,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
         </exercise>
      </subsection>
+
      <subsection xml:id="subsec-tabela-integrais">
         <title>Tabela de integrais </title>
   
@@ -893,6 +898,31 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
         </p>
     </answer>
 </exercise>
+
+<subsubsection xml:id="subsubsec-videos">
+    <title>Vídeos</title>
+
+    <ul> 
+        
+        <li>
+            <p>
+                 Primitivas: <url href="https://youtu.be/LviZwZMVMgA"> </url>
+            </p>
+        </li>
+        <li>
+            <p>
+               Problema resolvido: <url href="https://youtu.be/bcD4aFioMFI"> <m>\integral{\frac{1}{x}}{x}</m></url>
+            </p>
+        </li>
+        <li>
+            <p>
+               Integral de funções básicas:  <url href="https://youtu.be/upYYltnJwn0"></url>
+            </p>
+        </li>
+       
+    </ul>
+    
+</subsubsection>
 
   </subsection>
 
