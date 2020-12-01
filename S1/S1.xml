@@ -174,7 +174,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <solution>
                 <p>
-                     De fato, uma vez que, para todo <m>x</m>,
+                     De fato, uma vez que para todo <m>x</m>,
                     <md>
                         <mrow> \frac{\dd}{\dd x}\left[\frac{1}{3}x^3\right]\amp = x^2</mrow>
                     </md>
@@ -211,7 +211,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <p>
                         Se <m>k</m> é constante então a derivada de <m>kx</m> é <m>k</m>, logo <m>F(x)=kx</m> é uma primitiva de <m>f(x)=k</m>. 
                         O mesmo acontence  para <m>G(x)=kx +1</m> e <m>H(x)=kx+\frac{1}{2}</m>. É fácil perceber que <m>kx+C</m>, na qual 
-                        <m>C</m> é uma constante, é uma primitiva de f para qualquer que seja o valor de <m>C</m>.
+                        <m>C</m> é uma constante, é uma primitiva de <m>f</m> para qualquer que seja o valor de <m>C</m>.
                     </p>
                 </solution>
             
@@ -225,11 +225,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Se  <m>F(x)</m> é uma primitiva de <m>f(x)</m> em um intervalo aberto <m>I</m> , então <m>F(x) + C</m>, 
                     seja qual for o valor da constante <m>C</m>, é também uma primitiva de <m>f(x)</m> em <m>I</m>.                 
                 </p>     
-              <proof>
+              <!-- <proof>
                 <p>
-                    Testando a prova
+                    
                 </p>
-            </proof>           
+            </proof>            -->
             </statement>
           
         </theorem>
@@ -265,7 +265,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
         <p>
         O símbolo de <term> diferencial</term> <m>\dd x</m> serve para identificar a variável independente.
-       Neste contexto, quando estamos diante da diferencial <m>\dd x</m> devemos calcular a integral
+       Neste contexto, quando estamos diante da diferencial<fn> saiba mais em <url href="https://pt.wikipedia.org/wiki/Diferencial_(infinitesimal)">wikipedia</url></fn>   <m>\dd x</m> devemos calcular a integral
        em relação a <m>x</m>, assim como <m>\dd t</m> indica integração em relação a variável <m>t</m>.
         </p>
         </statement>
@@ -348,7 +348,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <md>
                   <mrow>   \frac{\dd }{\dd x}\left[3\left(\frac{x^2}{2}\right) + x+ C\right]= 3x+1 \amp \quad \color{gray}{(\text{veja Equação} \,\,  <xref ref="eq-primitiva"/>)}</mrow>
                 </md>.
-            A condição <m> F(2)=4</m> nos fornece a possibilidade de detrminar o valor de <m>C</m>
+            A condição <m> F(2)=4</m> fornece a possibilidade de detrminar o valor de <m>C</m>
             fazendo
              <me>
                 F(2)=   3\left(\frac{2^2}{2}\right) + 2 + C = 4
@@ -384,7 +384,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                  
                  <solution>
                     <p>
-                        O integrando é uma função potência, então basta usar a <xref ref="prob-integral-funcao-potencia" text="custom"> fórmula adequada</xref> e obter
+                        O integrando é uma função potência, então basta usar a fórmula da <xref ref="prob-integral-funcao-potencia" text="title"></xref> e obter
                         <m>\frac{t^8}{8} + C</m>.
                         
                     </p>
@@ -848,7 +848,7 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
 <title> Identidades trionométricas</title>
     <statement>
         <p>
-          Determine <m>\integral{\frac{\cos{x}}{\sin^2{x}}}{x}</m>
+          Determine <m>\integral{\frac{\cos{x}}{\sin^2{x}}}{x}</m>.
         </p>
     </statement>
     <solution>
@@ -894,7 +894,7 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
     </hint>
     <answer>
         <p>
-            <m>3 e^{x} + 2 \log{x} + C</m>
+            <m>3 e^{x} + 2 \ln{|x|} + C</m>
         </p>
     </answer>
 </exercise>
@@ -906,7 +906,7 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
         
         <li>
             <p>
-                 Primitivas: <url href="https://youtu.be/LviZwZMVMgA"> </url>
+                 Primitivas: <url href="https://youtu.be/LviZwZMVMgA">  </url>
             </p>
         </li>
         <li>
