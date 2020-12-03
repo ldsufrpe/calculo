@@ -1639,7 +1639,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
         </exercise>
         </exercisegroup>
     <exercise>
-    <p>Encontre uma função <m>F</m> tal que <m> F(x) = x + \cos{x}</m> e, além disso, <m> F (0) = 1</m> e <m>F'(0) = 2</m>.</p>
+    <p>Encontre uma função <m>F</m> tal que <m> F''(x) = x + \cos{x}</m> e, além disso, <m> F (0) = 1</m> e <m>F'(0) = 2</m>.</p>
     </exercise>
     <exercise>
        <p>Mostre que <m>y=xe^{-x} + 2</m> é uma solução do problema de valor inicial</p>
