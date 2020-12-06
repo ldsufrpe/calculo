@@ -906,12 +906,25 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
         
         <li>
             <p>
-                 Primitivas: <url href="https://youtu.be/LviZwZMVMgA">  </url>
+                Conceito de Primitivas: <url href="https://youtu.be/LviZwZMVMgA">  </url>
             </p>
         </li>
+        
         <li>
             <p>
-               Problema resolvido: <url href="https://youtu.be/bcD4aFioMFI"> <m>\integral{\frac{1}{x}}{x}</m></url>
+                Resolvendo <url href="https://youtu.be/f1epDo4u7bE"> <m>\integral{(3x^2 - 2x)}{x}</m> e <m>\integral{e^x}{x}.</m> </url>
+            </p>
+        </li>
+        
+        <li>
+            <p>
+                Integrais de funções constantes: <url href="https://youtu.be/28RKYYlVaK4"></url>
+            </p>
+        </li>
+
+        <li>
+            <p>
+              Resolvendo <url href="https://youtu.be/bcD4aFioMFI"> <m>\integral{\frac{1}{x}}{x}</m></url>
             </p>
         </li>
         <li>

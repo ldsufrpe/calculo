@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-12-05T16:58:06-03:00       *-->
+<!--*       on 2020-12-06T16:30:14-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,21 +14,58 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>A substituição \(x=3\tan{u}\text{,}\) fornece</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\dd x = \left(\frac{3}{\cos^2{u}}\right)\dd u\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Daí,</p>
+<p>Novamente o integrando sugere a substituição \(x=7\sin{u}\text{,}\) de modo que \(\dd x= 7\cos{u}\,\dd u\text{.}\) Dessa forma,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integral{\frac{1}{x^2+9}}{x}\amp =\integral{\left(\frac{1}{9 + 9\tan^2{u}}\right)\left(\frac{3}{\cos^2{u}}\right)}{u} \\
-\amp = \frac{1}{3}\integral{\frac{1}{\left( \frac{\sin^2{u}}{\cos^2{u}}+1\right)\cos^2{u}}} {u}\\
-\amp =\frac{1}{3}\integral{\frac{1}{\sin^2{u}+ \cos^2{u}}}{u}=\frac{1}{3}\integral{1}{u} \\
-\amp = \frac{1}{3}u+ C=\frac{1}{3}\arctan{\left(\frac{x}{3}\right)} + C\text{.}
+\integral{\frac{\sqrt{49-x^2}}{x^2}}{x}\amp = \integral{\frac{7\cos{u}\sqrt{49-49\sin^2{u}}}{49\sin^2{u}}}{u} \\
+\amp = \integral{\frac{\cos^2{u}}{\sin^2{u}}}{u} \\
+\amp = \integral{\cot^2{u}}{u} \amp \ctm{\cot^2{u} = \frac{\cos^2{u}}{\sin^2{u}}.}  \\
+\amp = \integral{(\csc^2{u}-1)}{u} \amp \ct{tabela de integrais.}\\
+\amp = -\cot{u}-u + C 
 \end{align*}
 </div>
-<p data-braille="continuation">A última igualdade acima segue do fato de que \(u= \arctan{\left(\frac{x}{a}\right)}\) se \(x=a\tan{x}\text{,}\) com \(-\pi/2\leq u\leq  \pi/2\text{.}\)</p>
+<p data-braille="continuation">Antes de voltar à variável \(x\text{,}\) note que  \(x=7\sin{u}\) implica na igualdade \(\sin{u} = \frac{x}{7}\) que quando cada lado é elevado ao  quadrado torna-se</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+\sin{u}^2 = \frac{x^2}{49} \text{.}
+\end{gather*}
+</div>
+<p data-braille="continuation">De <a class="xref" data-knowl="./knowl/idf.html" title="Equação 1.1">(1.1)</a> segue que</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+\frac{x^2}{49} + \cos^2{u} = 1 
+\end{gather*}
+</div>
+<p data-braille="continuation">o que fornece</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+\cos^2{u} = 1 - \frac{x^2}{49} = \frac{49-x^2}{49} \text{.}
+\end{gather*}
+</div>
+<p data-braille="continuation">Já que  \(\cos{u}\geq 0\) em \(-\pi/2\leq u\leq  \pi/2 \text{,}\) a igualdade acima se reduz a expressão</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+\cos{u} =  \frac{\sqrt{ 49-x^2}}{7}
+\end{gather*}
+</div>
+<p data-braille="continuation">Finalmente,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\cot{u} \amp = \frac{1}{\tan{u}}=\frac{\cos{u}}{\sin{u}}  \\
+\amp  = \frac{\sqrt{49-x^2}}{x}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Voltando a varável \(x\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+-\cot{u} - u \amp = -\frac{\sqrt{49-x^2}}{x} - \arcsin{\frac{x}{7}} \text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">logo,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integral{\frac{\sqrt{49-x^2}}{x^2}}{x}\amp = -\frac{\sqrt{49-x^2}}{x} - \arcsin{\frac{x}{7}} + C \text{.}
+\end{align*}
+</div>
 </div></body>
 </html>
