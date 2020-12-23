@@ -999,19 +999,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <ul>
     <li>
         <p>
-          Decomposição por frações parciais:  <url href="https://youtu.be/rsrzFDqeJgU"> <m>\frac{x^2-2x-37}{x^2-3x-40}</m></url>  
+          Decomposição por frações parciais:  <url href="https://youtu.be/rsrzFDqeJgU"> <m>\dfrac{x^2-2x-37}{x^2-3x-40}</m></url>  
         </p>
     </li>
 
     <li>
         <p>
-         Decomposição por frações parciais:  <url href="https://youtu.be/yF0mw1bNL0U"> <m>\frac{10x^2+12x+20}{x^3-8}</m></url>   
+         Decomposição por frações parciais:  <url href="https://youtu.be/yF0mw1bNL0U"> <m>\dfrac{10x^2+12x+20}{x^3-8}</m></url>   
         </p>
     </li>
 
      <li>
         <p>
-         Decomposição por frações parciais:  <url href="https://youtu.be/JNjFCvNomEE"> <m>\frac{6x^2-19x+15}{(x-1)(x-2)^2}</m></url>   
+         Decomposição por frações parciais:  <url href="https://youtu.be/JNjFCvNomEE"> <m>\dfrac{6x^2-19x+15}{(x-1)(x-2)^2}</m></url>   
         </p>
     </li>
 </ul>
