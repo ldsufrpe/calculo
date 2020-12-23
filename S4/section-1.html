@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-24T14:39:22-03:00       *-->
+<!--*       on 2020-12-22T22:55:01-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -46,18 +46,18 @@ MathJax.Hub.Config({
 </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Avalie (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_red_blue.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">[skip-to-content]</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
 \newcommand{ctm}[1]{\color{gray}{#1}}
 
 \newcommand{\doubler}[1]{2#1}
@@ -86,7 +86,23 @@ MathJax.Hub.Config({
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-parts-frac-parciais.html" title="Anterior">Vol</a><a id="upbutton" class="up-button button toolbar-item" href="calc-parts-frac-parciais.html" title="Acima">Subir</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-parts-frac-parciais.html" title="Anterior">Vol</a><a id="upbutton" class="up-button button toolbar-item" href="calc-parts-frac-parciais.html" title="Acima">Subir</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a></span>
+</div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-parts-frac-parciais.html" title="Anterior">Vol</a><a class="up-button button toolbar-item" href="calc-parts-frac-parciais.html" title="Acima">Subir</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a>
@@ -99,6 +115,7 @@ MathJax.Hub.Config({
 <a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Técnicas de Integração</span></a><ul>
 <li><a href="section-1.html#sec-integral-partes" data-scroll="sec-integral-partes">Integração por Partes</a></li>
 <li><a href="section-1.html#subsec-fracoes-parciais" data-scroll="subsec-fracoes-parciais">Integração por Frações Parciais</a></li>
+<li><a href="section-1.html#subsec-sugest%C3%A3o-de-videos" data-scroll="subsec-sugestão-de-videos">Sugestão de Vídeos</a></li>
 <li><a href="section-1.html#exercises-integral-por-partes" data-scroll="exercises-integral-por-partes">Exercícios</a></li>
 </ul>
 </li>
@@ -221,7 +238,7 @@ v\amp= \integral{e^x}{x}=e^x,  \\
 \integral{x^2e^x}{x}\amp = x^2e^x-\integral{2xe^x}{x} \amp \ct{Integração por partes nª 1.}\label{vez1}\tag{\(\star\)}
 \end{align}
 </div>
-<p data-braille="continuation">Para calcular a integral do lado direito de <a class="xref" data-knowl="./knowl/vez1.html" title="[mrow]">(\(\star\))</a>, precisamos apricar novamente a fórmula de integração por partes. Para isso, escolhemos \(\dd v = e^x\,\dd x\) e \(u=2\dd x\text{.}\) Logo,</p>
+<p data-braille="continuation">Para calcular a integral do lado direito de <a class="xref" data-knowl="./knowl/vez1.html" title="Equação">(\(\star\))</a>, precisamos apricar novamente a fórmula de integração por partes. Para isso, escolhemos \(\dd v = e^x\,\dd x\) e \(u=2\dd x\text{.}\) Logo,</p>
 <div class="displaymath">
 \begin{align*}
 v\amp= \integral{e^x}{x}=e^x,  \\
@@ -234,7 +251,7 @@ v\amp= \integral{e^x}{x}=e^x,  \\
 \integral{2xe^x}{x} \amp = 2xe^x - \integral{2e^x}{x} \amp  \ct{Integração por partes nª 2}\text{.}\label{vez2}\tag{\(\star\star\)}
 \end{align}
 </div>
-<p data-braille="continuation">Finalmente, a substituição de  <a class="xref" data-knowl="./knowl/vez2.html" title="[mrow]">(\(\star\star\))</a> em <a class="xref" data-knowl="./knowl/vez1.html" title="[mrow]">(\(\star\))</a> fornece</p>
+<p data-braille="continuation">Finalmente, a substituição de  <a class="xref" data-knowl="./knowl/vez2.html" title="Equação">(\(\star\star\))</a> em <a class="xref" data-knowl="./knowl/vez1.html" title="Equação">(\(\star\))</a> fornece</p>
 <div class="displaymath">
 \begin{align*}
 \integral{x^2e^x}{x} \amp = x^2e^x-\integral{2xe^x}{x} \\
@@ -273,7 +290,7 @@ v\amp = \integral{\cos{x}}{x}= \sin{x}  \\
 \integral{e^x\cos{x}}{x}\amp = e^x\sin{x}-\integral{e^x\sin{x}}{x}  \amp  \ct{Integração por partes nª 2} \text{.}\label{vez22}\tag{1.3}
 \end{align}
 </div>
-<p data-braille="continuation">Substituindo  <a class="xref" data-knowl="./knowl/vez22.html" title="[mrow] 1.3">(1.3)</a> em <a class="xref" data-knowl="./knowl/vez12.html" title="[mrow] 1.1">(1.1)</a>, obtemos</p>
+<p data-braille="continuation">Substituindo  <a class="xref" data-knowl="./knowl/vez22.html" title="Equação 1.3">(1.3)</a> em <a class="xref" data-knowl="./knowl/vez12.html" title="Equação 1.1">(1.1)</a>, obtemos</p>
 <div class="displaymath">
 \begin{align*}
 \integral{e^x\sin{x}}{x} \amp = -e^x\cos{x} + e^x\sin{x}-\integral{e^x\sin{x}}{x}\text{.}
@@ -445,7 +462,7 @@ v\amp= \integral{x^2}{x}=\frac{x^3}{3},  \\
 x^2-x+6=(x-3)(x+2)
 \end{equation*}
 </div>
-<p data-braille="continuation">suguere uma decomposição da forma</p>
+<p data-braille="continuation">sugere uma decomposição da forma</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{x+7}{x^2-x+6} = \frac{A}{x-3}+\frac{B}{x+2}.
@@ -499,7 +516,7 @@ A+B =1\amp \text{.}
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-frac-2"><article class="example example-like"><p id="p-57">Determine \(\integral{\frac{10x-2x^2}{(x-1)^2(x+3)}}{x}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-58">A expressão \((x-1)^2(x+3)\) contém um fator linear distinto e outro fator linear repetido. Logo, a <a class="xref" data-knowl="./knowl/assemblage-fracoes-parciais.html" title="[assemblage]: Decomposição em frações parciais">decomposição por frações parciais</a> suguere</p>
+<p id="p-58">A expressão \((x-1)^2(x+3)\) contém um fator linear distinto e outro fator linear repetido. Logo, a <a class="xref" data-knowl="./knowl/assemblage-fracoes-parciais.html" title="[assemblage]: Decomposição em frações parciais">decomposição por frações parciais</a> sugere</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{10x-2x^2}{(x-1)^2(x+3)} = \frac{A}{x-1} + \frac{B}{(x-1)^2} + \frac{C}{x+3}
@@ -637,47 +654,54 @@ C-2B \amp =-1
 <p id="p-71">Determine o número de pessoas infectadas após 100 horas.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-72">depois</p></div></div>
-</div></article></article></section><section class="exercises" id="exercises-integral-por-partes"><h3 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+</div></article></article></section><section class="subsection" id="subsec-sugestão-de-videos"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Sugestão de Vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-15"><p id="p-73">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/rsrzFDqeJgU" target="_blank">\(\frac{x^2-2x-37}{x^2-3x-40}\)</a></p></li>
+<li id="li-16"><p id="p-74">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/yF0mw1bNL0U" target="_blank">\(\frac{10x^2+12x+20}{x^3-8}\)</a></p></li>
+<li id="li-17"><p id="p-75">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/JNjFCvNomEE" target="_blank">\(\frac{6x^2-19x+15}{(x-1)(x-2)^2}\)</a></p></li>
+</ul></section><section class="exercises" id="exercises-integral-por-partes"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.4</span> <span class="title">Exercícios</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-1">
-<div class="introduction" id="introduction-4"><p id="p-73">Use a técnica de integração por partes para calcular as seguintes integrais indefinidas.</p></div>
+<div class="introduction" id="introduction-4"><p id="p-76">Use a técnica de integração por partes para calcular as seguintes integrais indefinidas.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-74">\(\integral{te^{2t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-75">\(\integral{x^2e^{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-76">\(\integral{t\sin{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-77">\(\integral{x^2\sin{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-78">\(\integral{y\ln{y}}{y}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-79">\(\integral{x^3\ln{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-80">\(\integral{(\ln{y})^2}{y}\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-81">\(\integral{\sin^2{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-82">\(\integral{\frac{y}{e^y}}{y}\)</p></article>
+<p id="p-77">\(\integral{te^{2t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-78">\(\integral{x^2e^{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-79">\(\integral{t\sin{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-80">\(\integral{x^2\sin{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-81">\(\integral{y\ln{y}}{y}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-82">\(\integral{x^3\ln{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-83">\(\integral{(\ln{y})^2}{y}\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-84">\(\integral{\sin^2{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-85">\(\integral{\frac{y}{e^y}}{y}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-2">
-<div class="introduction" id="introduction-5"><p id="p-83">Use a técnica de integração por partes e o Teorema Fundamental do Cálculo para calcular as seguintes integrais definidas.</p></div>
+<div class="introduction" id="introduction-5"><p id="p-86">Use a técnica de integração por partes e o Teorema Fundamental do Cálculo para calcular as seguintes integrais definidas.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-84">\(\integrald{xe^x}{0}{1}{x}\)</p></article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-85">\(\integrald{\ln t}{1}{5}{t}\)</p></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-86">\(\integrald{e^x\cos{x}}{0}{\frac{\pi}{2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-87">\(\integrald{ye^{-y}}{0}{1}{y}\)</p></article>
+<p id="p-87">\(\integrald{xe^x}{0}{1}{x}\)</p></article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-88">\(\integrald{\ln t}{1}{5}{t}\)</p></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-89">\(\integrald{e^x\cos{x}}{0}{\frac{\pi}{2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-90">\(\integrald{ye^{-y}}{0}{1}{y}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-3">
-<div class="introduction" id="introduction-6"><p id="p-88">Use a técnica a frações parciais para calcular as seguintes integrais.</p></div>
+<div class="introduction" id="introduction-6"><p id="p-91">Use a técnica a frações parciais para calcular as seguintes integrais.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<p id="p-89">\(\integral{\frac{x + 2}{x^{2} - 5x + 6}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<p id="p-90">\(\integral{\frac{x + 1}{x^{2} + 4x + 4}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<p id="p-91">\(\integral{\frac{4{\left(x + 1\right)}}{2x^{2} + 3x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
-<p id="p-92">\(\integral{\frac{x^2+2}{x^2-3x+2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<p id="p-93">\(\integral{\frac{3x}{x^{2} + 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
-<p id="p-94">\(\integral{\frac{t-2}{t^2+t^4}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
-<p id="p-95">\(\integral{\frac{3x^{2} + 1}{x^{3} + x^{2} - 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
-<p id="p-96">\(\integral{\frac{x^{2} + 2x + 3}{x^{3} + 2x^{2} - x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
-<p id="p-97">\(\integral{\frac{x^{2} + 2x + 1}{x^{3} + 4x^{2} + 5x + 2}}{x}\)</p></article>
+<p id="p-92">\(\integral{\frac{x + 2}{x^{2} - 5x + 6}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-93">\(\integral{\frac{x + 1}{x^{2} + 4x + 4}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-94">\(\integral{\frac{4{\left(x + 1\right)}}{2x^{2} + 3x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-95">\(\integral{\frac{x^2+2}{x^2-3x+2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-96">\(\integral{\frac{3x}{x^{2} + 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="p-97">\(\integral{\frac{t-2}{t^2+t^4}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="p-98">\(\integral{\frac{3x^{2} + 1}{x^{3} + x^{2} - 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<p id="p-99">\(\integral{\frac{x^{2} + 2x + 3}{x^{3} + 2x^{2} - x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p id="p-100">\(\integral{\frac{x^{2} + 2x + 1}{x^{3} + 4x^{2} + 5x + 2}}{x}\)</p></article>
 </div>
 </div></section></section></div></main>
 </div>

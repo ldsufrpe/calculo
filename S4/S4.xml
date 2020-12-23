@@ -682,6 +682,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </p>
 </assemblage>
 
+
+
+
 <example xml:id="ex-frac-1a">
 <title>Determinando frações parciais</title>
     <statement>
@@ -691,7 +694,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </statement>
     <solution>
         <p>
-        De acordo com a <xref ref="assemblage-fracoes-parciais" text="custom">decomposição por frações parciais</xref>, a fatoração <me>x^2-x+6=(x-3)(x+2)</me> suguere uma decomposição 
+        De acordo com a <xref ref="assemblage-fracoes-parciais" text="custom">decomposição por frações parciais</xref>, a fatoração <me>x^2-x+6=(x-3)(x+2)</me> sugere uma decomposição 
         da forma  
        
           <me>
@@ -734,6 +737,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </solution>
 </example> -->
+
 
 <exercise xml:id= "exer-frac-1a">
     <statement>
@@ -787,7 +791,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <solution>
         <p>
         A expressão <m>(x-1)^2(x+3)</m> contém um fator linear distinto e outro fator linear repetido. Logo, 
-        a <xref ref="assemblage-fracoes-parciais" text="custom">decomposição por frações parciais</xref> suguere 
+        a <xref ref="assemblage-fracoes-parciais" text="custom">decomposição por frações parciais</xref> sugere 
 
 
            <me>
@@ -988,6 +992,32 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     
  </subsection>
 
+
+<subsection xml:id="subsec-sugestão-de-videos">
+    <title>Sugestão de Vídeos</title>
+
+<ul>
+    <li>
+        <p>
+          Decomposição por frações parciais:  <url href="https://youtu.be/rsrzFDqeJgU"> <m>\frac{x^2-2x-37}{x^2-3x-40}</m></url>  
+        </p>
+    </li>
+
+    <li>
+        <p>
+         Decomposição por frações parciais:  <url href="https://youtu.be/yF0mw1bNL0U"> <m>\frac{10x^2+12x+20}{x^3-8}</m></url>   
+        </p>
+    </li>
+
+     <li>
+        <p>
+         Decomposição por frações parciais:  <url href="https://youtu.be/JNjFCvNomEE"> <m>\frac{6x^2-19x+15}{(x-1)(x-2)^2}</m></url>   
+        </p>
+    </li>
+</ul>
+
+    
+</subsection>
 
 
 
