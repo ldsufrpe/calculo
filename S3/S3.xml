@@ -535,7 +535,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <solution>
                         <p>
                            Uma primitiva de <m>\frac{1}{x}</m> pode ser <m>F(x)=\ln|{|x|}</m>, e, já que <m>3\leq x\leq 6</m>, podemos escrever 
-                           <m>F(x)=\ln|{x}</m>.Assim,
+                           <m>F(x)=\ln|{x}</m>. Assim,
 
                            <md>
                                <mrow>\integrald{\frac{1}{x}}{3}{6}{x} \amp = \ln{x}\Biggr\rvert_3^6 =\ln{6} - \ln{3} </mrow>
