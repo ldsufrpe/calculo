@@ -538,8 +538,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                            <m>F(x)=\ln|{x}</m>.Assim,
 
                            <md>
-                               <mrow>\integrald{\frac{1}{x}}{3}{6}{x} \amp = \ln{x}\Biggr\rvert_3^6 =\ln{6} - \ln{2} </mrow>
-                               <mrow> \amp = \ln{\frac{6}{2}} = \ln{2} \approx 0.6931 </mrow>
+                               <mrow>\integrald{\frac{1}{x}}{3}{6}{x} \amp = \ln{x}\Biggr\rvert_3^6 =\ln{6} - \ln{3} </mrow>
+                               <mrow> \amp = \ln{\frac{6}{3}} = \ln{2} \approx 0.6931 </mrow>
                            </md>
                         </p>
                     </solution>
