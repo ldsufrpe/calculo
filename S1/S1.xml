@@ -899,7 +899,7 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
     </answer>
 </exercise>
 
-<subsubsection xml:id="subsubsec-videos">
+<subsubsection xml:id="subsubsec-videos-1">
     <title>Vídeos</title>
 
     <ul> 
@@ -1610,7 +1610,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
                 </figure>
     </technology>
 
-    <subsubsection xml:id="subsubsec-videos">
+    <subsubsection xml:id="subsubsec-2">
         <title>Vídeos</title>
      <ul> 
         
