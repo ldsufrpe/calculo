@@ -11,6 +11,6 @@ por Leon Silva e Deibsom Silva
 - [S7 - Integral Aproximada](https://ldsufrpe.github.io/calculo/S7/). (*Em construção*)
 - [S8 - Integral Imprópria](https://ldsufrpe.github.io/calculo/S8/).
 - [S9 - Mais aplicações de integral](https://ldsufrpe.github.io/calculo/S9/). (*Em construção*)
-- [S10 - O Logaritmo Definido como uma Integral](https://ldsufrpe.github.io/calculo/S10/). (*Em construção*)
+- [S10 -Métodos de Resolução de Equações Diferenciais Ordinárias](https://ldsufrpe.github.io/calculo/S10/). (*Em construção*)
 
 🔗
