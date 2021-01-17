@@ -1,12 +1,17 @@
 por Leon Silva e Deibsom Silva
 
 
-### Pré-Cálculo em 10 Semanas
-- [S1 - O Conceito de Funções](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+### Pré-Cálculo em 10 Semanas 
+- [S1 - Funções Reais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 
 
 ### Cálculo Diferencial em 10 Semanas
 - [S1 - O Limite de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [S2 - Propriedades dos Limites](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [S3 - Continuidade e Propriedades das Funções Contínuas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S4 - Limites Infinitos e Limites no Infinito](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S5 - A Dereivada de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S6 - Regras de Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 
 
 
