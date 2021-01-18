@@ -10,7 +10,7 @@ por Leon Silva e Deibsom Silva
 - [S2 - Propriedades dos Limites](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S3 - Continuidade e Propriedades das Funções Contínuas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [S4 - Limites Infinitos e Limites no Infinito](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
-- [S5 - A Dereivada de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S5 - A Derivada de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [S6 - Regras de Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 
 
