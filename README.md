@@ -6,7 +6,7 @@ por Leon Silva e Deibsom Silva
 - [S2 - Equações e Inequações](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S3 - Funções Reais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S4 - Funções Polinômiais e Racionais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
-- [S5 - Funções Definidas por Várias Sentençãs](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [S5 - Funções Definidas por Várias Sentenças](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S6 - Função Composta e a Inversa de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S7 - Funções Exponênciais e logaritmicas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S8 - Funções Trigonométricas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
