@@ -12,6 +12,11 @@ por Leon Silva e Deibsom Silva
 - [S4 - Limites Infinitos e Limites no Infinito](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [S5 - A Derivada de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [S6 - Regras de Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S7 - A Regra da Cadeia](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S8 - Derivação Implícita](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S9 - Taxas Relacionadas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [S10 - Aplicações de Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+
 
 
 
