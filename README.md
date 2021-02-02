@@ -10,8 +10,8 @@ por Leon Silva e Deibsom Silva
 - [S6 - Função Composta e a Inversa de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S7 - Funções Exponênciais e Logaritmicas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [S8 - Funções Trigonométricas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
-- [S9 - Novos Gráficos](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
-- [S10 - Mais Funções Reais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [S9 - Mais Sobre Gráficos](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [S10 - Outras Funções Reais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 
 
 
@@ -41,8 +41,9 @@ por Leon Silva e Deibsom Silva
 - [S3 - Integral Definida](https://ldsufrpe.github.io/calculo/S3/).
 - [S4 - Técnicas: Integração Partes e por Frações Parciais](https://ldsufrpe.github.io/calculo/S4/).
 - [S5 - Aplicações: Área e Volume](https://ldsufrpe.github.io/calculo/S5/).
-- [S6 - Soma de Riemann](https://ldsufrpe.github.io/calculo/S6/).
-- [S7 - Integral Aproximada](https://ldsufrpe.github.io/calculo/S7/). (*Em construção*)
-- [S8 - Integral Imprópria](https://ldsufrpe.github.io/calculo/S8/).
-- [S9 - Mais Aplicações de integral](https://ldsufrpe.github.io/calculo/S9/). (*Em construção*)
-- [S10 - Métodos de Resolução de Equações Diferenciais Ordinárias](https://ldsufrpe.github.io/calculo/S10/). (*Em construção*)
+- [S6 - Mais Aplicações de integral](https://ldsufrpe.github.io/calculo/S9/). (*Em construção*)
+- [S7 - Métodos de Resolução de Equações Diferenciais Ordinárias](https://ldsufrpe.github.io/calculo/S10/). (*Em construção*)
+- [S8 - Soma de Riemann](https://ldsufrpe.github.io/calculo/S6/).
+- [S9 - Integral Aproximada](https://ldsufrpe.github.io/calculo/S7/). (*Em construção*)
+- [S10 - Integral Imprópria](https://ldsufrpe.github.io/calculo/S8/).
+
