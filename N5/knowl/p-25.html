@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-03-24T22:54:25-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Parágrafo</span></h6>
+<p><figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/sageplot-ex6-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-ex6-f-sob-g.png';this.onerror=null;"></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Ao longo do texto encorajamos ao leitor encontrar intersecções de curvas resolvendo equações. De fato, nem sempre é possível resolver equações exatamente. Neste exemplo, a equação a resolver é</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+\frac{x}{\sqrt{x^2+1}} \amp = x^4-x \text{,}\tag{1.2}
+\end{align}
+</div>
+<p class="continuation">cuja a solução exata é impossível de encotrar. Para resolver o problema com uma "boa precisão" seria necessário fazer uso de métodos apropriados para resolver equações por aproximação. Aqui, vamos nos contentar com uma aproximação "grosseira" a partir da <a class="xref" data-knowl="./knowl/fig-ex6-f-sob-g.html" title="Figura 1.16">Figura 1.16</a>. Dando um <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">zoom</em> na região delimitada pelo intervalo \([1,1.2]\) descobrimos que \(x=1.18\) é uma solução aproximada para a equação <a class="xref" data-knowl="./knowl/eq-ex6.html" title="Equação 1.2">(1.2)</a>.  Já que ambas curvas passam pela origem, temos que a área aproximada da região é dada pela integral:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integrald{\left[\frac{x}{\sqrt{x^2+1}} - (x^4-x)\right]}{0}{1.18}{x} \amp = \integrald{\frac{x}{\sqrt{x^2+1}}}{0}{1.18}{x} - \integrald{(x^4-x)}{0}{1.18}{x} \text{.}
+\end{align*}
+</div>
+<p class="continuation">Para integrar o primeiro termo, usamos a substituição \(u = x^2 + 1\text{.}\) Então, \(\dd u=\dd x\text{,}\) daí, quando \(x=1.18\text{,}\) temos \(u=2.39\text{,}\) e, quando \(x=0\text{,}\) temos \(u=1\text{.}\) Logo,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\text{Área} \amp \approx \frac{1}{2}\integrald{u^{-1/2}}{1}{2.39}{x}-\integrald{(x^4-x)}{0}{1.18}{x} \\
+\amp = \left.u^{(1/2)}\right|_1^{2.39} - \left.\left(\frac{x^5}{5}-\frac{x^2}{2}\right)\right|_0^{1.18} \\
+\amp = \sqrt{2.39}-1 - \frac{(1.18)^5}{5} + \frac{(1.18)^2}{2} \\
+\amp \approx 0.785 
+\end{align*}
+</div>
+<span class="incontext"><a href="section-1.html#p-25">em contexto</a></span>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
+
+
+
+       
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+       
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-integral-log-integral">
+        <title>Cálculo Integral: N10</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+
+                 <author>
+                    <personname>Deibsom Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária </p>
+        </introduction>
+    <section>
+    <title> Métodos de Resolução de Equações Diferenciais Ordinária</title>
+    
+         
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                         xxxxxxxx.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        xxxxxxxxxxxxx.
+                    </p>
+                </li>
+                
+            </ol>
+            
+        </objectives>
+
+<subsection xml:id="subsec-">
+    <title>Log integral</title>
+  <introduction>
+        <p>
+            introdução
+        </p>
+    </introduction>
+<subsubsection xml:id="subsubsec-sugestao-video-log-integral">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido:  <url href="https://"> xxxxxxxxxxx.</url>
+        </p>
+    </li>
+</ul>    
+</subsubsection>
+</subsection>
+
+
+
+
+
+ <exercises xml:id="exercises-log-integral">
+     
+ </exercises>
+
+
+</section>
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+</article>
+
+</pretext>
+

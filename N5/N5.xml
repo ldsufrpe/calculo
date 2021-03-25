@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
+
+
+
+       
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+       
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-aplicacoes">
+        <title>Cálculo Integral: N5</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <author>
+                    <personname>Deibsom Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária </p>
+        </introduction>
+    <section>
+    <title>Aplicações</title>
+    
+         
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                         Calcular áreas de regiões entre curvas.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Calcular volume de sólidos usando integral definida.
+                    </p>
+                </li>
+                
+            </ol>
+            
+        </objectives>
+ <subsection xml:id="subsec-area-entre-curvas">
+ <title>Área entre curvas</title>
+    <introduction>
+        <p>
+          Suponha que <m>f</m> e <m>g</m> são funções contínuas em <m>[a,b]</m> tais que <m>f(x)\geq g(x)</m> para todo <m>x</m> entre <m>a</m> e <m>b</m>. 
+          Estamos interessados em encontrar a área da região delimitadas pelas curvas <m>y=f(x)</m> e  <m>y=g(x)</m> e as retas verticais <m> x=a</m> e 
+          <m>x=b</m>. (Veja a Figura)
+
+        </p>
+        <figure>
+        <sidebyside widths="52% 38%"  valign="bottom">
+            
+        
+           <figure xml:id="figure-sage-area-entre-curvas">
+                    <!-- <caption>Área entre o gráfico de <m>f(x)=3x</m>, o eixo <m>x</m> e a reta <m>x=2</m> </caption> -->
+                    <image xml:id="sageplot-f-sob-g-x" width="55%">
+                        
+                        <sageplot>
+                        f = x^3 - x+1.5
+                        g = x^2
+                        a = -1
+                        b = 1
+
+                        linestyle = 'dashed'
+                        axes_labels = ['$x$','$y$']
+                        ticks =[[a,b],[]]
+                        tick_formatter = [['$a$', '$b$'],[]]
+                        ymax, xmax = find_local_maximum(f, a,b)
+                        ymin, xmin = find_local_minimum(g, a,b)
+
+                        p = plot(f, (x, a, b), color='red', fill=g, axes_labels=axes_labels, ticks=ticks,
+                                tick_formatter=tick_formatter, fillcolor="#cde0eb", thickness=1.5, figsize=[3.5,3.5], aspect_ratio=2/3) 
+                        p += plot(g, (x, a, b), color='blue', axes_labels=axes_labels, thickness=1.5) 
+                        p += line([(a, g(a)), (a,f(a))], color='black')
+                        p += line([(b, g(b)), (b,f(b))], color='black')
+                        p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+                        p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+                        p += text('$y=f(x)$' ,  (xmax+0.22, ymax+0.15), color="red", fontsize=15)
+                        p += text('$y=g(x)$', (xmin+0.7, ymin+0.15), fontsize=15)
+                        p.fontsize(15)
+                        p
+           
+                        </sageplot>
+                    </image>
+                </figure>
+
+                <figure xml:id="fig-f-sob-g-y">
+                <image xml:id="sageplot-f-sob-g-y"  width="45%">
+                    <description></description>
+                <sageplot>
+                    f = x
+                    g = x^4
+                    a = 0
+                    b = 1
+
+                    linestyle = 'dashed'
+                    axes_labels = ['$x$','$y$']
+                    ticks =[[-0.001, 0.001],[a,b]]
+                    tick_formatter = [['$c$', '$c$'],['$c$', '$d$']]
+                    # ymax, xmax = (-0.15, 1/8)
+                    # ymin, xmin = (0.7, 0.15)
+                    ymax, xmax = find_local_maximum(f, a,b)
+                    ymin, xmin = find_local_minimum(g, a,b)
+                    p = plot(f, (x, a, b), color='red', fill=g, axes_labels=axes_labels, ticks=ticks,
+                            tick_formatter=tick_formatter, fillcolor="#cde0eb", thickness=1.5, figsize=[3.5,3.5], aspect_ratio=1.25) 
+                    p += plot(g, (x, a, b), color='blue', axes_labels=axes_labels, thickness=1.5) 
+                    p += line([(g(a), a), (f(a),a)], color='black')
+                    p += line([(g(b), b), (f(b),b)], color='black')
+                    p += line([(0, a), (g(a),a)], color="lightgray", linestyle=linestyle)
+                    p += line([(0, b), (g(b),b)], color="lightgray", linestyle=linestyle)
+                    p += text('$x=f(y)$' ,  (xmax-4/5, ymax-2.5/5), color="red", fontsize=15)
+                    p += text('$x=g(y)$', (xmin+0.9, ymin+0.15), fontsize=15)
+                    p.fontsize(15)
+                    p
+                </sageplot>
+                    
+                </image>
+                </figure>
+ </sidebyside>
+ </figure>
+
+ 
+
+    </introduction>
+
+    <assemblage xml:id="assemblage-area-entre-curvas">
+        <title>Fórmula para área entre curvas</title>
+        <p>
+            A área da região  entre as curvas <m>y=f(x)</m>, <m>y=g(x)</m>, e limitadas lateralmente 
+            pelas retas <m>x=a</m> e <m>x=b</m>, na qual <m>f</m> e <m>g</m>  são contínuas e 
+            <m>f(x)\geq g(x)</m> para todo <m>x</m> em <m>[a,b]</m>, é
+            
+
+            <me>
+                \text{Área} = \integrald{\left[f(x)-g(x)\right]}{a}{b}{x}.
+            </me>
+            
+        </p>
+    </assemblage>
+<note>
+ É possível que as curvas se intersectem em um ou mais pontos (ver <xref ref="fig-f-sob-g-y"/>).
+  Portanto, nem sempre a região é limitada lateralmente  por restas. Neste caso, para encontrar os limites de 
+ integração devemos obter os tais pontos de intersecção. Esboçar o gráfico dessas curvas pode ser útil.
+ </note>
+
+ <note>
+Em muitos casos as regiões são limitadas lateralmente por curvas, veja por exemplo a <xref ref="fig-f-sob-g-y"/>. 
+Em geral, é mais simples obter a expressão das curva em função de <m>y</m> e então calcular a integral
+usando como refência o eixo <m>y</m>. Procedendo dessa forma, a fórmula para área entre curvas se tornaria
+<mdn>
+   <mrow> \amp \text{Área} = \integrald{\left[f(y)-g(y)\right]}{c}{d}{y} </mrow>
+</mdn>.
+
+ </note>
+
+<example xml:id="ex1-f-sob-g">
+    <statement>
+        <p>
+         Encontre a área da região entre as curvas <m>y = x + 6</m>, <m> y = x^2 </m> e limitada 
+            nas laterais pelas retas <m> x = 0 </m> e <m>x = 2</m>.
+
+          
+        </p>
+    </statement>
+    <solution>
+        <p>
+
+<figure xml:id="fig-sageplot-fsobg">
+<image xml:id="sageplot-fsobg"  width="50%">
+    <description></description>
+<sageplot>
+f = x+ 6
+g = x^2
+a = 0
+b = 2
+c = 0
+d = 6
+linestyle = 'dashed'
+axes = ['$x$','$y$']
+ticks =[[a,b],[c,d]]
+tick_formatter = [['$a$', '$b$'],[]]
+p = plot([f, g],(x,a,b),fill={0:[1]}, fillcolor="#cde0eb", thickness=1.5, axes_labels=axes, ticks=ticks, figsize=[3.5,3.5])
+p += plot(g, (x, a-1, b+0.2*b), thickness=1.5)
+p += plot(f, (x, a-1, b+0.2*b), color='red', thickness=1.5)
+p += line([(a, g(a)), (a,f(a))], color='black')
+p += line([(b, g(b)), (b,f(b))], color='black')
+p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+p += text('$y=x+6$' ,  (1, 8), color="red", fontsize=15)
+p += text('$y=x^2$', (2.7, 4), fontsize=15)
+p.fontsize(15)
+p
+</sageplot>
+    
+</image>
+</figure>
+A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x^2</m>  para todo <m>x</m> 
+ de <m>0</m>   até <m>2</m>. Então, fazendo <m>f(x)=x+6</m> e <m>g(x)=x^2</m>, podemos usar a
+ <xref ref="assemblage-area-entre-curvas" text="title" /> para obter
+<md>
+<mrow> \text{Área} \amp = \integrald{[(x+6)-x^2]}{0}{2}{x}=\left.\left(\frac{x^2}{2} + 6x-\frac{x^3}{3}\right)\right|_0^2</mrow> 
+<mrow> \amp = \frac{34}{3}</mrow>
+</md>
+
+
+</p>
+        
+    </solution>
+</example>
+
+<exercise xml:id="exe1-f-sob-g">
+    <statement>
+        <p>
+             Encontre a área da região entre as curvas <m>y = x^2 + 2</m>, <m> y = x </m> e limitada 
+            nas laterais pelas retas <m> x = 0 </m> e <m>x = 1</m>.
+        </p>
+    </statement>
+ <hint>
+     <p>
+        Comece por esboçar os gráficos de ambas as funções.
+     </p>
+ </hint>
+ <answer>
+     <p>
+       <m> \frac{11}{6}</m>
+     </p>
+ </answer>
+</exercise>
+
+
+<example xml:id="ex2-f-sob-g">
+    <statement>
+        <p>
+          Determine a área da região limitada pelas curvas <m>y=2-x^2</m> e <m>y=x</m>.
+        </p>
+       
+    </statement>
+    <solution>
+        <p>
+
+             <figure xml:id="fig-ex2-f-sob-g">
+            <caption></caption>
+        <image xml:id="sageplot-ex2-f-sob-g" width="50%">
+            <description></description>
+        <sageplot>
+            f = 2-x^2
+            g = x
+            a = -2
+            b = 1
+            x0 =-2 
+            y0 = 1
+            c=g(-2)
+            d=g(1)
+            linestyle = 'dashed'
+            axes_labels = ['$x$','$y$']
+            ticks =[[a,b],[c,d]]
+            tick_formatter = [['$a$', '$b$'],[]]
+            p = plot([f, g],(x,a,b),fill={0:[1]},fillcolor="#cde0eb", axes_labels=axes_labels, ticks=ticks, figsize=[3.5,3.5], thickness=1.5)
+            p += plot(g, (x, a-1/4, b+0.2*b), thickness=1.5)
+            p += plot(f, (x, a-1/4, b+0.2*b), color='red', thickness=1.5)
+            #p += line([(a, g(a)), (a,f(a))], color='black')
+            #p += line([(b, g(b)), (b,f(b))], color='black')
+            #p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+            #p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+            p += text('$y=2-x^2$', (-1.5, f(-1.2)+0.6), color='red', fontsize=12)
+            p += text('$y=x$', (-1., g(-1.2)-0.45), fontsize=12) 
+            p     
+
+
+       
+        </sageplot>
+            
+        </image>
+        </figure>
+        Antes de tudo precisamos saber as limites à esquerda e à direita da região. Para isso,
+        é preciso determinar os pontos de intersecção das curvas. A coordenada <m>x</m> de um ponto intersecção entre 
+        as curvas <m>y=2-x^2</m> e <m>y=x</m> satisfaz 
+        <me>
+            (x, 2-x^2) = (x, x),
+        </me>
+        que se reduz a
+        <me>
+            2-x^2=x.
+        </me>
+        Resolvendo a última igualdade  obtemos <m>x=-2</m>  e <m>x=1</m>, que de fato são os limites de integração <m>a</m> e <m>b</m>. Na <xref ref="fig-ex2-f-sob-g"/>,
+        é possível observar que o gráfico de <m>f(x)=2-x^2</m> está acima do gráfico de <m>g(x)=x</m> para todo
+        <m>x</m> no intervalo <m>[-2,1]</m>. Portanto, 
+
+        <md>
+            <mrow>\text{Área} \amp = \integrald{[(2-x^2) - x]}{-2}{1}{x} \amp \ctm{\left(\integrald{[f(x) - g(x)]}{a}{b}{x}\right)} </mrow>
+            <mrow> \amp  = \integrald{(x^2-x+2)}{-2}{1}{x} \amp \ct{Reescevendo o integrando.} </mrow>
+            <mrow> \amp  = \left.\left(-\frac{x^3}{3}-\frac{x^2}{2}+ 2x\right)\right|_{-2}^{1}\amp \ct{Teorema Fundamental do Cálculo}</mrow>
+            <mrow> \amp  = \frac{9}{2}</mrow>
+        </md>
+        </p>
+    </solution>
+</example>
+
+
+<exercise xml:id="exe2-f-sob-g">
+    <statement>
+        <p>
+        Encontre a área da região englobada pelas curvas <m> y = x^2</m> e <m> y = x +6</m>.
+        </p>   
+    </statement>
+ <hint>
+     <p>
+         Comece por esboçar os gráficos de ambas as funções.
+     </p>
+ </hint>
+ <answer>
+     <p>
+         <m>\frac{125}{6}</m>
+     </p>
+ </answer>
+</exercise>
+
+
+<!-- Colocar exemplo ex3 aqui -->
+
+
+<example xml:id="ex4-f-sob-g">
+    <statement>
+        <p>          
+             Encontre a área da região limitada pelas curvas <m>x = y^2</m> e  <m>y = x − 2</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+           
+            <figure xml:id="fig-ex4-f-sob-g">
+                <caption></caption>
+            <image xml:id="sageplot-exe4-f-sob-g" width="50%">
+                <description></description>
+                <sageplot>
+                    f = sqrt(x)
+                    h = -sqrt(x)
+                    g = x-2
+
+                    a = 0
+                    b = 4
+                    c = -1
+                    d = 2
+                    axes = ['$x$','$y$']
+                    ticks =[[a,b],[c,d]]
+
+                    p = plot(f, (x,0,4.4), figsize=[3,3], axes_labels=axes, ticks=ticks, color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(h, (0, 3/2), color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(g, (x, 1/2, 4.5), thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(g, (x, 1, 4), fill=f, thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(f, (x, 0, 1), fill=True, color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += plot(h, (0, 1), fill=True, color='red', thickness=1.5, fillcolor="#cde0eb")
+                    p += text('$x=y^2$', (2, 2), color='red', fontsize=12)
+                    p += text('$x=y+2$', (2.5, -1), fontsize=12) 
+                    p
+
+                </sageplot>
+            </image>
+            </figure>
+
+            Para iniciar esboçamos as curvas. Na <xref ref="fig-ex4-f-sob-g"/>, observamos dois pontos 
+            de intesecção entre as curvas. Como cada um desses pontos  satisfaz
+
+            <md>
+                <mrow>(y^2, y) = (y+2, y) </mrow>
+            </md>,
+
+        que se reduz a 
+        <md>
+            <mrow> y^2=y+2</mrow>
+        </md>
+        e significa que <m>y=-1</m> e <m>y=2</m>. Então, os limites de integração valem <m>c=-1</m> e <m>d=2</m>.
+        Portanto, uma vez que <m>y+2\geq y^2</m>, temos
+         <md>
+             <mrow>\text{Área}  \amp = \integrald{[(y+2)-y^2]}{-1}{2}{y} </mrow>
+             <mrow> \amp = \left.\left(\frac{y^2}{2} + 2y - \frac{y^3}{3}\right)\right|_{-1}^2</mrow>
+             <mrow> \amp = \frac{9}{2} </mrow>
+         </md>.
+
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex5-f-sob-g">
+    <statement>
+        <p>
+            Determine a área da região limitada pelas curvas <m>y=3x^3-x^2-10x</m> e <m>y=-x^2+2x</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+           
+        <figure xml:id="fig-ex5-f-sob-g">
+            <caption></caption>
+            <image xml:id="sageplot-ex5-f-sob-g" width="50%">
+                <description></description>
+                <sageplot>
+                    f = 3*x^3-x^2-10*x
+                    g = -x^2+2*x
+                    a = -2
+                    b = 2                    
+                    c = g(-2)
+                    d = g(2)
+                    linestyle = 'dashed'
+                    axes = ['$x$','$y$']
+                    ticks =[[a,b],[c,d]]
+                    tick_formatter = [['$a$', '$b$'],[]]
+                    p = plot([f, g],(x,a,b),fill={0:[1]}, axes_labels=axes, ticks=ticks, thickness=1.5, figsize=[3.5,3], fillcolor="#cde0eb")
+                    p += plot(g, (x, a-1/4, b+0.2*b),thickness=1.5)
+                    p += plot(f, (x, a-1/4, b+0.2*b), color='red',thickness=1.5)
+                    #p += line([(a, g(a)), (a,f(a))], color='black',thickness=1.5)
+                    #p += line([(b, g(b)), (b,f(b))], color='black')
+                    #p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+                    #p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+                    p += text('$y= 3x^3-x^2-10x$', (-1.7, f(-1.2)+1.99), color='red', fontsize=12)
+                    p += text('$y= -x^2+2x$', (1, g(1)+2), fontsize=12) 
+                    p
+                </sageplot>
+            </image>
+        </figure>
+        Para determinar os pontos de interseção das curvas fazemos considerar que tais 
+        pontos satisfazem a igualdade
+
+        <md>
+            <mrow>(x, 3x^3-x^2-10x)=(x, -x^2+2x) \amp </mrow>
+        </md>
+        que resulta em
+        <md>
+            <mrow> 3x^3-x^2-10x \amp = -x^2+2x\amp </mrow>
+            <mrow>3x^3-12x\amp =0  </mrow>
+            <mrow>3x(x^2-4)\amp =0  </mrow>
+            <mrow>3x(x-2)(x+2) \amp=0 </mrow>
+        </md>.
+    Resolvendo a última igualdade  obtemos <m>x=0</m>, <m>x=2</m> e <m>x=-2</m>. 
+    Esboçando as curvas no intervalo que contenha <m>[-2,2]</m> (veja <xref ref="fig-ex5-f-sob-g"/>) 
+    podemos notar que a região pode ser dividida em duas: a primeira determinada pelo intervalo
+   <m>[-2,0]</m>, no qual <m>3x^3-x^2-10x\geq -x^2+2x</m> e a segunda pelo intervalo <m>[0,2]</m>, 
+    no qual <m>3x^3-x^2-10x\leq -x^2+2x</m>. Portanto, fazendo <m>f(x)=3x^3-x^2-10x</m> e 
+    <m>g(x)=-x^2+2x</m>, temos
+
+    <md>
+        <mrow>\text{Área}\amp =\integrald{[f(x)-g(x))]}{-2}{0}{x} + \integrald{[g(x)-f(x)]}{0}{2}{x} </mrow>
+        <mrow> \amp = \integrald{(3x^3-12x)}{-2}{0}{x}  + \integrald{(-3x^2+12x)}{0}{2}{x}</mrow>
+        <mrow> \amp = \left.\left(\frac{3x^4}{4}-6x^2\right)\right|_{-2}^0 + \left.\left(-\frac{3x^4}{4}+ 6x^2\right)\right|_0^2 </mrow>
+        <mrow> \amp = 12 + 12 =24 </mrow>
+    </md>.
+
+
+
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exe5-f-sob-g">
+    <statement>
+        <p>
+            Determine a área de uma região limitada pelas curvas <m>y=x^3+2x^2-3x</m> e <m>y=x^2+ 3x</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Esboce o gráfico da região.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            depois
+        </p>
+    </answer>
+</exercise>
+
+<example xml:id="ex6-f-sob-g">
+    <statement>
+        <p>
+            Encontre a área aproximada da região limitada pelas curvas <m>y=\frac{x}{\sqrt{x^2+1}}</m> e 
+            <m>y=x^4-x</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+
+            <figure xml:id="fig-ex6-f-sob-g">
+                <caption></caption>
+            <image xml:id="sageplot-ex6-f-sob-g" width="55%">
+                <description></description>
+            <sageplot>
+                f = x/(sqrt(x^2+1))
+                g = x^4-x
+                a = 0
+                b = 1.18
+                x0 =-2 
+                y0 = 1
+                axes = ['$x$','$y$']
+                ticks =[srange(0,1.4,0.2),srange(-1,1.4,0.4)]
+
+                p = plot([f, g],(x,a,b),fill={0:[1]}, axes_labels=axes,figsize=[3,3], fillcolor="#cde0eb", ticks=ticks, thickness=1.5,aspect_ratio=0.8)
+                p += plot(f, (x, a, b+0.2*b), color='red', thickness=1.5)
+                q = plot(f,(x,1,1.2), gridlines=True,  tick_formatter=[n(1, digits=3), n(1.0, digits=2)], color='red', thickness=1.5)
+                q += plot(g,(x,1,1.2), gridlines=True,  tick_formatter=[n(1, digits=3), n(1.0, digits=2)], thickness=1.5)
+                p += plot(f, (x, a, b+0.05*b), color='red',thickness=1.5)
+                p += plot(g, (x, a, b+0.05*b), thickness=1.5)
+                p += arrow((1,0.95), (1.18, f(1.18)), width=1.5, arrowsize=2, color='black')
+
+                G  = multi_graphics([p, (q, (0.35, 0.85, 0.3, 0.3))]);
+                G
+
+            </sageplot>
+                
+            </image>
+            </figure>
+        Ao longo do texto encorajamos ao leitor encontrar intersecções de curvas resolvendo equações. De fato, nem sempre 
+        é possível resolver equações exatamente. Neste exemplo, a equação a resolver é
+
+        <mdn>
+            <mrow xml:id="eq-ex6"> \frac{x}{\sqrt{x^2+1}} \amp = x^4-x </mrow>
+        </mdn>,
+        cuja a solução exata é impossível de encotrar. Para resolver o problema com uma "boa precisão" seria necessário fazer uso
+        de métodos apropriados para resolver equações por aproximação. Aqui, vamos nos contentar com uma aproximação 
+        "grosseira" a partir da <xref ref="fig-ex6-f-sob-g"/>. Dando um <em>zoom</em> na região delimitada 
+        pelo intervalo <m>[1,1.2]</m> descobrimos que <m>x=1.18</m> é uma solução aproximada para a equação
+        <xref ref="eq-ex6"/>.  Já que ambas curvas passam pela origem, temos que a área aproximada da região
+        é dada pela integral:
+        <md>
+            <mrow> \integrald{\left[\frac{x}{\sqrt{x^2+1}} - (x^4-x)\right]}{0}{1.18}{x} \amp = \integrald{\frac{x}{\sqrt{x^2+1}}}{0}{1.18}{x} - \integrald{(x^4-x)}{0}{1.18}{x} </mrow>
+
+        </md>.
+        Para integrar o primeiro termo, usamos a substituição <m>u = x^2 + 1</m>. Então, <m>\dd u=\dd x</m>, daí, quando
+        <m>x=1.18</m>, temos <m>u=2.39</m>, e, quando <m>x=0</m>, temos <m>u=1</m>. Logo,
+
+        <md>
+            <mrow>\text{Área} \amp \approx \frac{1}{2}\integrald{u^{-1/2}}{1}{2.39}{x}-\integrald{(x^4-x)}{0}{1.18}{x} </mrow>
+            <mrow> \amp = \left.u^{(1/2)}\right|_1^{2.39} - \left.\left(\frac{x^5}{5}-\frac{x^2}{2}\right)\right|_0^{1.18} </mrow>
+            <mrow> \amp = \sqrt{2.39}-1 - \frac{(1.18)^5}{5} + \frac{(1.18)^2}{2} </mrow>
+
+            <mrow> \amp \approx 0.785 </mrow>
+
+        </md>
+        </p>
+    </solution>
+</example>
+
+<subsubsection xml:id="subsubsec-videos-sugeridos-area">
+    <title>Sugestão de vídeos</title>
+    <ul>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/JvEvOa6jA3c"> Área entre curvas que se intersectam.</url>
+            </p>
+        </li>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/IPyRysdu6FM"> Área composta de duas regiões.</url>
+            </p>
+        </li>
+    </ul>
+    
+</subsubsection>
+</subsection>
+
+<subsection xml:id="subsec-volume">
+    <title>Volume</title>
+    <introduction>
+        <p>
+               A região plana obtida pela intersecção  de um plano a um sólido é denominada  <term> secção transversal</term> do sólido. 
+               Considere <m>A(x)</m> a área da secção transversal do sólido obtida pela sua intersecção com um plano perperdicular ao eixo 
+               <m>x</m> e passando pelo ponto <m>x</m> em <m>[a,b]</m>. Então o <term>volume</term> do sólido é dado por
+        </p>          
+            <assemblage xml:id="assemblage-volume-x">
+                <title></title>
+                
+                    <p>
+                <md>
+                   <mrow>\text{Volume} \amp = \integrald{A(x)}{a}{b}{x} </mrow>
+               </md>.
+                    </p>
+               
+               
+            </assemblage>
+        <p>   
+        Em outros termos, o volume sólido é igual a integral da função que determina a área da secção transversal 
+        para cada <m>x</m> compreendido entre <m>a</m> e <m>b</m>.
+        </p>   
+       <p> Se a secção transversal for perpendicular ao eixo <m> y</m>,  usamos de forma análoga:</p>
+        <assemblage xml:id="assemblage-volume-y">
+                <title></title>
+                
+                    <p>
+                        <md>
+                   <mrow>\text{Volume} \amp = \integrald{A(y)}{c}{d}{y} </mrow>
+               </md>.
+                    </p>
+               
+            </assemblage>
+
+        
+    </introduction>
+
+    <!-- <aside>
+    <title> What is my OS build?</title>
+    <p>
+    An easy way to find your OS Build:
+    Hold down the Windows key and R key simultaneously.
+    Enter <c>winver.exe</c> in the resulting new window.
+    The next window that opens will have the OS Build in small type near the top.
+        </p>
+    </aside> -->
+
+    <!-- <technology>
+    <title>Faça você mesmo</title>
+    <p>Para visualizar o sólido obtido pela rotação de uma curva <m>y=f(x)</m> em relação aos eixos <m>x</m>,  ou <m>z</m> 
+    se dirija  até a calculadora gráfica abaixo e siga os seguntes passos:
+     <ol>
+         <li>
+             <p>
+                 Insira a curva <m>y=f(x)</m>, ela será uma curva no plano  <m>xy</m>
+             </p>
+         </li>
+         
+         <li>
+             <p>
+                 Ajuste o intevalo <m> [a,b]</m>.
+             </p>
+         </li>
+         <li>
+             <p>
+                 Escolha o eixo de revolução.
+             </p>
+         </li>
+
+         <li>
+             <p>
+                 Controle a posição e o zoom (<em>scroll</em>) com o mause ou  toques na tela.
+             </p>
+         </li>
+     </ol>
+    
+    </p>
+        <figure xml:id="figure-interactive-revolucao">
+                    <caption>Curvas integrais e campos de direções</caption>
+
+                    <interactive xml:id="interactive-revolucao" platform="sage" width="100%"  aspect="1:1.2">
+                    <slate surface="sage">                    
+                    @interact(layout=dict(top=[["f"],["x_range"],["eixo"]], bottom=[["auto"]]))
+                    def _(
+                            f=input_box(x^2 , width=20,  
+                            label= "y = "), 
+                            x_range=range_slider(-10,10,1,(0,1), label='[a, b]'),
+                            eixo = selector(["x","z"], default="z", label="Eixo de Revolução ", buttons=True)):
+                            
+                            p = revolution_plot3d(f, (x,x_range[0],x_range[1]), show_curve=True, opacity=0.7, parallel_axis=eixo)       
+                            
+                            p.show(aspect_ratio=(1,1,1), frame=False, axes=True, figsize=1)
+
+                    </slate>
+                    </interactive>
+                </figure>
+    
+    
+    </technology> -->
+   
+    <example>
+        <statement>
+            <p>
+                Encontre o volume do sólido obtido pela rotação em torno do eixo <m> x</m> da região sob
+         a curva <m>y=\sqrt{x}</m> de <m>0</m> a <m>1</m>. 
+            </p>
+        </statement>
+        <solution>
+            <p>
+
+        A <xref ref="solido-ex1-volume"/> ilustra o sólido de revolução, encontrado pela  rotação da curva <m>y=\sqrt{x}</m>
+        em torno do eixo <m>x</m>, e a secção transversal, região plana comum entre o sólido de revolução 
+        e um plano perpendicular  ao eixo <m>x</m>. Para cada <m>x</m> a borda da secção transversal é uma circuferência cujo raio é <m>r=\sqrt{x}</m>. 
+        Então, a área da região plana para cada <m>x</m> é 
+        <md>
+            <mrow>A(x) =\pi r^2= \pi(\sqrt{x})^2 \amp = \pi x </mrow>
+        </md>.
+        O sólido encontra-se entre <m>x=0</m> e <m>x=1</m>, assim seu volume é 
+        <md>
+            <mrow>\integrald{A(x)}{0}{1}{x} \amp = \integrald{\pi x}{0}{1}{x} </mrow>
+            <mrow> \amp = \left.\pi\frac{x^2}{2}\right|_0^1 =\frac{\pi}{2} </mrow>
+            
+        </md>.
+
+
+    <figure xml:id="solido-ex1-volume">
+    <sidebyside widths="30% 35%"  valign="bottom">
+    
+
+    <image xml:id="revolucao-x" width="30%">
+        <description></description>
+        <asymptote>
+        import graph3;
+        import solids;
+        size(0,200);
+        currentprojection=perspective(1.5,0,10,Y);
+        pen color=lightblue+opacity(0.55);
+
+        real f(real x){return sqrt(x);}
+        pair F(real x){return (x,f(x));}
+        triple F3(real x){return (x,f(x),0);}
+
+        path p=graph(F,0,1,n=20,operator ..);
+        path3 p3=path3(p);
+
+        revolution a=revolution(p3,X,0,360);
+        draw(surface(a),color,render(compression=Low,merge=true));
+        draw(p3,blue);
+
+        real x=relpoint(p,0.5).x;
+
+        xaxis3(Label("$x$",1),xmax=1.5,dashed,Arrow3);
+        yaxis3(Label("$y$",1),Arrow3);
+        dot(Label("$(1,1)$"),(1,1,0));
+        arrow(Label("$y=\sqrt{x}$"),F3(0.7),Y,0.75cm,red);
+        draw(arc(1.2X,0.4,90,90,175,-40,CW),Arrow3);
+        draw("$r$",(x,0,0)--F3(x),red,Arrow3,PenMargin3);
+        
+        </asymptote>
+        
+    </image>
+
+     <image xml:id="workspace" width="35%">
+        <description></description>
+   <asymptote>
+    size(0,200);
+    import solids;    
+    import graph;
+    import three;
+    currentprojection = orthographic(0,0,10, up=Y);
+    real xmin = -0.1; 
+    real xmax = 2; 
+    real ymin = -0.1;
+    real ymax = 1.25;
+    real margin = 0.2;
+    real f(real x) { return sqrt(x); }
+    path s = graph(f, 0, 2, operator..);
+    path3 p3 = path3(s);
+    draw(p3, red);
+    surface solidsurface = surface(p3, c=O, axis=X);
+    draw(solidsurface, surfacepen=blue+ opacity(0.55));    
+    xaxis3(Label("$x$",1.5),xmax=2.5,dashed,Arrow3);
+    yaxis3(Label("$y$",1), ymin=0,Arrow3);
+    path planeoutline = box((xmin, ymin), (xmax+margin,ymax+margin));
+    draw(surface(planeoutline), surfacepen=red+ opacity(0.45));
+    arrow(Label("$y=\sqrt{x}$"), (1.1, f(1.1), 0),Y,0.75cm,red);
+   </asymptote>        
+    </image>
+    </sidebyside>
+ </figure>
+</p>
+ 
+</solution>
+    </example>
+
+<exercise>
+    <statement>
+        <p>
+            Encontre o volume do sólido obtido quando a região sob a curva <m>y=\sqrt{x}</m>  acima do intervalo <m> [1, 4]</m> 
+            é girada em torno do eixo <m> x</m>. 
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Revise o exemplo anterior.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>\frac{15\pi}{2}</m>
+        </p>
+    </answer>
+</exercise>
+    <example>
+        <statement>
+            <p>
+                Encontre o volume do sólido obtido pela rotação da região delimitada por <m>y=x^3</m>, <m>y=8</m> e <m>x=0</m>  em torno do eixo <m> y</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+            
+             O  sólido resultante é mostrado na <xref ref="solido-ex2-volume"/>. Como a região é girada em torno do eixo <m> y</m>, faz sentido 
+             obter as regiões transversais ao  sólido perpendicularmente ao  eixo <m> y</m> e, portanto, integrar em relação a <m> y</m>. Para cada <m>y</m> a área da secção transversal é um disco circular de raio 
+            <m>r=\sqrt[3]{y}</m>. Então,
+
+            <md>
+                <mrow>A(y)=\pi r^2 = \pi (\sqrt[3]{y})^2 = \pi y^{(2/3)} </mrow>
+            </md>
+            Como o sólido se encontra entre <m>y=0</m> e <m>y=8</m>, seu volume é
+
+            <md>
+                <mrow>\text{Volume}  \amp = \integrald{A(y)}{0}{8}{x} = \integrald{\pi y^{(2/3)}}{0}{8}{x} </mrow>
+                <mrow> \amp = \left.\pi\left( \frac{3}{5}y^{3/5}\right)\right|_0^8  = \frac{96\pi}{5}</mrow>
+               
+            </md>.
+            <figure xml:id="solido-ex2-volume">
+            <caption></caption>
+            <image xml:id="revolucao-y" width="35%">
+            <description></description>
+            <asymptote>
+            import graph3;
+            import solids;
+            size(300,200);
+            //currentprojection=perspective(1.5,0,10,Y);
+            currentprojection=perspective(-1.5,0,10,Y);
+            pen color=lightblue+opacity(0.55);
+
+            real f(real x){return x^3;}
+            pair F(real x){return (x,f(x));}
+            triple F3(real x){return (x,f(x),0);}
+
+            path p=graph(F,0,2,n=20,operator ..);
+            path3 p3=path3(p);
+
+            revolution a=revolution(p3,Y,0,360);
+            draw(surface(a),color,render(compression=0,merge=true));
+            draw(p3,blue);
+
+            real x=relpoint( p,1).x;
+            xaxis3(Label("$x$",1),xmax=2,Arrow3);
+            yaxis3(Label("$y$",1),ymin=-0.5,ymax=10,dashed,Arrow3);
+            dot(Label("$(2,8)$"),(2,8,0),X);
+            draw(arc(9Y,1,90,0,7.5,180),Arrow3);   
+            arrow(Label("$y=x^3$"),(1.5, 3,0),X,0.75cm,red);    
+            draw("$r$",(0,f(1.7),0)--F3(1.7),red,Arrow3,PenMargin3);
+            </asymptote>
+            </image>
+
+            </figure>
+            </p>
+        </solution>
+    </example>  
+
+<exercise>
+    <statement>
+        <p>
+            Encontre o volume do sólido gerado quando a região limitada por <m>y=\sqrt{x}</m>,
+           <m> y = 2</m> e <m> x = 0</m> é girada em torno do eixo <m>y</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Revise exercício anterior.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>\frac{32\pi}{5}</m>
+        </p>
+    </answer>
+</exercise>
+
+    <example>
+        <statement>
+            <p>
+                A região <m>R</m>, delimitada pelas curvas <m>y = x</m> e <m>y = x^2</m> , é girada ao redor do eixo <m> x</m>.
+                Encontre o volume do sólido resultante.
+
+            </p>
+        </statement>
+        <solution>
+            <p> 
+            As curvas <m> y=x </m> e <m> y=x^2</m> se intersectam nos pontos <m>(0,0)</m> e <m>(1,1)</m>. A região entre esses pontos, 
+            o sólido de rotação e a secção transversal perpendicular ao eixo  <m>x</m> são mostrados
+            na <xref ref="solido-exe3-volume"/>. A secção transversal perpendicular ao eixo <m>x</m> tem o formato de uma arruela (um anel) com
+            raio interno <m>r_1=x^2</m> e raio externo <m>r_2=x</m>, de modo que calculamos a área da secção transversal subtraindo
+            a área do círculo interno da área do círculo externo:
+
+            <md>
+                <mrow>A(x) \amp = \pi (r_2)^2 - \pi (r_1)^2 = \pi(x^2-x^4)  </mrow>
+            </md>.
+
+            Portanto, 
+
+            <md>
+                <mrow>\text{Volume}  \amp = \integrald{A(y)}{0}{1}{x} = \integrald{\pi(x^2-x^4) }{0}{1}{x} = \amp </mrow>
+                <mrow> \amp =\left.\pi\left(\frac{x^3}{3}-\frac{x^5}{5}\right)\right|_0^1=\frac{2\pi}{15}</mrow>
+            </md>.
+
+
+        <figure xml:id="solido-exe3-volume">
+    <caption></caption>
+    <image xml:id="revolucao-regiao" width="40%">
+      <description></description>
+      <asymptote>
+    mport graph3;
+    import solids;
+    size(0,200);
+    currentprojection=perspective(2,0,10,up=Y);
+    pen color=lightblue+opacity(0.25);
+    pen color=lightblue+opacity(0.35);
+    real alpha=360;
+
+    real f(real x) {return x^2;}
+    pair F(real x) {return (x,f(x));}
+    triple F3(real x) {return (x,f(x),0);}
+
+    path p=graph(F,0,1,n=10,operator ..)--cycle;
+    path3 p3=path3(p);
+
+    revolution a=revolution(p3,X,-alpha,0);
+    render render=render(compression=0,merge=true);
+    draw(surface(a),color,render);
+    surface s=surface(p);
+    draw(s,color,render);
+    draw(rotate(-alpha,X)*s,color,render);
+
+    draw(p3, red);
+
+    xaxis3(Label("$x$",1),xmax=1.25,dashed,Arrow3);
+    yaxis3(Label("$y$",1),Arrow3);
+    dot(Label("$(1,1)$"),(1,1,0),X+Y);
+    arrow("$y=x$",(0.7,0.7,0),Y,0.75cm,red);
+    arrow("$y=x^2$",F3(0.7),X,0.75cm,red);
+    draw(arc(1.1X,0.3,90,90,3,-90),Arrow3);
+      </asymptote>
+  </image>
+
+             </figure>
+
+           
+            </p>
+        </solution>
+    </example> 
+    <!-- <figure>
+    <sidebyside widths="45% 45%" valign="bottom">         -->
+    <exercise>
+        <statement>
+            <p>
+                Encontre o volume do sólido gerado quando a região entre os gráficos de <m>f(x)=\frac{1}{2} + x^2</m>
+                e <m> g(x) = x</m> que está acima do intervalo <m> [0, 2]</m> é girada em torno do eixo <m> x</m>.
+            </p>
+        </statement>
+        <hint>
+            <p>
+                Revise o exemplo anterior.
+            </p>
+        </hint>
+        <answer>
+            <p>
+                <m>\frac{69\pi}{10}</m>
+            </p>
+        </answer>
+    </exercise>
+    
+
+<subsubsection xml:id="subsubsec-videos-sugeridos-volume">
+    <title>Sugestão de vídeos</title>
+    <ul>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/SASVpFGryUk"> Revolução ao redor do eixo <m>x</m>.</url>
+            </p>
+        </li>
+
+        <li>
+            <p>
+                 Problema resolvido: <url href="https://youtu.be/YYtN5ckrseI"> Generalização do giro ao redor do eixo <m>x</m>.</url>
+            </p>
+        </li>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/MNOGpk6yEl4"> Revolução ao redor do eixo <m>y</m>.</url>
+            </p>
+        </li>
+        <li>
+            <p>
+                Problema resolvido: <url href="https://youtu.be/EhwNTt-DMc0"> Sólido de revolução entre duas funções.</url>
+            </p>
+        </li>
+    </ul>
+    
+</subsubsection>
+ 
+</subsection>
+
+
+<!-- <subsection xml:id="subsec-outras-aplicacoes">
+    <title>Outras Aplicações</title>
+
+
+
+   
+<subsubsection xml:id="subsubsec-comprimento-curvas">
+    <title>Comprimento de curvas</title>
+    
+</subsubsection>
+    
+</subsection> -->
+
+<exercises xml:id="exercises-integral-por-partes">
+
+
+<exercise>
+    <p>
+    Encontre a área da região sombreada.
+    <image xml:id="sageplot-exer-group-1" width="50%">
+        <description></description>
+    <sageplot>
+        f = x^2 +1
+        g = x
+        a = -1
+        b = 2
+        x0 =-2 
+        y0 = 1
+        c=g(a)
+        d=g(b)
+        linestyle = 'dashed'
+        axes_labels = ['$x$','$y$']
+        ticks =[[-2,b],[c,d]]
+        tick_formatter = [['$a$', '$b$'],[]]
+        p = plot([f, g],(x,a,b),fill={0:[1]},fillcolor="#cde0eb", axes_labels=axes_labels, ticks=ticks, figsize=[3.5,3.5], thickness=1.5)
+        p += plot(g, (x, a-1/4, b+0.2*b), thickness=1.5)
+        p += plot(f, (x, a-1/4, b+0.2*b), color='red', thickness=1.5)
+        p += line([(a, g(a)), (a,f(a))], color='black')
+        p += line([(b, g(b)), (b,f(b))], color='black')
+        #p += line([(a, 0), (a,g(a))], color="lightgray", linestyle=linestyle)
+        p += line([(b, 0), (b,g(b))], color="lightgray", linestyle=linestyle)
+        p += text('$y=x^2+1$', (-1.5, f(-1.2)+0.6), color='red', fontsize=12)
+        p += text('$y=x$', (-1., g(-1.2)-0.45), fontsize=12) 
+        p 
+    </sageplot>
+        
+    </image>
+    </p>
+</exercise>
+
+
+<exercisegroup>
+<introduction>
+    <p>
+        Sobre área entre curvas respondam o item a seguir.
+    </p>
+</introduction>
+<exercise>
+    <p>
+    Determine a área da região plana limitada pelas retas <m>x=1</m>, <m>x=3</m>, pelo eixo das abcissas e pelo gráfico de <m>y=x^3</m>.
+    </p>
+</exercise>
+
+<exercise>
+    <p>
+    Determine a área da região plana limitada pelas retas <m>x=1</m>, <m>x=4</m>, <m>y=0</m> e pelo gráfico de <m> y=\sqrt{x}</m>.
+    </p>
+</exercise>
+
+<exercise>
+    <p>
+    Determine a área da região plana limitada pelas parábolas <m> y=x^2</m> e <m>y=2x-x^2</m>.
+    </p>
+</exercise>
+
+<exercise>
+    <p>
+    Esboce a região delimitada pelas curvas <m> y=e^x</m>, <m>y=x^2-1</m>, <m>x=-1</m>, <m>x=1</m> e calcule a área.
+    </p>
+</exercise>
+
+<exercise>
+    <p>
+    Esboce a região delimitada pelas curvas <m>y=\sin{x}</m>, <m>y=x</m>, <m>x=\frac{\pi}{2}</m>, <m>x=\pi</m> e calcule a área.
+    </p>
+</exercise>
+<!-- <exercise>
+    Esboce a região que reapresente o conjunto <m>\mathrm{R} = \{(x,y):0\leq y\leq 4-x^2\}</m> e calcule a área.
+</exercise>
+<exercise>
+    <p>
+    Esboce a região que reapresente o conjunto <m>\mathrm{R} = \{(x,y):x\geq 0 \,\,\text{e} \,\, x^3\leq y\leq x\}</m> e  calcule a área.
+    </p>
+</exercise> -->
+</exercisegroup>
+
+
+
+<exercisegroup>
+<introduction>
+    <p>
+       Encontre o volume do sólido obtido pela rotação da região delimitada 
+       pelas curvas entorno do eixo <m>x</m>.  
+    </p>
+</introduction>
+<exercise>
+    <p>
+    <m>y=2-\frac{1}{2}x</m>, <m>y=0</m>, <m>x=1</m>, <m>x=2</m>
+    </p>
+</exercise>
+<exercise>
+<p> <m>y=2-\frac{1}{2}x</m>, <m>y=0</m>, <m>x=1</m>, <m>x=2</m></p>
+</exercise>
+<exercise>
+    <p>
+    <m>y=1-x^2</m>, <m>y=0</m>
+    
+    </p>
+</exercise>
+<exercise>
+    <p><m>y=x^3</m>, <m>y=x</m>, <m>x \geq0</m></p>
+</exercise>
+<exercise>
+    <p><m>y=\frac{1}{4}x^2</m>, <m>y=5-x^2</m></p>
+</exercise>
+</exercisegroup>
+
+<exercisegroup>
+<introduction>
+    <p>
+        Encontre o volume do sólido obtido pela rotação da região delimitada pelas curvas entorno do eixo <m>y</m>.
+    </p>
+</introduction>
+<exercise>
+    <p><m>y^2=x</m>,  <m>x=2y</m></p>
+</exercise>
+<exercise>
+    <p><m>y=\ln{x}</m>,  <m>y=1</m>, <m>y=2</m>, <m>x=0</m></p>
+</exercise>
+<exercise>
+    <p><m>x=2\sqrt{y}</m>,  <m>x=0</m>,  <m>y=9</m></p>
+</exercise>
+</exercisegroup>
+</exercises>
+
+
+
+<!-- \item 
+\begin{enumerate}
+    \item <m>x=2\sqrt{y}</m>, <m>x=0</m> <m>y=9</m>
+    \item <m>y=\ln{x}</m>,<m>y=1</m>, <m>y=2</m>, <m>x=0</m>
+    \item <m>y^2=x</m>, <m>x=2y</m>
+\end{enumerate}
+\item Calcule o volume do sólido gerado pela rotação, em torno do eixo <m>y</m>, da região que representa o conjunto <m>\mathbb{R}=\{(x,y): 0\leq x \leq 2, 0\leq y\leq \frac{1}{2}x^2+1, \,y \geq x^2-1\}</m>. %resp. 7pi/2 -->
+
+
+
+</section>
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+</article>
+
+</pretext>
+

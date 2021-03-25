@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
+
+
+
+        <macros>
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+        </macros>
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-integral-1">
+        <title>Cálculo Integral: N3</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+
+                     <author>
+                    <personname>Deibsom Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
+        </introduction>
+    <section>
+    <title>A integral definida</title>
+    <subsection xml:id="sec-TFC">
+            <title>Área e a integral definida </title>
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                         Calcular integral definida.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       Usar o Teorema Fundamental do Cáculo para obter o valor da integral defnida.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Calcular integrais definidas usando o método de substituição.
+                    </p>
+                </li>
+            </ol>
+            
+        </objectives>
+
+    <definition xml:id="def-area">
+    <title>Área</title>
+    <statement>
+        <p>
+            Seja <m>f</m> não negativa e contínua no intervalo fechado <m>[a,b]</m>. A área limitada pelo gráfico 
+            de <m>f</m>, pelo eixo <m>x</m> e pelas retas <m>x=a</m> e <m>x=b</m> é denotado por
+            <sidebyside widths="60% 30%"  valign="mindle mindle"> 
+                
+            <p>
+                <md>
+                    <mrow> \text{Área} =  \integrald{f(x)}{a}{b}{x} </mrow>
+                </md>.
+        A expressão    <m> \integrald{f(x)}{a}{b}{x} </m> é chamada de <term> integral definida</term> de <m>a</m> até <m>b</m>, em que <m>a</m>  e <m>b</m>
+        são os limites inferior e superior de  integração, respectivamente.
+            </p>
+                
+            
+            <figure xml:id="fig-area">
+            <caption>Área sob o gráfico de <m>f(x)</m> entre <m>a</m> e <m>b</m>.</caption>            
+               
+            <image source="images/area-integral-definida" width="30%"/>
+           
+            </figure>
+        </sidebyside>                 
+        
+        
+               
+    </p>
+    </statement>
+    </definition> 
+
+
+ <example xml:id="ex1-area">
+     <statement>
+         <p>
+             Calcule a área da região limitada pelo gráfico de pelo gráfico de  <m> f(x)=3x </m>, pelo eixo <m>x</m> 
+             e pela reta <m>x=2</m>.
+         </p>
+     </statement>
+     <solution>
+         <p>
+         <sidebyside widths="65% 30%" valign="left mindle">
+            <p>
+            De acordo com a <xref ref="def-area"/>, a integral definida de <m>3x</m> de <m>0</m> até <m>2</m> representa a área da região limitada pelo gráfico de
+            <m> f(x)=3x </m>, pelo eixo <m>x</m> e pela reta <m>x=2</m>, como mostra a figura <xref ref="figure-sage-exe1-area"/>. A região é triângular, com uma base de 
+           <m>2</m> unidades e altura de <m>6</m> unidades. Portanto, usando a fórmula da área do triângulo, temos
+            
+            <md>
+                <mrow>\integrald{3x}{0}{2}{x} = \amp \frac{1}{2}(2)(6)=6 </mrow>
+            </md>.
+            </p>
+            <figure xml:id="figure-sage-exe1-area">
+                    <caption>Área entre o gráfico de <m>f(x)=3x</m>, o eixo <m>x</m> e a reta <m>x=2</m> </caption>
+                    <image xml:id="sageplot-reta3x" width="35%">
+                        <description>Uma reta no intervalo [0,2]</description>
+                        <sageplot>
+                        f(x) = 3*x                        
+                        plot(f, (x, 0, 2), fill=True, gridlines=True, axes_labels=['$x$','$y$'])
+                        </sageplot>
+                    </image>
+                </figure>
+            
+            </sidebyside>         
+          
+          
+         </p>
+     </solution>
+ </example>
+
+
+<exercise xml:id="ex2-area">
+
+<statement>
+    <p>Calcule a integral definida de <m>4x</m> de <m>0</m> até <m>3</m>, usando uma fórmula geométrica. Ilustre sua resposta
+    com um gráfico apropriado.</p>
+</statement>
+
+<hint>
+    <p>Revise <xref ref="ex1-area"/>.</p>
+</hint>
+
+<answer>
+    <p><m>18</m></p>
+</answer>
+</exercise>
+
+   <!-- <figure xml:id="fig-area">
+            <caption>Área sob <m>f</m> entre <m>a</m> e <m>b</m></caption>
+            
+    <description>Teste</description>      
+    <image source="images/area-integral-definida" width="50%"/>
+           
+    </figure>-->
+   
+    <technology>
+    <title>Faça você mesmo</title>
+    
+    <statement>
+        <p>
+            Para visualizar a região sob o gráfico de um função <em>não negativa</em> entre <m>a</m> e <m>b</m> se diriga até 
+             a calculadora gráfica abaixo e siga os seguntes passos:
+
+             <ol>
+                 <li>
+                     <p>
+                         Em <m>f(x)</m>, insira uma função contínua pelo menos no intervalo <m>[-10,10]</m> ou em qualquer sebintervalo deste.
+                          Por exemplo, <m>[0,1].</m> Por padrão usamos a função <m>f(x)=x^2</m>.
+                     </p>
+                 </li>
+                 <li>
+                     <p>
+                         Olhando para o gráfico, faça ajustes no intervalo para garantir que 
+                         o gráfico de <m>y=f(x)</m>, inserido no passo anterior, esteja sempre acima do eixo <m>x</m>. (A função deve ser não negatica, lembra?)
+                     </p>
+                 </li>
+                 <li>
+                     <p>
+                         Marque a opção para mostrar a região pretendida.
+                     </p>
+                 </li>
+             </ol>
+            Seguindo os passos acima você encontra a região cuja <term> área</term>  é dada por <me>\integrald{f(x)}{a}{b}{x}</me>.
+        </p>
+    </statement>
+
+    <figure xml:id="figure-interactive-numerical-integral">
+                    <caption>Região sob o gráfico de uma função</caption>
+
+                    <interactive xml:id="interactive-numerical-integral" platform="sage" width="95%" aspect="1:1" >
+                    <slate surface="sage">                    
+                    @interact
+                    def _(
+                            f=input_box(x^2 , width=20, 
+                            label="f(x) ="), 
+                            x_range=range_slider(-10,10,1,(0,1), label='[a, b]'),
+                            area = checkbox(False, label='Região')):
+                            a = x_range[0] ; b = x_range[1] 
+                            if area:
+                                
+                                text = "<h4>Região entre $y={}$, o eixo x e as retas x = {} e x = {}.</h4>".format(latex(f), a, b)
+                                integral = '$\\displaystyle\\int_{}^{}{}dx$'.format(a,b, latex(f))
+                                pretty_print(html(text))
+                                #pretty_print(html(integral)) 
+                            p = plot(f,(x, a , b), axes_labels=['$x$', '$y$'], figsize=[3,3], fill=area, ticks=[[a, b],[]])  
+                            p.show(figsize=[3,3])
+                    </slate>
+                    </interactive>
+                </figure>
+    </technology>
+
+    
+
+     <note>
+    Outra forma de introduzir a integral definida é através do processo de somas. Nesse caso, a região é dividida em um certo número de retângulos
+    cuja a altura seja <m>f(x)</m>. A  soma da área de cada retângulo definido dessa forma é denominada de <term> Soma de Riemman</term>. O limite da Soma de <em> Riemman</em>, quando a base de cada retângulo 
+    se aproxima de zero, é também chamado de <term> integral definida</term>. Nas próximas seções daremos mais detalhes sobre essa abordagem.
+    </note>  
+
+
+
+
+
+</subsection>
+
+    <subsection xml:id="sec-TFC2">
+        <title>Teorema Fundamental do Cálculo</title>
+        
+        
+    <theorem xml:id="thm-TFC">
+    <title>Teorema Fundamental do Cálculo (TFC)</title>
+        <statement>
+            <p>
+                Se <m>f(x)</m> é contínua no intervalo <m>[a,b]</m>, e a derivada de   <m>F(x)</m> é igual a <m>f(x)</m> para todo <m>x</m> nesse intervalo, então
+                <md>
+                    <mrow> \integrald{f(x)}{a}{b}{x}= F(b) - F(a) </mrow>
+                </md>, 
+            em que <m>F</m> é qualquer primitiva de <m>f</m>, isto é, <m>F'(x)=f(x)</m> para todo <m>x\in[a,b]</m>.
+            </p>
+        
+        <proof>
+            <p>
+                depois
+            </p>
+        </proof>
+        </statement>
+    </theorem>
+    <p>
+    Na <xref ref="def-area"/> assumia-se que <m>f</m> era não negativa no intervalo fechado <m> [a, b]</m>. Assim, a integral definida era definida como
+    uma área. Agora, a partir do <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref>, a definição pode ser estendida
+    para incluir funções negativas em todo o intervalo fechado <m> [a, b]</m> ou em parte dele.
+    Especificamente, se <m>f</m> for qualquer função contínua em um intervalo <m> [a, b]</m>,  então a <term> integral definida</term> de <m>f(x)</m>  de <m>a</m> 
+     até <m>b</m>  é definida como
+
+     <me> \integrald{f(x)}{a}{b}{x}= F(b) - F(a)</me>,
+
+     em que <m>F'(x)=f(x)</m>. Dessa forma, as <term> integral definidas</term> não representam necessariamente áreas e, portanto, podem ser negativas,
+     positivas ou zero.
+  </p>
+    <assemblage xml:id="assemblage-definida-indefinida" >
+        <title>Atenção</title>
+        <p>
+            Há uma significativa diferença entre integral indefinida e integral definida.
+            A <em>integral indefinida</em> <me>\integral{f(x)}{x}</me> denota uma família de 
+            funções na qual cada melbro é uma primitiva de <m>f(x)</m>, enquanto a <em>integral indefinida</em> 
+            <me>
+                \integrald{f(x)}{a}{b}{x}
+            </me>
+              é um número.
+        </p>
+    </assemblage>
+    <example xml:id="ex2-tfc">    
+        <statement>
+            <p>
+                Usando o <xref ref="thm-TFC" text="custom"> TFC</xref>   resolva  a integral definida
+                
+                <md>
+                    <mrow>\integrald{2x}{0}{2}{x} </mrow>
+                </md>.
+               
+
+            </p>
+        </statement>
+        <solution>
+            <p>Note que <m>F(x)=x^2</m> é uma primitva de <m>2x</m>. Então, pelo 
+            <xref ref="thm-TFC" text="custom"> TFC</xref>, temos
+                <md>
+                    <mrow>\integrald{2x}{0}{2}{x} \amp = 2^2 -  0^2 = 4 </mrow>
+                </md>.
+            </p>
+        </solution>
+    </example>
+    <exercise xml:id="exe2-TFC">
+    
+    
+    
+         <statement>
+         <p>
+        Usando o <xref ref="thm-TFC" text="custom"> TFC</xref>   resolva  a integral 
+                <md>
+                    <mrow>\integrald{4x}{0}{3}{x}.</mrow>
+                </md>
+                </p>
+        </statement>
+    <hint>
+    <p>Revise <xref ref="ex2-tfc"/>. </p>
+    </hint>
+
+    <answer>
+        <p>18</p>
+    </answer>   
+    </exercise>
+     
+    <assemblage xml:id="assemblage-notacao">
+        <title>Notação útil</title>
+        <p>Quando usamos o Teorema Fundamntal do Cálculo é util usar a notação
+
+        <md>
+            <mrow> \integrald{f(x)}{a}{b}{x}=F(x)\biggr\rvert_a^b= F(b) - F(a).</mrow>
+        </md>
+        
+        </p>
+    </assemblage>
+
+    <investigation> 
+    <title> Onde está a constante <m>C</m>?</title>
+    <statement>
+        <p>
+              Revise o <xref ref="thm-TFC" text="custom"> TFC</xref> e justifique o "sumiço" da constante <m>C</m> que forma a primitiva <m>F</m>.
+        </p>
+    </statement>
+
+    </investigation>
+
+    <assemblage xml:id="assemblage-definida-propriedade">
+        <title>Propriedades da integral definida</title>
+        <p> Sejam <m>f</m> e <m>g</m> contínuas no intervalo <m>[a,b]</m> e <m>k</m> uma constante.
+            <ol label="I)">
+                <li xml:id="p-constante">
+                    <p>
+                        <m>\integrald{kf(x)}{a}{b}{x} = k \integrald{f(x)}{a}{b}{x}</m>
+                    </p>
+                </li>
+                <li xml:id="p-soma">
+                    <p>
+                        <m>\integrald{\left[f(x)+ g(x)\right]}{a}{b}{x} = \integrald{f(x)}{a}{b}{x} + \integrald{g(x)}{a}{b}{x}</m>
+
+                    </p>
+                </li>
+                <li xml:id="p-sub">
+                    <p>
+                        <m>\integrald{\left[f(x)- g(x)\right]}{a}{b}{x} = \integrald{f(x)}{a}{b}{x} - \integrald{g(x)}{a}{b}{x}</m>
+
+                    </p>
+                </li>
+                <li xml:id="p-acb">
+                    <p>
+                        <m>\integrald{f(x)}{a}{b}{x} = \integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x} \quad a &lt; c &lt; b </m>
+
+                    </p>
+                </li>
+                <li xml:id="p-aa-0">
+                    <p>
+                       <m> \integrald{f(x)}{a}{a}{x}=0 </m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       <m> \integrald{f(x)}{b}{a}{x}=-\integrald{f(x)}{a}{b}{x}</m>
+                    </p>
+                </li>
+            </ol>
+        </p>
+        
+    </assemblage>
+
+    
+    <example xml:id="ex3-area">
+    <title>Cálculo da área</title>
+        <statement>
+            <p>
+                Determine a área sob o gráfico de <m>f(x)=x^2-1</m> entre <m>1</m> e <m>2</m>.
+            </p>
+        </statement>
+        <solution>
+            <p> 
+                A <xref ref="fig-area1"/>  ilustra a área área desejada, cujo valor é obtido como a seguir:
+                <md>
+                    <mrow> \text{Área}  \amp = \integrald{(x^2-1)}{1}{2}{x} \amp \amp \ct{Integral definida}</mrow>
+                    <mrow>      \amp =\left(\frac{x^3}{3}-x\right)\Biggr\rvert_1^2 \amp \amp \ct{Calcule a primitiva} </mrow>
+                    <mrow> \amp = \left(\frac{2^3}{3}-2\right)- \left(\frac{1^3}{3}-1\right)  \amp \amp \ct{Aplique o} \, <xref ref="thm-TFC" text="custom">TFC</xref> </mrow>
+                    <mrow> \amp = \frac{4}{3} </mrow>
+                </md> 
+            Dessa forma, podemos dizer que a área da região é de <m>\frac{4}{3}</m>.   
+
+            <figure xml:id="fig-area1">
+            <caption>Região limitada por <m>f(x)=x^2-1</m>, o eixo <m>x</m> e a reta <m>x=2</m>.</caption>          
+   
+            <image source="images/exemplo-area-1" width="35%">                
+            </image>                
+            </figure>            
+            </p>
+        </solution>
+    </example>
+    <exercise xml:id="exe3-area">
+    
+        <statement>
+            <p>
+                Determine a área da região limitada pelo eixo <m>x</m>, pelas retas <m>x=2</m>, <m>x=5</m>
+                e pelo gráfico de <m>f(x)=x^2+1.</m>
+            </p>
+        </statement>
+        <hint>
+            <p>
+                Revise <xref ref="ex3-area"/>.
+            </p>
+        </hint>
+        <answer>
+            <p>
+               42
+            </p>
+        </answer>
+        
+    </exercise>
+  
+    <example xml:id="ex5-integral-definida">
+     <title>Mais exemplos</title>
+        <statement>
+            <p>
+            Calcule as seguintes integrais definidas.
+            
+                <task xml:id="task-def-ex">
+                    <statement>
+                        <p>
+                            <m>\integrald{e^{2x}}{0}{2}{x}</m>
+                        </p>
+                    </statement>
+                    
+                <solution>
+                    <p>
+                        Uma primitiva de <m>e^{2x}</m> pode ser  <m>F(x)=\frac{e^{2x}}{2}</m>. Então,
+
+                        <md>
+                            <mrow> \integrald{e^{2x}}{0}{2}{x}\amp = \frac{e^2x}{2} \Biggr\rvert_0^2 = 
+                                            \frac{1}{2}\left(e^4-e^0\right) \approx 26.79</mrow>
+                        </md>
+                    </p>
+                </solution>
+                </task>
+                <task xml:id="task-def-ln">
+                    <statement>
+                        <p>
+                            <m>\integrald{\frac{1}{x}}{3}{6}{x}</m>
+                        </p>
+                    </statement>
+                
+                    <solution>
+                        <p>
+                           Uma primitiva de <m>\frac{1}{x}</m> pode ser <m>F(x)=\ln{|x|}</m>, e, já que <m>3\leq x\leq 6</m>, podemos escrever 
+                           <m>F(x)=\ln{x}</m>. Assim,
+
+                           <md>
+                               <mrow>\integrald{\frac{1}{x}}{3}{6}{x} \amp = \ln{x}\Biggr\rvert_3^6 =\ln{6} - \ln{3} </mrow>
+                               <mrow> \amp = \ln{\frac{6}{3}} = \ln{2} \approx 0.6931 </mrow>
+                           </md>
+                        </p>
+                    </solution>
+                 </task>
+                <task xml:id="task-def-sqrt">
+                   <statement>
+                       <p>
+                           <m>\integrald{-3\sqrt{t}}{1}{4}{t}</m>
+                       </p>
+                   </statement>
+                   
+                    <solution>
+                        <p>
+                         Reescrevendo <m>\sqrt{t}</m> como <m>t^{1/2}</m> e aplicando a regra da potência encontramos <m>F(x)=\frac{t^{3/2}}{3/2}</m> 
+                         como primitiva. Então, 
+
+                         <md>
+                             <mrow> \integrald{-3\sqrt{t}}{1}{4}{t}\amp = -3\left(\frac{t^{3/2}}{3/2} \right)\Biggr\rvert_1^4 \amp \ct{Aplique o} \, <xref ref="thm-TFC" text="custom">TFC</xref>.</mrow>
+                             <mrow> \amp = -2x^{3/2}\Biggr\rvert_1^4 \amp \ct{Simplifique.}</mrow>
+                             <mrow> \amp = -2(4^{3/2}-1^{3/2}) = -2(8-1)=-14</mrow>
+                         </md>
+                        </p>
+                    </solution>
+                </task>
+      </p>
+            </statement>      
+        
+        
+    </example>
+    <exercise xml:id="exe5-log-exp">
+       
+        <statement>
+            <p>
+                Calcule cada integral definida.
+                <task>
+                    <statement>
+                        <p>
+                             <m>\integrald{e^{-x}}{0}{1}{x}</m>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <m>F(x)= -e^{-x} </m>.
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                          Aproximadamente 0.6321.
+                        </p>
+                    </answer>
+                   
+                </task>
+                <task>
+                   <statement>
+                       <p>
+                            <m>\integrald{-\frac{4}{x}}{3}{6}{x}</m>
+                       </p>
+                   </statement>
+                     <hint>
+                        <p>
+                            Revise <xref ref="task-def-ln"/>.
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                         <m>4\ln{(1/2)}</m> ou aproximadamente  -2.772.
+                        </p>
+                    </answer>
+                   
+                </task>
+                
+            </p>
+        </statement>
+    </exercise>
+    <example xml:id="ex6-integral-definida">
+    <title>Função modular</title>
+        <statement>
+            <p>
+               Sobre função <m>f(x)=|2x-1|</m>, resolva.
+            </p>
+        
+                
+       
+        <task>
+        <statement>
+           <p>
+                Esboce a região sob o gráfico de <m>f(x)</m> de <m>x=0</m> até <m>x=2</m>.
+            </p>
+        </statement>
+            
+            <solution>
+            <p>
+                 <figure xml:id="figure-sage-exe6-area">
+                    <caption>Região determinada por <m>f(x)=|x-2|</m>, o eixo <m>x</m> e as reta <m>x=0</m> e <m>x=2</m> </caption>
+                    <image xml:id="sageplot-ex6-madular" width="45%">
+                        <description>Um função modular <m>|2x-1|</m> em <m>[0,2]</m></description>
+                        <sageplot>
+                        f(x) = abs(2*x-1)                   
+                        p = plot(f, (x, 0, 2), fill=True, gridlines=True, axes_labels=['$x$','$y$'])
+                        p+= plot(f, (x, -0.5, 2.5), figsize=[4,4])
+                        p
+                        </sageplot>
+                    </image>
+                </figure>            
+            </p>
+            
+
+
+            
+        </solution>
+        </task>
+        
+        <task>
+            <statement>
+                <p>
+                     Calcule <m>\integrald{f(x)}{0}{2}{x}</m>.
+                </p>
+            </statement>
+        <solution>
+            <p>
+             A partir da definição de valor absoluto, o integrando <m>|2x-1|</m> pode ser escrito em duas partes, a saber:
+
+             <me>
+                 |2x-1| = \begin{cases} -(2x-1), \amp x\lt 1/2 \\
+                          2x-1, \amp x \geq 1/2 \end{cases}.
+             </me>
+             Usando <xref ref="p-acb"/> das proriedades de integral definida, podemos reescrever a integral como duas outras de modo que a soma seja igual a integral desejada.
+
+            <md>
+                <mrow> \integrald{|2x-1|}{0}{2}{x}\amp = \integrald{-(2x-1)}{0}{1/2}{x} +  \integrald{(2x-1)}{1/2}{2}{x} </mrow>
+                <mrow> \amp = \left(-x^2+ x\right)\Biggr\rvert_0^{1/2} + \left(x^2-x\right)\Biggr\rvert_{1/2}^{2} </mrow>
+                <mrow> \amp = \left(-\frac{1}{4}+ \frac{1}{2}\right) - (0 +0) + (4-2)-\left(\frac{1}{4}-\frac{1}{2}\right)=\frac{5}{2} </mrow>
+            </md>.
+
+            </p>
+        </solution>
+            
+        </task>
+        
+    </statement>
+    </example>
+    
+<activity>
+<title>Valor absoluto</title>
+    <!-- <prelude>
+    <p>Algum texto.</p>
+    </prelude> -->
+              
+          
+    <task xml:id="exe-a">
+    <statement>
+      
+   
+        <p>
+            Determine a região determinada pelo gráfico de <m>f(x)=|x-2|</m>, pelas as retas <m>x=0</m> e <m>x=5</m>
+            e o eixo <m>x</m>.
+        </p>
+        </statement>
+    <answer>
+        <p>
+             <image xml:id="sageplot-ativ-madular" width="45%">
+                        <description>Uma função modular <m>|x-2|</m> em <m>[0,6]</m></description>
+                        <sageplot>
+                        f(x) = abs(x-2)                   
+                        p = plot(f, (x, 0, 5), fill=True, gridlines=True, axes_labels=['$x$','$y$'])
+                        p+= plot(f, (x, -0.5,6.5 ), figsize=[4,4])
+                        p
+                        </sageplot>
+                    </image>
+        </p>
+    </answer>
+    </task>
+    <task xml:id="exe-b">
+    <statement>      
+   
+        <p>
+            Calcule a área da região descrita no intem anterior usando fórmulas geométricas.
+        </p>
+         </statement>
+    <answer>
+        <p>
+            <m>  \frac{13}{2}</m>
+        </p>
+    </answer>    
+    </task>
+    <task xml:id="exe-c">
+    <statement>      
+    
+    <p>
+        Calcule  <m>\integrald{|x-2|}{0}{5}{x}</m> e compare com o item anterior.
+    </p>
+    </statement>   
+    <answer>
+        <p>
+          <m>  \frac{13}{2}</m>
+        </p>
+    </answer>
+    </task>
+    
+    
+   <!-- <postlude>
+  <p> Algum texto</p>
+   </postlude>
+   -->
+ <solution>
+     <p>
+         depois
+     </p>
+ </solution>
+</activity>
+
+<investigation xml:id="inv-propriedades">
+    
+    <statement>
+        <p>
+           Use os recursos matemáticos apresentados até aqui para mostrar que as
+            <xref ref="assemblage-definida-propriedade" text="title"> </xref> são verdadeiras.          
+        </p>
+    </statement>
+</investigation>
+
+
+
+</subsection>
+<subsection xml:id="subsec-simetria">
+       
+        
+    <title>Integrando funções com gráficos simétricos</title>
+
+     <introduction>
+         <p>
+            Gráficos de funções são úteis para analisar várias propriedades importanetes.
+        Diversas funções possuem  simetria em relação em relação ao eixo <m>y</m>, como na <xref ref="fig-par"/> e 
+        outras apresentam simetria em relação a origem, como na <xref ref="fig-impar"/>. No primeiro caso,
+        a função é dita <term> par</term> e satisfaz <m>f(-x)=f(x)</m> em <m>[-a,a]</m>, e no segundo a função é dita <term>ímpar</term> e satisfaz
+         <m>f(-x)=-f(x)</m> em <m>[-a,a]</m>.
+         </p>
+     
+       </introduction>
+
+      
+
+<figure>
+<caption>Gráficos simétricos.</caption>
+<sidebyside widths="48% 48%" valigns="middle middle" >
+    
+<figure xml:id="fig-par">
+<caption>Simetria em relação ao eixo y</caption>
+<image source="images/f-par" width="50%">
+<description></description>    
+</image>
+</figure>
+
+<figure xml:id="fig-impar">
+<caption>Simetria em relação a origem</caption>
+<image source="images/f-impar" width="50%">
+<description>Simetria em relação a origem</description>    
+</image>
+</figure>
+</sidebyside> 
+</figure> 
+
+<assemblage xml:id="assemblage-par-impar">
+    <title> Integração com funções pares e ímpares</title>    
+     <prelude>
+     <p>
+     A partir da definição se uma função é par ou ímpar, poderemos fazer uso de propriedade importantes 
+     para o cálculo de integrais definidas. 
+     </p>
+     </prelude>                   
+   <p>
+   <ol label="I)">
+       <li xml:id="fact-par-1">
+           <p>
+               Se <m>f</m> for uma função <term>par</term>, então 
+            <m>\integrald{f(x)}{-a}{a}{x}=2\integrald{f(x)}{0}{a}{x}</m>
+           </p>
+       </li>
+       <li xml:id="fact-impar-2">
+           <p>
+                Se <m>f</m> for uma função <term>ímpar</term>, então 
+            <m>\integrald{f(x)}{-a}{a}{x}=0</m>
+           </p>
+       </li>
+   </ol>
+   
+  
+    </p> 
+     
+ </assemblage>
+
+<example xml:id="ex-par-impar">
+    <statement>
+        <p>Calcule a integral definida
+            
+            <task>
+            <statement>
+                <p>
+                     <m>\integrald{x^2}{-2}{2}{x}</m>
+                </p>
+            </statement>
+              
+                <solution>
+                    <p>
+                        A função <m>f(x)=x^2</m> é par, pois <m>x^2=(-x)^2</m> para todo <m>x</m> em <m>[-2,2]</m>. Então,
+                        de acordo com o <xref ref="fact-par-1" />, temos
+
+                        <md>
+                            <mrow>  \integrald{x^2}{-2}{2}{x} \amp = 2\integrald{x^2}{0}{2}{x} </mrow>
+                            <mrow> \amp = 2\cdot\frac{x^3}{3}\Biggr\rvert_0^{2} =2\cdot\frac{2^3}{3} - 2\cdot\frac{0^3}{3}=\frac{16}{3}</mrow>
+                           
+                            
+                        </md>.
+                           
+                        
+                        
+                    </p>
+                </solution>   
+            </task>
+             
+            <task>
+            <statement>
+                <p>
+                     <m>\integrald{t^3}{-2}{2}{t}</m>
+                </p>
+            </statement>
+                   
+                <solution>
+                    <p>
+                     A função <m>t^3</m> é ímpar, já que <m>-t^3= (-t)^3</m> para todo <m>x</m> em <m>[-2,2]</m>. Logo, de acordo com o
+                     <xref ref="fact-impar-2" />,
+                     <me>
+                         \integrald{t^3}{-2}{2}{t}=0
+                     </me>.
+                     
+                    </p>
+                </solution>     
+            </task>
+                       
+        </p>
+    </statement>
+    
+</example>
+
+ 
+<exercise xml:id="exe7-par-impar">
+    <statement>
+        <p>
+            <task>
+            <statement>
+                <p>
+                    <m>\integrald{t^4}{-1}{1}{t}</m>   
+                </p>
+            </statement>
+              
+                <hint>
+                <p>
+                    Verifique se <m>t^4</m> é par ou ímpar em <m>[-1,1]</m> e depois  use  as 
+                    propriedades da <xref ref="assemblage-par-impar" text="title"/>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>\frac{2}{5}</m>
+                </p>
+            </answer>          
+            </task>  
+            
+            
+                  
+         
+            <task>
+            <statement>
+                <p>
+                    <m>\integrald{x^5}{-1}{1}{x}</m>
+                </p>
+            </statement>
+                
+                <hint>
+                <p>
+                    Verifique se <m>x^5</m> é par ou ímpar em <m>[-1,1]</m> e depois  use 
+                     as propriedades da <xref ref="assemblage-par-impar" text="title"/>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    0
+                </p>
+            </answer>
+            </task>
+             
+        </p>
+    </statement>
+</exercise>
+
+
+<investigation xml:id="act-par-impar">
+ <title>Sobre a integral de funções pares e ímpares</title>
+    <statement>
+        <p>
+        Use os recursos matemáticos apresentados até aqui para mostrar que o <xref ref="fact-par-1"/> e 
+        o <xref ref="fact-impar-2"/> são verdadeiros.  
+     </p>
+ </statement>                
+ 
+ </investigation> 
+
+<investigation xml:id="act-par-impar2">
+ <title>Sobre a integral de funções pares e ímpares</title>
+    <statement>
+        <p>
+        Encontre uma justificativa geométrica para as afirmações <xref first="fact-par-1"  last="fact-impar-2"/>.  
+     </p>
+ </statement>               
+ 
+ </investigation> 
+
+
+</subsection>
+
+ <subsection xml:id="subsec-definida-subs">
+     <title>Integrais definidas por substituição</title>
+     <introduction>
+         <p>
+             Existem duas formas de encontrar o valor da integral indefinida por substituição. A primeira, covida você a 
+             determinar uma primitiva e então aplicar o <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref>.
+             Enquanto na segunda é necessário  mudar os limites de integração de acordo com a substituição escolhida e, só depois, aplicar o teorema. 
+             O exemplo a seguir apresentamos duas soluções, cada uma ilutra uma das  possibilidades.
+            
+         </p>
+     </introduction>
+     <!-- <theorem xml:id="thm-subs-integral-definida">
+         <statement>
+             <p>
+                encontrar uma versão suave
+             </p>
+         </statement>
+         <proof>
+             <p>
+                 depois
+             </p>
+         </proof>
+     </theorem> -->
+     
+  <example xml:id="ex4-area">
+      
+                <statement>
+                    <p>
+                        Calcule a integral definida <m>\integrald{(4x+1)^2}{0}{1}{x}</m>.
+                    </p>
+                </statement>
+
+            <solution>
+                <p>
+                Escolha <m>u=4x+1</m>. Então, <m>\frac{\dd u}{\dd x}=4</m>  e <m>\dd u= 4\dd x</m>. Assim, podemos afirmar que <m>\frac{(4x+1)^3}{3}</m> é uma 
+                primitiva para <m>(4x+1)^2</m>. Logo, 
+                <md>
+                    <mrow> \integrald{(4x+1)^2}{0}{1}{x}\amp = \integrald{\frac{1}{4}(4x+1)^2(4)}{0}{1}{x}  \amp \ct{Multiplique e divida por 4}.</mrow>
+                    <mrow> \amp =\left(\frac{1}{4}\frac{(4x+1)^3}{3}\right)\Biggr\rvert_0^{1} \amp \ct{Mantenha os limites de integração originais}</mrow>
+                    <mrow> \amp = \frac{1}{4}\left(\frac{(4\cdot 1 + 1)^3}{3} - \frac{(4\cdot 0 + 1)^3}{3} \right) \amp \ct{Aplique o }\, <xref ref="thm-TFC" text="custom">TFC</xref> </mrow>
+                    <mrow> \amp =\frac{1}{4}\left(\frac{5^3}{3}-\frac{1^3}{3}\right)</mrow>
+                    <mrow> \amp = \frac{31}{3} </mrow>
+                </md>
+                </p>
+            </solution>
+
+            <solution>
+                <p>
+                Escolha <m>u=4x+1</m>. Então, <m>\frac{\dd u}{\dd x}=4</m>  e <m>\dd u= 4\dd x</m>. Para encontrar 
+                os novos limites de integração, observamos que quando
+                <m>x=0</m>, temos <m>u=1</m>, por outro lado, para <m>x=1</m>, obtemos <m>u=5</m>. Logo,
+                    <md>
+                        <mrow> \integrald{(4x+1)^2}{0}{1}{x}\amp = \frac{1}{4}\integrald{u^2}{1}{5}{u} \amp \ct{Multiplique e divida por 4}</mrow>
+                        <mrow> \amp = \frac{1}{4}\frac{u^3}{3}\Biggr\rvert_1^{5} \amp \ct{Mudança dos limites de integração}</mrow>
+                        <mrow> \amp = \frac{1}{4}\left(\frac{5^3}{3}-\frac{1^3}{3}\right) \amp \ct{Aplique o }\, <xref ref="thm-TFC" text="custom">TFC</xref></mrow>
+                        <mrow> \amp = \frac{31}{3}</mrow>
+                    </md>
+                </p>
+            </solution>
+                 
+    </example>
+
+<exercise xml:id="exe4-integral-definida">   
+        <statement>
+            <p>
+                Calcule a integral definida <m>\integrald{(2t+3)^3}{0}{1}{t}</m>.
+            </p>
+        </statement>
+        <hint>
+            <p>
+            Escolha a substituição  <m>u=2t+3</m>.
+            </p>
+        </hint>
+        <answer>
+            <p>
+                68
+            </p>
+        </answer>
+        
+    </exercise>
+
+<assemblage xml:id="assemblage-roteiro-subs-definida-integral">
+    <title>Roteiro para encontrar integrais definidas por substituição</title>
+    
+            
+   
+    <p>
+        <ul>
+            <li>
+                <p>
+                    Use o método de substituição para encontrar uma primitiva em termos 
+                    da variável original. Aplique o  <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref> utilizando os limites de integração originais; <term>ou</term>
+                </p>
+            </li>
+       
+            <li>
+                <p>
+                   Escolha uma substituição adequada e converta os limites de integração originais em termos
+                   da nova variável. Aplique o <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref> sem converter a primitiva em termos da variável original.
+                </p>
+            </li>
+        </ul>
+    </p>
+        
+  
+</assemblage>
+<note>
+Embora as duas maneiras apresentadas para encontrar integrais definidas, por substituição, funcionem. É comum, por geralmente simplificar os cálculo, 
+fazer uso da mudança dos limites de integração para a nova variável.
+</note>
+
+    
+<exercise xml:id="exer-defi-subs1">
+    <statement>
+        <p>
+            Resolva a integral <m>\integrald{\sqrt{2x+1}}{-\frac{1}{2}}{1}{x}</m> usando as duas opções apresentadas no
+            <xref ref="assemblage-roteiro-subs-definida-integral" text="title"/>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Escolha a substituição <m>u=2x+1</m>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+        <m>\sqrt{3}</m>
+        
+        </p>
+    </answer>
+    
+</exercise>
+<example xml:id="exer-defi-subs2">
+    <statement>
+        <p>
+        Calcule  <m>\integrald{xe^{x^2}}{0}{2}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+           Escolha <m>u=x^2</m>. Então, <m>\frac{\dd u}{\dd x}=2x</m>  e <m>\dd u= 2x\dd x</m>. 
+           Quando <m>x=0</m>, <m>u=0</m>, e, quando <m>x=2</m>, <m>u=4</m>. Logo, 
+
+           <md>
+               <mrow> \integrald{xe^{x^2}}{0}{2}{x}\amp = \integral{\frac{1}{2}e^u}{u} = \frac{1}{2}e^u \Biggr\rvert_0^{4}</mrow>
+               <mrow> \amp = \frac{1}{2}\left(e^4-e^0\right)=\frac{1}{2}(e^4-1)</mrow>
+               <mrow> \amp \approx 26.79 </mrow>
+           </md>.
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+           Calcule <m>\integrald{2xe^{x^2}}{1}{2}{x}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Revise <xref ref="exer-defi-subs2"/>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>e^4 - e \approx 51.87</m>
+        </p>
+    </answer>
+</exercise>
+
+
+<example xml:id="ex-defi-subs3">
+    <statement>
+        <p>
+         Calcule <m> \integrald{\frac{\tan{t}}{\cos^2{t}}}{0}{\frac{\pi}{4}}{t}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Escolha <m>u=\tan{t}</m>. Então, <m>\frac{\dd u}{\dd t}=(1/\cos^2{t})</m>  e <m>\dd u= (1/\cos^2{t})\dd t</m>. Quando 
+           <m> t=0</m>, <m>u=\tan{0}=0</m>, e, quando, <m>x=\pi/4</m>, <m>u=\tan{\pi/4}=1</m>. Portanto,
+           <md>
+               <mrow>  \integrald{\frac{\tan{t}}{\cos^2{t}}}{0}{\frac{\pi}{4}}{t}\amp = \integrald{\tan{t}\cdot\left(\frac{1}{\cos^2{t}}\right)}{0}{\frac{\pi}{4}}{t}</mrow>
+               <mrow> \amp =  \integrald{u}{0}{1}{u} = \frac{u^2}{2} \Biggr\rvert_0^{1} = \left(\frac{1^2}{2}-\frac{0^2}{2}\right) </mrow>
+               <mrow> \amp = \frac{1}{2} </mrow>
+           </md>.
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Refaça o <xref ref="ex-defi-subs3"/> fazendo a substituição <m>u=\cos{t}</m>. Conclua que 
+            embora o resultado final seja o mesmo, essa escolha torna o problema mais complicado.
+            </p>
+    </statement>
+</exercise>
+
+
+
+
+<example xml:id="ex-defi-subs4">
+    <statement>
+        <p>
+         Calcule <m> \integrald{\frac{1}{5-x}}{1}{3}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            A escolha <u>u=5-x</u>, fornece <m>\dd u=(-1)\dd x </m>. Além disso, quando <m>x=1</m>, <m>u=4</m>, e , 
+            quendo <m>x=3</m>, <m>u=2</m>. Então,
+
+            <md>
+                <mrow>\integrald{\frac{1}{5-x}}{1}{3}{x} \amp  = \integrald{-\frac{1}{u}}{4}{2}{u}</mrow>
+                <mrow> \amp = -\ln{u}\Biggr\rvert_4^{2}  = - (\ln{2}-\ln{4})</mrow>
+                <mrow> \amp = \ln{\frac{4}{2}} = \ln{2} \approx 0,6931  </mrow>
+                
+            </md>.
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exer-subs-02">
+    <statement>
+        <p>
+            Calcule <m>\integrald{\frac{1}{(3-5x)^2}}{1}{3}{x}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Escolha a substituição <m>u=3-5x</m>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>\frac{1}{12}</m>
+        </p>
+    </answer>
+</exercise>
+
+
+<example xml:id="ex-defi-subs5">
+    <statement>
+        <p>
+         Calcule <m> \integrald{\frac{\ln{x}}{x}}{1}{e}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Fazendo <m>u=\ln{u}</m>, obtemos <m>\frac{\dd u}{\dd x} = 1/x</m>. Então  <m>\dd u = (1/x)\dd x</m>. Quando
+            <m>x=1</m>, <m>u=\ln{1}=0</m>, e, quando <m>x=e</m> , <m>u=\ln{e}=1</m>. Assim,
+
+            <md>
+                <mrow> \integrald{\frac{\ln{x}}{x}}{1}{e}{x}\amp = \integrald{u}{0}{1}{u} = \frac{u^2}{2}\Biggr\rvert_0^{1} </mrow>
+                <mrow> \amp = \left(\frac{1^2}{2} -\frac{0^2}{2}\right)=\frac{1}{2} </mrow>
+            </md>.
+        </p>
+    </solution>
+</example>
+
+
+
+
+
+
+<exercise xml:id="exer-subs-03">
+    <statement>
+        <p>
+            Calcule <m>\integrald{\frac{1}{x\sqrt{\ln{x}}}}{e}{e^4}{x}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Escolha a substituição <m>u=\ln{x}</m>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            2
+        </p>
+    </answer>
+</exercise>
+
+ </subsection>
+
+
+<subsection xml:id="subsec-">
+       <title>Calculando integrais definidas com SageMath</title>
+<introduction>
+    <p>
+   No Sage, usando o comando <c>integral(f, (x, a, b))</c> é possível 
+calcular a integral definida de <m>f(x)</m> de <m>a</m> até <m>b</m>. 
+    </p>
+</introduction>
+ 
+<technology>
+<title>Faça você mesmo</title>
+
+
+<sage>
+    <input>
+        integral(x^2, (x, -1, 1))
+    </input>
+    <output>
+        2/3
+    </output>
+</sage>
+
+<p> Se a função estiver definida em uma variável simbólica diferente de <m>x</m>, é necessário proceder de uma das formas a seguir:
+<ol>
+    <li>
+        <p>
+            Substituir essa variável original por <m>x</m> quando for inserir o comando na célula.
+        </p>
+    </li>
+   <li>
+       <p>
+           Definir a nova variável usando comando <c>var()</c>.
+       </p>
+   </li>
+</ol>
+ </p>
+<p> Logo abaixo vamos cálcular a integral <m>\integrald{t^5}{-1}{1}{t}</m> de ambas as formas.</p>
+
+<paragraphs>
+    <title>Usando a variável <m>x</m></title>
+<sage>
+    <input>
+        integral(x^5, (x, -1, 1))
+    </input>
+    <output>
+        0
+    </output>
+</sage>    
+</paragraphs>
+<paragraphs>
+    <title>Usando a variável apresentada no problema</title>
+
+
+<sage>
+    <input>
+    t =  var('t')
+    integral(t^5, (t, -1, 1))
+    </input>
+    <output>
+        0
+    </output>
+</sage>
+</paragraphs>
+
+</technology>
+
+<activity xml:id="sage-integral-definida">
+<p>Utilize a célular abaixo para calcular as integrais dos exemplos desta seção.</p>
+<sage>
+    <input>        
+
+    </input>
+    <output>
+        (for static output)
+    </output>
+</sage>
+
+</activity>
+
+ </subsection>
+
+
+<exercises xml:id="exercises-integral-definida">
+<exercisegroup>
+<introduction>
+    <p>
+      Esboce a regra descrita e encontre sua área.  
+    </p>
+</introduction>
+<exercise>
+    <p>
+    A região abaixo da curva <m> y = x^2 + 1</m> e acima do intervalo <m>[0, 3]</m>.
+    </p>
+</exercise>
+<exercise>
+<p>
+    A região abaixo da curva <m> y = x − x^2</m> e acima do eixo <m> x</m>.
+</p>
+</exercise>
+<exercise>
+    <p>
+    A região abaixo do intervalo <m> [−2, −1]</m>, mas acima da curva
+    <m>y = x^3 </m>.
+    </p>
+</exercise>
+</exercisegroup>
+<exercisegroup>
+<introduction>
+    <p>
+        Considere <m>f(x)=\frac{\tan{x}}{1+x^2+ x^4}</m> e resolva os problemas a seguir.
+    </p>
+</introduction>
+
+    <exercise>
+        <p>
+            Mostre que a <m>f(x)</m> é ímpar em <m>[-1,1]</m>. 
+        </p>
+    </exercise>
+
+   <exercise>
+        <p>
+            Quanto vale <m>\integrald{f(x)}{-1}{1}{x}</m>?.
+        </p>
+    </exercise>
+
+</exercisegroup>
+<exercisegroup cols="2">
+<introduction>
+    <p>
+        Esboce a região definida pelas integrais abaixo. Em seguida determine o valor de cada uma delas.
+    </p>
+</introduction>
+<exercise>
+    <m>\integrald{1-x^4}{-1}{1}{x}</m>
+</exercise>
+<exercise>
+  <m>  \integrald{\frac{2}{\sqrt{x}}}{1}{4}{x}</m>
+</exercise>
+
+<exercise>
+  <m>  \integrald{|x-1|}{-2}{3}{x}</m>
+</exercise>
+<exercise>
+ <m>   \integrald{2-|x-2|}{0}{4}{x}</m>
+</exercise>
+</exercisegroup>
+<exercisegroup cols="2">
+<introduction>
+    <p>
+        Use a técnica de substituição e o teorema fundamental do cálculo para calcular as seguintes integrais definidas.
+    </p>
+</introduction>
+<exercise>
+    <m>\displaystyle\int_{-1}^3 (x^3+5x)\,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int_{-1}^0 x(x+1)^{100}\,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int_0^{\pi}\cos{(x+\pi)}\,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int_{0}^{\frac{\pi}{3}}\cos{2x} \,\dd x</m>
+</exercise>
+  
+<exercise>
+    <m>\displaystyle\int_1^22xe^{x^2} \,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int_0^3\dfrac{x}{\sqrt{x+1}}\,\dd x </m>
+</exercise>
+
+<exercise>
+<m>\displaystyle\int_1^4\dfrac{\cos{\sqrt{x}}}{\sqrt{x}}\,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int_{-1}^1x\sqrt{x^4+3}\,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int_{-1}^0x^2\sqrt{x+1}\,\dd x</m>
+</exercise>
+<exercise>
+    <m>\displaystyle\int_{0}^1\dfrac{x}{x^2 + 1}\,\dd x</m>
+</exercise>
+
+<exercise>
+    <m>\displaystyle\int_0^1\dfrac{1}{1+ 4t}\,\dd t</m>
+</exercise>
+<exercise>
+  <m>  \displaystyle\int_{0}^{\frac{\pi}{3}}\sin{\theta}\cos^{2}{\theta} \,\dd \theta</m>
+</exercise>
+</exercisegroup>   
+</exercises>
+
+</section>
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+</article>
+
+</pretext>
+

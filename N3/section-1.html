@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-03-24T22:51:23-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A integral definida</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Avalie (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Avalie (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-integral-1.html"><span class="title">Cálculo Integral: N3</span></a></h1>
+<p class="byline">Leon Silva, Deibsom Silva</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-integral-1.html" title="Anterior">Vol</a><a id="upbutton" class="up-button button toolbar-item" href="calc-integral-1.html" title="Acima">Subir</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-integral-1.html" title="Anterior">Vol</a><a class="up-button button toolbar-item" href="calc-integral-1.html" title="Acima">Subir</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">A integral definida</span></a><ul>
+<li><a href="section-1.html#sec-TFC" data-scroll="sec-TFC">Área e a integral definida</a></li>
+<li><a href="section-1.html#sec-TFC2" data-scroll="sec-TFC2">Teorema Fundamental do Cálculo</a></li>
+<li><a href="section-1.html#subsec-simetria" data-scroll="subsec-simetria">Integrando funções com gráficos simétricos</a></li>
+<li><a href="section-1.html#subsec-definida-subs" data-scroll="subsec-definida-subs">Integrais definidas por substituição</a></li>
+<li><a href="section-1.html#subsec-" data-scroll="subsec-">Calculando integrais definidas com SageMath</a></li>
+<li><a href="section-1.html#exercises-integral-definida" data-scroll="exercises-integral-definida">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">A integral definida</span>
+</h2>
+<section class="subsection" id="sec-TFC"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Área e a integral definida</span>
+</h3>
+<article class="objectives goal-like" id="objectives-1"><h6 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h6>
+<ol class="decimal">
+<li id="li-1"><p id="p-3">Calcular integral definida.</p></li>
+<li id="li-2"><p id="p-4">Usar o Teorema Fundamental do Cáculo para obter o valor da integral defnida.</p></li>
+<li id="li-3"><p id="p-5">Calcular integrais definidas usando o método de substituição.</p></li>
+</ol></article><article class="definition definition-like" id="def-area"><h6 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Área.</span>
+</h6>
+<p id="p-6">Seja \(f\) não negativa e contínua no intervalo fechado \([a,b]\text{.}\) A área limitada pelo gráfico de \(f\text{,}\) pelo eixo \(x\) e pelas retas \(x=a\) e \(x=b\) é denotado por <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:63.1578947368421%;justify-content:;">
+<div class="displaymath" id="p-7">
+\begin{gather*}
+\text{Área} =  \integrald{f(x)}{a}{b}{x} \text{.}
+\end{gather*}
+</div>
+<p class="continuation">A expressão    \(\integrald{f(x)}{a}{b}{x} \) é chamada de <dfn class="terminology">integral definida</dfn> de \(a\) até \(b\text{,}\) em que \(a\)  e \(b\) são os limites inferior e superior de  integração, respectivamente.</p>
+</div>
+<div class="sbspanel" style="width:31.5789473684211%;justify-content:;"><figure class="figure figure-like" id="fig-area"><img src="images/area-integral-definida.svg" role="img" style="width: 100%; height: auto;" alt=""><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span>Área sob o gráfico de \(f(x)\) entre \(a\) e \(b\text{.}\)</figcaption></figure></div>
+</div></div></p></article><article class="example example-like" id="ex1-area"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex1-area"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1-area"><article class="example example-like"><p id="p-8">Calcule a área da região limitada pelo gráfico de pelo gráfico de  \(f(x)=3x \text{,}\) pelo eixo \(x\) e pela reta \(x=2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-9"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
+<div class="sbspanel" style="width:66.6666666666667%;justify-content:;">
+<p id="p-10">De acordo com a <a class="xref" data-knowl="./knowl/def-area.html" title="Definição 1.1: Área">Definição 1.1</a>, a integral definida de \(3x\) de \(0\) até \(2\) representa a área da região limitada pelo gráfico de \(f(x)=3x \text{,}\) pelo eixo \(x\) e pela reta \(x=2\text{,}\) como mostra a figura <a class="xref" data-knowl="./knowl/figure-sage-exe1-area.html" title="Figura 1.4">Figura 1.4</a>. A região é triângular, com uma base de \(2\) unidades e altura de \(6\) unidades. Portanto, usando a fórmula da área do triângulo, temos</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{3x}{0}{2}{x} = \amp \frac{1}{2}(2)(6)=6 \text{.}
+\end{align*}
+</div>
+</div>
+<div class="sbspanel" style="width:30.7692307692308%;justify-content:;"><figure class="figure figure-like" id="figure-sage-exe1-area"><img src="images/sageplot-reta3x.svg" role="img" style="width: 100%; height: auto;" alt="Uma reta no intervalo [0,2]" onerror="this.src='images/sageplot-reta3x.png';this.onerror=null;"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.4<span class="period">.</span></span><span class="space"> </span>Área entre o gráfico de \(f(x)=3x\text{,}\) o eixo \(x\) e a reta \(x=2\)</figcaption></figure></div>
+</div></div></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="ex2-area"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex2-area"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2-area"><article class="exercise exercise-like"><p id="p-11">Calcule a integral definida de \(4x\) de \(0\) até \(3\text{,}\) usando uma fórmula geométrica. Ilustre sua resposta com um gráfico apropriado.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-12">Revise <a class="xref" data-knowl="./knowl/ex1-area.html" title="Exemplo 1.3">Exemplo 1.3</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-13">\(18\)</p></div></div>
+</div></article></div>
+<article class="technology computation-like" id="technology-1"><h6 class="heading">
+<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
+</h6>
+<p id="p-14">Para visualizar a região sob o gráfico de um função <em class="emphasis">não negativa</em> entre \(a\) e \(b\) se diriga até a calculadora gráfica abaixo e siga os seguntes passos:</p>
+<ol class="decimal">
+<li id="li-4"><p id="p-15">Em \(f(x)\text{,}\) insira uma função contínua pelo menos no intervalo \([-10,10]\) ou em qualquer sebintervalo deste. Por exemplo, \([0,1].\) Por padrão usamos a função \(f(x)=x^2\text{.}\)</p></li>
+<li id="li-5"><p id="p-16">Olhando para o gráfico, faça ajustes no intervalo para garantir que o gráfico de \(y=f(x)\text{,}\) inserido no passo anterior, esteja sempre acima do eixo \(x\text{.}\) (A função deve ser não negatica, lembra?)</p></li>
+<li id="li-6"><p id="p-17">Marque a opção para mostrar a região pretendida.</p></li>
+</ol>
+<p class="continuation">Seguindo os passos acima você encontra a região cuja <dfn class="terminology">área</dfn>  é dada por</p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{f(x)}{a}{b}{x}\text{.}
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="figure-interactive-numerical-integral"><iframe id="interactive-numerical-integral" width="570" height="570" src="interactive-numerical-integral-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.7<span class="period">.</span></span><span class="space"> </span>Região sob o gráfico de uma função</figcaption></figure></article><article class="note remark-like" id="note-1"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h6>Outra forma de introduzir a integral definida é através do processo de somas. Nesse caso, a região é dividida em um certo número de retângulos cuja a altura seja \(f(x)\text{.}\) A  soma da área de cada retângulo definido dessa forma é denominada de <dfn class="terminology">Soma de Riemman</dfn>. O limite da Soma de <em class="emphasis">Riemman</em>, quando a base de cada retângulo se aproxima de zero, é também chamado de <dfn class="terminology">integral definida</dfn>. Nas próximas seções daremos mais detalhes sobre essa abordagem.</article></section><section class="subsection" id="sec-TFC2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Teorema Fundamental do Cálculo</span>
+</h3>
+<article class="theorem theorem-like" id="thm-TFC"><h6 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema Fundamental do Cálculo (TFC).</span>
+</h6>
+<p id="p-18">Se \(f(x)\) é contínua no intervalo \([a,b]\text{,}\) e a derivada de   \(F(x)\) é igual a \(f(x)\) para todo \(x\) nesse intervalo, então</p>
+<div class="displaymath">
+\begin{gather*}
+\integrald{f(x)}{a}{b}{x}= F(b) - F(a) \text{,}
+\end{gather*}
+</div>
+<p class="continuation">em que \(F\) é qualquer primitiva de \(f\text{,}\) isto é, \(F'(x)=f(x)\) para todo \(x\in[a,b]\text{.}\)</p>
+<article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-19">depois</p></article></div></article><p id="p-20">Na <a class="xref" data-knowl="./knowl/def-area.html" title="Definição 1.1: Área">Definição 1.1</a> assumia-se que \(f\) era não negativa no intervalo fechado \([a, b]\text{.}\) Assim, a integral definida era definida como uma área. Agora, a partir do <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">Teorema Fundamental do Cálculo</a>, a definição pode ser estendida para incluir funções negativas em todo o intervalo fechado \([a, b]\) ou em parte dele. Especificamente, se \(f\) for qualquer função contínua em um intervalo \([a, b]\text{,}\)  então a <dfn class="terminology">integral definida</dfn> de \(f(x)\)  de \(a\) até \(b\)  é definida como</p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{f(x)}{a}{b}{x}= F(b) - F(a)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">em que \(F'(x)=f(x)\text{.}\) Dessa forma, as <dfn class="terminology">integral definidas</dfn> não representam necessariamente áreas e, portanto, podem ser negativas, positivas ou zero.</p>
+<article class="assemblage assemblage-like" id="assemblage-definida-indefinida"><h6 class="heading"><span class="title">Atenção.</span></h6>
+<p id="p-21">Há uma significativa diferença entre integral indefinida e integral definida. A <em class="emphasis">integral indefinida</em></p>
+<div class="displaymath">
+\begin{equation*}
+\integral{f(x)}{x}
+\end{equation*}
+</div>
+<p class="continuation">denota uma família de funções na qual cada melbro é uma primitiva de \(f(x)\text{,}\) enquanto a <em class="emphasis">integral indefinida</em></p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{f(x)}{a}{b}{x}
+\end{equation*}
+</div>
+<p class="continuation">é um número.</p></article><article class="example example-like" id="ex2-tfc"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex2-tfc"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2-tfc"><article class="example example-like"><p id="p-22">Usando o <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">TFC</a>   resolva  a integral definida</p>
+<div class="displaymath">
+\begin{gather*}
+\integrald{2x}{0}{2}{x} \text{.}
+\end{gather*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-23">Note que \(F(x)=x^2\) é uma primitva de \(2x\text{.}\) Então, pelo <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">TFC</a>, temos</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{2x}{0}{2}{x} \amp = 2^2 -  0^2 = 4 \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe2-TFC"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe2-TFC"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe2-TFC"><article class="exercise exercise-like"><p id="p-24">Usando o <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">TFC</a>   resolva  a integral</p>
+<div class="displaymath">
+\begin{gather*}
+\integrald{4x}{0}{3}{x}.
+\end{gather*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-25">Revise <a class="xref" data-knowl="./knowl/ex2-tfc.html" title="Exemplo 1.10">Exemplo 1.10</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-26">18</p></div></div>
+</div></article></div>
+<article class="assemblage assemblage-like" id="assemblage-notacao"><h6 class="heading"><span class="title">Notação útil.</span></h6>
+<p id="p-27">Quando usamos o Teorema Fundamntal do Cálculo é util usar a notação</p>
+<div class="displaymath">
+\begin{gather*}
+\integrald{f(x)}{a}{b}{x}=F(x)\biggr\rvert_a^b= F(b) - F(a).
+\end{gather*}
+</div></article><article class="investigation project-like" id="investigation-1"><h6 class="heading">
+<span class="type">Investigação</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Onde está a constante \(C\text{?}\)</span>
+</h6>
+<p id="p-28">Revise o <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">TFC</a> e justifique o "sumiço" da constante \(C\) que forma a primitiva \(F\text{.}\)</p></article><article class="assemblage assemblage-like" id="assemblage-definida-propriedade"><h6 class="heading"><span class="title">Propriedades da integral definida.</span></h6>
+<p id="p-29">Sejam \(f\) e \(g\) contínuas no intervalo \([a,b]\) e \(k\) uma constante.</p>
+<ol class="upper-roman">
+<li id="p-constante"><p id="p-30">\(\displaystyle \integrald{kf(x)}{a}{b}{x} = k \integrald{f(x)}{a}{b}{x}\)</p></li>
+<li id="p-soma"><p id="p-31">\(\displaystyle \integrald{\left[f(x)+ g(x)\right]}{a}{b}{x} = \integrald{f(x)}{a}{b}{x} + \integrald{g(x)}{a}{b}{x}\)</p></li>
+<li id="p-sub"><p id="p-32">\(\displaystyle \integrald{\left[f(x)- g(x)\right]}{a}{b}{x} = \integrald{f(x)}{a}{b}{x} - \integrald{g(x)}{a}{b}{x}\)</p></li>
+<li id="p-acb"><p id="p-33">\(\displaystyle \integrald{f(x)}{a}{b}{x} = \integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x} \quad a &lt; c &lt; b \)</p></li>
+<li id="p-aa-0"><p id="p-34">\(\displaystyle \integrald{f(x)}{a}{a}{x}=0 \)</p></li>
+<li id="li-12"><p id="p-35">\(\displaystyle \integrald{f(x)}{b}{a}{x}=-\integrald{f(x)}{a}{b}{x}\)</p></li>
+</ol></article><article class="example example-like" id="ex3-area"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex3-area"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Cálculo da área.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex3-area"><article class="example example-like"><p id="p-36">Determine a área sob o gráfico de \(f(x)=x^2-1\) entre \(1\) e \(2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-37">A <a class="xref" data-knowl="./knowl/fig-area1.html" title="Figura 1.13">Figura 1.13</a>  ilustra a área área desejada, cujo valor é obtido como a seguir:</p>
+<div class="displaymath">
+\begin{align*}
+\text{Área}  \amp = \integrald{(x^2-1)}{1}{2}{x} \amp \amp \ct{Integral definida}\\
+\amp =\left(\frac{x^3}{3}-x\right)\Biggr\rvert_1^2 \amp \amp \ct{Calcule a primitiva} \\
+\amp = \left(\frac{2^3}{3}-2\right)- \left(\frac{1^3}{3}-1\right)  \amp \amp \ct{Aplique o} \, \knowl{./knowl/thm-TFC.html}{\text{TFC}} \\
+\amp = \frac{4}{3} 
+\end{align*}
+</div>
+<p class="continuation">Dessa forma, podemos dizer que a área da região é de \(\frac{4}{3}\text{.}\) <figure class="figure figure-like" id="fig-area1"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/exemplo-area-1.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.13<span class="period">.</span></span><span class="space"> </span>Região limitada por \(f(x)=x^2-1\text{,}\) o eixo \(x\) e a reta \(x=2\text{.}\)</figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe3-area"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe3-area"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe3-area"><article class="exercise exercise-like"><p id="p-38">Determine a área da região limitada pelo eixo \(x\text{,}\) pelas retas \(x=2\text{,}\) \(x=5\) e pelo gráfico de \(f(x)=x^2+1.\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-39">Revise <a class="xref" data-knowl="./knowl/ex3-area.html" title="Exemplo 1.12: Cálculo da área">Exemplo 1.12</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-40">42</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex5-integral-definida"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex5-integral-definida"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Mais exemplos.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex5-integral-definida"><article class="example example-like"><p id="p-41">Calcule as seguintes integrais definidas. <article class="task exercise-like" id="task-def-ex"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-42">\(\integrald{e^{2x}}{0}{2}{x}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-43">Uma primitiva de \(e^{2x}\) pode ser  \(F(x)=\frac{e^{2x}}{2}\text{.}\) Então,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{e^{2x}}{0}{2}{x}\amp = \frac{e^2x}{2} \Biggr\rvert_0^2 = 
+\frac{1}{2}\left(e^4-e^0\right) \approx 26.79
+\end{align*}
+</div>
+</div></div>
+</div></article> <article class="task exercise-like" id="task-def-ln"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-44">\(\integrald{\frac{1}{x}}{3}{6}{x}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-45">Uma primitiva de \(\frac{1}{x}\) pode ser \(F(x)=\ln{|x|}\text{,}\) e, já que \(3\leq x\leq 6\text{,}\) podemos escrever \(F(x)=\ln{x}\text{.}\) Assim,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\frac{1}{x}}{3}{6}{x} \amp = \ln{x}\Biggr\rvert_3^6 =\ln{6} - \ln{3} \\
+\amp = \ln{\frac{6}{3}} = \ln{2} \approx 0.6931 
+\end{align*}
+</div>
+</div></div>
+</div></article> <article class="task exercise-like" id="task-def-sqrt"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-46">\(\integrald{-3\sqrt{t}}{1}{4}{t}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-47">Reescrevendo \(\sqrt{t}\) como \(t^{1/2}\) e aplicando a regra da potência encontramos \(F(x)=\frac{t^{3/2}}{3/2}\) como primitiva. Então,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{-3\sqrt{t}}{1}{4}{t}\amp = -3\left(\frac{t^{3/2}}{3/2} \right)\Biggr\rvert_1^4 \amp \ct{Aplique o} \, \knowl{./knowl/thm-TFC.html}{\text{TFC}}.\\
+\amp = -2x^{3/2}\Biggr\rvert_1^4 \amp \ct{Simplifique.}\\
+\amp = -2(4^{3/2}-1^{3/2}) = -2(8-1)=-14
+\end{align*}
+</div>
+</div></div>
+</div></article></p></article></div>
+<article class="exercise exercise-like" id="exe5-log-exp"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe5-log-exp"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe5-log-exp"><article class="exercise exercise-like"><p id="p-48">Calcule cada integral definida. <article class="task exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-49">\(\integrald{e^{-x}}{0}{1}{x}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-50">\(F(x)= -e^{-x} \text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-51">Aproximadamente 0.6321.</p></div></div>
+</div></article> <article class="task exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-52">\(\integrald{-\frac{4}{x}}{3}{6}{x}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-53">Revise <a class="xref" data-knowl="./knowl/task-def-ln.html" title="Tarefa b">Tarefa b</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-54">\(4\ln{(1/2)}\) ou aproximadamente  -2.772.</p></div></div>
+</div></article></p></article></div>
+<article class="example example-like" id="ex6-integral-definida"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex6-integral-definida"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Função modular.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex6-integral-definida"><article class="example example-like"><p id="p-55">Sobre função \(f(x)=|2x-1|\text{,}\) resolva.</p>
+<article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-56">Esboce a região sob o gráfico de \(f(x)\) de \(x=0\) até \(x=2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-57"><figure class="figure figure-like" id="figure-sage-exe6-area"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sageplot-ex6-madular.svg" role="img" style="width: 100%; height: auto;" alt="Um função modular \(|2x-1|\) em \([0,2]\)" onerror="this.src='images/sageplot-ex6-madular.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.18<span class="period">.</span></span><span class="space"> </span>Região determinada por \(f(x)=|x-2|\text{,}\) o eixo \(x\) e as reta \(x=0\) e \(x=2\)</figcaption></figure></p></div></div>
+</div></article><article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-58">Calcule \(\integrald{f(x)}{0}{2}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-59">A partir da definição de valor absoluto, o integrando \(|2x-1|\) pode ser escrito em duas partes, a saber:</p>
+<div class="displaymath">
+\begin{equation*}
+|2x-1| = \begin{cases} -(2x-1), \amp x\lt 1/2 \\
+2x-1, \amp x \geq 1/2 \end{cases}.
+\end{equation*}
+</div>
+<p class="continuation">Usando <a class="xref" data-knowl="./knowl/p-acb.html" title="Item IV">Item IV</a> das proriedades de integral definida, podemos reescrever a integral como duas outras de modo que a soma seja igual a integral desejada.</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{|2x-1|}{0}{2}{x}\amp = \integrald{-(2x-1)}{0}{1/2}{x} +  \integrald{(2x-1)}{1/2}{2}{x} \\
+\amp = \left(-x^2+ x\right)\Biggr\rvert_0^{1/2} + \left(x^2-x\right)\Biggr\rvert_{1/2}^{2} \\
+\amp = \left(-\frac{1}{4}+ \frac{1}{2}\right) - (0 +0) + (4-2)-\left(\frac{1}{4}-\frac{1}{2}\right)=\frac{5}{2} \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></article></div>
+<article class="activity project-like" id="activity-1"><h6 class="heading">
+<span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Valor absoluto.</span>
+</h6>
+<article class="task exercise-like" id="exe-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-60">Determine a região determinada pelo gráfico de \(f(x)=|x-2|\text{,}\) pelas as retas \(x=0\) e \(x=5\) e o eixo \(x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-61"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sageplot-ativ-madular.svg" role="img" style="width: 100%; height: auto;" alt="Uma função modular \(|x-2|\) em \([0,6]\)" onerror="this.src='images/sageplot-ativ-madular.png';this.onerror=null;"></div></p></div></div>
+</div></article><article class="task exercise-like" id="exe-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-62">Calcule a área da região descrita no intem anterior usando fórmulas geométricas.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-63">\(\frac{13}{2}\)</p></div></div>
+</div></article><article class="task exercise-like" id="exe-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-64">Calcule  \(\integrald{|x-2|}{0}{5}{x}\) e compare com o item anterior.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-65">\(\frac{13}{2}\)</p></div></div>
+</div></article></article><article class="investigation project-like" id="inv-propriedades"><h6 class="heading">
+<span class="type">Investigação</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h6>
+<p id="p-67">Use os recursos matemáticos apresentados até aqui para mostrar que as <a class="xref" data-knowl="./knowl/assemblage-definida-propriedade.html" title="[assemblage]: Propriedades da integral definida">Propriedades da integral definida</a> são verdadeiras.</p></article></section><section class="subsection" id="subsec-simetria"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Integrando funções com gráficos simétricos</span>
+</h3>
+<section class="introduction" id="introduction-2"><p id="p-68">Gráficos de funções são úteis para analisar várias propriedades importanetes. Diversas funções possuem  simetria em relação em relação ao eixo \(y\text{,}\) como na <a class="xref" data-knowl="./knowl/fig-par.html" title="Figura 1.19.(a)">Figura 1.19.(a)</a> e outras apresentam simetria em relação a origem, como na <a class="xref" data-knowl="./knowl/fig-impar.html" title="Figura 1.19.(b)">Figura 1.19.(b)</a>. No primeiro caso, a função é dita <dfn class="terminology">par</dfn> e satisfaz \(f(-x)=f(x)\) em \([-a,a]\text{,}\) e no segundo a função é dita <dfn class="terminology">ímpar</dfn> e satisfaz \(f(-x)=-f(x)\) em \([-a,a]\text{.}\)</p></section><figure class="figure figure-like" id="figure-6"><div class="sidebyside"><div class="sbsrow" style="margin-left:1%;margin-right:1%;">
+<div class="sbspanel" style="width:48.9795918367347%;justify-content:center;"><figure class="figure figure-like" id="fig-par"><img src="images/f-par.svg" role="img" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Simetria em relação ao eixo y</figcaption></figure></div>
+<div class="sbspanel" style="width:48.9795918367347%;justify-content:center;"><figure class="figure figure-like" id="fig-impar"><img src="images/f-impar.svg" role="img" style="width: 100%; height: auto;" alt="Simetria em relação a origem"><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Simetria em relação a origem</figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.19<span class="period">.</span></span><span class="space"> </span>Gráficos simétricos.</figcaption></figure><p id="p-69">A partir da definição se uma função é par ou ímpar, poderemos fazer uso de propriedade importantes para o cálculo de integrais definidas.</p>
+<article class="assemblage assemblage-like" id="assemblage-par-impar"><h6 class="heading"><span class="title">Integração com funções pares e ímpares.</span></h6>
+<ol id="p-70" class="upper-roman">
+<li id="fact-par-1"><p id="p-71">Se \(f\) for uma função <dfn class="terminology">par</dfn>, então \(\integrald{f(x)}{-a}{a}{x}=2\integrald{f(x)}{0}{a}{x}\)</p></li>
+<li id="fact-impar-2"><p id="p-72">Se \(f\) for uma função <dfn class="terminology">ímpar</dfn>, então \(\integrald{f(x)}{-a}{a}{x}=0\)</p></li>
+</ol></article><article class="example example-like" id="ex-par-impar"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-par-impar"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-par-impar"><article class="example example-like"><p id="p-73">Calcule a integral definida <article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-74">\(\integrald{x^2}{-2}{2}{x}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-75">A função \(f(x)=x^2\) é par, pois \(x^2=(-x)^2\) para todo \(x\) em \([-2,2]\text{.}\) Então, de acordo com o <a class="xref" data-knowl="./knowl/fact-par-1.html" title="Item I">Item I</a>, temos</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{x^2}{-2}{2}{x} \amp = 2\integrald{x^2}{0}{2}{x} \\
+\amp = 2\cdot\frac{x^3}{3}\Biggr\rvert_0^{2} =2\cdot\frac{2^3}{3} - 2\cdot\frac{0^3}{3}=\frac{16}{3}\text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article> <article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-76">\(\integrald{t^3}{-2}{2}{t}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-77">A função \(t^3\) é ímpar, já que \(-t^3= (-t)^3\) para todo \(x\) em \([-2,2]\text{.}\) Logo, de acordo com o <a class="xref" data-knowl="./knowl/fact-impar-2.html" title="Item II">Item II</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{t^3}{-2}{2}{t}=0\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article></p></article></div>
+<article class="exercise exercise-like" id="exe7-par-impar"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe7-par-impar"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe7-par-impar"><article class="exercise exercise-like"><p id="p-78"><article class="task exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-79">\(\integrald{t^4}{-1}{1}{t}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-80">Verifique se \(t^4\) é par ou ímpar em \([-1,1]\) e depois  use  as propriedades da <a class="xref" data-knowl="./knowl/assemblage-par-impar.html" title="[assemblage]: Integração com funções pares e ímpares">Integração com funções pares e ímpares</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-81">\(\frac{2}{5}\)</p></div></div>
+</div></article> <article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-82">\(\integrald{x^5}{-1}{1}{x}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-83">Verifique se \(x^5\) é par ou ímpar em \([-1,1]\) e depois  use as propriedades da <a class="xref" data-knowl="./knowl/assemblage-par-impar.html" title="[assemblage]: Integração com funções pares e ímpares">Integração com funções pares e ímpares</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-84">0</p></div></div>
+</div></article></p></article></div>
+<article class="investigation project-like" id="act-par-impar"><h6 class="heading">
+<span class="type">Investigação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Sobre a integral de funções pares e ímpares.</span>
+</h6>
+<p id="p-85">Use os recursos matemáticos apresentados até aqui para mostrar que o <a class="xref" data-knowl="./knowl/fact-par-1.html" title="Item I">Item I</a> e o <a class="xref" data-knowl="./knowl/fact-impar-2.html" title="Item II">Item II</a> são verdadeiros.</p></article><article class="investigation project-like" id="act-par-impar2"><h6 class="heading">
+<span class="type">Investigação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Sobre a integral de funções pares e ímpares.</span>
+</h6>
+<p id="p-86">Encontre uma justificativa geométrica para as afirmações <a class="xref" data-knowl="./knowl/fact-par-1.html" title="Item I">Item I–II</a>.</p></article></section><section class="subsection" id="subsec-definida-subs"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Integrais definidas por substituição</span>
+</h3>
+<section class="introduction" id="introduction-3"><p id="p-87">Existem duas formas de encontrar o valor da integral indefinida por substituição. A primeira, covida você a determinar uma primitiva e então aplicar o <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">Teorema Fundamental do Cálculo</a>. Enquanto na segunda é necessário  mudar os limites de integração de acordo com a substituição escolhida e, só depois, aplicar o teorema. O exemplo a seguir apresentamos duas soluções, cada uma ilutra uma das  possibilidades.</p></section><article class="example example-like" id="ex4-area"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex4-area"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex4-area"><article class="example example-like"><p id="p-88">Calcule a integral definida \(\integrald{(4x+1)^2}{0}{1}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-89">Escolha \(u=4x+1\text{.}\) Então, \(\frac{\dd u}{\dd x}=4\)  e \(\dd u= 4\dd x\text{.}\) Assim, podemos afirmar que \(\frac{(4x+1)^3}{3}\) é uma primitiva para \((4x+1)^2\text{.}\) Logo,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{(4x+1)^2}{0}{1}{x}\amp = \integrald{\frac{1}{4}(4x+1)^2(4)}{0}{1}{x}  \amp \ct{Multiplique e divida por 4}.\\
+\amp =\left(\frac{1}{4}\frac{(4x+1)^3}{3}\right)\Biggr\rvert_0^{1} \amp \ct{Mantenha os limites de integração originais}\\
+\amp = \frac{1}{4}\left(\frac{(4\cdot 1 + 1)^3}{3} - \frac{(4\cdot 0 + 1)^3}{3} \right) \amp \ct{Aplique o }\, \knowl{./knowl/thm-TFC.html}{\text{TFC}} \\
+\amp =\frac{1}{4}\left(\frac{5^3}{3}-\frac{1^3}{3}\right)\\
+\amp = \frac{31}{3} 
+\end{align*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-90">Escolha \(u=4x+1\text{.}\) Então, \(\frac{\dd u}{\dd x}=4\)  e \(\dd u= 4\dd x\text{.}\) Para encontrar os novos limites de integração, observamos que quando \(x=0\text{,}\) temos \(u=1\text{,}\) por outro lado, para \(x=1\text{,}\) obtemos \(u=5\text{.}\) Logo,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{(4x+1)^2}{0}{1}{x}\amp = \frac{1}{4}\integrald{u^2}{1}{5}{u} \amp \ct{Multiplique e divida por 4}\\
+\amp = \frac{1}{4}\frac{u^3}{3}\Biggr\rvert_1^{5} \amp \ct{Mudança dos limites de integração}\\
+\amp = \frac{1}{4}\left(\frac{5^3}{3}-\frac{1^3}{3}\right) \amp \ct{Aplique o }\, \knowl{./knowl/thm-TFC.html}{\text{TFC}}\\
+\amp = \frac{31}{3}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe4-integral-definida"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe4-integral-definida"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe4-integral-definida"><article class="exercise exercise-like"><p id="p-91">Calcule a integral definida \(\integrald{(2t+3)^3}{0}{1}{t}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-92">Escolha a substituição  \(u=2t+3\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-93">68</p></div></div>
+</div></article></div>
+<article class="assemblage assemblage-like" id="assemblage-roteiro-subs-definida-integral"><h6 class="heading"><span class="title">Roteiro para encontrar integrais definidas por substituição.</span></h6>
+<ul id="p-94" class="disc">
+<li id="li-15"><p id="p-95">Use o método de substituição para encontrar uma primitiva em termos da variável original. Aplique o  <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">Teorema Fundamental do Cálculo</a> utilizando os limites de integração originais; <dfn class="terminology">ou</dfn></p></li>
+<li id="li-16"><p id="p-96">Escolha uma substituição adequada e converta os limites de integração originais em termos da nova variável. Aplique o <a class="xref" data-knowl="./knowl/thm-TFC.html" title="Teorema 1.9: Teorema Fundamental do Cálculo (TFC)">Teorema Fundamental do Cálculo</a> sem converter a primitiva em termos da variável original.</p></li>
+</ul></article><article class="note remark-like" id="note-2"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span>
+</h6>Embora as duas maneiras apresentadas para encontrar integrais definidas, por substituição, funcionem. É comum, por geralmente simplificar os cálculo, fazer uso da mudança dos limites de integração para a nova variável.</article><article class="exercise exercise-like" id="exer-defi-subs1"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-defi-subs1"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-defi-subs1"><article class="exercise exercise-like"><p id="p-97">Resolva a integral \(\integrald{\sqrt{2x+1}}{-\frac{1}{2}}{1}{x}\) usando as duas opções apresentadas no <a class="xref" data-knowl="./knowl/assemblage-roteiro-subs-definida-integral.html" title="[assemblage]: Roteiro para encontrar integrais definidas por substituição">Roteiro para encontrar integrais definidas por substituição</a>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-98">Escolha a substituição \(u=2x+1\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-99">\(\sqrt{3}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="exer-defi-subs2"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-exer-defi-subs2"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-defi-subs2"><article class="example example-like"><p id="p-100">Calcule  \(\integrald{xe^{x^2}}{0}{2}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-101">Escolha \(u=x^2\text{.}\) Então, \(\frac{\dd u}{\dd x}=2x\)  e \(\dd u= 2x\dd x\text{.}\) Quando \(x=0\text{,}\) \(u=0\text{,}\) e, quando \(x=2\text{,}\) \(u=4\text{.}\) Logo,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{xe^{x^2}}{0}{2}{x}\amp = \integral{\frac{1}{2}e^u}{u} = \frac{1}{2}e^u \Biggr\rvert_0^{4}\\
+\amp = \frac{1}{2}\left(e^4-e^0\right)=\frac{1}{2}(e^4-1)\\
+\amp \approx 26.79 \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-8"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-102">Calcule \(\integrald{2xe^{x^2}}{1}{2}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-103">Revise <a class="xref" data-knowl="./knowl/exer-defi-subs2.html" title="Exemplo 1.26">Exemplo 1.26</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-104">\(e^4 - e \approx 51.87\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex-defi-subs3"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-defi-subs3"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-defi-subs3"><article class="example example-like"><p id="p-105">Calcule \(\integrald{\frac{\tan{t}}{\cos^2{t}}}{0}{\frac{\pi}{4}}{t}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-106">Escolha \(u=\tan{t}\text{.}\) Então, \(\frac{\dd u}{\dd t}=(1/\cos^2{t})\)  e \(\dd u= (1/\cos^2{t})\dd t\text{.}\) Quando \(t=0\text{,}\) \(u=\tan{0}=0\text{,}\) e, quando, \(x=\pi/4\text{,}\) \(u=\tan{\pi/4}=1\text{.}\) Portanto,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\frac{\tan{t}}{\cos^2{t}}}{0}{\frac{\pi}{4}}{t}\amp = \integrald{\tan{t}\cdot\left(\frac{1}{\cos^2{t}}\right)}{0}{\frac{\pi}{4}}{t}\\
+\amp =  \integrald{u}{0}{1}{u} = \frac{u^2}{2} \Biggr\rvert_0^{1} = \left(\frac{1^2}{2}-\frac{0^2}{2}\right) \\
+\amp = \frac{1}{2} \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-9"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-9"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-107">Refaça o <a class="xref" data-knowl="./knowl/ex-defi-subs3.html" title="Exemplo 1.28">Exemplo 1.28</a> fazendo a substituição \(u=\cos{t}\text{.}\) Conclua que embora o resultado final seja o mesmo, essa escolha torna o problema mais complicado.</p></article></div>
+<article class="example example-like" id="ex-defi-subs4"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-defi-subs4"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-defi-subs4"><article class="example example-like"><p id="p-108">Calcule \(\integrald{\frac{1}{5-x}}{1}{3}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-109">A escolha u=5-x, fornece \(\dd u=(-1)\dd x \text{.}\) Além disso, quando \(x=1\text{,}\) \(u=4\text{,}\) e , quendo \(x=3\text{,}\) \(u=2\text{.}\) Então,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\frac{1}{5-x}}{1}{3}{x} \amp  = \integrald{-\frac{1}{u}}{4}{2}{u}\\
+\amp = -\ln{u}\Biggr\rvert_4^{2}  = - (\ln{2}-\ln{4})\\
+\amp = \ln{\frac{4}{2}} = \ln{2} \approx 0,6931  \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer-subs-02"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-subs-02"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-subs-02"><article class="exercise exercise-like"><p id="p-110">Calcule \(\integrald{\frac{1}{(3-5x)^2}}{1}{3}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-111">Escolha a substituição \(u=3-5x\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-112">\(\frac{1}{12}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex-defi-subs5"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-defi-subs5"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.32</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-defi-subs5"><article class="example example-like"><p id="p-113">Calcule \(\integrald{\frac{\ln{x}}{x}}{1}{e}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-114">Fazendo \(u=\ln{u}\text{,}\) obtemos \(\frac{\dd u}{\dd x} = 1/x\text{.}\) Então  \(\dd u = (1/x)\dd x\text{.}\) Quando \(x=1\text{,}\) \(u=\ln{1}=0\text{,}\) e, quando \(x=e\) , \(u=\ln{e}=1\text{.}\) Assim,</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\frac{\ln{x}}{x}}{1}{e}{x}\amp = \integrald{u}{0}{1}{u} = \frac{u^2}{2}\Biggr\rvert_0^{1} \\
+\amp = \left(\frac{1^2}{2} -\frac{0^2}{2}\right)=\frac{1}{2} \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer-subs-03"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-subs-03"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.33</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-subs-03"><article class="exercise exercise-like"><p id="p-115">Calcule \(\integrald{\frac{1}{x\sqrt{\ln{x}}}}{e}{e^4}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-116">Escolha a substituição \(u=\ln{x}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-117">2</p></div></div>
+</div></article></div></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.5</span> <span class="title">Calculando integrais definidas com SageMath</span>
+</h3>
+<section class="introduction" id="introduction-4"><p id="p-118">No Sage, usando o comando <code class="code-inline tex2jax_ignore">integral(f, (x, a, b))</code> é possível calcular a integral definida de \(f(x)\) de \(a\) até \(b\text{.}\)</p></section><article class="technology computation-like" id="technology-2"><h6 class="heading">
+<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
+</h6>
+<div class="sagecell-sage" id="sage-1"><script type="text/x-sage">integral(x^2, (x, -1, 1))
+</script></div>
+<p id="p-119">Se a função estiver definida em uma variável simbólica diferente de \(x\text{,}\) é necessário proceder de uma das formas a seguir:</p>
+<ol class="decimal">
+<li id="li-17"><p id="p-120">Substituir essa variável original por \(x\) quando for inserir o comando na célula.</p></li>
+<li id="li-18"><p id="p-121">Definir a nova variável usando comando <code class="code-inline tex2jax_ignore">var()</code>.</p></li>
+</ol>
+<p id="p-122">Logo abaixo vamos cálcular a integral \(\integrald{t^5}{-1}{1}{t}\) de ambas as formas.</p>
+<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Usando a variável \(x\).</span></h5>
+<div class="sagecell-sage" id="sage-2"><script type="text/x-sage">integral(x^5, (x, -1, 1))
+</script></div></article><article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Usando a variável apresentada no problema.</span></h5>
+<div class="sagecell-sage" id="sage-3"><script type="text/x-sage">t =  var('t')
+integral(t^5, (t, -1, 1))
+</script></div></article></article><article class="activity project-like" id="sage-integral-definida"><h6 class="heading">
+<span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h6>
+<p id="p-123">Utilize a célular abaixo para calcular as integrais dos exemplos desta seção.</p>
+<div class="sagecell-sage" id="sage-4"><script type="text/x-sage">
+</script></div></article></section><section class="exercises" id="exercises-integral-definida"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.6</span> <span class="title">Exercícios</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-1">
+<div class="introduction" id="introduction-5"><p id="p-124">Esboce a regra descrita e encontre sua área.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-125">A região abaixo da curva \(y = x^2 + 1\) e acima do intervalo \([0, 3]\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-126">A região abaixo da curva \(y = x − x^2\) e acima do eixo \(x\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-127">A região abaixo do intervalo \([−2, −1]\text{,}\) mas acima da curva \(y = x^3 \text{.}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-2">
+<div class="introduction" id="introduction-6"><p id="p-128">Considere \(f(x)=\frac{\tan{x}}{1+x^2+ x^4}\) e resolva os problemas a seguir.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-129">Mostre que a \(f(x)\) é ímpar em \([-1,1]\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-130">Quanto vale \(\integrald{f(x)}{-1}{1}{x}\text{?.}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-3">
+<div class="introduction" id="introduction-7"><p id="p-131">Esboce a região definida pelas integrais abaixo. Em seguida determine o valor de cada uma delas.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>\(\integrald{1-x^4}{-1}{1}{x}\)</article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>\(\integrald{\frac{2}{\sqrt{x}}}{1}{4}{x}\)</article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>\(\integrald{|x-1|}{-2}{3}{x}\)</article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>\(\integrald{2-|x-2|}{0}{4}{x}\)</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-4">
+<div class="introduction" id="introduction-8"><p id="p-132">Use a técnica de substituição e o teorema fundamental do cálculo para calcular as seguintes integrais definidas.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>\(\displaystyle\int_{-1}^3 (x^3+5x)\,\dd x\)</article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>\(\displaystyle\int_{-1}^0 x(x+1)^{100}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>\(\displaystyle\int_0^{\pi}\cos{(x+\pi)}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>\(\displaystyle\int_{0}^{\frac{\pi}{3}}\cos{2x} \,\dd x\)</article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>\(\displaystyle\int_1^22xe^{x^2} \,\dd x\)</article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>\(\displaystyle\int_0^3\dfrac{x}{\sqrt{x+1}}\,\dd x \)</article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>\(\displaystyle\int_1^4\dfrac{\cos{\sqrt{x}}}{\sqrt{x}}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>\(\displaystyle\int_{-1}^1x\sqrt{x^4+3}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>\(\displaystyle\int_{-1}^0x^2\sqrt{x+1}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>\(\displaystyle\int_{0}^1\dfrac{x}{x^2 + 1}\,\dd x\)</article><article class="exercise exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>\(\displaystyle\int_0^1\dfrac{1}{1+ 4t}\,\dd t\)</article><article class="exercise exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>\(\displaystyle\int_{0}^{\frac{\pi}{3}}\sin{\theta}\cos^{2}{\theta} \,\dd \theta\)</article>
+</div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-03-24T22:54:24-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Aplicações</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Avalie (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-aplicacoes.html"><span class="title">Cálculo Integral: N5</span></a></h1>
+<p class="byline">Leon Silva, Deibsom Silva</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-aplicacoes.html" title="Anterior">Vol</a><a id="upbutton" class="up-button button toolbar-item" href="calc-aplicacoes.html" title="Acima">Subir</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-aplicacoes.html" title="Anterior">Vol</a><a class="up-button button toolbar-item" href="calc-aplicacoes.html" title="Acima">Subir</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Aplicações</span></a><ul>
+<li><a href="section-1.html#subsec-area-entre-curvas" data-scroll="subsec-area-entre-curvas">Área entre curvas</a></li>
+<li><a href="section-1.html#subsec-volume" data-scroll="subsec-volume">Volume</a></li>
+<li><a href="section-1.html#exercises-integral-por-partes" data-scroll="exercises-integral-por-partes">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Aplicações</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h6 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h6>
+<ol class="decimal">
+<li id="li-1"><p id="p-3">Calcular áreas de regiões entre curvas.</p></li>
+<li id="li-2"><p id="p-4">Calcular volume de sólidos usando integral definida.</p></li>
+</ol></article><section class="subsection" id="subsec-area-entre-curvas"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Área entre curvas</span>
+</h3>
+<section class="introduction" id="introduction-2"><p id="p-5">Suponha que \(f\) e \(g\) são funções contínuas em \([a,b]\) tais que \(f(x)\geq g(x)\) para todo \(x\) entre \(a\) e \(b\text{.}\) Estamos interessados em encontrar a área da região delimitadas pelas curvas \(y=f(x)\) e  \(y=g(x)\) e as retas verticais \(x=a\) e \(x=b\text{.}\) (Veja a Figura)</p>
+<figure class="figure figure-like" id="figure-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:54.7368421052632%;justify-content:flex-end;"><figure class="figure figure-like" id="figure-sage-area-entre-curvas"><img src="images/sageplot-f-sob-g-x.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-f-sob-g-x.png';this.onerror=null;"><figcaption><span class="codenumber">(a)</span><span class="space"> </span></figcaption></figure></div>
+<div class="sbspanel" style="width:40%;justify-content:flex-end;"><figure class="figure figure-like" id="fig-f-sob-g-y"><img src="images/sageplot-f-sob-g-y.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-f-sob-g-y.png';this.onerror=null;"><figcaption><span class="codenumber">(b)</span><span class="space"> </span></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><article class="assemblage assemblage-like" id="assemblage-area-entre-curvas"><h6 class="heading"><span class="title">Fórmula para área entre curvas.</span></h6>
+<p id="p-6">A área da região  entre as curvas \(y=f(x)\text{,}\) \(y=g(x)\text{,}\) e limitadas lateralmente pelas retas \(x=a\) e \(x=b\text{,}\) na qual \(f\) e \(g\)  são contínuas e \(f(x)\geq g(x)\) para todo \(x\) em \([a,b]\text{,}\) é</p>
+<div class="displaymath">
+\begin{equation*}
+\text{Área} = \integrald{\left[f(x)-g(x)\right]}{a}{b}{x}.
+\end{equation*}
+</div></article><article class="note remark-like" id="note-1"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h6>É possível que as curvas se intersectem em um ou mais pontos (ver <a class="xref" data-knowl="./knowl/fig-f-sob-g-y.html" title="Figura 1.1.(b)">Figura 1.1.(b)</a>). Portanto, nem sempre a região é limitada lateralmente  por restas. Neste caso, para encontrar os limites de integração devemos obter os tais pontos de intersecção. Esboçar o gráfico dessas curvas pode ser útil.</article><article class="note remark-like" id="note-2"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h6>Em muitos casos as regiões são limitadas lateralmente por curvas, veja por exemplo a <a class="xref" data-knowl="./knowl/fig-f-sob-g-y.html" title="Figura 1.1.(b)">Figura 1.1.(b)</a>. Em geral, é mais simples obter a expressão das curva em função de \(y\) e então calcular a integral usando como refência o eixo \(y\text{.}\) Procedendo dessa forma, a fórmula para área entre curvas se tornaria<div class="displaymath">
+\begin{align}
+\amp \text{Área} = \integrald{\left[f(y)-g(y)\right]}{c}{d}{y} \text{.}\tag{1.1}
+\end{align}
+</div></article><article class="example example-like" id="ex1-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex1-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1-f-sob-g"><article class="example example-like"><p id="p-7">Encontre a área da região entre as curvas \(y = x + 6\text{,}\) \(y = x^2 \) e limitada nas laterais pelas retas \(x = 0 \) e \(x = 2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-8"><figure class="figure figure-like" id="fig-sageplot-fsobg"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-fsobg.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-fsobg.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> A partir da <a class="xref" data-knowl="./knowl/fig-sageplot-fsobg.html" title="Figura 1.5">Figura 1.5</a>  podemos observar que  \(x+6\geq x^2\)  para todo \(x\) de \(0\)   até \(2\text{.}\) Então, fazendo \(f(x)=x+6\) e \(g(x)=x^2\text{,}\) podemos usar a <a class="xref" data-knowl="./knowl/assemblage-area-entre-curvas.html" title="[assemblage]: Fórmula para área entre curvas">Fórmula para área entre curvas</a> para obter</p>
+<div class="displaymath">
+\begin{align*}
+\text{Área} \amp = \integrald{[(x+6)-x^2]}{0}{2}{x}=\left.\left(\frac{x^2}{2} + 6x-\frac{x^3}{3}\right)\right|_0^2\\
+\amp = \frac{34}{3}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe1-f-sob-g"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe1-f-sob-g"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe1-f-sob-g"><article class="exercise exercise-like"><p id="p-9">Encontre a área da região entre as curvas \(y = x^2 + 2\text{,}\) \(y = x \) e limitada nas laterais pelas retas \(x = 0 \) e \(x = 1\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-10">Comece por esboçar os gráficos de ambas as funções.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-11">\(\frac{11}{6}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex2-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex2-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2-f-sob-g"><article class="example example-like"><p id="p-12">Determine a área da região limitada pelas curvas \(y=2-x^2\) e \(y=x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-13"><figure class="figure figure-like" id="fig-ex2-f-sob-g"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-ex2-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-ex2-f-sob-g.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Antes de tudo precisamos saber as limites à esquerda e à direita da região. Para isso, é preciso determinar os pontos de intersecção das curvas. A coordenada \(x\) de um ponto intersecção entre as curvas \(y=2-x^2\) e \(y=x\) satisfaz</p>
+<div class="displaymath">
+\begin{equation*}
+(x, 2-x^2) = (x, x),
+\end{equation*}
+</div>
+<p class="continuation">que se reduz a</p>
+<div class="displaymath">
+\begin{equation*}
+2-x^2=x.
+\end{equation*}
+</div>
+<p class="continuation">Resolvendo a última igualdade  obtemos \(x=-2\)  e \(x=1\text{,}\) que de fato são os limites de integração \(a\) e \(b\text{.}\) Na <a class="xref" data-knowl="./knowl/fig-ex2-f-sob-g.html" title="Figura 1.8">Figura 1.8</a>, é possível observar que o gráfico de \(f(x)=2-x^2\) está acima do gráfico de \(g(x)=x\) para todo \(x\) no intervalo \([-2,1]\text{.}\) Portanto,</p>
+<div class="displaymath">
+\begin{align*}
+\text{Área} \amp = \integrald{[(2-x^2) - x]}{-2}{1}{x} \amp \ctm{\left(\integrald{[f(x) - g(x)]}{a}{b}{x}\right)} \\
+\amp  = \integrald{(x^2-x+2)}{-2}{1}{x} \amp \ct{Reescevendo o integrando.} \\
+\amp  = \left.\left(-\frac{x^3}{3}-\frac{x^2}{2}+ 2x\right)\right|_{-2}^{1}\amp \ct{Teorema Fundamental do Cálculo}\\
+\amp  = \frac{9}{2}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe2-f-sob-g"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe2-f-sob-g"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe2-f-sob-g"><article class="exercise exercise-like"><p id="p-14">Encontre a área da região englobada pelas curvas \(y = x^2\) e \(y = x +6\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-15">Comece por esboçar os gráficos de ambas as funções.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-16">\(\frac{125}{6}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex4-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex4-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex4-f-sob-g"><article class="example example-like"><p id="p-17">Encontre a área da região limitada pelas curvas \(x = y^2\) e  \(y = x − 2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-18"><figure class="figure figure-like" id="fig-ex4-f-sob-g"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-exe4-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-exe4-f-sob-g.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Para iniciar esboçamos as curvas. Na <a class="xref" data-knowl="./knowl/fig-ex4-f-sob-g.html" title="Figura 1.11">Figura 1.11</a>, observamos dois pontos de intesecção entre as curvas. Como cada um desses pontos  satisfaz</p>
+<div class="displaymath">
+\begin{gather*}
+(y^2, y) = (y+2, y) \text{,}
+\end{gather*}
+</div>
+<p class="continuation">que se reduz a</p>
+<div class="displaymath">
+\begin{gather*}
+y^2=y+2
+\end{gather*}
+</div>
+<p class="continuation">e significa que \(y=-1\) e \(y=2\text{.}\) Então, os limites de integração valem \(c=-1\) e \(d=2\text{.}\) Portanto, uma vez que \(y+2\geq y^2\text{,}\) temos</p>
+<div class="displaymath">
+\begin{align*}
+\text{Área}  \amp = \integrald{[(y+2)-y^2]}{-1}{2}{y} \\
+\amp = \left.\left(\frac{y^2}{2} + 2y - \frac{y^3}{3}\right)\right|_{-1}^2\\
+\amp = \frac{9}{2} \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex5-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex5-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex5-f-sob-g"><article class="example example-like"><p id="p-19">Determine a área da região limitada pelas curvas \(y=3x^3-x^2-10x\) e \(y=-x^2+2x\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-20"><figure class="figure figure-like" id="fig-ex5-f-sob-g"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-ex5-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-ex5-f-sob-g.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Para determinar os pontos de interseção das curvas fazemos considerar que tais pontos satisfazem a igualdade</p>
+<div class="displaymath">
+\begin{align*}
+(x, 3x^3-x^2-10x)=(x, -x^2+2x) \amp 
+\end{align*}
+</div>
+<p class="continuation">que resulta em</p>
+<div class="displaymath">
+\begin{align*}
+3x^3-x^2-10x \amp = -x^2+2x\amp \\
+3x^3-12x\amp =0  \\
+3x(x^2-4)\amp =0  \\
+3x(x-2)(x+2) \amp=0 \text{.}
+\end{align*}
+</div>
+<p class="continuation">Resolvendo a última igualdade  obtemos \(x=0\text{,}\) \(x=2\) e \(x=-2\text{.}\) Esboçando as curvas no intervalo que contenha \([-2,2]\) (veja <a class="xref" data-knowl="./knowl/fig-ex5-f-sob-g.html" title="Figura 1.13">Figura 1.13</a>) podemos notar que a região pode ser dividida em duas: a primeira determinada pelo intervalo \([-2,0]\text{,}\) no qual \(3x^3-x^2-10x\geq -x^2+2x\) e a segunda pelo intervalo \([0,2]\text{,}\) no qual \(3x^3-x^2-10x\leq -x^2+2x\text{.}\) Portanto, fazendo \(f(x)=3x^3-x^2-10x\) e \(g(x)=-x^2+2x\text{,}\) temos</p>
+<div class="displaymath">
+\begin{align*}
+\text{Área}\amp =\integrald{[f(x)-g(x))]}{-2}{0}{x} + \integrald{[g(x)-f(x)]}{0}{2}{x} \\
+\amp = \integrald{(3x^3-12x)}{-2}{0}{x}  + \integrald{(-3x^2+12x)}{0}{2}{x}\\
+\amp = \left.\left(\frac{3x^4}{4}-6x^2\right)\right|_{-2}^0 + \left.\left(-\frac{3x^4}{4}+ 6x^2\right)\right|_0^2 \\
+\amp = 12 + 12 =24 \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exe5-f-sob-g"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe5-f-sob-g"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe5-f-sob-g"><article class="exercise exercise-like"><p id="p-21">Determine a área de uma região limitada pelas curvas \(y=x^3+2x^2-3x\) e \(y=x^2+ 3x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-22">Esboce o gráfico da região.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-23">depois</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex6-f-sob-g"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex6-f-sob-g"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex6-f-sob-g"><article class="example example-like"><p id="p-24">Encontre a área aproximada da região limitada pelas curvas \(y=\frac{x}{\sqrt{x^2+1}}\) e \(y=x^4-x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-25"><figure class="figure figure-like" id="fig-ex6-f-sob-g"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/sageplot-ex6-f-sob-g.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-ex6-f-sob-g.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Ao longo do texto encorajamos ao leitor encontrar intersecções de curvas resolvendo equações. De fato, nem sempre é possível resolver equações exatamente. Neste exemplo, a equação a resolver é</p>
+<div class="displaymath">
+\begin{align}
+\frac{x}{\sqrt{x^2+1}} \amp = x^4-x \text{,}\label{eq-ex6}\tag{1.2}
+\end{align}
+</div>
+<p class="continuation">cuja a solução exata é impossível de encotrar. Para resolver o problema com uma "boa precisão" seria necessário fazer uso de métodos apropriados para resolver equações por aproximação. Aqui, vamos nos contentar com uma aproximação "grosseira" a partir da <a class="xref" data-knowl="./knowl/fig-ex6-f-sob-g.html" title="Figura 1.16">Figura 1.16</a>. Dando um <em class="emphasis">zoom</em> na região delimitada pelo intervalo \([1,1.2]\) descobrimos que \(x=1.18\) é uma solução aproximada para a equação <a class="xref" data-knowl="./knowl/eq-ex6.html" title="Equação 1.2">(1.2)</a>.  Já que ambas curvas passam pela origem, temos que a área aproximada da região é dada pela integral:</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\left[\frac{x}{\sqrt{x^2+1}} - (x^4-x)\right]}{0}{1.18}{x} \amp = \integrald{\frac{x}{\sqrt{x^2+1}}}{0}{1.18}{x} - \integrald{(x^4-x)}{0}{1.18}{x} \text{.}
+\end{align*}
+</div>
+<p class="continuation">Para integrar o primeiro termo, usamos a substituição \(u = x^2 + 1\text{.}\) Então, \(\dd u=\dd x\text{,}\) daí, quando \(x=1.18\text{,}\) temos \(u=2.39\text{,}\) e, quando \(x=0\text{,}\) temos \(u=1\text{.}\) Logo,</p>
+<div class="displaymath">
+\begin{align*}
+\text{Área} \amp \approx \frac{1}{2}\integrald{u^{-1/2}}{1}{2.39}{x}-\integrald{(x^4-x)}{0}{1.18}{x} \\
+\amp = \left.u^{(1/2)}\right|_1^{2.39} - \left.\left(\frac{x^5}{5}-\frac{x^2}{2}\right)\right|_0^{1.18} \\
+\amp = \sqrt{2.39}-1 - \frac{(1.18)^5}{5} + \frac{(1.18)^2}{2} \\
+\amp \approx 0.785 
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<section class="subsubsection" id="subsubsec-videos-sugeridos-area"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.1.1</span> <span class="title">Sugestão de vídeos</span>
+</h4>
+<ul class="disc">
+<li id="li-3"><p id="p-26">Problema resolvido: <a class="external" href="https://youtu.be/JvEvOa6jA3c" target="_blank">Área entre curvas que se intersectam.</a></p></li>
+<li id="li-4"><p id="p-27">Problema resolvido: <a class="external" href="https://youtu.be/IPyRysdu6FM" target="_blank">Área composta de duas regiões.</a></p></li>
+</ul></section></section><section class="subsection" id="subsec-volume"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Volume</span>
+</h3>
+<section class="introduction" id="introduction-3"><p id="p-28">A região plana obtida pela intersecção  de um plano a um sólido é denominada  <dfn class="terminology">secção transversal</dfn> do sólido. Considere \(A(x)\) a área da secção transversal do sólido obtida pela sua intersecção com um plano perperdicular ao eixo \(x\) e passando pelo ponto \(x\) em \([a,b]\text{.}\) Então o <dfn class="terminology">volume</dfn> do sólido é dado por</p>
+<article class="assemblage assemblage-like" id="assemblage-volume-x"><div class="displaymath" id="p-29">
+\begin{align*}
+\text{Volume} \amp = \integrald{A(x)}{a}{b}{x} \text{.}
+\end{align*}
+</div></article><p id="p-30">Em outros termos, o volume sólido é igual a integral da função que determina a área da secção transversal para cada \(x\) compreendido entre \(a\) e \(b\text{.}\)</p>
+<p id="p-31">Se a secção transversal for perpendicular ao eixo \(y\text{,}\)  usamos de forma análoga:</p>
+<article class="assemblage assemblage-like" id="assemblage-volume-y"><div class="displaymath" id="p-32">
+\begin{align*}
+\text{Volume} \amp = \integrald{A(y)}{c}{d}{y} \text{.}
+\end{align*}
+</div></article></section><article class="example example-like" id="example-6"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-33">Encontre o volume do sólido obtido pela rotação em torno do eixo \(x\) da região sob a curva \(y=\sqrt{x}\) de \(0\) a \(1\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-34">A <a class="xref" data-knowl="./knowl/solido-ex1-volume.html" title="Figura 1.18">Figura 1.18</a> ilustra o sólido de revolução, encontrado pela  rotação da curva \(y=\sqrt{x}\) em torno do eixo \(x\text{,}\) e a secção transversal, região plana comum entre o sólido de revolução e um plano perpendicular  ao eixo \(x\text{.}\) Para cada \(x\) a borda da secção transversal é uma circuferência cujo raio é \(r=\sqrt{x}\text{.}\) Então, a área da região plana para cada \(x\) é</p>
+<div class="displaymath">
+\begin{align*}
+A(x) =\pi r^2= \pi(\sqrt{x})^2 \amp = \pi x \text{.}
+\end{align*}
+</div>
+<p class="continuation">O sólido encontra-se entre \(x=0\) e \(x=1\text{,}\) assim seu volume é</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{A(x)}{0}{1}{x} \amp = \integrald{\pi x}{0}{1}{x} \\
+\amp = \left.\pi\frac{x^2}{2}\right|_0^1 =\frac{\pi}{2} \text{.}
+\end{align*}
+</div>
+<p class="continuation"><figure class="figure figure-like" id="solido-ex1-volume"><div class="sidebyside"><div class="sbsrow" style="margin-left:8.75%;margin-right:8.75%;">
+<div class="sbspanel" style="width:36.3636363636364%;justify-content:flex-end;"><div class="asymptote-box" style="padding-top: 135.810810810811%"><iframe src="images/revolucao-x.html" class="asymptote"></iframe></div></div>
+<div class="sbspanel" style="width:42.4242424242424%;justify-content:flex-end;"><div class="asymptote-box" style="padding-top: 114.97005988024%"><iframe src="images/workspace.html" class="asymptote"></iframe></div></div>
+</div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.18<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-4"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-35">Encontre o volume do sólido obtido quando a região sob a curva \(y=\sqrt{x}\)  acima do intervalo \([1, 4]\) é girada em torno do eixo \(x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-36">Revise o exemplo anterior.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-37">\(\frac{15\pi}{2}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-7"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-38">Encontre o volume do sólido obtido pela rotação da região delimitada por \(y=x^3\text{,}\) \(y=8\) e \(x=0\)  em torno do eixo \(y\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-39">O  sólido resultante é mostrado na <a class="xref" data-knowl="./knowl/solido-ex2-volume.html" title="Figura 1.21">Figura 1.21</a>. Como a região é girada em torno do eixo \(y\text{,}\) faz sentido obter as regiões transversais ao  sólido perpendicularmente ao  eixo \(y\) e, portanto, integrar em relação a \(y\text{.}\) Para cada \(y\) a área da secção transversal é um disco circular de raio \(r=\sqrt[3]{y}\text{.}\) Então,</p>
+<div class="displaymath">
+\begin{gather*}
+A(y)=\pi r^2 = \pi (\sqrt[3]{y})^2 = \pi y^{(2/3)} 
+\end{gather*}
+</div>
+<p class="continuation">Como o sólido se encontra entre \(y=0\) e \(y=8\text{,}\) seu volume é</p>
+<div class="displaymath">
+\begin{align*}
+\text{Volume}  \amp = \integrald{A(y)}{0}{8}{x} = \integrald{\pi y^{(2/3)}}{0}{8}{x} \\
+\amp = \left.\pi\left( \frac{3}{5}y^{3/5}\right)\right|_0^8  = \frac{96\pi}{5}\text{.}
+\end{align*}
+</div>
+<p class="continuation"><figure class="figure figure-like" id="solido-ex2-volume"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><div class="asymptote-box" style="padding-top: 160.8%"><iframe src="images/revolucao-y.html" class="asymptote"></iframe></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.21<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-5"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-40">Encontre o volume do sólido gerado quando a região limitada por \(y=\sqrt{x}\text{,}\) \(y = 2\) e \(x = 0\) é girada em torno do eixo \(y\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-41">Revise exercício anterior.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-42">\(\frac{32\pi}{5}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-8"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-43">A região \(R\text{,}\) delimitada pelas curvas \(y = x\) e \(y = x^2\) , é girada ao redor do eixo \(x\text{.}\) Encontre o volume do sólido resultante.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-44">As curvas \(y=x \) e \(y=x^2\) se intersectam nos pontos \((0,0)\) e \((1,1)\text{.}\) A região entre esses pontos, o sólido de rotação e a secção transversal perpendicular ao eixo  \(x\) são mostrados na <a class="xref" data-knowl="./knowl/solido-exe3-volume.html" title="Figura 1.24">Figura 1.24</a>. A secção transversal perpendicular ao eixo \(x\) tem o formato de uma arruela (um anel) com raio interno \(r_1=x^2\) e raio externo \(r_2=x\text{,}\) de modo que calculamos a área da secção transversal subtraindo a área do círculo interno da área do círculo externo:</p>
+<div class="displaymath">
+\begin{align*}
+A(x) \amp = \pi (r_2)^2 - \pi (r_1)^2 = \pi(x^2-x^4)  \text{.}
+\end{align*}
+</div>
+<p class="continuation">Portanto,</p>
+<div class="displaymath">
+\begin{align*}
+\text{Volume}  \amp = \integrald{A(y)}{0}{1}{x} = \integrald{\pi(x^2-x^4) }{0}{1}{x} = \amp \\
+\amp =\left.\pi\left(\frac{x^3}{3}-\frac{x^5}{5}\right)\right|_0^1=\frac{2\pi}{15}\text{.}
+\end{align*}
+</div>
+<p class="continuation"><figure class="figure figure-like" id="solido-exe3-volume"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><div class="asymptote-box" style="padding-top: 143.571428571429%"><iframe src="images/revolucao-regiao.html" class="asymptote"></iframe></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.24<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-6"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-45">Encontre o volume do sólido gerado quando a região entre os gráficos de \(f(x)=\frac{1}{2} + x^2\) e \(g(x) = x\) que está acima do intervalo \([0, 2]\) é girada em torno do eixo \(x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-46">Revise o exemplo anterior.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-47">\(\frac{69\pi}{10}\)</p></div></div>
+</div></article></div>
+<section class="subsubsection" id="subsubsec-videos-sugeridos-volume"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.2.1</span> <span class="title">Sugestão de vídeos</span>
+</h4>
+<ul class="disc">
+<li id="li-5"><p id="p-48">Problema resolvido: <a class="external" href="https://youtu.be/SASVpFGryUk" target="_blank">Revolução ao redor do eixo \(x\text{.}\)</a></p></li>
+<li id="li-6"><p id="p-49">Problema resolvido: <a class="external" href="https://youtu.be/YYtN5ckrseI" target="_blank">Generalização do giro ao redor do eixo \(x\text{.}\)</a></p></li>
+<li id="li-7"><p id="p-50">Problema resolvido: <a class="external" href="https://youtu.be/MNOGpk6yEl4" target="_blank">Revolução ao redor do eixo \(y\text{.}\)</a></p></li>
+<li id="li-8"><p id="p-51">Problema resolvido: <a class="external" href="https://youtu.be/EhwNTt-DMc0" target="_blank">Sólido de revolução entre duas funções.</a></p></li>
+</ul></section></section><section class="exercises" id="exercises-integral-por-partes"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-52">Encontre a área da região sombreada. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sageplot-exer-group-1.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/sageplot-exer-group-1.png';this.onerror=null;"></div></p></article><div class="exercisegroup" id="exercisegroup-1">
+<div class="introduction" id="introduction-4"><p id="p-53">Sobre área entre curvas respondam o item a seguir.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-54">Determine a área da região plana limitada pelas retas \(x=1\text{,}\) \(x=3\text{,}\) pelo eixo das abcissas e pelo gráfico de \(y=x^3\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-55">Determine a área da região plana limitada pelas retas \(x=1\text{,}\) \(x=4\text{,}\) \(y=0\) e pelo gráfico de \(y=\sqrt{x}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-56">Determine a área da região plana limitada pelas parábolas \(y=x^2\) e \(y=2x-x^2\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-57">Esboce a região delimitada pelas curvas \(y=e^x\text{,}\) \(y=x^2-1\text{,}\) \(x=-1\text{,}\) \(x=1\) e calcule a área.</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-58">Esboce a região delimitada pelas curvas \(y=\sin{x}\text{,}\) \(y=x\text{,}\) \(x=\frac{\pi}{2}\text{,}\) \(x=\pi\) e calcule a área.</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-2">
+<div class="introduction" id="introduction-5"><p id="p-59">Encontre o volume do sólido obtido pela rotação da região delimitada pelas curvas entorno do eixo \(x\text{.}\)</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-60">\(y=2-\frac{1}{2}x\text{,}\) \(y=0\text{,}\) \(x=1\text{,}\) \(x=2\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-61">\(y=2-\frac{1}{2}x\text{,}\) \(y=0\text{,}\) \(x=1\text{,}\) \(x=2\)</p></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-62">\(y=1-x^2\text{,}\) \(y=0\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-63">\(y=x^3\text{,}\) \(y=x\text{,}\) \(x \geq0\)</p></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-64">\(y=\frac{1}{4}x^2\text{,}\) \(y=5-x^2\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-3">
+<div class="introduction" id="introduction-6"><p id="p-65">Encontre o volume do sólido obtido pela rotação da região delimitada pelas curvas entorno do eixo \(y\text{.}\)</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-66">\(y^2=x\text{,}\)  \(x=2y\)</p></article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-67">\(y=\ln{x}\text{,}\)  \(y=1\text{,}\) \(y=2\text{,}\) \(x=0\)</p></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-68">\(x=2\sqrt{y}\text{,}\)  \(x=0\text{,}\)  \(y=9\)</p></article>
+</div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
