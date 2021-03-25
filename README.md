@@ -36,14 +36,14 @@ por Leon Silva e Deibsom Silva
 ### Cálculo Integral em 10 Semanas
 
 
-- [S1 - Primitiva](https://ldsufrpe.github.io/calculo/N1/).
-- [S2 - Integração por Substituição u](https://ldsufrpe.github.io/calculo/N2/).
-- [S3 - Integral Definida](https://ldsufrpe.github.io/calculo/N3/).
-- [S4 - Técnicas: Integração Partes e por Frações Parciais](https://ldsufrpe.github.io/calculo/N4/).
-- [S5 - Aplicações: Área e Volume](https://ldsufrpe.github.io/calculo/N5/).
-- [S6 - Mais Aplicações de integral](https://ldsufrpe.github.io/calculo/S9/). (*Em construção*)
-- [S7 - Métodos de Resolução de Equações Diferenciais Ordinárias](https://ldsufrpe.github.io/calculo/S10/). (*Em construção*)
-- [S8 - Soma de Riemann](https://ldsufrpe.github.io/calculo/S6/).
-- [S9 - Integral Aproximada](https://ldsufrpe.github.io/calculo/S7/). (*Em construção*)
-- [S10 - Integral Imprópria](https://ldsufrpe.github.io/calculo/S8/).
+- [N1 - Primitiva](https://ldsufrpe.github.io/calculo/N1/).
+- [N2 - Integração por Substituição u](https://ldsufrpe.github.io/calculo/N2/).
+- [N3 - Integral Definida](https://ldsufrpe.github.io/calculo/N3/).
+- [N4 - Técnicas: Integração Partes e por Frações Parciais](https://ldsufrpe.github.io/calculo/N4/).
+- [N5 - Aplicações: Área e Volume](https://ldsufrpe.github.io/calculo/N5/).
+- [N6 - Mais Aplicações de integral](https://ldsufrpe.github.io/calculo/S9/). (*Em construção*)
+- [N7 - Métodos de Resolução de Equações Diferenciais Ordinárias](https://ldsufrpe.github.io/calculo/S10/). (*Em construção*)
+- [N8 - Soma de Riemann](https://ldsufrpe.github.io/calculo/S6/).
+- [N9 - Integral Aproximada](https://ldsufrpe.github.io/calculo/S7/). (*Em construção*)
+- [N10 - Integral Imprópria](https://ldsufrpe.github.io/calculo/S8/).
 
