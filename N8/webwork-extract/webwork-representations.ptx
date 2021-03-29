@@ -1,140 +1,200 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-representations>
   <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
-    <static seed="1" source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg">
+    <static seed="1" source="local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg">
       <statement>
-        <p>Avalie as integrais que convergem, insira 'divergente' se a integral diverge.</p>
-        <p>Determine a integral imprópria</p>
-        <p><m>\displaystyle  \int_{-\infty}^{1}  \frac{7}{x^{2}+4} \;dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="20"/> 
-        insira 'divergente' se a integral não convergir.</p>
+        <p>Calcule a soma:</p>
+        <p><m>\sum\limits_{k=50}^{300} k^3 =</m>  <fillin name="AnSwEr0001" characters="20"/></p>
       </statement>
       <answer>
-        <p><m>\frac{7\tan^{-1}\!\left(\frac{1}{2}\right)}{2}+\frac{7\pi }{4}</m></p>
+        <p><m>2037021875</m></p>
       </answer>
       <solution>
-        <me>\displaystyle\int_{-\infty}^{1}  \frac{7}{x^{2}+4} \;dx=\lim_{a\to -\infty}\int_{a}^{1}  \frac{7}{x^{2}+4} \;dx=\lim_{a\to -\infty} \left[\frac{7\tan^{-1}\!\left(\frac{x}{2}\right)}{2}\right]_{a}^{1}=\lim_{a\to -\infty}\left[{\textstyle\frac{7}{2}}\tan^{-1}({\textstyle\frac{1}{2}})-\frac{7\tan^{-1}\!\left(\frac{a}{2}\right)}{2}\right]={\textstyle\frac{7}{2}}\tan^{-1}({\textstyle\frac{1}{2}})+\frac{7\pi }{4}</me>
+        <alert> Solução:</alert> 
+        
+        
+        
+        Reescrevendo a soma como uma diferença de duas somas de potência, 
+        
+        
+         <m>\sum\limits_{k=50}^{300} k^3 = \sum\limits_{k=1}^{300} k^3 - \sum\limits_{k=1}^{49} k^3</m> 
+        
+        
+        <m>\qquad = \left(\frac {300^4}{4} + \frac {300^3}{2}+ \frac {300^2}{4}\right) - \left(\frac {49^4}{4} + \frac {49^3}{2}+ \frac {49^2}{4}\right)</m> 
+        
+        
+        <m>\qquad = 2037021875</m>
       </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg</server-url>
-    <pg source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg</server-url>
+    <pg source="local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
-    <static seed="2" source="local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg">
+    <static seed="2" source="local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg">
       <statement>
-        <p>Determine se a integral é divergente ou convergente.
-         Se for convergente, calcule. Caso contrário, dê a resposta -1.</p>
-        <p><me>\int_{6}^{\infty} x e^{-4x} dx</me></p>
-        <p><fillin name="AnSwEr0001" characters="30"/></p>
+        <p>Considere a função <m>f(x) = - \frac {x^2}{2} + 6</m>.</p>
+        <p>Neste problema você irá calcular <m>\displaystyle \int_{0}^{4} (- \frac {x^2}{2} + 6) \,dx</m> utilizando a definição
+        <me>\int_{a}^{b} f(x) \,dx = \lim_{n \to \infty} \left[ \sum_{i=1}^{n} f(x_i) \Delta x \right]</me></p>
+        <p>O somatório dentro dos colchetes é a Soma de Riemann à direita <m>R_n</m>.</p>
+        <p>Calcule <m>R_n</m> para <m>f(x) = - \frac {x^2}{2} + 6</m> no intervalo <m>[0, 4]</m> e escreva sua resposta em função de  <m>n</m> sem qualquer sinal de somatório.</p>
+        <p><m>R_n =</m><fillin name="AnSwEr0001" characters="45"/></p>
+        <p><m>\displaystyle \lim_{n \to \infty} R_n =</m> <fillin name="AnSwEr0002" characters="15"/></p>
       </statement>
+      <hint>
+        <m>x_i = \frac {4 i} {n}</m> e  <m>\Delta x = \frac {4} {n}</m>
+      </hint>
       <answer>
-        <p><m>5.89864772543609\times 10^{-11}</m></p>
+        <p><m>24+\frac{64\!\left(n+1\right)\!\left(2n+1\right)}{(-12)n^{2}}</m></p>
+      </answer>
+      <answer>
+        <p><m>13.3333333333333</m></p>
       </answer>
       <solution>
-      Será necessário usar a integração por partes. Para recordar, segue a fórmula:
-        <me>\int u \; dv = u v - \int v \; du.</me>
-        Neste caso vamos usar as seguintes substituições:
-        <m>u = x</m>, <m>du = dx</m>, <m>dv = e^{-4 x} dx</m>,
-        e <m>v = \frac{-1}{4} e^{-4 x}</m>.
-        
-        <me>\begin{aligned}
-        \int_{6}^{\infty} x e^{-4 x} \; dx
-        \amp =	\int_{6}^{\infty} u dv	\\\\
-        \amp =	\left. u v \right|_{6}^{\infty} - \int_{6}^{\infty} v \; du	\\\\
-        \amp =	\left. \frac{-x}{4} e^{-4 x} \right|_{6}^{\infty}
-        		+ \frac{1}{4} \int_{6}^{\infty} e^{-4 x} \; dx	\\\\
-        \amp =	\left. \frac{-x}{4} e^{-4 x} \right|_{6}^{\infty}
-        		- \left. \frac{1}{4^2} e^{-4 x} \right|_{6}^{\infty}	\\\\
-        \amp =	\left( \frac{-x}{4} e^{-4 x} 
-        		- \left. \frac{1}{4^2} e^{-4 x} \right) \right|_{6}^{\infty}	\\\\
-        \amp =	\left. \left( \frac{-4 x - 1}{4^2} \right)
-        		e^{-4 x} \right|_{6}^{\infty}	\\\\
-        \amp =	\lim_{x\to\infty} \left( \frac{-4 x - 1}{4^2} \right) e^{-4 x}
-        		- \left( \frac{-4 \cdot 6 - 1}{4^2} \right) e^{-4 \cdot 6}	\\\\
-        \amp =	\frac{24 + 1}{4^2} e^{-24}
-        \end{aligned}</me>
+        <me>R_{n} = \sum_{i=1}^{n} f(x_i) \Delta x
+        	.</me>
+        Assim  <m>\Delta x</m> é:
+        	<me>\Delta x = \frac{b-a}{n} = \frac{4-0}{n} = \frac{4}{n}</me>
+        Usando as extremidades à direita de cada subintervalo temos
+        <m>x_i = 0 + \Delta x\cdot i = \frac{4 i}{n}</m>.
+        Logo,
+         <m>R_n	=	\displaystyle \sum_{i=1}^{n} f(x_i) \Delta x</m> 
         
         
-        (O limite  acima desapareceu porque o termo <m>e^{4 x}</m> em seu denominador cresce muito mais rápido do que qualquer polinômio, especialmente o linear <m>-4 x - 1</m>
+         <m>=	\displaystyle \sum_{i=1}^{n} \left(\frac{4}{n}\right) 
+         			f\left(\frac{4 i}{n}\right)</m> 
+        
+        
+         <m>=	\displaystyle \frac{4}{n}\cdot\sum_{i=1}^{n}
+        			\left[\frac{\left(\frac{4 i}{n}\right)^2}{2}\right] + 6</m> 
+        
+        
+         <m>=	\displaystyle \frac{4}{n}\cdot\sum_{i=1}^{n}
+        			\left(-8\cdot\frac{i^2}{n^2} + 6\right)</m> 
+        
+        
+         <m>=	\displaystyle \frac{4}{n}\cdot\left[ \left(
+        			\sum_{i=1}^{n} -8\cdot\frac{i^2}{n^2}
+        			\right) + 6 n \right]</m> 
+        
+        
+         <m>=	\displaystyle \frac{4}{n}\cdot\left[
+        			\left(\frac{-8}{n^2}\right) \cdot
+        			\left(\sum_{i=1}^{n} i^2\right) + 6 n \right]</m> 
+        
+        
+         <m>=	\frac{4}{n}\cdot\left[
+        			\left(\frac{-8}{n^2}\right) \cdot
+        			\left(\frac{n(n+1)(2n+1)}{6}\right) + 6 n \right]</m> 
+        
+        
+         <m>=	\frac{4}{n}\cdot\left[
+        			\frac{-8(n+1)(2n+1) + (6)(n)(6)n}{6n}
+        			\right]</m> 
+        
+        
+         <m>=	\frac{(4)(-8)(n+1)(2n+1) +
+        			(4)(6)(6)n^2}{6n^2}</m> 
+        
+        
+         <m>=	\frac{(4)(-8)(n+1)(2n+1)}{6n^2} + (4)(6)</m> 
+        
+        
+         <m>=	\frac{-5.33333333333333(n+1)(2n+1)}{n^2} + 24</m> 
+        
+        
+        
+        o que responde a primeira parte do problema acima.
+        
+        
+        Para a segunda parte do problema, vamos tomar o limite com
+        <m>n \rightarrow \infty</m>:
+        
+        <m>\displaystyle 	\lim_{n \rightarrow \infty} R_n  
+         =	\lim_{n \rightarrow \infty} \left[ \frac{-5.33333333333333(n+1)(2n+1)}{n^2} + 24 \right]</m> 
+        
+        
+        <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
+        			\frac{-5.33333333333333(n+1)(2n+1)}{n^2} \right] + 24</m> 
+        
+        
+        <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
+        			\frac{-5.33333333333333(2n^2+3n+1)}{n^2} \right] + 24</m> 
+        
+        
+        <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
+        			-10.6666666666667 + \frac{-16}{n} +
+        			\frac{-5.33333333333333}{n^2} \right] + 24</m> 
+        
+        
+        <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left(-10.6666666666667\right) +
+        			\lim_{n \rightarrow \infty} \left(\frac{-16}{n}\right) +
+        			\lim_{n \rightarrow \infty} \left(\frac{-5.33333333333333}{n^2}\right) + 24</m> 
+        
+        
+        <m>\displaystyle	=	-10.6666666666667 + 0 + 0 + 24 = 13.3333333333333</m>
       </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg</server-url>
-    <pg source="local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg</server-url>
+    <pg source="local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
-    <static seed="3" source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg">
+    <static seed="3" source="local/Library/Rochester/setIntegrals0Theory/sc5_2_3_mo.pg">
       <statement>
-        <p>Verifique se a integral abaixo converge, informe 'divergente' se for divergente.</p>
-        <p><m>\displaystyle  \int_{-\infty}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+        <p>Considere a integral <me>\int_{1}^{7} (3x^{2}+4x+3)\,dx .</me></p>
+        <p>(a) Encontre a soma de Riemann à esquerda desta integral para  <m>n= 3</m>.</p>
+        <p><m>L_3 =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+        <p>(b) Encontre a soma de Riemann à direita desta integral para <m>n = 3</m>.</p>
+        <p><m>R_3 =</m> <fillin name="AnSwEr0002" characters="50"/></p>
       </statement>
       <answer>
-        <p><m>0</m></p>
+        <p><m>2\cdot \left(10+42+98\right)</m></p>
       </answer>
-      <solution>
-        <me>\displaystyle\int_{-\infty}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx=\int_{-\infty}^{c}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx+\int_{c}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx=\lim_{a\to -\infty}\int_{a}^{c}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx+\lim_{b\to +\infty}\int_{c}^{b}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx</me><me>=\lim_{a\to -\infty} \left[-\frac{3}{2\!\left(x^{2}+1\right)}\right]_{a}^{c}+\lim_{b\to +\infty} \left[-\frac{3}{2\!\left(x^{2}+1\right)}\right]_{c}^{b}=0</me>
-      </solution>
+      <answer>
+        <p><m>2\cdot \left(42+98+178\right)</m></p>
+      </answer>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg</server-url>
-    <pg source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals0Theory/sc5_2_3_mo.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals0Theory/sc5_2_3_mo.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals0Theory/sc5_2_3_mo.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals0Theory/sc5_2_3_mo.pg</server-url>
+    <pg source="local/Library/Rochester/setIntegrals0Theory/sc5_2_3_mo.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
-    <static seed="4" source="local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg">
+    <static seed="4" source="local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_67.pg">
       <statement>
-        <p>Determine se a integral é divergente ou convergente. Se for convergente, calcule. Se não,  responda como "divergente".</p>
-        <p><me>\int_{-\infty}^{\infty} (-1 x^2 + 4 x  - 1) dx</me></p>
-        <p><fillin name="AnSwEr0001" characters="30"/></p>
+        <p>Qual das alternativas a seguir expressa corretamente o limite <m>\displaystyle \lim_{n \rightarrow \infty} \sum_{k=1}^n \frac{k^4}{n^5},</m> como a integral definida?</p>
+        <p><var form="checkboxes">
+        <li>
+        <p><m>\displaystyle \int_{1}^{\,2} {x^2}\,dx</m></p>
+        </li>
+        <li>
+        <p><m>\displaystyle \int_{1}^{\,2} {x^4}\,dx</m></p>
+        </li>
+        <li>
+        <p><m>\displaystyle \int_{0}^{\,1} {x^4}\,dx</m></p>
+        </li>
+        <li>
+        <p><m>\displaystyle \int_{1}^{\,2} {x^3}\,dx</m></p>
+        </li>
+        <li>
+        <p><m>\displaystyle \int_{0}^{\,1} {x^3}\,dx</m></p>
+        </li>
+        <li>
+        <p><m>\displaystyle \int_{0}^{\,1} {x^2}\,dx</m></p>
+        </li>
+        </var></p>
       </statement>
-      <answer>
-        <p>divergente</p>
-      </answer>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg</server-url>
-    <pg source="local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
-    <static seed="5" source="local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg">
-      <statement>
-        <p>Considere a integral
-        <me>\int_{0}^{\,2} {\frac{-6 x  + 18}{2x-3}}\, dx</me>
-        Se a integral é divergente ponha o "D" maiusculo. Caso contrário, calcule a integral.</p>
-        <p><fillin name="AnSwEr0001" characters="45"/></p>
-      </statement>
-      <answer>
-        <p><m>\text{D}</m></p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg</server-url>
-    <pg source="local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
-    <static seed="6" source="local/Library/UMN/calculusStewartET/s_7_8_35.pg">
-      <statement>
-        <p>Calcule o valor da integral imprópria a seguir. Se for divergente ponha, 'divergente'.</p>
-        <p><me>\int_{0}^{2}\! \frac{dx}{x^{2}-6x+5}</me>
-        Resposta: <fillin name="AnSwEr0001" characters="20"/></p>
-      </statement>
-      <answer>
-        <p><m>\text{divergente}</m></p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://54.39.15.62">http://54.39.15.62/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/UMN/calculusStewartET/s_7_8_35.pg</server-url>
-    <pg source="local/Library/UMN/calculusStewartET/s_7_8_35.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_67.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_67.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_67.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_67.pg</server-url>
+    <pg source="local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_67.pg"/>
   </webwork-reps>
  </webwork-representations>

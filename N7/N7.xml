@@ -83,7 +83,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </latex-image-preamble>
     </docinfo>
 
-    <article xml:id="calc-integral-aproximada">
+    <article xml:id="calc-integral-log-integral">
         <title>Cálculo Integral: N7</title>
 
         <frontmatter>
@@ -95,12 +95,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <institution>Universidade Federal Rural de Pernanbuco</institution>
                 </author>
 
-                <author>
+                 <author>
                     <personname>Deibsom Silva</personname>
                     <department>Departamento de Matemática</department>                    
                     <institution>Universidade Federal Rural de Pernanbuco</institution>
                 </author>
-
                 <date><today /></date>
             </titlepage>
 
@@ -114,7 +113,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Aqui uma introdução será necessária </p>
         </introduction>
     <section>
-    <title>Integral aproximada </title>
+    <title> Integral Trigonométrica</title>
     
          
         <objectives>
@@ -136,14 +135,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             
         </objectives>
 
-<subsection xml:id="subsec-notacao-sigma">
-    <title>Regra do Trapézio</title>
+<subsection xml:id="subsec-">
+    <title>Log integral</title>
   <introduction>
         <p>
             introdução
         </p>
     </introduction>
-<subsubsection xml:id="subsubsec-sugestao-video-trapezio">
+<subsubsection xml:id="subsubsec-sugestao-video-log-integral">
     <title>Sugestão de vídeo</title>
   
 <ul>
@@ -157,31 +156,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </subsection>
 
 
-<subsection xml:id="subsec-notacao-sigma2">
-    <title>Regra de Simpson</title>
-<introduction>
-        <p>
-            introdução
-        </p>
-    </introduction>
-<subsubsection xml:id="subsubsec-sugestao-video-simpson">
-    <title>Sugestão de vídeo</title>
-    <introduction>
-        <p>
-            introdução
-        </p>
-    </introduction>
-<ul>
-    <li>
-        <p>
-          Problema Resolvido:  <url href="https://"> xxxxxx.</url>
-        </p>
-    </li>
-</ul>    
-</subsubsection>
-</subsection>
 
- <exercises xml:id="exercises-soma-rieamann">
+
+
+ <exercises xml:id="exercises-log-integral">
      
  </exercises>
 

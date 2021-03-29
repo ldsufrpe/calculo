@@ -83,7 +83,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </latex-image-preamble>
     </docinfo>
 
-    <article xml:id="calc-integral-impropia">
+    <article xml:id="calc-riemann">
         <title>Cálculo Integral: N8</title>
 
         <frontmatter>
@@ -100,6 +100,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <department>Departamento de Matemática</department>                    
                     <institution>Universidade Federal Rural de Pernanbuco</institution>
                 </author>
+                
                 <date><today /></date>
             </titlepage>
 
@@ -113,7 +114,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Aqui uma introdução será necessária </p>
         </introduction>
     <section>
-    <title>Integral Imprópia </title>
+    <title>Soma de Riemann</title>
     
          
         <objectives>
@@ -122,651 +123,961 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                         Reconhecer integrais impróprias
+                         Calcular somatórios
                     </p>
                 </li>
                 <li>
                     <p>
-                       Calcular integrais impróprias com limites infinitos de integração.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Calcular integrais impróprias com integrandos infinitos.
+                        Aproximar área sob curvas  usando somatórios
                     </p>
                 </li>
 
+                <li>
+                    <p>
+                    Definir integral definida usando limite de somas 
+                    </p>
+                </li>
+                
             </ol>
             
         </objectives>
 
-  <introduction>
-        <p>
-            Vimos anteriormente que uma função <m>f(x)</m> é integrável em um intervalo <m>[a,b]</m>, 
-            quando é contínua nesse intervalo. Aqui estamos interessados em calcular
-                   integrais em que um ou ambos os lados do intevalo é infinito. Como por exemplo,
-
-            <aside>
-            <statement>
-                <p>
-                   Em poucas palavras, <m>f(x)</m> integrável em <m>[a,b]</m> quer dizer que 
-                   <m>\integrald{f(x)}{a}{b}{x}</m> existe e é um número.
-                </p>   
-               
-                </statement>
-                </aside>                
-                
-                
-                   <me>
-                       \integrald{\frac{1}{x^2}}{1}{\infty}{x}.
-                   </me>
-                   
-                Outro caso de minteresse  é quando  <m>f</m> tende ao infinito em algum valor do intervalo se integração, como é o caso a seguir
-               
-               <me>
-                   \integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}.
-               </me>
-               
-        As integrais que possuem uma dessas características são chamadas  <term> integrais impróprias</term>. 
-        Entre outras utilidades, as integrais impróprias permite determinar se uma região infinita que está sob a curva
-        <m>\frac{1}{x^2}</m>, como ilustado na <xref ref="fig-intro-impropria-sageplot"/>, possui ou não área infinita.          
-            
-
-    <figure xml:id="fig-intro-impropria-sageplot">
-        <caption></caption>
-    <image xml:id="image-sage-plot" width="45%">
-        <description></description>
-    <sageplot>
-    f = 1/x^2
-    a = 1
-    b=5
-    c = f(x=a)
-    d = f(x=b)
-    axes = ['$x$','$y$']
-    ticks =[[a,],[]]
-    tick_formatter = [['$a$', '$b$'],[]]
-    p = plot(f, (x,a,b),  axes_labels=axes, ticks=ticks, fill=True, fillcolor="#cde0eb", aspect_ratio=1.8, thickness=1.5)
-    p +=plot(f,(x,2/3,b), thickness=1.5)
-    p += plot(2, (x,0,b), linestyle='')
-    p+= text("$y=\\dfrac{1}{x^2}$", (1.5,1.3), fontsize=15, figsize=[3.5,3.5])
-    p
-    </sageplot>
-        
-    </image>
-
-    </figure>
-
-        </p>
-    </introduction>
-
-
-<subsection xml:id="subsec-intervalos-infinitos">
-    <title>Intervalos infinitos</title>
-
-
-<assemblage xml:id="assemblage-impropria-intervalo-infinito">
-    <title></title>
+<subsection xml:id="subsec-notacao-sigma">
+    <title>Somatório</title>
+<introduction>
     <p>
-    <ul >
-    <li xml:id="assemblage-impropria-1">
-        <p>
-            Se <m>f</m> for contínua no intervalo <m>[a, \infty)</m>, então 
-
-        <me>\integrald{f(x)}{a}{\infty}{x} = \lim_{b\to\infty} \integrald{f(x)}{a}{b}{x} </me>
-        </p>
-    </li>
         
+
+    A letra grega <m>\Sigma</m> (sigma) é utilizada para expressar somatórios de grande quantidade de números
+    de maneira simplificada e compacta. Por exemplo, a soma
+
+    <me>
+        1 + 2 + 3 + \cdots + 100
+    </me>
     
-    <li xml:id="assemblage-impropria-2">
-        <p>
-             Se <m>f</m> for contínua no intervalo <m>(-\infty,a]</m>, então 
+pode ser expressada como 
+ 
+ <me>
+     \sum_{k=1}^{100}k = 1 + 2 + 3 + \cdots + 100,
+ </me>
 
-        <me>\integrald{f(x)}{-\infty}{b}{x} = \lim_{a\to -\infty} \integrald{f(x)}{a}{b}{x} </me>
-        </p>
-    </li>
-
-    <li>
-        <p>
-            Se qualquer das integrais acima for um número, dizemos que a integral é <term> convergente</term>. Por outro lado,
-            se o resultado for <m>\pm \infty</m> a integral é dita <term>divergente</term>.
-        </p>
-    </li>
-    </ul>
-    </p>
-</assemblage>
-
-
-<example xml:id="ex-impropria-1">
-    <statement>
-        <p>
-            Determine a integral <m>\integrald{\frac{1}{x^2}}{1}{\infty}{x} </m>.
-        </p>
-    </statement>
-    <solution>
-        <p>
-            De acordo com <xref ref="assemblage-impropria-1"/>, temos
-            <md>
-            <mrow>\integrald{\frac{1}{x^2}}{1}{\infty}{x}\amp =\lim_{b\to\infty} \integrald{\frac{1}{x^2}}{1}{b}{x} \amp \quad \ct{calcule a integral indefinida}</mrow>
-            <mrow> \amp =\lim_{b\to\infty}\left(\left. -\frac{1}{x} \right]_1^b\right)\amp \quad \ct{Teorema Fundamental do Cálculo.}</mrow>
-            <mrow> \amp = \lim_{b\to\infty}\left(1-\frac{1}{b}\right) =1 \amp\quad \ct{calcule o limite.} </mrow>
-            </md>
-          Logo a integral é convergente.  
-        </p>
-    </solution>
-</example>
-
-<example xml:id="ex-impropria-2">
-    <statement>
-        <p>
-             Determine a integral <m>\integrald{\frac{1}{\sqrt[4]{1+x}}}{0}{\infty}{x} </m>.
-        </p>
-    </statement>
-    <solution>
-        <p>
-         De acordo com <xref ref="assemblage-impropria-1"/>, temos
-        
-        <md>
-            <mrow>\integrald{\frac{1}{\sqrt[4]{1+x}}}{0}{\infty}{x} \amp = \lim_{b\to\infty} \integrald{\frac{1}{\sqrt[4]{1+x}}}{0}{b}{x} \amp \quad \ct{calcule a integral indefinida}</mrow>
-            <mrow> \amp = \lim_{b\to\infty} \left(\left. \frac{4}{3}{\left(x + 1\right)}^{\frac{3}{4}} \right]_0^b\right) \amp \quad \ct{Teorema Fundamental do Cálculo.} </mrow>
-            <mrow> \amp = \lim_{b\to\infty}\left(\frac{4}{3} {\left(b + 1\right)}^{\frac{3}{4}} - \frac{4}{3}  \right) \amp \quad \ct{Calcule o limite}</mrow>
-            <mrow> \amp = \infty - \frac{4}{3} = \infty </mrow>
-        </md>
-        Nesse caso a integral é divergente.
-        </p>
-    </solution>
-</example>
-
-
-
-<exercise>
-    <statement>
-        <p>
-             Determine a integral <m>\integrald{\frac{1}{x^3}}{1}{\infty}{x} </m>.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            Revise <xref ref="ex-impropria-1"/>.
-        </p>
-    </hint>
-
-<answer>
-    <p>
-        <m>\frac{1}{2}</m>
-    </p>
-</answer>
-</exercise>
-
-
-<exercise>
-    <statement>
-        <p>
-             Determine a integral <m>\integrald{\frac{1}{x}}{1}{\infty}{x} </m>.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            Revise <xref ref="ex-impropria-1"/>.
-        </p>
-    </hint>
-
-<answer>
-    <p>
-        <m>\infty</m>
-    </p>
-</answer>
-</exercise>
-
-
-
-
-<example xml:id="ex-impropria-3">
-    <statement>
-        <p>
-
-            Determine a integral <m>\integrald{\frac{1}{(1-x)^{4/3}}}{-\infty}{0}{x}</m>.
-        </p>
-    </statement>
-    <solution>
-        <p>
-            Aplicando a igualdade <xref ref="assemblage-impropria-2"/>, temos
-
-        <md>
-            <mrow> \integrald{\frac{1}{(1-x)^{4/3}}}{-\infty}{0}{x} \amp = \lim_{a\to -\infty}\integrald{\frac{1}{(1-x)^{4/3}}}{a}{0}{x}  \amp \quad \ct{calcule a integral indefinida.}</mrow>
-            <mrow> \amp =  \lim_{a\to -\infty}\left(\left. \frac{3}{{\sqrt[3]{1-x}}} \right]_0^a\right) \amp \quad  \ct{Teorema Fundamental do Cálculo.} </mrow>
-            <mrow> \amp = \lim_{a\to -\infty}\left(\frac{3}{{\sqrt[3]{1-a }}} + 3   \right) \amp \quad \ct{Calcule o limite.} </mrow>
-            <mrow> \amp =3</mrow>
-        </md>
-        </p>
-    </solution>
-</example>
-
-<example xml:id="ex-impropia-4">
-    <statement>
-        <p>
-           Determine <m>\integrald{xe^x}{-\infty}{0}{x}</m>.
-        </p>
-    </statement>
-    <solution>
-        <p>
-            Usando <xref ref="assemblage-impropria-2"/>, temos
-
-            <md>
-                <mrow> \integrald{xe^x}{-\infty}{0}{x}\amp = \lim_{a\to -\infty}\integrald{xe^x}{a}{0}{x} </mrow>
-            </md>
-        A integral acima requer a aplicação do método de integração por partes. Fazendo   <m>u=x</m>, <m>\dd v=e^x</m>, obtemos
-        <m>\dd u=dx</m>, <m>v=e^x</m>. Então,
-
-        <md>
-            <mrow>\integrald{xe^x}{a}{0}{x} \amp = \left. xe^x\right]_a^0 - \integrald{e^x}{a}{0}{x}  </mrow>
-            <mrow> \amp = -ae^a-1+ e^a </mrow>
-        </md>
-        Portanto, 
-
-        <md>
-            <mrow>\integrald{xe^x}{-\infty}{0}{x} \amp = \lim_{a\to -\infty}(-ae^a-1+ e^a) </mrow>
-            <mrow> \amp = \lim_{a\to -\infty}(-ae^a)-\lim_{a\to -\infty}(1)+ \lim_{a\to -\infty}(e^a) </mrow>
-            <mrow> \amp  = -0 -1 + 0 =-1</mrow>
-        </md>.
-        O primeiro limite acima deve-se a aplicação da regra de L'Hôspital:
-
-        <md>
-            <mrow> \lim_{a\to -\infty}ae^a  \amp = \lim_{a\to -\infty}\frac{a}{e^a}=\lim_{a\to -\infty}{1}{-e^{-a}}</mrow>
-            <mrow> \amp = \lim_{a\to -\infty}(-e^{a})=0 </mrow>
-        </md>.
-        </p>
-    </solution>
-</example>
-
-<exercise>
-    <statement>
-        <p>
-             Determine <m>\integrald{(x-1)^2}{-\infty}{0}{x}</m>.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            Revise <xref ref="ex-impropria-3"/>.
-        </p>
-    </hint>
-
-<answer>
-    <p>
-        <m>divergente</m>
-    </p>
-</answer>
-</exercise>
-
-
-<exercise>
-    <statement>
-        <p>
-             Determine <m>\integrald{e^{5x}}{-\infty}{0}{x}</m>.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            Faça <m>u=5x</m>.
-        </p>
-    </hint>
-
-<answer>
-    <p>
-        <m>\frac{1}{5}</m>
-    </p>
-</answer>
-</exercise>
-
-
-<assemblage >
-    <title></title>
-   
+ <aside>
+ <title>Notação Sigma</title>
+ <ul>
+     <li>
          <p>
-            
-   
-    <ul>
-        <li xml:id="assemblage-impropria-3">
-            <p>
-                Se <m>f</m> for contínua no intervalo <m>(-\infty, \infty)</m>, então 
+            O número  <m>n</m> significa o valor final para <m>k</m>
+         </p>
+     </li>
+     <li>
+         <p>
+             O valor de <m>k</m> não necessariamente é iniciado por 1.
+         </p>
+     </li>
+ </ul>
+</aside>
+ Neste caso, dizemos que o somatório dos 100 primeiros naturais está expresso na <term> notação sigma</term>
+ <m>\sum_{k=1}^{100}k </m>, a qual se lê "somatório de <m>k</m>, com <m>k</m> variando de 1 a 100". 
 
-        <me>\integrald{f(x)}{-\infty}{\infty}{x} = \integrald{f(x)}{-\infty}{c}{x} + \integrald{f(x)}{c}{\infty}{x}  </me>
-   
-            </p>
-        </li>
 
-        <li>
-        <p>
-            Se qualquer das integrais acima for um número, dizemos que a integral é <term> convergente</term>. Por outro lado,
-            se o resultado for <m>\pm \infty</m> a integral é dita <term>divergente</term>.
-        </p>
-    </li>
-    </ul>
-     </p>
 
+
+Mais geralmente, considere <m>f</m> uma função definida um intervalo <m>[a,b]</m> e seja 
+<m>x_1, x_2 ,\ldots x_n </m> números reais, todos em <m>[a,b]</m>. Então a soma
+
+
+
+<me>
+      f(x_1) + f(x_2) + \cdots + f(x_n)
+</me>
+ 
+ pode ser  expressa na notação sigma da forma
+ 
+<me>
+    \sum_{k=1}^{n}f(x_k).
+</me>
+
+
+</p>
+</introduction>
+
+
+
+<assemblage xml:id="assemblage-somatorios">
+    <title>Somatórios comuns</title>
+    <p>
+      <ol label="I)">
+          <li  xml:id="sk">
+              <p>
+                <m>  \sum_{k=1}^n k = \frac{n(n+1)}{2}</m>
+              </p>
+          </li>
+            <li xml:id="sk2">
+                <p>
+                   <m> \sum_{k=1}^n k^2  = \frac{n(n+1)(2n+1)}{6}</m>
+                </p>
+            </li>
+
+            <li xml:id="sk3">
+                <p>
+                   <m>  \sum_{k=1}^n k^3 =  \left[\frac{n(n+1)}{2}\right]^2</m>
+                </p>
+            </li>
+
+      </ol>
+    </p>
 </assemblage>
+
+
+<example>
+<statement>
+    <p>
+        Escreva cada uma das somas na notação sigma.
+    </p>
+</statement>
+    <statement>
+        <p>         
+        <task>
+    <statement>
+        <p>
+           <m> 4 + 8 + 16 + 32 + \cdots + 256</m>
+        </p>
+    </statement>
+        
+     <solution>
+        <p>
+            Note que o  somatório pode ser reescrito como <me> 2^2 + 2^3 + 2^4 + \cdots + 2^8</me>. Logo, na notação sigma  o somatório toma a forma             <me>
+                \sum_{k=2}^8 2^k.
+            </me>
+            
+        </p>
+    </solution>
+    </task>
+
+    <task>
+    <statement>
+        <p>
+          <m> 2 + 4 + 6 + 8 + 10</m>
+        </p>
+    </statement>
+        
+     <solution>
+        <p>
+               Note que o  somatório pode ser reescrito como <me> 2 \cdot 1+ 2\cdot 2 + 2\cdot3 + 2\cdot 4 \cdot 5</me>. Logo, na notação sigma  o somatório toma a forma             <me>
+                \sum_{k=1}^5 2k.
+            </me>
+        </p>
+    </solution>
+    </task>
+    <task>
+       <statement>
+           <p>
+          <m> 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6}</m>
+        </p>
+       </statement>
+         <solution>
+        <p>
+            Note que 
+            
+            <me>     
+                1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6} 
+            </me>
+        é a soma de termos do tipo <m>1/k</m>, na qual <m>k</m> é um número natural <m>1\leq k\leq 6</m>. Logo,
+         <me>
+             \sum_{k=1}^6 \frac{1}{k}.
+         </me>
+         
+        </p>
+    </solution>
+    </task>
+   </p>
+    </statement>
+   
+</example>
+<exercise>
+  <statement>
+      <p>
+          Escreva na notação sigma a soma <m>3 + 7 + 11 + 15 + \cdots + 27</m>.
+      </p>
+  </statement> 
+<answer>
+    <p>
+      <m>  \displaystyle\sum_{k=0}^6 (4k + 3)</m>
+    </p>
+</answer>
+</exercise>
 <example>
     <statement>
         <p>
-            Determine <m>\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}</m> é convergente ou divergente.
+           Calcule:
         </p>
     </statement>
-    <solution>
+
+    <statement>
         <p>
-            Aqui vamos escolher <m>c=0</m> em <xref ref="assemblage-impropria-3"/>. Dessa forma,
-
-            <md>
-                <mrow> \integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}\amp = \integrald{\frac{1}{1+ x^2}}{-\infty}{0}{x}
-                 +  \integrald{\frac{1}{1+ x^2}}{0}{\infty}{x}</mrow>
-                 <mrow> \amp = \lim_{a\to -\infty}\integrald{\frac{1}{1+ x^2}}{a}{0}{x} + 
-                 \lim_{b\to \infty}\integrald{\frac{1}{1+ x^2}}{0}{b}{x} </mrow>
-                
-            </md>.
-
-        Uma vez que 
-
-        <md>
-            <mrow>\lim_{a\to -\infty}\integrald{\frac{1}{1+ x^2}}{a}{0}{x} \amp =  \lim_{a\to -\infty}  \left(\left. \arctan{x} \right]_a^0\right) </mrow>
-            <mrow> \amp =  \lim_{a\to -\infty}(-\arctan{a})=\frac{\pi}{2}</mrow>
+            <task>
+                <statement>
+                    <p>
+                       <m> \displaystyle\sum_{k=1}^{20}(k^2+ 2)</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                    Do <xref ref="sk"/> segue que
+                        
+                        <md>
+                            <mrow>\sum_{k=1}^{20}(k^2+ 2)\amp = \sum_{k=1}^{20}k^2 + \sum_{k=1}^{20}2 </mrow>
+                            <mrow> \amp  =  \frac{20(20+1)(2\cdot 20+1)}{6} + 20\cdot 2 \qquad \ct{veja}\, <xref ref="sk2"/></mrow>
+                            <mrow> \amp = 2910 </mrow>
+                        </md>
+                    
+                    </p>
+                </solution>
+            </task>
+            
            
-        </md>
-        e
-        <md>
-            <mrow> \lim_{b\to \infty}\integrald{\frac{1}{1+ x^2}}{0}{b}{x} \amp=  \lim_{b\to \infty}  \left(\left. \arctan{x} \right]_0^b\right) </mrow>
-            <mrow> \amp =  \lim_{b\to \infty}(\arctan{a})=\frac{\pi}{2}</mrow>
-        </md>,
-        o valor da integral imprópria desejada é
-
-        <me>\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}=\frac{\pi}{2}+\frac{\pi}{2}=\pi.</me>
-
-        Nesse caso a integral é convergente.
-
+          
+            <task>
+                
+                    <statement>
+                        <p>
+                        <m> \displaystyle\sum_{k=10}^{100}2k </m>.
+                        </p>
+                    </statement>
+                
+                <solution>
+                    <p>
+                      <md>
+                          <mrow>\sum_{k=10}^{100}2k \amp = 2\sum_{k=10}^{100}k</mrow>
+                          <mrow> \amp = 2\left(\sum_{k=1}^{100}k - \sum_{k=1}^{9}k\right) </mrow>
+                          <mrow> \amp = 2\left( \frac{100(100+1)}{2} - \frac{9(9+1)}{2} \right) \qquad \ct{veja}\, <xref ref="sk"/> </mrow>
+                          <mrow> \amp = 10010 </mrow>
+                      </md>  
+                    </p>
+                </solution>
+            </task>
         </p>
-    </solution>
+    </statement>   
 </example>
-
 
 <exercise>
     <statement>
         <p>
-            Determine  <m>\integrald{\frac{x}{(x^2+3)^2}}{-\infty}{\infty}{x}</m>.
+            Calcule <m>\displaystyle\sum_{k=10}^{90} (2k-1)</m>.
         </p>
     </statement>
-    <hint>
+    <answer>
         <p>
-        <m>\integral{\frac{x}{(x^2+3)^2}}{x}= -\frac{1}{2 {\left(x^{2} + 3\right)}}</m>
+            8019
         </p>
-    </hint>
-
-<answer>
-    <p>
-        0
-    </p>
-</answer>
+    </answer>
 </exercise>
 
-<subsubsection xml:id="subsubsec-sugestao-video-intervalos-infinitos">
+<subsubsection xml:id="subsubsec-sugestao-video-somatorio">
     <title>Sugestão de vídeo</title>
-  
 <ul>
     <li>
         <p>
-          Problema Resolvido:  <url href="https://youtu.be/N9YqbxYQVBo"> Uma simples introdução.</url>
+          Problema Resolvido:  <url href="https://youtu.be/kCbfPGFQlOY"> Alguns somatórios comuns.</url>
         </p>
     </li>
-
-    <li>
-        <p>
-            Problema Resolvido:  <url href="https://youtu.be/ObjZSz-wsPk"> Integral imprópria divergente.</url>
-        </p>
-    </li>
- <li>
-     <p>
-          Problema Resolvido:  <url href="https://youtu.be/0snA6YXf-hE"> Dois limites infinitos.</url>
-     </p>
- </li>
 </ul>    
 </subsubsection>
 </subsection>
 
 
-<subsection xml:id="subsec-notacao-integrandos-infinitos">
-    <title>Integrandos infinitos</title>
+<subsection xml:id="subsec-soma-riemann">
+    <title>Soma de Riemann</title>
 
-<assemblage xml:id="assemblage-impropria-4">
-    <title></title>
     <p>
+    Uma <term>partição</term> do intervalo <m>[a,b]</m> é uma coleção
+    de números reais 
+
+   <me>
+       x_0=a\lt x_1 \lt x_2 \lt\cdots\lt x_{n-1} \lt x_n=b
+   </me>
+   
+que dividem o intervalo <m>[a,b]</m>  em <m>n</m> subintervalos 
+
+<md>
+    <mrow> \amp [x_0, x_1], \, [x_1,x_2], \, \ldots,\,[x_{n-1}-x_{n}]</mrow>
+</md>
+cujos comprimentos valem 
+<md>
+    <mrow> \Delta x_1 = \amp \,x_1-x_0 </mrow>
+    <mrow>  \Delta x_2 = \amp \,x_2-x_1 </mrow>
+    <mrow>   \vdots\qquad \amp \,\qquad\vdots   </mrow>
+    <mrow>  \Delta x_n = \amp\, x_n-x_{n-1} </mrow>
+</md>
+
+
+</p>
+
+
+
+<definition xml:id="def-soma-riemann"  >
+<title>Soma de Riemann</title>
+
+<statement>
+    <p>
+    Sejam <m>x_1^{\ast}, x_2^{\ast}, \ldots, x_n^{\ast} </m> números arbitrários 
+    de forma que <m>x_k^{\ast}</m> pertençam ao k-ésimo subintervalo <m>[x_{k-1}, x_k]</m> de <m>[a,b]</m>. 
+    Se <m>f(x)</m>     é uma função definida em <m>[a,b]</m>, então a soma
+
+<mdn>
+   <mrow> \amp  \sum_{k=1}^{n}f(x_k^{\ast})\Delta x_k, \qquad  1\leq k \leq n.</mrow>
+</mdn>
+
+é denominada Soma de Riemann de <m>f</m> sobre <m>[a,b]</m> na partição <m>\{x_0, x_1, \ldots, x_{n}\}</m>.
+</p>
+ 
+</statement>
+</definition>
+
+<note>
+Para simplificar é comum usar subintervalos de mesmo comprimentos, de modo que
+
+<me>
+    \Delta x_k = \Delta x = \frac{b-a}{n}, \qquad 1\leq k \leq n.
+    
+</me>
+</note>
+
+<p>
+
+Na <xref ref="def-soma-riemann"/> deixamos claro que a escolha de <m> x_k^{\ast} </m> em cada subintervalo 
+é arbitrária, no entanto, algumas escolhas comuns:
+</p>
+<assemblage xml:id="assemblage-soma-riemman-tipos">
+    <title></title>
+<p>
+
+        
+    
     <ul>
     <li>
         <p>
-             Se <m>f</m> for contínua no intervalo <m>[a,b)</m>, e tender a infinito em <m>b</m>, então
-
-        <me>\integrald{f(x)}{a}{b}{x} = \lim_{c\to b^{-}}\integrald{f(x)}{a}{c}{x} </me>.
-    
+           <term> Soma de Riemann à esquerda</term> é quando cada <m>x_k^{\ast}=x_{k-1}</m> é a 
+           extremidade  esquerda do subintervalo <m>[x_{k-1},x_k] </m>.
         </p>
     </li>
-       
+
     <li>
         <p>
-             Se <m>f</m> for contínua no intervalo <m>(a,b]</m>, e tender a infinito em <m>a</m>, então
-
-        <me>\integrald{f(x)}{a}{b}{x} = \lim_{c\to a^{+}}\integrald{f(x)}{c}{b}{x} </me>.
+           <term> Soma de Riemann à direita</term> é quando cada <m>x_k^{\ast}=x_{k}</m> é a extremidade
+             direita do subintervalo <m>[x_{k-1},x_k] </m>.
         </p>
     </li>
-    
-    </ul>
-    </p>
+
+    <li>
+        <p>
+            <term> Soma de Riemann do ponto médio</term> é quando cada <m>x_k^{\ast}=(x_{k-1}+x_k)/2</m> é o ponto
+            médio do subintervalo <m>[x_{k-1},x_k] </m>.
+        </p>
+    </li>
+</ul>
+</p>
+  
 </assemblage>
 
+<p>
+Se <m>f</m>  for positiva, então a soma de Riemann pode ser interpretada como uma
+soma de áreas de retângulos cuja base vale <m>\Delta x</m> e sua altura é <m>f(x_k^{\ast})</m>
+(veja a  <xref first="fig-riemann-esquerda" last="fig-riemann-medio"/>).
 
-<example xml:id="ex-impropria-6">
+Se <m>f</m> assumir valores positivos e negativos, como na <xref ref="fig-riemann-medio-negativo"/>, então a soma de Riemann
+é o resultado da diferênca entre as áreas dos retângulos que estão acima do eixo <m>x</m> e as áreas dos retângulos 
+que estão abaixo do eixo <m>x</m>. 
+
+</p>
+
+
+<sidebyside widths="40% 40%"  valign="bottom">
+
+<figure xml:id="fig-riemann-esquerda">
+    <caption> <m> \sum_{k=1}^{n}f(x_k^{\ast})\Delta x</m> é a soma de Riemann à esquerda.</caption>
+
+ <image source="images/figure_retangulo_esquerdo.svg" width="45%">
+                <description>(for accessibility)</description>
+            </image>
+</figure>
+
+<figure xml:id="fig-riemann-direita">
+    <caption> <m> \sum_{k=1}^{n}f(x_k^{\ast})\Delta x</m> é a soma de Riemann à direita.</caption>
+<image source="images/figure_retangulo_direito.svg" width="45%">
+                <description>(for accessibility)</description>
+            </image>
+ </figure>   
+</sidebyside>
+
+
+
+<sidebyside widths="40% 40%"  valign="bottom">
+
+<figure xml:id="fig-riemann-medio">
+    <caption><m> \sum_{k=1}^{n}f(x_k^{\ast})\Delta x</m> é a soma de Riemann do ponto médio.</caption>
+
+<image source="images/figure_retangulo_medio.svg" width="45%">
+                <description>(for accessibility)</description>
+            </image>
+</figure>
+
+<figure xml:id="fig-riemann-medio-negativo">
+    <caption> <m> \sum_{k=1}^{n}f(x_k^{\ast})\Delta x</m> soma resultante.</caption>
+
+<image source="images/figure_retangulo_medio2.svg" width="45%">
+                <description>(for accessibility)</description>
+            </image>
+    
+</figure>    
+</sidebyside>
+
+
+
+
+
+
+
+<example>
+<title>Soma de Riemann à Esquerda</title>
     <statement>
         <p>
-         Determine se a integral <m>\integrald{\frac{3}{x^2-3x}}{1}{3}{x}</m> é convergente ou divergente.
+
+        Considerando a <xref ref="ex-fig-area-esquerda"/>  calcule  a Soma de Riemann à esquerda de 
+        <m>f(x)=\sqrt{x}</m> para <m>n=5</m>.
+
+        <figure xml:id="ex-fig-area-esquerda">
+            <caption></caption>
+       
+            <image source="images/figure_area_esquerda.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+         </figure>
+    
 
 
+        </p>
+    </statement>
+    <solution>
+        <p>
+                
+    <md>       
+        
+     <mrow> \sum_{k=1}^{5} {f(x_k) \, \Delta x} \amp = 1/5 \cdot \left[ f(0) + f(1/5) + f(2/5) + f(3/5) + f(4/5)\right] </mrow> 
+     <mrow>  \amp = 1/5 \cdot \left[ 0 + \sqrt{1/5} + \sqrt{2/5} + \sqrt{2/5} + \sqrt{3/5}  \right] </mrow> 
+     <mrow>  \amp = 0.5497  </mrow> 
+    </md>.
+        </p>
+    </solution>
+</example>
+
+<example>
+<title>Soma de Riemann à Direita</title>
+    <statement>
+        <p>
+             Considerando a <xref ref="ex-fig-area-direita"/> calcule a Soma de Riemann à direita de 
+             <m>f(x)=\sqrt{x}</m> para <m>n=5</m>.
+            <figure xml:id="ex-fig-area-direita">
+                <caption></caption>
+                <image source="images/figure_area_direita.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+            </figure>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+              <md>       
+        
+     <mrow> \sum_{k=1}^{5} {f(x_k) \, \Delta x} \amp = 1/5 \cdot \left[f(1/5) + f(2/5) + f(3/5) + f(4/5) + f(1)\right] </mrow> 
+     <mrow>  \amp = 1/5 \cdot \left[ \sqrt{1/5} + \sqrt{2/5} + \sqrt{2/5} + \sqrt{3/5} + 1 \right] </mrow> 
+     <mrow>  \amp = 0.7497  </mrow> 
+    </md>.
+        </p>
+    </solution>
+</example>
+
+<example>
+<title>Soma de Riemann do ponto médio</title>
+    <statement>
+        <p>
+         Considerando a <xref ref="ex-fig-area-ponto-medio"/>  calcule a Soma de Riemanndo ponto médio de 
+             <m>f(x)=\sqrt{x}</m> para <m>n=5</m>.
+
+            <figure xml:id="ex-fig-area-ponto-medio">
+                <caption></caption>
+                 <image source="images/figure_area_medio.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+            </figure>
+           
         </p>
     </statement>
     <solution>
         <p>
         <md>
-            <mrow>  \integrald{\frac{3}{x^2-3x}}{1}{3}{x}\amp =\lim_{c\to 3^-}\integrald{\left(\frac{1}{3{\left(x - 3\right)}} - \frac{1}{3x}\right)}{1}{3}{x}</mrow>
-            <mrow> \amp = \lim_{c\to 3^-}\frac{1}{3}\left(\ln{|x-3|} - \ln{|x|}\Biggr]_1^c\right) </mrow>
-            <mrow> \amp = -\infty </mrow>
-        </md>   
+              
+            <mrow>  \sum_{k=1}^{5} {f(x_k) \, \Delta x} \amp = 1/5 \cdot \left[ f(1/10) + f(3/10) + f(1/2) + f(7/10) + f(9/10) \right]</mrow>
+            <mrow>    \amp = 1/5 \cdot \left[ \sqrt{1/10} + \sqrt{3/10}  + \sqrt{1/2} + \sqrt{7/10} + \sqrt{9/10}    \right] </mrow>
+            <mrow>     \amp = 0.6712 </mrow>
+        </md>.
         </p>
     </solution>
 </example>
 
 
-<!-- <assemblage xml:id="assemblage-impropria-5">
-    <title></title>
-    <p>
-       
-   
-    </p>
-</assemblage> -->
-<example xml:id="ex-impropria-7">
+<example>
+<title>Soma Resultante</title>
     <statement>
+        <p>
+          Use os retângulos da <xref ref="fig-ex-area-rieamann-resultante"/> e calcule a soma de Riemann de <m>f(x)=-x^3-6x</m> usando os pontos médios de 
+           de cada subintervalo de <m>[0,3]</m>.
+
+            <figure xml:id="fig-ex-area-rieamann-resultante">
+                <caption></caption>
+            </figure>
+
+            <image source="images/figure_area_medio3.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+        </p>
+    </statement>
+    <solution>
         <p>
             
-        Determine <m>\integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}</m>. 
-        </p>
-    </statement>
-    <solution>
-        <p>
             <md>
-                <mrow> \integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}\amp =  \lim_{c\to 1^+}\integrald{\frac{1}{\sqrt{x-1}}}{c}{2}{x}</mrow>
-                <mrow> \amp = \lim_{c\to 1^+}\left( 2\sqrt{x - 1}\Biggr]_c^2\right) </mrow>
-                <mrow> \amp = \lim_{c\to 1^+}\left(2 -2\sqrt{c - 1} \right) </mrow>
-                <mrow> \amp = 2 </mrow>
+             
+             <mrow>   \sum_{k=1}^{6} {f(x_k) \, \Delta x} \amp = 1/2 \cdot \left[ f(1/4) + f(3/4) + f(5/4) + f(7/4) + f(9/4) + f(11/4) \right] </mrow>
+    
+            <mrow>      \amp = -7.03125 . </mrow>
             </md>
+
+
         </p>
     </solution>
 </example>
 
-<exercise>
-    <statement>
-        <p>
-            Verifique se <m>\integrald{x^2-5x}{1}{5}{x}</m> converge ou diverge.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            Revise <xref ref="ex-impropria-7"/>.
-        </p>
-    </hint>
-
-<answer>
-    <p>
-      A integral é imprópria e  divergente.
-    </p>
-</answer>
-</exercise>
-
-
-
-<exercise>
-    <statement>
-        <p>
-            Determine <m>\integrald{\frac{1}{\sqrt{x-2}}}{2}{5}{x}</m>.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            <m>f(x)=\frac{1}{\sqrt{x-2}}</m> tem assíntota vertical em <m>x=2</m>.
-        </p>
-    </hint>
-
-<answer>
-    <p>
-        <m>2\sqrt{3}</m>
-    </p>
-</answer>
-</exercise>
-
-
-
-<assemblage >
-    <title></title>
-    <p>
-
-    <ul>
-        <li xml:id="assemblage-impropria-5">
-            <p>
-                  Se <m>f</m> for contínua no intervalo <m>[a,b]</m>, exceto para algum <m>c</m> 
-       em <m>(a,b)</m> no qual <m>f</m> tende a infnito, então
-
-       <me>
-           \integrald{f(x)}{a}{b}{x}=\integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x}.
-       </me>
-            </p>
-        </li>
-    </ul>
-     
-       
-    </p>
-</assemblage>
 <example>
+<title>Aproximação da área sob uma curva</title>
     <statement>
         <p>
-        Determine <m>\integrald{\frac{1}{x-1}}{0}{3}{x}</m>, se possível.
+        Considerando a <xref ref="fig-ex-area-rieamann"/>  use Soma de Riemann à direita para aproximar a área da região limitada 
+          pelo gráfico de <m>f(x)=-x^2+ 5</m>, pelo eixo e pelas retas <m>x=0</m> e <m>x=2</m>.
+
+        <figure xml:id="fig-ex-area-rieamann">
+            <caption></caption>
+       
+
+            <image source="images/figure_area_medio2.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+         </figure>
         </p>
     </statement>
     <solution>
         <p>
-           O integrando possui uma descontinuidade em <m>x=1</m>. Assim, de acordo com 
-           <xref ref="assemblage-impropria-5"/>, temos
-
-           <md>
-               <mrow> \integrald{\frac{1}{x-1}}{0}{3}{x}\amp =\integrald{\frac{1}{x-1}}{0}{1}{x} + \integrald{\frac{1}{x-1}}{1}{3}{x}.</mrow>
-           </md>
-            Mas,
-            <md>
-                <mrow>\integrald{\frac{1}{x-1}}{0}{1}{x} \amp = \lim_{c\to 1^-} \integrald{\frac{1}{x-1}}{0}{c}{x} \</mrow>
-                <mrow> \amp = \lim_{c\to 1^-} \left( \ln{|c-1|}-\ln{|-1|}\right) </mrow>
-                <mrow> \amp = \lim_{c\to 1^-} \ln(1-c)=-\infty </mrow>
-            </md>.
-        Então <me> \integrald{\frac{1}{x-1}}{0}{1}{x}</me> é divergente. Daí, <me>\integrald{\frac{1}{x-1}}{0}{3}{x}</me> diverge.
+           depois
+        
         </p>
     </solution>
 </example>
 
-<!-- <example>
-    <statement>
-        <p>
-            depois
-        </p>
-    </statement>
-    <solution>
-        <p>
-            depois
-        </p>
-    </solution>
-</example> -->
+<technology>
+<title>Faça você mesmo.</title>
 
-<exercise>
-    <statement>
-        <p>
-            Determine <m>\integrald{\ln{x}}{0}{1}{x}</m>.
-        </p>
-    </statement>
-    <hint>
-        <p>
-            Use integral por partes com <m>u=\ln{x}</m> e <m>\dd v= \dd x</m>.
-        </p>
-    </hint>
+<figure xml:id="fig-soma-riemann">
+    <caption></caption>
 
-<answer>
-    <p>
-        <m>-1</m>
-    </p>
-</answer>
-</exercise>
+<interactive xml:id="interactive-soma-riemann" platform="sage" width="100%" aspect="1:1.25" >
+<slate surface="sage">                    
+<![CDATA[ 
+var('x')
+@interact(layout=dict(top=[["f"],["interval"],["number_of_subdivisions"],["endpoint_rule"]]))
+def midpoint(f = input_box(default = x^2, type = SR, width=20, label="f(x)="),
+    interval=range_slider(0, 10, 1, default=(0, 3), label="[a,b]"),
+    number_of_subdivisions = slider(1, 30, 1, default=4, label="Número de retângulos"),
+    endpoint_rule = selector(['Esquerda', 'Direita', 'Ponto Médio'], nrows=1, label="Regra", buttons=True)):
+
+    a, b = map(QQ, interval)
+    t = var('t')
+    func = fast_callable(f(x=t), RDF, vars=[t])
+    dx = ZZ(b-a)/ZZ(number_of_subdivisions)
+   
+    xs = []
+    ys = []
+    for q in range(number_of_subdivisions):
+        if endpoint_rule == 'Esquerda':
+            xs.append(q*dx + a)
+        elif endpoint_rule == 'Ponto Médio':
+            xs.append(q*dx + a + dx/2)
+        elif endpoint_rule == 'Direita':
+            xs.append(q*dx + a + dx)
+        elif endpoint_rule == 'Upper':
+            x = find_local_maximum(func, q*dx + a, q*dx + dx + a)[1]
+            xs.append(x)
+        elif endpoint_rule == 'Lower':
+            x = find_local_minimum(func, q*dx + a, q*dx + dx + a)[1]
+            xs.append(x)
+    ys = [ func(x) for x in xs ]
+    
+    xaxis = []
+    yaxis = [n(func(a), 2), n(func(b), 2)]         
+    rects = Graphics()
+    for q in range(number_of_subdivisions):
+        xm = q*dx + dx/2 + a
+        x = xs[q]
+        xaxis.append(QQ(x))
+        y = ys[q]
+        rects += line([[xm-dx/2,0],[xm-dx/2,y],[xm+dx/2,y],[xm+dx/2,0]], rgbcolor = (1,0,0))
+        rects += point((x, y), rgbcolor = (1,0,0))
+        rects += plot(y, xm-dx/2, xm+dx/2, fill='axis', rgbcolor=(1,0,0), fillcolor="#cde0eb")
+    min_y = min(0, find_local_minimum(func,a,b)[0])
+    max_y = max(0, find_local_maximum(func,a,b)[0])
+    axes_labels = ['$x$','$y$']
+    tick_formatter = [list(map(QQ, xaxis)), yaxis ]
+    pretty_print(html('<h3>Soma de Riemann {} </h3>'.format(endpoint_rule)))
+    show(plot(func,a,b) + rects, xmin = a, xmax = b, ymin = min_y, ymax = max_y, figsize=[3,3], axes_labels=axes_labels)
+    
+    def cap(x):
+        # print only a few digits of precision
+        if x < 1e-4:
+            return 0
+        return QQ(x)
+    sum_html = "%s \\cdot \\left[ %s \\right]" % (dx, ' + '.join([ "f(%s)" % cap(i) for i in xs ]))
+    num_html = "%s \\cdot \\left[ %s \\right]" % (dx, ' + '.join([ str(cap(i)) for i in ys ]))
+    
+    numerical_answer = integral_numerical(func,a,b,max_points = 200)[0]
+    estimated_answer = dx * sum([ ys[q] for q in range(number_of_subdivisions)])
+
+    pretty_print(html(r'''
+    <div class="math"> 
+    \begin{align*} 
+    \sum_{k=1}^{%s} {f(x_k) \, \Delta x} & = %s \\\     
+   \end{align*} </div>''' 
+                      % (number_of_subdivisions,   estimated_answer)))
+]]>    
+
+</slate>
+</interactive>
+</figure>
+</technology>
 
 
-
-<!-- <subsubsection xml:id="subsubsec-sugestao-video-integrando-descontinuo">
-    <title>Sugestão de vídeo</title>
-    <introduction>
-        <p>
-            introdução
-        </p>
-    </introduction>
+<subsubsection xml:id="subsubsec-sugestao-videos-soma-riemann">
+    <title>Sugestão de vídeos</title>
+   
 <ul>
     <li>
         <p>
-          Problema Resolvido:  <url href="https://"> .</url>
+          Problema Resolvido:  <url href="https://youtu.be/3ZhUdleD1lQ"> Somas de Riemann em notação de somatório.</url>
         </p>
     </li>
-</ul>    
-</subsubsection> -->
+</ul>        
+</subsubsection>
 </subsection>
 
- <exercises xml:id="exercises-impropia">
+<subsection xml:id="subsec-Integral-soma-riemann">
+    <title>Integral definida como limite de uma Soma de Riemann</title>
 
-    
-    <exercise>
-        <webwork source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q10.pg" />
-    </exercise>
-     <exercise>
-         <webwork source="local/Library/Indiana/Indiana_setIntegrals18Improper/ur_in_18_3.pg" />
-     </exercise>
-    
-    <exercise>
-        <webwork source="local/Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q15.pg" />
-    </exercise>
-    <exercise>
-         <webwork source="local/Library/Rochester/setIntegrals18Improper/sc5_9_10.pg" />
-     </exercise>
-    
-    <exercise>
-        <webwork source="local/Library/UCSB/Stewart5_7_8/Stewart5_7_8_38.pg" />
-    </exercise>
+    <definition xml:id="def-lim-soma-riemann">
+    <statement>
+        <p>
+          Seja <m>f</m> uma função contínua definida em <m>[a,b]</m>. A integral definida de <m>f</m> de <m>a</m> até <m>b</m>
+          é 
 
-    <exercise>
-        <webwork source="local/Library/UMN/calculusStewartET/s_7_8_35.pg" />
-    </exercise>
+          <me>
+              \integrald{f(x)}{a}{b}{x} = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k^{\ast})\Delta x_k,
+          </me>
+          na qual <m>\{x_0, x_1, \ldots, x_{n}\}</m> é uma partição de <m>[a,b]</m> e <m>x_k^{\ast} \in [x_{k-1}, x_k]</m>.
+        </p>
+    </statement>
+    </definition>
+
+<note>
+<statement>
+    <p>
+   A continuidade de  <m>f</m> no intervalo <m>[a,b]</m> garante que o limite da soma de Riemann, expresso na definição,
+ exista e dê o mesmo valor para todas as possíveis escolhas dos número <m>x_k^{\ast}</m>. Funções que têm um número finito de descontínuidade em 
+ <m>[a,b]</m> gozam dessa propriedade.  Em ambos os casos, dizemos que <m>f</m>  é  <term>integrável</term> em <m>[a,b]</m>.
+    </p>
+</statement>
+</note>
+
+<p>
+Já que para toda função integrável a escolha dos números <m>x_k^{\ast}</m> não altera o valor do limite da Soma de Riemann. O teorema
+a seguir simplificva a definição de integral definida.
+</p>
+
+
+<theorem xml:id="thm-soma-riemann-direita">
+<statement>
+    <p>
+        Se <m>f</m> for integrável  em <m>[a,b]</m>    então 
+
+        <me>
+             \integrald{f(x)}{a}{b}{x} = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k)\Delta x, \qquad  1\leq k \leq n.
+        </me>
+    na qual <m>\Delta x = \frac{b-a}{n} </m>     e <m> x_k = a+ k\Delta x</m>.  <m> \ct{(Extremidade direita)}</m>
+    </p>
+</statement>
+</theorem>
+
+<example>
+    <statement>
+        <p>
+             Usando o <xref ref="thm-soma-riemann-direita"/>  calcule: <me>\integrald{2x}{0}{3}{x}</me>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+           Para <m>n</m> subintervalos, temos
+             <me>
+                \Delta x = \frac{b-a}{n} = \frac{3}{n}
+            </me>.
+        Então, <m>x_0=0</m>, <m>x_1=1/n</m>, <m>x_2=6/n</m>, <m>x_2=9/n </m> induz a fórmula <m>x_k=3k/n</m>.
+        De acordo com o <xref ref="thm-soma-riemann-direita"/> podemos escrever
+        
+     <md>
+    <mrow>  \integrald{2x}{0}{3}{x} = \amp \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k)\Delta x </mrow>
+     <mrow> = \amp \lim_{n \to \infty}\sum_{k=1}^{n}2\left(\frac{3}{n}k\right)\left(\frac{3}{n}\right)  </mrow>
+     <mrow>  = \amp \lim_{n \to \infty}\frac{18}{n^2}\sum_{k=1}^{n}k </mrow>
+     <mrow>  = \amp \lim_{n \to \infty}\left(\frac{18}{n^2}\right)\left(\frac{n(n+1)}{2}\right) \qquad  \ct{veja somatório} \, <xref ref="sk"/> </mrow>
+     <mrow>  =  \amp \lim_{n \to \infty}\left(9+ \frac{9}{n}\right)</mrow>
+     <mrow>  = \amp  9</mrow>
+     </md>.
+        </p>
+         
+    </solution>
+</example>
+
+<example>
+    <statement>
+        <p>
+         Usando o <xref ref="thm-soma-riemann-direita"/>  calcule: <me>\integrald{(x^3-6x)}{0}{3}{x}</me>.
+        </p>
+    </statement>
+    <solution>
+        <p> 
+        
+         Já que usaremos extremidades à direita para escolha de <m>x_k</m>, fazendo <m>\Delta x = \frac{b-a}{n} = \frac{3}{n}</m>  encontramos <m>x_k=3k/n</m>. 
+         Portanto,           
+           
+
+            <md>
+                <mrow> \integrald{(x^3-6x)}{0}{3}{x} \amp = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k)\Delta x  </mrow>
+                <mrow> \amp =  \lim_{n \to \infty}\sum_{k=1}^{n}f\left(\frac{3k}{n}\right)\cdot\frac{3}{n}</mrow>
+                <mrow> \amp = \lim_{n \to \infty}\frac{3}{n}\sum_{k=1}^{n}\left[ \left(\frac{3k}{n}\right)^3- 6\left(\frac{3k}{n}\right)\right] </mrow>
+                <mrow> \amp = \lim_{n \to \infty}\frac{3}{n}\sum_{k=1}^{n}\left[ \frac{27}{n}k^3- \frac{18}{n}k\right]  </mrow>
+                <mrow> \amp =\lim_{n \to \infty} \left[ \frac{81}{n^4}\sum_{k=1}^{n}k^3  - \frac{54}{n^2}\sum_{k=1}^{n}k\right]  </mrow>
+                <mrow> \amp =\lim_{n \to \infty} \left\{\frac{81}{n^4}\left[\frac{n(n+1)}{2}\right]^2   - \frac{54}{n^2}\frac{n(n+1)}{2}\right\} \qquad  \ct{Somatórios} \, <xref ref="sk3"/> - <xref ref="sk"/>   </mrow>
+                <mrow> \amp =\lim_{n \to \infty}\left[\frac{81}{4}\left(1+ \frac{1}{n}\right)^2 - 27\left(1+ \frac{1}{n}\right) \right] </mrow>
+                <mrow> \amp = -\frac{27}{4}=-6,75 </mrow>
+            </md>.
+      <note>
+ É importante destacar que essa integral não pode ser interpretada como uma área, pois <m>f</m> assume valores positivos e
+negativos. Entretanto, ela pode ser interpretada como a diferença de áreas acima e abaixo do eixo <m>x</m> que estão limitadas pelo gráfico de 
+<m>f(x)=x^3-6x</m> entre <m>0</m> e <m>3</m>.
+      </note>
+ 
+        </p>
+    </solution>
+</example>
+
+
+<subsubsection xml:id="subsubsec-sugestao-videos-integral-defi-riemann">
+    <title>Sugestão de vídeos</title>
+<ul>
+    <li>
+        <p>
+          Problema Resolvido:  <url href="https://youtu.be/KvLsQLQqDsg"> Integral definida como o limite de uma soma de Riemann
+.</url>
+        </p>
+    </li>
+</ul>        
+</subsubsection>
+
+
+
+</subsection>
+
+<subsection xml:id="subsec-prova-TFC">
+    <title>Demonstração do Teorema Fundamental do Cálculo</title>
+ <introduction>
+     <p>
+         texto
+     </p>
+ </introduction>
+
+ <sidebyside widths="45% 45%" valign="bottom">
      
+
+
+<figure xml:id="fig-sageplot-TFC1">
+    <caption></caption>
+    <image xml:id="sageplot-TFC1" width="50%">
+        <description></description>
+     <sageplot>
+        f = sin(3*x)+ 2
+        axes_labels = ['$x$','$y$']
+        tick_formatter = [['$a$', '$x$'], [] ]
+        ticks = [[0.2, 0.8], []]
+        p = plot(f, 0, pi/2.5,  ticks=ticks, axes_labels=axes_labels, tick_formatter=tick_formatter, fontsize=14, figsize=[4,3])
+
+        p +=  plot(f, 0.2, 0.8,  fill="axis", fillcolor="#cde0eb")
+        p += line([(0.2,0),(0.2, f(0.2))], color="#000")
+        p += line([(0.8,0),(0.8, f(0.8))], color="#000")
+        p += plot(1, 0, pi/2.5, linestyle="")
+        p += text('$y=f(t)$', (0.2, f(0.2)+1/2), fontsize=14)
+        p += plot(0, 0, pi/2.5, linestyle="")
+        p
+     </sageplot>   
+    </image>
+</figure>
+
+
+<figure xml:id="fig-sageplot-TFC2">
+    <caption></caption>
+<image xml:id="sageplot-TFC2" width="50%" >
+    <description></description>
+   <sageplot>
+    f = sin(3*x)+ 2
+    axes_labels = ['$x$','$y$']
+    tick_formatter = [['$a$','$x$', '$x +\\Delta x$'], [] ]
+    ticks = [[0.2,0.8, 1], []]
+    p = plot(f, 0, pi/2.5,  ticks=ticks, axes_labels=axes_labels, tick_formatter=tick_formatter, fontsize=14, figsize=[4,3])
+    p +=  plot(f, 0.8, 1,  fill="axis", fillcolor="#cde0eb")
+    p += line([(0.8,0),(0.8, f(0.8))], color="#000")
+    p += line([(1,0),(1, f(1))], color="#000")
+    p += plot(1, 0, pi/2.5, linestyle="")
+    p += text('$y=f(t)$', (0.2, f(0.2)+1/2), fontsize=14)
+    #p += plot(0, 0, pi/2, linestyle="")
+    p
+   </sageplot> 
+</image>
+
+</figure>
+ </sidebyside>
+ <theorem xml:id="TFCp1">
+ <title>Teorema Fundamental do Cálculo: parte 1</title>
+ <statement>
+     <p>
+         Seja  <m>A(x)</m> a área da região sob o gráfico de <m>f</m> de <m>a</m> até <m>b</m>. Se <m>f</m> for contínua em um intervalo <m>[a,b]</m>, então
+
+     <me>
+         \integrald{f(x)}{a}{x}{x}= A(x).
+     </me>
+     
+
+     </p>
+
+<proof>
+    <p>
+        Aqui, por uma questão de simplicidade, vamos assuir que a função <m>f</m> seja não-negativa, isso fica ilustrado na <xref ref="fig-sageplot-TFC1"/>. Sendo assim,
+         note que a área da região sombreada da figura <xref ref="fig-sageplot-TFC2"/> vale <m>A(x+ \Delta x)- A(x)</m>.
+         Além disso, para <m>\Delta x</m> essa área  é aproximada como um retângulo de altura <m>f(x)</m> e largura <m>\Delta x</m>. Logo,
+
+        <me>
+            A(x+ \Delta x)- A(x) \approx f(x)\Delta x.
+        </me>
+    Daí, 
+
+            <me>f(x)\approx \frac{A(x+ \Delta x)- A(x)}{\Delta x}. </me>
+
+    Fazendo <m>\Delta x \to 0</m> na igualdade acima, temos
+
+    <md>
+        <mrow>\lim_{\Delta x \to 0} = \amp \frac{A(x+ \Delta x)- A(x)}{\Delta x}.</mrow>
+        <mrow> \amp =  A'(x) </mrow>
+    </md>
+
+    que quer dizer que a função área <m>A(x)</m> é uma primitiva de <m>f</m>. Portanto,
+
+    <me>
+        \integrald{f(x)}{a}{x}{x}= A(x).
+    </me>
+    
+    </p>
+</proof>
+ </statement>
+ </theorem>
+
+<theorem xml:id="TFCp2">
+<title>Teorema Fundamental do Cálculo: parte 2 </title>
+        <statement>
+            <p>
+                Se <m>f(x)</m> é contínua no intervalo <m>[a,b]</m>, e a derivada de   <m>F(x)</m> é igual a <m>f(x)</m> para todo <m>x</m> nesse intervalo, então
+                <md>
+                    <mrow> \integrald{f(x)}{a}{b}{x}= F(b) - F(a) </mrow>
+                </md>, 
+            em que <m>F</m> é qualquer primitiva de <m>f</m>, isto é, <m>F'(x)=f(x)</m> para todo <m>x\in[a,b]</m>.
+            </p>
+        
+        <proof>
+            <p>
+             Segue do <xref ref="TFCp1"/> que 
+
+
+             <me>
+                 \integrald{f(x)}{a}{x}{x}= A(x).
+             </me>
+             Então, podemos afirmar que 
+
+             <me>
+                 A(a) = \integrald{f(x)}{a}{a}{x} = 0
+             </me>
+             
+             e 
+
+             <me>
+                  A(b) = \integrald{f(x)}{a}{b}{x}.
+             </me>
+            Seja <m>F(x)</m> outra primitiva qualquer de <m>f</m>. Logo,  <m> F'(x) = f(x) = A'(x)</m> e portanto, 
+            <m>A(x)=F(x)+ C</m>, na qual <m>C</m> é uma constante. Então,
+
+            <md>
+                <mrow>\integrald{f(x)}{a}{b}{x} \amp = A(b) </mrow>
+                <mrow> \amp = A(b) - A(a) \qquad \ctm{A(a)=0} </mrow>
+                <mrow> \amp = [A(b)- A(a)] </mrow>
+                <mrow> \amp = [F(b) + C]- [F(a)+C] </mrow>
+                <mrow> \amp = F(b) - F(a).</mrow>
+            </md>
+            </p>
+        </proof>
+        </statement>
+    </theorem>
+
+<subsubsection xml:id="subsubsec-sugestao-videos-integral-defi-riemann">
+    <title>Sugestão de vídeos</title>
+<ul>
+    <li>
+        <p>
+          Teorema: <url href="https://youtu.be/JYZy4pmT_mI"> Outra Demonstração para o Teorema Fundamental do Cálculo </url>
+        </p>
+    </li>
+</ul>        
+</subsubsection>
+
+
+
+
+</subsection>
+ <exercises xml:id="exercises-soma-rieamann">
+ <exercise>
+     <webwork source="local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.1_Approximating_and_Computing_Area/5.1.36.pg" />
+ </exercise>
+
+<exercise>
+    <webwork source="local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg" />
+</exercise>
+
+<exercise>
+    <webwork source="local/Library/Rochester/setIntegrals0Theory/sc5_2_3_mo.pg" />
+</exercise>
+<exercise>
+    <webwork source="local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_67.pg" />
+</exercise>
+
  </exercises>
 
 
