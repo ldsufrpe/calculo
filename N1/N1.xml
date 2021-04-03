@@ -1059,7 +1059,64 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
 <exercises>
 <title>Exercícios</title>
 
-    <exercisegroup cols="2">
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-11.pg" />
+</exercise>
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-5.pg" />
+</exercise>
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-12.pg" />
+</exercise>
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-1.pg" />
+</exercise>
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-2.pg" />
+</exercise>
+
+
+
+
+<exercise>
+<webwork source="local/Library/Pretext/N1/pretext-3.pg" />
+</exercise>
+
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-14.pg" />
+</exercise>
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-9.pg" />
+</exercise>
+
+    <exercise>
+    <p>Encontre uma função <m>f(x)</m> tal que <m>  f''(x) = x + \cos{x}</m> e, além disso, <m> f (0) = 1</m> e <m>f'(0) = 2</m>.</p>
+    </exercise>
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-7.pg" />
+</exercise>
+
+
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-13.pg" />
+</exercise>
+
+ <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-15.pg" />
+</exercise>
+
+
+
+
+
+    <!-- <exercisegroup cols="2">
     <introduction>
     <p>
        Encontre a primitiva das seguintes funções.
@@ -1151,7 +1208,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     <m>\displaystyle\int 4\sqrt{x}\left(x-3\right)\,\dd x</m>
 </exercise>
  
-</exercisegroup>
+</exercisegroup> -->
 </exercises>
 
 </section>
@@ -1625,8 +1682,12 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
 
     </subsection>
    
+    
+
+
+
     <exercises xml:id="exercises-eq-diferencial">
-        <exercisegroup >
+        <!-- <exercisegroup >
         <introduction>
             <p>
                 Determine a função <m> y=y(x)</m>, <m> x\in\mathbb{R}</m>, para cada condição dada.
@@ -1650,32 +1711,31 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
         <exercise>
            <m> \frac{\dd y}{\dd x}=3 + \frac{1}{x}\quad  \text{e}\quad  y(1)=2\quad(x>0)</m>
         </exercise>
-        </exercisegroup>
-    <exercise>
-    <p>Encontre uma função <m>F</m> tal que <m> F''(x) = x + \cos{x}</m> e, além disso, <m> F (0) = 1</m> e <m>F'(0) = 2</m>.</p>
-    </exercise>
+        </exercisegroup> -->
+<exercisegroup>
+<introduction>
+    <p>
+        Resolva:
+    </p>
+</introduction>
+     <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-8.pg" />
+</exercise>
+<exercise>
+<webwork source="local/Library/Pretext/N1/pretext-4.pg" />
+</exercise>
+
+</exercisegroup>
+
     <exercise>
        <p>Mostre que <m>y=xe^{-x} + 2</m> é uma solução do problema de valor inicial</p>
        <me>
            \frac{\dd y}{\dd x} = (1-x)e^{-x}, \quad y(0)=2.
        </me>       
    </exercise>
-    <exercisegroup>
-    <introduction>
-        <p>
-        Encontre uma equação da curva que satisfaz as condições
-dadas.
-        </p>
-    </introduction>
-        <exercise>
-          <p>  Em cada ponto <m>(x, y)</m> da curva, a inclinação é <m> 2x + 1</m>; a curva
-passa pelo ponto <m>(−3, 0)</m>.</p>
-        </exercise>
-        <exercise>
-        <p>    Em cada ponto <m>(x, y)</m> da curva, a inclinação é <m> −\sin{x} </m>; a curva
-passa pelo ponto <m>(0, 2)</m>.</p>
-        </exercise>
-    </exercisegroup>
+    <exercise>
+<webwork source="local/Library/Pretext/N1/pretext-6.pg" />
+</exercise>
 
 
  <exercisegroup>
@@ -1701,11 +1761,9 @@ passa pelo ponto <m>(0, 2)</m>.</p>
 
 </exercisegroup>
 
- <!-- <exercise>
-<webwork source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg" />
-</exercise>
 
-    -->
+
+   
 
 
    </exercises> 

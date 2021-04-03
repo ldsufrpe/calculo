@@ -1,27 +1,414 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-representations>
   <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
-    <static seed="1" source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg">
+    <static seed="1" source="local/Library/Pretext/N1/pretext-11.pg">
       <statement>
-        <p>Use the properties of exponents to simplify the following</p>
-        <p><m>{x^{4}}\cdot{x^{16}} =</m>
-        <fillin name="AnSwEr0001" characters="12"/></p>
+        <p>Determine as integrais indefinidas abaixo:</p>
+        <p>a) <m>\displaystyle\int 4 e^t  \, dt</m> = <fillin name="AnSwEr0001" characters="30"/> <m>+ C</m>.</p>
+        <p>b) <m>\displaystyle\int 3^r  \, dr</m> = <fillin name="AnSwEr0002" characters="30"/> <m>+ C</m>.</p>
+        <p>c) <m>\displaystyle\int \dfrac{10^x}{18}  \,dx</m> = <fillin name="AnSwEr0003" characters="30"/> <m>+ C</m>.</p>
       </statement>
       <answer>
-        <p><m>x^{20}</m></p>
+        <p><m>4e^{t}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{3^{r}}{1.09861}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{10^{x}}{18\cdot 2.30259}</m></p>
       </answer>
       <solution>
-        <p>We <em>add</em> the exponents as follows</p>
-        <p><m>\begin{aligned}
-                   x^{4}\cdot x^{16}\amp =x^{4+16}\\
-                                     \amp =x^{20}
-               \end{aligned}</m></p>
+        <p><me>\int 4 e^t \, dt = 4 \int e^t \, dt = 4 e^t + C.</me></p>
+        <p><me>\int 3^r \, dr = 
+          \dfrac{3^r}{\ln 3} + C.</me></p>
+        <p><me>\begin{array}
+          \displaystyle\int \dfrac{10^x}{18} \, dx = \dfrac{1}{18} \displaystyle\int 10^x \, dx =
+          \dfrac{10^x}{18 \ln 10} + C.
+          \end{array}</me></p>
       </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg</server-url>
-    <pg source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-11.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="local/Library/Pretext/N1/pretext-13.pg">
+      <statement>
+        <p>Encontre a seguinte derivada e estabeleça uma fórmula de integração correspondente. <me>\frac{d}{dx}\left[\frac{x+3}{3x^{2}-x+5}\right]</me></p>
+        <p><m>\displaystyle \int</m> <fillin name="AnSwEr0001" characters="20"/> <m>dx</m> <m>=</m> <fillin name="AnSwEr0002" characters="15"/> <m>+</m> <m>C</m></p>
+      </statement>
+      <answer>
+        <p><m>\frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{x+3}{3x^{2}-x+5}</m></p>
+      </answer>
+      <solution>
+        <p>Usaremos a Regra do Quociente para computar a derivada.</p>
+        <p><me>\frac{d}{dx}\left[\frac{x+3}{3x^{2}-x+5}\right]=\frac{\frac{d}{dx}\left[x+3\right]\cdot (3x^{2}-x+5)-(x+3)\cdot \frac{d}{dx}[3x^{2}-x+5]}{(3x^{2}-x+5)^2}</me></p>
+        <p><me>=\frac{3x^{2}-x+5-\left(x+3\right)\!\left(3\cdot 2x-1\right)}{\left(3x^{2}-x+5\right)^{2}}=\frac{3x^{2}-x+5-6x^{2}+x-18x+3}{\left(3x^{2}-x+5\right)^{2}}=\frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}</me></p>
+        <p>Se integrarmos isso, teremos o que começamos com mais uma constante arbitrária.
+        <me>\displaystyle \int \left[ \frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}\right]dx= \frac{x+3}{3x^{2}-x+5} +C</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-13.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="local/Library/Pretext/N1/pretext-15.pg">
+      <statement>
+        <p>Determine a integral indefinida e verifique sua resposta usando derivada.</p>
+        <p><m>\displaystyle \int\left [\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)}\right] dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="25"/> <m>+</m> <m>C</m></p>
+      </statement>
+      <answer>
+        <p><m>\frac{\tan\!\left(x\right)+x}{3}</m></p>
+      </answer>
+      <solution>
+        <p><me>\displaystyle \int \left [\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)} \right] dx= \frac{1}{3}\int  \sec^{2}\!\left(x\right)  \;dx+\frac{1}{3}\int    \;dx= \frac{1}{3}\left(\tan\!\left(x\right)+x\right)+C</me></p>
+        <p><me>\frac{d}{dx}\left[\frac{1}{3}\left(\tan\!\left(x\right)+x\right)+C\right]=\frac{1}{3}\left(\sec^{2}\!\left(x\right)+1\right)=\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-15.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="local/Library/Pretext/N1/pretext-8.pg">
+      <statement>
+        <p>O problema de valor inicial
+        <me>y'(x) = \sin x, \quad y(0) = 4</me></p>
+        <p><m>y(x) =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>-\left(\cos\!\left(x\right)\right)+5</m></p>
+      </answer>
+      <solution>
+        <p>Note que
+        <me>y(x) = \int \sin x \, dx = -\cos x + C.</me>
+        Encontre <m>C</m> usando <m>y(0) = 4</m>.
+        <me>-\cos(0) + C = 4 \;\Rightarrow\; -1 + C = 4
+          \;\Rightarrow\; C = 5.</me></p>
+        <p>Logo, <m>y(x) = -\cos x + 5</m>.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-8.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="local/Library/Pretext/N1/pretext-4.pg">
+      <statement>
+        <p>O problema de valor inicial
+        <me>\dfrac{dy}{d\,x} = 5^x, \quad y(3) = -3</me></p>
+        <p><m>y(x) =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>\frac{5^{x}}{1.60944}-80.6669</m></p>
+      </answer>
+      <solution>
+        <p><me>y(x) =\int 5^x \, dx = \dfrac{5^x}{\ln 5} + C</me>
+        Encontre <m>C</m> por definição <m>y(3) = -3</m>.
+        <me>\begin{array}{rcl}  
+             \dfrac{5^{3}}{\ln 5} + C \amp =\amp  -3 \\
+             C \amp =\amp  -3 - \dfrac{5^{3}}{\ln 5} \approx -80.6668.
+          \end{array}</me></p>
+        <p>Assim, <m>y(x) = \dfrac{5^x}{\ln 5}  - 80.6668</m>.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-4.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="local/Library/Pretext/N1/pretext-6.pg">
+      <statement>
+        <p>Sabendo que o gráfico de  <m>f(x)</m> passa pelo ponto
+        <m>( 6, 4 )</m>	e que a inclinação de sua reta tangente em <m>(x,f(x))</m> é <m>5 x + 3</m>, quanto vale  <m>f(  4 )</m>?
+        <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>-52</m></p>
+      </answer>
+      <solution>
+        <p>Lembre-se de que o gráfico de \ (f (x) \) passando pelo ponto
+        <m>(6, 4)</m>, isso simplesmente significa <m>f(6) = 4</m>.  Similarmente, a inclinação da linha tangente em <m>x, f(x)</m> sendo <m>{5}x + 3</m> significa que a derivada de <m>f</m> em <m>x</m> é esta fórmula. Isto é,
+        <m>f'(x) = {5}x + 3</m>.</p>
+        <p>Agora, encotreamos a primitiva de <m>f'(x) = {5}x + 3</m>.  Isto é dado por <m>f(x) = \frac{5}{2}x^2 + {3}x + C</m>.  O fado que
+        <m>f(6) = 4</m> nos permite obter <m>C</m> como segue.</p>
+        <p><me>\begin{aligned}
+            f(6) \amp  = 4 \\
+            \frac{5}{2}(6)^2 + {3}(6) + C \amp  = 4 \\
+            \frac{5}{2}(36) + 18 + C \amp  = 4 \\
+            \frac{180}{2} + C \amp  = 4 - 18 \\
+            C \amp  = -14-90 \\
+            C \amp  = -104 \\
+          \end{aligned}</me></p>
+        <p>Portanto a função <m>f(x)</m> é dada por:</p>
+        <p><me>f(x) = \frac{5}{2}x^2 + {3}x + (-104)</me></p>
+        <p>Conectando o ponto 4, dá <m>f(4) = -52.00</m>.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-6.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="local/Library/Pretext/N1/pretext-5.pg">
+      <statement>
+        <p>Considere a função  <m>f(x) = 3 x^ {10} + 5 x^{7} - 7 x^{3} - 7</m>. Qual a primitiva de <m>f(x)</m>?</p>
+        <p><fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>0.272727x^{11}+0.625x^{8}-1.75x^{4}-7x</m></p>
+      </answer>
+      <solution>
+        <p>Relembre que para um termos na forma <m>Ax^n</m>a primitiva é
+        apenas o termo cuja derivada é <m>Ax^n</m>.  Isto é, 
+        <m>\frac{A}{n+1}x^{n+1} + C</m> na qual <m>C</m> é uma constante desconhecida.
+        A primitiva da constante <m>A</m> é dada por <m>Ax</m>.  Então, 
+        para encontrar a primitiva desta expressão, aplicamos esta regra termo a termos obtendo:</p>
+        <p><me>F(x) = \frac{3}{11}x^{11} + 
+                  \frac{5}{8}x^{8} - 
+                  \frac{7}{4}x^{4} - 
+                  {7}x + C</me></p>
+        <p>Na qual <m>C</m> é uma constante arbitrária.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-5.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="local/Library/Pretext/N1/pretext-12.pg">
+      <statement>
+        <p>Determine a integral indefinida:</p>
+        <p><m>\displaystyle{ \int \left(4 x^2 + 3 x - 3\right) \,dx} =</m>
+           <fillin name="AnSwEr0001" characters="35"/> + <m>C</m>.</p>
+      </statement>
+      <answer>
+        <p><m>\frac{4x^{3}}{3}+\frac{3x^{2}}{2}-3x+C</m></p>
+      </answer>
+      <solution>
+        <p>Basta verificar que 
+        <me>\int \left(4 x^2 + 3 x - 3\right) \,dx 
+        = \frac{4x^{3}}{3}+\frac{3x^{2}}{2}-3x+C</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-12.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="local/Library/Pretext/N1/pretext-1.pg">
+      <statement>
+        <p>Considere a função <m>\displaystyle f(x) = x^5 + 2 \sqrt{x}</m>.</p>
+        <p>Seja <m>F(x)</m> a primitiva de <m>f(x)</m> com <m>F(1) = -6</m>.</p>
+        <p>Então <m>F(x) =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>\frac{x^{6}}{6}+\frac{4x^{1.5}}{3}-7.5</m></p>
+      </answer>
+      <solution>
+        <m>\displaystyle f(x) = x^5 + 2 \sqrt{x} = x^5 + 2 x^{1/2}</m>: 
+        
+        
+         
+        
+         <m>\displaystyle F(x) = \frac{x^6}{6} + \frac{2 x^{3/2}}{3/2} + c  = 
+        \frac{x^6}{6} + \frac{4 x^{3/2}}{3} + c</m>
+        
+        
+         
+        
+         Já que <m>F(1) = -6</m>, temos
+        <m>\displaystyle \frac{1}{6} + \frac{4}{3} + c = -6</m> 
+        
+        
+         
+        
+         
+        <m>\displaystyle c = -6 -  \frac{1}{6} - \frac{4}{3} = \frac{-135}{18} = -7.5</m>
+        
+        
+         
+        
+         Portanto <m>\displaystyle F(x) = \frac{x^6}{6} + \frac{4 x^{3/2}}{3}  - 7.5</m>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-1.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="local/Library/Pretext/N1/pretext-2.pg">
+      <statement>
+        <p>Encontre a primitiva mais geral da função
+           <m>\displaystyle{ \frac{4}{\sqrt[3]{x}} - 6 \sqrt[3]{x^2}}</m>.</p>
+        <p>Primitiva =  <fillin name="AnSwEr0001" characters="35"/></p>
+      </statement>
+      <solution>
+        <p>Primeiro reescreva a função como segue:
+           <me>\frac{4}{\sqrt[3]{x}} - 6 \sqrt[3]{x^2} = 4 x^{-1/3} -6 x^{2/3}</me>
+        Então a primitiva mais geral é:
+        <me>4 \cdot \frac{3}{2} x^{2/3} - 6\cdot \frac{3}{5} x^{5/3} + C  
+        =  6  x^{2/3} - {\textstyle\frac{18}{5}} x^{5/3} + C</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-2.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="local/Library/Pretext/N1/pretext-3.pg">
+      <statement>
+        <p>Dada a função
+        <me>f''(x) =
+           5x  -    6</me> com <m>f'(  -2) =5</m> e <m>f(  -2)=4</m>.</p>
+        <p>Encontre <m>f'(x) =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+        <p>e determine <m>f(   3) =</m> <fillin name="AnSwEr0002" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>2.5x^{2}+\left(-6\right)x+\left(-17\right)</m></p>
+      </answer>
+      <answer>
+        <p><m>-66.8333333333333</m></p>
+      </answer>
+      <solution>
+        <p>Para resolver esses problemas, usaremos o fato de que a primitiva mais geral de <m>f (x)</m> é <m>F (x) + C</m> para alguma constante <m>C</m>. Então, começamos encontrando a primitiva da segunda derivada
+        <m>f''(x)</m>.</p>
+        <p><me>f''(x) =    5x  -    6 
+                  = \frac{d}{dx} f'(x) 
+                  = \frac{d}{dx}\left( \frac{5}{2}x^2  -    6x + C_1 \right)</me></p>
+        <p>Precisamos descobrir qual é essa constante <m>C_1</m>.  Para isso, vamos usar as informações fornecidas no problema sobre<m>f'(-2)</m>.  A saber,
+         <m>f'(  -2) = 5</m>.  Logo, temos
+        <me>\begin{aligned}
+            f'(  -2) \amp  = \frac{5}{2}(  -2)^2  -    6(  -2) + C_1 \\
+               5    \amp  = 22 + C_1 \\
+               -17      \amp  = C_1
+          \end{aligned}</me></p>
+        <p>Portanto, <m>f'(x) = \frac{5}{2}x^2  -    6x  - 17</m>.</p>
+        <p>Agora, procedemos como antes, desta vez encontrando a primitiva
+        de  <m>f'(x)</m> e usar informações sobre <m>f(3)</m> para encontrar
+        <m>f(x)</m>.  A primitive, e o valor de <m>C_2</m>, são obtidos como segue:</p>
+        <p><me>f'(x) = \frac{5}{2}x^2  -    6x  - 17 
+                 = \frac{d}{dx} f(x) 
+                 = \frac{d}{dx}\left( \frac{1}{3}\left(\frac{5}{2}x^3\right)  -    6\left(\frac{1}{2}x^2\right) 
+                     - 17x + C_2\right)</me></p>
+        <p><me>\begin{aligned}
+            f(-2) \amp  = \frac{1}{3}\left(\frac{5}{2}(-2)^3\right)  -    6\left(\frac{1}{2}(-2)^2\right) 
+                        - 17(-2) + C_2 \\
+            4    \amp  = 15.33 + C_2 \\
+            -11.33 \amp  = C_2
+          \end{aligned}</me></p>
+        <p>Portanto, a função <m>f(x) = \frac{5}{6}x^3 + \frac{-6}{2}x^2  - 17x  - 11.33</m> de modo que <m>f(3) = -66.83</m>.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-3.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="local/Library/Pretext/N1/pretext-14.pg">
+      <statement>
+        <p>Determine a seguinte integral definida
+        <m>\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right)  \,dx=</m> <fillin name="AnSwEr0001" characters="20"/> <m>+C</m></p>
+      </statement>
+      <answer>
+        <p><m>-12\cos\!\left(x\right)-4\sin\!\left(x\right)</m></p>
+      </answer>
+      <solution>
+        <p><m>\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right) \,dx= 12 \int \sin(x) \, dx - 4 \int \cos(x) \,dx</m></p>
+        <p><m>\quad = -12\cos\!\left(x\right)-4\sin\!\left(x\right) + C</m></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-14.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="local/Library/Pretext/N1/pretext-9.pg">
+      <statement>
+        <p>Considere a função  <m>f(t) =  9 \sec ^2(t) - 4 t^ { 2 }</m>.
+        Seja <m>F(t)</m> a primitiva de <m>f(t)</m> com <m>F(0) = 0</m>.</p>
+        <p>Então <m>F(1.5) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>122.412779524545</m></p>
+      </answer>
+      <solution>
+        <p>Para resolver este problema, você precisa lembrar que a derivada de
+        <m>\rm{tg(t)}</m> é <m>\sec^2(t)</m>.  Não é difícil derivar isso usando a identidade <m>\rm{tg}(t) = \frac{\rm{sen(t)}}{\cos(t)}</m> e a regra de cocientes para derivadas.</p>
+        <p>Com isso em mente, encontre a primitiva geral de  <m>f(t) =  9\sec^2(t)-{4}t^2</m> que será <m>F(t) = 9\rm{tg(t)} - \frac{ {4}t^3 }{ 3} + 
+        C</m>. Agora usando o fato de <m>F(0) = 0</m> e que <m>\rm{tg}(0) = 0</m>, devemos ter <m>C = 0</m>.</p>
+        <p>Portanto, pondo 1.5 nesta expressão, obtemos:</p>
+        <p><me>F(1.5) = 9\rm{tg}(1.5) - \frac{ 4(1.5)^3 }{ 3 }
+                   = 122.413</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-9.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-9.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="local/Library/Pretext/N1/pretext-7.pg">
+      <statement>
+        <p>Encontre a função <m>f(x)</m> sabendo que
+        <me>f''(x) = 8 \sin x, \quad f'(\pi) = 5, \quad f(\pi) = 0</me></p>
+        <p><m>f(x) =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>-8\sin\!\left(x\right)+\left(-3\right)x+0-\left(-3\right)\pi </m></p>
+      </answer>
+      <solution>
+        <p>Note que 
+        <me>f'(x) = \int 8 \sin x \, dx = -8 \cos x + C_1.</me>
+        Encontre <m>C_1</m> usando <m>f'(\pi) = 5</m>.
+        <me>\begin{array}{rcl}
+            -8 \cos \pi + C_1 \amp =\amp  5\\
+             8 + C_1 \amp =\amp  5\\
+             C_1 \amp =\amp  -3
+          \end{array}</me></p>
+        <p><me>f(x) = \int \left( -8 \cos x  - 3 \right) \, dx 
+          = -8 \sin x  - 3 x + C_2.</me>
+        Encontre  <m>C_2</m> usando <m>f(\pi) = 0</m>.
+        <me>\begin{array}{rcl}
+            -8 \sin \pi  - 3 \pi + C_2 \amp =\amp  0\\
+             C_2 \amp =\amp  0  + 3 \pi
+          \end{array}</me></p>
+        <p>Logo, <m>f(x) = -8 \sin x  - 3 x + 0  + 3 \pi</m>.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=local/Library/Pretext/N1/pretext-7.pg</server-url>
+    <pg source="local/Library/Pretext/N1/pretext-7.pg"/>
   </webwork-reps>
  </webwork-representations>
