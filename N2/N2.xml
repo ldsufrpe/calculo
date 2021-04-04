@@ -1009,7 +1009,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </exercise>
 
 <subsubsection xml:id="subsubsec-videos-subs-trig">
-    <title>Vídeos</title>
+    <title>Sugestões de Vídeos</title>
 
     <ul>
         <li>
@@ -1065,105 +1065,116 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <exercises xml:id="exercises-subs-trig">
+<!-- 
+<exercise >
+    <webwork source="local/Library/Pretext/N2/pretext-1.pg"/>
+</exercise> -->
 
+<exercise >
+     <webwork source="local/Library/Pretext/N2/pretext-11.pg"/>
+</exercise>
 
-<exercisegroup cols="2">
+<exercise >
+     <webwork source="local/Library/Pretext/N2/pretext-12.pg"/>
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-14.pg" />
+</exercise>
+<exercisegroup cols='2'>
 <introduction>
     <p>
-        Use a técnica de substituição para calcular as seguintes integrais indefinidas.
+        Use o método de substituição para calcular as seguintes integrais indefinidas.
+    </p>
+</introduction>
+
+
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-2.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-9.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-5.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-10.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-18.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-19.pg" />
+</exercise>
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-20.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-28.pg" />
+</exercise>
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-8.pg" />
+</exercise>
+
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-4.pg" />
+</exercise>
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-16.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-17.pg" />
+</exercise>
+
+
+</exercisegroup>
+
+
+<exercisegroup cols='2'>
+<introduction>
+    <p>
+      Use o método de substituição trigonométrica para calcular as seguintes integrais indefinidas.  
+        
     </p>
 </introduction>
 <exercise>
-    <m>\displaystyle\int 5t\sqrt[3]{1-t^2}\,\dd t</m>
-</exercise>
-<exercise>
-    <m>\displaystyle\int \sqrt[3]{1-2x^2}(-4x)\,\dd x</m>
-</exercise>
-<exercise>
-    <m>\displaystyle\int t\cos{t^2}\,\dd t</m>
-</exercise>
-<exercise>
-    <m>\displaystyle\int \sin{2x}\,\dd x</m>
-</exercise>
-<!-- <exercise>
- <m>\displaystyle\int \left(t^3 + 5t\right)^8\,\dd t</m>
-</exercise> -->
-    <exercise>
-        <m>\displaystyle\int e^{5x}\,\dd x</m>
-    </exercise>
-    <exercise>
-        <m>\displaystyle\int xe^{-x^2}\,\dd x</m>
-    </exercise>
-    <exercise>
-        <m>\displaystyle\int\dfrac{1}{\sqrt{4-x}}\,\dd x</m>
-    </exercise>
-    <exercise>
-        <m>\displaystyle\int \dfrac{1}{t+5}\,\dd t</m>
-    </exercise>
-    <exercise>
-        <m>\displaystyle\int \dfrac{x^2}{(1+x^3)^2}\,\dd x</m>
-    </exercise>
-    <exercise>
-        <m>\displaystyle\int \dfrac{x+1}{(x^2+2x-3)^2}\,\dd x</m>
-    </exercise>
-    <exercise>
-        <m>\displaystyle\int \dfrac{x-2}{\sqrt{x^2-4x+3}}\,\dd x</m>
-    </exercise>
-</exercisegroup>
- <exercisegroup cols="2">
-    <introduction>
+<statement>
     <p>
-       Use a técnica de substituições trigonométricas para calcular as seguintes integrais.
+        <m>\displaystyle\int \sqrt{16-x^2}\,dx</m>
+
     </p>
-   </introduction>
-   <exercise>
-       <m>\integral{\sqrt{1-x^2}}{x}</m>
-   </exercise>
-   <exercise>
-       <m>\integral{\sqrt{1+x^2}}{x}</m>
-   </exercise>
-   <exercise>
-       <m>\integral{\sqrt{1-(t-1)^2}}{t}</m>
-   </exercise>
-   <!-- <exercise>
-   <statement>
-       <p>
-           <m>\integral{\sqrt{y^2+2y+2}}{y}</m>
-       </p>
-        </statement>
-          <hint>
-           <p>
-               Complete o quadrado do integrando: <m> y^2+2y+2 = (y+ 1)^2 +1 </m>.
-           </p>
-       </hint>
-       <hint>
-           <p>
-               Use a substituição <m>u=y+ 1</m> e aplique o método de substituição trigonométrica apropriado.
-           </p>
-       </hint>
-   <answer>
-       <p>
-           \frac{1}{2} \left(\sqrt{x^{2} + 2 \, x + 2}(x+ 1) +  \arsinh\left(x + 1\right)
-       </p>
-   </answer>    
-       
-   </exercise> -->
-   <exercise>
-       <m>\integral{\frac{1}{\sqrt{9-4x^2}}}{x}</m>
-   </exercise>
-   <exercise>
-       <m>\integral{\frac{3}{\sqrt{2x-x^2}}}{x}</m>
-   </exercise>
-   <exercise>
-       <m>\integral{\frac{1}{x^2+ 4x + 5}}{x}</m>
-   </exercise>
-   <exercise>
-       <m>\integral{\frac{1}{\sqrt{4x - 3 -x^2}}}{x}</m>
-   </exercise>
-<!--   <exercise>
-       <m>\integral{\frac{y^2}{25+y^2}}{y}</m>
-   </exercise>-->
-   </exercisegroup>
+</statement>
+    
+    <answer>
+        <p>
+            <m>x\frac{\sqrt{16-x^2}}{2} + 8\arcsin\frac{x}{4} + C</m>
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-3.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-26.pg" />
+</exercise>
+
+<exercise>
+<webwork source="local/Library/Pretext/N2/pretext-27.pg" />
+</exercise>
+</exercisegroup>
+
 <exercise>
 <p>
     Use o <em> Sage </em> para calcular <m>\integral{x(x^2+5)^8}{x}</m>.
@@ -1200,7 +1211,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                  \integral{(1+\ln{x})\sqrt{1+(x\ln x)^2}}{x}
             </me>.
            
-            Se ele o <em> Sage</em> não retornar  uma resposta, faça uma substituição que mude a integral para uma 
+            Se o <em> Sage</em> não retornar  uma resposta, faça uma substituição que mude a integral para uma 
             daquelas que o sistema pode calcular.
         <sage>        
             <input>
