@@ -1081,7 +1081,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise>
 <webwork source="local/Library/Pretext/N2/pretext-14.pg" />
 </exercise>
-<exercisegroup cols='2'>
+<exercisegroup>
 <introduction>
     <p>
         Use o método de substituição para calcular as seguintes integrais indefinidas.
@@ -1140,7 +1140,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </exercisegroup>
 
 
-<exercisegroup cols='2'>
+<exercisegroup>
 <introduction>
     <p>
       Use o método de substituição trigonométrica para calcular as seguintes integrais indefinidas.  
@@ -1150,11 +1150,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise>
 <statement>
     <p>
-        <m>\displaystyle\int \sqrt{16-x^2}\,dx</m>
-
+         <m>\displaystyle\int \sqrt{16-x^2}\,dx\,=\,</m>       
+            <fillin name="AnSwEr00022" characters="15"/>
     </p>
 </statement>
     
+
     <answer>
         <p>
             <m>x\frac{\sqrt{16-x^2}}{2} + 8\arcsin\frac{x}{4} + C</m>

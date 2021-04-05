@@ -70,8 +70,8 @@
   <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
     <static seed="10" source="local/Library/Pretext/N2/pretext-20.pg">
       <statement>
-        <p><m>\displaystyle\int \frac{\sin \sqrt{x}}{\sqrt{x}}  \, dx.</m></p>
-        <p><var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle\int \frac{\sin \sqrt{x}}{\sqrt{x}}  \, dx \,=\,</m></p>
+        <p><fillin name="AnSwEr0001" characters="15"/></p>
       </statement>
       <answer>
         <p><m>-2\cos\!\left(\sqrt{x}\right)+C</m></p>
@@ -86,8 +86,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
     <static seed="11" source="local/Library/Pretext/N2/pretext-28.pg">
       <statement>
-        <p><m>\displaystyle\int \sec(3 x) \tan(3 x)\, dx</m></p>
-        <p><var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle\int \sec(3 x) \tan(3 x)\, dx \,=\,</m> <fillin name="AnSwEr0001" characters="15"/> <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>0.333333\sec\!\left(3x\right)</m></p>
@@ -102,8 +101,8 @@
   <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
     <static seed="12" source="local/Library/Pretext/N2/pretext-8.pg">
       <statement>
-        <p><m>\displaystyle \int \frac{-5}{x(\ln x)^2} \, dx</m>
-        <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle \int \frac{-5}{x(\ln x)^2} \, dx \,=\,</m>
+        <fillin name="AnSwEr0001" characters="15"/></p>
       </statement>
       <answer>
         <p><m>\frac{5}{\ln\!\left(x\right)}+C</m></p>
@@ -121,8 +120,8 @@
   <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
     <static seed="13" source="local/Library/Pretext/N2/pretext-4.pg">
       <statement>
-        <p><m>\displaystyle\int \sqrt{64 + 16 x^2} \, dx</m>.</p>
-        <p><var name="AnSwEr0001" height="3" width="60"/></p>
+        <p><m>\displaystyle\int \sqrt{64 + 16 x^2} \, dx \,=\,</m>
+        <fillin name="AnSwEr0001" characters="15"/> <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>2x\sqrt{x^{2}+4}+8\ln\!\left(\left|\sqrt{x^{2}+4}+x\right|\right)+C</m></p>
@@ -137,7 +136,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
     <static seed="14" source="local/Library/Pretext/N2/pretext-16.pg">
       <statement>
-        <p><m>\displaystyle \int \frac{x^{5}+1}{\sqrt{x^{6}+6x}} \;dx</m>  <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle \int \frac{x^{5}+1}{\sqrt{x^{6}+6x}} \;dx \,=\,</m>  <fillin name="AnSwEr0001" characters="15"/>  <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>\frac{1}{3}\sqrt{x^{6}+6x}</m></p>
@@ -156,7 +155,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
     <static seed="15" source="local/Library/Pretext/N2/pretext-17.pg">
       <statement>
-        <p><m>\displaystyle \int \frac{e^{\sqrt{5y-10}}}{\sqrt{5y-10}} \;dy</m> <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle \int \frac{e^{\sqrt{5y-10}}}{\sqrt{5y-10}} \;dy \,=\,</m> <fillin name="AnSwEr0001" characters="15"/> <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>0.4e^{\sqrt{5y-10}}</m></p>
@@ -175,11 +174,11 @@
   <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
     <static seed="16" source="local/Library/Pretext/N2/pretext-3.pg">
       <statement>
-        <p><m>\displaystyle\int {\frac{8}{\sqrt{x^2+16}}}\, dx</m></p>
-        <p><fillin name="AnSwEr0001" characters="45"/></p>
+        <p><m>\displaystyle\int {\frac{8}{\sqrt{x^2+16}}}\, dx\, =\,</m>
+        <fillin name="AnSwEr0001" characters="15"/></p>
       </statement>
       <answer>
-        <p><m>8\ln\!\left(x+\sqrt{x^{2}+16}\right)+C+c</m></p>
+        <p><m>8\ln\!\left(x+\sqrt{x^{2}+16}\right)+C</m></p>
       </answer>
       <solution>
         <p>SOLUTION</p>
@@ -223,8 +222,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-17" ww-id="webwork-17">
     <static seed="17" source="local/Library/Pretext/N2/pretext-26.pg">
       <statement>
-        <p><m>\displaystyle\int\frac{\sqrt{81 - x^2}}{x^2}dx</m></p>
-        <p><var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle\int\frac{\sqrt{81 - x^2}}{x^2}\,dx \,=\,</m> <fillin name="AnSwEr0001" characters="15"/></p>
       </statement>
       <answer>
         <p><m>\frac{-\left(\sqrt{81-x^{2}}\right)}{x}-\sin^{-1}\!\left(\frac{x}{9}\right)+C</m></p>
@@ -259,8 +257,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-18" ww-id="webwork-18">
     <static seed="18" source="local/Library/Pretext/N2/pretext-27.pg">
       <statement>
-        <p><m>\displaystyle\int {\frac{10 x^3}{\sqrt{x^2+9}}}\, dx</m></p>
-        <p><var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle\int {\frac{10 x^3}{\sqrt{x^2+9}}}\, dx \,=\,</m> <fillin name="AnSwEr0001" characters="15"/></p>
       </statement>
       <answer>
         <p><m>3.33333\!\left(x^{2}+9\right)^{1.5}-90\!\left(x^{2}+9\right)^{0.5}+C</m></p>
@@ -330,8 +327,8 @@
   <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
     <static seed="4" source="local/Library/Pretext/N2/pretext-2.pg">
       <statement>
-        <p><m>\displaystyle \int x^{5}\left(5+12 x^{6}\right)^{8}\, dx</m></p>
-        <p><var name="AnSwEr0001" height="3" width="60"/></p>
+        <p><m>\displaystyle \int x^{5}\left(5+12 x^{6}\right)^{8}\, dx\, =</m>
+        <fillin name="AnSwEr0001" characters="15"/> + C</p>
       </statement>
       <answer>
         <p><m>\frac{\left(5+12x^{6}\right)^{9}}{648}</m></p>
@@ -346,8 +343,8 @@
   <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
     <static seed="5" source="local/Library/Pretext/N2/pretext-9.pg">
       <statement>
-        <p><m>\displaystyle \int 6^{4 x} \, dx</m>
-        <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle \int 6^{4 x} \, dx\,=\,</m>
+        <fillin name="AnSwEr0001" characters="15"/> <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>\frac{6^{4x}}{7.16704}+C</m></p>
@@ -371,7 +368,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
     <static seed="6" source="local/Library/Pretext/N2/pretext-5.pg">
       <statement>
-        <p><m>\displaystyle \int \frac{7 x^6}{(x^7 + 1)^2} dx</m>  <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle \int \frac{7 x^6}{(x^7 + 1)^2} dx \,= \,</m>  <fillin name="AnSwEr0001" characters="15"/> <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>\frac{-1}{x^{7}+1}</m></p>
@@ -386,8 +383,8 @@
   <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
     <static seed="7" source="local/Library/Pretext/N2/pretext-10.pg">
       <statement>
-        <p><m>\displaystyle \int \dfrac{2x  - 4}{x^2  - 4 x  - 21} \, dx</m>
-        <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle \int \dfrac{2x  - 4}{x^2  - 4 x  - 21} \, dx \,=\,</m>
+        <fillin name="AnSwEr0001" characters="15"/></p>
       </statement>
       <answer>
         <p><m>\ln\!\left(x^{2}+\left(-4\right)x+\left(-21\right)\right)+C</m></p>
@@ -411,7 +408,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
     <static seed="8" source="local/Library/Pretext/N2/pretext-18.pg">
       <statement>
-        <p><m>\displaystyle\int \tan (8 x + 1) \,dx</m>   <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle\int \tan (8 x + 1) \,dx \,=\,</m>   <fillin name="AnSwEr0001" characters="15"/> <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>(-0.125)\ln\!\left(\left|\cos\!\left(8x+1\right)\right|\right)</m></p>
@@ -433,8 +430,8 @@
   <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
     <static seed="9" source="local/Library/Pretext/N2/pretext-19.pg">
       <statement>
-        <p><m>\displaystyle\int x^5 \sin(x^6)</m> 
-        <var name="AnSwEr0001" height="1" width="80"/></p>
+        <p><m>\displaystyle\int x^5 \sin(x^6) \,dx\,=\,</m> 
+        <fillin name="AnSwEr0001" characters="15"/> <m>+ \ C</m></p>
       </statement>
       <answer>
         <p><m>-0.166667\cos\!\left(x^{6}\right)</m></p>
