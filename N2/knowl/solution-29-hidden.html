@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-05T16:05:55-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>Para esse problema usaremos a substituição trigonométrica</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x = {9}\sin(\theta)
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Antes de prosseguir, observe que \(\sin \theta = \frac{x}{9}\text{,}\) e \(\cos \theta = \frac {\sqrt {81-x^2}} {9}\text{.}\) Para ver isso, crie um triângulo retângulo de forma que o seno seja \(x/ 9\text{.}\) Teremos o lado oposto com comprimento  \(x\text{,}\) e a hipotenusa com comprimento \(9\text{,}\) então o lado adjacente terá comprimento \(\sqrt {81-x^2}\text{.}\)</p>
+<p>Com a substituição</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x = {9}\sin\theta
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+dx = {9}\cos\theta \; d\theta
+\end{equation*}
+</div>
+<p>Obtemos:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int\frac{\sqrt{81 - x^2}}{x^2}dx=
+\int  \frac{{9}\cos\theta\sqrt{81 - {81}\sin^2\theta}}{{81}\sin^2\theta} \; d\theta
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+=\int  \frac{\cos^2\theta}{\sin^2\theta} \; d\theta
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+=\int  \cot^2\theta \; d\theta
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+=\int  \csc^2\theta-1 \; d\theta
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+=-\cot\theta-\theta+C
+\end{equation*}
+</div>
+<p>Substituindo de volta em termos de \(x\) resulta em</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+-\cot\theta-\theta+C
+=-\frac{\sqrt{81-x^2}}{x}-\sin^{-1}\left(\frac{x}{9}\right)+C
+,
+\end{equation*}
+</div>
+<p>então</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int\frac{\sqrt{81 - x^2}}{x^2}dx
+=-\frac{\sqrt{81-x^2}}{x}-\sin^{-1}\left(\frac{x}{9}\right)+C
+\end{equation*}
+</div>
+</div></body>
+</html>

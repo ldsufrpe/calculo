@@ -70,8 +70,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
     <static seed="10" source="local/Library/Pretext/N2/pretext-20.pg">
       <statement>
-        <p><m>\displaystyle\int \frac{\sin \sqrt{x}}{\sqrt{x}}  \, dx \,=\,</m></p>
-        <p><fillin name="AnSwEr0001" characters="15"/></p>
+        <p><m>\displaystyle\int \frac{\sin \sqrt{x}}{\sqrt{x}}  \, dx \,=\,</m> <fillin name="AnSwEr0001" characters="15"/></p>
       </statement>
       <answer>
         <p><m>-2\cos\!\left(\sqrt{x}\right)+C</m></p>

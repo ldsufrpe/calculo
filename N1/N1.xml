@@ -492,14 +492,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <md>
                     <mrow xml:id="ln-primitiva-positiva" tag="star"> \integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  </mrow>
                 </md>.
-                De fato o logaritmo natural não está definido para valores menores que zero. Mas,
+                De fato, o logaritmo natural não está definido para valores menores que zero. Mas,
                 <md>
                    <mrow xml:id="ln-primitiva-negativa" tag="dstar">  \frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x}  </mrow>
                 </md>,
 
                para <m>x \lt 0</m>. Então, 
                         <me>
-                             \integral{\frac{1}{x}}{x}  \ln{(-x)} + C, \quad x \lt 0 
+                             \integral{\frac{1}{x}}{x}= \ln{(-x)} + C, \quad x \lt 0 
                         </me>.
                         
 
@@ -691,7 +691,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>
                     A família de primitivas de <m>F''(x)</m> é naturalmente 
                     <md>
-                        <mrow> F'(x) \amp = 12\frac{x^4}{4} + 6\frac{x^2}{2} -4x+ C \amp  \color{gray}{\frac{\dd}{\dd x}\left[F'(x)\right]=F''(x)} </mrow>
+                        <mrow> F'(x) \amp = 12\frac{x^3}{3} + 6\frac{x^2}{2} -4x+ C \amp  \color{gray}{\frac{\dd}{\dd x}\left[F'(x)\right]=F''(x)} </mrow>
                         <mrow> \amp =4x^3 + 3x^2-4x+C </mrow>
                     </md>
                 Assim como todas as primitivas de <m>F'(x)</m> tem a forma
@@ -826,11 +826,11 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
                      <solution>
                     <p>
                        <md>
-                           <mrow>\integral{\frac{x^2+ 2x^4}{x^4}}{x} = \amp \integral{\left(\frac{1}{x^2}+2\right)}{x} \quad \amp \color{gray}{\text{(reescrevendo o integrando)}}</mrow>
+                           <mrow>\integral{\frac{x^2- 2x^4}{x^4}}{x} = \amp \integral{\left(\frac{1}{x^2}-2\right)}{x} \quad \amp \color{gray}{\text{(reescrevendo o integrando)}}</mrow>
                             <mrow> \amp =\integral{x^{-2}}{x}-\integral{2}{x} \amp <xref ref="thm-prop-integral-indefinida-b" text="custom"> Propriedade II</xref></mrow>
                             
-                            <mrow> \amp =\frac{x^{-1}}{-1}+2x + C  \amp <xref ref="tabela2-integrais"/></mrow>
-                            <mrow> \amp =-\frac{1}{x}+2x + C \amp \color{gray}{\text{(simplificando)}}</mrow>
+                            <mrow> \amp =\frac{x^{-1}}{-1}-2x + C  \amp <xref ref="tabela2-integrais"/></mrow>
+                            <mrow> \amp =-\frac{1}{x}-2x + C \amp \color{gray}{\text{(simplificando)}}</mrow>
                        </md>
                     </p>
                 </solution>  
