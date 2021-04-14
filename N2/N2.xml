@@ -130,7 +130,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </objectives>
 
     <subsection xml:id="subsec-integracao-substituicao">
-        <title>O método de substituição <m> u </m></title>
+        <title>Substituição <m> u </m></title>
         
         
             <p>
@@ -492,7 +492,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
         </exercise>
     <assemblage xml:id="assemblage-roteiro">
-        <title>Roteiro do método de substituição</title>
+        <title>Roteiro para substituição <m>u</m></title>
         <p>
             <ol>
                 <li>
@@ -612,8 +612,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </answer>
 </exercise>
-<subsubsection xml:id="subsubsec-videos-subs-u">
-    <title>Vídeos</title>
+      
+    </subsection>
+
+
+<subsection xml:id="subsubsec-videos-subs-u">
+    <title>Sugestões de Vídeos</title>
 
     <ul>
         <li>
@@ -663,9 +667,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </figure>
             </p>
         </paragraphs> -->
-</subsubsection>
-       
-    </subsection>
+</subsection>
+
     <subsection xml:id="subsec-substituicoes-trigonometricas">
         <title>Substituições Trigonométricas</title>
 
@@ -1008,7 +1011,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </answer>
 </exercise>
 
-<subsubsection xml:id="subsubsec-videos-subs-trig">
+
+
+</subsection>
+
+
+<subsection xml:id="subsubsec-videos-subs-trig">
     <title>Sugestões de Vídeos</title>
 
     <ul>
@@ -1053,12 +1061,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </ul>
 
   
-</subsubsection>
-
 </subsection>
-
-
-
     
 
 

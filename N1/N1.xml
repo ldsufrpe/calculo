@@ -899,7 +899,9 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
     </answer>
 </exercise>
 
-<subsubsection xml:id="subsubsec-videos-1">
+  </subsection>
+
+<subsection xml:id="subsubsec-videos-1">
     <title>Sugestão de Vídeos</title>
 
     <ul> 
@@ -935,14 +937,12 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
        
     </ul>
     
-</subsubsection>
+</subsection>  
 
-  </subsection>
-
-<subsubsection xml:id="subsubsec-teconologia">
+<subsection xml:id="subsubsec-teconologia">
     <title>Tecnologia</title>
     
-</subsubsection>
+
 <technology>
 <title>Usando o software SageMath</title>
 
@@ -1054,7 +1054,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
 </activity>
 </paragraphs>
 </technology>
-
+</subsection>
 
 <exercises>
 <title>Exercícios</title>
@@ -1569,7 +1569,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
 </exercise>
 </paragraphs>
 
-<subsubsection xml:id="subsubsec-videos-eq">
+<subsection xml:id="subsubsec-videos-eq">
     <title>Sugestão de Vídeos</title>
     <ul>
         <li>
@@ -1578,7 +1578,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
             </p>
         </li>
     </ul>
-</subsubsection>
+</subsection>
 </subsection> 
     <subsection xml:id="subsec-resolvendo-e-diferenciais">
     <title>Campos de Direções</title>
@@ -1667,7 +1667,12 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
                 </figure>
     </technology>
 
-    <subsubsection xml:id="subsubsec-2">
+   
+
+    </subsection>
+   
+    
+ <subsection xml:id="subsubsec-2">
         <title>Sugestão de Vídeos</title>
      <ul> 
         
@@ -1678,12 +1683,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
         </li>       
        
     </ul>
-    </subsubsection>
-
     </subsection>
-   
-    
-
 
 
     <exercises xml:id="exercises-eq-diferencial">

@@ -573,8 +573,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
   
 </activity>
 
-<subsubsection xml:id="subsubsec-videos">
-    <title>Sugestões de vídeos</title>
+
+ </subsection>
+
+
+
+
+<subsection xml:id="subsubsec-videos">
+    <title>Sugestão de vídeos</title>
 
     <ul>
         <li>
@@ -599,9 +605,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </li>
     </ul>
     
-</subsubsection>
- </subsection>
-
+</subsection>
  <!-- %%%%%%%%%% NOVA SUBSEÇÃO %%%%%%%%%%%%% -->
 
  <subsection xml:id="subsec-fracoes-parciais">
