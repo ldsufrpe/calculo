@@ -900,7 +900,7 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
 </exercise>
 
 <subsubsection xml:id="subsubsec-videos-1">
-    <title>Vídeos</title>
+    <title>Sugestão de Vídeos</title>
 
     <ul> 
         
@@ -1570,11 +1570,11 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
 </paragraphs>
 
 <subsubsection xml:id="subsubsec-videos-eq">
-    <title>Vídeos</title>
+    <title>Sugestão de Vídeos</title>
     <ul>
         <li>
             <p>
-                Equações Diferenciais: <url href="https://youtu.be/xZYZkgOUM7s"> </url>
+                Equações Diferenciais: <url href="https://youtu.be/xZYZkgOUM7s"></url>
             </p>
         </li>
     </ul>
@@ -1668,12 +1668,12 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
     </technology>
 
     <subsubsection xml:id="subsubsec-2">
-        <title>Vídeos</title>
+        <title>Sugestão de Vídeos</title>
      <ul> 
         
         <li>
             <p>
-               Campos de direções: <url href="https://youtu.be/xZYZkgOUM7s"> </url>
+               Campos de direções: <url href="https://youtu.be/xZYZkgOUM7s"></url>
             </p>
         </li>       
        
