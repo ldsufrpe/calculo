@@ -1295,9 +1295,9 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
                             y(x)= \frac{x^3}{3} + C
                         </me>.
                         O valor de <m>C</m> para que  a curva integral passe pelo ponto 
-                        <m>(2,1)</m> satisfaz
+                        <m>(3,1)</m> satisfaz
                         <me>
-                            y(2)= \frac{3^3}{3} + C = 1
+                            y(3)= \frac{3^3}{3} + C = 1
                         </me>,
                         logo <m>C=-8</m>. Portanto,
                         <me>
@@ -1308,6 +1308,7 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
                     
                 </solution>
             </task>
+            
                 
             </p>
         </statement>
