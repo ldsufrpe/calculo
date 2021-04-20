@@ -760,10 +760,97 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </statement>
 </investigation>
-
-
-
 </subsection>
+<subsection xml:id="subsec-videos-propriedades-e-TFC">
+    <title>Sugestão de Vídeos</title>
+    <ul>
+        <li>
+            <p>
+               Propriedade da integral definida: <url href="https://youtu.be/CF2XgyYsBFk"> trocando o sinal da integral </url>
+            </p>
+        </li>
+
+             <li>
+            <p>
+               Propriedade da integral definida: <url href="https://youtu.be/5JZUnWN5AQI"> somando áreas </url>
+            </p>
+        </li>
+             <li>
+            <p>
+               Calculando área: <url href="https://youtu.be/hwFbPNhzegE"> usando o gráfico I </url>
+            </p>
+        </li>
+
+         <li>
+            <p>
+               Calculando área: <url href="https://youtu.be/dM8HGLSq0RU"> usando o gráfico II </url>
+            </p>
+        </li>
+     
+    <li>
+            <p>
+               Teorema Fundamental do Cálculo: <url href="https://youtu.be/Gv2W0WXMmhw"> apresentação</url>
+            </p>
+        </li>
+
+     <li>
+            <p>
+               Teorema Fundamental do Cálculo: <url href="https://youtu.be/wYiwhLne-oc"> calculando derivadas I </url>
+            </p>
+        </li>
+
+        <li>
+            <p>
+               Teorema Fundamental do Cálculo: <url href="https://youtu.be/Gv2W0WXMmhw"> calculando derivadas II</url>
+            </p>
+        </li>
+
+     <li>
+            <p>
+               Resolvendo <url href=""> integrais do tipo <m>\integrald{kx^n}{a}{b}{x}</m></url>
+            </p>
+        </li>
+     <li>
+            <p>
+               Resolvendo <url href="https://youtu.be/k8ZYPiJzAN4"> <m>\integrald{\frac{16-x^3}{x^3}}{-1}{-2}{x}</m></url>
+            </p>
+        </li>
+
+
+         <li>
+            <p>
+               Resolvendo <url href="https://youtu.be/VqBHvcTgCtc"> <m>\integrald{\frac{6+x^2}{x^3}}{2}{4}{x}</m> (envolve logaritmo)</url>
+            </p>
+        </li>
+
+
+         <li>
+            <p>
+               Resolvendo <url href="https://youtu.be/QzxlZhSpAFw"> <m>\integrald{9\sin{x}}{\frac{11\pi}{2}}{6\pi}{x}</m></url>
+            </p>
+        </li>
+
+
+
+         <li>
+            <p>
+               Resolvendo a integral  <url href="https://youtu.be/tMZL9IuQN14"> <m>\integrald{f(x)}{-1}{1}{x}  </m> para <m>f(x) = \begin{cases}
+                x+ 1, \amp  x \lt  0 \\
+                \cos(\pi x), \amp  x \geq 0.
+                \end{cases}</m></url>
+            </p>
+        </li>
+   
+
+          <li>
+            <p>
+               Resolvendo <url href="https://youtu.be/WKef_JrXs-c"> <m>\integrald{|x+2|}{-4}{0}{x}</m></url>
+            </p>
+        </li>
+    </ul>
+</subsection>
+
+
 <subsection xml:id="subsec-simetria">
        
         
@@ -1246,8 +1333,26 @@ fazer uso da mudança dos limites de integração para a nova variável.
 
  </subsection>
 
+<subsection xml:id="subsec-videos-substituicao">
+    <title>Sugestão de Vídeos</title>
+    <ul>
+        
+          <li>
+            <p>
+               Resolvendo <url href="https://youtu.be/nxj7iaQlKws"> <m>\integrald{(2x(x^2+1)^3)}{1}{2}{x}</m></url>
+            </p>
+        </li>
 
-<subsection xml:id="subsec-">
+
+          <li>
+            <p>
+               Resolvendo <url href="https://youtu.be/VldmYmPi30M"> <m>\integrald{x^{2}2^{x^3}}{0}{1}{x}</m></url>
+            </p>
+        </li>
+    </ul>
+</subsection>
+
+<subsection xml:id="subsec-sage">
        <title>Calculando integrais definidas com SageMath</title>
 <introduction>
     <p>
