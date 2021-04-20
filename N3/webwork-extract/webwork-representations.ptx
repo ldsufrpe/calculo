@@ -1,323 +1,1023 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-representations>
   <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
-    <static seed="1" source="Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg">
+    <static seed="1" source="integral-definida/problema13.pg">
       <statement>
-        <p><alert> Note:</alert> You can get full credit for this problem by just answering the last
-        question correctly. The initial questions are meant as hints towards the final
-        answer and also allow you the opportunity to get partial credit.</p>
-        <p>Consider the indefinite integral 
-        <m>\displaystyle \int x^{3}\left(3+13 x^{4}\right)^{12}\, dx</m></p>
-        <p>Then the most appropriate substitution to simplify this integral is</p>
-        <p><m>u</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
-        <p>Then <m>dx = f(x)\,du</m> where</p>
-        <p><m>f(x)</m> =  <fillin name="AnSwEr0002" characters="20"/></p>
-        <p>After making the substitution we obtain the integral <m>\displaystyle \int g(u)\,du</m> where</p>
-        <p><m>g(u)</m> =  <fillin name="AnSwEr0003" characters="20"/></p>
-        <p>This last integral is:
-         =  <fillin name="AnSwEr0004" characters="20"/> <m>+ C</m></p>
-        <p>(Leave out constant of integration from your answer.)</p>
-        <p>After substituting back for <m>u</m> we obtain the following final form of the answer:</p>
-        <p>=  <fillin name="AnSwEr0005" characters="20"/> <m>+ C</m></p>
-        <p>(Leave out constant of integration from your answer.)</p>
+        <p>Encontre a área da região sob a curva <m>y = 2 - 4 x^2</m> e acima do
+        eixo <m>x</m>.</p>
+        <p>área = <fillin name="AnSwEr0001" characters="35"/></p>
       </statement>
       <answer>
-        <p><m>3+13x^{4}</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{1}{52x^{3}}</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{u^{12}}{52}</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{u^{13}}{676}</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{\left(3+13x^{4}\right)^{13}}{676}</m></p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg</server-url>
-    <pg source="Library/Rochester/setIntegrals14Substitution/osu_in_14_2.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
-    <static seed="2" source="Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg">
-      <statement>
-        <p>Calculate the following definite integral.</p>
-        <p><m>\displaystyle \int_0^1 x^2\sqrt{5 x + 7}\,dx</m> =  <fillin name="AnSwEr0001" characters="REF(0x55c788eb8ff0)"/></p>
-      </statement>
-      <answer>
-        <p><m>1.09174514710436</m></p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg</server-url>
-    <pg source="Library/Rochester/setIntegrals14Substitution/osu_in_14_6a.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
-    <static seed="3" source="Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg">
-      <statement>
-        <p>Using the method of u-substitution,</p>
-        <p><m>\displaystyle 
-        \int_{2}^{3} x^{2} (1 + 2 x^{3})^{2} \, dx = \int_{a}^{b} f(u) \, du</m></p>
-        <p>where</p>
-        <p>u = <fillin name="optional0" characters="30"/> (enter a function of x)</p>
-        <p>du = <fillin name="optional1" characters="30"/> dx  (enter a function of x)</p>
-        <p>a = <fillin name="optional2" characters="30"/> (enter a number)</p>
-        <p>b = <fillin name="optional3" characters="30"/> (enter a number)</p>
-        <p>f(u) = <fillin name="optional4" characters="30"/> (enter a function of u).</p>
-        <p>The value of the original integral is <fillin name="AnSwEr0001" characters="30"/>.</p>
-        <p><em><alert>Note:</alert> You can earn full credit if the last answer box   
-        is correct and all other answer boxes are either blank or correct.</em></p>
-      </statement>
-      <answer>
-        <p><m>8970.11111111111</m></p>
-      </answer>
-      <answer>
-        <p><m>1+2x^{3}</m></p>
-      </answer>
-      <answer>
-        <p><m>6x^{2}</m></p>
-      </answer>
-      <answer>
-        <p><m>17</m></p>
-      </answer>
-      <answer>
-        <p><m>55</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{u^{2}}{6}</m></p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg</server-url>
-    <pg source="Library/Rochester/setIntegrals14Substitution/S05.05.Substitution.PTP02b.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
-    <static seed="4" source="Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg">
-      <statement>
-        <p><alert> Note:</alert> You can get full credit for this problem by just entering the
-        answer to the last question correctly. The initial questions are meant as
-        hints towards the final answer and also allow you the opportunity to get
-        partial credit.</p>
-        <p>Consider the indefinite integral <m>\displaystyle \int \cos^{13}(5 t)\sin(5 t)\, dt</m></p>
-        <p>Then the most appropriate substitution to simplify this integral is</p>
-        <p><m>u</m> =  <fillin name="AnSwEr0001" characters="20"/>
-        Then <m>dt = f(t)\,du</m> where</p>
-        <p><m>f(t)</m> =  <fillin name="AnSwEr0002" characters="20"/></p>
-        <p>After making the substitution we obtain the integral <m>\displaystyle \int g(u)\,du</m> where</p>
-        <p><m>g(u)</m> =  <fillin name="AnSwEr0003" characters="20"/></p>
-        <p>This last integral is:
-         =  <fillin name="AnSwEr0004" characters="20"/> <m>+ C</m></p>
-        <p>(Leave out constant of integration from your answer.)</p>
-        <p>After substituting back for <m>u</m> we obtain the following final form of the answer:</p>
-        <p>=  <fillin name="AnSwEr0005" characters="20"/> <m>+ C</m></p>
-        <p>(Leave out constant of integration from your answer.)</p>
-      </statement>
-      <answer>
-        <p><m>\cos\!\left(5t\right)</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{-1}{5\sin\!\left(5t\right)}</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{-u^{13}}{5}</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{-u^{14}}{70}</m></p>
-      </answer>
-      <answer>
-        <p><m>\frac{-\left(\cos^{14}\!\left(5t\right)\right)}{70}</m></p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg</server-url>
-    <pg source="Library/Rochester/setIntegrals14Substitution/osu_in_14_1.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
-    <static seed="5" source="Library/ma122DB/set12/s5_4_26.pg">
-      <statement>
-        <p><m>\displaystyle \int_0^{3} (3 e^x+5 \sin x)\, dx</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
-      </statement>
-      <answer>
-        <p><m>67.2065732525652</m></p>
+        <p><m>1.88561808316413</m></p>
       </answer>
       <solution>
-        <p>SOLUTION</p>
-        <p><me>\begin{array}{rcl} \displaystyle \int_0^{3} (3 e^x+5 \sin x)\, dx \amp =\amp   
-        \displaystyle  3 e^x-5 \cos x  \Big]_0^{3}
-        \\ \amp =\amp  (3 e^{3} - 5 \cos 3) - (3 e^0 - 5 \cos0 ) 
-        \\ \amp =\amp  3 e^{3} - 5 \cos 3  + 2 
+        <p>Solução</p>
+        <p>A função que estamos considerando é</p>
+        <sidebyside widths="16.6666666666667%">
+        <image source="images/webwork-1-image-1.png"/>
+        </sidebyside>
+        <p><em>(Clique no gráfico para uma versão maior.)</em></p>
+        <p>A área que queremos está acima do eixo <m>x</m> e sob o gráfico da função. As inteseções com o eixo <m>x</m> são o lugar onde <m>y = 2 - 4 x^2 = 0</m>, que está em 
+        <m>x = \pm\sqrt{\frac{2}{4}}</m>, então precisamos encontrar 
+        <me>\int_{-\sqrt{\frac{2}{4}}}^{\sqrt{\frac{2}{4}}} (2 - 4 x^2) dx \approx 1.885.</me>
+        Podemos localizar a área de várias maneiras, a mais fácil delas é usar uma calculadora gráfica. Por exemplo, o Geogebra.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=integral-definida/problema13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=integral-definida/problema13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=integral-definida/problema13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=1&amp;amp;sourceFilePath=integral-definida/problema13.pg</server-url>
+    <pg source="integral-definida/problema13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="integral-definida/problema4.pg">
+      <statement>
+        <p>Calcule
+        <me>\int_{-1}^{\,0} {(2 x  - 10 e^x)}\,dx</me></p>
+        <p><fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>-7.32120558828558</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=integral-definida/problema4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=integral-definida/problema4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=integral-definida/problema4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=10&amp;amp;sourceFilePath=integral-definida/problema4.pg</server-url>
+    <pg source="integral-definida/problema4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="integral-definida/problema5.pg">
+      <statement>
+        <p>Calcule
+        <me>\int_{ -4 } ^ { 4 } (16 -x^2) dx .</me>
+        <fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>85.3333333333333</m></p>
+      </answer>
+      <solution>
+        <p>Já que a função <m>f(x)=16 - x^2</m> é par,</p>
+        <p><m>\displaystyle \int_{-4}^{4} (16 -x^2) dx = 2 \int_{0}^{4} (16 -x^2) dx = 
+        2 \left. \left(16 x - \frac{x^3}{3}\right) \right|_ {0}^{4} = 
+        2 \left[ \left(16 \cdot 4- \frac{4^3}{3}\right) - (0-0) \right] = 2 \frac{128}{3} = 85.3333333333333</m></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=integral-definida/problema5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=integral-definida/problema5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=integral-definida/problema5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=11&amp;amp;sourceFilePath=integral-definida/problema5.pg</server-url>
+    <pg source="integral-definida/problema5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="integral-definida/problema11.pg">
+      <statement>
+        <p>Determine 
+        <m>\displaystyle \int_0^{2} u^{5}(\sqrt{u}+\sqrt[5]{u})\, du</m> =  <fillin name="AnSwEr0001" characters="25"/></p>
+      </statement>
+      <answer>
+        <p><m>25.7820957128638</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p><me>\begin{array}{rcl} \displaystyle\int_0^{2} u^{5}(\sqrt{u}+\sqrt[5]{u})\, du
+        \amp =\amp   \displaystyle \int_0^{2} u^{5}(u^{1/2}+u^{1/5})\, du
+        \\ \amp =\amp  \displaystyle  \int_0^{2} (u^{{\textstyle\frac{11}{2}}}+u^{{\textstyle\frac{26}{5}}})\, du
+        \\ \amp =\amp  \displaystyle  \left. {\textstyle\frac{2}{13}} u^{{\textstyle\frac{13}{2}}}+ {\textstyle\frac{5}{31}} u^{{\textstyle\frac{31}{5}}} \right]_0^{2}
+        \\ \amp =\amp  \displaystyle   {\textstyle\frac{2}{13}} 2^{{\textstyle\frac{13}{2}}}+ {\textstyle\frac{5}{31}} 2^{{\textstyle\frac{31}{5}}} 
         \end{array}</me></p>
       </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <pg source="Library/ma122DB/set12/s5_4_26.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=integral-definida/problema11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=integral-definida/problema11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=integral-definida/problema11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=12&amp;amp;sourceFilePath=integral-definida/problema11.pg</server-url>
+    <pg source="integral-definida/problema11.pg"/>
   </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
-    <static seed="6">
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="integral-definida/problema8.pg">
       <statement>
-        <p>Calcule a seguinte integral definida.</p>
-        <p><m>\displaystyle \int \frac{2}{\left(t-6\right)^{7}} \, dt =</m>
+        <p>Determine as integrais definidas:</p>
+        <p>a) <m>\displaystyle\int_{2}^{6} (9 x^2  - 6 x + 6) \, dx =</m> 
+        <fillin name="AnSwEr0001" characters="15"/></p>
+        <p>b) <m>\displaystyle\int_{0}^{6} (x + 4)^2 \, dx =</m> 
+        <fillin name="AnSwEr0002" characters="15"/></p>
+        <p>c) <m>\displaystyle\int_{-1}^{1} (x^{5} - x^{9}) \, dx =</m> 
+        <fillin name="AnSwEr0003" characters="15"/></p>
+      </statement>
+      <answer>
+        <p><m>552</m></p>
+      </answer>
+      <answer>
+        <p><m>312</m></p>
+      </answer>
+      <answer>
+        <p><m>0</m></p>
+      </answer>
+      <solution>
+        <p><alert> Solution:</alert></p>
+        <p>Use o Teorema Fundamental do Cálculo.
+        <me>\begin{array}{rcl}
+            \displaystyle \int_{2}^{6} (9 x^2  - 6 x + 6) \, dx \amp =\amp 
+            \left(9\cdot \dfrac{x^3}{3}  - 6\cdot \dfrac{x^2}{2} +
+            6 x \right) \Big|_{2}^{6}\\
+            \amp =\amp  \left( 3 x^3  - 3 x^2 + 6 x\right) \Big|_{2}^{6}\\
+            \amp =\amp  \left( 3 (6)^3  - 3 (6)^2 + 6 (6)\right)- 
+            \left( 3 (2)^3  - 3 (2)^2 + 6 (2)\right)\\
+            \amp =\amp  552
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{0}^{6} (x + 4)^2 \, dx \amp =\amp 
+            \displaystyle \int_{0}^{6} \left(x^2 + 8 x + 16 \right) \, dx\\
+            \amp =\amp  \left( \dfrac{x^3}{3} + 4 x^2 + 16 x\right) \Big|_{0}^{6}\\
+            \amp =\amp  312
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{-1}^{1} (x^{5} - x^{9}) \, dx \amp =\amp 
+            \left(\dfrac{x^{6}}{6} - \dfrac{x^{10}}{10}
+            \right) \Big|_{-1}^{1}\\
+            \amp =\amp  \left(\dfrac{(1)^{6}}{6} - \dfrac{(1)^{10}}{10}
+            \right) - \left(\dfrac{(-1)^{6}}{6} - \dfrac{(-1)^{10}}{10}
+            \right)\\
+            \amp =\amp  0
+          \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=integral-definida/problema8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=integral-definida/problema8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=integral-definida/problema8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=13&amp;amp;sourceFilePath=integral-definida/problema8.pg</server-url>
+    <pg source="integral-definida/problema8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="integral-definida/problema34.pg">
+      <statement>
+        <p>Calcule</p>
+        <p><m>\displaystyle \int_{-4}^{-3} (x + 3)e^{x^2 + 6 x + 8} \, dx =</m>
+        <fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>-0.316060279414279</m></p>
+      </answer>
+      <solution>
+        <p>Escolha a substituição <m>u = g(x) = x^2 + 6 x + 8</m>.  Então <m>du = (2x + 6)
+        \,dx = 2(x + 3) \,dx</m>. Use <m>g(x)</m> para mudar os limites de integração.
+        <me>\begin{array}{rcl} 
+             \displaystyle \int_{-4}^{-3} (x + 3)e^{x^2 + 6 x + 8} \, dx \amp =\amp 
+             \displaystyle \dfrac{1}{2} 
+             \int_{(-4)^2 + 6(-4) + 8}^{(-3)^2 + 6(-3) + 8} 
+             e^u \, du \\ 
+             \amp =\amp  \dfrac{1}{2} e^u \Big|_{0}^{-1}\\ 
+             \amp =\amp  \dfrac{1}{2}\left[ e^{-1} - e^{0}\right]\\
+             \amp =\amp  -0.316060279414279.
+           \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=integral-definida/problema34.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=integral-definida/problema34.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=integral-definida/problema34.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=14&amp;amp;sourceFilePath=integral-definida/problema34.pg</server-url>
+    <pg source="integral-definida/problema34.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="integral-definida/problema35.pg">
+      <statement>
+        <p>Calcule</p>
+        <p><m>\displaystyle \int_{0}^{1} -2 x^{3}(15 - x^{4})^{5} \, dx =</m>
+        <fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>-321757.416666667</m></p>
+      </answer>
+      <solution>
+        <p>Escolha a substituição <m>u = g(x) = 15 - x^{4}</m>.  Então <m>du = -4 x^{3} \,dx</m>.
+        Use <m>g(x)</m> para mudar os limistes de integração.
+        <me>\begin{array}{rcl}
+            \displaystyle  \int_{0}^{1} -2 x^{3}(15 - x^{4})^{5} \, dx \amp =\amp 
+            \displaystyle -\dfrac{1}{4}
+            \int_{15 - (0)^{4}}^{15 - (1)^{4}} -2 u^{5} \, du\\
+            \amp =\amp  -\dfrac{1}{4} \cdot -2 \cdot 
+            \dfrac{u^{6}}{6} \Big|_{15}^{14}\\
+            \amp =\amp  (1/12) u^{6} \Big|_{15}^{14}\\
+            \amp =\amp  (1/12)\left[ (14)^{6} - (15)^{6}\right]\\
+            \amp =\amp  -321757.416666667.
+          \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=15&amp;amp;sourceFilePath=integral-definida/problema35.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=15&amp;amp;sourceFilePath=integral-definida/problema35.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=15&amp;amp;sourceFilePath=integral-definida/problema35.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=15&amp;amp;sourceFilePath=integral-definida/problema35.pg</server-url>
+    <pg source="integral-definida/problema35.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="integral-definida/problema19.pg">
+      <statement>
+        <p>Encontre o valor de <m>\displaystyle \int_0^{\pi/4} \cos(5 x) \;dx</m>.</p>
+        <p><fillin name="AnSwEr0001" characters="20"/></p>
+        <p>Lembre-se: os ângulos para seno e cosseno são sempre (bem ... quase sempre) em radianos!</p>
+      </statement>
+      <answer>
+        <p><m>-0.14142135623731</m></p>
+      </answer>
+      <solution>
+        <p>Usando substituição <m>u = 5 x</m> (e então <m>du = 5 dx</m>) obtemos:
+        <me>\begin{aligned}
+        \int_0^{\pi/4} \cos(5 x) dx
+        \amp =      \frac{1}{5} \int_0^{\pi/4} \cos(5 x) \cdot 5 dx   \\\\
+        \amp =      \frac{1}{5} \int_0^{\pi/4} \cos(u) du       \\\\
+        \amp =      \frac{1}{5} \left( \left. \sin(5 x)
+                        \right|_0^{\pi/4} \right)    \\\\
+        \amp =      \frac{1}{5} \left( \sin\left(\frac{5 \pi}{4}\right)
+                        - \sin(0) \right)       \\\\
+        \amp =      \frac{1}{5} \sin\left(\frac{5 \pi}{4}\right)
+        \end{aligned}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=16&amp;amp;sourceFilePath=integral-definida/problema19.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=16&amp;amp;sourceFilePath=integral-definida/problema19.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=16&amp;amp;sourceFilePath=integral-definida/problema19.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=16&amp;amp;sourceFilePath=integral-definida/problema19.pg</server-url>
+    <pg source="integral-definida/problema19.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-17" ww-id="webwork-17">
+    <static seed="17" source="integral-definida/problema21.pg">
+      <statement>
+        <p>Encontre a derivada da seguinte função
+        <me>F(x) = \int_{x^5}^{x^4} (2t-1)^3\, dt</me>
+        usando o Teorema Fundamental do Cálculo.</p>
+        <p><m>F'(x)</m>    =  <fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>4x^{3}\!\left(2x^{4}-1\right)^{3}-5x^{4}\!\left(2x^{5}-1\right)^{3}</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=17&amp;amp;sourceFilePath=integral-definida/problema21.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=17&amp;amp;sourceFilePath=integral-definida/problema21.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=17&amp;amp;sourceFilePath=integral-definida/problema21.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=17&amp;amp;sourceFilePath=integral-definida/problema21.pg</server-url>
+    <pg source="integral-definida/problema21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-18" ww-id="webwork-18">
+    <static seed="18" source="integral-definida/problema31.pg">
+      <statement>
+        <p>Calcule</p>
+        <p><m>\displaystyle \int_{-{\textstyle\frac{5}{8}}}^{2} \frac{3}{\sqrt{8x+9}} \, dx =</m>
         <fillin name="AnSwEr0001" characters="20"/></p>
       </statement>
       <answer>
-        <p><m>-\frac{1}{3}\!\left(t-6\right)^{-6}+C</m></p>
+        <p><m>{\textstyle\frac{9}{4}}</m></p>
       </answer>
       <solution>
-        <p>Integração por substituição
-        <me>\int \frac{2}{\left(t-6\right)^{7}} \, dt
-        = \frac{2}{-6} (t-6)^{-6} + C
-        \textstyle = -\frac{1}{3}\!\left(t-6\right)^{-6}+C.</me></p>
+        <p>Seja <m>u = 8x+9</m>; então <m>du = 8 \, dx</m>,
+        ou <m>{\textstyle\frac{1}{8}} \, du = dx</m>. Para alterar os limites de integração, observe que se
+        <m>x = -{\textstyle\frac{5}{8}}</m> então <m>u = 4</m>, e se
+        <m>x = 2</m> então <m>u = 25</m>.
+        Portanto,
+        <me>\begin{aligned}
+        \int_{-{\textstyle\frac{5}{8}}}^{2} \frac{3}{\sqrt{8x+9}} \, dx \&gt;
+        \amp = {\textstyle\frac{3}{8}}
+        \int_{4}^{25} \frac{du}{\sqrt{u}}
+        = {\textstyle\frac{3}{4}} \sqrt{u} \; \Bigg \vert_{4}^{25} \\
+        \amp = {\textstyle\frac{3}{4}} \bigl( \sqrt{25} - \sqrt{4} \bigr) \\
+        \amp = {\textstyle\frac{3}{4}} (5 - 2) \\
+        \amp = {\textstyle\frac{9}{4}}.
+        \end{aligned}</me></p>
       </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJGb3JtdWxhVXBUb0NvbnN0YW50LnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICAgICBURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHNob3dQYXJ0aWFsQ29ycmVjdEFuc3dlcnMgPSAxOwoKJGEgPSByYW5kb20oMiw5LDEpOwokYiA9IHJhbmRvbSgyLDcsMSk7CiRjID0gbm9uX3plcm9fcmFuZG9tKC0xMywgMTMpOwoKJGFtMSA9ICRhIC0gMTsKCkNvbnRleHQoJ0ZyYWN0aW9uJyk7CiRjb2VmZiA9IEZyYWN0aW9uKC0kYiwgJGFtMSktPnJlZHVjZTsKCkNvbnRleHQoJ051bWVyaWMnKS0%2BdmFyaWFibGVzLT5hcmUoCgl0ID0%2BIFsgJ1JlYWwnLCBsaW1pdHMgPT4gWyAtJGMtMC4xLCAtJGMgKyAwLjEgXSBdCik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCgKCXJlZHVjZUNvbnN0YW50cyA9PiAwCik7CiRsID0gRm9ybXVsYSgidCArICRjIiktPnJlZHVjZTsKJGYgPSBGb3JtdWxhKCIkYiAvICgkbCleKCRhKSIpLT5yZWR1Y2U7CiRGID0gRm9ybXVsYVVwVG9Db25zdGFudCgKCSggJGNvZWZmID4gMCA%2FICcnIDogJy0nICkKCS4gKCAoJGNvZWZmKSoqMiA9PSAxID8gJycgOiBhYnMoJGNvZWZmKSApCgkuICAiKCRsKV4oLSRhbTEpIgopOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9URVhUCkNhbGN1bGUgYSBzZWd1aW50ZSBpbnRlZ3JhbCBkZWZpbmlkYS4KJEJSICRCUgpcKCBcZGlzcGxheXN0eWxlIFxpbnQgJGYgXCwgZHQgPSBcKQpce2Fuc19ydWxlKCkgXH0KRU5EX1RFWFQKQ29udGV4dCgpLT5ub3JtYWxTdHJpbmdzOwoKQU5TKCRGLT5jbXApOwoKQ29udGV4dCgpLT50ZXhTdHJpbmdzOwpCRUdJTl9TT0xVVElPTgpJbnRlZ3Jhw6fDo28gcG9yIHN1YnN0aXR1acOnw6NvClxbClxpbnQgJGYgXCwgZHQKPSBcZnJhY3skYn17LSRhbTF9ICgkbCleey0kYW0xfSArIEMKXHRleHRzdHlsZSA9ICRGLgpcXQpFTkRfU09MVVRJT04KCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
-    <pg><![CDATA[
-#############################################
-###       Generated from PreTeXt source      
-###       on 2020-08-31T13:28:04-03:00       
-###   A recent stable commit (2020-08-09):   
-### 98f21740783f166a773df4dc83cab5293ab63a4a 
-###                                          
-###         https://pretextbook.org          
-###                                          
-#############################################
-## DBsubject()
-## DBchapter()
-## DBsection()
-## Level()
-## KEYWORDS()
-## TitleText1()
-## EditionText1()
-## AuthorText1()
-## Section1(not reported)
-## Problem1(1.30)
-## Author()
-## Institution()
-## Language(pt-BR)
-
-DOCUMENT();
-
-############################################################
-# Load Macros
-############################################################
-loadMacros(
-  "PGstandard.pl",
-  "MathObjects.pl",
-  "PGML.pl",
-  "AnswerFormatHelp.pl",
-  "parserFormulaUpToConstant.pl",
-  "contextFraction.pl",
-  "PGcourse.pl",
-);
-COMMENT('Feito com PreTeXt');
-
-############################################################
-# Header
-############################################################
-TEXT(beginproblem());
-
-############################################################
-# PG Setup Code
-############################################################
-                TEXT(beginproblem());
-$showPartialCorrectAnswers = 1;
-
-$a = random(2,9,1);
-$b = random(2,7,1);
-$c = non_zero_random(-13, 13);
-
-$am1 = $a - 1;
-
-Context('Fraction');
-$coeff = Fraction(-$b, $am1)->reduce;
-
-Context('Numeric')->variables->are(
-	t => [ 'Real', limits => [ -$c-0.1, -$c + 0.1 ] ]
-);
-Context()->flags->set(
-	reduceConstants => 0
-);
-$l = Formula("t + $c")->reduce;
-$f = Formula("$b / ($l)^($a)")->reduce;
-$F = FormulaUpToConstant(
-	( $coeff > 0 ? '' : '-' )
-	. ( ($coeff)**2 == 1 ? '' : abs($coeff) )
-	.  "($l)^(-$am1)"
-);
-
-Context()->texStrings;
-BEGIN_TEXT
-Calcule a seguinte integral definida.
-$BR $BR
-\( \displaystyle \int $f \, dt = \)
-\{ans_rule() \}
-END_TEXT
-Context()->normalStrings;
-
-ANS($F->cmp);
-
-Context()->texStrings;
-BEGIN_SOLUTION
-Integração por substituição
-\[
-\int $f \, dt
-= \frac{$b}{-$am1} ($l)^{-$am1} + C
-\textstyle = $F.
-\]
-END_SOLUTION
-
-############################################################
-# Body
-############################################################
-
-BEGIN_PGML
-
-END_PGML
-
-############################################################
-# End Problem
-############################################################
-
-ENDDOCUMENT();
-]]></pg>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=18&amp;amp;sourceFilePath=integral-definida/problema31.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=18&amp;amp;sourceFilePath=integral-definida/problema31.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=18&amp;amp;sourceFilePath=integral-definida/problema31.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=18&amp;amp;sourceFilePath=integral-definida/problema31.pg</server-url>
+    <pg source="integral-definida/problema31.pg"/>
   </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
-    <static seed="7" source="Library/ma122DB/set12/s5_4_26.pg">
+  <webwork-reps version="1" xml:id="extracted-webwork-19" ww-id="webwork-19">
+    <static seed="19" source="integral-definida/problema32.pg">
       <statement>
-        <p><m>\displaystyle \int_0^{4} (4 e^x+4 \sin x)\, dx</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
+        <p>Usando o método de substiyuição <m>u</m>,</p>
+        <p><m>\displaystyle 
+        \int_{3}^{5} (2 x - 5)^{4} \, dx = \int_{a}^{b} f(u) \, du</m></p>
+        <p>em que</p>
+        <p><m>u =</m> <fillin name="optional0" characters="30"/> (insira uma função de <m>x</m>)</p>
+        <p><m>du =</m> <fillin name="optional1" characters="30"/> <m>dx</m>  (insira uma função de  <m>x</m>)</p>
+        <p><m>a =</m> <fillin name="optional2" characters="30"/> (insira um número)</p>
+        <p><m>b =</m> <fillin name="optional3" characters="30"/> (insira um número)</p>
+        <p><m>f(u) =</m> <fillin name="optional4" characters="30"/> (insira uma função de  <m>u</m>).</p>
+        <p>O valor do integral original é <fillin name="AnSwEr0001" characters="30"/>.</p>
       </statement>
       <answer>
-        <p><m>221.007174616031</m></p>
+        <p><m>312.4</m></p>
+      </answer>
+      <answer>
+        <p><m>2x-5</m></p>
+      </answer>
+      <answer>
+        <p><m>2</m></p>
+      </answer>
+      <answer>
+        <p><m>1</m></p>
+      </answer>
+      <answer>
+        <p><m>5</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{u^{4}}{2}</m></p>
       </answer>
       <solution>
-        <p>SOLUTION</p>
-        <p><me>\begin{array}{rcl} \displaystyle \int_0^{4} (4 e^x+4 \sin x)\, dx \amp =\amp   
-        \displaystyle  4 e^x-4 \cos x  \Big]_0^{4}
-        \\ \amp =\amp  (4 e^{4} - 4 \cos 4) - (4 e^0 - 4 \cos0 ) 
-        \\ \amp =\amp  4 e^{4} - 4 \cos 4 - 0 
+        <p>Solução</p>
+        <p><m>u = 2 x - 5</m>.</p>
+        <p><m>du = 2 dx</m></p>
+        <p><m>a = 2 \cdot  3 - 5 = 1</m></p>
+        <p><m>b = 2 \cdot  5 - 5 = 5</m></p>
+        <p><m>f(u) = \frac{1}{2} u^{4}</m>.</p>
+        <p>O valor da integral original é:
+        <me>\displaystyle \int_{3}^{5} (2 x - 5)^{4} dx  =  \int_{1}^{5} \frac{1}{2} u^{4} du 
+         = \frac{1}{2} \left[\frac{{u}^{5}}{5}\right]_{1}^{5} 
+         =  \frac{1}{10} \left[(5)^{5} - (1)^{5}\right] 
+         =  {\textstyle\frac{1562}{5}}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=19&amp;amp;sourceFilePath=integral-definida/problema32.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=19&amp;amp;sourceFilePath=integral-definida/problema32.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=19&amp;amp;sourceFilePath=integral-definida/problema32.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=19&amp;amp;sourceFilePath=integral-definida/problema32.pg</server-url>
+    <pg source="integral-definida/problema32.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="integral-definida/problema14.pg">
+      <statement>
+        <p>Encontre a área da região sob a curva <m>y = 3 x^3 - 3</m> e acima do eixo
+        <m>x</m>, para <m>3 \le x \le 7</m>.</p>
+        <p>área = <fillin name="AnSwEr0001" characters="35"/></p>
+      </statement>
+      <answer>
+        <p><m>1728</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p>A função que estamos considerando é</p>
+        <sidebyside widths="16.6666666666667%">
+        <image source="images/webwork-2-image-1.png"/>
+        </sidebyside>
+        <p><em>(Clique no gráfico para uma versão maior.)</em></p>
+        <p>A área que queremos é aquela acima do eixo <m>x</m> e sob o gráfico da função, para
+        <m>3 \le x \le 7</m>. Portanto, precisamos encontrar
+        <me>\int_{3}^{7} (3 x^3 - 3) dx \approx 1728.</me>
+        Podemos localizar a área de várias maneiras, a mais fácil delas é usar uma calculadora gráfica, como o GeoGebra.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=integral-definida/problema14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=integral-definida/problema14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=integral-definida/problema14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=integral-definida/problema14.pg</server-url>
+    <pg source="integral-definida/problema14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-20" ww-id="webwork-20">
+    <static seed="20" source="integral-definida/problema38.pg">
+      <statement>
+        <p>Calcule</p>
+        <p><m>\displaystyle \int_{7}^{9} \dfrac{1}{x  - 5} \, dx =</m>
+        <fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>0.693147180559945</m></p>
+      </answer>
+      <solution>
+        <p>Escolha a substiyuição <m>u = g(x) = x  - 5</m>.  Então <m>du =  \,dx</m>.
+        Use <m>g(x)</m> para mudar os limites de integração.
+        <me>\begin{array}{rcl}
+            \displaystyle  \int_{7}^{9} \dfrac{1}{x  - 5} \, dx \amp =\amp 
+            \displaystyle \int_{7  - 5}^{9  - 5} \dfrac{1}{u} \, du \\
+            \amp =\amp  \ln |u| \Big|_{2}^{4}\\
+            \amp =\amp  \ln(4) - \ln(2) = \ln 2.
+          \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=20&amp;amp;sourceFilePath=integral-definida/problema38.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=20&amp;amp;sourceFilePath=integral-definida/problema38.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=20&amp;amp;sourceFilePath=integral-definida/problema38.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=20&amp;amp;sourceFilePath=integral-definida/problema38.pg</server-url>
+    <pg source="integral-definida/problema38.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-21" ww-id="webwork-21">
+    <static seed="21" source="integral-definida/problema6.pg">
+      <statement>
+        <p>Considere a função
+        <me>f(x) = \left\lbrace\begin{array}{ll}x \amp \text{if } x\lt 1\\ \frac{1}{x} \amp \text{if } x\ge 1\end{array}\right.</me>
+        Determine 
+        <me>\int_{0}^{5} f(x)\,dx</me>
+        <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>2.1094379124341</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=21&amp;amp;sourceFilePath=integral-definida/problema6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=21&amp;amp;sourceFilePath=integral-definida/problema6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=21&amp;amp;sourceFilePath=integral-definida/problema6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=21&amp;amp;sourceFilePath=integral-definida/problema6.pg</server-url>
+    <pg source="integral-definida/problema6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-22" ww-id="webwork-22">
+    <static seed="22" source="integral-definida/problema10.pg">
+      <statement>
+        <p>Determine <m>\displaystyle{\int_0^2 f(x)\, dx}</m>, sabendo que
+        <me>f(x) = \begin{cases}
+                5 x^{9}, \amp  0 \leq x \lt  1 \\
+                4 x^{2}, \amp  1 \leq x \leq 2.
+                \end{cases}</me></p>
+        <p><m>\displaystyle{\int_0^2 f(x)\, dx}</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>9.83333333333333</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=22&amp;amp;sourceFilePath=integral-definida/problema10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=22&amp;amp;sourceFilePath=integral-definida/problema10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=22&amp;amp;sourceFilePath=integral-definida/problema10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=22&amp;amp;sourceFilePath=integral-definida/problema10.pg</server-url>
+    <pg source="integral-definida/problema10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-23" ww-id="webwork-23">
+    <static seed="23" source="integral-definida/problema20.pg">
+      <statement>
+        <p>Calcule <m>\displaystyle{\int_{-\pi}^{\pi} f(x)\, dx}</m>, sabendo que
+        <me>f(x) = \begin{cases}
+                2 x^{3}, \amp  -\pi \leq x \lt  0 \\
+                7 \sin(x), \amp  0 \leq x \leq \pi.
+                \end{cases}</me></p>
+        <p><m>\displaystyle{\int_{-\pi}^{\pi} f(x)\, dx}</m> =  <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>-34.7045455170016</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p><me>\begin{array}{rcl}\displaystyle \int_{-\pi}^{\pi} f(x)\, dx \amp =\amp 
+        \int_{-\pi}^0 2 x^{3} \, dx + \int_0^{\pi}  7 \sin(x) \, dx
+        \\ \amp =\amp  \displaystyle \Big[ {\textstyle\frac{1}{2}} x^{4} \Big]_{-\pi}^0
+        +   \Big[-7 \cos x \Big]_{0}^{\pi}
+        \\ \amp =\amp  \displaystyle \left( {\textstyle\frac{1}{2}} \cdot 0^{4} - {\textstyle\frac{1}{2}} (-\pi)^{4}\right)
+        +  \left( (-7 \cos \pi + 7 \cos 0 ) \right)
+        \\ \amp =\amp  -{\textstyle\frac{1}{2}} \pi^{4} + 14
         \end{array}</me></p>
       </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <server-url hint="yes" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <server-url hint="no" solution="yes" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <server-url hint="no" solution="no" domain="https://webwork-ptx.aimath.org">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=Library/ma122DB/set12/s5_4_26.pg</server-url>
-    <pg source="Library/ma122DB/set12/s5_4_26.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=23&amp;amp;sourceFilePath=integral-definida/problema20.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=23&amp;amp;sourceFilePath=integral-definida/problema20.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=23&amp;amp;sourceFilePath=integral-definida/problema20.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=23&amp;amp;sourceFilePath=integral-definida/problema20.pg</server-url>
+    <pg source="integral-definida/problema20.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-24" ww-id="webwork-24">
+    <static seed="24" source="integral-definida/problema17.pg">
+      <statement>
+        <p>Calcule
+        <m>\displaystyle\int_{1}^{\sqrt{7}} \frac{8}{1+x^2} dx .</m></p>
+        <p><fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>3.39224831592592</m></p>
+      </answer>
+      <solution>
+        <p>Nosso primeiro passo é encontrar a antiderivada de <m>\frac{8}{1 + x^2}</m>. A melhor maneira de fazer isso é usar as tabelas de integração disponíveis no apêndice. Observe que esta integral tem uma forma semelhante à entrada abaixo, tirada de suas tabelas:</p>
+        <p><me>\int \frac{du}{a^2+u^2} = \frac{1}{a} \tan^{-1} \frac{u}{a} + C</me>
+        No nosso caso, <m>a = 1</m> e <m>u = x</m>. Portanto, nossa
+        primitiva é:
+        <me>F(x) = 8\left(\tan^{-1} x \right) + C</me>
+        Então, aplicando o Teorema Fundamental do Cálculo e usando uma calculadora para calcular, obtemos:
+        <me>\begin{aligned}
+            \int_1^{\sqrt{7}} \frac{8}{1+x^2} dx \amp = F(\sqrt{7}) - F(1) \\
+            \amp = 8\left(\tan^{-1} \sqrt{7}\right) + C -
+               8\left(\tan^{-1} 1\right) - C\\
+            \amp = 3.3922
+          \end{aligned}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=24&amp;amp;sourceFilePath=integral-definida/problema17.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=24&amp;amp;sourceFilePath=integral-definida/problema17.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=24&amp;amp;sourceFilePath=integral-definida/problema17.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=24&amp;amp;sourceFilePath=integral-definida/problema17.pg</server-url>
+    <pg source="integral-definida/problema17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-25" ww-id="webwork-25">
+    <static seed="25" source="integral-definida/problema18.pg">
+      <statement>
+        <p>Determine o valor da integral
+        <me>\int_{0}^{0.7} \frac{dx}{\sqrt{1-x^2}}</me></p>
+        <p><fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>0.775397496610753</m></p>
+      </answer>
+      <solution>
+        <p>Nosso passo inicial é encontrar a primitiva de <m>\frac{dx}{\sqrt{1-x^2}}</m>. 
+        A melhor maneira de fazer isso é usar as tabelas de integração disponíveis no apêndice. Observe que esta integral tem uma forma semelhante à entrada abaixo, tirada de suas tabelas:</p>
+        <p><me>\int \frac{du}{\sqrt{a^2-u^2}} = \sin^{-1} \frac{u}{a} + C</me>
+        No nosso caso, <m>a = 1</m> e <m>u = x</m>.  Portanto, nossa primitiva é:
+        <me>F(x) = \left(\sin^{-1} x \right) + C</me>
+        Então, aplicando o Teorema Fundamental do Cálculo e usando uma calculadora para calcular, obtemos:
+        <me>\begin{aligned}
+            \int_0^{0.7} \frac{dx}{\sqrt{1-x^2}} dx \amp = F(0.7) - F(0) \\
+            \amp = \left(\sin^{-1} 0.7\right) + C -
+               \left(\sin^{-1} 0\right) - C\\
+            \amp = 0.7754
+          \end{aligned}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=25&amp;amp;sourceFilePath=integral-definida/problema18.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=25&amp;amp;sourceFilePath=integral-definida/problema18.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=25&amp;amp;sourceFilePath=integral-definida/problema18.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=25&amp;amp;sourceFilePath=integral-definida/problema18.pg</server-url>
+    <pg source="integral-definida/problema18.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-26" ww-id="webwork-26">
+    <static seed="26" source="integral-definida/problema24.pg">
+      <statement>
+        <p>a) Sabendo que <m>\displaystyle F(x) = \int_{22}^{x} \dfrac{1}{t} \, dt</m>,
+        encontre <m>F'(x) =</m> <fillin name="AnSwEr0001" characters="25"/></p>
+        <p>b) Sabendo que <m>\displaystyle F(x) = \int_{x}^{2} \dfrac{1}{t} \, dt</m>,
+        encontre <m>F'(x) =</m> <fillin name="AnSwEr0002" characters="25"/></p>
+        <p>c) Sabendo que <m>\displaystyle F(x) = \int_{16}^{x^{6}} \dfrac{1}{t} \, dt</m>,
+        encontre <m>F'(x) =</m> <fillin name="AnSwEr0003" characters="25"/></p>
+        <p>c) Sabendo que <m>\displaystyle F(x) = \int_{2 + \cos x}^{x^2 + 1} \dfrac{1}{t} \, dt</m>,
+        encontre <m>F'(x) =</m> <fillin name="AnSwEr0004" characters="25"/></p>
+      </statement>
+      <answer>
+        <p><m>\frac{1}{x}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{-1}{x}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{6}{x}</m></p>
+      </answer>
+      <answer>
+        <p><m>\frac{2x}{x^{2}+1}+\frac{\sin\!\left(x\right)}{2+\cos\!\left(x\right)}</m></p>
+      </answer>
+      <solution>
+        <p><alert> Solução:</alert></p>
+        <p>Use o Tereoma fundamental do Cálculo (Part 1).
+        <me>\dfrac{d}{dx} \int_{22}^x \dfrac{1}{t} \, dt = \dfrac{1}{x}.</me></p>
+        <p><me>\dfrac{d}{dx} \int_{x}^{2} \dfrac{1}{t} \, dt = 
+         -\dfrac{d}{dx} \int_{2}^x \dfrac{1}{t} \, dt = -\dfrac{1}{x}.</me></p>
+        <p><me>\dfrac{d}{dx} \int_{16}^{x^{6}} \dfrac{1}{t} \, dt = 
+         \dfrac{1}{x^{6}} \cdot (x^{6})' = \dfrac{1}{x^{6}} \cdot 6 x^{5}
+         = \dfrac{6}{x}.</me></p>
+        <p><me>\begin{array}{rcl}
+          \displaystyle
+          \dfrac{d}{dx} \int_{2 + \cos x}^{x^2 + 1} \dfrac{1}{t} \, dt \amp =\amp 
+           \displaystyle
+         \dfrac{1}{x^2 + 1} \cdot (x^2 + 1)' - \dfrac{1}{2 + \cos x} \cdot (2 + \cos x)' \\
+         \amp =\amp  \dfrac{2x}{x^2 + 1} - \dfrac{-\sin x}{2 + \cos x}
+           \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=26&amp;amp;sourceFilePath=integral-definida/problema24.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=26&amp;amp;sourceFilePath=integral-definida/problema24.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=26&amp;amp;sourceFilePath=integral-definida/problema24.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=26&amp;amp;sourceFilePath=integral-definida/problema24.pg</server-url>
+    <pg source="integral-definida/problema24.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-27" ww-id="webwork-27">
+    <static seed="27" source="integral-definida/problema29.pg">
+      <statement>
+        <p>Se <m>\displaystyle F(x)=\int^{x}_{9} \sqrt{t^{2}+19}\;dt</m>. Encontre</p>
+        <p>(a) <m>F(9)</m> <m>=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+        <p>(b) <m>F'(9)</m> <m>=</m> <fillin name="AnSwEr0002" characters="20"/></p>
+        <p>(c) <m>F''(9)</m> <m>=</m> <fillin name="AnSwEr0003" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>0</m></p>
+      </answer>
+      <answer>
+        <p><m>10</m></p>
+      </answer>
+      <answer>
+        <p><m>{\textstyle\frac{9}{10}}</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p>(a) <m>F(9)=\int^{9}_{9} \sqrt{t^{2}+19}\;dt=0</m>.</p>
+        <p>(b) <m>F'(x)=\displaystyle \frac{d}{dx}\int^{x}_{9} \sqrt{t^{2}+19}\;dt=\sqrt{x^{2}+19}\;</m>, <m>\;F'(9)=10</m>.</p>
+        <p>(b) <m>F''(x)= \frac{d}{dx} \left[\sqrt{x^{2}+19}\right]=\frac{x}{\sqrt{x^{2}+19}}\;</m>, <m>\;F''(9)={\textstyle\frac{9}{10}}</m>.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=27&amp;amp;sourceFilePath=integral-definida/problema29.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=27&amp;amp;sourceFilePath=integral-definida/problema29.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=27&amp;amp;sourceFilePath=integral-definida/problema29.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=27&amp;amp;sourceFilePath=integral-definida/problema29.pg</server-url>
+    <pg source="integral-definida/problema29.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-28" ww-id="webwork-28">
+    <static seed="28" source="integral-definida/problema23.pg">
+      <statement>
+        <p>Considerando <m>\displaystyle f(x) =  \int_0^x (t^3 +2 t^2 + 3)\, dt</m></p>
+        <p>encontre</p>
+        <p><m>f''(x) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>3x^{2}+4x</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=28&amp;amp;sourceFilePath=integral-definida/problema23.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=28&amp;amp;sourceFilePath=integral-definida/problema23.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=28&amp;amp;sourceFilePath=integral-definida/problema23.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=28&amp;amp;sourceFilePath=integral-definida/problema23.pg</server-url>
+    <pg source="integral-definida/problema23.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-29" ww-id="webwork-29">
+    <static seed="29" source="integral-definida/problema22.pg">
+      <statement>
+        <p>Determine a integral definida
+        <me>\int_2^3 \left(\frac{d}{dt}\sqrt{5 + 1 t^4}\right)\, dt</me>
+        usando o Teorema Fundamental do Cálculo.</p>
+        <p><m>\displaystyle \int_2^3 \left(\frac{d}{dt}\sqrt{5 + 1 t^4}\right)\, dt</m>  =  <fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>4.69104280053986</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=29&amp;amp;sourceFilePath=integral-definida/problema22.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=29&amp;amp;sourceFilePath=integral-definida/problema22.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=29&amp;amp;sourceFilePath=integral-definida/problema22.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=29&amp;amp;sourceFilePath=integral-definida/problema22.pg</server-url>
+    <pg source="integral-definida/problema22.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="integral-definida/problema30.pg">
+      <statement>
+        <p>Esboce e encontre a área da região abaixo do intervalo <m>[-5, -4]</m> e acima da curva <m>y = \frac{x^{3}}{16}</m>.</p>
+        <p>área = <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>{\textstyle\frac{369}{64}}</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p>Traçando o gráfico, vemos que a região necessária tem:</p>
+        <p>Área <m>= -\displaystyle \int^{-4}_{-5} \frac{x^{3}}{16} \;dx =  -\left[\frac{x^{4}}{64} \right]^{-4} _{-5} =-(4-{\textstyle\frac{625}{64}})={\textstyle\frac{369}{64}}</m></p>
+        <p>(Clique na imagem para ampliá-la)</p>
+        <sidebyside widths="16.6666666666667%">
+        <image source="images/webwork-3-image-1.png"/>
+        </sidebyside>
+        <p><m>y=f(x)</m></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=integral-definida/problema30.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=integral-definida/problema30.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=integral-definida/problema30.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=3&amp;amp;sourceFilePath=integral-definida/problema30.pg</server-url>
+    <pg source="integral-definida/problema30.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-30" ww-id="webwork-30">
+    <static seed="30" source="integral-definida/problema28.pg">
+      <statement>
+        <p>Use o Teorema Fundamental do Cálculo para encontrar a derivada</p>
+        <p><m>\displaystyle \frac{d}{dx}\int^{x}_{1} \frac{dt}{6+\sqrt{t}}</m> <m>=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>\frac{1}{6+\sqrt{x}}</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p>Usando o Teorema Fundamental do Cálculo Parte 2.</p>
+        <p><me>\displaystyle \frac{d}{dx}\int^{x}_{1} \frac{dt}{6+\sqrt{t}}=\frac{1}{6+\sqrt{x}}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=30&amp;amp;sourceFilePath=integral-definida/problema28.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=30&amp;amp;sourceFilePath=integral-definida/problema28.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=30&amp;amp;sourceFilePath=integral-definida/problema28.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=30&amp;amp;sourceFilePath=integral-definida/problema28.pg</server-url>
+    <pg source="integral-definida/problema28.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-31" ww-id="webwork-31">
+    <static seed="31" source="integral-definida/problema25.pg">
+      <statement>
+        <p>Sabendo que  <m>\displaystyle F(x) = \int_{\ln x}^{e^x} -5 \sin t \, dt</m>,
+        encontre <m>F'(x) =</m> <fillin name="AnSwEr0001" characters="35"/></p>
+      </statement>
+      <answer>
+        <p><m>-5\sin\!\left(e^{x}\right)e^{x}-\frac{-5\sin\!\left(\ln\!\left(x\right)\right)}{x}</m></p>
+      </answer>
+      <solution>
+        <p><alert> Solução:</alert></p>
+        <p>Use o Teorema Fundamental do Cálculo (Parte 1).</p>
+        <p><me>\begin{array}{rcl}
+          \displaystyle
+          \dfrac{d}{dx} \int_{\ln x}^{e^x} -5 \sin t \, dt \amp =\amp 
+           \displaystyle
+         -5\sin(e^x) \cdot (e^x)'  + 5\sin(\ln x) \cdot (\ln x)' \\
+         \amp =\amp  -5 e^x \sin (e^x)  + 5 \dfrac{\sin \ln x}{x}
+           \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=31&amp;amp;sourceFilePath=integral-definida/problema25.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=31&amp;amp;sourceFilePath=integral-definida/problema25.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=31&amp;amp;sourceFilePath=integral-definida/problema25.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=31&amp;amp;sourceFilePath=integral-definida/problema25.pg</server-url>
+    <pg source="integral-definida/problema25.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-32" ww-id="webwork-32">
+    <static seed="32" source="integral-definida/problema27.pg">
+      <statement>
+        <p>Use o Teorema Fundamental do Cálculo para encontrar a derivada de
+        <me>y = \int_{-5}^{\sqrt{x}} {\frac{\cos t}{t^{5}}} dt</me></p>
+        <p><m>\frac{dy}{dx}</m> = <fillin name="AnSwEr0001" characters="40"/></p>
+      </statement>
+      <answer>
+        <p><m>\frac{\cos\!\left(\sqrt{x}\right)}{2x^{3}}</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p>Aqui, devemos ter o cuidado de usar a Regra da Cadeia em conjunto com a Parte I do Teorema Fundamental.</p>
+        <p>Seja <m>u = \sqrt{ x}</m>. Então
+        <me>\begin{array}{rcl} \displaystyle \frac{dy}{dx}  \amp  = \amp 
+        \displaystyle \frac{d}{dx} \int_0^u \frac{\cos t}{t^{5}}  du  \\
+         \amp  = \amp \displaystyle  \frac{d}{du} \left[ \int_0^u \frac{\cos t}{t^{5}} du  \right] \frac{du}{dx} \quad \text{(Regra da Cadeia)} \\
+        \amp =\amp \displaystyle \frac{\cos u}{u^{5}} \cdot \frac{du}{dx} \qquad \qquad \quad \text{(pelo TFC)}\\
+        \amp =\amp \displaystyle \frac{\cos \sqrt{x}}{x^{2.5}} \cdot  \frac{1}{2\sqrt{x}}
+        \\ \amp =\amp \displaystyle \frac{\cos \sqrt{x}}{2x^{3}} 
+        \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=32&amp;amp;sourceFilePath=integral-definida/problema27.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=32&amp;amp;sourceFilePath=integral-definida/problema27.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=32&amp;amp;sourceFilePath=integral-definida/problema27.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=32&amp;amp;sourceFilePath=integral-definida/problema27.pg</server-url>
+    <pg source="integral-definida/problema27.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-33" ww-id="webwork-33">
+    <static seed="33" source="integral-definida/problema39.pg">
+      <statement>
+        <p>Se <m>f</m> é contínua e <m>\displaystyle \int_{0}^{\,9} {f(x)}\, dx = 7,</m> calcule <m>\displaystyle \int_{0}^{\,3} {xf(x^2)}\, dx.</m></p>
+        <p><fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>3.5</m></p>
+      </answer>
+      <solution>
+        <p>Seja <m>u =  x^2</m>. Então <m>du = 2x \, dx</m> logo 
+        <me>\begin{array}{rl}
+        \displaystyle \int_{0}^{3} x f(x^2)\,dx \amp  = \displaystyle \int_0^{9} f(u)  \left(\frac{1}{2} du\right) \\
+        \amp  = \displaystyle \frac{1}{2} \int_0^{9} f(u)\, du \\
+        \amp = \displaystyle \frac{7}{2}
+        \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=33&amp;amp;sourceFilePath=integral-definida/problema39.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=33&amp;amp;sourceFilePath=integral-definida/problema39.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=33&amp;amp;sourceFilePath=integral-definida/problema39.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=33&amp;amp;sourceFilePath=integral-definida/problema39.pg</server-url>
+    <pg source="integral-definida/problema39.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="integral-definida/problema12.pg">
+      <statement>
+        <p>Use o Teorema Fundamental do Cálculo para determinar o valor
+        de <m>b</m> se a área sob o gráfico de <m>f(x) = 6 x</m> 
+        entre <m>x = 1</m> e <m>x = b</m> é igual a <m>144</m>.  
+        Assuma <m>b&gt;1</m>.</p>
+        <p><m>b =</m> <fillin name="AnSwEr0001" characters="35"/></p>
+      </statement>
+      <answer>
+        <p><m>7</m></p>
+      </answer>
+      <solution>
+        <p>Solução</p>
+        <p>A área sob <m>f(x) = 6 x</m> entre <m>x=1</m> e <m>x = b</m> é dada por <m>\int_1^b (6 x) dx</m>.  Usando o Teorema Fundamental para avaliar o
+        integral:
+        <me>\hbox{Area } = 3 x^2 \bigg|_1^b = 3 b^2 - 3.</me>
+        Uma vez que a área é 144, temos
+        <me>3 b^2 - 3 = 144,</me>
+        logo
+        <me>3 b^2 = 147,</me>
+        e assim
+        <me>b^2 = 49,\quad\hbox{ou}\quad b = \pm 7.</me>
+        Já que <m>b</m> é maior que  1, obtemos <m>b = 7</m>.</p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=integral-definida/problema12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=integral-definida/problema12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=integral-definida/problema12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=4&amp;amp;sourceFilePath=integral-definida/problema12.pg</server-url>
+    <pg source="integral-definida/problema12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="integral-definida/problema9.pg">
+      <statement>
+        <p>Determine as integrais definidas:</p>
+        <p>a) <m>\displaystyle\int_{1}^{6} \dfrac{1}{x} \, dx =</m> 
+        <fillin name="AnSwEr0001" characters="15"/></p>
+        <p>b) <m>\displaystyle\int_{1}^{4} \dfrac{1}{x^2} \, dx =</m> 
+        <fillin name="AnSwEr0002" characters="15"/></p>
+        <p>c) <m>\displaystyle\int_{1}^{8} \dfrac{1}{x^{6}} \, dx =</m> 
+        <fillin name="AnSwEr0003" characters="15"/></p>
+        <p>d) <m>\displaystyle\int_{0}^{8} x^2 \, dx =</m> 
+        <fillin name="AnSwEr0004" characters="15"/></p>
+        <p>e) <m>\displaystyle\int_{0}^{1} x^{45} \, dx =</m> 
+        <fillin name="AnSwEr0005" characters="15"/></p>
+      </statement>
+      <answer>
+        <p><m>1.79175946922805</m></p>
+      </answer>
+      <answer>
+        <p><m>0.75</m></p>
+      </answer>
+      <answer>
+        <p><m>0.199993896484375</m></p>
+      </answer>
+      <answer>
+        <p><m>170.666666666667</m></p>
+      </answer>
+      <answer>
+        <p><m>0.0217391304347826</m></p>
+      </answer>
+      <solution>
+        <p><alert> Solução:</alert></p>
+        <p>Use o Teorema Fundamental do Cálculo.
+        <me>\begin{array}{rcl}
+            \displaystyle \int_{1}^{6} \dfrac{1}{x} \, dx \amp =\amp 
+            \left(\ln |x| \right) \Big|_{1}^{6}\\
+            \amp =\amp  \ln(6) - \ln(1)\\
+            \amp =\amp  \ln 6
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{1}^{4} \dfrac{1}{x^2} \, dx
+            \amp =\amp  \left( -\dfrac{1}{x} \right) \Big|_{1}^{4}\\
+            \amp =\amp  -\dfrac{1}{4} + 1
+            \amp =\amp  0.75
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{1}^{8} \dfrac{1}{x^{6}} \, dx \amp =\amp 
+            \left(-\dfrac{x^{-5}}{5} \right) \Big|_{1}^{8}\\
+            \amp \amp \\
+            \amp =\amp  -\dfrac{(8)^{-5}}{5} + \dfrac{1}{5} \\
+            \amp \amp \\
+            \amp =\amp  0.199994
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{0}^{8} x^2 \, dx
+            \amp =\amp  \left( \dfrac{x^3}{3} \right) \Big|_{0}^{8}\\
+            \amp \amp \\
+            \amp =\amp  \dfrac{(8)^3}{3} - 0\\
+            \amp \amp \\
+            \amp =\amp  170.667
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{0}^{1} x^{45} \, dx
+            \amp =\amp  \left( \dfrac{x^{46}}{46} \right) \Big|_{0}^{1}\\
+            \amp \amp \\
+            \amp =\amp  \dfrac{(1)^{46}}{46} - 0\\
+            \amp \amp \\
+            \amp =\amp  \dfrac{1}{46}
+          \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=integral-definida/problema9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=integral-definida/problema9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=integral-definida/problema9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=5&amp;amp;sourceFilePath=integral-definida/problema9.pg</server-url>
+    <pg source="integral-definida/problema9.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="integral-definida/problema15.pg">
+      <statement>
+        <p>Determine as integrais definidas:</p>
+        <p>a) <m>\displaystyle\int_{\pi/2}^{\pi} -11 \cos x \, dx =</m> 
+        <fillin name="AnSwEr0001" characters="15"/></p>
+        <p>b) <m>\displaystyle\int_{0}^{\pi/4} 5 \sec^2 \theta \, d\theta =</m> 
+        <fillin name="AnSwEr0002" characters="15"/></p>
+        <p>c) <m>\displaystyle\int_{\pi/6}^{\pi/3} 13 \csc t \cot t \, dt =</m> 
+        <fillin name="AnSwEr0003" characters="15"/></p>
+      </statement>
+      <answer>
+        <p><m>11</m></p>
+      </answer>
+      <answer>
+        <p><m>5</m></p>
+      </answer>
+      <answer>
+        <p><m>10.9888930010697</m></p>
+      </answer>
+      <solution>
+        <p><alert> Solução:</alert></p>
+        <p>Use o Teorema Fundamental do Cálculo.
+        <me>\begin{array}{rcl}
+            \displaystyle \int_{\pi/2}^{\pi} -11 \cos x \, dx \amp =\amp 
+            \left(-11 \sin x \right) \Big|_{\pi/2}^{\pi}\\
+            \amp =\amp  \left(-11 \sin \pi\right) -  \left(-11 \sin (\pi/2)\right)\\
+            \amp =\amp  11
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{0}^{\pi/4} 5 \sec^2 \theta \, d\theta 
+            \amp =\amp  \left( 5\tan \theta \right) \Big|_{0}^{\pi/4}\\
+            \amp =\amp  \left( 5\tan(\pi/4)\right) -
+            \left( 5\tan 0\right)\\
+            \amp =\amp  5
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{\pi/6}^{\pi/3} 13 \csc t \cot t \, dt \amp =\amp 
+            \left(-13 \csc t \right) \Big|_{\pi/6}^{\pi/3}\\
+            \amp =\amp  \left(\dfrac{-13}{\sin (\pi/3)}\right) - 
+            \left(\dfrac{-13}{\sin(\pi/6)}
+            \right)\\
+            \amp =\amp  -\dfrac{26}{\sqrt{3}} + 26
+          \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=integral-definida/problema15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=integral-definida/problema15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=integral-definida/problema15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=6&amp;amp;sourceFilePath=integral-definida/problema15.pg</server-url>
+    <pg source="integral-definida/problema15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="integral-definida/problema7.pg">
+      <statement>
+        <p>Determine as integrais definidas:</p>
+        <p>a) <m>\displaystyle\int_{0}^{25} \sqrt{t} \, dt =</m> 
+        <fillin name="AnSwEr0001" characters="15"/></p>
+        <p>b) <m>\displaystyle\int_{4}^{9} \dfrac{1}{\sqrt{z}} \, dz =</m> 
+        <fillin name="AnSwEr0002" characters="15"/></p>
+        <p>c) <m>\displaystyle\int_{1}^{8} \sqrt[3]{x} \, dx =</m> 
+        <fillin name="AnSwEr0003" characters="15"/></p>
+      </statement>
+      <answer>
+        <p><m>83.3333333333333</m></p>
+      </answer>
+      <answer>
+        <p><m>2</m></p>
+      </answer>
+      <answer>
+        <p><m>11.25</m></p>
+      </answer>
+      <solution>
+        <p><alert> Solução:</alert></p>
+        <p>Use o Teorema Fundamental do Cálculo.
+        <me>\begin{array}{rcl}
+            \displaystyle \int_{0}^{25} \sqrt{t} \, dt \amp =\amp 
+            \left(\dfrac{2t^{3/2}}{3} \right) \Big|_{0}^{25}\\
+            \amp \amp \\
+            \amp =\amp  \dfrac{2(25)^{3/2}}{3} -  \dfrac{2(0)^{3/2}}{3} \\
+            \amp \amp \\
+            \amp =\amp  \dfrac{250}{3}\\
+            \amp =\amp  83.3333
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{4}^{9} \dfrac{1}{\sqrt{z}} \, dz
+            \amp =\amp  \left( 2\sqrt{z} \right) \Big|_{4}^{9}\\
+            \amp =\amp  2\sqrt{9} - 2\sqrt{4}\\
+            \amp =\amp  2
+          \end{array}</me></p>
+        <p><me>\begin{array}{rcl}
+            \displaystyle \int_{1}^{8} \sqrt[3]{x} \, dx \amp =\amp 
+            \left(\dfrac{3x^{4/3}}{4} \right) \Big|_{1}^{8}\\
+            \amp \amp \\
+            \amp =\amp  \dfrac{3(8)^{4/3}}{4} -  \dfrac{3(1)^{4/3}}{4} \\
+            \amp \amp \\
+            \amp =\amp  \dfrac{45}{4}\\
+            \amp =\amp  11.25
+          \end{array}</me></p>
+      </solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=integral-definida/problema7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=integral-definida/problema7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=integral-definida/problema7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=7&amp;amp;sourceFilePath=integral-definida/problema7.pg</server-url>
+    <pg source="integral-definida/problema7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="integral-definida/problema16.pg">
+      <statement>
+        <p>Determine a integral <m>\displaystyle \int_{0}^{5} \!\left( 2 e^x+5\cos x\right)  \, dx.</m></p>
+        <p><fillin name="AnSwEr0001" characters="20"/></p>
+      </statement>
+      <answer>
+        <p><m>290.032</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=integral-definida/problema16.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=integral-definida/problema16.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=integral-definida/problema16.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=8&amp;amp;sourceFilePath=integral-definida/problema16.pg</server-url>
+    <pg source="integral-definida/problema16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="integral-definida/problema3.pg">
+      <statement>
+        <p>Calcule
+        <me>\int_{1}^{\,4} {\sqrt{t}(10 + t)}\,dt.</me></p>
+        <p><fillin name="AnSwEr0001" characters="30"/></p>
+      </statement>
+      <answer>
+        <p><m>59.0666666666667</m></p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=integral-definida/problema3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=integral-definida/problema3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=integral-definida/problema3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=9&amp;amp;sourceFilePath=integral-definida/problema3.pg</server-url>
+    <pg source="integral-definida/problema3.pg"/>
   </webwork-reps>
  </webwork-representations>

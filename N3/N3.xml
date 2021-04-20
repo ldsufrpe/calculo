@@ -1328,8 +1328,168 @@ calcular a integral definida de <m>f(x)</m> de <m>a</m> até <m>b</m>.
 
  </subsection>
 
-
 <exercises xml:id="exercises-integral-definida">
+<!-- grupo 1 área -->
+<exercise>
+<webwork source="integral-definida/problema13.pg" />
+</exercise> 
+<exercise>
+
+<webwork source="integral-definida/problema14.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-definida/problema30.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema12.pg" />
+</exercise>
+
+<!-- grupo 2 básicas -->
+
+<exercise>
+<webwork source="integral-definida/problema9.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema15.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema7.pg" />
+</exercise>
+
+
+<exercise>
+<webwork source="integral-definida/problema16.pg" />
+</exercise>
+
+
+
+ <!-- <exercise>
+<webwork source="integral-definida/problema2.pg" />
+</exercise> -->
+
+<exercise>
+<webwork source="integral-definida/problema3.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema4.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema5.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema11.pg" />
+</exercise>
+<!-- 
+<exercise>
+<webwork source="integral-definida/problema1.pg" />
+</exercise> -->
+
+<!-- grupo 2 básicas com substituição -->
+
+
+<exercise>
+<webwork source="integral-definida/problema8.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema34.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema35.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema19.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema21.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema31.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema32.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema38.pg" />
+</exercise>
+
+<!-- grupo 3 funções definidas em duas partes  -->
+<exercise>
+<webwork source="integral-definida/problema6.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema10.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema20.pg" />
+</exercise>
+
+
+<!-- Substituições trigonometricas -->
+
+<exercise>
+<webwork source="integral-definida/problema17.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema18.pg" />
+</exercise>
+
+<!-- grupo Teorema Fundamental do Cálculo 1 e 2  -->
+
+
+<exercise>
+<webwork source="integral-definida/problema24.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema29.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema23.pg" />
+</exercise>
+
+
+<exercise>
+<webwork source="integral-definida/problema22.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema28.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema25.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema27.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-definida/problema39.pg" />
+</exercise>
+
+</exercises>
+
+
+<!-- <exercises xml:id="exercises-integral-definida">
 <exercisegroup>
 <introduction>
     <p>
@@ -1445,7 +1605,7 @@ calcular a integral definida de <m>f(x)</m> de <m>a</m> até <m>b</m>.
   <m>  \displaystyle\int_{0}^{\frac{\pi}{3}}\sin{\theta}\cos^{2}{\theta} \,\dd \theta</m>
 </exercise>
 </exercisegroup>   
-</exercises>
+</exercises> -->
 
 </section>
 <references xml:id="references-backmatter">
