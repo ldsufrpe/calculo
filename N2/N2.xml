@@ -257,7 +257,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise xml:id="exer-potencia-01">
             <statement>
                 <p>
-                   Determine  <m>\integral{2(x^2+1)^3}{x}</m>.
+                   Determine  <m>\integral{2(x+1)^3}{x}</m>.
                 </p>
             </statement>
             <hint>
@@ -267,7 +267,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                  <m>  \frac{2}{7} \, x^{7} + \frac{6}{5} \, x^{5} + 2 \, x^{3} + 2 \, x +C</m>
+                <m>\frac{1}{2} \, x^{4} + 2 \, x^{3} + 3 \, x^{2} + 2 \, x + C</m>
+                  
                 </p>
             </answer>
         </exercise>
@@ -365,7 +366,24 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         
     </example>
 
-
+<exercise xml:id="exer-nem-sempre-01">
+            <statement>
+                <p>
+                   Determine  <m>\integral{2(x^2+1)^3}{x}</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Considere expandir o integrando. Veja <xref ref="ex-subs-03"/>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                <m>  \frac{2}{7} \, x^{7} + \frac{6}{5} \, x^{5} + 2 \, x^{3} + 2 \, x +C</m>
+                  
+                </p>
+            </answer>
+        </exercise>
 
 
     <example xml:id="ex-subs-04" >
