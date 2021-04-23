@@ -505,7 +505,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    <m>-1/5e^{-5x}+C</m>
+                    <m>-\frac{1}{5} e^{\left(-5x\right)}+C</m>
                 </p>
             </answer>
         </exercise>
