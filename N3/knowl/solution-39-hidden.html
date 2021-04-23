@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-20T15:53:34-03:00       *-->
+<!--*       on 2021-04-20T21:32:23-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,11 +14,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">Solução</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Usando o Teorema Fundamental do Cálculo Parte 2.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Solução:</em></p>
+<p>Use o Tereoma fundamental do Cálculo (Part 1).</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\displaystyle \frac{d}{dx}\int^{x}_{1} \frac{dt}{6+\sqrt{t}}=\frac{1}{6+\sqrt{x}}
+\dfrac{d}{dx} \int_{22}^x \dfrac{1}{t} \, dt = \dfrac{1}{x}.
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\dfrac{d}{dx} \int_{x}^{2} \dfrac{1}{t} \, dt = 
+-\dfrac{d}{dx} \int_{2}^x \dfrac{1}{t} \, dt = -\dfrac{1}{x}.
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\dfrac{d}{dx} \int_{16}^{x^{6}} \dfrac{1}{t} \, dt = 
+\dfrac{1}{x^{6}} \cdot (x^{6})' = \dfrac{1}{x^{6}} \cdot 6 x^{5}
+= \dfrac{6}{x}.
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle
+\dfrac{d}{dx} \int_{2 + \cos x}^{x^2 + 1} \dfrac{1}{t} \, dt \amp =\amp 
+\displaystyle
+\dfrac{1}{x^2 + 1} \cdot (x^2 + 1)' - \dfrac{1}{2 + \cos x} \cdot (2 + \cos x)' \\
+\amp =\amp  \dfrac{2x}{x^2 + 1} - \dfrac{-\sin x}{2 + \cos x}
+\end{array}
 \end{equation*}
 </div>
 </div></body>

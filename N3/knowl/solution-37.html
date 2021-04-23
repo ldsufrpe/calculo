@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-20T15:53:34-03:00       *-->
+<!--*       on 2021-04-20T21:32:23-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,37 +16,29 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.8.26.1</span><span class="period">.</span>
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.8.24.1</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Solução:</em></p>
-<p>Use o Tereoma fundamental do Cálculo (Part 1).</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Nosso primeiro passo é encontrar a antiderivada de \(\frac{8}{1 + x^2}\text{.}\) A melhor maneira de fazer isso é usar as tabelas de integração disponíveis no apêndice. Observe que esta integral tem uma forma semelhante à entrada abaixo, tirada de suas tabelas:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\dfrac{d}{dx} \int_{22}^x \dfrac{1}{t} \, dt = \dfrac{1}{x}.
+\int \frac{du}{a^2+u^2} = \frac{1}{a} \tan^{-1} \frac{u}{a} + C
 \end{equation*}
 </div>
+<p class="continuation">No nosso caso, \(a = 1\) e \(u = x\text{.}\) Portanto, nossa primitiva é:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\dfrac{d}{dx} \int_{x}^{2} \dfrac{1}{t} \, dt = 
--\dfrac{d}{dx} \int_{2}^x \dfrac{1}{t} \, dt = -\dfrac{1}{x}.
+F(x) = 8\left(\tan^{-1} x \right) + C
 \end{equation*}
 </div>
+<p class="continuation">Então, aplicando o Teorema Fundamental do Cálculo e usando uma calculadora para calcular, obtemos:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\dfrac{d}{dx} \int_{16}^{x^{6}} \dfrac{1}{t} \, dt = 
-\dfrac{1}{x^{6}} \cdot (x^{6})' = \dfrac{1}{x^{6}} \cdot 6 x^{5}
-= \dfrac{6}{x}.
-\end{equation*}
-</div>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{array}{rcl}
-\displaystyle
-\dfrac{d}{dx} \int_{2 + \cos x}^{x^2 + 1} \dfrac{1}{t} \, dt \amp =\amp 
-\displaystyle
-\dfrac{1}{x^2 + 1} \cdot (x^2 + 1)' - \dfrac{1}{2 + \cos x} \cdot (2 + \cos x)' \\
-\amp =\amp  \dfrac{2x}{x^2 + 1} - \dfrac{-\sin x}{2 + \cos x}
-\end{array}
+\begin{aligned}
+\int_1^{\sqrt{7}} \frac{8}{1+x^2} dx \amp = F(\sqrt{7}) - F(1) \\
+\amp = 8\left(\tan^{-1} \sqrt{7}\right) + C -
+8\left(\tan^{-1} 1\right) - C\\
+\amp = 3.3922
+\end{aligned}
 \end{equation*}
 </div>
 </div>

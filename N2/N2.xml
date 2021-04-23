@@ -354,7 +354,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                  \integral{-8(3-4x^2)^2}{x} \neq \frac{1}{x}\integral{(3-4x^2)^2(-8x)}{x}.
              </me>
              
-             Nesse caso, a melhor estégia é expandir o integrando  e depois aplicar a regra da potência em cada parte.
+             Nesse caso, a melhor estratégia é expandir o integrando  e depois aplicar a regra da potência em cada parte.
 
              <md>
                  <mrow> \integral{-8(3-4x^2)^2}{x}  \amp = \integral{(-128x^4+192x^2-72)}{dx} </mrow>

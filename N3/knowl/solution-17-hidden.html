@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-20T15:53:33-03:00       *-->
+<!--*       on 2021-04-20T21:32:22-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,11 +14,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Fazendo \(u=\ln{u}\text{,}\) obtemos \(\frac{\dd u}{\dd x} = 1/x\text{.}\) Então  \(\dd u = (1/x)\dd x\text{.}\) Quando \(x=1\text{,}\) \(u=\ln{1}=0\text{,}\) e, quando \(x=e\) , \(u=\ln{e}=1\text{.}\) Assim,</p>
+<p>Escolha \(u=\tan{t}\text{.}\) Então, \(\frac{\dd u}{\dd t}=(1/\cos^2{t})\)  e \(\dd u= (1/\cos^2{t})\dd t\text{.}\) Quando \(t=0\text{,}\) \(u=\tan{0}=0\text{,}\) e, quando, \(x=\pi/4\text{,}\) \(u=\tan{\pi/4}=1\text{.}\) Portanto,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integrald{\frac{\ln{x}}{x}}{1}{e}{x}\amp = \integrald{u}{0}{1}{u} = \frac{u^2}{2}\Biggr\rvert_0^{1} \\
-\amp = \left(\frac{1^2}{2} -\frac{0^2}{2}\right)=\frac{1}{2} \text{.}
+\integrald{\frac{\tan{t}}{\cos^2{t}}}{0}{\frac{\pi}{4}}{t}\amp = \integrald{\tan{t}\cdot\left(\frac{1}{\cos^2{t}}\right)}{0}{\frac{\pi}{4}}{t}\\
+\amp =  \integrald{u}{0}{1}{u} = \frac{u^2}{2} \Biggr\rvert_0^{1} = \left(\frac{1^2}{2}-\frac{0^2}{2}\right) \\
+\amp = \frac{1}{2} \text{.}
 \end{align*}
 </div>
 </div></body>

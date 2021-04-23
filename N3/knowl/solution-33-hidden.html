@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-20T15:53:34-03:00       *-->
+<!--*       on 2021-04-20T21:32:23-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,15 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Escolha a substiyuição \(u = g(x) = x  - 5\text{.}\)  Então \(du =  \,dx\text{.}\) Use \(g(x)\) para mudar os limites de integração.</p>
+<p>Seja \(u = 8x+9\text{;}\) então \(du = 8 \, dx\text{,}\) ou \({\textstyle\frac{1}{8}} \, du = dx\text{.}\) Para alterar os limites de integração, observe que se \(x = -{\textstyle\frac{5}{8}}\) então \(u = 4\text{,}\) e se \(x = 2\) então \(u = 25\text{.}\) Portanto,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{array}{rcl}
-\displaystyle  \int_{7}^{9} \dfrac{1}{x  - 5} \, dx \amp =\amp 
-\displaystyle \int_{7  - 5}^{9  - 5} \dfrac{1}{u} \, du \\
-\amp =\amp  \ln |u| \Big|_{2}^{4}\\
-\amp =\amp  \ln(4) - \ln(2) = \ln 2.
-\end{array}
+\begin{aligned}
+\int_{-{\textstyle\frac{5}{8}}}^{2} \frac{3}{\sqrt{8x+9}} \, dx \&gt;
+\amp = {\textstyle\frac{3}{8}}
+\int_{4}^{25} \frac{du}{\sqrt{u}}
+= {\textstyle\frac{3}{4}} \sqrt{u} \; \Bigg \vert_{4}^{25} \\
+\amp = {\textstyle\frac{3}{4}} \bigl( \sqrt{25} - \sqrt{4} \bigr) \\
+\amp = {\textstyle\frac{3}{4}} (5 - 2) \\
+\amp = {\textstyle\frac{9}{4}}.
+\end{aligned}
 \end{equation*}
 </div>
 </div></body>

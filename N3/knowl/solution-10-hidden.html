@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-20T15:53:32-03:00       *-->
+<!--*       on 2021-04-20T21:32:21-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,11 +14,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>A função \(f(x)=x^2\) é par, pois \(x^2=(-x)^2\) para todo \(x\) em \([-2,2]\text{.}\) Então, de acordo com o <a class="xref" data-knowl="./knowl/fact-par-1.html" title="Item I">Item I</a>, temos</p>
+<p>A partir da definição de valor absoluto, o integrando \(|2x-1|\) pode ser escrito em duas partes, a saber:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|2x-1| = \begin{cases} -(2x-1), \amp x\lt 1/2 \\
+2x-1, \amp x \geq 1/2 \end{cases}.
+\end{equation*}
+</div>
+<p class="continuation">Usando <a class="xref" data-knowl="./knowl/p-acb.html" title="Item IV">Item IV</a> das proriedades de integral definida, podemos reescrever a integral como duas outras de modo que a soma seja igual a integral desejada.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integrald{x^2}{-2}{2}{x} \amp = 2\integrald{x^2}{0}{2}{x} \\
-\amp = 2\cdot\frac{x^3}{3}\Biggr\rvert_0^{2} =2\cdot\frac{2^3}{3} - 2\cdot\frac{0^3}{3}=\frac{16}{3}\text{.}
+\integrald{|2x-1|}{0}{2}{x}\amp = \integrald{-(2x-1)}{0}{1/2}{x} +  \integrald{(2x-1)}{1/2}{2}{x} \\
+\amp = \left(-x^2+ x\right)\Biggr\rvert_0^{1/2} + \left(x^2-x\right)\Biggr\rvert_{1/2}^{2} \\
+\amp = \left(-\frac{1}{4}+ \frac{1}{2}\right) - (0 +0) + (4-2)-\left(\frac{1}{4}-\frac{1}{2}\right)=\frac{5}{2} \text{.}
 \end{align*}
 </div>
 </div></body>
