@@ -236,20 +236,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     
     <statement>
         <p>
-            Para visualizar a região sob o gráfico de um função <em>não negativa</em> entre <m>a</m> e <m>b</m> se diriga até 
-             a calculadora gráfica abaixo e siga os seguntes passos:
+            Para visualizar a região sob o gráfico de um função <em>não negativa</em> entre <m>a</m> e <m>b</m> se dirija até 
+             a calculadora gráfica abaixo e siga os seguintes passos:
 
              <ol>
                  <li>
                      <p>
-                         Em <m>f(x)</m>, insira uma função contínua pelo menos no intervalo <m>[-10,10]</m> ou em qualquer sebintervalo deste.
+                         Em <m>f(x)</m>, insira uma função contínua pelo menos no intervalo <m>[-10,10]</m> ou em qualquer subintervalo deste.
                           Por exemplo, <m>[0,1].</m> Por padrão usamos a função <m>f(x)=x^2</m>.
                      </p>
                  </li>
                  <li>
                      <p>
                          Olhando para o gráfico, faça ajustes no intervalo para garantir que 
-                         o gráfico de <m>y=f(x)</m>, inserido no passo anterior, esteja sempre acima do eixo <m>x</m>. (A função deve ser não negatica, lembra?)
+                         o gráfico de <m>y=f(x)</m>, inserido no passo anterior, esteja sempre acima do eixo <m>x</m>. (A função deve ser não negativa, lembra?)
                      </p>
                  </li>
                  <li>
@@ -291,7 +291,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
      <note>
     Outra forma de introduzir a integral definida é através do processo de somas. Nesse caso, a região é dividida em um certo número de retângulos
-    cuja a altura seja <m>f(x)</m>. A  soma da área de cada retângulo definido dessa forma é denominada de <term> Soma de Riemman</term>. O limite da Soma de <em> Riemman</em>, quando a base de cada retângulo 
+    cuja a altura seja <m>f(x)</m>. A  soma da área de cada retângulo definido dessa forma é denominada de <term> Soma de Riemann</term>. O limite da Soma de <em> Riemann</em>, quando a base de cada retângulo 
     se aproxima de zero, é também chamado de <term> integral definida</term>. Nas próximas seções daremos mais detalhes sobre essa abordagem.
     </note>  
 
@@ -377,7 +377,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise xml:id="exer2-TFC1">
     <statement>
         <p>
-            adcionar autavaliação
+            adicionar autovaliação
         </p>
     </statement>
 
@@ -429,7 +429,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <p>
             Há uma significativa diferença entre integral indefinida e integral definida.
             A <em>integral indefinida</em> <me>\integral{f(x)}{x}</me> denota uma família de 
-            funções na qual cada melbro é uma primitiva de <m>f(x)</m>, enquanto a <em>integral indefinida</em> 
+            funções na qual cada membro é uma primitiva de <m>f(x)</m>, enquanto a <em>integral indefinida</em> 
             <me>
                 \integrald{f(x)}{a}{b}{x}
             </me>
@@ -449,7 +449,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </p>
         </statement>
         <solution>
-            <p>Note que <m>F(x)=x^2</m> é uma primitva de <m>2x</m>. Então, pelo 
+            <p>Note que <m>F(x)=x^2</m> é uma primitiva de <m>2x</m>. Então, pelo 
             <xref ref="thm-TFC" text="custom"> TFC</xref>, temos
                 <md>
                     <mrow>\integrald{2x}{0}{2}{x} \amp = 2^2 -  0^2 = 4 </mrow>
@@ -480,7 +480,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      
     <assemblage xml:id="assemblage-notacao">
         <title>Notação útil</title>
-        <p>Quando usamos o Teorema Fundamntal do Cálculo é util usar a notação
+        <p>Quando usamos o Teorema Fundamental do Cálculo é util usar a notação
 
         <md>
             <mrow> \integrald{f(x)}{a}{b}{x}=F(x)\biggr\rvert_a^b= F(b) - F(a).</mrow>
@@ -755,7 +755,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                  |2x-1| = \begin{cases} -(2x-1), \amp x\lt 1/2 \\
                           2x-1, \amp x \geq 1/2 \end{cases}.
              </me>
-             Usando <xref ref="p-acb"/> das proriedades de integral definida, podemos reescrever a integral como duas outras de modo que a soma seja igual a integral desejada.
+             Usando <xref ref="p-acb"/> das propriedades de integral definida, podemos reescrever a integral como duas outras de modo que a soma seja igual a integral desejada.
 
             <md>
                 <mrow> \integrald{|2x-1|}{0}{2}{x}\amp = \integrald{-(2x-1)}{0}{1/2}{x} +  \integrald{(2x-1)}{1/2}{2}{x} </mrow>
@@ -805,7 +805,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <statement>      
    
         <p>
-            Calcule a área da região descrita no intem anterior usando fórmulas geométricas.
+            Calcule a área da região descrita no item anterior usando fórmulas geométricas.
         </p>
          </statement>
     <answer>
@@ -947,7 +947,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
      <introduction>
          <p>
-            Gráficos de funções são úteis para analisar várias propriedades importanetes.
+            Gráficos de funções são úteis para analisar várias propriedades importantes.
         Diversas funções possuem  simetria em relação em relação ao eixo <m>y</m>, como na <xref ref="fig-par"/> e 
         outras apresentam simetria em relação a origem, como na <xref ref="fig-impar"/>. No primeiro caso,
         a função é dita <term> par</term> e satisfaz <m>f(-x)=f(x)</m> em <m>[-a,a]</m>, e no segundo a função é dita <term>ímpar</term> e satisfaz
@@ -1140,10 +1140,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      <title>Integrais definidas por substituição</title>
      <introduction>
          <p>
-             Existem duas formas de encontrar o valor da integral definida por substituição. A primeira, covida você a 
+             Existem duas formas de encontrar o valor da integral definida por substituição. A primeira, convida você a 
              determinar uma primitiva e então aplicar o <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref>.
              Enquanto na segunda é necessário  mudar os limites de integração de acordo com a substituição escolhida e, só depois, aplicar o teorema. 
-             O exemplo a seguir apresentamos duas soluções, cada uma ilutra uma das  possibilidades.
+             O exemplo a seguir apresentamos duas soluções, cada uma ilustra uma das  possibilidades.
             
          </p>
      </introduction>

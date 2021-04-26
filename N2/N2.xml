@@ -129,12 +129,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             
         </objectives>
 
-    <subsection xml:id="subsec-integracao-substituicao">
+    <subsection xml:id="subsec-integracao-substituição">
         <title>Substituição <m> u </m></title>
         
         
             <p>
-            A integração por susbstituição consiste em um método para encontrar primitivas por meio de uma
+            A integração por substituição consiste em um método para encontrar primitivas por meio de uma
             substituição conveniente da variável do integrando, de tal forma, a transformar o problema de 
             integração, inicialmente complicado, em um mais simples.                       
             </p>
@@ -206,7 +206,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </solution>
         <solution>
             <p>
-                É possivel evitar o uso do método de  substituição expandindo <m>(2x+1)(x^2+x)</m> e utilizando a regra da potência.
+                É possível evitar o uso do método de  substituição expandindo <m>(2x+1)(x^2+x)</m> e utilizando a regra da potência.
             </p>
         </solution>
         </task>
@@ -505,7 +505,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    <m>-\frac{1}{5} e^{\left(-5x\right)}+C</m>
+                    <m>-\frac{1}{5} e^{-5x}+C</m>
                 </p>
             </answer>
         </exercise>
@@ -693,18 +693,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <p>
          O integrando que envolve raízes quadradas de polinômios e polinômios não fatoráveis <fn>Informalmente, são polinômios que 
          não pode ser obtido por produtos de dois polinômios não constantes. Por exemplo, <m>4+x^2.</m></fn> admitem uma substituição por <m>u</m> de forma implicita. Por exemplo, 
-         <m>x=\sin{u}</m> e <m>x=\tan{u}</m>. Essas substituições são denominadas de <term>substituições trigonometricas</term>.          
+         <m>x=\sin{u}</m> e <m>x=\tan{u}</m>. Essas substituições são denominadas de <term>substituições trigonométricas</term>.          
         </p>
 
         <p>
-        As simplificações necessárias nas subsutituições trigonométricas fazem uso  da identidade
+        As simplificações necessárias nas substituições trigonométricas fazem uso  da identidade
         
         <mdn >
             <mrow xml:id="idf"> \cos^2{u} + \sin^2{u} =1 </mrow>
         </mdn>
             
         
-        para integrandos que envovem a expressões do tipo
+        para integrandos que envolvem a expressões do tipo
 
         <mdn xml:id="integra-subs-trig">
             <mrow> \sqrt{a-x^2} </mrow>
@@ -712,7 +712,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <mdn>
             <mrow> a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}</mrow>
         </mdn>
-            para subsitituções por <m>\tan{u}</m>.
+            para substituições por <m>\tan{u}</m>.
         </p>
         
         <!-- <paragraphs>
@@ -1000,7 +1000,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  <assemblage xml:id="assemblage-tangente">
      <title>Regra geral para substituições por <m>\tan{u}</m></title>
      <p>
-         Para o integrando encolvendo <m>a^2+ x^2</m> ou <m>\sqrt{a^2+ x^2}</m>, sendo <m>a</m> constante,
+         Para o integrando envolvendo <m>a^2+ x^2</m> ou <m>\sqrt{a^2+ x^2}</m>, sendo <m>a</m> constante,
          tente <m>x=a\tan{u},</m> com <m> -\pi/2\leq u\leq  \pi/2</m>.
      </p>
  </assemblage>  
