@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-20T21:32:21-03:00       *-->
+<!--*       on 2021-04-27T15:18:17-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,7 +16,10 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integrald{2x}{0}{2}{x} \amp = 2^2 -  0^2 = 4 
+\dfrac{\dd}{\dd x} \integrald{\frac{\cos{t}}{t^9}}{1}{\sqrt{x}}{t} \amp =  \dfrac{\dd}{\dd u} \left[ \integrald{\frac{\cos{t}}{t^9}}{0}{u}{t}\right]\cdot \dfrac{\dd u}{\dd x} \amp \ct{Regra da Cadeia}  \\
+\amp = \frac{\cos{u}}{u^9}\cdot \dfrac{\dd u}{\dd x}\amp \ct{pelo TFC1} \\
+\amp = \frac{\cos{\sqrt{x}}}{x^{\frac{9}{2}}}\cdot \frac{1}{2\sqrt{x}} \\
+\amp = \frac{\cos{\sqrt{x}}}{2x^5} 
 \end{align*}
 </div>
 <span class="incontext"><a href="section-1.html#mjx-eqn-mrow-5">em contexto</a></span>

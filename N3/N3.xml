@@ -330,12 +330,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <example xml:id="ex1-TFC1">
     <statement>
         <p>
-            Adicionar exemplo
+            Encontre a derivada de <m>F(x)=\integrald{\frac{1}{3+\sqrt{t}}}{1}{x}{t}</m>.
         </p>
     </statement>
     <solution>
         <p>
-            Adicionar solução
+            Já que <m>f(t)=\frac{1}{3+\sqrt{t}}</m> é contínua em qualquer intervalo contido em <m>[0, +\infty)</m>.
+            O <xref ref="thm-TFC1" text="custom"> TFC1</xref> fornece
+            <md>
+                <mrow> F'(x) = \frac{1}{3+\sqrt{x}}</mrow>
+            </md>
         </p>
     </solution>
 </example>
@@ -344,53 +348,69 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <example xml:id="ex2-TFC1">
     <statement>
         <p>
-            Adicionar exemplo
+            Determine <m>\dfrac{\dd}{\dd x} \integrald{\frac{\cos{t}}{t^9}}{1}{\sqrt{x}}{t}</m>.
         </p>
     </statement>
     <solution>
         <p>
-            Adicionar solução
+            Aqui, devemos ter o cuidado de usar a Regra da Cadeia em conjunto com o <xref ref="thm-TFC1" text="custom"> TFC1 </xref>. 
+            Fazendo <m>u=\sqrt{x}</m>. Então,
+
+            <md>
+                <mrow> \dfrac{\dd}{\dd x} \integrald{\frac{\cos{t}}{t^9}}{1}{\sqrt{x}}{t} \amp =  \dfrac{\dd}{\dd u} \left[ \integrald{\frac{\cos{t}}{t^9}}{0}{u}{t}\right]\cdot \dfrac{\dd u}{\dd x} \amp \ct{Regra da Cadeia}  </mrow>
+                <mrow> \amp = \frac{\cos{u}}{u^9}\cdot \dfrac{\dd u}{\dd x}\amp \ct{pelo TFC1} </mrow> 
+                <mrow> \amp = \frac{\cos{\sqrt{x}}}{x^{\frac{9}{2}}}\cdot \frac{1}{2\sqrt{x}} </mrow>
+                <mrow> \amp = \frac{\cos{\sqrt{x}}}{2x^5} </mrow>
+            </md>
+
+            
+            <!-- <mrow> \amp =  </mrow> -->
+
         </p>
     </solution>
 </example>
 
+
+
 <exercise xml:id="exer1-TFC1">
     <statement>
         <p>
-            Adicionar autoavaliação
-        </p>
-    </statement>
-
-     <hint>
-        <p>
-            Adicionar dica
-        </p>
-    </hint>
-    <answer>
-        <p>
-            Adicionar resposta
-        </p>
-    </answer>
-
-</exercise>
-
-<exercise xml:id="exer2-TFC1">
-    <statement>
-        <p>
-            adicionar autovaliação
+           Encontre a derivada <m> \dfrac{\dd}{\dd x}\integrald{\frac{1}{7+\sqrt{t}}}{2}{x}{t}</m>.
+           
         </p>
     </statement>
 
     <hint>
         <p>
-            Adicionar dica
+            Revise <xref ref="ex1-TFC1"/>
         </p>
     </hint>
     <answer>
         <p>
-            Adicionar resposta
+          <m>  \dfrac{1}{7+ \sqrt{x}}</m>
         </p>
     </answer>
+</exercise>
+
+
+<exercise xml:id="exer2-TFC1">
+    <statement>
+        <p>
+            Encontre a derivada <m>\dfrac{\dd}{\dd x}\integrald{-2\sin{t}}{0}{e^x}{t}</m>.
+        </p>
+    </statement>
+
+     <hint>
+        <p>
+           Use a Regra da Cadeia e o <xref ref="thm-TFC1" text="custom"> TFC1 </xref>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>-2e^x\sin{e^x}</m>
+        </p>
+    </answer>
+
 </exercise>
 
         
@@ -414,7 +434,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </theorem>
     <p>
     Na <xref ref="def-area"/> assumia-se que <m>f</m> era não negativa no intervalo fechado <m> [a, b]</m>. Assim, a integral definida era definida como
-    uma área. Agora, a partir do <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref>, a definição pode ser estendida
+    uma área. Agora, a partir do <xref ref="thm-TFC" text="custom"> TFC2</xref>, a definição pode ser estendida
     para incluir funções negativas em todo o intervalo fechado <m> [a, b]</m> ou em parte dele.
     Especificamente, se <m>f</m> for qualquer função contínua em um intervalo <m> [a, b]</m>,  então a <term> integral definida</term> de <m>f(x)</m>  de <m>a</m> 
      até <m>b</m>  é definida como
@@ -493,7 +513,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title> Onde está a constante <m>C</m>?</title>
     <statement>
         <p>
-              Revise o <xref ref="thm-TFC" text="custom"> TFC</xref> e justifique o "sumiço" da constante <m>C</m> que forma a primitiva <m>F</m>.
+              Revise o <xref ref="thm-TFC" text="custom"> TFC2</xref> e justifique o "sumiço" da constante <m>C</m> que forma a primitiva <m>F</m>.
         </p>
     </statement>
 
@@ -501,7 +521,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <assemblage xml:id="assemblage-definida-propriedade">
         <title>Propriedades da integral definida</title>
-        <p> Sejam <m>f</m> e <m>g</m> contínuas no intervalo <m>[a,b]</m> e <m>k</m> uma constante.
+        <p> Sejam <m>f</m> e <m>g</m> contínuas no intervalo <m>[a,b]</m>, a &lt; c &lt; b, e <m>k</m> uma constante.
             <ol label="I)">
                 <li xml:id="p-constante">
                     <p>
@@ -522,7 +542,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </li>
                 <li xml:id="p-acb">
                     <p>
-                        <m>\integrald{f(x)}{a}{b}{x} = \integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x} \quad a &lt; c &lt; b </m>
+                        <m>\integrald{f(x)}{a}{b}{x} = \integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x}  </m>
 
                     </p>
                 </li>
@@ -555,7 +575,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <md>
                     <mrow> \text{Área}  \amp = \integrald{(x^2-1)}{1}{2}{x} \amp \amp \ct{Integral definida}</mrow>
                     <mrow>      \amp =\left(\frac{x^3}{3}-x\right)\Biggr\rvert_1^2 \amp \amp \ct{Calcule a primitiva} </mrow>
-                    <mrow> \amp = \left(\frac{2^3}{3}-2\right)- \left(\frac{1^3}{3}-1\right)  \amp \amp \ct{Aplique o} \, <xref ref="thm-TFC" text="custom">TFC</xref> </mrow>
+                    <mrow> \amp = \left(\frac{2^3}{3}-2\right)- \left(\frac{1^3}{3}-1\right)  \amp \amp \ct{Aplique o} \, <xref ref="thm-TFC" text="custom">TFC2</xref> </mrow>
                     <mrow> \amp = \frac{4}{3} </mrow>
                 </md> 
             Dessa forma, podemos dizer que a área da região é de <m>\frac{4}{3}</m>.   
@@ -646,7 +666,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                          como primitiva. Então, 
 
                          <md>
-                             <mrow> \integrald{-3\sqrt{t}}{1}{4}{t}\amp = -3\left(\frac{t^{3/2}}{3/2} \right)\Biggr\rvert_1^4 \amp \ct{Aplique o} \, <xref ref="thm-TFC" text="custom">TFC</xref>.</mrow>
+                             <mrow> \integrald{-3\sqrt{t}}{1}{4}{t}\amp = -3\left(\frac{t^{3/2}}{3/2} \right)\Biggr\rvert_1^4 \amp \ct{Aplique o} \, <xref ref="thm-TFC" text="custom">TFC2</xref>.</mrow>
                              <mrow> \amp = -2x^{3/2}\Biggr\rvert_1^4 \amp \ct{Simplifique.}</mrow>
                              <mrow> \amp = -2(4^{3/2}-1^{3/2}) = -2(8-1)=-14</mrow>
                          </md>
@@ -1141,7 +1161,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      <introduction>
          <p>
              Existem duas formas de encontrar o valor da integral definida por substituição. A primeira, convida você a 
-             determinar uma primitiva e então aplicar o <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref>.
+             determinar uma primitiva e então aplicar o <xref ref="thm-TFC" text="custom"> TFC2</xref>.
              Enquanto na segunda é necessário  mudar os limites de integração de acordo com a substituição escolhida e, só depois, aplicar o teorema. 
              O exemplo a seguir apresentamos duas soluções, cada uma ilustra uma das  possibilidades.
             
@@ -1175,7 +1195,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <md>
                     <mrow> \integrald{(4x+1)^2}{0}{1}{x}\amp = \integrald{\frac{1}{4}(4x+1)^2(4)}{0}{1}{x}  \amp \ct{Multiplique e divida por 4}.</mrow>
                     <mrow> \amp =\left(\frac{1}{4}\frac{(4x+1)^3}{3}\right)\Biggr\rvert_0^{1} \amp \ct{Mantenha os limites de integração originais}</mrow>
-                    <mrow> \amp = \frac{1}{4}\left(\frac{(4\cdot 1 + 1)^3}{3} - \frac{(4\cdot 0 + 1)^3}{3} \right) \amp \ct{Aplique o }\, <xref ref="thm-TFC" text="custom">TFC</xref> </mrow>
+                    <mrow> \amp = \frac{1}{4}\left(\frac{(4\cdot 1 + 1)^3}{3} - \frac{(4\cdot 0 + 1)^3}{3} \right) \amp \ct{Aplique o }\, <xref ref="thm-TFC" text="custom">TFC2</xref> </mrow>
                     <mrow> \amp =\frac{1}{4}\left(\frac{5^3}{3}-\frac{1^3}{3}\right)</mrow>
                     <mrow> \amp = \frac{31}{3} </mrow>
                 </md>
@@ -1190,7 +1210,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <md>
                         <mrow> \integrald{(4x+1)^2}{0}{1}{x}\amp = \frac{1}{4}\integrald{u^2}{1}{5}{u} \amp \ct{Multiplique e divida por 4}</mrow>
                         <mrow> \amp = \frac{1}{4}\frac{u^3}{3}\Biggr\rvert_1^{5} \amp \ct{Mudança dos limites de integração}</mrow>
-                        <mrow> \amp = \frac{1}{4}\left(\frac{5^3}{3}-\frac{1^3}{3}\right) \amp \ct{Aplique o }\, <xref ref="thm-TFC" text="custom">TFC</xref></mrow>
+                        <mrow> \amp = \frac{1}{4}\left(\frac{5^3}{3}-\frac{1^3}{3}\right) \amp \ct{Aplique o }\, <xref ref="thm-TFC" text="custom">TFC2</xref></mrow>
                         <mrow> \amp = \frac{31}{3}</mrow>
                     </md>
                 </p>
@@ -1227,14 +1247,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <li>
                 <p>
                     Use o método de substituição para encontrar uma primitiva em termos 
-                    da variável original. Aplique o  <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref> utilizando os limites de integração originais; <term>ou</term>
+                    da variável original. Aplique o  <xref ref="thm-TFC" text="custom"> TFC2</xref> utilizando os limites de integração originais; <term>ou</term>
                 </p>
             </li>
        
             <li>
                 <p>
                    Escolha uma substituição adequada e converta os limites de integração originais em termos
-                   da nova variável. Aplique o <xref ref="thm-TFC" text="custom"> Teorema Fundamental do Cálculo</xref> sem converter a primitiva em termos da variável original.
+                   da nova variável. Aplique o <xref ref="thm-TFC" text="custom"> TFC2</xref> sem converter a primitiva em termos da variável original.
                 </p>
             </li>
         </ul>
