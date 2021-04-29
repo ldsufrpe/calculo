@@ -441,7 +441,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
      <me> \integrald{f(x)}{a}{b}{x}= F(b) - F(a)</me>,
 
-     em que <m>F'(x)=f(x)</m>. Dessa forma, as <term> integral definidas</term> não representam necessariamente áreas e, portanto, podem ser negativas,
+     em que <m>F'(x)=f(x)</m>. Dessa forma, as <term> integrais definidas</term> não representam necessariamente áreas e, portanto, podem ser negativas,
      positivas ou zero.
   </p>
     <assemblage xml:id="assemblage-definida-indefinida" >
@@ -916,7 +916,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
      <li>
             <p>
-               Calculando <url href=""> integrais do tipo <m>\integrald{kx^n}{a}{b}{x}</m></url>
+               Calculando <url href="https://youtu.be/iONfvi9HWjU"> integrais do tipo <m>\integrald{kx^n}{a}{b}{x}</m></url>
             </p>
         </li>
      <li>
