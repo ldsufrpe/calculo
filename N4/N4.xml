@@ -138,7 +138,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <introduction>
         <p>
           A técnica de  <em>integração por partes</em> baseia-se na Regra do Produto da derivação. É geralmente aplicada em integrandos 
-        que envolvam produtos de funções do tipo potência, exponenciais, logarítimicas e trigonométricas. Por exemplo,
+        que envolvam produtos de funções do tipo potência, exponenciais, logarítmicas e trigonométricas. Por exemplo,
         as integrais dos tipos
         <md>
             <mrow>\integral{ x^ne^x}{x}, \qquad \integral{x^n\ln{x}}{x}\quad \text{e}\qquad  \integral{e^x\sin{x}}{x}   </mrow>
@@ -182,7 +182,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <example xml:id="ex-part-1">
 <title><m>\integral{xe^x}{x}</m></title>
-    
+    <statement>
+        <p>
+            Determine <m>\integral{xe^x}{x}</m>.
+        </p>
+    </statement>
     <solution>
         <p>
             Para utilizar <xref ref="assemblage-integral-partes" text="title"/> devemos escolher com sabedoria, a partir do produto 
@@ -232,7 +236,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <example xml:id="ex-part-2">
 <title><m>\integral{x\sin{x}}{x}</m></title>
-    
+    <statement>
+        <p>
+            Determine <m>\integral{x\sin{x}}{x}</m>.
+        </p>
+    </statement>
     <solution>
         <p>
            Escolha, <m>\dd v =\sin{x}\,\dd x</m> e <m>u=x</m>. Então,
@@ -286,6 +294,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <example xml:id="ex-part-4a">
 <title><m>\integral{x^2e^x}{x}</m></title>
     
+    <statement>
+        <p>
+            Determine <m>\integral{x^2e^x}{x}</m>.
+        </p>
+    </statement>
     
     <solution>
         <p>
@@ -300,7 +313,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <md>
             <mrow xml:id="vez1" tag="star"> \integral{x^2e^x}{x}\amp = x^2e^x-\integral{2xe^x}{x} \amp \ct{Integração por partes nª 1.}</mrow>
         </md>
-    Para calcular a integral do lado direito de <xref ref="vez1"/>, precisamos apricar novamente a fórmula de integração por partes. Para isso,
+    Para calcular a integral do lado direito de <xref ref="vez1"/>, precisamos aplicar novamente a fórmula de integração por partes. Para isso,
     escolhemos <m>\dd v = e^x\,\dd x</m> e <m>u=2\dd x</m>. Logo,
 
             <md>
@@ -343,6 +356,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <example xml:id="exer-part-4b">
 <title><m>\integral{e^x\sin{x}}{x}</m></title>
+
+<statement>
+    <p>
+        Determine <m>\integral{e^x\sin{x}}{x}</m>.
+    </p>
+</statement>
     
     <solution>
         <p>
@@ -441,7 +460,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
      </statement>
      <solution>
          <p>
-              Embora não pareça um produdo, podemos escrever <m>\ln{x}\cdot 1</m> e assim escolher
+              Embora não pareça um produto, podemos escrever <m>\ln{x}\cdot 1</m> e assim escolher
         <m>\dd v = 1\,\dd x</m> e <m>u=\ln{x}</m>. Então,
         
           <md>
@@ -628,7 +647,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </md>.
 
       
-     As estrtégias para encontrar  a decomposição em frações parcais de funções racionais são variadas. Algumas situações comuns são  descritas a seguir 
+     As estratégias para encontrar  a decomposição em frações parciais de funções racionais são variadas. Algumas situações comuns são  descritas a seguir 
     e ilustradas  mais adiante.
          </p>
      </introduction>
@@ -718,7 +737,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
            <mrow> 2A-3B =7\amp </mrow>
             <mrow> A+B =1\amp </mrow>
         </md>.
-        Resolvendo essas equações , obtemos <m>A=2</m> e <m>B=-1</m>. Finalmente, substituimos o integrando pela decomposição 
+        Resolvendo essas equações , obtemos <m>A=2</m> e <m>B=-1</m>. Finalmente, substituímos o integrando pela decomposição 
         de frações parciais e aplicamos a integral:
         
             <md>
@@ -764,7 +783,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise xml:id="exer-frac-1b">
     <statement>
         <p>
-            Detemine  <m>\integral{\frac{x+3}{x^2+x}}{x}</m>.
+            Determine  <m>\integral{\frac{x+3}{x^2+x}}{x}</m>.
         </p>
         
     </statement>
@@ -857,7 +876,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </statement>
     <solution>
         <p>
-          Uma estratégia para fatorar o denominador <m>x^3-2x^2+x-2</m> é encontrando uma de suas raizes  <m>\alpha</m> e
+          Uma estratégia para fatorar o denominador <m>x^3-2x^2+x-2</m> é encontrando uma de suas raízes  <m>\alpha</m> e
            depois efetuar a  divisão  por <m>x-\alpha</m>. Observe que
 
 
