@@ -159,7 +159,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </md>
         que pode ser apresentada como
         <md>
-            <mrow> \integral{f'(x)g(x)}{x} \amp =  f(x)g(x) -  \integral{f(x)g(x)}{x} + C</mrow>.
+            <mrow> \integral{f'(x)g(x)}{x} \amp =  f(x)g(x) -  \integral{f'(x)g(x)}{x} + C</mrow>.
         </md>
         Para facilitar  vamos adotar <m>u=f(x)</m>, <m>v=g(x)</m>,  obter <m>du=f'(x)\dd x</m>,
         <m>du=g'(x)\dd x</m>, esquecer a constante <m>C</m> (por enquanto) e  apresentar a fórmula a seguir.
