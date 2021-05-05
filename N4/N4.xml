@@ -154,7 +154,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         A integral de ambos os lados da igualdade acima produz
 
         <md>
-            <mrow>f(x)g(x) + C \amp = \integral{f(x)g'(x)}{x} + \integral{f(x)g(x)}{x}</mrow>
+            <mrow>f(x)g(x) + C \amp = \integral{f(x)g'(x)}{x} + \integral{f'(x)g(x)}{x}</mrow>
            
         </md>
         que pode ser apresentada como
