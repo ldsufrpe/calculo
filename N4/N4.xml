@@ -473,8 +473,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                <mrow> \integrald{\ub{\ln{x}}{u}\cdot\ub{1}{\dd v}}{1}{e}{x}\amp =\left.\ub{\ln{x}}{u}\cdot\ub{x}{v}\right|_1^{e} -\int_1^{e} \ub{x}{v}\cdot\ub{\frac{1}{x}\dd x}{\dd u} \amp \ctm{\small \left(\integrald{u}{a}{b}{v} = \left. uv\right|_a^{b}  - \integrald{v}{a}{b}{u}\right)} </mrow>
                <mrow>  \amp = \left. x\ln{x}\right|_1^{e} - \integrald{1}{1}{e}{x} </mrow>
                <mrow> \amp = \left. x\ln{x}\right|_1^{e} - \left. x\right|_1^{e}</mrow>
-               <mrow>\amp = 3\ln{3} - 3 - 2\ln{2} + 2  </mrow>
-               <mrow> \amp  \approx 0.009 </mrow>
+               <mrow>\amp = (e\ln{e} - 1\ln{1}) -(e-1)  </mrow>
+               <mrow> \amp =  e-e + 1=1 </mrow>
            </md>
 
          </p>
@@ -889,7 +889,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </me>
         
           
-        Então, a fotaração desejada é
+        Então, a fatoração desejada é
            
                     
             <me>
@@ -1016,7 +1016,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  </subsection>
 
 
-<subsection xml:id="subsec-sugestão-de-videos">
+<subsection xml:id="subsec-sugestao-de-videos">
     <title>Sugestão de Vídeos</title>
 
 <ul>
