@@ -775,7 +775,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </hint>
     <answer>
         <p>
-            <m>\ln{|2-x|}-\ln{|1-x|}+ C</m>
+            <m>-\log\left|x - 1\right| + \log\left|x - 2\right|+ C</m>
         </p>
     </answer>
 </exercise>
