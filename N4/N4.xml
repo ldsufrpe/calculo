@@ -783,7 +783,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise xml:id="exer-frac-1b">
     <statement>
         <p>
-            Determine  <m>\integral{\frac{x+3}{x^2+x}}{x}</m>.
+            Determine  <m>\integral{\frac{x+2}{x^2+x}}{x}</m>.
         </p>
         
     </statement>
