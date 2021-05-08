@@ -917,7 +917,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </md>
         que fornece <m>A=B=C=1</m>. Portanto,
         <md>
-            <mrow>\integral{\frac{2x^2-x-1}{x^3-2x^2+x-1}}{x} \amp = \integral{\left(\frac{x+1}{x^2+1} + \frac{1}{x-2}\right)}{x}</mrow>
+            <mrow>\integral{\frac{2x^2-x-2}{x^3-2x^2+x-1}}{x} \amp = \integral{\left(\frac{x+1}{x^2+1} + \frac{1}{x-2}\right)}{x}</mrow>
         </md>
         Mas,
         <me>
@@ -925,8 +925,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </me>
         Logo, 
         <md>
-            <mrow>\integral{\frac{2x^2-x-1}{x^3-2x^2+x-1}}{x} \amp = \integral{\frac{x}{x^2+1}}{x} + \integral{\frac{1}{x^2+1}}{x} + \integral{\frac{1}{x-2}}{x} </mrow>
-            <mrow> \amp = \ln{|x^2-1|} + \arctan{x} + \ln{|x-2|} + C</mrow>.
+            <mrow>\integral{\frac{2x^2-x-2}{x^3-2x^2+x-1}}{x} \amp = \integral{\frac{x}{x^2+1}}{x} + \integral{\frac{1}{x^2+1}}{x} + \integral{\frac{1}{x-2}}{x} </mrow>
+            <mrow> \amp = \frac{1}{2}\ln{|x^2-1|} + \arctan{x} + \ln{|x-2|} + C</mrow>.
         </md>
         </p>
     </solution>
