@@ -721,7 +721,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         da forma  
        
           <me>
-              \frac{x+7}{x^2-x+6} = \frac{A}{x-3}+\frac{B}{x+2}.
+              \frac{x+7}{x^2-x-6} = \frac{A}{x-3}+\frac{B}{x+2}.
           </me>
         Agora, resta determinar as constantes <m>A</m> e <m>B</m>. Para isso, multiplicamos cada lado da equação por <m>(x-3)(x+2)</m> obtendo
 
