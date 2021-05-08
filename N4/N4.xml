@@ -712,7 +712,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <title>Determinando frações parciais</title>
     <statement>
         <p>
-            Determine <m>\integral{\frac{x+7}{x^2-x+6}}{x}</m>.
+            Determine <m>\integral{\frac{x+7}{x^2-x-6}}{x}</m>.
         </p>
     </statement>
     <solution>
@@ -725,7 +725,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
           </me>
         Agora, resta determinar as constantes <m>A</m> e <m>B</m>. Para isso, multiplicamos cada lado da equação por <m>(x-3)(x+2)</m> obtendo
 
-        <me>x+7 = A(x-2) + B(x-3)</me>
+        <me>x+7 = A(x+2) + B(x-3)</me>
         logo,
 
         <me>
