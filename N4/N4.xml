@@ -741,7 +741,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         de frações parciais e aplicamos a integral:
         
             <md>
-                <mrow>\integral{\frac{x+7}{x^2-x+6}}{x} \amp = \integral{\left(\frac{2}{x-3}-\frac{1}{x+2}\right)}{x} </mrow>
+                <mrow>\integral{\frac{x+7}{x^2-x-6}}{x} \amp = \integral{\left(\frac{2}{x-3}-\frac{1}{x+2}\right)}{x} </mrow>
                 <mrow> \amp = 2\integral{\frac{2}{x-3}}{x} - \integral{\frac{1}{x+2}}{x} </mrow>
                 <mrow> \amp = 2\ln{|x-3|} - \ln{|x+2|} + C </mrow>
             </md>.
