@@ -92,17 +92,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <author>
                     <personname>Leon Silva</personname>
                     <department>Departamento de Matemática</department>                    
-                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
                 </author>
                 <author>
                     <personname>Deibsom Silva</personname>
                     <department>Departamento de Matemática</department>                    
-                    <institution>Universidade Federal Rural de Pernanbuco</institution>
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
                 </author>
                 <date><today /></date>
             </titlepage>
 
             <abstract>
+
                 <p>Aqui faremos um resumo das atividades da semana.</p>
             </abstract>
 
@@ -241,7 +242,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
  <note>
 Em muitos casos as regiões são limitadas lateralmente por curvas, veja por exemplo a <xref ref="fig-f-sob-g-y"/>. 
 Em geral, é mais simples obter a expressão das curva em função de <m>y</m> e então calcular a integral
-usando como refência o eixo <m>y</m>. Procedendo dessa forma, a fórmula para área entre curvas se tornaria
+usando como referência o eixo <m>y</m>. Procedendo dessa forma, a fórmula para área entre curvas se tornaria
 <mdn>
    <mrow> \amp \text{Área} = \integrald{\left[f(y)-g(y)\right]}{c}{d}{y} </mrow>
 </mdn>.
