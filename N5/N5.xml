@@ -888,8 +888,8 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
             Como o sólido se encontra entre <m>y=0</m> e <m>y=8</m>, seu volume é
 
             <md>
-                <mrow>\text{Volume}  \amp = \integrald{A(y)}{0}{8}{x} = \integrald{\pi y^{(2/3)}}{0}{8}{x} </mrow>
-                <mrow> \amp = \left.\pi\left( \frac{3}{5}y^{3/5}\right)\right|_0^8  = \frac{96\pi}{5}</mrow>
+                <mrow>\text{Volume}  \amp = \integrald{A(y)}{0}{8}{xy} = \integrald{\pi y^{(2/3)}}{0}{8}{y} </mrow>
+                <mrow> \amp = \left.\pi\left( \frac{3}{5}y^{5/3}\right)\right|_0^8  = \frac{96\pi}{5}</mrow>
                
             </md>.
             <figure xml:id="solido-ex2-volume">
@@ -972,7 +972,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
             Portanto, 
 
             <md>
-                <mrow>\text{Volume}  \amp = \integrald{A(y)}{0}{1}{x} = \integrald{\pi(x^2-x^4) }{0}{1}{x} = \amp </mrow>
+                <mrow>\text{Volume}  \amp = \integrald{A(x)}{0}{1}{x} = \integrald{\pi(x^2-x^4) }{0}{1}{x} = \amp </mrow>
                 <mrow> \amp =\left.\pi\left(\frac{x^3}{3}-\frac{x^5}{5}\right)\right|_0^1=\frac{2\pi}{15}</mrow>
             </md>.
 
