@@ -953,7 +953,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </answer>
 </exercise>
-
+<example>
+    <statement>
+        <p>
+            Determine <m>\integral{\frac{x^2+3x+1}{x^2(x+1)^3}}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            depois
+        </p>
+    </solution>
+</example>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
@@ -966,7 +977,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </exercise> -->
 
 <activity>
-<title>Epdemias</title>
+<title>Epidemias</title>
     <statement>
         <p>
             Um único indivíduo infectado entra em uma comunidade de 500 indivíduos suscetíveis à doença.

@@ -368,7 +368,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
             
         </image>
         </figure>
-        Antes de tudo precisamos saber as limites à esquerda e à direita da região. Para isso,
+        Antes de tudo, precisamos saber os limites à esquerda e à direita da região. Para isso,
         é preciso determinar os pontos de intersecção das curvas. A coordenada <m>x</m> de um ponto intersecção entre 
         as curvas <m>y=2-x^2</m> e <m>y=x</m> satisfaz 
         <me>
@@ -454,16 +454,16 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
             </image>
             </figure>
 
-            Para iniciar esboçamos as curvas. Na <xref ref="fig-ex4-f-sob-g"/>, observamos dois pontos 
-            de intesecção entre as curvas. Como cada um desses pontos  satisfaz
+            Na <xref ref="fig-ex4-f-sob-g"/>, observamos dois pontos 
+            de intesecção. Como cada um desses pontos  satisfaz
 
             <md>
                 <mrow>(y^2, y) = (y+2, y) </mrow>
-            </md>,
+            </md>
 
         que se reduz a 
         <md>
-            <mrow> y^2=y+2</mrow>
+            <mrow> y^2=y+2</mrow>,
         </md>
         e significa que <m>y=-1</m> e <m>y=2</m>. Então, os limites de integração valem <m>c=-1</m> e <m>d=2</m>.
         Portanto, uma vez que <m>y+2\geq y^2</m>, temos
