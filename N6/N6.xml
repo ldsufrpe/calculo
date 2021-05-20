@@ -162,7 +162,7 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)='),  inte
     L = numerical_integral(sqrt(1+diff(f, x)^2), a,b)[0]
     L = N(L,digits=5)
     pretty_print(html('<h4><p>Comprimento de Arco Exato</p></h4>'))
-    pretty_print(html(r'$L = \displaystyle\int_{a}^{b}{\sqrt{1+f^{\prime}(x)^2} dx} = $ %s'%L))
+    pretty_print(html(r'$L = \displaystyle\int_{a}^{b}{\sqrt{1+\[f^{\prime}(x)\]^2} dx} = $ %s'%L))
     p = plot(f, (x,a,b), color='lightgreen')
     points = [(a+k*dx, f(x=a+k*dx)) for k in [0..n]]
     q = line(points)
