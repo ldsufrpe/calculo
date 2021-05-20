@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-20T13:15:25-03:00       *-->
+<!--*       on 2021-05-20T13:48:22-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -58,7 +58,7 @@ MathJax.Hub.Config({
 </head>
 <body class="pretext-content"><div style="width:600px; height:720px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div xmlns:svg="http://www.w3.org/2000/svg" class="sage-interact"><script type="text/x-sage">@interact
 def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  interval=range_slider(0, 20, 1, default=(0, 8), 
-                                                                                                    label="(a, b)"), n = slider(1,50,1,1, label='n'), auto_update=True):
+                                                                                                 label="(a, b)"), n = slider(1,50,1,1, label='n'), auto_update=True):
     
     a, b = map(QQ, interval)
     dx = ((b-a))/n
@@ -71,12 +71,13 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  inter
     L = N(L,digits=5)
     pretty_print(html('Comprimento de Arco Exato'))
     pretty_print(html(r'$L = \displaystyle\int_{%s}^{%s}{\sqrt{1+\left[f^{\prime}(x)\right]^2} dx} = $ %s'%(a,b,L)))
-    p = plot(f, (x,a,b), color='blue')
+    p = plot(f, (x,a,b), color='blue', ticks=[[a,b], []], axes_labels=['$x$', '$y$'])
+    p0 = plot(1, (0.1,b), linestyle='')
     points = [(a+k*dx, f(x=a+k*dx)) for k in [0..n]]
     q = line(points, color='magenta')
     r = point(points, color='blue', size=15)
     #pretty_print(html('Figura'))
-    show(p+q+ r, figsize=(4,3))
+    show(p+p0+q+ r, figsize=(4,3))
     #pretty_print(html(r'$L = \displaystyle\lim_{n \to \infty}\sum_i^n{|P_{i-1}P_i|}$'))
 </script></div></div></body>
 </html>
