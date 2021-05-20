@@ -149,8 +149,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <interactive xml:id="interactive-numerical-integral" platform="sage" width="100%" aspect="1:1.2" >
 <slate surface="sage">                    
 @interact
-def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)='),  interval=range_slider(0, 20, 1, default=(0, 8), 
-                                                                                                    label="$(a, b)$"), n = slider(1,50,1,1, label='$n$'), auto_update=True):
+def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  interval=range_slider(0, 20, 1, default=(0, 8), 
+                                                                                                    label="(a, b)"), n = slider(1,50,1,1, label='n'), auto_update=True):
     
     a, b = map(QQ, interval)
     dx = ((b-a))/n
@@ -158,17 +158,18 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)='),  inte
     m(k) = (f(x=a+k*dx)-f(x=a+(k-1)*dx))/dx
     S = dx*sum([sqrt(1+m(k)^2) for k in [1..n]])
     pretty_print(html('<h4><p>Comprimento de Arco aproximado</p></h4>'))
-    pretty_print(html(r'$L {\approx} \displaystyle\sum_i^n{|P_{i-1}P_i|}$ = %s' %N(S, digits=5)))
+    pretty_print(html(r'$L_{%s} {\approx} \displaystyle\sum_i^{%s}{|P_{i-1}P_i|}$ = %s' %(n,n,N(S, digits=5))))
     L = numerical_integral(sqrt(1+diff(f, x)^2), a,b)[0]
     L = N(L,digits=5)
     pretty_print(html('<h4><p>Comprimento de Arco Exato</p></h4>'))
-    pretty_print(html(r'$L = \displaystyle\int_{a}^{b}{\sqrt{1+\[f^{\prime}(x)\]^2} dx} = $ %s'%L))
-    p = plot(f, (x,a,b), color='lightgreen')
+    pretty_print(html(r'$L = \displaystyle\int_{%s}^{%s}{\sqrt{1+\left[f^{\prime}(x)\right]^2} dx} = $ %s'%(a,b,L)))
+    p = plot(f, (x,a,b), color='blue')
     points = [(a+k*dx, f(x=a+k*dx)) for k in [0..n]]
-    q = line(points)
-    r = point(points)
-    pretty_print(html('<h4><p>Figura</p></h4>'))
+    q = line(points, color='magenta')
+    r = point(points, color='blue', size=15)
+    #pretty_print(html('<h4><p>Figura</p></h4>'))
     show(p+q+ r, figsize=(4,3))
+    #pretty_print(html(r'$L = \displaystyle\lim_{n \to \infty}\sum_i^n{|P_{i-1}P_i|}$'))
 </slate>
 </interactive>
 </figure>             
