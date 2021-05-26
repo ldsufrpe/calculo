@@ -213,7 +213,7 @@ no qual <m>\Delta x= x_{i+1}-x_i=\frac{b-a}{n}</m> é uma constante.
 <p>
  
 Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio <fn>Veja em https://pt.wikipedia.org/wiki/Teorema_do_valor_médio</fn> , existe <m>c_i</m> com
-<m>x_i \lt c_i\lt x_{i+1}</m> tal que <m>f^{\prime}(c_i)=\frac{f(x_{i+1})}-f(x_i)}{\Delta x}</m>.
+<m>x_i \lt c_i\lt x_{i+1}</m> tal que <m>f^{\prime}(c_i)=\frac{f(x_{i+1})-f(x_i)}{\Delta x}</m>.
 Multiplicando ambos os lados por <m>\Delta x</m> obtemos:
 
 <me>
