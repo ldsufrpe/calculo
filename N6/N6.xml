@@ -187,7 +187,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </assemblage>
 <paragraphs>
     <title></title>
-    De acordo com os <xref ref="assemblage-comprimento-aprox" text="custom"> passos acima </xref>, o comprimento arco <m>L</m> de uma curva <m>y=f(x)</m>,
+    De acordo com os <xref ref="assemblage-comprimento-aprox" text="custom"> passos acima </xref>, o comprimento de arco <m>L</m> de uma curva <m>y=f(x)</m>,
     <m>a\leq x\leq b</m> é
     <mdn>
         <mrow>L = \lim_{n\to \infty}\sum_{i=0}^{n-1}|P_{i}P_{i+1}| \amp </mrow>,
@@ -200,7 +200,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Usando integral</title>
     <p>
             
-    Em geral, para encontrar o comprimento de um seguimento de reta usamos a fórma da distância. Considere <m>L_i</m> a
+    Em geral, para encontrar o comprimento de um segmento de reta usamos a fórmula da distância. Considere <m>L_i</m> a
     distância entre os pontos <m> P_i</m> e <m>P_{i+1}</m>. Então,
 
 <md >
