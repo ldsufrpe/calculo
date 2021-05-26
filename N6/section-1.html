@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-26T10:55:45-03:00       *-->
+<!--*       on 2021-05-26T15:25:35-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -137,7 +137,7 @@ true);
 <p id="p-6">Para o que segue vamos assumir que nossa função é uma função <dfn class="terminology">suave</dfn> em \([a,b]\text{,}\) o que significa que \(f^{\prime}\) é contínua para todo \(x\) em \([a,b]\text{.}\)</p>
 <p id="p-7">A curva mais simples é uma reta. Podemos encontrar o comprimento de um segmento de linha usando a geometria. Para qualquer coisa mais complexa, usaremos segmentos de reta para aproximar a curva.</p></section><article class="assemblage assemblage-like" id="assemblage-comprimento-aprox"><h6 class="heading"><span class="title">Calculando o comprimento de arco.</span></h6>
 <ol id="p-8" class="decimal">
-<li id="li-3"><p id="p-9">Divida o intervalo \([a,b]\) em \(n\) subintervalos de mesma largura, cujos extremos de cada subintervalo são \(a=x_1 \lt x_1 \lt x_2\lt \ldots\lt x_n=b.\)</p></li>
+<li id="li-3"><p id="p-9">Divida o intervalo \([a,b]\) em \(n\) subintervalos de mesma largura, cujos extremos de cada subintervalo são \(a=x_1 \lt x_2\lt \ldots\lt x_n=b.\)</p></li>
 <li id="li-4"><p id="p-10">Encontre o comprimento dos segmentos de reta conectando os pontos \(P_i=(x_i,f(x_i))\) e \(P_{i+1}=(x_{i+1},f(x_{i+1}))\) para \(i=0,1\ldots, n-1\text{.}\)</p></li>
 <li id="li-5"><p id="p-11">Some todos esses comprimentos para obter uma aproximação do comprimento do arco.</p></li>
 <li id="li-6"><p id="p-12">Finalmente, tomamos o limite com \(n\to \infty\) para obter o comprimento de arco.</p></li>
@@ -154,10 +154,10 @@ L_i =\amp \sqrt{[x_{i+1}-x_i]^2 + [f(x_{i+1})-f(x_i)]^2} \\
 \end{align*}
 </div>
 <p class="continuation">no qual \(\Delta x= x_{i+1}-x_i=\frac{b-a}{n}\) é uma constante.</p>
-<p id="p-14">Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> , existe \(c_i\) com \(x_i \lt c_i\lt x_{i+1}\) tal que \(f^{\prime}(c_i)=\frac{f_{x+1}-f(x_i)}{\Delta x}\text{.}\) Multiplicando ambos os lados por \(\Delta x\) obtemos:</p>
+<p id="p-14">Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> , existe \(c_i\) com \(x_i \lt c_i\lt x_{i+1}\) tal que \(f^{\prime}(c_i)=\frac{f(x_{i+1})}-f(x_i)}{\Delta x}\text{.}\) Multiplicando ambos os lados por \(\Delta x\) obtemos:</p>
 <div class="displaymath">
 \begin{equation*}
-f(x_{i+1}) = f(x_i)-f^{\prime}(c_i)\cdot\Delta x.
+f(x_{i+1}) - f(x_i)=f^{\prime}(c_i)\cdot\Delta x.
 \end{equation*}
 </div>
 <p class="continuation">De acordo com a <a class="xref" data-knowl="./knowl/distancia.html" title="Equação">fórmula da distância</a> nós temos</p>
@@ -272,10 +272,11 @@ S = \amp \frac{2\pi}{36}\integrald{u^{\frac{1}{2}}}{1}{10}{u} \\
 =\amp \frac{\pi}{27}(10^{\frac{3}{2}}-1)
 \end{align*}
 </div>
+<p class="continuation"><figure class="figure figure-like" id="plot3d-ex1"><iframe src="https://www.monroecc.edu/faculty/paulseeburger/CalcPlot3D/dynamicFigure/?type=parametric;parametric=2;x=u;y=u%5E3*cos(v);z=u%5E3*sin(v);visible=true;umin=0;umax=1;usteps=30;vmin=0;vmax=2*pi;vsteps=50;alpha=-1;view=0;format=normal;constcol=rgb(20,210,70)&amp;type=spacecurve;spacecurve=curve;x=t;y=t%5E3;z=0;visible=true;width=4;view=undefined;tmin=0;tmax=1;tsteps=100;color=rgb(255,0,0);showtrace=false;tval=0;constcol=true;twod=false;arrows=0;showpt=true;trace=true;vel=true;acc=false;osc=false;k=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=true;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=true;showoscplane=false;showrectplane=false;shownormplane=false&amp;type=window;hsrmode=3;nomidpts=true;anaglyph=-1;center=-2.0557833663767604,6.8983110955904055,6.941689908011071,1;focus=0,0,0,1;up=0.08185003331277463,-0.7229913044680089,0.685991359792778,1;transparent=true;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=false;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-0.5;xmax=1.5;ymin=-1;ymax=1;zmin=-1;zmax=1;xscale=1;yscale=1;zscale=1;zcmin=-4;zcmax=4;zoom=2.610667;xscalefactor=1;yscalefactor=1;zscalefactor=1#" id="calplot3d-ex1" width="480" height="480"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-4"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-33">Encontre a área da superfície gerada pela rotação em torno do eixo \(x\) do gráfico de \(f(x)=(4-x^{\frac{2}{3}})^{\frac{3}{2}}\) entre  \(x=0\) e \(x=3\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
@@ -297,10 +298,11 @@ S= 2\pi\integrald{(4-x^{\frac{2}{3}})^{\frac{3}{2}}\frac{2}{x^{\frac{1}{3}}}}{0}
 S = \left.2\pi\frac{-6(4-x^{\frac{2}{3}})^{\frac{5}{3}}}{5}\right|_0^3=202.765
 \end{equation*}
 </div>
+<p class="continuation"><figure class="figure figure-like" id="plot3d-ex2"><iframe src="https://www.monroecc.edu/faculty/paulseeburger/CalcPlot3D/dynamicFigure/?type=parametric;parametric=2;x=u;y=(4-u%5E(2/3))%5E(3/2)*sin(v);z=(4-u%5E(2/3))%5E(3/2)*cos(v);visible=true;umin=0;umax=3;usteps=30;vmin=0;vmax=2*pi;vsteps=50;alpha=-1;view=0;format=normal;constcol=rgb(20,210,70)&amp;type=spacecurve;spacecurve=curve;x=t;y=(4-t%5E(2/3))%5E(3/2);z=0;visible=true;width=4;view=undefined;tmin=0;tmax=3;tsteps=50;color=rgb(255,0,0);showtrace=false;tval=0;constcol=true;twod=false;arrows=0;showpt=true;trace=true;vel=true;acc=false;osc=false;k=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=true;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=false;showoscplane=false;showrectplane=false;shownormplane=false&amp;type=window;hsrmode=0;nomidpts=false;anaglyph=-1;center=10.202521709374446,24.819249222212196,-29.66333458691589,1;focus=0,0,0,1;up=0.9620810614584583,-0.08618744694044446,0.2587890167160396,1;transparent=true;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=false;gridplanes=false;gridcolor=rgb(128,128,128);xmin=0;xmax=3;ymin=-8;ymax=8;zmin=-8;zmax=8;xscale=1;yscale=5;zscale=5;zcmin=-4;zcmax=4;zoom=0.168833;xscalefactor=1.2;yscalefactor=1;zscalefactor=1#" id="calcplot3d-ex1" width="480" height="480"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-35">Obtenha a área da superfície de revolução obtida pela rotação da curva \(y=4x+3\) ao longo do intervalo \([0,4]\) .</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-36">depois</p></div></div>
@@ -313,7 +315,7 @@ S = \left.2\pi\frac{-6(4-x^{\frac{2}{3}})^{\frac{5}{3}}}{5}\right|_0^3=202.765
 S=\integrald{2\pi x\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
 \end{equation*}
 </div></article><article class="example example-like" id="example-5"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-39">Encontre a área da superfície gerada girando em torno do eixo \(y\) do gráfico de \(f(x)=x^{1/3}\) com \(1\leq x\leq 8.\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
@@ -333,10 +335,11 @@ S=\amp \frac{2\pi}{3}\cdot\frac{1}{12}\integrald{\sqrt{u}}{10}{145}{u} \\
 =\amp \frac{5}{27} \, \pi {\left(29 \, \sqrt{145} - 2 \, \sqrt{10}\right)} 
 \end{align*}
 </div>
+<p class="continuation"><figure class="figure figure-like" id="plot3d-ex3"><iframe src="https://www.monroecc.edu/faculty/paulseeburger/CalcPlot3D/dynamicFigure/?type=parametric;parametric=2;x=u*cos(v);y=u%5E(1/3);z=u*sin(v);visible=true;umin=1;umax=8;usteps=30;vmin=0;vmax=2*pi;vsteps=50;alpha=-1;view=0;format=normal;constcol=rgb(20,210,70)&amp;type=spacecurve;spacecurve=curve;x=t;y=t%5E(1/3);z=0;visible=true;width=4;view=undefined;tmin=1;tmax=8;tsteps=50;color=rgb(255,0,0);showtrace=false;tval=0;constcol=true;twod=false;arrows=0;showpt=true;trace=true;vel=true;acc=false;osc=false;k=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=true;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=false;showoscplane=false;showrectplane=false;shownormplane=false&amp;type=window;hsrmode=0;nomidpts=false;anaglyph=-1;center=5.14341680179711,-5.141857818356507,39.33327550279124,1;focus=0,0,0,1;up=0.9728078169318783,0.024196301507300816,-0.23034645712404833,1;transparent=true;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=false;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-8;xmax=8;ymin=-1;ymax=3;zmin=-8;zmax=8;xscale=4;yscale=4;zscale=4;zcmin=-4;zcmax=4;zoom=0.201333;xscalefactor=1;yscalefactor=3;zscalefactor=1#" id="calcplot3d-ex3" width="600" height="600"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-6"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-41">Encontre a área da superfície gerada girando em torno do eixo \(y\) do gráfico de \(f(x)=1+5x^2\) com \(0\leq x\leq 1.\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
@@ -357,7 +360,7 @@ S = \amp \frac{1}{100}\integrald{\pi\sqrt{u}}{1}{101}{u} \\
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-3"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h6 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-43">Obtenha a área da superfície obtida pela rotação da curva \(f(x)=1+3x^2\) com \(0\leq x \leq 4\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-44"></p></div></div>
