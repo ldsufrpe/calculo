@@ -122,12 +122,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                         xxxxxxxx.
+                         Calcular o comprimento de arco de uma curva
                     </p>
                 </li>
                 <li>
                     <p>
-                        xxxxxxxxxxxxx.
+                        Calcular a área de uma superfície de revolução
                     </p>
                 </li>
                 
@@ -139,14 +139,126 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Comprimento de curvas</title>
   <introduction>
         <p>
-            introdução
+         Nosso objetivo é encontrar o comprimento do gráfico de uma função <m>y=f(x)</m> de <m>x=a</m> até <m>x=b</m>. 
+         Isto é o que  denominamos por <term>comprimento de arco</term>.
         </p>
+
+        <p>
+            Para o que segue vamos assumir que nossa função é uma função <term>suave</term> em <m>[a,b]</m>, o que significa que 
+            <m>f^{\prime}</m> é contínua para todo <m>x</m> em <m>[a,b]</m>.
+        </p>
+
+        <p>
+             A curva mais simples é uma reta. Podemos encontrar o comprimento de um segmento de linha usando a geometria.
+            Para qualquer coisa mais complexa, usaremos segmentos de reta para aproximar a curva.
+        </p>
+
     </introduction>
+<assemblage xml:id="assemblage-comprimento-aprox">
+    <title>Calculando o comprimento de arco</title>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    Divida o intervalo <m>[a,b]</m> em <m>n</m> subintervalos de mesma largura, cujos extremos 
+                    de cada subintervalo são <m>a=x_1 \lt x_1 \lt x_2\lt \ldots\lt x_n=b.</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    Encontre o comprimento dos segmentos de reta conectando os pontos <m>P_i=(x_i,f(x_i))</m> e 
+                    <m> P_{i+1}=(x_{i+1},f(x_{i+1}))</m> para <m>i=0,1\ldots, n-1</m>.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    Some todos esses comprimentos para obter uma aproximação do comprimento do arco.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Finalmente, tomamos o limite com <m>n\to \infty</m> para obter o comprimento de arco.
+                </p>
+            </li>
+        </ol>
+    </p>
+</assemblage>
+<paragraphs>
+    <title></title>
+    De acordo com os <xref ref="assemblage-comprimento-aprox" text="custom"> passos acima </xref>, o comprimento arco <m>L</m> de uma curva <m>y=f(x)</m>,
+    <m>a\leq x\leq b</m> é
+    <mdn>
+        <mrow>L = \lim_{n\to \infty}\sum_{i=0}^{n-1}|P_{i}P_{i+1}| \amp </mrow>,
+    </mdn>
+    no qual  <m>|P_{i}P_{i+1}|</m> representa o comprimento do segmento de reta cujo ponto inicial é <m>P_{i}</m> 
+    e o final é <m>P_{i+1}</m>.
+</paragraphs>
+
+<paragraphs>
+    <title>Usando integral</title>
+    <p>
+            
+    Em geral, para encontrar o comprimento de um seguimento de reta usamos a fórma da distância. Considere <m>L_i</m> a
+    distância entre os pontos <m> P_i</m> e <m>P_{i+1}</m>. Então,
+
+<md >
+    <mrow xml:id="distancia">L_i =\amp \sqrt{[x_{i+1}-x_i]^2 + [f(x_{i+1})-f(x_i)]^2} </mrow>
+    <mrow  > =\amp \sqrt{[\Delta x]^2 + [f(x_{i+1})-f(x_i)]^2} </mrow>
+</md>,
+no qual <m>\Delta x= x_{i+1}-x_i=\frac{b-a}{n}</m> é uma constante.
+  
+</p>
+<p>
+ 
+Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio, existe <m>c_i</m> com
+<m>x_i \lt c_i\lt x_{i+1}</m> tal que <m>f^{\prime}(c_i)=\frac{f_{x+1}-f(x_i)}{\Delta x}</m>.
+Multiplicando ambos os lados por <m>\Delta x</m> obtemos:
+
+<me>
+    f(x_{i+1}) = f(x_i)-f^{\prime}(c_i)\cdot\Delta x.
+</me>
+ De acordo com a <xref ref="distancia" text="custom"> fórmula da distância</xref> nós temos
+ 
+ <md>
+     <mrow> L_i= \amp \sqrt{[\Delta x]^2 + [f^{\prime}(c_i)\cdot \Delta x]^2} </mrow>
+     <mrow> = \amp \sqrt{[\Delta x]^2 \cdot(1+[f^{\prime}(c_i)])^2} </mrow>
+     <mrow> = \amp \sqrt{1+[f^{\prime}(c_i)]^2}\cdot \Delta x. </mrow>
+     
+ </md>
+O comprimento do arco é, portanto,
+
+<md >
+    <mrow>  \lim_{n\to \infty} \sum_{i=0}^{n-1}L_i=\amp  \lim_{n\to \infty} \sum_{i=0}^{n-1}\sqrt{1+[f^{\prime}(c_i)]^2}\cdot \Delta x </mrow>
+    <mrow xml:id="arc-integral"> \amp = \integrald{\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}.</mrow>
+</md>
+ 
+</p>
+</paragraphs>
+<note>
+Assumimos que <m>f^{\prime}</m> é contínua para garantir que a <xref ref="arc-integral" text="custom"> integral acima exista </xref>.
+</note>
+
+<assemblage xml:id="assemblage-formula-arc">
+    <title>Fórmula para o comprimento de arco</title>
+    <p>
+        Se <m>f^{\prime}</m> é contínua no intervalo <m>[a,b]</m>, então o comprimento de arco da curva <m>y=f(x)</m>, <m>a\leq x \leq b</m>, é
+        <me>
+            L=\integrald{\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
+        </me>
+        
+    </p>
+</assemblage>
+<technology>
+<title>Faça você mesmo</title>
+
+
 
 <figure xml:id="figure-interactive-comprimento-arc">
 <caption>Comprimento de arco</caption>
 
-<interactive xml:id="interactive-numerical-integral" platform="sage" width="100%" aspect="1:1.2" >
+<interactive xml:id="interactive-interactive-comprimento-arc" platform="sage" width="100%" aspect="1:1.2" >
 <slate surface="sage">                    
 @interact
 def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  interval=range_slider(0, 20, 1, default=(0, 8), 
@@ -174,14 +286,92 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  inter
 </slate>
 </interactive>
 </figure>             
+</technology>
 
+<example>
+    <statement>
+        <p>
+            Encontre o comprimento de arco de <m>f(x)=\ln{(\sec{x})}</m>, <m>0\leq x\leq \frac{\pi}{4}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+                Uma vez que  <m>f(x)=\ln{(\sec{x})}</m>, temos <m>f^{\prime}(x)=\frac{1}{\sec{x}}\sec{x}\tan{x}=\tan{x}</m>, e portanto,
+                
+                <md>
+                    <mrow> \sqrt{1+ [f^{\prime}(x)]^2 }=\amp \sqrt{1+ \tan^2{x}}  </mrow>
+                    <mrow> =\amp \sqrt{\sec^2{x}}</mrow>
+                    <mrow> =\amp  |\sec{x}|=\sec{x} </mrow>
+                </md>
+                para <m>0\leq x\leq \frac{\pi}{4}</m>. Então, a partir da
+            <xref ref="assemblage-formula-arc" text="custom"> 
+             fórmula para o comprimento de arco </xref>, o comprimento <m>L</m> vale 
+             <md>
+                 <mrow>L \amp =\integrald{\sec{x}}{0}{\frac{\pi}{4}}{x} </mrow>
+                 <mrow> \amp =\ln{(|\sec{x} + \tan{x}|)}\biggr|_0^{\frac{\pi}{4}}</mrow>
+                 <mrow> \amp = \ln{(\sqrt{2}+1)} </mrow>
+             </md>
+        </p>
+    </solution>
+</example>
+
+
+<example>
+    <statement>
+        <p>
+            Encontre o comprimento de arco de <m>f(x)= \frac{x^3}{6} + \frac{1}{2x}</m>, para <m>\frac{1}{2} \le x \le 1.</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+
+        De acordo com a <xref ref="assemblage-formula-arc" text="custom"> 
+             fórmula para o comprimento de arco </xref>, o comprimento <m>L</m> vale 
+        <md>
+          
+    <mrow>   L \amp= \displaystyle \int_{1/2}^{1} \sqrt{1+\left[f^{\prime}(x) \right]^2} \; \dd x
+    = \int_{1/2}^{1} \sqrt{1+\left( \frac{x^2}{2} - \frac{1}{2x^2} \right)^2} \; \dd x </mrow>
+    <mrow> \amp= \displaystyle \int_{1/2}^{1} \sqrt{1+\left( \frac{x^4}{4}-\frac12 + \frac{1}{4x^4} \right)} \; \dd x</mrow>
+    <mrow> \amp= \displaystyle \int_{1/2}^{1} \sqrt{ \frac{x^4}{4}+\frac12 + \frac{1}{4x^4} } \; \dd x</mrow>
+    <mrow> \amp= \displaystyle \int_{1/2}^{1} \sqrt{ \left( \frac{x^2}{2} + \frac{1}{2x^2} \right)^2} \; \dd x</mrow>
+    <mrow> \amp= \displaystyle \int_{1/2}^{1}  \left( \frac{x^2}{2} + \frac{1}{2x^2} \right)\; \dd x</mrow>
+    <mrow> \amp= \displaystyle   \left[ \frac{x^3}{6} - \frac{1}{2x} \right]_{1/2}^1</mrow>
+    <mrow> \amp= \displaystyle \left( \frac16-\frac12\right)-\left(\frac{1}{48} -1 \right)</mrow>
+    <mrow> \amp= \displaystyle \frac{31}{48} </mrow>
+     </md>
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Encontre o comprimento de arco de <m>f(x)=x^{\frac{3}{2}}</m>, para <m>1\leq x\leq 2</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Use a substituição <m>u=1+\frac{9}{4}x</m> e depois faça a mudança dos limites de integração.
+        </p>
+    </hint>
+    <answer>
+        <p>
+          <m> \dfrac{22\sqrt{22}-13\sqrt{13}}{27}\approx 2,09</m>
+        </p>
+    </answer>
+</exercise>
 <subsubsection xml:id="subsubsec-sugestao-video-intervalos-infinitos">
     <title>Sugestão de vídeo</title>
   
 <ul>
     <li>
         <p>
-          Problema Resolvido:  <url href="https://"> xxxxxxxxxxx.</url>
+          Problema Resolvido:  <url href="https://youtu.be/RrFqQw-xC2w"></url>.
+        </p>
+    </li>
+    <li>
+        <p>
+            Problema Resolvido:  <url href="https://youtu.be/lEAzYZq3zNs"></url>.
         </p>
     </li>
 </ul>    
@@ -193,22 +383,210 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  inter
     <title>Área de Superfície de Revolução</title>
 <introduction>
         <p>
-            introdução
+            Já falamos sobre o volume de um sólido de revolução, que você obtém girando uma região em torno de um eixo. 
+            Em particular, vimos o que acontece quando você pega a região entre o gráfico de uma função e o eixo x. 
+            Se você girar apenas o curva que define a borda e não a região sob a curva, não obterá um sólido; em vez disso,
+             obterá uma superfície de revolução. Nosso objetivo é encontrar a área de superfície de tais objetos
         </p>
     </introduction>
 
 
+    <paragraphs>
+        <title></title>
+        <p>
+           Dada uma curva <m>y=f(x)\geq 0</m> com <m>a\leq x\leq b</m>. 
+           Vamos girar essa curva em torno do eixo <m>x</m> para formar uma superfície.
+        </p>
+    </paragraphs>
 
+<assemblage xml:id="assemblage-formula-surf-x">
+    <title>Rotação ao redor do eixo <m>x</m></title>
+    <p>
+        Se uma função <m>f(x)\gt 0</m> e <m>f^{\prime}</m> é contínua no intervalo <m>[a,b]</m>, a área da superfície gerada pela rotação 
+        do gráfico de <m>f</m> ao redor do eixo <m>x</m> é
+        <me>
+            S=\integrald{2\pi\cdot f(x)\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
+        </me>
+        
+    </p>
+</assemblage>
 
+<example>
+    <statement>
+        <p>
+        Encontre a área da superfície gerada pela rotação em torno do eixo <m>x</m> do gráfico 
+        <m>f(x)=x^3</m> entre  <m>x=0</m> e <m>x=1</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Como <m>f(x)=x^3</m>, temos <m>f^{\prime}(x)=3x^2</m>, e portanto, de acordo com a
+            <xref ref="assemblage-formula-surf-x" text="custom"> 
+             fórmula para rotação em torno do eixo <m>x</m> </xref>, a área <m>S</m> da superfície gerada é 
+             expressa por
+            <md>
+                <mrow> S=\amp\integrald{2\pi x^3\sqrt{1+ (3x^2)^2}}{0}{1}{x} </mrow>
+                <mrow> =\amp 2\pi\integrald{x^3(1+9x^4)^{\frac{1}{2}}}{0}{1}{x} </mrow>
+            </md>.
+        A escolha da substituição <m>u=1+9x^4</m>, produz <m>\dd u=36x^3\dd x</m>. 
+        Quando <m>x=0</m>, <m>u=1</m>, e, quando <m>x=1</m>, <m>u=10</m>. Então,
+
+        <md>
+            <mrow>S = \amp \frac{2\pi}{36}\integrald{u^{\frac{1}{2}}}{1}{10}{u} </mrow>
+            <mrow> =\amp \left. \frac{2\pi}{36}\cdot\frac{2}{3}u^{\frac{3}{2}}\right|_1^{10}</mrow>
+            <mrow> =\amp \frac{\pi}{27}(10^{\frac{3}{2}}-1)</mrow>
+        </md>
+
+        </p>
+    </solution>
+</example>
+
+<example>
+    <statement>
+        <p>
+            Encontre a área da superfície gerada pela rotação em torno do eixo <m>x</m> do gráfico de 
+            <m>f(x)=(4-x^{\frac{2}{3}})^{\frac{3}{2}}</m>
+            entre  <m>x=0</m> e <m>x=3</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+         Note que <m>f^{\prime}(x)=\frac{3}{2}\sqrt{4-x^{\frac{2}{3}}}\left(-\frac{2}{3}x^{-\frac{1}{3}}\right)</m> e, portanto, 
+
+         <me>
+             1+ [f^{\prime}(x)]^2 = \frac{4}{x^{\frac{2}{3}}}.
+         </me>
+        Então,
+
+        <me>
+            S= 2\pi\integrald{(4-x^{\frac{2}{3}})^{\frac{3}{2}}\frac{2}{x^{\frac{1}{3}}}}{0}{3}{x}.
+        </me>
+        Usando a substituição <m>u=4-x^{\frac{2}{3}}</m> encontramos  <m>\dd u = -\frac{2}{3x^{\frac{1}{3}}}\dd x</m>,
+        e obtemos
+        <me>
+            S = \left.2\pi\frac{-6(4-x^{\frac{2}{3}})^{\frac{5}{3}}}{5}\right|_0^3=202.765
+        </me>
+        
+        </p>
+    </solution>
+</example>
               
-               
+
+
+<exercise>
+    <statement>
+        <p>
+            Obtenha a área da superfície de revolução obtida pela rotação da curva <m>y=4x+3</m> ao longo do intervalo 
+            <m>[0,4]</m> .
+        </p>
+    </statement>
+    <hint>
+        <p>
+            depois
+        </p>
+    </hint>
+
+    <answer>
+        <p>
+            <m>88\pi\sqrt{17}</m>
+        </p>
+    </answer>
+</exercise>
  
-    
+<assemblage xml:id="assemblage-formula-surf-y">
+    <title>Rotação ao redor do eixo <m>y</m></title>
+    <p>
+        Se uma função <m>f(x)\gt 0</m> e <m>f^{\prime}</m> é contínua no intervalo <m>[a,b]</m>, a área da superfície gerada pela rotação 
+        do gráfico de <m>f</m> ao redor do eixo <m>y</m> é
+        <me>
+            S=\integrald{2\pi x\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
+        </me>
+        
+    </p>
+</assemblage> 
+
+
               
+<example>
+    <statement>
+        <p>
+            Encontre a área da superfície gerada girando em torno do eixo <m>y</m> do gráfico de 
+            <m>f(x)=x^{1/3}</m> com <m>1\leq x\leq 8.</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Como <m>f(x)=x^{1/3}</m>, temos <m>f^{\prime}(x)=1/3x^{\frac{2}{3}}</m>, e portanto, de acordo com a
+            <xref ref="assemblage-formula-surf-y" text="custom">  
+            fórmula para rotação em torno do eixo <m>y</m> </xref>, a área <m>S</m> da superfície 
+            gerada é expressa por 
 
+            <md>
+                <mrow> S =\amp 2\pi\integrald{x \sqrt{9+ \frac{1}{x^{4/3}} }}{1}{8}{x}</mrow>
+                <mrow> =\amp 2\pi\integrald{x\frac{\sqrt{9x^{4/3} + 1}}{3x^{2/3}}}{1}{8}{x}</mrow>
+                 <mrow> =\amp \frac{2\pi}{3} \integrald{x^{1/3}\sqrt{9x^{4/3}+1}}{1}{8}{x} </mrow>
+            </md>
+             Usando a substituição <m>u=9x^{4/3}+1</m> encontramos  <m>\dd u = 12x^{1/3}\,\dd x</m>.
+              Quando <m>x=1</m>, <m>u=10</m>, e, quando <m>x=8</m>, <m>u=145</m>. Logo,            
 
+            <md>
+                <mrow> S=\amp \frac{2\pi}{3}\cdot\frac{1}{12}\integrald{\sqrt{u}}{10}{145}{u} </mrow>
+                <mrow> =\amp \left. \frac{2\pi}{3}\cdot\frac{1}{12}\cdot \frac{2}{3}  u^{\frac{3}{2}}\right|_{10}^{145}</mrow>
+                <mrow> =\amp \frac{5}{27} \, \pi {\left(29 \, \sqrt{145} - 2 \, \sqrt{10}\right)} </mrow>
+            </md>
+        </p>
+    </solution>
+</example>
 
-<subsubsection xml:id="subsubsec-sugestao-video-area-superficie">
+<example>
+    <statement>
+        <p>
+            Encontre a área da superfície gerada girando em torno do eixo <m>y</m> do gráfico de 
+            <m>f(x)=1+5x^2</m> com <m>0\leq x\leq 1.</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Como <m>f(x)=1+ 5x^2</m>, temos <m>f^{\prime}(x)=10x</m>, e portanto, de acordo com a
+            <xref ref="assemblage-formula-surf-y" text="custom">  
+            fórmula para rotação em torno do eixo <m>y</m> </xref>, a área <m>S</m> da superfície 
+            gerada é expressa por 
+
+            <md>
+                <mrow> S =\amp\integrald{2\pi x\sqrt{1+ 100x^2}}{0}{1}{x} </mrow>.
+            </md>
+             Usando a substituição <m>u=1+ 100x^2</m> encontramos  <m>\dd u = 200x\,\dd x</m>. Quando <m>x=0</m>,
+             <m>u=1</m>, e, quando <m>x=1</m>, <m>u=101</m>. Logo, 
+
+             <md>
+                 <mrow>S = \amp \frac{1}{100}\integrald{\pi\sqrt{u}}{1}{101}{u} </mrow>
+                 <mrow> = \amp \left. \frac{1}{100}\cdot\frac{2\pi u^{\frac{3}{2}}}{3}\right|_1^{101}</mrow>
+                 <mrow> =\amp \frac{2\pi\cdot 101^{\frac{3}{2}}}{300}-\frac{2\pi}{300} .</mrow>
+             </md>  
+             </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Obtenha a área da superfície obtida pela rotação da curva <m>f(x)=1+3x^2</m> com <m>0\leq x \leq 4</m>.
+        </p>
+    </statement>
+
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+
+    <answer>
+        <p>
+            <m> \approx 806,284 </m>
+        </p>
+    </answer>
+</exercise>
+<!-- <subsubsection xml:id="subsubsec-sugestao-video-area-superficie">
     <title>Sugestão de vídeo</title>
     <introduction>
         <p>
@@ -222,12 +600,12 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  inter
         </p>
     </li>
 </ul>    
-</subsubsection>
+</subsubsection> -->
 </subsection>
 
 
 
-<subsection xml:id="subsec-log-integral">
+<!-- <subsection xml:id="subsec-log-integral">
     <title>Logarítmo definido como integral</title>
 <introduction>
         <p>
@@ -254,7 +632,7 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  inter
 
 
 
-The Logarithm Def ined as an Integral
+The Logarithm Def ined as an Integral -->
  <exercises xml:id="exercises-mais-aplicacoes">
      
  </exercises>

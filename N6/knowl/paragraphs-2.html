@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-05-26T03:28:19-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<section class="paragraphs"><h5 class="heading"><span class="title">Usando integral.</span></h5>
+<p>Em geral, para encontrar o comprimento de um seguimento de reta usamos a fórma da distância. Considere \(L_i\) a distância entre os pontos \(P_i\) e \(P_{i+1}\text{.}\) Então,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+L_i =\amp \sqrt{[x_{i+1}-x_i]^2 + [f(x_{i+1})-f(x_i)]^2} \\
+=\amp \sqrt{[\Delta x]^2 + [f(x_{i+1})-f(x_i)]^2} \text{,}
+\end{align*}
+</div>
+<p class="continuation">no qual \(\Delta x= x_{i+1}-x_i=\frac{b-a}{n}\) é uma constante.</p>
+<p>Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio, existe \(c_i\) com \(x_i \lt c_i\lt x_{i+1}\) tal que \(f^{\prime}(c_i)=\frac{f_{x+1}-f(x_i)}{\Delta x}\text{.}\) Multiplicando ambos os lados por \(\Delta x\) obtemos:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(x_{i+1}) = f(x_i)-f^{\prime}(c_i)\cdot\Delta x.
+\end{equation*}
+</div>
+<p class="continuation">De acordo com a <a class="xref" data-knowl="./knowl/distancia.html" title="Equação">fórmula da distância</a> nós temos</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+L_i= \amp \sqrt{[\Delta x]^2 + [f^{\prime}(c_i)\cdot \Delta x]^2} \\
+= \amp \sqrt{[\Delta x]^2 \cdot(1+[f^{\prime}(c_i)])^2} \\
+= \amp \sqrt{1+[f^{\prime}(c_i)]^2}\cdot \Delta x. 
+\end{align*}
+</div>
+<p class="continuation">O comprimento do arco é, portanto,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\lim_{n\to \infty} \sum_{i=0}^{n-1}L_i=\amp  \lim_{n\to \infty} \sum_{i=0}^{n-1}\sqrt{1+[f^{\prime}(c_i)]^2}\cdot \Delta x \\
+\amp = \integrald{\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}.
+\end{align*}
+</div></section><span class="incontext"><a href="section-1.html#paragraphs-2">em contexto</a></span>
+</body>
+</html>
