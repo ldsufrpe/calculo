@@ -197,7 +197,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </paragraphs>
 
 <paragraphs>
-    <title>Usando integral</title>
+<title>Usando integral</title>
     <p>
             
     Em geral, para encontrar o comprimento de um segmento de reta usamos a fórmula da distância. Considere <m>L_i</m> a
@@ -205,14 +205,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <md >
     <mrow xml:id="distancia">L_i =\amp \sqrt{[x_{i+1}-x_i]^2 + [f(x_{i+1})-f(x_i)]^2} </mrow>
-    <mrow  > =\amp \sqrt{[\Delta x]^2 + [f(x_{i+1})-f(x_i)]^2} </mrow>
+    <mrow> =\amp \sqrt{[\Delta x]^2 + [f(x_{i+1})-f(x_i)]^2} </mrow>
 </md>,
 no qual <m>\Delta x= x_{i+1}-x_i=\frac{b-a}{n}</m> é uma constante.
   
 </p>
 <p>
  
-Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio, existe <m>c_i</m> com
+Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio <fn>Veja em https://pt.wikipedia.org/wiki/Teorema_do_valor_médio</fn> , existe <m>c_i</m> com
 <m>x_i \lt c_i\lt x_{i+1}</m> tal que <m>f^{\prime}(c_i)=\frac{f_{x+1}-f(x_i)}{\Delta x}</m>.
 Multiplicando ambos os lados por <m>\Delta x</m> obtemos:
 
