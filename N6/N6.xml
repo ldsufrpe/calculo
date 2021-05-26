@@ -95,11 +95,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <institution>Universidade Federal Rural de Pernambuco</institution>
                 </author>
 
-                <author>
+                <!-- <author>
                     <personname>Deibsom Silva</personname>
                     <department>Departamento de Matemática</department>                    
                     <institution>Universidade Federal Rural de Pernambuco</institution>
-                </author>
+                </author> -->
                 <date><today /></date>
             </titlepage>
 
