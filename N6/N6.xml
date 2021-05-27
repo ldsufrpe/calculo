@@ -503,7 +503,7 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  inter
 </exercise>
  
 <assemblage xml:id="assemblage-formula-surf-y">
-    <title>Rotação ao redor do eixo <m>y</m></title>
+    <title>Rotação em torno do eixo <m>y</m></title>
     <p>
         Se uma função <m>f(x)\gt 0</m> e <m>f^{\prime}</m> é contínua no intervalo <m>[a,b]</m>, a área da superfície gerada pela rotação 
         do gráfico de <m>f</m> ao redor do eixo <m>y</m> é
@@ -531,7 +531,7 @@ def _(f = input_box(default = sin(x), width=20, type = SR, label='f(x)'),  inter
             gerada é expressa por 
 
             <md>
-                <mrow> S =\amp 2\pi\integrald{x \sqrt{9+ \frac{1}{x^{4/3}} }}{1}{8}{x}</mrow>
+                <mrow> S =\amp 2\pi\integrald{x \sqrt{\frac{9x^{4/3}+1}{9x^{4/3}} }}{1}{8}{x}</mrow>
                 <mrow> =\amp 2\pi\integrald{x\frac{\sqrt{9x^{4/3} + 1}}{3x^{2/3}}}{1}{8}{x}</mrow>
                  <mrow> =\amp \frac{2\pi}{3} \integrald{x^{1/3}\sqrt{9x^{4/3}+1}}{1}{8}{x} </mrow>
             </md>
