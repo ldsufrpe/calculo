@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-27T18:03:12-03:00       *-->
+<!--*       on 2021-05-27T18:12:34-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -246,7 +246,7 @@ L \amp= \displaystyle \int_{1/2}^{1} \sqrt{1+\left[f^{\prime}(x) \right]^2} \; \
 </ul></section></section><section class="subsection" id="subsec-area-superficie"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Área de Superfície de Revolução</span>
 </h3>
-<section class="introduction" id="introduction-3"><p id="p-28">Já falamos sobre o volume de um sólido de revolução, que você obtém girando uma região em torno de um eixo. Em particular, vimos o que acontece quando você pega a região entre o gráfico de uma função e o eixo x. Se você girar apenas o curva que define a borda e não a região sob a curva, não obterá um sólido; em vez disso, obterá uma superfície de revolução. Nosso objetivo é encontrar a área de superfície de tais objetos</p></section><section class="paragraphs" id="paragraphs-3"><p id="p-29">Dada uma curva \(y=f(x)\geq 0\) com \(a\leq x\leq b\text{.}\) Vamos girar essa curva em torno do eixo \(x\) para formar uma superfície.</p></section><article class="assemblage assemblage-like" id="assemblage-formula-surf-x"><h6 class="heading"><span class="title">Rotação ao redor do eixo \(x\).</span></h6>
+<section class="introduction" id="introduction-3"><p id="p-28">Já falamos sobre o volume de um sólido de revolução, que você obtém girando uma região em torno de um eixo. Em particular, vimos o que acontece quando você pega a região entre o gráfico de uma função e o eixo x. Se você girar apenas o curva que define a borda e não a região sob a curva, não obterá um sólido; em vez disso, obterá uma superfície de revolução. Nosso objetivo é encontrar a área de superfície de tais objetos</p></section><section class="paragraphs" id="paragraphs-3"><p id="p-29">Dada uma curva \(y=f(x)\geq 0\) com \(a\leq x\leq b\text{.}\) Vamos girar essa curva em torno do eixo \(x\) para formar uma superfície.</p></section><article class="assemblage assemblage-like" id="assemblage-formula-surf-x"><h6 class="heading"><span class="title">Rotação ao em torno do eixo \(x\).</span></h6>
 <p id="p-30">Se uma função \(f(x)\gt 0\) e \(f^{\prime}\) é contínua no intervalo \([a,b]\text{,}\) a área da superfície gerada pela rotação do gráfico de \(f\) ao redor do eixo \(x\) é</p>
 <div class="displaymath">
 \begin{equation*}
@@ -257,7 +257,7 @@ S=\integrald{2\pi\cdot f(x)\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-31">Encontre a área da superfície gerada pela rotação em torno do eixo \(x\) do gráfico \(f(x)=x^3\) entre  \(x=0\) e \(x=1\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<p id="p-32">Como \(f(x)=x^3\text{,}\) temos \(f^{\prime}(x)=3x^2\text{,}\) e portanto, de acordo com a <a class="xref" data-knowl="./knowl/assemblage-formula-surf-x.html" title="[assemblage]: Rotação ao redor do eixo \(x\)">fórmula para rotação em torno do eixo \(x\)</a>, a área \(S\) da superfície gerada é expressa por</p>
+<p id="p-32">Como \(f(x)=x^3\text{,}\) temos \(f^{\prime}(x)=3x^2\text{,}\) e portanto, de acordo com a <a class="xref" data-knowl="./knowl/assemblage-formula-surf-x.html" title="[assemblage]: Rotação ao em torno do eixo \(x\)">fórmula para rotação em torno do eixo \(x\)</a>, a área \(S\) da superfície gerada é expressa por</p>
 <div class="displaymath">
 \begin{align*}
 S=\amp\integrald{2\pi x^3\sqrt{1+ (3x^2)^2}}{0}{1}{x} \\
@@ -322,6 +322,7 @@ S=\integrald{2\pi x\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
 <p id="p-40">Como \(f(x)=x^{1/3}\text{,}\) temos \(f^{\prime}(x)=\frac{1}{3x^{2/3}}\text{,}\) e portanto, de acordo com a <a class="xref" data-knowl="./knowl/assemblage-formula-surf-y.html" title="[assemblage]: Rotação em torno do eixo \(y\)">fórmula para rotação em torno do eixo \(y\)</a>, a área \(S\) da superfície gerada é expressa por</p>
 <div class="displaymath">
 \begin{align*}
+S =\amp 2\pi\integrald{x \sqrt{1 + \frac{1}{9x^{4/3}} }}{1}{8}{x}\\
 S =\amp 2\pi\integrald{x \sqrt{\frac{9x^{4/3}+1}{9x^{4/3}} }}{1}{8}{x}\\
 =\amp 2\pi\integrald{x\frac{\sqrt{9x^{4/3} + 1}}{3x^{2/3}}}{1}{8}{x}\\
 =\amp \frac{2\pi}{3} \integrald{x^{1/3}\sqrt{9x^{4/3}+1}}{1}{8}{x} 
