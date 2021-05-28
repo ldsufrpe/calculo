@@ -144,7 +144,7 @@
         <p>Lembre-se de que o gráfico de \ (f (x) \) passando pelo ponto
         <m>(6, 4)</m>, isso simplesmente significa <m>f(6) = 4</m>.  Similarmente, a inclinação da linha tangente em <m>x, f(x)</m> sendo <m>{5}x + 3</m> significa que a derivada de <m>f</m> em <m>x</m> é esta fórmula. Isto é,
         <m>f'(x) = {5}x + 3</m>.</p>
-        <p>Agora, encotreamos a primitiva de <m>f'(x) = {5}x + 3</m>.  Isto é dado por <m>f(x) = \frac{5}{2}x^2 + {3}x + C</m>.  O fado que
+        <p>Agora, encontramos a primitiva de <m>f'(x) = {5}x + 3</m>.  Isto é dado por <m>f(x) = \frac{5}{2}x^2 + {3}x + C</m>.  O fado que
         <m>f(6) = 4</m> nos permite obter <m>C</m> como segue.</p>
         <p><me>\begin{aligned}
             f(6) \amp  = 4 \\

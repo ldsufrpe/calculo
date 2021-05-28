@@ -41,7 +41,7 @@ por Leon Silva e Deibsom Silva
 - [N3 - Integral Definida](https://ldsufrpe.github.io/calculo/N3/).
 - [N4 - Técnicas: Integração Partes e por Frações Parciais](https://ldsufrpe.github.io/calculo/N4/).
 - [N5 - Aplicações: Área e Volume](https://ldsufrpe.github.io/calculo/N5/).
-- [N6 - Mais Aplicações de integral](https://ldsufrpe.github.io/calculo/N6/). (*Em construção*)
+- [N6 - Mais Aplicações de integral](https://ldsufrpe.github.io/calculo/N6/). 
 - [N7 - Integral Trigonométrica](https://ldsufrpe.github.io/calculo/N7/). (*Em construção*)
 - [N8 - Soma de Riemann](https://ldsufrpe.github.io/calculo/N8/).
 - [N9 - Integral Aproximada](https://ldsufrpe.github.io/calculo/N9/). (*Em construção*)
