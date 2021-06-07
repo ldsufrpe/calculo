@@ -486,7 +486,7 @@ soma de áreas de retângulos cuja base vale <m>\Delta x</m> e sua altura é <m>
 (veja a  <xref first="fig-riemann-esquerda" last="fig-riemann-medio"/>).
 
 Se <m>f</m> assumir valores positivos e negativos, como na <xref ref="fig-riemann-medio-negativo"/>, então a soma de Riemann
-é o resultado da diferênca entre as áreas dos retângulos que estão acima do eixo <m>x</m> e as áreas dos retângulos 
+é o resultado da diferença entre as áreas dos retângulos que estão acima do eixo <m>x</m> e as áreas dos retângulos 
 que estão abaixo do eixo <m>x</m>. 
 
 </p>
