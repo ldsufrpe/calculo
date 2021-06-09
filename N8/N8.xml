@@ -764,7 +764,7 @@ def midpoint(f = input_box(default = x^2, type = SR, width=20, label="f(x)="),
 </technology>
 
 
-<subsubsection xml:id="subsubsec-sugestao-videos-soma-riemann">
+<subsubsection xml:id="subsubsec-sugestao-videos-somatorio">
     <title>Sugestão de vídeos</title>
    
 <ul>
@@ -1047,7 +1047,7 @@ negativos. Entretanto, ela pode ser interpretada como a diferença de áreas aci
         </statement>
     </theorem>
 
-<subsubsection xml:id="subsubsec-sugestao-videos-integral-defi-riemann">
+<subsubsection xml:id="subsubsec-sugestao-videos-riemann-TFC">
     <title>Sugestão de vídeos</title>
 <ul>
     <li>

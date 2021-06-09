@@ -102,15 +102,15 @@
          <m>=	\frac{(4)(-8)(n+1)(2n+1)}{6n^2} + (4)(6)</m> 
         
         
-         <m>=	\frac{(-16/3)(n+1)(2n+1)}{n^2} + 24</m> 
+         <m>=	\frac{(-16/3)(n+1)(2n+1)}{n^2} + 24</m>,
         
         
         
         <p>o que responde a primeira parte do problema acima.</p>
         
         
-        Para a segunda parte do problema, vamos tomar o limite com
-        <m>n \rightarrow \infty</m>:
+        <p> Para a segunda parte do problema, vamos tomar o limite com
+        <m>n \rightarrow \infty</m>:</p>
         
         <m>\displaystyle 	\lim_{n \rightarrow \infty} R_n  
          =	\lim_{n \rightarrow \infty} \left[ \frac{(-16/3)(n+1)(2n+1)}{n^2} + 24 \right]</m> 
