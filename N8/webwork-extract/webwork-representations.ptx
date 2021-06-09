@@ -102,36 +102,36 @@
          <m>=	\frac{(4)(-8)(n+1)(2n+1)}{6n^2} + (4)(6)</m> 
         
         
-         <m>=	\frac{-16/3(n+1)(2n+1)}{n^2} + 24</m> 
+         <m>=	\frac{(-16/3)(n+1)(2n+1)}{n^2} + 24</m> 
         
         
         
-        o que responde a primeira parte do problema acima.
+        <p>o que responde a primeira parte do problema acima.</p>
         
         
         Para a segunda parte do problema, vamos tomar o limite com
         <m>n \rightarrow \infty</m>:
         
         <m>\displaystyle 	\lim_{n \rightarrow \infty} R_n  
-         =	\lim_{n \rightarrow \infty} \left[ \frac{-16/3(n+1)(2n+1)}{n^2} + 24 \right]</m> 
+         =	\lim_{n \rightarrow \infty} \left[ \frac{(-16/3)(n+1)(2n+1)}{n^2} + 24 \right]</m> 
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
-        			\frac{-16/3(n+1)(2n+1)}{n^2} \right] + 24</m> 
+        			\frac{(-16/3)(n+1)(2n+1)}{n^2} \right] + 24</m> 
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
-        			\frac{-16/3(2n^2+3n+1)}{n^2} \right] + 24</m> 
+        			\frac{(-16/3)(2n^2+3n+1)}{n^2} \right] + 24</m> 
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
         			-32/3 + \frac{-16}{n} +
-        			\frac{-16/3}{n^2} \right] + 24</m> 
+        			\frac{(-16/3)}{n^2} \right] + 24</m> 
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left(-32/3\right) +
         			\lim_{n \rightarrow \infty} \left(\frac{-16}{n}\right) +
-        			\lim_{n \rightarrow \infty} \left(\frac{-16/3}{n^2}\right) + 24</m> 
+        			\lim_{n \rightarrow \infty} \left(\frac{(-16/3)}{n^2}\right) + 24</m> 
         
         
         <m>\displaystyle	=	-32/3 + 0 + 0 + 24 = 40/3</m>
