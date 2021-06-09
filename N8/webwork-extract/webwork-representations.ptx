@@ -125,7 +125,7 @@
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
-        			-32/3 + \frac{-16}{n} +
+        			 + \frac{-16}{n} +
         			\frac{(-16/3)}{n^2} \right] + 24</m> 
         
         
