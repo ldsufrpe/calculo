@@ -50,7 +50,7 @@
         <p><m>24+\frac{64\!\left(n+1\right)\!\left(2n+1\right)}{(-12)n^{2}}</m></p>
       </answer>
       <answer>
-        <p><m>13.3333333333333</m></p>
+        <p><m>40/3</m></p>
       </answer>
       <solution>
         <me>R_{n} = \sum_{i=1}^{n} f(x_i) \Delta x
@@ -102,7 +102,7 @@
          <m>=	\frac{(4)(-8)(n+1)(2n+1)}{6n^2} + (4)(6)</m> 
         
         
-         <m>=	\frac{-5.33333333333333(n+1)(2n+1)}{n^2} + 24</m> 
+         <m>=	\frac{-16/3(n+1)(2n+1)}{n^2} + 24</m> 
         
         
         
@@ -113,28 +113,28 @@
         <m>n \rightarrow \infty</m>:
         
         <m>\displaystyle 	\lim_{n \rightarrow \infty} R_n  
-         =	\lim_{n \rightarrow \infty} \left[ \frac{-5.33333333333333(n+1)(2n+1)}{n^2} + 24 \right]</m> 
+         =	\lim_{n \rightarrow \infty} \left[ \frac{-16/3(n+1)(2n+1)}{n^2} + 24 \right]</m> 
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
-        			\frac{-5.33333333333333(n+1)(2n+1)}{n^2} \right] + 24</m> 
+        			\frac{-16/3(n+1)(2n+1)}{n^2} \right] + 24</m> 
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
-        			\frac{-5.33333333333333(2n^2+3n+1)}{n^2} \right] + 24</m> 
+        			\frac{-16/3(2n^2+3n+1)}{n^2} \right] + 24</m> 
         
         
         <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left[
-        			-10.6666666666667 + \frac{-16}{n} +
-        			\frac{-5.33333333333333}{n^2} \right] + 24</m> 
+        			-32/3 + \frac{-16}{n} +
+        			\frac{-16/3}{n^2} \right] + 24</m> 
         
         
-        <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left(-10.6666666666667\right) +
+        <m>\displaystyle	=	\lim_{n \rightarrow \infty} \left(-32/3\right) +
         			\lim_{n \rightarrow \infty} \left(\frac{-16}{n}\right) +
-        			\lim_{n \rightarrow \infty} \left(\frac{-5.33333333333333}{n^2}\right) + 24</m> 
+        			\lim_{n \rightarrow \infty} \left(\frac{-16/3}{n^2}\right) + 24</m> 
         
         
-        <m>\displaystyle	=	-10.6666666666667 + 0 + 0 + 24 = 13.3333333333333</m>
+        <m>\displaystyle	=	-32/3 + 0 + 0 + 24 = 40/3</m>
       </solution>
     </static>
     <server-url hint="yes" solution="yes" domain="http://149.56.124.81">http://149.56.124.81/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=2&amp;amp;sourceFilePath=local/Library/Indiana/Indiana_setIntegrals0Theory/ur_in_0_12.pg</server-url>
