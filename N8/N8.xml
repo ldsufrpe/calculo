@@ -868,7 +868,7 @@ a seguir simplificva a definição de integral definida.
                 <mrow> \integrald{(x^3-6x)}{0}{3}{x} \amp = \lim_{n \to \infty}\sum_{k=1}^{n}f(x_k)\Delta x  </mrow>
                 <mrow> \amp =  \lim_{n \to \infty}\sum_{k=1}^{n}f\left(\frac{3k}{n}\right)\cdot\frac{3}{n}</mrow>
                 <mrow> \amp = \lim_{n \to \infty}\frac{3}{n}\sum_{k=1}^{n}\left[ \left(\frac{3k}{n}\right)^3- 6\left(\frac{3k}{n}\right)\right] </mrow>
-                <mrow> \amp = \lim_{n \to \infty}\frac{3}{n}\sum_{k=1}^{n}\left[ \frac{27}{n}k^3- \frac{18}{n}k\right]  </mrow>
+                <mrow> \amp = \lim_{n \to \infty}\frac{3}{n}\sum_{k=1}^{n}\left[ \frac{27}{n^3}k^3- \frac{18}{n}k\right]  </mrow>
                 <mrow> \amp =\lim_{n \to \infty} \left[ \frac{81}{n^4}\sum_{k=1}^{n}k^3  - \frac{54}{n^2}\sum_{k=1}^{n}k\right]  </mrow>
                 <mrow> \amp =\lim_{n \to \infty} \left\{\frac{81}{n^4}\left[\frac{n(n+1)}{2}\right]^2   - \frac{54}{n^2}\frac{n(n+1)}{2}\right\} \qquad  \ct{Somatórios} \, <xref ref="sk3"/> - <xref ref="sk"/>   </mrow>
                 <mrow> \amp =\lim_{n \to \infty}\left[\frac{81}{4}\left(1+ \frac{1}{n}\right)^2 - 27\left(1+ \frac{1}{n}\right) \right] </mrow>
