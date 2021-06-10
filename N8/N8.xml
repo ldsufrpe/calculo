@@ -687,7 +687,7 @@ que estão abaixo do eixo <m>x</m>.
             </md>
         Naturalmente, sabemos que o valor exato da área desejada pode ser encontrada calculando a integral definida
         <me>
-            \integrald{-x^2+5}{0}{2}{dx}=\left.\left(-\frac{x^3}{3}+5x\right)\right|_0^2 = \frac{22}{3} .
+            \integrald{-x^2+5}{0}{2}{x}=\left.\left(-\frac{x^3}{3}+5x\right)\right|_0^2 = \frac{22}{3} .
         </me>
         
         </p>
