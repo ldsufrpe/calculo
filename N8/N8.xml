@@ -689,7 +689,8 @@ que estão abaixo do eixo <m>x</m>.
         <me>
             \integrald{-x^2+5}{0}{2}{x}=\left.\left(-\frac{x^3}{3}+5x\right)\right|_0^2 = \frac{22}{3} .
         </me>
-        
+        Na próxima seção vamos deixar estabelecido a integrl definida é um número que coincide com a soma de Riemann             
+        quando o número de retângulo sob a curva tente para o infinito.
         </p>
     </solution>
 </example>
