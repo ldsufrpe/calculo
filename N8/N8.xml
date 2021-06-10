@@ -650,7 +650,7 @@ que estão abaixo do eixo <m>x</m>.
              
              <mrow>   \sum_{k=1}^{6} {f(x^{\ast}_k) \, \Delta x} \amp = 1/2 \cdot \left[ f(1/4) + f(3/4) + f(5/4) + f(7/4) + f(9/4) + f(11/4) \right] </mrow>
     
-            <mrow>      \amp = -7.03125 . </mrow>
+            <mrow>      \amp = -7.03125  </mrow>
             </md>
 
 
@@ -676,13 +676,19 @@ que estão abaixo do eixo <m>x</m>.
         </p>
     </statement>
     <solution>
-        <p>
-                 <md>
-             
-             <mrow>   \sum_{k=1}^{6} {f(x^{\ast}_k) \, \Delta x} \amp = 1/3 \cdot \left[ f(1/6) + f(1/2) + f(5/6) + f(7/6) + f(3/2) + f(11/6) \right] </mrow>
-    
-            <mrow>      \amp = 7.3518. </mrow>
+        <p> Note que a soma da área de cada retângulo da Figura <xref ref="fig-ex-area-rieamann"/> é 
+        uma aproximação para a área limitada pela curva <m>y=-x^2+ 5</m>, pelo eixo <m>x</m> de <m>0</m> até <m>2</m>. 
+        Então,
+        
+            <md>             
+             <mrow>  Área \approx \sum_{k=1}^{6} {f(x^{\ast}_k) \, \Delta x} \amp = 1/3 \cdot \left[ f(1/6) + f(1/2) + f(5/6) + f(7/6) + f(3/2) + f(11/6) \right] </mrow>
+             <mrow>      \amp = 7.3518 </mrow>
             </md>
+        Naturalmente, sabemos que o valor exato da área desejada pode ser encontrada calculando a integral definida
+        <me>
+            \integral{-x^2+5}{0}{2}{dx}=\left.-\frac{x^3}{3}+5x\right|_0^2 = 22/3 
+        </me>
+        
         </p>
     </solution>
 </example>
