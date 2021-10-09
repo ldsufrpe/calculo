@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-13T22:59:15-03:00       *-->
+<!--*       on 2021-10-09T16:44:11-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,29 @@
 <title>Técnicas de Integração</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
@@ -57,7 +50,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}\require{polynom}\newcommand{ct}[1]{\color{gray}{\text{#1}}}
 \newcommand{ctm}[1]{\color{gray}{#1}}
 
 \newcommand{\doubler}[1]{2#1}
@@ -66,6 +59,7 @@ MathJax.Hub.Config({
 \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
 \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
 \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\newcommand{\dropsign}[1]{\smash{\llap{\raisebox{-.5\normalbaselineskip}{$#1$\hspace{2\arraycolsep}}}}}
 \DeclareMathOperator{\arcsec}{arc \,sec}
 \DeclareMathOperator{\sin}{sen}
 \DeclareMathOperator{\arcsin}{arc \,sen}
@@ -170,7 +164,7 @@ f(x)g(x) + C \amp = \integral{f(x)g'(x)}{x} + \integral{f'(x)g(x)}{x}
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">\(\integral{xe^x}{x}\).</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-part-1"><article class="example example-like"><p id="p-7">Determine \(\integral{xe^x}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
 <p id="p-8">Para utilizar <a class="xref" data-knowl="./knowl/assemblage-integral-partes.html" title="[assemblage]: Fórmula da integração por partes">Fórmula da integração por partes</a> devemos escolher com sabedoria, a partir do produto \(x\cdot e^x\,\dd x\text{,}\) o representante de \(u\) e \(\dd v\) que torne a integral mais simples. Em geral, escolhe-se como \(\dd v\) a parte mais complexa do integrando cuja a integral seja conhecida, neste caso, tomamos \(\dd v = e^x\dd x\text{,}\) e, por exclusão, \(u=x\text{.}\)  Agora, encontramos \(v\) aplicando a integral</p>
 <div class="displaymath">
 \begin{equation*}
@@ -196,14 +190,14 @@ v = \integral{}{v} = \integral{e^x}{x}=e^x.
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-part-1"><article class="exercise exercise-like"><p id="p-9">Determine \(\integral{xe^{3x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-10">Escolha \(u=x\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-11">\(\dfrac{e^{3x}}{9}(3x-1) + C\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-10">Escolha \(u=x\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-11">\(\dfrac{e^{3x}}{9}(3x-1) + C\)</p></div></div>
 </div></article></div>
 <article class="example example-like" id="ex-part-2"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-part-2"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">\(\integral{x\sin{x}}{x}\).</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-part-2"><article class="example example-like"><p id="p-12">Determine \(\integral{x\sin{x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
 <p id="p-13">Escolha, \(\dd v =\sin{x}\,\dd x\) e \(u=x\text{.}\) Então,</p>
 <div class="displaymath">
 \begin{align*}
@@ -225,15 +219,15 @@ v\amp= \integral{\sin{x}}{x}=-\cos{x},  \\
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-part-2"><article class="exercise exercise-like"><p id="p-14">Determine \(\integral{x\cos{x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-15">Escolha \(u=x\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-16">\(x\sin{x}+\cos{x} + C\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-15">Escolha \(u=x\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-16">\(x\sin{x}+\cos{x} + C\)</p></div></div>
 </div></article></div>
 <section class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Utilização repetida da integração por partes.</span></h5>
 <article class="example example-like" id="ex-part-4a"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-part-4a"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">\(\integral{x^2e^x}{x}\).</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-part-4a"><article class="example example-like"><p id="p-17">Determine \(\integral{x^2e^x}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
 <p id="p-18">Escolha \(\dd v=e^x\,\dd x\) e \(u=x^2\text{.}\) Então,</p>
 <div class="displaymath">
 \begin{align*}
@@ -274,7 +268,7 @@ v\amp= \integral{e^x}{x}=e^x,  \\
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">\(\integral{e^x\sin{x}}{x}\).</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-part-4b"><article class="example example-like"><p id="p-19">Determine \(\integral{e^x\sin{x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
 <p id="p-20">Escolha \(\dd v=\sin{x}\,\dd x\) e \(u=e^x\text{.}\) Então,</p>
 <div class="displaymath">
 \begin{align*}
@@ -326,8 +320,8 @@ v\amp = \integral{\cos{x}}{x}= \sin{x}  \\
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-part-4"><article class="exercise exercise-like"><p id="p-21">Determine \(\integral{t^3e^t}{t}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-22">Inicie escolhendo \(u=t^3\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-23">\(e^t(t^3-3t^2+6t-6) +C\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-22">Inicie escolhendo \(u=t^3\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-23">\(e^t(t^3-3t^2+6t-6) +C\)</p></div></div>
 </div></article></div></section><article class="assemblage assemblage-like" id="assemblage-integral-partes-definida"><h6 class="heading"><span class="title">Integração por partes de uma integral definida.</span></h6>
 <p id="p-24">Sejam \(u\) e \(v\) funções deriváveis<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a> em \([a,b]\text{.}\)</p>
 <div class="displaymath">
@@ -341,7 +335,7 @@ v\amp = \integral{\cos{x}}{x}= \sin{x}  \\
 <article class="task exercise-like" id="task-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-26">\(\integrald{\ln{x}}{1}{e}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
 <p id="p-27">Embora não pareça um produto, podemos escrever \(\ln{x}\cdot 1\) e assim escolher \(\dd v = 1\,\dd x\) e \(u=\ln{x}\text{.}\) Então,</p>
 <div class="displaymath">
 \begin{align*}
@@ -363,7 +357,7 @@ v\amp= \integral{1}{x}=x,  \\
 </div></article><article class="task exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-28">\(\integrald{x^2\ln{x}}{1}{e}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
 <p id="p-29">Escolha \(\dd v= x^2\, \dd x\) e \(u=\ln{x}\text{.}\) Então,</p>
 <div class="displaymath">
 \begin{align*}
@@ -389,8 +383,8 @@ v\amp= \integral{x^2}{x}=\frac{x^3}{3},  \\
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-part-3"><article class="exercise exercise-like"><p id="p-31">Determine \(\integrald{\ln{x}}{2}{3}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-32">Escolha \(u=\ln{x}\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-33">\(3\ln{3}-2\ln{2}-1\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-32">Escolha \(u=\ln{x}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-33">\(3\ln{3}-2\ln{2}-1\text{.}\)</p></div></div>
 </div></article></div>
 <article class="assemblage assemblage-like" id="assemblage-roteiro-por-partes"><h6 class="heading"><span class="title">Estratégias para escolha de \(u\) e \(\dd v\).</span></h6>
 <ul id="p-34" class="disc">
@@ -402,7 +396,7 @@ v\amp= \integral{x^2}{x}=\frac{x^3}{3},  \\
 <p id="p-37"><article class="task exercise-like" id="task-3"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-38">Use dois métodos diferentes para determinar a integral \(\integral{\cos^2x}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-39">Use os métodos de substituição e integração por partes. A igualdade \(\cos^2{\frac{t}{2}}=\frac{1}{2} + \cos{t}\) pode ser útil.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-39">Use os métodos de substituição e integração por partes. A igualdade \(\cos^2{\frac{t}{2}}=\frac{1}{2} + \cos{t}\) pode ser útil.</p></div></div>
 </div></article> <article class="task exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-40">Explique qualquer a diferença na forma das respostas obtidas.</p></article></p></article></section><section class="subsection" id="subsubsec-videos"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span>
@@ -468,7 +462,7 @@ v\amp= \integral{x^2}{x}=\frac{x^3}{3},  \\
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Determinando frações parciais.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-frac-1a"><article class="example example-like"><p id="p-53">Determine \(\integral{\frac{x+7}{x^2-x-6}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
 <p id="p-54">De acordo com a <a class="xref" data-knowl="./knowl/assemblage-fracoes-parciais.html" title="[assemblage]: Decomposição em frações parciais">decomposição por frações parciais</a>, a fatoração</p>
 <div class="displaymath">
 \begin{equation*}
@@ -514,21 +508,21 @@ A+B =1\amp \text{.}
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-frac-1a"><article class="exercise exercise-like"><p id="p-55">Determine \(\integral{\frac{1}{(x-1)(x-2)}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-56">Revise <a class="xref" data-knowl="./knowl/ex-frac-1a.html" title="Exemplo 1.11: Determinando frações parciais">Exemplo 1.11</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-57">\(-\log\left|x - 1\right| + \log\left|x - 2\right|+ C\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-56">Revise <a class="xref" data-knowl="./knowl/ex-frac-1a.html" title="Exemplo 1.11: Determinando frações parciais">Exemplo 1.11</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-57">\(-\log\left|x - 1\right| + \log\left|x - 2\right|+ C\)</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exer-frac-1b"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-frac-1b"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-frac-1b"><article class="exercise exercise-like"><p id="p-58">Determine  \(\integral{\frac{x+2}{x^2+x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-59">Encontre \(A\) e \(B\) para que  \(\frac{x+2}{x(x+1)}= \frac{A}{x} + \frac{B}{x+1}\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-60">\(2\ln{|x|}-\ln{|x+1|} + C\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-59">Encontre \(A\) e \(B\) para que  \(\frac{x+2}{x(x+1)}= \frac{A}{x} + \frac{B}{x+1}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-60">\(2\ln{|x|}-\ln{|x+1|} + C\)</p></div></div>
 </div></article></div>
 <article class="example example-like" id="ex-frac-2"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-frac-2"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Integração com fatores repetidos.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-frac-2"><article class="example example-like"><p id="p-61">Determine \(\integral{\frac{10x-2x^2}{(x-1)^2(x+3)}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
 <p id="p-62">A expressão \((x-1)^2(x+3)\) contém um fator linear distinto e outro fator linear repetido. Logo, a <a class="xref" data-knowl="./knowl/assemblage-fracoes-parciais.html" title="[assemblage]: Decomposição em frações parciais">decomposição por frações parciais</a> sugere</p>
 <div class="displaymath">
 \begin{equation*}
@@ -567,14 +561,14 @@ A+C \amp = -2 \\
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-frac-2"><article class="exercise exercise-like"><p id="p-63">Determine  \(\integral{\frac{5x^2+20x+6}{x^3+2x^2+x}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-64">\(x^3+2x^2+x = x(x+1)^2\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-65">\(\ln{\left|\frac{x^6}{x+1}\right|} -\frac{9}{x-1} + C\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-64">\(x^3+2x^2+x = x(x+1)^2\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-65">\(\ln{\left|\frac{x^6}{x+1}\right|} -\frac{9}{x-1} + C\)</p></div></div>
 </div></article></div>
 <article class="example example-like" id="ex-frac-3"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-frac-3"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Função racional imprópria.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-frac-3"><article class="example example-like"><p id="p-66">Determine \(\integral{\frac{2x^2-x-1}{x^3-2x^2+x-2}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
 <p id="p-67">Uma estratégia para fatorar o denominador \(x^3-2x^2+x-2\) é encontrando uma de suas raízes  \(\alpha\) e depois efetuar a  divisão  por \(x-\alpha\text{.}\) Observe que</p>
 <div class="displaymath">
 \begin{gather*}
@@ -639,7 +633,7 @@ C-2B \amp =-1
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-frac-3"><article class="exercise exercise-like"><p id="p-68">Determine \(\integral{\frac{x^5+x-1}{x^4-x^3}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like">
 <p id="p-69">Dividindo o numerador pelo denominador:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -647,80 +641,127 @@ C-2B \amp =-1
 \end{equation*}
 </div>
 </div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-70">\(\frac{x^2}{2} + x - \frac{1}{2x^2} + \ln{|x-1|}+C\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-70">\(\frac{x^2}{2} + x - \frac{1}{2x^2} + \ln{|x-1|}+C\)</p></div></div>
 </div></article></div>
-<article class="example example-like" id="example-9"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h6 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-71">Determine \(\integral{\frac{x^2+3x+1}{x^2(x+1)^3}}{x}\text{.}\)</p>
+<article class="example example-like" id="ex-frac-4"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-frac-4"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Grau do numerador.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-frac-4"><article class="example example-like"><p id="p-71">Determine \(\integral{\frac{6x^3+ 4x^2-47x-27}{x^2-9}}{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><p id="p-72">depois</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-72">O grau numerador é maior que a do denominador. Revise <a class="xref" data-knowl="./knowl/assemblage-fracoes-parciais.html" title="[assemblage]: Decomposição em frações parciais">as regras de decomposição por frações parciais</a>  e note que primeiro precisamos fazer uma divisão do integrando</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{6x^3+ 4x^2-47x-27}{x^2-9}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Então</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{6x^3+4x^2-47x-27}{x^2-9}=6x+4+\frac{7x+9}{x^2-9}.
+\end{equation*}
+</div>
+<p class="continuation">Agora usaremos o método de frações parciais em \(\frac{7x+9}{x^2-9}\text{.}\) O denominador pode ser fatorado como \(x^2-9=(x+3)(x-3)\text{.}\) Portanto, a decomposição da fração parcial tem a forma:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{7x+9}{x^2-9}=\frac{a}{x-3}+\frac{b}{x+3}.
+\end{equation*}
+</div>
+<p class="continuation">Multiplicando pelo mínimo denominador comum, \((x+3)(x-3)\text{,}\) obtemos</p>
+<div class="displaymath">
+\begin{equation*}
+7x+9=a(x+3)+b(x-3).            
+\end{equation*}
+</div>
+<p class="continuation">Substituindo \(x=3\) encontra-se \(a=5\text{,}\) e substituindo \(x=-3\) fornece \(b=2\text{.}\) Logo,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{7x+9}{x^2-9}=\frac{5}{x-3}+\frac{2}{x+3}
+\end{equation*}
+</div>
+<p class="continuation">e portanto</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\frac{6x^3+ 4x^2-47x-27}{x^2-9}}{x} = \amp  \integral{6x+4+\frac{5}{x-3}+\frac{2}{x+3}}{x}\\
+=\amp 3x^2+4x+5\ln|x-3|+2\ln|x+3|+C
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-9"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-9"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-73">Determine \(\integral{\frac{x^2+4x+1}{x^2(x+1)^3}}{x}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-74">\(\dfrac{x^{2} + x - 1}{x^{3} + 2 \, x^{2} + x} - \log\left(x + 1\right) + \log\left(x\right)\)</p></div></div>
 </div></article></div>
 <article class="activity project-like" id="activity-2"><h6 class="heading">
 <span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Epidemias.</span>
 </h6>
-<p id="p-73">Um único indivíduo infectado entra em uma comunidade de 500 indivíduos suscetíveis à doença. A doença se dissemina a uma taxa proporcional ao produto do número total de infectados pelo número de indivíduos suscetíveis ainda não infectados. Um modelo para o <em class="emphasis">tempo</em> que a doença leva para se disseminar entre \(x\)  indivíduos é</p>
+<p id="p-75">Um único indivíduo infectado entra em uma comunidade de 500 indivíduos suscetíveis à doença. A doença se dissemina a uma taxa proporcional ao produto do número total de infectados pelo número de indivíduos suscetíveis ainda não infectados. Um modelo para o <em class="emphasis">tempo</em> que a doença leva para se disseminar entre \(x\)  indivíduos é</p>
 <div class="displaymath">
 \begin{equation*}
 \text{tempo} = 5010\integral{\frac{1}{(x+1)(500-x)}}{x}.
 \end{equation*}
 </div>
 <article class="task exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-74">Determine o tempo para que 75% da população seja infectada.</p>
+<p id="p-76">Determine o tempo para que 75% da população seja infectada.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-75">Quando o tempo é 0, \(x=1\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-76">depois</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-77">Quando o tempo é 0, \(x=1\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-78">\(O tempo é igual a 10log(376) - 30log(5)\)</p></div></div>
 </div></article><article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-77">Determine o número de pessoas infectadas após 100 horas.</p>
+<p id="p-79">Determine o número de pessoas infectadas após 100 horas.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-78">depois</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-80">\(x=\frac{500e^{10}-1}{1+e^{10}\)</p></div></div>
 </div></article></article></section><section class="subsection" id="subsec-sugestao-de-videos"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Sugestão de Vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-15"><p id="p-79">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/rsrzFDqeJgU" target="_blank">\(\dfrac{x^2-2x-37}{x^2-3x-40}\)</a></p></li>
-<li id="li-16"><p id="p-80">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/yF0mw1bNL0U" target="_blank">\(\dfrac{10x^2+12x+20}{x^3-8}\)</a></p></li>
-<li id="li-17"><p id="p-81">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/JNjFCvNomEE" target="_blank">\(\dfrac{6x^2-19x+15}{(x-1)(x-2)^2}\)</a></p></li>
+<li id="li-15"><p id="p-81">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/rsrzFDqeJgU" target="_blank">\(\dfrac{x^2-2x-37}{x^2-3x-40}\)</a></p></li>
+<li id="li-16"><p id="p-82">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/yF0mw1bNL0U" target="_blank">\(\dfrac{10x^2+12x+20}{x^3-8}\)</a></p></li>
+<li id="li-17"><p id="p-83">Decomposição por frações parciais:  <a class="external" href="https://youtu.be/JNjFCvNomEE" target="_blank">\(\dfrac{6x^2-19x+15}{(x-1)(x-2)^2}\)</a></p></li>
 </ul></section><section class="exercises" id="exercises-integral-por-partes"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.5</span> <span class="title">Exercícios</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-1">
-<div class="introduction" id="introduction-4"><p id="p-82">Use a técnica de integração por partes para calcular as seguintes integrais indefinidas.</p></div>
+<h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
+<div class="introduction" id="introduction-4"><p id="p-84">Use a técnica de integração por partes para calcular as seguintes integrais indefinidas.</p></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-83">\(\integral{te^{2t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-84">\(\integral{x^2e^{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-85">\(\integral{t\sin{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-86">\(\integral{x^2\sin{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-87">\(\integral{y\ln{y}}{y}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-88">\(\integral{x^3\ln{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-89">\(\integral{(\ln{y})^2}{y}\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-90">\(\integral{\sin^2{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-91">\(\integral{\frac{y}{e^y}}{y}\)</p></article>
+<article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-85">\(\integral{te^{2t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-86">\(\integral{x^2e^{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-87">\(\integral{t\sin{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-88">\(\integral{x^2\sin{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-89">\(\integral{y\ln{y}}{y}\)</p></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-90">\(\integral{x^3\ln{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-91">\(\integral{(\ln{y})^2}{y}\)</p></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-92">\(\integral{\sin^2{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-93">\(\integral{\frac{y}{e^y}}{y}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-2">
-<div class="introduction" id="introduction-5"><p id="p-92">Use a técnica de integração por partes e o Teorema Fundamental do Cálculo para calcular as seguintes integrais definidas.</p></div>
+<h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
+<div class="introduction" id="introduction-5"><p id="p-94">Use a técnica de integração por partes e o Teorema Fundamental do Cálculo para calcular as seguintes integrais definidas.</p></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-93">\(\integrald{xe^x}{0}{1}{x}\)</p></article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-94">\(\integrald{\ln t}{1}{5}{t}\)</p></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-95">\(\integrald{e^x\cos{x}}{0}{\frac{\pi}{2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-96">\(\integrald{ye^{-y}}{0}{1}{y}\)</p></article>
+<article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-95">\(\integrald{xe^x}{0}{1}{x}\)</p></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-96">\(\integrald{\ln t}{1}{5}{t}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-97">\(\integrald{e^x\cos{x}}{0}{\frac{\pi}{2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-98">\(\integrald{ye^{-y}}{0}{1}{y}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-3">
-<div class="introduction" id="introduction-6"><p id="p-97">Use a técnica a frações parciais para calcular as seguintes integrais.</p></div>
+<h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
+<div class="introduction" id="introduction-6"><p id="p-99">Use a técnica a frações parciais para calcular as seguintes integrais.</p></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<p id="p-98">\(\integral{\frac{x + 2}{x^{2} - 5x + 6}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<p id="p-99">\(\integral{\frac{x + 1}{x^{2} + 4x + 4}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<p id="p-100">\(\integral{\frac{4{\left(x + 1\right)}}{2x^{2} + 3x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
-<p id="p-101">\(\integral{\frac{x^2+2}{x^2-3x+2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<p id="p-102">\(\integral{\frac{3x}{x^{2} + 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
-<p id="p-103">\(\integral{\frac{t-2}{t^2+t^4}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
-<p id="p-104">\(\integral{\frac{3x^{2} + 1}{x^{3} + x^{2} - 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
-<p id="p-105">\(\integral{\frac{x^{2} + 2x + 3}{x^{3} + 2x^{2} - x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
-<p id="p-106">\(\integral{\frac{x^{2} + 2x + 1}{x^{3} + 4x^{2} + 5x + 2}}{x}\)</p></article>
+<article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-100">\(\integral{\frac{x + 2}{x^{2} - 5x + 6}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-101">\(\integral{\frac{x + 1}{x^{2} + 4x + 4}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-102">\(\integral{\frac{4{\left(x + 1\right)}}{2x^{2} + 3x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-103">\(\integral{\frac{x^2+2}{x^2-3x+2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-104">\(\integral{\frac{3x}{x^{2} + 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="p-105">\(\integral{\frac{t-2}{t^2+t^4}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="p-106">\(\integral{\frac{3x^{2} + 1}{x^{3} + x^{2} - 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<p id="p-107">\(\integral{\frac{x^{2} + 2x + 3}{x^{3} + 2x^{2} - x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p id="p-108">\(\integral{\frac{x^{2} + 2x + 1}{x^{3} + 4x^{2} + 5x + 2}}{x}\)</p></article>
 </div>
 </div></section></section></div></main>
 </div>

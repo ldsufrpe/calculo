@@ -45,7 +45,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <docinfo>
     <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
 
-
+        <latex-preamble>
+            <package>cancel</package>
+            <package>polynom</package>
+        </latex-preamble>
 
        
         <macros>
@@ -58,6 +61,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
         \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
         \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \newcommand{\dropsign}[1]{\smash{\llap{\raisebox{-.5\normalbaselineskip}{$#1$\hspace{2\arraycolsep}}}}}%
         \DeclareMathOperator{\arcsec}{arc \,sec}
         \DeclareMathOperator{\sin}{sen}
         \DeclareMathOperator{\arcsin}{arc \,sen}
@@ -77,9 +81,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \usetikzlibrary{backgrounds}
         \usetikzlibrary{arrows,matrix}
         \usetikzlibrary{positioning}        % for Dave R's worksheet
-        \usepackage{circuitikz}             % for Virgil P's worksheet
-        
+        \usepackage{circuitikz}             % for Virgil P's worksheet        
         </latex-image-preamble>
+        
+    
     </docinfo>
 
     <article xml:id="calc-parts-frac-parciais">
@@ -953,18 +958,71 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </answer>
 </exercise>
-<example>
+
+
+
+<example xml:id="ex-frac-4">
+<title>Grau do numerador</title>
+
+
     <statement>
         <p>
-            Determine <m>\integral{\frac{x^2+3x+1}{x^2(x+1)^3}}{x}</m>.
+            Determine <m>\integral{\frac{6x^3+ 4x^2-47x-27}{x^2-9}}{x}</m>.
         </p>
     </statement>
     <solution>
         <p>
-            depois
+            O grau numerador é maior que a do denominador. Revise <xref ref="assemblage-fracoes-parciais" text="custom"> as regras de decomposição por frações parciais</xref>  e note que primeiro precisamos fazer uma divisão do integrando <me>\frac{6x^3+ 4x^2-47x-27}{x^2-9}</me>.
+            Então
+
+           <me>
+               \frac{6x^3+4x^2-47x-27}{x^2-9}=6x+4+\frac{7x+9}{x^2-9}.
+           </me>
+        Agora usaremos o método de frações parciais em <m>\frac{7x+9}{x^2-9}</m>. O denominador pode ser fatorado como <m>
+            x^2-9=(x+3)(x-3)</m>. Portanto, a decomposição da fração parcial tem a forma:
+
+            <me>
+                \frac{7x+9}{x^2-9}=\frac{a}{x-3}+\frac{b}{x+3}.
+            </me>
+            
+        Multiplicando pelo mínimo denominador comum, <m>(x+3)(x-3)</m>, obtemos 
+        <me>
+        7x+9=a(x+3)+b(x-3).            
+        </me>
+           
+    Substituindo <m>x=3</m> encontra-se <m>a=5</m>, e substituindo <m>x=-3</m> fornece <m>b=2</m>. Logo,
+    <me>
+                \frac{7x+9}{x^2-9}=\frac{5}{x-3}+\frac{2}{x+3}
+    </me>
+    
+    e portanto
+
+   <md>
+ 
+      <mrow> \integral{\frac{6x^3+ 4x^2-47x-27}{x^2-9}}{x} = \amp  \integral{6x+4+\frac{5}{x-3}+\frac{2}{x+3}}{x}</mrow>
+       <mrow> =\amp 3x^2+4x+5\ln|x-3|+2\ln|x+3|+C</mrow> 
+   </md>
+
         </p>
     </solution>
 </example>
+
+<exercise>   
+
+    <statement>
+        <p>
+            Determine <m>\integral{\frac{x^2+4x+1}{x^2(x+1)^3}}{x}</m>.
+        </p>
+    </statement>
+    <answer>
+       <p>
+          <m> \dfrac{x^{2} + x - 1}{x^{3} + 2 \, x^{2} + x} - \log\left(x + 1\right) + \log\left(x\right)</m>
+        </p>
+    </answer>
+        
+  
+</exercise>
+
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
@@ -1004,7 +1062,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </hint>
         <answer>
             <p>
-                depois
+               <m>O tempo é igual a 10log(376) - 30log(5)</m>
             </p>
         </answer>
     </task>
@@ -1017,7 +1075,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     
     <answer>
         <p>
-            depois
+        <m>x=\frac{500e^{10}-1}{1+e^{10}</m>   
         </p>
     </answer>
 </task>
@@ -1169,6 +1227,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise>
     <p><m>\integral{\frac{x^{2} + 2x + 1}{x^{3} + 4x^{2} + 5x + 2}}{x}</m></p>
 </exercise>
+
 </exercisegroup>
 
   
