@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-09T16:57:32-03:00       *-->
+<!--*       on 2021-10-09T19:14:48-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore",
     processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
@@ -729,45 +743,88 @@ C-2B \amp =-1
 </h3>
 <div class="exercisegroup" id="exercisegroup-1">
 <h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
-<div class="introduction" id="introduction-4"><p id="p-86">Use a técnica de integração por partes para calcular as seguintes integrais indefinidas.</p></div>
-<div class="exercisegroup-exercises cols2">
+<div class="introduction" id="introduction-4"><p id="p-86">Resolva as integrais a seguir usando a técnica de  integração por partes.</p></div>
+<div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-87">\(\integral{te^{2t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-88">\(\integral{x^2e^{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-89">\(\integral{t\sin{t}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-90">\(\integral{x^2\sin{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-91">\(\integral{y\ln{y}}{y}\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-92">\(\integral{x^3\ln{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-93">\(\integral{(\ln{y})^2}{y}\)</p></article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-94">\(\integral{\sin^2{x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-95">\(\integral{\frac{y}{e^y}}{y}\)</p></article>
+<p id="p-87">Determine a integral definida.</p>
+<p id="p-88">\(\displaystyle \int_{1}^{7} t^{4} \ln (2 t) dt  =\) <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-89">\(8198.54867833262\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-90">Determine a integral.</p>
+<p id="p-91">\(\displaystyle\int xe^{2x} \, dx\) = <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> \(+ C\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-92">\(\frac{1}{2}\!\left(xe^{2x}-\frac{1}{2}e^{2x}\right)\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-93">Determine a integral.</p>
+<p id="p-94">\(\displaystyle\int {-4 \ln(x^2-1)}\, dx =\) <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-95">\(-4x\ln\!\left(x^{2}-1\right)-(-8)x-(-4)\ln\!\left(\left|x-1\right|\right)+\left(-4\right)\ln\!\left(\left|x+1\right|\right)+C+c\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-96">Determine a integral.</p>
+<p id="p-97">\(\int_{1}^{\,4} {5 \sqrt{t} \ln(t)}\, dt=\) <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-98">\(21.4122940743082\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-99">Determine a integral.</p>
+<p id="p-100">\(\int_{1}^{\,2} {\frac{-6 \ln(x)}{x^2}}\, dx=\) <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-101">\(-0.920558458320164\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-102">Determine a integral.</p>
+<p id="p-103">\(\displaystyle\int_{0}^{\,1} {\frac{-7 y}{e^{2y}}}\, dy\) <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-104">\(-1.03948976300778\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-105">Resolva:</p>
+<p id="p-106">(a) \(\displaystyle\int z^3 \ln z \,\hbox{d} z =\) <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>.</p>
+<p id="p-107">(b) \(\displaystyle\int e^t \cos t \,\hbox{d} t =\) <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>.</p>
+<p id="p-108">(c) \(\displaystyle\int_0^{2\pi} \sin(x) \sin(x+1) \,\hbox{d} x =\)<span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta.</span> <span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-109">\(\frac{z^{4}\!\left(4\ln\!\left(z\right)-1\right)}{16}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta.</span> <span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-110">\(0.5\exp\!\left(t\right)\!\left(\cos\!\left(t\right)+\sin\!\left(t\right)\right)\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta.</span> <span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-111">\(1.69740975483297\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-112">Determine a integral indefinida.</p>
+<p id="p-113">\(\displaystyle\int x\sin^{2}\!\left(9x\right) \, dx\) = <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> \(+ C\text{.}\)</p>
+<p id="p-114">Dica: Integrar por partes com \(u = x\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-115">\(\frac{1}{36}\!\left(9x^{2}-x\sin\!\left(18x\right)-\frac{\cos\!\left(18x\right)}{18}\right)\)</p></div></div>
+</div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-2">
 <h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
-<div class="introduction" id="introduction-5"><p id="p-96">Use a técnica de integração por partes e o Teorema Fundamental do Cálculo para calcular as seguintes integrais definidas.</p></div>
-<div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-97">\(\integrald{xe^x}{0}{1}{x}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-98">\(\integrald{\ln t}{1}{5}{t}\)</p></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-99">\(\integrald{e^x\cos{x}}{0}{\frac{\pi}{2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-100">\(\integrald{ye^{-y}}{0}{1}{y}\)</p></article>
+<div class="introduction" id="introduction-5"><p id="p-116">Resolva as integrais a seguir usando a tecnica de decomposição por frações parciais.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-117">Seja \(f(x)\) uma função quadrática tal que \(f(0) = 8\) e</p>
+<div class="displaymath">
+\begin{equation*}
+\int \frac{f(x)}{x^2 (x + 7)^{8}} \,dx
+\end{equation*}
 </div>
+<p class="continuation">é uma função racional.</p>
+<p id="p-118">Encontre \(f'(0)\text{.}\)</p>
+<p id="p-119">\(f'(0) =\) <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-120">\(9.14285714285714\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-121">Determine a integral.</p>
+<p id="p-122">\(\displaystyle\int\frac{x^2}{x^2 + 4}dx =\) <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> \(+C\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-123">\(x-2\tan^{-1}\!\left(\frac{x}{2}\right)\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-124">Primeiro faça a divisão entre numerador e denominador obtendo</p>
+<div class="displaymath" id="p-125">
+\begin{equation*}
+\frac{x^2}{x^2 + 4} = \frac{x^2+4-4}{x^2+4} = \frac{x^2 + 4}{x^2 + 4} - \frac{4}{x^2 + 4} = 1 - \frac{4}{x^2+4}
+\end{equation*}
 </div>
-<div class="exercisegroup" id="exercisegroup-3">
-<h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
-<div class="introduction" id="introduction-6"><p id="p-101">Use a técnica a frações parciais para calcular as seguintes integrais.</p></div>
-<div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<p id="p-102">\(\integral{\frac{x + 2}{x^{2} - 5x + 6}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<p id="p-103">\(\integral{\frac{x + 1}{x^{2} + 4x + 4}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<p id="p-104">\(\integral{\frac{4{\left(x + 1\right)}}{2x^{2} + 3x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
-<p id="p-105">\(\integral{\frac{x^2+2}{x^2-3x+2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<p id="p-106">\(\integral{\frac{3x}{x^{2} + 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
-<p id="p-107">\(\integral{\frac{t-2}{t^2+t^4}}{t}\)</p></article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
-<p id="p-108">\(\integral{\frac{3x^{2} + 1}{x^{3} + x^{2} - 2x}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
-<p id="p-109">\(\integral{\frac{x^{2} + 2x + 3}{x^{3} + 2x^{2} - x - 2}}{x}\)</p></article><article class="exercise exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
-<p id="p-110">\(\integral{\frac{x^{2} + 2x + 1}{x^{3} + 4x^{2} + 5x + 2}}{x}\)</p></article>
+<p id="p-126">A integral torna-se</p>
+<p id="p-127">\(\displaystyle\int\frac{x^2}{x^2 + 4}dx = \displaystyle\int dx - 4\int \frac{dx}{x^2+4} = x - 4\cdot\frac{1}{2} \tan^{-1}\left( \frac{x}{2}\right)\) + C \(= x-2 \tan^{-1}\left( \frac{x}{2}\right)\) + C .</p>
+</div></div>
+</div></article>
 </div>
 </div></section></section></div></main>
 </div>
