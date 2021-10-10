@@ -371,10 +371,9 @@ B-4A-6D=1\\
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-22" ww-id="webwork-22">
     <static seed="22" source="integral-tecnicas/problema17.pg">
-      <statement><p>Determine a integral
-<m>\displaystyle  \int \frac{3x^{2}-6x-4}{x^{3}-3x^{2}-4x+12}\,dx</m>.</p>
+      <statement><p>Determine a integral.</p>
 <p><m>\displaystyle \int \frac{3x^{2}-6x-4}{x^{3}-3x^{2}-4x+12}\,dx =</m>
-<fillin name="AnSwEr0001" characters="55"/></p>
+<fillin name="AnSwEr0001" characters="25"/></p>
 </statement>
       <answer>
         <p>
