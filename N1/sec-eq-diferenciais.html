@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-09T20:49:01-03:00       *-->
+<!--*       on 2021-08-14T12:30:16-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,50 +14,71 @@
 <title>Equações Diferenciais</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
 /* support for the sfrac command in MathJax (Beveled fraction) */
-/* see: https://github.com/mathjax/MathJax-docs/wiki/Beveled-fraction-like-sfrac,-nicefrac-bfrac */
-MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-  var MML = MathJax.ElementJax.mml,
-      TEX = MathJax.InputJax.TeX;
-  TEX.Definitions.macros.sfrac = "myBevelFraction";
-  TEX.Parse.Augment({
-    myBevelFraction: function (name) {
-      var num = this.ParseArg(name),
-          den = this.ParseArg(name);
-      this.Push(MML.mfrac(num,den).With({bevelled: true}));
+  startup: {
+    ready() {
+      //
+      // Creating a simple "sfrac" package on-the-fly
+      //
+      const Configuration = MathJax._.input.tex.Configuration.Configuration;
+      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
+      
+      new CommandMap('sfrac', {
+        sfrac: 'SFrac'
+        }, {
+        SFrac(parser, name) {
+        const num = parser.ParseArg(name);
+        const den = parser.ParseArg(name);
+        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
+        parser.Push(frac);
+        }
+      });
+      //
+      // Create the package for the overridden macros
+      //
+      Configuration.create('sfrac', {
+        handler: {macro: ['sfrac']}
+      });
+      
+    MathJax.startup.defaultReady();
     }
-  });
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -163,7 +184,7 @@ true);
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1-curvas-integrais"><article class="example example-like"><p id="p-170"><article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-171">Encontre a equação da curva integral, \(y=y(x)\text{,}\) da função \(f(x)=x\) que passe pelo ponto \((2,1)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like">
 <p id="p-172">Segue da <a class="xref" data-knowl="./knowl/curvas-integrais.html" title="Definição 2.1">Definição 2.1</a> que a curva integral de um função \(f(x)\) é a sua primitiva mais uma constante. Neste caso,</p>
 <div class="displaymath">
 \begin{equation*}
@@ -187,7 +208,7 @@ y=\frac{x^2}{2} -1
 </div></article> <article class="task exercise-like" id="task-15"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-173">Encontre a equação da curva integral, \(y=y(x)\text{,}\)  da função \(f(x)=x^2\) que passe pelo ponto \((3,1)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like">
 <p id="p-174">Uma vez que \(\frac{x^3}{3}\) é uma primitiva de \(x^2\text{,}\) a curva integral é dada por</p>
 <div class="displaymath">
 \begin{equation*}
@@ -213,8 +234,8 @@ y=\frac{x^3}{3} -8
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><p id="p-175">Encontre a equação da curva integral, \(y=y(x)\text{,}\)  da função \(f(x)=2x-2\) que passe pelo ponto \((1,2)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-176">Revise <a class="xref" data-knowl="./knowl/ex1-curvas-integrais.html" title="Exemplo 2.3: Curvas integrais">Exemplo 2.3</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-177">\(y=x^2-2x+3\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-176">Revise <a class="xref" data-knowl="./knowl/ex1-curvas-integrais.html" title="Exemplo 2.3: Curvas integrais">Exemplo 2.3</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-177">\(y=x^2-2x+3\text{.}\)</p></div></div>
 </div></article></div></section><section class="subsection" id="subsec-integral-ed"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">2.2</span> <span class="title">Integral e Equações diferenciais</span>
 </h3>
@@ -243,7 +264,7 @@ y(x)=\integral{f(x)}{x}\text{.}\tag{2.2}
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-diferencial-1"><article class="example example-like"><p id="p-181">Encontre a solução geral da equação diferencial  \(\frac{\dd y}{\dd x} = \cos{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like">
 <p id="p-182">Já que \(\sin{x}\) é uma primitiva de \(\cos{x}\text{,}\) a solução para a equação diferencial é</p>
 <div class="displaymath">
 \begin{equation*}
@@ -256,7 +277,7 @@ y(x) = \sin{x} + C.
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-diferencial-2"><article class="example example-like"><p id="p-183">Resolva a equação diferencial \(\frac{\dd y}{\dd x} = 2 + \sin{x}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like">
 <p id="p-184">Resolver a equação diferencial \(\frac{\dd y}{\dd x} = 2 + \sin{x}\) é equivalente a obter a integral</p>
 <div class="displaymath">
 \begin{align*}
@@ -271,8 +292,8 @@ y(x) \amp = \integral{\left(2+ \sin{x}\right)}{x} \amp \quad \knowl{./knowl/asse
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer1-sol-geral"><article class="exercise exercise-like"><p id="p-185">Encontre a solução geral da equação \(\frac{\dd y}{\dd t}=10e^t\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-186">Revise <a class="xref" data-knowl="./knowl/ex-diferencial-2.html" title="Exemplo 2.6">Exemplo 2.6</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-187">\(y(t)= 10e^t + C\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-186">Revise <a class="xref" data-knowl="./knowl/ex-diferencial-2.html" title="Exemplo 2.6">Exemplo 2.6</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-187">\(y(t)= 10e^t + C\text{.}\)</p></div></div>
 </div></article></div></section><section class="paragraphs" id="paragraphs-5"><h5 class="heading"><span class="title">Problema de valor inicial.</span></h5>
 <p id="p-188">Frequentemente estamos interessados em encontrar uma única solução para a  equação diferencial. Por exemplo, no <a class="xref" data-knowl="./knowl/ex1-curvas-integrais.html" title="Exemplo 2.3: Curvas integrais">Exemplo 2.3</a> encontramos a equação para uma <a class="xref" data-knowl="./knowl/curvas-integrais.html" title="Definição 2.1">curva integral</a> que passa por \((2,1)\text{.}\) O Problema de encontrar uma função    \(y(x)\text{,}\) que satisfaça <a class="xref" data-knowl="./knowl/eq-diferencial.html" title="Equação 2.1">(2.1)</a> e cuja curva integral passa pelo ponto \((x_0,y_0)\)  é denominado    <dfn class="terminology">problema de valor inicial</dfn> e geralmente apresentado da forma <article class="assemblage assemblage-like" id="assemblage-"><div class="displaymath" id="p-189">
 \begin{gather}
@@ -288,7 +309,7 @@ y(x) \amp = \integral{\left(2+ \sin{x}\right)}{x} \amp \quad \knowl{./knowl/asse
 \end{gather*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like">
 <p id="p-191">No <a class="xref" data-knowl="./knowl/ex-diferencial-1.html" title="Exemplo 2.5">Exemplo 2.5</a> encontramos a solução geral \(y(x)=\sin{x}+C\) da equação diferencial \(\frac{\dd y}{\dd x}=\cos{x}\text{.}\) Para resolver o problema de valor inicial deve-se obter o valor de \(C\) para que \(y(0)=0\text{.}\) Nota-se que \(C=0\text{,}\) pois</p>
 <div class="displaymath">
 \begin{equation*}
@@ -312,7 +333,7 @@ y(x)=\sin{x}\text{.}
 \end{gather*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like">
 <p id="p-193">Sabe-se do <a class="xref" data-knowl="./knowl/ex-diferencial-2.html" title="Exemplo 2.6">Exemplo 2.6</a> que a solução geral \(y(x)=2x - \cos{x} +C\) da equação diferencial \(\frac{\dd y}{\dd x}= 2+ \sin{x}\text{.}\) Como a curva deve satisfazer \(y(3)=5\text{,}\) obtemos</p>
 <div class="displaymath">
 \begin{equation*}
@@ -345,8 +366,8 @@ y(x)= 2x - \cos{x} - 1.99\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-195">Revise <a class="xref" data-knowl="./knowl/exer1-sol-geral.html" title="Autoavaliação 2.7">Autoavaliação 2.7</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-196">\(10e^t + 15\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-195">Revise <a class="xref" data-knowl="./knowl/exer1-sol-geral.html" title="Autoavaliação 2.7">Autoavaliação 2.7</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-196">\(10e^t + 15\)</p></div></div>
 </div></article><article class="task exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-197">Encontre a solução do problema de valor inicial</p>
 <div class="displaymath">
@@ -355,8 +376,8 @@ y(x)= 2x - \cos{x} - 1.99\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-198">Revise <a class="xref" data-knowl="./knowl/ex2-pvi.html" title="Exemplo 2.9">Exemplo 2.9</a>.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-199">\(2t-\cos{t} + 6\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Dica.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-198">Revise <a class="xref" data-knowl="./knowl/ex2-pvi.html" title="Exemplo 2.9">Exemplo 2.9</a>.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-199">\(2t-\cos{t} + 6\)</p></div></div>
 </div></article></article></div></section><section class="subsection" id="subsubsec-videos-eq"><h4 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">2.2.1</span> <span class="title">Sugestão de Vídeos</span>
 </h4>
@@ -374,108 +395,117 @@ y(x)= 2x - \cos{x} - 1.99\text{.}
 <figure class="figure figure-like" id="figure-interactive-campos"><iframe id="interactive-campos" width="600" height="720" src="interactive-campos-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.15<span class="period">.</span></span><span class="space"> </span>Curvas integrais e campos de direções</figcaption></figure></article></section><section class="subsection" id="subsubsec-2"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">2.4</span> <span class="title">Sugestão de Vídeos</span>
 </h3>
-<ul class="disc"><li id="li-13"><p id="p-202">Campos de direções: <a class="external" href="https://youtu.be/xZYZkgOUM7s" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/xZYZkgOUM7s</code></a></p></li></ul></section><section class="exercises" id="exercises-eq-diferencial"><h3 class="heading hide-type">
+<ul class="disc"><li id="li-13"><p id="p-202">Campos de direções: <a class="external" href="https://youtu.be/xZYZkgOUM7s" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/xZYZkgOUM7s</code></a></p></li></ul></section><article class="exercise exercise-like" id="exercise-23"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-23"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-23"><article class="exercise exercise-like"><iframe name="webwork-12" width="600" src="http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=local/Library/Pretext/N1/pretext-6.pg" data-seed="12"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["http://191.252.191.150"]})</script></article></div>
+<article class="exercise exercise-like" id="exercise-24"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-24"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span><span class="space"> </span><span class="title">A Statistical Test.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-24"><article class="exercise exercise-like"><div class="introduction" id="introduction-2"><p id="p-211">This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previosly.  (HTML Note: The resizer for the knowl is not functioning yet.)</p></div>
+<div style="width:100%;"><iframe style="object-fit: contain; width: 100%;" src="https://www.myopenmath.com/embedq.php?id=7492&amp;resizer=true"></iframe></div></article></div>
+<section class="exercises" id="exercises-eq-diferencial"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">2.5</span> <span class="title">Exercícios</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-1">
-<div class="introduction" id="introduction-2"><p id="p-203">Resolva:</p></div>
+<h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
+<div class="introduction" id="introduction-3"><p id="p-212">Resolva:</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-204">O problema de valor inicial</p>
+<article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-213">O problema de valor inicial</p>
 <div class="displaymath">
 \begin{equation*}
-y'(x) = \sin x, \quad y(0) = 4
+y'(x) = \sin x, \quad y(0) = 5
 \end{equation*}
 </div>
-<p id="p-205">\(y(x) =\) <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<p id="p-214">\(y(x) =\) <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><p id="p-206">\(-\left(\cos\!\left(x\right)\right)+5\)</p></div></div>
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like">
-<p id="p-207">Note que</p>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-215">\(-\left(\cos\!\left(x\right)\right)+6\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like">
+<p id="p-216">Note que</p>
 <div class="displaymath">
 \begin{equation*}
 y(x) = \int \sin x \, dx = -\cos x + C.
 \end{equation*}
 </div>
-<p class="continuation">Encontre \(C\) usando \(y(0) = 4\text{.}\)</p>
+<p class="continuation">Encontre \(C\) usando \(y(0) = 5\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
--\cos(0) + C = 4 \;\Rightarrow\; -1 + C = 4
-\;\Rightarrow\; C = 5.
+-\cos(0) + C = 5 \;\Rightarrow\; -1 + C = 5
+\;\Rightarrow\; C = 6.
 \end{equation*}
 </div>
-<p id="p-208">Logo, \(y(x) = -\cos x + 5\text{.}\)</p>
+<p id="p-217">Logo, \(y(x) = -\cos x + 6\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-209">O problema de valor inicial</p>
+</div></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-218">O problema de valor inicial</p>
 <div class="displaymath">
 \begin{equation*}
-\dfrac{dy}{d\,x} = 5^x, \quad y(3) = -3
+\dfrac{dy}{d\,x} = 6^x, \quad y(1) = 1
 \end{equation*}
 </div>
-<p id="p-210">\(y(x) =\) <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<p id="p-219">\(y(x) =\) <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-211">\(\frac{5^{x}}{1.60944}-80.6669\)</p></div></div>
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like">
-<div class="displaymath" id="p-212">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-220">\(\frac{6^{x}}{1.79176}-2.34866\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like">
+<div class="displaymath" id="p-221">
 \begin{equation*}
-y(x) =\int 5^x \, dx = \dfrac{5^x}{\ln 5} + C
+y(x) =\int 6^x \, dx = \dfrac{6^x}{\ln 6} + C
 \end{equation*}
 </div>
-<p class="continuation">Encontre \(C\) por definição \(y(3) = -3\text{.}\)</p>
+<p class="continuation">Encontre \(C\) por definição \(y(1) = 1\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{rcl}  
-\dfrac{5^{3}}{\ln 5} + C \amp =\amp  -3 \\
-C \amp =\amp  -3 - \dfrac{5^{3}}{\ln 5} \approx -80.6668.
+\dfrac{6^{1}}{\ln 6} + C \amp =\amp  1 \\
+C \amp =\amp  1 - \dfrac{6^{1}}{\ln 6} \approx -2.3486.
 \end{array}
 \end{equation*}
 </div>
-<p id="p-213">Assim, \(y(x) = \dfrac{5^x}{\ln 5}  - 80.6668\text{.}\)</p>
+<p id="p-222">Assim, \(y(x) = \dfrac{6^x}{\ln 6}  - 2.3486\text{.}\)</p>
 </div></div>
 </div></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-214">Mostre que \(y=xe^{-x} + 2\) é uma solução do problema de valor inicial</p>
+<article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-223">Mostre que \(y=xe^{-x} + 2\) é uma solução do problema de valor inicial</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\dd y}{\dd x} = (1-x)e^{-x}, \quad y(0)=2.
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-215">Sabendo que o gráfico de  \(f(x)\) passa pelo ponto \(( 6, 4 )\)	e que a inclinação de sua reta tangente em \((x,f(x))\) é \(5 x + 3\text{,}\) quanto vale  \(f(  4 )\text{?}\) <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+</div></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-224">Sabendo que o gráfico de  \(f(x)\) passa pelo ponto \(( 7, 10 )\)	e que a inclinação de sua reta tangente em \((x,f(x))\) é \(2 x + 2\text{,}\) quanto vale  \(f(  4 )\text{?}\) <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-216">\(-52\)</p></div></div>
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like">
-<p id="p-217">Lembre-se de que o gráfico de \ (f (x) \) passando pelo ponto \((6, 4)\text{,}\) isso simplesmente significa \(f(6) = 4\text{.}\)  Similarmente, a inclinação da linha tangente em \(x, f(x)\) sendo \({5}x + 3\) significa que a derivada de \(f\) em \(x\) é esta fórmula. Isto é, \(f'(x) = {5}x + 3\text{.}\)</p>
-<p id="p-218">Agora, encotreamos a primitiva de \(f'(x) = {5}x + 3\text{.}\)  Isto é dado por \(f(x) = \frac{5}{2}x^2 + {3}x + C\text{.}\)  O fado que \(f(6) = 4\) nos permite obter \(C\) como segue.</p>
-<div class="displaymath" id="p-219">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Resposta.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-225">\(-29\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-41" id="solution-41"><span class="type">Solução.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like">
+<p id="p-226">Lembre-se de que o gráfico de \ (f (x) \) passando pelo ponto \((7, 10)\text{,}\) isso simplesmente significa \(f(7) = 10\text{.}\)  Similarmente, a inclinação da linha tangente em \(x, f(x)\) sendo \({2}x + 2\) significa que a derivada de \(f\) em \(x\) é esta fórmula. Isto é, \(f'(x) = {2}x + 2\text{.}\)</p>
+<p id="p-227">Agora, encotreamos a primitiva de \(f'(x) = {2}x + 2\text{.}\)  Isto é dado por \(f(x) = \frac{2}{2}x^2 + {2}x + C\text{.}\)  O fado que \(f(7) = 10\) nos permite obter \(C\) como segue.</p>
+<div class="displaymath" id="p-228">
 \begin{equation*}
 \begin{aligned}
-f(6) \amp  = 4 \\
-\frac{5}{2}(6)^2 + {3}(6) + C \amp  = 4 \\
-\frac{5}{2}(36) + 18 + C \amp  = 4 \\
-\frac{180}{2} + C \amp  = 4 - 18 \\
-C \amp  = -14-90 \\
-C \amp  = -104 \\
+f(7) \amp  = 10 \\
+\frac{2}{2}(7)^2 + {2}(7) + C \amp  = 10 \\
+\frac{2}{2}(49) + 14 + C \amp  = 10 \\
+\frac{98}{2} + C \amp  = 10 - 14 \\
+C \amp  = -4-49 \\
+C \amp  = -53 \\
 \end{aligned}
 \end{equation*}
 </div>
-<p id="p-220">Portanto a função \(f(x)\) é dada por:</p>
-<div class="displaymath" id="p-221">
+<p id="p-229">Portanto a função \(f(x)\) é dada por:</p>
+<div class="displaymath" id="p-230">
 \begin{equation*}
-f(x) = \frac{5}{2}x^2 + {3}x + (-104)
+f(x) = \frac{2}{2}x^2 + {2}x + (-53)
 \end{equation*}
 </div>
-<p id="p-222">Conectando o ponto 4, dá \(f(4) = -52.00\text{.}\)</p>
+<p id="p-231">Conectando o ponto 4, dá \(f(4) = -29.00\text{.}\)</p>
 </div></div>
 </div></article><div class="exercisegroup" id="exercisegroup-2">
-<div class="introduction" id="introduction-3"><p id="p-223">Use um recurso gráfico computacional (<a class="xref" data-knowl="./knowl/campos-curvas-sageinterativo.html" title="Tecnologia 2.14: Faça você mesmo">Tecnologia 2.14</a>) para gerar um campo de direções de cada equação diferencial:</p></div>
+<h6 class="heading"><span class="title">Grupo de exercícios.</span></h6>
+<div class="introduction" id="introduction-4"><p id="p-232">Use um recurso gráfico computacional (<a class="xref" data-knowl="./knowl/campos-curvas-sageinterativo.html" title="Tecnologia 2.14: Faça você mesmo">Tecnologia 2.14</a>) para gerar um campo de direções de cada equação diferencial:</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-224">\(\frac{\dd y}{\dd x} = x\) na região \(−5 \leq x \leq 5\) e \(−5 \leq y \leq 5.\)</p></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-225">\(\frac{\dd y}{\dd x} = \sin{x}\) na região \(−6 \leq x \leq 6\) e \(−6 \leq y \leq 6.\)</p></article><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-226">\(\frac{\dd y}{\dd x} = e^x\) na região \(−6 \leq x \leq 6\) e \(−2 \leq y \leq 2\)</p></article>
+<article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-233">\(\frac{\dd y}{\dd x} = x\) na região \(−5 \leq x \leq 5\) e \(−5 \leq y \leq 5.\)</p></article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-234">\(\frac{\dd y}{\dd x} = \sin{x}\) na região \(−6 \leq x \leq 6\) e \(−6 \leq y \leq 6.\)</p></article><article class="exercise exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-235">\(\frac{\dd y}{\dd x} = e^x\) na região \(−6 \leq x \leq 6\) e \(−2 \leq y \leq 2\)</p></article>
 </div>
 </div></section></section></div></main>
 </div>

@@ -1367,7 +1367,7 @@ fazer uso da mudança dos limites de integração para a nova variável.
     <solution>
         <p>
             A escolha <u>u=5-x</u>, fornece <m>\dd u=(-1)\dd x </m>. Além disso, quando <m>x=1</m>, <m>u=4</m>, e , 
-            quendo <m>x=3</m>, <m>u=2</m>. Então,
+            quando <m>x=3</m>, <m>u=2</m>. Então,
 
             <md>
                 <mrow>\integrald{\frac{1}{5-x}}{1}{3}{x} \amp  = \integrald{-\frac{1}{u}}{4}{2}{u}</mrow>

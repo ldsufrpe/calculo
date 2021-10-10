@@ -45,12 +45,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <docinfo>
     <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
 
-        <latex-preamble>
-            <package>cancel</package>
-            <package>polynom</package>
-        </latex-preamble>
-
-       
+         
         <macros>
         \newcommand{ct}[1]{\color{gray}{\text{#1}}}
         \newcommand{ctm}[1]{\color{gray}{#1}}
@@ -1182,9 +1177,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercisegroup>
 <introduction>
     <p>
-        Resolva as integrais a seguir usando a tecnica de decomposição por frações parciais.
+        Resolva as integrais a seguir usando a técnica de decomposição por frações parciais.
     </p>
 </introduction>
+<exercise>
+<webwork source="integral-tecnicas/problema18.pg" />
+</exercise>
+<exercise>
+<webwork source="integral-tecnicas/problema19.pg" />
+</exercise>
+<exercise>
+<webwork source="integral-tecnicas/problema20.pg" />
+</exercise>
+<exercise>
+<webwork source="integral-tecnicas/problema21.pg" />
+</exercise>
 
 <exercise>
 <webwork source="integral-tecnicas/problema9.pg" />
@@ -1193,6 +1200,38 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise>
 <webwork source="integral-tecnicas/problema10.pg" />
 </exercise>
+
+<exercise>
+<webwork source="integral-tecnicas/problema11.pg" />
+</exercise>
+<exercise>
+<webwork source="integral-tecnicas/problema11.1.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-tecnicas/problema12.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-tecnicas/problema13.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-tecnicas/problema14.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-tecnicas/problema15.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-tecnicas/problema16.pg" />
+</exercise>
+
+<exercise>
+<webwork source="integral-tecnicas/problema17.pg" />
+</exercise>
+
 
 </exercisegroup>
 

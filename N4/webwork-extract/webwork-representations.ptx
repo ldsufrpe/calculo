@@ -19,28 +19,291 @@
     <pg source="integral-tecnicas/problema1.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
-    <static seed="10" source="integral-tecnicas/problema10.pg">
+    <static seed="10" source="integral-tecnicas/problema19.pg">
       <statement><p>Determine a integral.</p>
-<p><m>\displaystyle\int\frac{x^2}{x^2 + 4}dx =</m>
+<p><m>\displaystyle \int \frac{1}{(x+6)(x+8)}\,dx =</m>
+<fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.5\ln\!\left(\left|x+6\right|\right)-0.5\ln\!\left(\left|x+8\right|\right)+C</m>
+        </p>
+      </answer>
+      <solution><p>Escrevendo
+<me>\frac{1}{(x+6)(x+8)}=\frac{A}{x+6}+\frac{B}{x+8},</me>
+temos
+<me>1 =  A(x+8)+B(x+6),</me>
+ou
+<me>1 = (A+B)x+ (8 A+6 B).</me>
+Resolvendo para <m>A</m> e <m>B</m>, encotramos <m>A = 0.5</m> e <m>B = -0.5</m>,
+então
+<me>\int \frac{1}{(x+6)(x+8)}\,dx= \int\frac{0.5}{x+6}\,dx +
+  \int \frac{-0.5}{x+8}\,dx = (0.5*ln(|x+6|)-0.5*ln(|x+8|)+C).</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema19.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema19.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema19.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema19.pg</server-url>
+    <pg source="integral-tecnicas/problema19.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="integral-tecnicas/problema20.pg">
+      <statement><p>Determine a integral.</p>
+<p><m>\displaystyle \int \frac{1}{x^2 + 10 x + 21}\,dx =</m>
+<fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.25\ln\!\left(\left|x+3\right|\right)-0.25\ln\!\left(\left|x+7\right|\right)+C</m>
+        </p>
+      </answer>
+      <solution><p>nOTE QUE <m>x^2 + 10 x + 21 = (x + 7)(x + 3)</m>.  Assim,
+escrevemos
+<me>\frac{1}{(x+7)(x+3)}=\frac{A}{x+7}+\frac{B}{x+3},</me>
+gerando
+<me>1 =  A(x+3)+B(x+7),</me>
+ou
+<me>1 = (A+B)x+ (3 A+7 B).</me>
+Resolvendo para <m>A</m> e <m>B</m>, encontramos <m>A = -0.25</m> e <m>B = 0.25</m>,
+então
+<me>\int \frac{1}{(x+7)(x+3)}\,dx= \int\frac{-0.25}{x+7}\,dx +
+  \int \frac{0.25}{x+3}\,dx = 0.25\ln\!\left(\left|x+3\right|\right)-0.25\ln\!\left(\left|x+7\right|\right)+C.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-tecnicas/problema20.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-tecnicas/problema20.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-tecnicas/problema20.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-tecnicas/problema20.pg</server-url>
+    <pg source="integral-tecnicas/problema20.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="integral-tecnicas/problema21.pg">
+      <statement><p>Encontre</p>
+<p><m>\displaystyle \int\, \frac{56}{49-x^{2}}\,dx =</m> <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-4\ln\!\left(\left|7-x\right|\right)+4\ln\!\left(\left|7+x\right|\right)+C</m>
+        </p>
+      </answer>
+      <solution><p>Usando problemas anteriores, temos</p>
+<p><me>\int \frac{56}{49-x^{2}}\,dx=\int \frac{4}{7-x}\,dx +\int \frac{4}{7+x}\,dx=
+   -4\ln\!\left(\left|7-x\right|\right)+4\ln\!\left(\left|7+x\right|\right)+C.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-tecnicas/problema21.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-tecnicas/problema21.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-tecnicas/problema21.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-tecnicas/problema21.pg</server-url>
+    <pg source="integral-tecnicas/problema21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="integral-tecnicas/problema9.pg">
+      <statement><p>Seja <m>f(x)</m> uma função quadrática tal que <m>f(0) = 4</m> e 
+<me>\int \frac{f(x)}{x^2 (x + 3)^{7}} \,dx</me>
+é uma função racional.</p>
+<p>Encontre <m>f'(0)</m>.</p>
+<p><m>f'(0) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>9.33333333333333</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
+    <pg source="integral-tecnicas/problema9.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="integral-tecnicas/problema10.pg">
+      <statement><p>Determine a integral.</p>
+<p><m>\displaystyle\int\frac{x^2}{x^2 + 36}dx =</m>
 <fillin name="AnSwEr0001" characters="20"/> <m>+C</m></p>
 </statement>
       <answer>
         <p>
-          <m>x-2\tan^{-1}\!\left(\frac{x}{2}\right)</m>
+          <m>x-6\tan^{-1}\!\left(\frac{x}{6}\right)</m>
         </p>
       </answer>
       <solution><p>Primeiro faça a divisão entre numerador e denominador obtendo</p>
-<p><me>\frac{x^2}{x^2 + 4} = \frac{x^2+4-4}{x^2+4} = \frac{x^2 + 4}{x^2 + 4} - \frac{4}{x^2 + 4} = 1 - \frac{4}{x^2+4}</me></p>
+<p><me>\frac{x^2}{x^2 + 36} = \frac{x^2+36-36}{x^2+36} = \frac{x^2 + 36}{x^2 + 36} - \frac{36}{x^2 + 36} = 1 - \frac{36}{x^2+36}</me></p>
 <p>A integral torna-se</p>
-<p><m>\displaystyle\int\frac{x^2}{x^2 + 4}dx = \displaystyle\int dx - 4\int \frac{dx}{x^2+4} = x - 4\cdot\frac{1}{2} \tan^{-1}\left( \frac{x}{2}\right)</m> + C
-<m>= x-2 \tan^{-1}\left( \frac{x}{2}\right)</m> + C .</p>
+<p><m>\displaystyle\int\frac{x^2}{x^2 + 36}dx = \displaystyle\int dx - 36\int \frac{dx}{x^2+36} = x - 36\cdot\frac{1}{6} \tan^{-1}\left( \frac{x}{6}\right)</m> + C
+<m>= x-6 \tan^{-1}\left( \frac{x}{6}\right)</m> + C .</p>
 </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-tecnicas/problema10.pg</server-url>
     <pg source="integral-tecnicas/problema10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="integral-tecnicas/problema11.pg">
+      <statement><p>Determine a integral.</p>
+<p><m>\displaystyle\int\frac{x^2}{x^2 + 49}dx =</m>
+<fillin name="AnSwEr0001" characters="20"/> <m>+C</m></p>
+</statement>
+      <answer>
+        <p>
+          <m>x-7\tan^{-1}\!\left(\frac{x}{7}\right)</m>
+        </p>
+      </answer>
+      <solution><p>Primeiro faça a divisão entre numerador e denominador obtendo</p>
+<p><me>\frac{x^2}{x^2 + 49} = \frac{x^2+49-49}{x^2+49} = \frac{x^2 + 49}{x^2 + 49} - \frac{49}{x^2 + 49} = 1 - \frac{49}{x^2+49}</me></p>
+<p>A integral torna-se</p>
+<p><m>\displaystyle\int\frac{x^2}{x^2 + 49}dx = \displaystyle\int dx - 49\int \frac{dx}{x^2+49} = x - 49\cdot\frac{1}{7} \tan^{-1}\left( \frac{x}{7}\right)</m> + C
+<m>= x-7 \tan^{-1}\left( \frac{x}{7}\right)</m> + C .</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-tecnicas/problema11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-tecnicas/problema11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-tecnicas/problema11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-tecnicas/problema11.pg</server-url>
+    <pg source="integral-tecnicas/problema11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="integral-tecnicas/problema11.1.pg">
+      <statement><p>A forma da decomposição da fração parcial de uma função racional é dada abaixo.</p>
+<p><me>\frac{6x^{2}+9x+27}{(x+3)(x^2+9)} 
+        = \frac{A}{x+3} + \frac{B x + C}{x^2+9}</me></p>
+<p><m>A =</m> <fillin name="AnSwEr0001" characters="10"/>,
+<m>B =</m> <fillin name="AnSwEr0002" characters="10"/>,
+<m>C =</m> <fillin name="AnSwEr0003" characters="10"/>.</p>
+<p>Agora avalie a integral indefinida.</p>
+<p><m>\displaystyle \int \frac{6x^{2}+9x+27}{(x+3)(x^2+9)} dx =</m>
+<fillin name="AnSwEr0004" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3\ln\!\left(\left|x+3\right|\right)+\frac{3\ln\!\left(x^{2}+9\right)}{2}+C</m>
+        </p>
+      </answer>
+      <solution><p>SOLUTION</p>
+<p>Multiplicando pelo mínimo denominador comum produz
+<me>6x^{2}+9x+27 = A(x^2+9)+(Bx+C)(x+3)</me>
+Rearranging terms on the right hand side, yields
+<me>6x^{2}+9x+27 = (A+B)x^2+(3B+C)x + 9 A+ 3C</me>
+Reorganizando os termos do lado direito, fornece:
+<me>\begin{array}{rl}
+A+B \amp = 6  \\
+3B +C \amp = 9  \\
+9 A + 3C \amp = 27  
+\end{array}</me>
+Resolvendo o sitema obtem-se <m>A=3, \; B = 3</m> e <m>C= 0</m>
+então a decomopisição por frações parciais é
+<me>\frac{6x^{2}+9x+27}{(x+3)(x^2+9)}
+        = \frac{3}{x+3} + \frac{3x}{x^2+9} .</me>
+Logo a integral desejada é
+ <me>\displaystyle \int \frac{6x^{2}+9x+27}{(x+3)(x^2+9)} dx = 3\ln\!\left(\left|x+3\right|\right) + 1.5\ln\!\left(x^{2}+9\right) +C</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-tecnicas/problema11.1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-tecnicas/problema11.1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-tecnicas/problema11.1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-tecnicas/problema11.1.pg</server-url>
+    <pg source="integral-tecnicas/problema11.1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-17" ww-id="webwork-17">
+    <static seed="17" source="integral-tecnicas/problema12.pg">
+      <statement><p>Escreva a forma da decomposição por frações parciais do integrando de:</p>
+<p><me>\int \frac{2 x  - 40 }{x^2 + 2 x - 48}\, dx</me></p>
+<p>Determine os coeficientes, <m>A</m> e <m>B</m>, nos quais <m>A \leq B</m> e</p>
+<p><me>\frac{2 x  - 40 }{x^2 + 2 x - 48}\ =  \frac{A}{denominador} + \frac{B}{denominador}</me></p>
+<p><m>A =</m> <fillin name="AnSwEr0001" characters="10"/>,
+<m>B =</m> <fillin name="AnSwEr0002" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <solution><p>O numerador poder fatorado como <m>x^2 + 2 x  - 48  = (x -6)(x+8)</m>. Uma vez que temos dois fatores lineares distintos, a decomposição por frações parciais tem a forma 
+<me>\frac{2 x  - 40 }{x^2 + 2 x - 48} = \frac{A}{x-6} + \frac{B}{x+ 8}</me>
+Multiplicando pelo mínimo denominador comum, <m>(x-6)(x+8)</m>, temos
+<me>2 x  - 40 = A(x+8) + B(x-6)</me>
+Subistituindo <m>x = 6</m>, gera  <m>A = -2</m>, e substituindo <m>x =-8</m>  fornece
+<m>B = 4</m>.</p>
+<p>Assim a decomposição desejada é
+<me>\frac{2 x  - 40 }{x^2 + 2 x - 48} = \frac{-2}{x-6} + \frac{4}{x+8}.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-tecnicas/problema12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-tecnicas/problema12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-tecnicas/problema12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-tecnicas/problema12.pg</server-url>
+    <pg source="integral-tecnicas/problema12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-18" ww-id="webwork-18">
+    <static seed="18" source="integral-tecnicas/problema13.pg">
+      <statement><p>Evaluate the integral.</p>
+<p><m>\displaystyle  \int \frac{3x+5}{x^{2}+6x-7} \;dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="25"/> <m>+C</m></p>
+</statement>
+      <answer>
+        <p>
+          <m>\ln\!\left(\left|\left(x-1\right)\!\left(x+7\right)^{2}\right|\right)</m>
+        </p>
+      </answer>
+      <solution><p>Usando frações parciais, <me>\frac{3x+5}{\left(x-1\right)\!\left(x+7\right)}=\frac{A}{x-1}+\frac{B}{x+7}</me> temos <me>\begin{cases}
+A+B=3\\
+7A-B=5
+\end{cases}</me> produzindo <me>A=1,\;B=2 .</me> Logo,
+<me>\int  \frac{3x+5}{x^{2}+6x-7} \;dx= \int\left( \frac{1}{x-1}+\frac{2}{x+7}\right) \;dx=\ln\!\left(\left|x-1\right|\right)+2\ln\!\left(\left|x+7\right|\right)+C=\ln\!\left(\left|\left(x-1\right)\!\left(x+7\right)^{2}\right|\right)+C .</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-tecnicas/problema13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-tecnicas/problema13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-tecnicas/problema13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-tecnicas/problema13.pg</server-url>
+    <pg source="integral-tecnicas/problema13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-19" ww-id="webwork-19">
+    <static seed="19" source="integral-tecnicas/problema14.pg">
+      <statement><p>Determine a integral.</p>
+<p><m>\displaystyle  \int \frac{x^{2}}{\left(x-7\right)^{3}} \;dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="20"/> <m>+C</m></p>
+</statement>
+      <answer>
+        <p>
+          <m>\ln\!\left(\left|x-7\right|\right)-\frac{14}{x-7}-\frac{49}{2\!\left(x-7\right)^{2}}</m>
+        </p>
+      </answer>
+      <solution><p>Usando frações parciais, <me>\frac{x^{2}}{\left(x-7\right)^{3}}=\frac{A}{(x-7)}+\frac{B}{(x-7)^2}+\frac{C}{(x-7)^3}</me> temos <me>\begin{cases}
+A=1\\
+B-14A=0\\
+C-\left(49A+7B\right)=0
+\end{cases}</me> produzindo <me>A=1,\;B=14,\;C=49 .</me> Logo,
+<me>\int  \frac{x^{2}}{\left(x-7\right)^{3}} \;dx= \int \left( \frac{1}{x-7}+\frac{14}{\left(x-7\right)^{2}}+\frac{49}{\left(x-7\right)^{3}}\right) \;dx=\ln\!\left(\left|x-7\right|\right)-\frac{14}{x-7}-\frac{49}{2\!\left(x-7\right)^{2}}+C</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-tecnicas/problema14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-tecnicas/problema14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-tecnicas/problema14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-tecnicas/problema14.pg</server-url>
+    <pg source="integral-tecnicas/problema14.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
     <static seed="2" source="integral-tecnicas/problema2.pg">
@@ -59,6 +322,81 @@
     <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=integral-tecnicas/problema2.pg</server-url>
     <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=integral-tecnicas/problema2.pg</server-url>
     <pg source="integral-tecnicas/problema2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-20" ww-id="webwork-20">
+    <static seed="20" source="integral-tecnicas/problema15.pg">
+      <statement><p>Determine a integral.</p>
+<p><m>\displaystyle  \int \frac{x^{2}+8}{x\!\left(x-2\right)^{3}} \;dx</m> <m>=</m> <fillin name="AnSwEr0001" characters="25"/> <m>+C</m></p>
+</statement>
+      <answer>
+        <p>
+          <m>\ln\!\left(\left|x-2\right|\right)+\frac{1}{x-2}-\frac{3}{\left(x-2\right)^{2}}-\ln\!\left(\left|x\right|\right)</m>
+        </p>
+      </answer>
+      <solution><p>Usando frações parciais, <me>\frac{x^{2}+8}{x\!\left(x-2\right)^{3}}=\frac{A}{(x-2)}+\frac{B}{(x-2)^2}+\frac{C}{(x-2)^3}+\frac{D}{x}</me> temos <me>\begin{cases}
+A+D=0\\
+B-4A-6D=1\\
+4A-2B+12D+C=0\\
+-8D=8
+\end{cases}</me> produzindo<me>A=1,\;B=-1,\;C=6,\;D=-1 .</me> Logo,
+<me>\int  \frac{x^{2}+8}{x\!\left(x-2\right)^{3}} \;dx= \int \left( \frac{1}{x-2}-\frac{1}{\left(x-2\right)^{2}}+6\frac{1}{\left(x-2\right)^{3}}-\frac{1}{x}\right) \;dx=\ln\!\left(\left|x-2\right|\right)+\frac{1}{x-2}-\frac{3}{\left(x-2\right)^{2}}-\ln\!\left(\left|x\right|\right)+C</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-tecnicas/problema15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-tecnicas/problema15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-tecnicas/problema15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-tecnicas/problema15.pg</server-url>
+    <pg source="integral-tecnicas/problema15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-21" ww-id="webwork-21">
+    <static seed="21" source="integral-tecnicas/problema16.pg">
+      <statement><p>Encontre</p>
+<p><m>\displaystyle\int\, \frac{6\!\left(1+s\right)}{s\!\left(s^{2}+7s+6\right)}\,ds =</m> <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\ln\!\left(\left|s\right|\right)-\ln\!\left(\left|s+6\right|\right)+C</m>
+        </p>
+      </answer>
+      <solution><p>Usando resultados anteriores, temos</p>
+<p><me>\int \frac{6\!\left(1+s\right)}{s\!\left(s^{2}+7s+6\right)}\,dx=\int \frac{1}{s}\,dx +\int \frac{-1}{s+6}\,dx=
+   \ln\!\left(\left|s\right|\right)-\ln\!\left(\left|s+6\right|\right)+C.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-tecnicas/problema16.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-tecnicas/problema16.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-tecnicas/problema16.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-tecnicas/problema16.pg</server-url>
+    <pg source="integral-tecnicas/problema16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-22" ww-id="webwork-22">
+    <static seed="22" source="integral-tecnicas/problema17.pg">
+      <statement><p>Determine a integral
+<m>\displaystyle  \int \frac{3x^{2}-6x-4}{x^{3}-3x^{2}-4x+12}\,dx</m>.</p>
+<p><m>\displaystyle \int \frac{3x^{2}-6x-4}{x^{3}-3x^{2}-4x+12}\,dx =</m>
+<fillin name="AnSwEr0001" characters="55"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\ln\!\left(\left|x-2\right|\right)+\ln\!\left(\left|x+2\right|\right)+\ln\!\left(\left|x-3\right|\right)+C</m>
+        </p>
+      </answer>
+      <solution><p>A decomposição por frações parciais 
+<me>\frac{3x^{2}-6x-4}{x^{3}-3x^{2}-4x+12} = \frac{A}{x-2} +\frac{B}{x+2} +\frac{C}{x-3}.</me>
+fornece
+<me>3x^{2}+\left(-6\right)x+\left(-4\right) = A(x+2)(x-3) + B(x-2)(x-3) + C(x-2)(x+3).</me>
+Expandindo e coletando as potências de <m>x</m>, encontramos
+<m>A=B=C=1</m>, então
+<me>\int \frac{3x^{2}-6x-4}{x^{3}-3x^{2}-4x+12}\,dx=
+  \int \frac{dx}{x-2} + \int \frac{dx}{x+2}+\int \frac{dx}{x-3}=
+  \ln|x-2|+\ln|x+2|+\ln|x-3| + C.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-tecnicas/problema17.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-tecnicas/problema17.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-tecnicas/problema17.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-tecnicas/problema17.pg</server-url>
+    <pg source="integral-tecnicas/problema17.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
     <static seed="3" source="integral-tecnicas/problema3.pg">
@@ -81,7 +419,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
     <static seed="4" source="integral-tecnicas/problema4.pg">
       <statement><p>Determine a integral.</p>
-<p><m>\int_{1}^{\,4} {5 \sqrt{t} \ln(t)}\, dt=</m>
+<p><m>\displaystyle\int_{1}^{\,4} {5 \sqrt{t} \ln(t)}\, dt=</m>
 <fillin name="AnSwEr0001" characters="25"/></p>
 </statement>
       <answer>
@@ -99,7 +437,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
     <static seed="5" source="integral-tecnicas/problema5.pg">
       <statement><p>Determine a integral.</p>
-<p><m>\int_{1}^{\,2} {\frac{-6 \ln(x)}{x^2}}\, dx=</m>
+<p><m>\displaystyle\int_{1}^{\,2} {\frac{-6 \ln(x)}{x^2}}\, dx=</m>
 <fillin name="AnSwEr0001" characters="25"/></p>
 </statement>
       <answer>
@@ -181,23 +519,38 @@
     <pg source="integral-tecnicas/problema8.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
-    <static seed="9" source="integral-tecnicas/problema9.pg">
-      <statement><p>Seja <m>f(x)</m> uma função quadrática tal que <m>f(0) = 8</m> e 
-<me>\int \frac{f(x)}{x^2 (x + 7)^{8}} \,dx</me>
-é uma função racional.</p>
-<p>Encontre <m>f'(0)</m>.</p>
-<p><m>f'(0) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+    <static seed="9" source="integral-tecnicas/problema18.pg">
+      <statement><p>Decomponha a função a seguir usando frações parciais:</p>
+<p><m>\displaystyle \frac{56}{49-x^{2}} =</m> <fillin name="AnSwEr0001" characters="15"/> + <fillin name="AnSwEr0002" characters="15"/></p>
 </statement>
       <answer>
         <p>
-          <m>9.14285714285714</m>
+          <m>\frac{4}{7-x}</m>
         </p>
       </answer>
+      <answer>
+        <p>
+          <m>\frac{4}{7+x}</m>
+        </p>
+      </answer>
+      <solution><p>Já que <m>49 - x^2 =(7-x)(7+x)</m>, temos
+<me>\frac{56}{49 - x^2}= \frac{A}{7-x}  +\frac{B}{7+x}.</me>
+Então,
+<me>56 = A(7 + x)+B(7 -x)</me>
+e
+<me>56 =(A-B)x +5A+5B,</me>
+de modo que
+<me>A-B = 0</me>
+e
+<me>7 A+ B = 56.</me>
+Assim <m>A=B=4</m> e
+<me>\frac{56}{49-x^2}=\frac{4}{7-x} +\frac{4}{7+x}.</me></p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema9.pg</server-url>
-    <pg source="integral-tecnicas/problema9.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema18.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema18.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema18.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-tecnicas/problema18.pg</server-url>
+    <pg source="integral-tecnicas/problema18.pg"/>
   </webwork-reps>
 </webwork-representations>

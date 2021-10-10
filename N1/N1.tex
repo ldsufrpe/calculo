@@ -1,0 +1,1903 @@
+%********************************************%
+%*       Generated from PreTeXt source      *%
+%*       on 2021-08-14T12:02:14-03:00       *%
+%*   A recent stable commit (2020-08-09):   *%
+%* 98f21740783f166a773df4dc83cab5293ab63a4a *%
+%*                                          *%
+%*         https://pretextbook.org          *%
+%*                                          *%
+%********************************************%
+%% We elect to always write snapshot output into <job>.dep file
+\RequirePackage{snapshot}
+\documentclass[oneside,10pt,]{article}
+%% Custom Preamble Entries, early (use latex.preamble.early)
+%% Default LaTeX packages
+%%   1.  always employed (or nearly so) for some purpose, or
+%%   2.  a stylewriter may assume their presence
+\usepackage{geometry}
+%% Some aspects of the preamble are conditional,
+%% the LaTeX engine is one such determinant
+\usepackage{ifthen}
+%% etoolbox has a variety of modern conveniences
+\usepackage{etoolbox}
+\usepackage{ifxetex,ifluatex}
+%% Raster graphics inclusion
+\usepackage{graphicx}
+%% Color support, xcolor package
+%% Always loaded, for: add/delete text, author tools
+%% Here, since tcolorbox loads tikz, and tikz loads xcolor
+\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor}
+\usepackage{xcolor}
+%% begin: defined colors, via xcolor package, for styling
+%% end: defined colors, via xcolor package, for styling
+%% Colored boxes, and much more, though mostly styling
+%% skins library provides "enhanced" skin, employing tikzpicture
+%% boxes may be configured as "breakable" or "unbreakable"
+%% "raster" controls grids of boxes, aka side-by-side
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\tcbuselibrary{raster}
+%% We load some "stock" tcolorbox styles that we use a lot
+%% Placement here is provisional, there will be some color work also
+%% First, black on white, no border, transparent, but no assumption about titles
+\tcbset{ bwminimalstyle/.style={size=minimal, boxrule=-0.3pt, frame empty,
+colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
+%% Second, bold title, run-in to text/paragraph/heading
+%% Space afterwards will be controlled by environment,
+%% independent of constructions of the tcb title
+%% Places \blocktitlefont onto many block titles
+\tcbset{ runintitlestyle/.style={fonttitle=\blocktitlefont\upshape\bfseries, attach title to upper} }
+%% Spacing prior to each exercise, anywhere
+\tcbset{ exercisespacingstyle/.style={before skip={1.5ex plus 0.5ex}} }
+%% Spacing prior to each block
+\tcbset{ blockspacingstyle/.style={before skip={2.0ex plus 0.5ex}} }
+%% xparse allows the construction of more robust commands,
+%% this is a necessity for isolating styling and behavior
+%% The tcolorbox library of the same name loads the base library
+\tcbuselibrary{xparse}
+%% Hyperref should be here, but likes to be loaded late
+%%
+%% Inline math delimiters, \(, \), need to be robust
+%% 2016-01-31:  latexrelease.sty  supersedes  fixltx2e.sty
+%% If  latexrelease.sty  exists, bugfix is in kernel
+%% If not, bugfix is in  fixltx2e.sty
+%% See:  https://tug.org/TUGboat/tb36-3/tb114ltnews22.pdf
+%% and read "Fewer fragile commands" in distribution's  latexchanges.pdf
+\IfFileExists{latexrelease.sty}{}{\usepackage{fixltx2e}}
+%% shorter subnumbers in some side-by-side require manipulations
+\usepackage{xstring}
+%% Footnote counters and part/chapter counters are manipulated
+%% April 2018:  chngcntr  commands now integrated into the kernel,
+%% but circa 2018/2019 the package would still try to redefine them,
+%% so we need to do the work of loading conditionally for old kernels.
+%% From version 1.1a,  chngcntr  should detect defintions made by LaTeX kernel.
+\ifdefined\counterwithin
+\else
+    \usepackage{chngcntr}
+\fi
+%% Text height identically 9 inches, text width varies on point size
+%% See Bringhurst 2.1.1 on measure for recommendations
+%% 75 characters per line (count spaces, punctuation) is target
+%% which is the upper limit of Bringhurst's recommendations
+\geometry{letterpaper,total={340pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
+%% This LaTeX file may be compiled with pdflatex, xelatex, or lualatex executables
+%% LuaTeX is not explicitly supported, but we do accept additions from knowledgeable users
+%% The conditional below provides  pdflatex  specific configuration last
+%% begin: engine-specific capabilities
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: xelatex and lualatex-specific default configuration
+\ifxetex\usepackage{xltxtra}\fi
+%% realscripts is the only part of xltxtra relevant to lualatex 
+\ifluatex\usepackage{realscripts}\fi
+%% end:   xelatex and lualatex-specific default configuration
+}{
+%% begin: pdflatex-specific default configuration
+%% We assume a PreTeXt XML source file may have Unicode characters
+%% and so we ask LaTeX to parse a UTF-8 encoded file
+%% This may work well for accented characters in Western language,
+%% but not with Greek, Asian languages, etc.
+%% When this is not good enough, switch to the  xelatex  engine
+%% where Unicode is better supported (encouraged, even)
+\usepackage[utf8]{inputenc}
+%% end: pdflatex-specific default configuration
+}
+%% end:   engine-specific capabilities
+%%
+%% Fonts.  Conditional on LaTex engine employed.
+%% Default Text Font: The Latin Modern fonts are
+%% "enhanced versions of the [original TeX] Computer Modern fonts."
+%% We use them as the default text font for PreTeXt output.
+%% Default Monospace font: Inconsolata (aka zi4)
+%% Sponsored by TUG: http://levien.com/type/myfonts/inconsolata.html
+%% Loaded for documents with intentional objects requiring monospace
+%% See package documentation for excellent instructions
+%% fontspec will work universally if we use filename to locate OTF files
+%% Loads the "upquote" package as needed, so we don't have to
+%% Upright quotes might come from the  textcomp  package, which we also use
+%% We employ the shapely \ell to match Google Font version
+%% pdflatex: "varl" package option produces shapely \ell
+%% pdflatex: "var0" package option produces plain zero (not used)
+%% pdflatex: "varqu" package option produces best upright quotes
+%% xelatex,lualatex: add OTF StylisticSet 1 for shapely \ell
+%% xelatex,lualatex: add OTF StylisticSet 2 for plain zero (not used)
+%% xelatex,lualatex: add OTF StylisticSet 3 for upright quotes
+%%
+%% Automatic Font Control
+%% Portions of a document, are, or may, be affected by defined commands
+%% These are perhaps more flexible when using  xelatex  rather than  pdflatex
+%% The following definitions are meant to be re-defined in a style, using \renewcommand
+%% They are scoped when employed (in a TeX group), and so should not be defined with an argument
+\newcommand{\divisionfont}{\relax}
+\newcommand{\blocktitlefont}{\relax}
+\newcommand{\contentsfont}{\relax}
+\newcommand{\pagefont}{\relax}
+\newcommand{\tabularfont}{\relax}
+\newcommand{\xreffont}{\relax}
+\newcommand{\titlepagefont}{\relax}
+%%
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: font setup and configuration for use with xelatex
+%% Generally, xelatex is necessary for non-Western fonts
+%% fontspec package provides extensive control of system fonts,
+%% meaning *.otf (OpenType), and apparently *.ttf (TrueType)
+%% that live *outside* your TeX/MF tree, and are controlled by your *system*
+%% (it is possible that a TeX distribution will place fonts in a system location)
+%%
+%% The fontspec package is the best vehicle for using different fonts in  xelatex
+%% So we load it always, no matter what a publisher or style might want
+%%
+\usepackage{fontspec}
+%%
+%% begin: xelatex main font ("font-xelatex-main" template)
+%% Latin Modern Roman is the default font for xelatex and so is loaded with a TU encoding
+%% *in the format* so we can't touch it, only perhaps adjust it later
+%% in one of two ways (then known by NFSS names such as "lmr")
+%% (1) via NFSS with font family names such as "lmr" and "lmss"
+%% (2) via fontspec with commands like \setmainfont{Latin Modern Roman}
+%% The latter requires the font to be known at the system-level by its font name,
+%% but will give access to OTF font features through optional arguments
+%% https://tex.stackexchange.com/questions/470008/
+%% where-and-how-does-fontspec-sty-specify-the-default-font-latin-modern-roman
+%% http://tex.stackexchange.com/questions/115321
+%% /how-to-optimize-latin-modern-font-with-xelatex
+%%
+%% end:   xelatex main font ("font-xelatex-main" template)
+%% begin: xelatex mono font ("font-xelatex-mono" template)
+%% (conditional on non-trivial uses being present in source)
+\IfFontExistsTF{Inconsolatazi4-Regular.otf}{}{\GenericError{}{The font "Inconsolatazi4-Regular.otf" requested by PreTeXt output is not available.  Either a file cannot be located in default locations via a filename, or a font is not known by its name as part of your system.}{Consult the PreTeXt Guide for help with LaTeX fonts.}{}}
+\IfFontExistsTF{Inconsolatazi4-Bold.otf}{}{\GenericError{}{The font "Inconsolatazi4-Bold.otf" requested by PreTeXt output is not available.  Either a file cannot be located in default locations via a filename, or a font is not known by its name as part of your system.}{Consult the PreTeXt Guide for help with LaTeX fonts.}{}}
+\usepackage{zi4}
+\setmonofont[BoldFont=Inconsolatazi4-Bold.otf,StylisticSet={1,3}]{Inconsolatazi4-Regular.otf}
+%% end:   xelatex mono font ("font-xelatex-mono" template)
+%% begin: xelatex font adjustments ("font-xelatex-style" template)
+%% end:   xelatex font adjustments ("font-xelatex-style" template)
+%% Icons being used, so xelatex needs a system font
+%% This can only be determined at compile-time
+\IfFontExistsTF{FontAwesome}{}{\GenericError{}{The font "FontAwesome" requested by PreTeXt output is not available.  Either a file cannot be located in default locations via a filename, or a font is not known by its name as part of your system.}{Consult the PreTeXt Guide for help with LaTeX fonts.}{}}
+%%
+%% Extensive support for other languages
+\usepackage{polyglossia}
+%% Set main/default language based on pretext/@xml:lang value
+%% Enable secondary languages based on discovery of @xml:lang values
+%% Enable fonts/scripts based on discovery of @xml:lang values
+%% Western languages should be ably covered by Latin Modern Roman
+%% end:   font setup and configuration for use with xelatex
+}{%
+%% begin: font setup and configuration for use with pdflatex
+%% begin: pdflatex main font ("font-pdflatex-main" template)
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+%% end:   pdflatex main font ("font-pdflatex-main" template)
+%% begin: pdflatex mono font ("font-pdflatex-mono" template)
+%% (conditional on non-trivial uses being present in source)
+\usepackage[varqu,varl]{inconsolata}
+%% end:   pdflatex mono font ("font-pdflatex-mono" template)
+%% begin: pdflatex font adjustments ("font-pdflatex-style" template)
+%% end:   pdflatex font adjustments ("font-pdflatex-style" template)
+%% end:   font setup and configuration for use with pdflatex
+}
+%% Micromanage spacing, etc.  The named "microtype-options"
+%% template may be employed to fine-tune package behavior
+\usepackage{microtype}
+%% Symbols, align environment, commutative diagrams, bracket-matrix
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amssymb}
+%% allow page breaks within display mathematics anywhere
+%% level 4 is maximally permissive
+%% this is exactly the opposite of AMSmath package philosophy
+%% there are per-display, and per-equation options to control this
+%% split, aligned, gathered, and alignedat are not affected
+\allowdisplaybreaks[4]
+%% allow more columns to a matrix
+%% can make this even bigger by overriding with  latex.preamble.late  processing option
+\setcounter{MaxMatrixCols}{30}
+%% xfrac package for 'beveled fractions': http://tex.stackexchange.com/questions/3372/how-do-i-typeset-arbitrary-fractions-like-the-standard-symbol-for-5-%C2%BD
+\usepackage{xfrac}
+%%
+%%
+%% Division Titles, and Page Headers/Footers
+%% titlesec package, loading "titleps" package cooperatively
+%% See code comments about the necessity and purpose of "explicit" option.
+%% The "newparttoc" option causes a consistent entry for parts in the ToC 
+%% file, but it is only effective if there is a \titleformat for \part.
+%% "pagestyles" loads the  titleps  package cooperatively.
+\usepackage[explicit, newparttoc, pagestyles]{titlesec}
+%% The companion titletoc package for the ToC.
+\usepackage{titletoc}
+%% begin: customizations of page styles via the modal "titleps-style" template
+%% Designed to use commands from the LaTeX "titleps" package
+\pagestyle{plain}
+%% end: customizations of page styles via the modal "titleps-style" template
+%%
+%% Create globally-available macros to be provided for style writers
+%% These are redefined for each occurence of each division
+\newcommand{\divisionnameptx}{\relax}%
+\newcommand{\titleptx}{\relax}%
+\newcommand{\subtitleptx}{\relax}%
+\newcommand{\shortitleptx}{\relax}%
+\newcommand{\authorsptx}{\relax}%
+\newcommand{\epigraphptx}{\relax}%
+%% Create environments for possible occurences of each division
+%% Environment for a PTX "section" at the level of a LaTeX "section"
+\NewDocumentEnvironment{sectionptx}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Seção}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\section[{#3}]{#1}%
+\label{#6}%
+}{}%
+%% Environment for a PTX "subsection" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{subsectionptx}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Subseção}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\subsection[{#3}]{#1}%
+\label{#6}%
+}{}%
+%% Environment for a PTX "exercises" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{exercises-subsection}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Exercícios}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\subsection[{#3}]{#1}%
+\label{#6}%
+}{}%
+%% Environment for a PTX "exercises" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{exercises-subsection-numberless}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Exercícios}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\subsection*{#1}%
+\addcontentsline{toc}{subsection}{#3}
+\label{#6}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "section"
+\NewDocumentEnvironment{references-section}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Referêcias}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\section[{#3}]{#1}%
+\label{#6}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "section"
+\NewDocumentEnvironment{references-section-numberless}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Referêcias}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\section*{#1}%
+\addcontentsline{toc}{section}{#3}
+\label{#6}%
+}{}%
+%%
+%% Styles for six traditional LaTeX divisions
+\titleformat{\part}[display]
+{\divisionfont\Huge\bfseries\centering}{\divisionnameptx\space\thepart}{30pt}{\Huge#1}
+[{\Large\centering\authorsptx}]
+\titleformat{\chapter}[display]
+{\divisionfont\huge\bfseries}{\divisionnameptx\space\thechapter}{20pt}{\Huge#1}
+[{\Large\authorsptx}]
+\titleformat{name=\chapter,numberless}[display]
+{\divisionfont\huge\bfseries}{}{0pt}{#1}
+[{\Large\authorsptx}]
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\titleformat{\section}[hang]
+{\divisionfont\Large\bfseries}{\thesection}{1ex}{#1}
+[{\large\authorsptx}]
+\titleformat{name=\section,numberless}[block]
+{\divisionfont\Large\bfseries}{}{0pt}{#1}
+[{\large\authorsptx}]
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titleformat{\subsection}[hang]
+{\divisionfont\large\bfseries}{\thesubsection}{1ex}{#1}
+[{\normalsize\authorsptx}]
+\titleformat{name=\subsection,numberless}[block]
+{\divisionfont\large\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\subsubsection}[hang]
+{\divisionfont\normalsize\bfseries}{\thesubsubsection}{1em}{#1}
+[{\small\authorsptx}]
+\titleformat{name=\subsubsection,numberless}[block]
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\paragraph}[hang]
+{\divisionfont\normalsize\bfseries}{\theparagraph}{1em}{#1}
+[{\small\authorsptx}]
+\titleformat{name=\paragraph,numberless}[block]
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5em}
+%%
+%% Styles for five traditional LaTeX divisions
+\titlecontents{part}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\Large\thecontentslabel\enspace}{\Large}%
+{}%
+[\addvspace{.5pc}]%
+\titlecontents{chapter}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\large\thecontentslabel\enspace}{\large}%
+{\hfill\bfseries\thecontentspage}%
+[\addvspace{.5pc}]%
+\dottedcontents{section}[3.8em]{\contentsfont}{2.3em}{1pc}%
+\dottedcontents{subsection}[6.1em]{\contentsfont}{3.2em}{1pc}%
+\dottedcontents{subsubsection}[9.3em]{\contentsfont}{4.3em}{1pc}%
+%%
+%% Begin: Semantic Macros
+%% To preserve meaning in a LaTeX file
+%%
+%% \mono macro for content of "c", "cd", "tag", etc elements
+%% Also used automatically in other constructions
+%% Simply an alias for \texttt
+%% Always defined, even if there is no need, or if a specific tt font is not loaded
+\newcommand{\mono}[1]{\texttt{#1}}
+%%
+%% Following semantic macros are only defined here if their
+%% use is required only in this specific document
+%%
+%% Used for inline definitions of terms
+\newcommand{\terminology}[1]{\textbf{#1}}
+%% Used for fillin answer blank
+%% Argument is length in em
+%% Length may compress for output to fit in one line
+\newcommand{\fillin}[1]{\leavevmode\leaders\vrule height -1.2pt depth 1.5pt \hskip #1em minus #1em \null}
+%% End: Semantic Macros
+%% Divisional exercises (and worksheet) as LaTeX environments
+%% Third argument is option for extra workspace in worksheets
+%% Hanging indent occupies a 5ex width slot prior to left margin
+%% Experimentally this seems just barely sufficient for a bold "888."
+%% Division exercises, not in exercise group
+\tcbset{ divisionexercisestyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, breakable, parbox=false } }
+\newtcolorbox{divisionexercise}[4]{divisionexercisestyle, before title={\hspace{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline}{}}}
+%% Division exercises, in exercise group, no columns
+\tcbset{ divisionexerciseegstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, left skip=\egindent, breakable, parbox=false } }
+\newtcolorbox{divisionexerciseeg}[4]{divisionexerciseegstyle, before title={\hspace{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline}{}}}
+%% Localize LaTeX supplied names (possibly none)
+\renewcommand*{\abstractname}{Resumo}
+%% Equation Numbering
+%% Controlled by  numbering.equations.level  processing parameter
+%% No adjustment here implies document-wide numbering
+\numberwithin{equation}{section}
+%% "tcolorbox" environment for a single image, occupying entire \linewidth
+%% arguments are left-margin, width, right-margin, as multiples of
+%% \linewidth, and are guaranteed to be positive and sum to 1.0
+\tcbset{ imagestyle/.style={bwminimalstyle} }
+\NewTColorBox{image}{mmm}{imagestyle,left skip=#1\linewidth,width=#2\linewidth}
+%% For improved tables
+\usepackage{array}
+%% Some extra height on each row is desirable, especially with horizontal rules
+%% Increment determined experimentally
+\setlength{\extrarowheight}{0.2ex}
+%% Define variable thickness horizontal rules, full and partial
+%% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package
+\newcommand{\hrulethin}  {\noalign{\hrule height 0.04em}}
+\newcommand{\hrulemedium}{\noalign{\hrule height 0.07em}}
+\newcommand{\hrulethick} {\noalign{\hrule height 0.11em}}
+%% We preserve a copy of the \setlength package before other
+%% packages (extpfeil) get a chance to load packages that redefine it
+\let\oldsetlength\setlength
+\newlength{\Oldarrayrulewidth}
+\newcommand{\crulethin}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}%
+\newcommand{\crulemedium}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+\newcommand{\crulethick}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%% Single letter column specifiers defined via array package
+\newcolumntype{A}{!{\vrule width 0.04em}}
+\newcolumntype{B}{!{\vrule width 0.07em}}
+\newcolumntype{C}{!{\vrule width 0.11em}}
+%% tcolorbox to place tabular outside of a sidebyside
+\tcbset{ tabularboxstyle/.style={bwminimalstyle,} }
+\newtcolorbox{tabularbox}[3]{tabularboxstyle, left skip=#1\linewidth, width=#2\linewidth,}
+%% Footnote Numbering
+%% Specified by numbering.footnotes.level
+\counterwithin*{footnote}{section}
+%% QR Code Support
+%% Videos and other interactives
+\usepackage{qrcode}
+\newlength{\qrsize}
+\newlength{\previewwidth}
+%% tcolorbox styles for interactive previews
+%% changing size= and/or colback can aid in debugging
+\tcbset{ previewstyle/.style={bwminimalstyle, halign=center} }
+\tcbset{ qrstyle/.style={bwminimalstyle, hbox} }
+\tcbset{ captionstyle/.style={bwminimalstyle, left=1em, width=\linewidth} }
+%% Generic red play button (from SVG)
+%% tikz package should be loaded by now
+\definecolor{playred}{RGB}{230,33,23}
+\newcommand{\genericpreview}{
+        \begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]
+        \path[fill=playred] (94.9800,28.8400) .. controls (94.9800,28.8400) and
+        (94.0400,22.2400) .. (91.1700,19.3400) .. controls (87.5300,15.5300) and
+        (83.4500,15.5100) .. (81.5800,15.2900) .. controls (68.1800,14.3200) and
+        (48.0600,14.4400) .. (48.0600,14.4400) .. controls (48.0600,14.4400) and
+        (27.9400,14.3200) .. (14.5400,15.2900) .. controls (12.6700,15.5100) and
+        (8.5900,15.5300) .. (4.9500,19.3400) .. controls (2.0800,22.2400) and
+        (1.1400,28.8400) .. (1.1400,28.8400) .. controls (1.1400,28.8400) and
+        (0.1800,36.5800) .. (0.0000,44.3300) -- (0.0000,51.5900) .. controls
+        (0.1800,59.3400) and (1.1400,67.0800) .. (1.1400,67.0800) .. controls
+        (1.1400,67.0800) and (2.0700,73.6800) .. (4.9500,76.5800) .. controls
+        (8.5900,80.3900) and (13.3800,80.2700) .. (15.5100,80.6700) .. controls
+        (23.0400,81.3900) and (47.2100,81.5600) .. (48.0500,81.5700) .. controls
+        (48.0600,81.5700) and (68.1900,81.6000) .. (81.5900,80.6300) .. controls
+        (83.4600,80.4100) and (87.5400,80.3900) .. (91.1800,76.5800) .. controls
+        (94.0500,73.6800) and (94.9900,67.0800) .. (94.9900,67.0800) .. controls
+        (94.9900,67.0800) and (95.9500,59.3300) .. (96.0100,51.5900) --
+        (96.0100,44.3300) .. controls (95.9400,36.5800) and (94.9800,28.8400) ..
+        (94.9800,28.8400) -- cycle(38.2800,61.4100) -- (38.2800,34.4100) --
+        (64.0200,47.9100) -- (38.2800,61.4100) -- cycle;
+        \end{tikzpicture}
+        }
+%% Font Awesome icons in a LaTeX package
+\usepackage{fontawesome}
+%% Program listing support: for listings, programs, consoles, and Sage code
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}%
+  {\tcbuselibrary{listings}}%
+  {\tcbuselibrary{listingsutf8}}%
+%% We define the listings font style to be the default "ttfamily"
+%% To fix hyphens/dashes rendered in PDF as fancy minus signs by listing
+%% http://tex.stackexchange.com/questions/33185/listings-package-changes-hyphens-to-minus-signs
+\makeatletter
+\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
+\@empty\z@\@empty
+\makeatother
+%% We define a null language, free of any formatting or style
+%% for use when a language is not supported, or pseudo-code, or consoles
+%% Not necessary for Sage code, so in limited cases included unnecessarily
+\lstdefinelanguage{none}{identifierstyle=,commentstyle=,stringstyle=,keywordstyle=}
+\ifthenelse{\boolean{xetex}}{}{%
+%% begin: pdflatex-specific listings configuration
+%% translate U+0080 - U+00F0 to their textmode LaTeX equivalents
+%% Data originally from https://www.w3.org/Math/characters/unicode.xml, 2016-07-23
+%% Lines marked in XSL with "$" were converted from mathmode to textmode
+\lstset{extendedchars=true}
+\lstset{literate={ }{{~}}{1}{¡}{{\textexclamdown }}{1}{¢}{{\textcent }}{1}{£}{{\textsterling }}{1}{¤}{{\textcurrency }}{1}{¥}{{\textyen }}{1}{¦}{{\textbrokenbar }}{1}{§}{{\textsection }}{1}{¨}{{\textasciidieresis }}{1}{©}{{\textcopyright }}{1}{ª}{{\textordfeminine }}{1}{«}{{\guillemotleft }}{1}{¬}{{\textlnot }}{1}{­}{{\-}}{1}{®}{{\textregistered }}{1}{¯}{{\textasciimacron }}{1}{°}{{\textdegree }}{1}{±}{{\textpm }}{1}{²}{{\texttwosuperior }}{1}{³}{{\textthreesuperior }}{1}{´}{{\textasciiacute }}{1}{µ}{{\textmu }}{1}{¶}{{\textparagraph }}{1}{·}{{\textperiodcentered }}{1}{¸}{{\c{}}}{1}{¹}{{\textonesuperior }}{1}{º}{{\textordmasculine }}{1}{»}{{\guillemotright }}{1}{¼}{{\textonequarter }}{1}{½}{{\textonehalf }}{1}{¾}{{\textthreequarters }}{1}{¿}{{\textquestiondown }}{1}{À}{{\`{A}}}{1}{Á}{{\'{A}}}{1}{Â}{{\^{A}}}{1}{Ã}{{\~{A}}}{1}{Ä}{{\"{A}}}{1}{Å}{{\AA }}{1}{Æ}{{\AE }}{1}{Ç}{{\c{C}}}{1}{È}{{\`{E}}}{1}{É}{{\'{E}}}{1}{Ê}{{\^{E}}}{1}{Ë}{{\"{E}}}{1}{Ì}{{\`{I}}}{1}{Í}{{\'{I}}}{1}{Î}{{\^{I}}}{1}{Ï}{{\"{I}}}{1}{Ð}{{\DH }}{1}{Ñ}{{\~{N}}}{1}{Ò}{{\`{O}}}{1}{Ó}{{\'{O}}}{1}{Ô}{{\^{O}}}{1}{Õ}{{\~{O}}}{1}{Ö}{{\"{O}}}{1}{×}{{\texttimes }}{1}{Ø}{{\O }}{1}{Ù}{{\`{U}}}{1}{Ú}{{\'{U}}}{1}{Û}{{\^{U}}}{1}{Ü}{{\"{U}}}{1}{Ý}{{\'{Y}}}{1}{Þ}{{\TH }}{1}{ß}{{\ss }}{1}{à}{{\`{a}}}{1}{á}{{\'{a}}}{1}{â}{{\^{a}}}{1}{ã}{{\~{a}}}{1}{ä}{{\"{a}}}{1}{å}{{\aa }}{1}{æ}{{\ae }}{1}{ç}{{\c{c}}}{1}{è}{{\`{e}}}{1}{é}{{\'{e}}}{1}{ê}{{\^{e}}}{1}{ë}{{\"{e}}}{1}{ì}{{\`{\i}}}{1}{í}{{\'{\i}}}{1}{î}{{\^{\i}}}{1}{ï}{{\"{\i}}}{1}{ð}{{\dh }}{1}{ñ}{{\~{n}}}{1}{ò}{{\`{o}}}{1}{ó}{{\'{o}}}{1}{ô}{{\^{o}}}{1}{õ}{{\~{o}}}{1}{ö}{{\"{o}}}{1}{÷}{{\textdiv }}{1}{ø}{{\o }}{1}{ù}{{\`{u}}}{1}{ú}{{\'{u}}}{1}{û}{{\^{u}}}{1}{ü}{{\"{u}}}{1}{ý}{{\'{y}}}{1}{þ}{{\th }}{1}{ÿ}{{\"{y}}}{1}}
+%% end: pdflatex-specific listings configuration
+}
+%% End of generic listing adjustments
+%% The listings package as tcolorbox for Sage code
+%% We do as much styling as possible with tcolorbox, not listings
+%% Sage's blue is 50%, we go way lighter (blue!05 would also work)
+%% Note that we defuse listings' default "aboveskip" and "belowskip"
+\definecolor{sageblue}{rgb}{0.95,0.95,1}
+\tcbset{ sagestyle/.style={left=0pt, right=0pt, top=0ex, bottom=0ex, middle=0pt, toptitle=0pt, bottomtitle=0pt,
+boxsep=4pt, listing only, fontupper=\small\ttfamily,
+breakable, parbox=false, 
+listing options={language=Python,breaklines=true,breakatwhitespace=true, extendedchars=true, aboveskip=0pt, belowskip=0pt}} }
+\newtcblisting{sageinput}{sagestyle, colback=sageblue, sharp corners, boxrule=0.5pt, toprule at break=-0.3pt, bottomrule at break=-0.3pt, }
+\newtcblisting{sageoutput}{sagestyle, colback=white, colframe=white, frame empty, before skip=0pt, after skip=0pt, }
+%% More flexible list management, esp. for references
+%% But also for specifying labels (i.e. custom order) on nested lists
+\usepackage{enumitem}
+%% Lists of references in their own section, maximum depth 1
+\newlist{referencelist}{description}{4}
+\setlist[referencelist]{leftmargin=!,labelwidth=!,labelsep=0ex,itemsep=1.0ex,topsep=1.0ex,partopsep=0pt,parsep=0pt}
+%% Indented groups of "exercise" within an "exercises" division
+%% Lengths control the indentation (always) and gaps (multi-column)
+\newlength{\egindent}\setlength{\egindent}{0.05\linewidth}
+\newlength{\exggap}\setlength{\exggap}{0.05\linewidth}
+%% Thin "xparse" environments will represent the entire exercise
+%% group, in the case when it does not hold multiple columns.
+\NewDocumentEnvironment{exercisegroup}{}
+{}{}
+%% hyperref driver does not need to be specified, it will be detected
+%% Footnote marks in tcolorbox have broken linking under
+%% hyperref, so it is necessary to turn off all linking
+%% It *must* be given as a package option, not with \hypersetup
+\usepackage[hyperfootnotes=false]{hyperref}
+%% configure hyperref's  \url  to match listings' inline verbatim
+\renewcommand\UrlFont{\small\ttfamily}
+%% Hyperlinking active in electronic PDFs, all links solid and blue
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+\hypersetup{pdftitle={Cálculo Integral: N1}}
+%% If you manually remove hyperref, leave in this next command
+%% This will allow LaTeX compilation, employing this no-op command
+\providecommand\phantomsection{}
+%% Division Numbering: Chapters, Sections, Subsections, etc
+%% Division numbers may be turned off at some level ("depth")
+%% A section *always* has depth 1, contrary to us counting from the document root
+%% The latex default is 3.  If a larger number is present here, then
+%% removing this command may make some cross-references ambiguous
+%% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
+\setcounter{secnumdepth}{3}
+%%
+%% AMS "proof" environment is no longer used, but we leave previously
+%% implemented \qedhere in place, should the LaTeX be recycled
+\newcommand{\qedhere}{\relax}
+%%
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for most blocks (possibly not projects, 2D displays)
+%% Controlled by  numbering.theorems.level  processing parameter
+\newtcolorbox[auto counter, number within=section]{block}{}
+%%
+%% This document is set to number PROJECT-LIKE on a separate numbering scheme
+%% So, a faux tcolorbox whose only purpose is to provide this numbering
+%% Controlled by  numbering.projects.level  processing parameter
+\newtcolorbox[auto counter, number within=section]{project-distinct}{}
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for 2D displays which are subnumbered as part of a "sidebyside"
+\makeatletter
+\newtcolorbox[auto counter, number within=tcb@cnt@block, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
+\makeatother
+%%
+%% tcolorbox, with styles, for THEOREM-LIKE
+%%
+%% theorem: fairly simple numbered block/structure
+\tcbset{ theoremstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=block]{theorem}[3]{title={{Teorema~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, fontupper=\itshape, theoremstyle, }
+%%
+%% tcolorbox, with styles, for DEFINITION-LIKE
+%%
+%% definition: fairly simple numbered block/structure
+\tcbset{ definitionstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\lozenge\)}, } }
+\newtcolorbox[use counter from=block]{definition}[2]{title={{Definição~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, definitionstyle, }
+%%
+%% tcolorbox, with styles, for REMARK-LIKE
+%%
+%% note: fairly simple numbered block/structure
+\tcbset{ notestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=block]{note}[2]{title={{Nota~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, notestyle, }
+%%
+%% tcolorbox, with styles, for COMPUTATION-LIKE
+%%
+%% technology: fairly simple numbered block/structure
+\tcbset{ technologystyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=block]{technology}[2]{title={{Tecnologia~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, technologystyle, }
+%%
+%% tcolorbox, with styles, for EXAMPLE-LIKE
+%%
+%% example: fairly simple numbered block/structure
+\tcbset{ examplestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\square\)}, } }
+\newtcolorbox[use counter from=block]{example}[2]{title={{Exemplo~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, examplestyle, }
+%%
+%% tcolorbox, with styles, for inline exercises
+%%
+%% inlineexercise: fairly simple numbered block/structure
+\tcbset{ inlineexercisestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=block]{inlineexercise}[2]{title={{Autoavaliação~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, inlineexercisestyle, }
+%%
+%% tcolorbox, with styles, for PROJECT-LIKE
+%%
+%% activity: fairly simple numbered block/structure
+\tcbset{ activitystyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=project-distinct]{activity}[2]{title={{Atividade~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, activitystyle, }
+%%
+%% tcolorbox, with styles, for GOAL-LIKE
+%%
+%% objectives: early in a subdivision, introduction/list/conclusion
+\tcbset{ objectivesstyle/.style={bwminimalstyle, blockspacingstyle, fonttitle=\blocktitlefont\large\bfseries, toprule=0.1ex, toptitle=0.5ex, top=2ex, bottom=0.5ex, bottomrule=0.1ex} }
+\newtcolorbox{objectives}[2]{title={#1}, phantomlabel={#2}, breakable, parbox=false, objectivesstyle}
+%%
+%% tcolorbox, with styles, for FIGURE-LIKE
+%%
+%% tableptx: 2-D display structure
+\tcbset{ tableptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, coltitle=black, bottomtitle=2ex, titlerule=-0.3pt, fonttitle=\blocktitlefont} }
+\newtcolorbox[use counter from=block]{tableptx}[3]{title={{\textbf{Tabela~\thetcbcounter}\space#1}}, phantomlabel={#2}, unbreakable, parbox=false, tableptxstyle, }
+%% figureptx: 2-D display structure
+\tcbset{ figureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
+\newtcolorbox[use counter from=block]{figureptx}[3]{lower separated=false, before lower={{\textbf{Figura~\thetcbcounter}\space#1}}, phantomlabel={#2}, unbreakable, parbox=false, figureptxstyle, }
+%%
+%% tcolorbox, with styles, for miscellaneous environments
+%%
+%% paragraphs: the terminal, pseudo-division
+%% We use the lowest LaTeX traditional division
+\titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{#1}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\NewDocumentEnvironment{paragraphs}{mm}
+{\subparagraph*{#1}\hypertarget{#2}{}}{}
+%% assemblage: fairly simple un-numbered block/structure
+\tcbset{ assemblagestyle/.style={size=normal, colback=white, colbacktitle=white, coltitle=black, colframe=black, rounded corners, titlerule=0.0pt, center title, fonttitle=\blocktitlefont\bfseries, blockspacingstyle, } }
+\newtcolorbox{assemblage}[2]{title={\notblank{#1}{#1}{}}, phantomlabel={#2}, breakable, parbox=false, assemblagestyle}
+%% Graphics Preamble Entries
+%% If tikz has been loaded, replace ampersand with \amp macro
+%% tcolorbox styles for sidebyside layout
+\tcbset{ sbsstyle/.style={raster before skip=2.0ex, raster equal height=rows, raster force size=false} }
+\tcbset{ sbspanelstyle/.style={bwminimalstyle, fonttitle=\blocktitlefont} }
+%% Enviroments for side-by-side and components
+%% Necessary to use \NewTColorBox for boxes of the panels
+%% "newfloat" environment to squash page-breaks within a single sidebyside
+%% "xparse" environment for entire sidebyside
+\NewDocumentEnvironment{sidebyside}{mmmm}
+  {\begin{tcbraster}
+    [sbsstyle,raster columns=#1,
+    raster left skip=#2\linewidth,raster right skip=#3\linewidth,raster column skip=#4\linewidth]}
+  {\end{tcbraster}}
+%% "tcolorbox" environment for a panel of sidebyside
+\NewTColorBox{sbspanel}{mO{top}}{sbspanelstyle,width=#1\linewidth,valign=#2}
+%% extpfeil package for certain extensible arrows,
+%% as also provided by MathJax extension of the same name
+%% NB: this package loads mtools, which loads calc, which redefines
+%%     \setlength, so it can be removed if it seems to be in the 
+%%     way and your math does not use:
+%%     
+%%     \xtwoheadrightarrow, \xtwoheadleftarrow, \xmapsto, \xlongequal, \xtofrom
+%%     
+%%     we have had to be extra careful with variable thickness
+%%     lines in tables, and so also load this package late
+\usepackage{extpfeil}
+%% Custom Preamble Entries, late (use latex.preamble.late)
+%% Begin: Author-provided packages
+%% (From  docinfo/latex-preamble/package  elements)
+\usepackage{cancel}%% End: Author-provided packages
+%% Begin: Author-provided macros
+%% (From  docinfo/macros  element)
+%% Plus three from MBX for XML characters
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+%% End: Author-provided macros
+%% Title page information for article
+\title{Cálculo Integral: N1}
+\author{Leon Silva\\
+Departamento de Matemática\\
+Universidade Federal Rural de Pernambuco
+\and
+Deibsom Silva\\
+Departamento de Matemática\\
+Universidade Federal Rural de Pernambuco
+}
+\date{August 14, 2021}
+\begin{document}
+%% Target for xref to top-level element is document start
+\hypertarget{x:article:integral}{}
+\maketitle
+\thispagestyle{empty}
+\begin{abstract}
+Nesta semana vamos apresentar o conteúdo referente ao cálculo integral e as equações diferenciais.%
+\end{abstract}
+%
+%
+\typeout{************************************************}
+\typeout{Seção 1 Integral Indefinida}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Integral Indefinida}{}{Integral Indefinida}{}{}{x:section:sec-integral-indefinida}
+\begin{objectives}{Objetivos: Estrutura}{g:objectives:idp1}
+%
+\begin{enumerate}
+\item{}Calcular a primitiva de uma função.%
+\item{}Definir a integral indefinida.%
+\item{}Introduzir o conceito de equações diferenciais.%
+\end{enumerate}
+\end{objectives}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 1.1 Primitiva}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Primitiva}{}{Primitiva}{}{}{x:subsection:subsec-integral-indefinida}
+\begin{definition}{}{x:definition:def-primitiva}%
+Seja \(f\) uma função definida em um intervalo aberto\footnotemark{} \(I\). Uma \terminology{primitiva} é uma função \(F\) definida em \(I\), de modo que%
+\begin{gather}
+\frac{\dd}{\dd x}\left[F(x)\right]=f(x). \label{x:mrow:eq-primitiva}
+\end{gather}
+para todo \(x\) em \(I\).%
+\end{definition}
+\footnotetext[1]{veja em \href{https://pt.wikipedia.org/wiki/Intervalo_(matem\%C3\%A1tica)}{wikipedia}\label{g:fn:idp2}}%
+\begin{note}{}{g:note:idp3}%
+É comum reescrever \hyperref[x:mrow:eq-primitiva]{({\xreffont\ref{x:mrow:eq-primitiva}})} como \(F'(x)=f(x)\).%
+\end{note}
+\begin{example}{Determinando Primitivas.}{x:example:ex-primitiva1}%
+A primitiva de \(f(x)=x^2\) em \((-\infty, +\infty)\) é \(F(x)=\frac{1}{3}x^3\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp4}{}\quad{}De fato, uma vez que para todo \(x\),%
+\begin{align*}
+\frac{\dd}{\dd x}\left[\frac{1}{3}x^3\right]\amp = x^2
+\end{align*}
+para todo \(x\) em \((-\infty, +\infty)\).%
+\end{example}
+\begin{example}{Primitivas mais gerais.}{x:example:ex-primitiva2}%
+\fa{} Considere \(C \in \mathbb{R}\). A função \(G(x)= \frac{1}{3}x^3 + C\) é, também, uma primitiva de \(f(x)=x^2\) em \((-\infty, +\infty)\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp5}{}\quad{}Segue do fato de \(\frac{\dd}{\dd x}(C)=0\), seja qual for o número \(C\).%
+\end{example}
+\begin{inlineexercise}{}{x:exercise:exc-primitiva1}%
+Encontre pelo menos 3 primitivas para a função constante \(f(x)=k\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp6}{}\quad{}\(F(x)=kx\), \(G(x)=kx +1\), \(H(x)=kx+\frac{1}{2}\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp7}{}\quad{}Se \(k\) é constante então a derivada de \(kx\) é \(k\), logo \(F(x)=kx\) é uma primitiva de \(f(x)=k\). O mesmo acontece  para \(G(x)=kx +1\) e \(H(x)=kx+\frac{1}{2}\). É fácil perceber que \(kx+C\), na qual \(C\) é uma constante, é uma primitiva de \(f\) para qualquer que seja o valor de \(C\).%
+\end{inlineexercise}%
+\begin{paragraphs}{Quantas  primitivas pode ter uma função?}{g:paragraphs:idp8}%
+\end{paragraphs}%
+\begin{theorem}{}{}{x:theorem:thm-primitiva}%
+Se  \(F(x)\) é uma primitiva de \(f(x)\) em um intervalo aberto \(I\) , então \(F(x) + C\), seja qual for o valor da constante \(C\), é também uma primitiva de \(f(x)\) em \(I\).%
+\end{theorem}
+O  \hyperref[x:theorem:thm-primitiva]{Teorema~{\xreffont\ref{x:theorem:thm-primitiva}}} garante que uma vez conhecida uma primitiva de um função, todas as outras são iguais, a menos de uma constante, como o leitor pôde verificar no \hyperref[x:exercise:exc-primitiva1]{Autoavaliação~{\xreffont\ref{x:exercise:exc-primitiva1}}}. É comum se referir a expressão \(F(x)+C\) como a \terminology{família}  de primitivas de \(f(x)\).%
+\par
+O processo para encontrar a primitiva de uma função \(f(x)\) define uma operação denominada \terminology{integral indefinida}  de \(f(x)\) em relação a \(x\). Como todas as primitivas de \(f(x)\) são da forma \(F(x) + C\), usaremos a notação%
+\begin{gather}
+\integral{f(x)}{x}=F(x) + C \text{,}\label{x:mrow:eq-integral-indefinida}
+\end{gather}
+na qual \(f(x)\) é chamada de \terminology{integrando}  e \(C\)  de \terminology{constante de integração}.%
+\begin{assemblage}{Como se lê.}{x:assemblage:assemblage-integral-indefinida}%
+%
+\begin{equation*}
+\integral{f(x)}{x}=F(x) + C
+\end{equation*}
+%
+\par
+A integral de \(f(x)\) em relação a \(x\) é igual a \(F(x)\) mais uma constante.%
+\end{assemblage}
+\begin{note}{O símbolo \((\displaystyle\int)\) e o símbolo \((\dd x)\).}{g:note:idp9}%
+O símbolo que parece um "S esticado verticalmente" é denominado \terminology{sinal de integral}. Sua origem vem da palavra \emph{sum} (soma, em português) que diz respeito a definição de integral definida, tópico que será apresentado no momento adequado.%
+\par
+O símbolo de \terminology{diferencial} \(\dd x\) serve para identificar a variável independente. Neste contexto, quando estamos diante da diferencial\footnotemark{}   \(\dd x\) devemos calcular a integral em relação a \(x\), assim como \(\dd t\) indica integração em relação a variável \(t\).%
+\end{note}
+\footnotetext[2]{saiba mais em \href{https://pt.wikipedia.org/wiki/Diferencial_(infinitesimal)}{wikipedia}\label{g:fn:idp10}}%
+\begin{example}{Determinação de integrais indefinidas.}{x:example:ex-integral-indefinida-1}%
+Determine cada integral a seguir: \(\integral{2}{x}.\)%
+\par\smallskip%
+\noindentJá que \(F(x)=2x\) é uma primitiva para \(f(x)=2\), segue da igualdade \hyperref[x:mrow:eq-integral-indefinida]{({\xreffont\ref{x:mrow:eq-integral-indefinida}})} que%
+\begin{equation*}
+\integral{2}{x}=2x + C\text{.}
+\end{equation*}
+%
+ \(\integral{x}{x}\)%
+\par\smallskip%
+\noindentUma vez que \(\frac{\dd}{\dd x}[\frac{x^2}{2}]=x\), obtem-se%
+\begin{equation*}
+\integral{x}{x}=\frac{x^2}{2} + C\text{.}
+\end{equation*}
+%
+ \(\integral{x^2}{x}\)%
+\par\smallskip%
+\noindentComo \(\frac{x^3}{3}\) é uma primitiva de \(x^2\), pois \(\frac{\dd}{\dd x}[\frac{x^3}{3}]=x^2\), concluímos que%
+\begin{equation*}
+\integral{x^2}{x}=\frac{x^3}{3} +C\text{.}
+\end{equation*}
+%
+%
+\end{example}
+\begin{example}{Primitiva particular.}{x:example:exer-primitiva-particular}%
+Para a função \(f(x)=3x+1\), determine a primitiva, \(F(x)\), que satisfaça \(F(2)=4\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp11}{}\quad{}A função \(F(x)= 3\left(\frac{x^2}{2}\right) + x+ C\) é a família de primitivas, uma vez que%
+\begin{align*}
+\frac{\dd }{\dd x}\left[3\left(\frac{x^2}{2}\right) + x+ C\right]= 3x+1 \amp \quad \color{gray}{(\text{veja Equação} \,\,  \hyperref[x:mrow:eq-primitiva]{\text{({\xreffont\ref{x:mrow:eq-primitiva}})}})}\text{.}
+\end{align*}
+A condição \(F(2)=4\) fornece a possibilidade de determinar o valor de \(C\) fazendo%
+\begin{equation*}
+F(2)=   3\left(\frac{2^2}{2}\right) + 2 + C = 4
+\end{equation*}
+para obter \(C=-4\). Portanto, a primitiva desejada é%
+\begin{equation*}
+F(x)= 3\left(\frac{x^2}{2}\right) + x - 4\text{.}
+\end{equation*}
+%
+\end{example}
+\begin{assemblage}{Integral da função potência.}{x:assemblage:prob-integral-funcao-potencia}%
+%
+\begin{equation*}
+\integral{x^q}{x} = \frac{x^{q+1}}{q+1} + C, \qquad q\neq - 1.
+\end{equation*}
+%
+\end{assemblage}
+\begin{example}{Integração da função potência.}{x:example:ex-integral-indefinida-2}%
+Determine \(\integral{t^7}{t}\).%
+\par\smallskip%
+\noindentO integrando é uma função potência, então basta usar a fórmula da \hyperref[x:assemblage:prob-integral-funcao-potencia]{Integral da função potência} e obter \(\frac{t^8}{8} + C\).%
+ Determine \(\integral{x^{-2}}{x}\).%
+\par\smallskip%
+\noindentNovamente usando a fórmula da \hyperref[x:assemblage:prob-integral-funcao-potencia]{Integral da função potência}  resultamos em \(\frac{x^{-1}}{-1} + C\), que de forma simplificada se torna igual a \(-\frac{1}{x} + C\).%
+%
+\end{example}
+\begin{inlineexercise}{}{g:exercise:idp12}%
+Para a função \(f(x)=2(x-1)\), encontre a primitiva, \(F(x)\), que satisfaça \(F(3)=2\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp13}{}\quad{}Revise o \hyperref[x:example:exer-primitiva-particular]{Exemplo~{\xreffont\ref{x:example:exer-primitiva-particular}}}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp14}{}\quad{}\(x^2-2x-1\)%
+\end{inlineexercise}%
+\begin{inlineexercise}{}{g:exercise:idp15}%
+Para a função \(f(x)=x^{-\frac{1}{3}}-1\), encontre a primitiva, \(F(x)\), que satisfaça \(F(8)=4\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp16}{}\quad{}Revise o \hyperref[x:example:exer-primitiva-particular]{Exemplo~{\xreffont\ref{x:example:exer-primitiva-particular}}}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp17}{}\quad{}\(\frac{3}{2}  x^{\frac{2}{3}} - x + 6\)%
+\end{inlineexercise}%
+\begin{activity}{Verificando fatos.}{g:activity:idp18}%
+Usando o que foi aprendido até aqui, faça uma demonstração da \hyperref[x:assemblage:prob-integral-funcao-potencia]{Integral da função potência}.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp19}{}\quad{}Experimente derivar o lado direito da igualdade solicitada.%
+\end{activity}%
+\begin{example}{\(\integral{\frac{1}{x}}{x}\).}{x:example:ex-integral-indefinida-3}%
+Integral da função potência para \(q=-1\):%
+\begin{equation*}
+\integral{\frac{1}{x}}{x} = \ln{|x|} + C\text{.}
+\end{equation*}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp20}{}\quad{}A fórmula da \hyperref[x:assemblage:prob-integral-funcao-potencia]{Integral da função potência} não é válida para \(q=-1\). Logo não é possível utilizá-la para obter a integral indefinida de \(1/x\). O passo natural é encontrar uma função cuja derivada seja \(1/x\). Sabe-se que%
+\begin{equation*}
+\frac{\dd}{\dd x}\ln{x}= \frac{1}{x}\text{.}
+\end{equation*}
+Então,%
+\begin{align}
+\integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  \text{.}\tag{\(\star\)}\label{x:mrow:ln-primitiva-positiva}
+\end{align}
+De fato, o logaritmo natural não está definido para valores menores que zero. Mas,%
+\begin{gather}
+\frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x}  \text{,}\tag{\(\star\star\)}\label{x:mrow:ln-primitiva-negativa}
+\end{gather}
+para \(x \lt 0\). Então,%
+\begin{equation*}
+\integral{\frac{1}{x}}{x}= \ln{(-x)} + C, \quad x \lt 0\text{.}
+\end{equation*}
+De \hyperref[x:mrow:ln-primitiva-positiva]{({\xreffont\ref{x:mrow:ln-primitiva-positiva}})} e \hyperref[x:mrow:ln-primitiva-negativa]{({\xreffont\ref{x:mrow:ln-primitiva-negativa}})} concluímos que \(\ln{x}\) é primitiva de  \(\sfrac{1}{x}\) se \(x\gt 0\) e que  \(\ln{(-x)}\) é primitiva de \(1/x\) se \(x\lt 0\). Mais diretamente, podemos afirmar que \(\ln{|x|}\) é uma primitiva de \(1/x\). Portanto,%
+\begin{equation*}
+\integral{\frac{1}{x}}{x} = \ln{|x|} + C\text{.}
+\end{equation*}
+%
+\end{example}
+\begin{example}{\(\integral{e^x}{x}\).}{g:example:idp21}%
+Integral da função exponencial:%
+\begin{equation*}
+\integral{e^x}{x}=e^x + C 
+\end{equation*}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp22}{}\quad{}Como \(\frac{\dd }{\dd x}[e^x]=e^x\), concluímos que a função exponencial é sua própria primitiva. Logo,%
+\begin{equation*}
+\integral{e^x}{x}= e^x + C.
+\end{equation*}
+%
+\end{example}
+\begin{example}{\(\integral{\sin{x}}{x}\) e \(\integral{\cos{x}}{x}\).}{x:example:ex-integral-indefinida4}%
+A integral das funções seno e cosseno:%
+\begin{align*}
+\integral{\sin{x}}{x}\amp =-\cos{x}+C\\
+\integral{\cos{x}}{x} \amp=\sin{x}+C 
+\end{align*}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp23}{}\quad{}Seguem do fato de%
+\begin{align*}
+\frac{\dd }{\dd x}[\cos{x}]=-\sin{x} \amp \quad  \text{e} \quad \frac{\dd }{\dd x}[\sin{x}]=\cos{x}\text{.}
+\end{align*}
+%
+\end{example}
+\begin{assemblage}{Propriedadades da Integral Indefinida.}{x:assemblage:thm-prop-integral-indefinida}%
+Se  \(k\) uma constante e \(F(x)\) e \(G(x)\) são primitivas de \(f(x)\) e \(g(x)\), respectivamente, então%
+\begin{enumerate}[label=\Roman*)]
+\item\hypertarget{x:li:thm-prop-integral-indefinida-a}{}\(\displaystyle \small{\integral{kf(x)}{x}=k\integral{f(x)}{x}}\)%
+\item\hypertarget{x:li:thm-prop-integral-indefinida-b}{}\(\displaystyle \small{\integral{\left[ f(x) + g(x)\right]}{x}=\integral{f(x)}{x} + \integral{g(x)}{x}}\)%
+\item\hypertarget{x:li:thm-prop-integral-indefinida-c}{}\(\displaystyle \small{\integral{\left[f(x) - g(x)\right]}{x}=\integral{f(x)}{x} - \integral{g(x)}{x}}\)%
+\end{enumerate}
+%
+\end{assemblage}
+\begin{example}{Aplicando propriedades.}{x:example:ex1-prop-integral-indefinida}%
+Determine cada integral: \(\integral{2\cos{x}}{x}\).%
+\par\smallskip%
+\noindent%
+\begin{align*}
+\integral{2\cos{x}}{x} \amp = 2\integral{\cos{x}}{x} \amp \hyperlink{x:li:thm-prop-integral-indefinida-a}{\text{Propriedade I}}\\
+\amp = 2\sin{x} + C\amp \color{gray}{\frac{\dd}{\dd x}\left[\cos{x}\right]=\sin{x}} 
+\end{align*}
+%
+ \(\integral{(x^2+ e^x)}{x}\).%
+\par\smallskip%
+\noindent%
+\begin{align*}
+\integral{(x^2+ e^x)}{x}\amp = \integral{x^2}{x} + \integral{e^x}{x} \amp \hyperlink{x:li:thm-prop-integral-indefinida-b}{\text{Propriedade II}}\\
+\amp = \frac{x^3}{3} + e^x + C \amp \hyperref[x:assemblage:prob-integral-funcao-potencia]{\text{Integral da função potência}}
+\end{align*}
+%
+%
+\end{example}
+\begin{example}{Integração de funções polinomiais.}{x:example:ex2-prop-integral-indefinida}%
+Determine cada integral. \(\integral{(t^5 + 2t^3 - t + 1)}{t}\).%
+ \par\smallskip%
+\noindent%
+\begin{align*}
+\integral{(t^5 + 2t^3 - t + 1)}{t}\amp =
+\integral{t^5}{t} + 2\integral{t^3}{t} - \integral{t}{t} +
+\integral{1}{t}
+\amp \hyperref[x:assemblage:thm-prop-integral-indefinida]{\text{Propriedadades da Integral Indefinida}}\\
+\amp = \frac{t^{6}}{6}  + \frac{t^{4}}{2} - \frac{t^{2} }{2}  + t + C \amp \hyperref[x:assemblage:prob-integral-funcao-potencia]{\text{Integral da função potência}}
+\end{align*}
+%
+ \(\integral{(x^2+x)}{x}\).%
+\par\smallskip%
+\noindent%
+\begin{align*}
+\integral{(x^2+x)}{x}\amp = \integral{x^2}{x} + \integral{x}{x} \amp \hyperlink{x:li:thm-prop-integral-indefinida-b}{\text{Propriedade II}}\\
+\amp = \frac{x^3}{3} + \frac{x^2}{2} + C \amp \hyperref[x:assemblage:prob-integral-funcao-potencia]{\text{Integral da função potência}}
+\end{align*}
+%
+%
+\end{example}
+\begin{example}{Primitiva particular.}{x:example:primitiva-segunda-derivada}%
+Encontre \(F(x)\) sabendo que \(F''(x)=12x^2+6x-4\) , \(F(0)=4\) e \(F(1)=1\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp24}{}\quad{}A família de primitivas de \(F''(x)\) é naturalmente%
+\begin{align*}
+F'(x) \amp = 12\frac{x^3}{3} + 6\frac{x^2}{2} -4x+ C \amp  \color{gray}{\frac{\dd}{\dd x}\left[F'(x)\right]=F''(x)} \\
+\amp =4x^3 + 3x^2-4x+C 
+\end{align*}
+Assim como todas as primitivas de \(F'(x)\) tem a forma%
+\begin{align*}
+F(x)\amp = 4\frac{x^4}{4} + 3\frac{x^3}{3} -4\frac{x^2}{2} + Cx + D \amp \color{gray}{\frac{\dd}{\dd x}\left[F(x)\right]=F'(x)} \\
+\amp = x^4 + x^3-2x^2+Cx+D 
+\end{align*}
+Uma vez que \(F\) deve satisfazer \(F(0)=4\) e \(F(1)=1\) temos%
+\begin{align*}
+F(0)  \amp = 0+D =4 \\
+F(1) \amp = 1+ 1-2+C+4=1 
+\end{align*}
+que nos fornece \(D=4\) e \(C=-3\). Por fim, encontramos%
+\begin{align*}
+F(x) = x^4+ x^3-2x^2-3x+4 \amp \text{.}
+\end{align*}
+%
+\end{example}
+\begin{inlineexercise}{}{x:exercise:exe-trig}%
+Determine \(\integral{\left(\sin{t}+3\cos{t}\right)}{t}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp25}{}\quad{}Revise o \hyperref[x:example:ex-integral-indefinida4]{Exemplo~{\xreffont\ref{x:example:ex-integral-indefinida4}}} e \hyperref[x:assemblage:thm-prop-integral-indefinida]{Propriedadades da Integral Indefinida}.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp26}{}\quad{}\(-\cos{t} + 3\sin{t} + C\)%
+\end{inlineexercise}%
+\begin{inlineexercise}{}{x:exercise:exe-primitiva-segunda-derivada}%
+Encontre \(F(x)\) sabendo que \(F''(x)=\frac{6}{\sqrt{x}} + 3\) , \(F'(1)=12\) e \(F(4)=56\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp27}{}\quad{}Revise  o \hyperref[x:example:primitiva-segunda-derivada]{Exemplo~{\xreffont\ref{x:example:primitiva-segunda-derivada}}} e \hyperref[x:assemblage:prob-integral-funcao-potencia]{Integral da função potência}.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp28}{}\quad{}\(\frac{3}{2}x^{2} + 8x^{\frac{3}{2}} - 3x - 20\)%
+\end{inlineexercise}%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 1.2 Tabela de integrais}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Tabela de integrais}{}{Tabela de integrais}{}{}{x:subsection:subsec-tabela-integrais}
+\begin{tableptx}{\textbf{Tabela de integração}}{x:table:tabela1-integrais}{}%
+\centering%
+{\tabularfont%
+\begin{tabular}{l}\hrulethick
+\multicolumn{1}{c}{Fórmula}\tabularnewline\hrulethin
+\(\integral{}{x}=x+ C\)\tabularnewline[0pt]
+\(\integral{x^q}{x}=\frac{x^{q+1}}{q+1} + C,\,q\neq -1\)\tabularnewline[0pt]
+\(\integral{\cos{x}}{x}=\sin{x} + C\)\tabularnewline[0pt]
+\(\integral{\sin{x}}{x}=-\cos{x} + C\)\tabularnewline[0pt]
+\(\integral{\sec^2{x}}{x}=\tan{x} + C\)\tabularnewline[0pt]
+\(\integral{\csc^2{x}}{x}=-\cot{x} + C\)\tabularnewline[0pt]
+\(\integral{\sec{x}\tan{x}}{x}=\sec{x} + C\)\tabularnewline\hrulemedium
+\end{tabular}
+}%
+\end{tableptx}%
+\begin{tableptx}{\textbf{Tabela de integração}}{x:table:tabela2-integrais}{}%
+\centering%
+{\tabularfont%
+\begin{tabular}{l}\hrulethick
+\multicolumn{1}{c}{Fórmula}\tabularnewline\hrulethin
+\(\integral{\csc{x}\cot{x}}{x}=-\csc{x} + C\)\tabularnewline[0pt]
+\(\integral{e^x}{x} = e^x + C\)\tabularnewline[0pt]
+\(\integral{b^x}{x}= \frac{b^x}{\ln{b}} + C\, (b>0, b\neq 1)\)\tabularnewline[0pt]
+\(\integral{\frac{1}{x}}{x}=\ln{|x|} + C\)\tabularnewline[0pt]
+\(\integral{\frac{1}{1+x^2}}{x}=\arctan{x} + C\)\tabularnewline[0pt]
+\(\integral{\frac{1}{\sqrt{1-x^2}}}{x}=\arcsin{x} + C\)\tabularnewline[0pt]
+\(\integral{\frac{1}{x\sqrt{x^2-1}}}{x}=\arcsec{|x|} + C\)\tabularnewline\hrulemedium
+\end{tabular}
+}%
+\end{tableptx}%
+\begin{example}{Reescrever antes de integrar.}{x:example:ex3-prop-integral-indefinida}%
+\(\integral{\frac{x^2}{x^2+1}}{x}\).%
+\par\smallskip%
+\noindentSomando e subtraindo 1 do numerador do integrando, podemos reescrever a integral de modo permitir aplicar as fórmulas sugeridas na \hyperref[x:table:tabela2-integrais]{Tabela~{\xreffont\ref{x:table:tabela2-integrais}}}. Os passos seguintes são ilustramos logo abaixo:%
+\par
+%
+\begin{align*}
+\integral{\frac{x^2}{x^2+1}}{x} \amp = \integral{\left(\frac{x^2+1}{x^2+1}-\frac{1}{x^2+1}\right)}{x} \amp \color{gray}{\text{(reescrevendo o integrando)}}\\
+\amp =\integral{\left(1-\frac{1}{x^2+1}\right)}{x} \\
+\amp = \integral{1}{x} - \integral{\left(\frac{1}{x^2+1}\right)}{x} \quad \amp \hyperlink{x:li:thm-prop-integral-indefinida-c}{\text{Propriedade III}}\\
+\amp = x - \arctan{x} + C \quad  \quad \amp \hyperref[x:table:tabela2-integrais]{\text{Tabela {\xreffont\ref{x:table:tabela2-integrais}}}}
+\end{align*}
+%
+ \(\integral{\frac{x^2- 2x^4}{x^4}}{x}\).%
+\par\smallskip%
+\noindent%
+\begin{align*}
+\integral{\frac{x^2- 2x^4}{x^4}}{x} = \amp \integral{\left(\frac{1}{x^2}-2\right)}{x} \quad \amp \color{gray}{\text{(reescrevendo o integrando)}}\\
+\amp =\integral{x^{-2}}{x}-\integral{2}{x} \amp \hyperlink{x:li:thm-prop-integral-indefinida-b}{\text{Propriedade II}}\\
+\amp =\frac{x^{-1}}{-1}-2x + C  \amp \hyperref[x:table:tabela2-integrais]{\text{Tabela {\xreffont\ref{x:table:tabela2-integrais}}}}\\
+\amp =-\frac{1}{x}-2x + C \amp \color{gray}{\text{(simplificando)}}
+\end{align*}
+%
+%
+\end{example}
+\begin{example}{Identidades trigonométricas.}{x:example:ex4}%
+Determine \(\integral{\frac{\cos{x}}{\sin^2{x}}}{x}\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp29}{}\quad{}%
+\begin{align*}
+\integral{\frac{\cos{x}}{\sin^2{x}}}{x}\amp = \integral{\left(\frac{1}{\sin{x}}\frac{\cos{x}}{\sin{x}}\right)}{x} \quad \amp\color{gray}{\text{(reescrevendo o integrando)}}\\
+\amp = \integral{\csc{x}\cot{x}}{x} \amp \color{gray}{\text{(identidades trigonométricas)}}\\
+\amp = -\csc{x} + C \quad \amp \hyperref[x:table:tabela2-integrais]{\text{Tabela {\xreffont\ref{x:table:tabela2-integrais}}}}
+\end{align*}
+%
+\end{example}
+\begin{inlineexercise}{}{g:exercise:idp30}%
+Determine \(\integral{\frac{x^5+ 2x-1}{x^4}}{x}\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp31}{}\quad{}Verifique que a igualdade%
+\begin{equation*}
+\frac{x^5+ 2x-1}{x^4}=-\frac{1}{x^4}+ \frac{2}{x^3} + x
+\end{equation*}
+é verdadeira.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp32}{}\quad{}\(\frac{3x^5-6x+2}{6x^3} + C\)%
+\end{inlineexercise}%
+\begin{inlineexercise}{}{g:exercise:idp33}%
+Determine \(\integral{\left(\frac{2}{x}+3e^x\right)}{x}\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp34}{}\quad{}Consulte a \hyperref[x:table:tabela2-integrais]{Tabela~{\xreffont\ref{x:table:tabela2-integrais}}}.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp35}{}\quad{}\(3 e^{x} + 2 \ln{|x|} + C\)%
+\end{inlineexercise}%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 1.3 Sugestão de Vídeos}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Sugestão de Vídeos}{}{Sugestão de Vídeos}{}{}{x:subsection:subsubsec-videos-1}
+%
+\begin{itemize}[label=\textbullet]
+\item{}Conceito de Primitivas: \url{https://youtu.be/LviZwZMVMgA}%
+\item{}Resolvendo \href{https://youtu.be/f1epDo4u7bE}{\(\integral{(3x^2 - 2x)}{x}\) e \(\integral{e^x}{x}.\)}%
+\item{}Integrais de funções constantes: \url{https://youtu.be/28RKYYlVaK4}%
+\item{}Resolvendo \href{https://youtu.be/bcD4aFioMFI}{\(\integral{\frac{1}{x}}{x}\)}%
+\item{}Integral de funções básicas:  \url{https://youtu.be/upYYltnJwn0}%
+\end{itemize}
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 1.4 Tecnologia}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Tecnologia}{}{Tecnologia}{}{}{x:subsection:subsubsec-teconologia}
+\begin{technology}{Usando o software SageMath.}{g:technology:idp36}%
+Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema de computação algébrica  \href{https://www.sagemath.org}{SageMath}. Com uma sintaxe simples e baseada em \emph{Python}\footnotemark{} O \emph{SageMath} (abreviaremos como \emph{Sage}) é \emph{open-source} \footnotemark{} e tem sido bastante utilizado por professores e  estudantes de todos os níveis para conferir cálculos algébricos complicados. Uma boa referência em língua portuguesa para este software pode ser encontrado na página  \url{https://www.sagectu.com.br}. Detalhes sobre os comandos são resumidos em \url{https://sagectu.com.br/sagecell.html}.%
+\begin{paragraphs}{Sintaxe dos comandos.}{g:paragraphs:idp37}%
+Com o \emph{SageMath}, usando o comando \mono{integral(f, x)} é possível calcular a integral indefinida de \(f(x)\) em relação a variável \(x\). Por exemplo, o \hyperref[x:example:ex4]{Exemplo~{\xreffont\ref{x:example:ex4}}} pode ser resolvida com o comando: \begin{sageinput}
+integral(x^2/(x^2+1), x)
+\end{sageinput}
+\begin{sageoutput}
+x - arctan(x)
+\end{sageoutput}
+ Mas se a função depender da variável \(t\), por exemplo, \(f(t)=t^3-2t^2+ 3t + 1 \)? Basta declarar a variável \(t\) usando o comando \mono{var(\textquotesingle{}t\textquotesingle{})}. \begin{sageinput}
+var('t')
+integral(t^3-2*t^2+ 3*t + 1, t )
+\end{sageinput}
+\begin{sageoutput}
+1/4*t^4 - 2/3*t^3 + 3/2*t^2 + t
+\end{sageoutput}
+ Para obter a integral com a notação matemática usual, o \emph{Sage} possui o comando \mono{show}, observe: \begin{sageinput}
+var('t')
+F = integral(t^3-2*t^2+ 3*t + 1, t)
+show(F)
+\end{sageinput}
+\begin{sageoutput}
+\frac{1}{4}  t^{4} - \frac{2}{3}  t^{3} + \frac{3}{2}  t^{2} + t
+\end{sageoutput}
+%
+\par
+Nas células acima pode-se notar que os comandos \mono{/}, \mono{*}, \mono{\textasciicircum{}} \mono{+}, \mono{-}, representam a operações de divisão, multiplicação, potenciação,  soma e subtração, respectivamente. Existe muitos outros comandos de operações matemáticas importantes, confira em \url{https://sagectu.com.br/sagecell.html}.%
+\begin{activity}{}{g:activity:idp38}%
+Usando a célula do \emph{Sage} abaixo, confira todas as integrais apresentadas até aqui. Se a resposta produzida  não estiver de acordo com a sua, mostre que elas são equivalentes. \begin{sageinput}
+
+\end{sageinput}
+\begin{sageoutput}
+(for static output)
+\end{sageoutput}
+%
+\end{activity}%
+\begin{activity}{Faça você mesmo.}{g:activity:idp39}%
+O avanço dos softwares matemáticos tornou possível calcular vários tipos de integrais que dariam muito trabalho se feitos à mão. Usando o conteúdo aprendido até aqui encontre%
+\begin{equation*}
+\integral{\frac{5x^2}{(1+x)^{1/3}}}{x} \text{.}
+\end{equation*}
+%
+ Use \emph{Sage} para encontrar a integral do item anterior.%
+ \begin{sageinput}
+
+\end{sageinput}
+\begin{sageoutput}
+(for static output)
+\end{sageoutput}
+%
+\end{activity}%
+\end{paragraphs}%
+\end{technology}
+\footnotetext[3]{Linguagem de programação.\label{g:fn:idp40}}%
+\footnotetext[4]{Uso gratuito e de código aberto.\label{g:fn:idp41}}%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Exercícios 1.5 Exercícios}
+\typeout{************************************************}
+%
+\begin{exercises-subsection}{Exercícios}{}{Exercícios}{}{}{g:exercises:idp42}
+\begin{divisionexercise}{1}{}{}{g:exercise:idp43}%
+Determine as integrais indefinidas abaixo:%
+\par
+a) \(\displaystyle\int 4 e^t  \, dt\) = \fillin{13.6363636363636} \(+ C\).%
+\par
+b) \(\displaystyle\int 3^r  \, dr\) = \fillin{13.6363636363636} \(+ C\).%
+\par
+c) \(\displaystyle\int \dfrac{10^x}{18}  \,dx\) = \fillin{13.6363636363636} \(+ C\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta 1}.\hypertarget{g:answer:idp44}{}\quad{}\(4e^{t}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta 2}.\hypertarget{g:answer:idp45}{}\quad{}\(\frac{3^{r}}{1.09861}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta 3}.\hypertarget{g:answer:idp46}{}\quad{}\(\frac{10^{x}}{18\cdot 2.30259}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp47}{}\quad{}%
+\begin{equation*}
+\int 4 e^t \, dt = 4 \int e^t \, dt = 4 e^t + C.
+\end{equation*}
+%
+\par
+%
+\begin{equation*}
+\int 3^r \, dr = 
+\dfrac{3^r}{\ln 3} + C.
+\end{equation*}
+%
+\par
+%
+\begin{equation*}
+\begin{array}
+\displaystyle\int \dfrac{10^x}{18} \, dx = \dfrac{1}{18} \displaystyle\int 10^x \, dx =
+\dfrac{10^x}{18 \ln 10} + C.
+\end{array}
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{}{g:exercise:idp48}%
+Considere a função  \(f(x) = 3 x^ {10} + 5 x^{7} - 7 x^{3} - 7\). Qual a primitiva de \(f(x)\)?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp49}{}\quad{}\(0.272727x^{11}+0.625x^{8}-1.75x^{4}-7x\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp50}{}\quad{}Relembre que para um termos na forma \(Ax^n\)a primitiva é apenas o termo cuja derivada é \(Ax^n\).  Isto é, \(\frac{A}{n+1}x^{n+1} + C\) na qual \(C\) é uma constante desconhecida. A primitiva da constante \(A\) é dada por \(Ax\).  Então, para encontrar a primitiva desta expressão, aplicamos esta regra termo a termos obtendo:%
+\par
+%
+\begin{equation*}
+F(x) = \frac{3}{11}x^{11} + 
+\frac{5}{8}x^{8} - 
+\frac{7}{4}x^{4} - 
+{7}x + C
+\end{equation*}
+%
+\par
+Na qual \(C\) é uma constante arbitrária.%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{}{g:exercise:idp51}%
+Determine a integral indefinida:%
+\par
+\(\displaystyle{ \int \left(4 x^2 + 3 x - 3\right) \,dx} =\) \fillin{15.9090909090909} + \(C\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp52}{}\quad{}\(\frac{4x^{3}}{3}+\frac{3x^{2}}{2}-3x+C\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp53}{}\quad{}Basta verificar que%
+\begin{equation*}
+\int \left(4 x^2 + 3 x - 3\right) \,dx 
+= \frac{4x^{3}}{3}+\frac{3x^{2}}{2}-3x+C
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{}{g:exercise:idp54}%
+Considere a função \(\displaystyle f(x) = x^5 + 2 \sqrt{x}\).%
+\par
+Seja \(F(x)\) a primitiva de \(f(x)\) com \(F(1) = -6\).%
+\par
+Então \(F(x) =\) \fillin{13.6363636363636}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp55}{}\quad{}\(\frac{x^{6}}{6}+\frac{4x^{1.5}}{3}-7.5\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp56}{}\quad{}\(\displaystyle f(x) = x^5 + 2 \sqrt{x} = x^5 + 2 x^{1/2}\): \(\displaystyle F(x) = \frac{x^6}{6} + \frac{2 x^{3/2}}{3/2} + c  = 
+\frac{x^6}{6} + \frac{4 x^{3/2}}{3} + c\) Já que \(F(1) = -6\), temos \(\displaystyle \frac{1}{6} + \frac{4}{3} + c = -6\)\(\displaystyle c = -6 -  \frac{1}{6} - \frac{4}{3} = \frac{-135}{18} = -7.5\) Portanto \(\displaystyle F(x) = \frac{x^6}{6} + \frac{4 x^{3/2}}{3}  - 7.5\)\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{}{g:exercise:idp57}%
+Encontre a primitiva mais geral da função \(\displaystyle{ \frac{4}{\sqrt[3]{x}} - 6 \sqrt[3]{x^2}}\).%
+\par
+Primitiva =  \fillin{15.9090909090909}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp58}{}\quad{}Primeiro reescreva a função como segue:%
+\begin{equation*}
+\frac{4}{\sqrt[3]{x}} - 6 \sqrt[3]{x^2} = 4 x^{-1/3} -6 x^{2/3}
+\end{equation*}
+Então a primitiva mais geral é:%
+\begin{equation*}
+4 \cdot \frac{3}{2} x^{2/3} - 6\cdot \frac{3}{5} x^{5/3} + C  
+=  6  x^{2/3} - {\textstyle\frac{18}{5}} x^{5/3} + C
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{}{g:exercise:idp59}%
+Dada a função%
+\begin{equation*}
+f''(x) =
+5x  -    6
+\end{equation*}
+com \(f'(  -2) =5\) e \(f(  -2)=4\).%
+\par
+Encontre \(f'(x) =\) \fillin{13.6363636363636}%
+\par
+e determine \(f(   3) =\) \fillin{13.6363636363636}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta 1}.\hypertarget{g:answer:idp60}{}\quad{}\(2.5x^{2}+\left(-6\right)x+\left(-17\right)\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta 2}.\hypertarget{g:answer:idp61}{}\quad{}\(-66.8333333333333\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp62}{}\quad{}Para resolver esses problemas, usaremos o fato de que a primitiva mais geral de \(f (x)\) é \(F (x) + C\) para alguma constante \(C\). Então, começamos encontrando a primitiva da segunda derivada \(f''(x)\).%
+\par
+%
+\begin{equation*}
+f''(x) =    5x  -    6 
+= \frac{d}{dx} f'(x) 
+= \frac{d}{dx}\left( \frac{5}{2}x^2  -    6x + C_1 \right)
+\end{equation*}
+%
+\par
+Precisamos descobrir qual é essa constante \(C_1\).  Para isso, vamos usar as informações fornecidas no problema sobre\(f'(-2)\).  A saber, \(f'(  -2) = 5\).  Logo, temos%
+\begin{equation*}
+\begin{aligned}
+f'(  -2) \amp  = \frac{5}{2}(  -2)^2  -    6(  -2) + C_1 \\
+5    \amp  = 22 + C_1 \\
+-17      \amp  = C_1
+\end{aligned}
+\end{equation*}
+%
+\par
+Portanto, \(f'(x) = \frac{5}{2}x^2  -    6x  - 17\).%
+\par
+Agora, procedemos como antes, desta vez encontrando a primitiva de  \(f'(x)\) e usar informações sobre \(f(3)\) para encontrar \(f(x)\).  A primitive, e o valor de \(C_2\), são obtidos como segue:%
+\par
+%
+\begin{equation*}
+f'(x) = \frac{5}{2}x^2  -    6x  - 17 
+= \frac{d}{dx} f(x) 
+= \frac{d}{dx}\left( \frac{1}{3}\left(\frac{5}{2}x^3\right)  -    6\left(\frac{1}{2}x^2\right) 
+- 17x + C_2\right)
+\end{equation*}
+%
+\par
+%
+\begin{equation*}
+\begin{aligned}
+f(-2) \amp  = \frac{1}{3}\left(\frac{5}{2}(-2)^3\right)  -    6\left(\frac{1}{2}(-2)^2\right) 
+- 17(-2) + C_2 \\
+4    \amp  = 15.33 + C_2 \\
+-11.33 \amp  = C_2
+\end{aligned}
+\end{equation*}
+%
+\par
+Portanto, a função \(f(x) = \frac{5}{6}x^3 + \frac{-6}{2}x^2  - 17x  - 11.33\) de modo que \(f(3) = -66.83\).%
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{}{}{g:exercise:idp63}%
+Determine a seguinte integral definida \(\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right)  \,dx=\) \fillin{9.090909090909092} \(+C\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp64}{}\quad{}\(-12\cos\!\left(x\right)-4\sin\!\left(x\right)\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp65}{}\quad{}\(\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right) \,dx= 12 \int \sin(x) \, dx - 4 \int \cos(x) \,dx\)%
+\par
+\(\quad = -12\cos\!\left(x\right)-4\sin\!\left(x\right) + C\)%
+\end{divisionexercise}%
+\begin{divisionexercise}{8}{}{}{g:exercise:idp66}%
+Considere a função  \(f(t) =  9 \sec ^2(t) - 4 t^ { 2 }\). Seja \(F(t)\) a primitiva de \(f(t)\) com \(F(0) = 0\).%
+\par
+Então \(F(1.5) =\) \fillin{9.090909090909092}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp67}{}\quad{}\(122.412779524545\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp68}{}\quad{}Para resolver este problema, você precisa lembrar que a derivada de \(\rm{tg(t)}\) é \(\sec^2(t)\).  Não é difícil derivar isso usando a identidade \(\rm{tg}(t) = \frac{\rm{sen(t)}}{\cos(t)}\) e a regra de cocientes para derivadas.%
+\par
+Com isso em mente, encontre a primitiva geral de  \(f(t) =  9\sec^2(t)-{4}t^2\) que será \(F(t) = 9\rm{tg(t)} - \frac{ {4}t^3 }{ 3} + 
+C\). Agora usando o fato de \(F(0) = 0\) e que \(\rm{tg}(0) = 0\), devemos ter \(C = 0\).%
+\par
+Portanto, pondo 1.5 nesta expressão, obtemos:%
+\par
+%
+\begin{equation*}
+F(1.5) = 9\rm{tg}(1.5) - \frac{ 4(1.5)^3 }{ 3 }
+= 122.413
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{9}{}{}{g:exercise:idp69}%
+Encontre uma função \(f(x)\) tal que \(f''(x) = x + \cos{x}\) e, além disso, \(f (0) = 1\) e \(f'(0) = 2\).%
+\end{divisionexercise}%
+\begin{divisionexercise}{10}{}{}{g:exercise:idp70}%
+Encontre a função \(f(x)\) sabendo que%
+\begin{equation*}
+f''(x) = 8 \sin x, \quad f'(\pi) = 5, \quad f(\pi) = 0
+\end{equation*}
+%
+\par
+\(f(x) =\) \fillin{13.6363636363636}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp71}{}\quad{}\(-8\sin\!\left(x\right)+\left(-3\right)x+0-\left(-3\right)\pi \)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp72}{}\quad{}Note que%
+\begin{equation*}
+f'(x) = \int 8 \sin x \, dx = -8 \cos x + C_1.
+\end{equation*}
+Encontre \(C_1\) usando \(f'(\pi) = 5\).%
+\begin{equation*}
+\begin{array}{rcl}
+-8 \cos \pi + C_1 \amp =\amp  5\\
+8 + C_1 \amp =\amp  5\\
+C_1 \amp =\amp  -3
+\end{array}
+\end{equation*}
+%
+\par
+%
+\begin{equation*}
+f(x) = \int \left( -8 \cos x  - 3 \right) \, dx 
+= -8 \sin x  - 3 x + C_2.
+\end{equation*}
+Encontre  \(C_2\) usando \(f(\pi) = 0\).%
+\begin{equation*}
+\begin{array}{rcl}
+-8 \sin \pi  - 3 \pi + C_2 \amp =\amp  0\\
+C_2 \amp =\amp  0  + 3 \pi
+\end{array}
+\end{equation*}
+%
+\par
+Logo, \(f(x) = -8 \sin x  - 3 x + 0  + 3 \pi\).%
+\end{divisionexercise}%
+\begin{divisionexercise}{11}{}{}{g:exercise:idp73}%
+Encontre a seguinte derivada e estabeleça uma fórmula de integração correspondente.%
+\begin{equation*}
+\frac{d}{dx}\left[\frac{x+3}{3x^{2}-x+5}\right]
+\end{equation*}
+%
+\par
+\(\displaystyle \int\) \fillin{9.090909090909092} \(dx\) \(=\) \fillin{6.818181818181818} \(+\) \(C\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta 1}.\hypertarget{g:answer:idp74}{}\quad{}\(\frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta 2}.\hypertarget{g:answer:idp75}{}\quad{}\(\frac{x+3}{3x^{2}-x+5}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp76}{}\quad{}Usaremos a Regra do Quociente para computar a derivada.%
+\par
+%
+\begin{equation*}
+\frac{d}{dx}\left[\frac{x+3}{3x^{2}-x+5}\right]=\frac{\frac{d}{dx}\left[x+3\right]\cdot (3x^{2}-x+5)-(x+3)\cdot \frac{d}{dx}[3x^{2}-x+5]}{(3x^{2}-x+5)^2}
+\end{equation*}
+%
+\par
+%
+\begin{equation*}
+=\frac{3x^{2}-x+5-\left(x+3\right)\!\left(3\cdot 2x-1\right)}{\left(3x^{2}-x+5\right)^{2}}=\frac{3x^{2}-x+5-6x^{2}+x-18x+3}{\left(3x^{2}-x+5\right)^{2}}=\frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}
+\end{equation*}
+%
+\par
+Se integrarmos isso, teremos o que começamos com mais uma constante arbitrária.%
+\begin{equation*}
+\displaystyle \int \left[ \frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}\right]dx= \frac{x+3}{3x^{2}-x+5} +C
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{12}{}{}{g:exercise:idp77}%
+Determine a integral indefinida e verifique sua resposta usando derivada.%
+\par
+\(\displaystyle \int\left [\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)}\right] dx\) \(=\) \fillin{11.3636363636364} \(+\) \(C\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp78}{}\quad{}\(\frac{\tan\!\left(x\right)+x}{3}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp79}{}\quad{}%
+\begin{equation*}
+\displaystyle \int \left [\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)} \right] dx= \frac{1}{3}\int  \sec^{2}\!\left(x\right)  \;dx+\frac{1}{3}\int    \;dx= \frac{1}{3}\left(\tan\!\left(x\right)+x\right)+C
+\end{equation*}
+%
+\par
+%
+\begin{equation*}
+\frac{d}{dx}\left[\frac{1}{3}\left(\tan\!\left(x\right)+x\right)+C\right]=\frac{1}{3}\left(\sec^{2}\!\left(x\right)+1\right)=\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)}
+\end{equation*}
+%
+\end{divisionexercise}%
+\end{exercises-subsection}
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Seção 2 Equações Diferenciais}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Equações Diferenciais}{}{Equações Diferenciais}{}{}{x:section:sec-eq-diferenciais}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 2.1 Curvas Integrais}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Curvas Integrais}{}{Curvas Integrais}{}{}{x:subsection:subsec-curvas-integrais}
+\begin{definition}{}{x:definition:curvas-integrais}%
+Se \(F(x)\) é uma primitiva da função \(f(x)\) então os gráficos de \(y=F(x)+C\) são denominados  \terminology{curvas integrais} de \(f(x)\).\end{definition}
+\begin{sidebyside}{2}{0.005}{0.005}{0.01}%
+\begin{sbspanel}{0.58}[center]%
+Na \hyperref[x:figure:fig-familia-primitiva]{Figura~{\xreffont\ref{x:figure:fig-familia-primitiva}}} mostramos as curvas integrais da função \(f(x)=x^2\) para alguns valores da constante \(C\).  Observe que as curvas integrais são translações \footnotemark{} da curva \(y=\frac{1}{3}x^3\).%
+\end{sbspanel}%
+\begin{sbspanel}{0.4}[center]%
+\begin{figureptx}{Curvas integrais da função \(f(x)=x^2\).}{x:figure:fig-familia-primitiva}{}%
+\IfFileExists{images/sageplot-primitivas.pdf}%
+{\includegraphics[width=\linewidth]{images/sageplot-primitivas.pdf}}%
+{\includegraphics[width=\linewidth]{images/sageplot-primitivas.png}}
+\tcblower
+\end{figureptx}%
+\end{sbspanel}%
+\end{sidebyside}%
+\footnotetext[1]{Deslocamentos verticais e horizontais do gráfico de uma função conhecida.\label{g:fn:idp80}}%
+\begin{example}{Curvas integrais.}{x:example:ex1-curvas-integrais}%
+Encontre a equação da curva integral, \(y=y(x)\), da função \(f(x)=x\) que passe pelo ponto \((2,1)\).%
+\par\smallskip%
+\noindentSegue da \hyperref[x:definition:curvas-integrais]{Definição~{\xreffont\ref{x:definition:curvas-integrais}}} que a curva integral de um função \(f(x)\) é a sua primitiva mais uma constante. Neste caso,%
+\begin{equation*}
+y(x)= \frac{x^2}{2} + C\text{.}
+\end{equation*}
+O próximo passo é encontra o valor de \(C\) que garanta que qua a curva integral passe pelo ponto \((2,1)\). Para isso, fazemos%
+\begin{equation*}
+y(2)= \frac{2^2}{2} + C = 1
+\end{equation*}
+e obtemos \(C=-1\). Portanto,%
+\begin{equation*}
+y=\frac{x^2}{2} -1
+\end{equation*}
+é a curva solicitada.%
+ Encontre a equação da curva integral, \(y=y(x)\),  da função \(f(x)=x^2\) que passe pelo ponto \((3,1)\).%
+\par\smallskip%
+\noindentUma vez que \(\frac{x^3}{3}\) é uma primitiva de \(x^2\), a curva integral é dada por%
+\begin{equation*}
+y(x)= \frac{x^3}{3} + C\text{.}
+\end{equation*}
+O valor de \(C\) para que  a curva integral passe pelo ponto \((3,1)\) satisfaz%
+\begin{equation*}
+y(3)= \frac{3^3}{3} + C = 1\text{,}
+\end{equation*}
+logo \(C=-8\). Portanto,%
+\begin{equation*}
+y=\frac{x^3}{3} -8
+\end{equation*}
+é a curva solicitada.%
+%
+\end{example}
+\begin{inlineexercise}{}{g:exercise:idp81}%
+Encontre a equação da curva integral, \(y=y(x)\),  da função \(f(x)=2x-2\) que passe pelo ponto \((1,2)\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp82}{}\quad{}Revise \hyperref[x:example:ex1-curvas-integrais]{Exemplo~{\xreffont\ref{x:example:ex1-curvas-integrais}}}.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp83}{}\quad{}\(y=x^2-2x+3\).%
+\end{inlineexercise}%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 2.2 Integral e Equações diferenciais}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Integral e Equações diferenciais}{}{Integral e Equações diferenciais}{}{}{x:subsection:subsec-integral-ed}
+\begin{paragraphs}{}{g:paragraphs:idp84}%
+Uma \terminology{equação diferencial}  é uma igualdade matemática que envolve   derivadas e uma função desconhecida \(y(x)\). Por exemplo, a igualdade%
+\begin{gather*}
+\frac{\dd y}{\dd x} = x^2 
+\end{gather*}
+é uma equação diferencial. Nesse caso, a função desconhecida \(y(x)\) pode ser encontrada usando a \hyperref[x:mrow:eq-integral-indefinida]{integral indefinida} como a seguir%
+\begin{gather*}
+y(x) = \integral{x^2}{x}=\frac{1}{3}x^3 +C.
+\end{gather*}
+Portanto, dizemos que a função \(y(x)=\frac{1}{3}x^3 +C\) é uma \terminology{solução geral} da equação diferencial \(\frac{\dd y}{\dd x} = x^2\). De forma geral, dada uma função conhecida \(f(x)\) a igualdade \begin{assemblage}{}{x:assemblage:assemblage-eq-diferencial}%
+%
+\begin{gather}
+\frac{\dd y}{\dd x} = f(x)\label{x:mrow:eq-diferencial}
+\end{gather}
+%
+\end{assemblage}
+ é uma denominada \terminology{equação diferencial} e resolvê-la significa encontrar a função \(y(x)\) que  satisfaça \hyperref[x:mrow:eq-diferencial]{({\xreffont\ref{x:mrow:eq-diferencial}})}. Isto é, obter a \hyperref[x:definition:def-primitiva]{primitiva} de \(f(x)\). Mais diretamente, a solução geral da equação diferencial \hyperref[x:mrow:eq-diferencial]{({\xreffont\ref{x:mrow:eq-diferencial}})} é dada por%
+\end{paragraphs}%
+\begin{assemblage}{}{x:assemblage:asse-sol-eq-diferencial}%
+%
+\begin{gather}
+y(x)=\integral{f(x)}{x}\text{.}\label{g:mrow:idp85}
+\end{gather}
+%
+\end{assemblage}
+\begin{paragraphs}{Resolvendo equações diferênciais.}{g:paragraphs:idp86}%
+\begin{example}{}{x:example:ex-diferencial-1}%
+Encontre a solução geral da equação diferencial  \(\frac{\dd y}{\dd x} = \cos{x}\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp87}{}\quad{}Já que \(\sin{x}\) é uma primitiva de \(\cos{x}\), a solução para a equação diferencial é%
+\begin{equation*}
+y(x) = \sin{x} + C.
+\end{equation*}
+%
+\end{example}
+\begin{example}{}{x:example:ex-diferencial-2}%
+Resolva a equação diferencial \(\frac{\dd y}{\dd x} = 2 + \sin{x}\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp88}{}\quad{}Resolver a equação diferencial \(\frac{\dd y}{\dd x} = 2 + \sin{x}\) é equivalente a obter a integral%
+\begin{align*}
+y(x) \amp = \integral{\left(2+ \sin{x}\right)}{x} \amp \quad \hyperref[x:assemblage:asse-sol-eq-diferencial]{\text{Fórmula da solução geral}} \\
+\amp =\integral{2}{x} + \integral{\sin{x}}{x}\\
+\amp = 2x -\cos{x} + C\text{.}
+\end{align*}
+%
+\end{example}
+\begin{inlineexercise}{}{x:exercise:exer1-sol-geral}%
+Encontre a solução geral da equação \(\frac{\dd y}{\dd t}=10e^t\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Dica}.\hypertarget{g:hint:idp89}{}\quad{}Revise \hyperref[x:example:ex-diferencial-2]{Exemplo~{\xreffont\ref{x:example:ex-diferencial-2}}}.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp90}{}\quad{}\(y(t)= 10e^t + C\).%
+\end{inlineexercise}%
+\end{paragraphs}%
+\begin{paragraphs}{Problema de valor inicial.}{g:paragraphs:idp91}%
+Frequentemente estamos interessados em encontrar uma única solução para a  equação diferencial. Por exemplo, no \hyperref[x:example:ex1-curvas-integrais]{Exemplo~{\xreffont\ref{x:example:ex1-curvas-integrais}}} encontramos a equação para uma \hyperref[x:definition:curvas-integrais]{curva integral} que passa por \((2,1)\). O Problema de encontrar uma função    \(y(x)\), que satisfaça \hyperref[x:mrow:eq-diferencial]{({\xreffont\ref{x:mrow:eq-diferencial}})} e cuja curva integral passa pelo ponto \((x_0,y_0)\)  é denominado    \terminology{problema de valor inicial} e geralmente apresentado da forma \begin{assemblage}{}{x:assemblage:assemblage-}%
+%
+\begin{gather}
+\frac{\dd y}{\dd x}=f(x), \qquad y(x_0)=y_0\label{x:mrow:eq-pvi}
+\end{gather}
+%
+\end{assemblage}
+%
+\end{paragraphs}%
+\begin{paragraphs}{Resolvendo problemas de valor inicial.}{g:paragraphs:idp92}%
+\begin{example}{}{x:example:ex1-pvi}%
+Resolva o seguinte problema de valor inicial%
+\begin{gather*}
+\frac{\dd y}{\dd x}=\cos{x}, \qquad y(0)=0 \text{.}
+\end{gather*}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp93}{}\quad{}No \hyperref[x:example:ex-diferencial-1]{Exemplo~{\xreffont\ref{x:example:ex-diferencial-1}}} encontramos a solução geral \(y(x)=\sin{x}+C\) da equação diferencial \(\frac{\dd y}{\dd x}=\cos{x}\). Para resolver o problema de valor inicial deve-se obter o valor de \(C\) para que \(y(0)=0\). Nota-se que \(C=0\), pois%
+\begin{equation*}
+y(0)=\sin{0} + C=0\text{.}
+\end{equation*}
+Logo, a curva integral procurada é%
+\begin{equation*}
+y(x)=\sin{x}\text{.}
+\end{equation*}
+%
+\end{example}
+\begin{example}{}{x:example:ex2-pvi}%
+Resolva o seguinte problema de valor inicial%
+\begin{gather*}
+\frac{\dd y}{\dd x}= 2+ \sin{x} \qquad y(3)=5 \text{.}
+\end{gather*}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp94}{}\quad{}Sabe-se do \hyperref[x:example:ex-diferencial-2]{Exemplo~{\xreffont\ref{x:example:ex-diferencial-2}}} que a solução geral \(y(x)=2x - \cos{x} +C\) da equação diferencial \(\frac{\dd y}{\dd x}= 2+ \sin{x}\). Como a curva deve satisfazer \(y(3)=5\), obtemos%
+\begin{equation*}
+y(3)=2\cdot 3-\cos{3} + C=5
+\end{equation*}
+de modo que \(C\) vale%
+\begin{equation*}
+C = 5+\cos{3}-6 \approx -1.99 \quad \color{gray}{\text{calculadora científica}}\text{.}
+\end{equation*}
+Portanto a solução é%
+\begin{equation*}
+y(x)= 2x - \cos{x} - 1.99\text{.}
+\end{equation*}
+\begin{figureptx}{Curva integral \(y(x)= 2x - \cos{x} - 1.99\) que passa pelo ponto \((3,5)\).}{x:figure:fig-pvi2}{}%
+\begin{image}{0.25}{0.5}{0.25}%
+\IfFileExists{images/curva-integra-pvi2.pdf}%
+{\includegraphics[width=\linewidth]{images/curva-integra-pvi2.pdf}}%
+{\includegraphics[width=\linewidth]{images/curva-integra-pvi2.png}}
+\end{image}%
+\tcblower
+\end{figureptx}%
+%
+\end{example}
+\begin{inlineexercise}{}{x:exercise:exer-pvi-1}%
+Encontre a solução do problema de valor inicial%
+\begin{equation*}
+\frac{\dd y}{\dd t}=10e^t, \quad y(0)=25\text{.}
+\end{equation*}
+%
+\par\smallskip%
+\noindentRevise \hyperref[x:exercise:exer1-sol-geral]{Autoavaliação~{\xreffont\ref{x:exercise:exer1-sol-geral}}}.%
+\par\smallskip%
+\noindent\(10e^t + 15\)%
+Encontre a solução do problema de valor inicial%
+\begin{equation*}
+\frac{\dd y}{\dd t} = 2+ \sin{t}, \quad  y(0)=5\text{.}
+\end{equation*}
+%
+\par\smallskip%
+\noindentRevise \hyperref[x:example:ex2-pvi]{Exemplo~{\xreffont\ref{x:example:ex2-pvi}}}.%
+\par\smallskip%
+\noindent\(2t-\cos{t} + 6\)%
+\end{inlineexercise}%
+\end{paragraphs}%
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 2.2.1 Sugestão de Vídeos}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Sugestão de Vídeos}{}{Sugestão de Vídeos}{}{}{x:subsection:subsubsec-videos-eq}
+%
+\begin{itemize}[label=\textbullet]
+\item{}Equações Diferenciais: \url{https://youtu.be/xZYZkgOUM7s}%
+\end{itemize}
+\end{subsectionptx}
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 2.3 Campos de Direções}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Campos de Direções}{}{Campos de Direções}{}{}{x:subsection:subsec-resolvendo-e-diferenciais}
+Sabe-se que a inclinação da reta tangente à curva  \(y=y(x)\) em dado ponto \((x, y)\) é dada por \(\dd y/\dd x\) para cada \(x\). A Equação \hyperref[x:mrow:eq-diferencial]{({\xreffont\ref{x:mrow:eq-diferencial}})} revela que a inclinação das retas tangentes às curvas integrais de \(f\) no ponto \((x_0, y_0)\) é exatamente  \(f(x_0)\). Com isso é possível visualizar as "direções" das curvas integrais plotando pequenas porções de suas retas tangentes em cada ponto \((x,y)\)  de uma região retangular. Como resultado teremos o que denominamos de \terminology{campo de direções}. Na \hyperref[x:figure:fig-campo-direcoes]{Figura~{\xreffont\ref{x:figure:fig-campo-direcoes}}\textendash{}{\xreffont\ref{x:figure:fig-campo-direcoes-curva}}} podemos observar que  mesmo não conhecendo a curva integral é possível ter a perspectiva geométrica do seu gráfico.%
+\begin{sidebyside}{2}{0.025}{0.025}{0.05}%
+\begin{sbspanel}{0.45}[center]%
+\begin{figureptx}{Campo de direções das curvas integrais de \(f(x)=x^2\).}{x:figure:fig-campo-direcoes}{}%
+\IfFileExists{images/sageplot-campo-direcoes.pdf}%
+{\includegraphics[width=\linewidth]{images/sageplot-campo-direcoes.pdf}}%
+{\includegraphics[width=\linewidth]{images/sageplot-campo-direcoes.png}}
+\tcblower
+\end{figureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.45}[center]%
+\begin{figureptx}{Campo de direções e as curvas integrais da função \(f(x)=x^2\).}{x:figure:fig-campo-direcoes-curva}{}%
+\IfFileExists{images/sageplot-campo-direcoes-curva.pdf}%
+{\includegraphics[width=\linewidth]{images/sageplot-campo-direcoes-curva.pdf}}%
+{\includegraphics[width=\linewidth]{images/sageplot-campo-direcoes-curva.png}}
+\tcblower
+\end{figureptx}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{technology}{Faça você mesmo.}{x:technology:campos-curvas-sageinterativo}%
+\begin{figureptx}{Curvas integrais e campos de direções}{x:figure:figure-interactive-campos}{}%
+\centering
+\setlength{\qrsize}{9em}
+\setlength{\previewwidth}{\linewidth}
+\addtolength{\previewwidth}{-\qrsize}
+\begin{tcbraster}[raster columns=2, raster column skip=1pt, raster halign=center, raster force size=false, raster left skip=0pt, raster right skip=0pt]%
+\begin{tcolorbox}[previewstyle, width=\previewwidth]%
+\IfFileExists{images/interactive-campos-preview.png}%
+{\includegraphics[width=0.80\linewidth,height=\qrsize,keepaspectratio]{images/interactive-campos-preview.png}}%
+{\small{}Specify static image with \mono{@preview} attribute,\\Or create and provide automatic screenshot as \mono{images/interactive-campos-preview.png} via the \mono{mbx} script}%
+\end{tcolorbox}%
+\begin{tcolorbox}[qrstyle]%
+{\hypersetup{urlcolor=black}\qrcode[height=\qrsize]{interactive-campos.html}}%
+\end{tcolorbox}%
+\end{tcbraster}%
+\tcblower
+\end{figureptx}%
+\end{technology}
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subseção 2.4 Sugestão de Vídeos}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Sugestão de Vídeos}{}{Sugestão de Vídeos}{}{}{x:subsection:subsubsec-2}
+%
+\begin{itemize}[label=\textbullet]
+\item{}Campos de direções: \url{https://youtu.be/xZYZkgOUM7s}%
+\end{itemize}
+\end{subsectionptx}
+\begin{inlineexercise}{}{g:exercise:idp95}%
+O problema de valor inicial%
+\begin{equation*}
+y'(x) = \sin x, \quad y(0) = 4
+\end{equation*}
+%
+\par
+\(y(x) =\) \fillin{13.6363636363636}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp96}{}\quad{}\(-\left(\cos\!\left(x\right)\right)+5\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp97}{}\quad{}Note que%
+\begin{equation*}
+y(x) = \int \sin x \, dx = -\cos x + C.
+\end{equation*}
+Encontre \(C\) usando \(y(0) = 4\).%
+\begin{equation*}
+-\cos(0) + C = 4 \;\Rightarrow\; -1 + C = 4
+\;\Rightarrow\; C = 5.
+\end{equation*}
+%
+\par
+Logo, \(y(x) = -\cos x + 5\).%
+\end{inlineexercise}%
+\begin{inlineexercise}{A Statistical Test.}{g:exercise:idp98}%
+This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previosly.  (HTML Note: The resizer for the knowl is not functioning yet.)%
+\end{inlineexercise}%
+%
+%
+\typeout{************************************************}
+\typeout{Exercícios 2.5 Exercícios}
+\typeout{************************************************}
+%
+\begin{exercises-subsection}{Exercícios}{}{Exercícios}{}{}{x:exercises:exercises-eq-diferencial}
+\par\medskip\noindent%
+%
+Resolva:%
+\begin{exercisegroup}
+\begin{divisionexerciseeg}{1}{}{}{g:exercise:idp99}%
+O problema de valor inicial%
+\begin{equation*}
+\dfrac{dy}{d\,x} = 5^x, \quad y(3) = -3
+\end{equation*}
+%
+\par
+\(y(x) =\) \fillin{13.6363636363636}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp100}{}\quad{}\(\frac{5^{x}}{1.60944}-80.6669\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp101}{}\quad{}%
+\begin{equation*}
+y(x) =\int 5^x \, dx = \dfrac{5^x}{\ln 5} + C
+\end{equation*}
+Encontre \(C\) por definição \(y(3) = -3\).%
+\begin{equation*}
+\begin{array}{rcl}  
+\dfrac{5^{3}}{\ln 5} + C \amp =\amp  -3 \\
+C \amp =\amp  -3 - \dfrac{5^{3}}{\ln 5} \approx -80.6668.
+\end{array}
+\end{equation*}
+%
+\par
+Assim, \(y(x) = \dfrac{5^x}{\ln 5}  - 80.6668\).%
+\end{divisionexerciseeg}%
+\begin{divisionexerciseeg}{2}{}{}{g:exercise:idp102}%
+Sabendo que o gráfico de  \(f(x)\) passa pelo ponto \(( 6, 4 )\)	e que a inclinação de sua reta tangente em \((x,f(x))\) é \(5 x + 3\), quanto vale  \(f(  4 )\)? \fillin{9.090909090909092}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Resposta}.\hypertarget{g:answer:idp103}{}\quad{}\(-52\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solução}.\hypertarget{g:solution:idp104}{}\quad{}Lembre-se de que o gráfico de \textbackslash{} (f (x) \textbackslash{}) passando pelo ponto \((6, 4)\), isso simplesmente significa \(f(6) = 4\).  Similarmente, a inclinação da linha tangente em \(x, f(x)\) sendo \({5}x + 3\) significa que a derivada de \(f\) em \(x\) é esta fórmula. Isto é, \(f'(x) = {5}x + 3\).%
+\par
+Agora, encotreamos a primitiva de \(f'(x) = {5}x + 3\).  Isto é dado por \(f(x) = \frac{5}{2}x^2 + {3}x + C\).  O fado que \(f(6) = 4\) nos permite obter \(C\) como segue.%
+\par
+%
+\begin{equation*}
+\begin{aligned}
+f(6) \amp  = 4 \\
+\frac{5}{2}(6)^2 + {3}(6) + C \amp  = 4 \\
+\frac{5}{2}(36) + 18 + C \amp  = 4 \\
+\frac{180}{2} + C \amp  = 4 - 18 \\
+C \amp  = -14-90 \\
+C \amp  = -104 \\
+\end{aligned}
+\end{equation*}
+%
+\par
+Portanto a função \(f(x)\) é dada por:%
+\par
+%
+\begin{equation*}
+f(x) = \frac{5}{2}x^2 + {3}x + (-104)
+\end{equation*}
+%
+\par
+Conectando o ponto 4, dá \(f(4) = -52.00\).%
+\end{divisionexerciseeg}%
+\end{exercisegroup}
+\par\medskip\noindent
+\begin{divisionexercise}{3}{}{}{g:exercise:idp105}%
+Mostre que \(y=xe^{-x} + 2\) é uma solução do problema de valor inicial%
+%
+\begin{equation*}
+\frac{\dd y}{\dd x} = (1-x)e^{-x}, \quad y(0)=2.
+\end{equation*}
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{}{g:exercise:idp106}%
+\end{divisionexercise}%
+\par\medskip\noindent%
+%
+Use um recurso gráfico computacional (\hyperref[x:technology:campos-curvas-sageinterativo]{Tecnologia~{\xreffont\ref{x:technology:campos-curvas-sageinterativo}}}) para gerar um campo de direções de cada equação diferencial:%
+\begin{exercisegroup}
+\begin{divisionexerciseeg}{5}{}{}{g:exercise:idp107}%
+\(\frac{\dd y}{\dd x} = x\) na região \(−5 \leq x \leq 5\) e \(−5 \leq y \leq 5.\)%
+\end{divisionexerciseeg}%
+\begin{divisionexerciseeg}{6}{}{}{g:exercise:idp108}%
+\(\frac{\dd y}{\dd x} = \sin{x}\) na região \(−6 \leq x \leq 6\) e \(−6 \leq y \leq 6.\)%
+\end{divisionexerciseeg}%
+\begin{divisionexerciseeg}{7}{}{}{g:exercise:idp109}%
+\(\frac{\dd y}{\dd x} = e^x\) na região \(−6 \leq x \leq 6\) e \(−2 \leq y \leq 2\)%
+\end{divisionexerciseeg}%
+\end{exercisegroup}
+\par\medskip\noindent
+\end{exercises-subsection}
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Referêcias 3 Referências}
+\typeout{************************************************}
+%
+\begin{references-section}{Referências}{}{Referências}{}{}{x:references:references-backmatter}
+%% If this is a top-level references
+%%   you can replace with "thebibliography" environment
+\begin{referencelist}
+\bibitem[1]{x:biblio:biblio-01}\hypertarget{x:biblio:biblio-01}{}LARSON, Ron. \textit{Cálculo Aplicado. Cursos Rápido.} Cengage Learning, 2011.
+\bibitem[2]{x:biblio:biblio-02}\hypertarget{x:biblio:biblio-02}{}ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. \textit{Cálculo.} Bookman, 2007.
+\bibitem[3]{x:biblio:biblio-03}\hypertarget{x:biblio:biblio-03}{}HUGHES, Hallet et al. \textit{Cálculo de uma variável.} LTC, 2004.
+\bibitem[4]{x:biblio:biblio-04}\hypertarget{x:biblio:biblio-04}{}Stewart, James \textit{Cálculo, Volume I.} Cengage Learning, 2013.
+\bibitem[5]{x:biblio:biblio-05}\hypertarget{x:biblio:biblio-05}{}SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. \textit{Elementos de Computação Matemática com SageMath.} SBM, 2019.
+\end{referencelist}
+\end{references-section}
+\end{document}

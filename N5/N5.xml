@@ -637,6 +637,20 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
     </solution>
 </example>
 
+<exercise>
+<statement>
+    <p>
+         Encontre a área aproximada da região delimitada pelas curvas <m>y=3x^2-2x</m> e <m>y=x^3-3x+4</m>.
+    </p>
+</statement>
+   
+    <answer>
+        <p>
+            <m>\approx 8,38  </m>
+        </p>
+    </answer>
+</exercise>
+
 <subsubsection xml:id="subsubsec-videos-sugeridos-area">
     <title>Sugestão de vídeos</title>
     <ul>
@@ -1093,8 +1107,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 <exercise>
     <p>
     Encontre a área da região sombreada.
-    <image xml:id="sageplot-exer-group-1" width="50%">
-        <description></description>
+    <image xml:id="sageplot-exer-group-1" width="50%">       
     <sageplot>
         f = x^2 +1
         g = x
@@ -1126,6 +1139,7 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 
 
 <exercisegroup>
+
 <introduction>
     <p>
         Sobre área entre curvas respondam o item a seguir.
@@ -1217,6 +1231,26 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
     <p><m>x=2\sqrt{y}</m>,  <m>x=0</m>,  <m>y=9</m></p>
 </exercise>
 </exercisegroup>
+<exercise>
+   <p>
+      Use o sistema de computação algébrica SageMath para encontrar a área
+exata da região delimitada pelas curvas <m>y=x^5-6x^3+4x</m> e <m>y=x</m>. 
+   </p> 
+<sage>
+    <input>
+        #código aqui
+    </input>
+    <output>
+        (for static output)
+    </output>
+    <answer>
+        <p>
+            <m>12\sqrt{6}-9</m>
+        </p>
+    </answer>
+</sage>
+
+</exercise>
 </exercises>
 
 
