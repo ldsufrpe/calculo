@@ -113,7 +113,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Aqui uma introdução será necessária </p>
         </introduction>
     <section>
-    <title>Aplicações</title>
+    <title>Aplicações: Área e Volume</title>
     
          
         <objectives>
@@ -1139,13 +1139,67 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 
 
 <exercisegroup>
+<title>Área entre curvas</title>
+
 
 <introduction>
     <p>
-        Sobre área entre curvas respondam o item a seguir.
+        Determine a áreas das regiões solicitadas.
     </p>
 </introduction>
+
+
 <exercise>
+<webwork source="integral-area-volume/problema1.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema2.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema3.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema4.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema5.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema6.1.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema7.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema8.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema9.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema10.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema11.pg" />
+</exercise> 
+<exercise>
+<webwork source="integral-area-volume/problema12.pg" />
+</exercise> 
+
+<!-- <exercise>
+<webwork source="integral-area-volume/problema21.pg" />
+</exercise>  -->
+<!-- <exercise>
     <p>
     Determine a área da região plana limitada pelas retas <m>x=1</m>, <m>x=3</m>, pelo eixo das abcissas e pelo gráfico de <m>y=x^3</m>.
     </p>
@@ -1174,26 +1228,71 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
     Esboce a região delimitada pelas curvas <m>y=\sin{x}</m>, <m>y=x</m>, <m>x=\frac{\pi}{2}</m>, <m>x=\pi</m> e calcule a área.
     </p>
 </exercise>
-<!-- <exercise>
+<! <exercise>
     Esboce a região que reapresente o conjunto <m>\mathrm{R} = \{(x,y):0\leq y\leq 4-x^2\}</m> e calcule a área.
 </exercise>
 <exercise>
     <p>
     Esboce a região que reapresente o conjunto <m>\mathrm{R} = \{(x,y):x\geq 0 \,\,\text{e} \,\, x^3\leq y\leq x\}</m> e  calcule a área.
     </p>
-</exercise> -->
+</exercise> --> 
+
 </exercisegroup>
 
 
 
 <exercisegroup>
+<title>Volume</title>
+
 <introduction>
     <p>
-       Encontre o volume do sólido obtido pela rotação da região delimitada 
-       pelas curvas entorno do eixo <m>x</m>.  
+       Determine o volume da superfícies solicitadas.
     </p>
 </introduction>
+
 <exercise>
+<webwork source="integral-area-volume/problema13.pg" />
+</exercise> 
+
+
+<exercise>
+<webwork source="integral-area-volume/problema14.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema15.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema16.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema17.pg" />
+</exercise> 
+
+
+<exercise>
+<webwork source="integral-area-volume/problema18.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema19.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema20.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema21.pg" />
+</exercise> 
+
+<exercise>
+<webwork source="integral-area-volume/problema22.pg" />
+</exercise> 
+
+<!-- <exercise>
     <p>
     <m>y=2-\frac{1}{2}x</m>, <m>y=0</m>, <m>x=1</m>, <m>x=2</m>
     </p>
@@ -1229,12 +1328,21 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
 </exercise>
 <exercise>
     <p><m>x=2\sqrt{y}</m>,  <m>x=0</m>,  <m>y=9</m></p>
-</exercise>
+</exercise> -->
 </exercisegroup>
+
+<exercisegroup>
+<title>Tecnologia</title>
+
+
+<introduction>
+    <p>
+       Use o sistema de computação algébrica SageMath para resolver os problemas a seguir.
+    </p>
+</introduction>
 <exercise>
    <p>
-      Use o sistema de computação algébrica SageMath para encontrar a área
-exata da região delimitada pelas curvas <m>y=x^5-6x^3+4x</m> e <m>y=x</m>. 
+    Encontrar a área exata da região delimitada pelas curvas <m>y=x^5-6x^3+4x</m> e <m>y=x</m>. 
    </p> 
 <sage>
     <input>
@@ -1251,7 +1359,9 @@ exata da região delimitada pelas curvas <m>y=x^5-6x^3+4x</m> e <m>y=x</m>.
 </sage>
 
 </exercise>
+</exercisegroup>
 </exercises>
+
 
 
 

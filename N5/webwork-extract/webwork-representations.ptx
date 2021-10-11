@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="integral-area-volume/problema1.pg">
+      <statement><p>Esboce a região delimitada pelas curvas <m>y=6 x^2, y=x^2 + 1</m>.
+Decida se deseja integrar em relação a <m>x</m> ou <m>y</m>.
+Encontre a área da região.</p>
+<p><fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.596284793999944</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=integral-area-volume/problema1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=integral-area-volume/problema1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=integral-area-volume/problema1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=integral-area-volume/problema1.pg</server-url>
+    <pg source="integral-area-volume/problema1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="integral-area-volume/problema10.pg">
+      <statement><p>Use o cálculo para encontrar a área do triângulo com os vértices <m>(0, 5)</m>, <m>(2, -2)</m> e <m>(5, 1)</m>.</p>
+<p>Área= <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>13.5</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-area-volume/problema10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-area-volume/problema10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-area-volume/problema10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=integral-area-volume/problema10.pg</server-url>
+    <pg source="integral-area-volume/problema10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="integral-area-volume/problema11.pg">
+      <statement><p>Esboce a região delimitada pelas curvas e encontre sua área.</p>
+<p><m>y=x,\;y=2x,\;y=-x+2</m></p>
+<p>Área <m>=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.333333</m>
+        </p>
+      </answer>
+      <solution><p>Aqui, precisamos quebrar a região em duas partes, uma vez que a curva superior muda de <m>y=2x</m> PARA <m>y=-x+2</m> no ponto onde <m>2x=-x+2</m> <m>\left(x={\textstyle\frac{2}{3}}\right)</m>.</p>
+<p>Àrea <me>\displaystyle =\int_{0}^{{\textstyle\frac{2}{3}}} \left [ 2x-x\right]\; dx+ \int_{{\textstyle\frac{2}{3}}}^{1} \left [ -x+2-x\right]\; dx= \left[\frac{1x^{2}}{2}\right]_{0}^{{\textstyle\frac{2}{3}}}+\left[-x^{2}+2x\right]_{{\textstyle\frac{2}{3}}}^{1} =\left( {\textstyle\frac{2}{9}}\right)-\left(0\right)+\left( 1\right)-\left({\textstyle\frac{8}{9}}\right)={\textstyle\frac{1}{3}}</me>
+A área entre as curvas é <m>{\textstyle\frac{1}{3}}</m>.</p>
+<p>(Clique na imagem para ampliá-la)</p>
+<sidebyside widths="16.6666666666667%">
+<image source="images/webwork-11-image-1.png"/>
+</sidebyside>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-area-volume/problema11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-area-volume/problema11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-area-volume/problema11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=integral-area-volume/problema11.pg</server-url>
+    <pg source="integral-area-volume/problema11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="integral-area-volume/problema12.pg">
+      <statement><p>Esboce a região delimitada pelas curvas <m>y=e^{x},\;y=e^{2x},\;x=\ln{2},\;x=\ln{4}</m> e encontre sua área.</p>
+<p>Área <m>=</m> <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <solution><p>Àrea <me>\displaystyle =\int_{\ln{2}}^{\ln{4}} \left [ e^{2x}-e^{x}\right]\; dx = \left[\frac{e^{2x}}{2}-e^{x}\right]_{\ln{2}}^{\ln{4}} =\left( \frac{{4}^{2}}{2}-4\right)-\left(\frac{{2}^{2}}{2}-2\right)=4</me>
+A área entre as curvas é <m>4</m>.</p>
+<p>(Clique na imagem para ampliá-la)</p>
+<sidebyside widths="16.6666666666667%">
+<image source="images/webwork-12-image-1.png"/>
+</sidebyside>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-area-volume/problema12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-area-volume/problema12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-area-volume/problema12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=integral-area-volume/problema12.pg</server-url>
+    <pg source="integral-area-volume/problema12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="integral-area-volume/problema13.pg">
+      <statement><p>Combine os seguintes integrais com o sólido cujo volume ele representa.</p>
+</statement>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-area-volume/problema13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-area-volume/problema13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-area-volume/problema13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=integral-area-volume/problema13.pg</server-url>
+    <pg source="integral-area-volume/problema13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="integral-area-volume/problema14.pg">
+      <statement><p>O volume do sólido obtido girando a região delimitada por
+<me>y = x^2, \ y = 4 x,</me> 
+en torno da reta <m>y = 0</m> pode ser calculado por meio de um integral</p>
+<p><m>\displaystyle V = \int_a^b</m> 
+<fillin name="optional1" characters="15"/>  
+<var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>dx</p>
+</li>
+<li>
+<p>dy</p>
+</li>
+</var></p>
+<p>com limites de integração
+<m>a =</m> <fillin name="optional3" characters="10"/> e 
+<m>b =</m> <fillin name="optional4" characters="10"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\pi \!\left(4x\right)^{2}-\pi \!\left(x^{2}\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-area-volume/problema14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-area-volume/problema14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-area-volume/problema14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=integral-area-volume/problema14.pg</server-url>
+    <pg source="integral-area-volume/problema14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="integral-area-volume/problema15.pg">
+      <statement><p>O volume do sólido obtido girando a região delimitada por
+<me>y = x^2, \ y = 5 x,</me> 
+em torno da reta <m>x = 5</m> pode ser calculado por meio de um integral</p>
+<p><m>\displaystyle V = \int_a^b</m> 
+<fillin name="optional1" characters="25"/>  
+<var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>dx</p>
+</li>
+<li>
+<p>dy</p>
+</li>
+</var></p>
+<p>com os limites de integração
+<m>a =</m> <fillin name="optional3" characters="10"/> e
+<m>b =</m> <fillin name="optional4" characters="10"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\pi \!\left(5-\frac{y}{5}\right)^{2}-\pi \!\left(5-\sqrt{y}\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>25</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-area-volume/problema15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-area-volume/problema15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-area-volume/problema15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=integral-area-volume/problema15.pg</server-url>
+    <pg source="integral-area-volume/problema15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="integral-area-volume/problema16.pg">
+      <statement><p>Encontre o volume do sólido obtido girando a região delimitada pelas curvas <m>x = y-y ^ 2</m> e <m>x = 0</m> em torno do eixo <m>y</m>.</p>
+<p>Volume = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.10471975511966</m>
+        </p>
+      </answer>
+      <solution><p>A região a ser girada em torno do eixo \ (y \) é mostrada abaixo.</p>
+<sidebyside widths="33.3333333333333%">
+<image source="images/webwork-16-image-1.png"/>
+</sidebyside>
+<p>A curva <m>x=y-y^2</m> intercepta a reta <m>x=0</m> em <m>y = 0</m> e <m>y = 1</m>.</p>
+<p>Usando a fórmula  <m>V=\int_c^dA(y)  \,   dy</m>, a área de cada secção transversal é <m>A(y) = \pi R^2</m>,  no qual o raio depende do valor de <m>y</m> , e a variação de <m>y</m> para região é <m>0 \leq y \leq 1</m>.</p>
+<p>O raio <m>R</m> vai do eixo <m>y</m> (<m>x=0</m>) para a curva <m>x = y-y^2</m>.</p>
+<p>Então <m>R = y-y^2 - 0 = y-y^2</m>, e
+<me>\begin{array}{rl}
+V  \amp = {\displaystyle\int}_c^d A(y)  \,   dy=  {\displaystyle\int}_c^d \pi R^2\, dy\\
+  \amp = {\displaystyle\int}_{0}^{1}\pi\left(y-y^2\right)^2  \,   dy\\
+  \amp = {\displaystyle\int}_{0}^{1}\pi \left(y^2-2y^3+y^4\right)  \,   dy\\
+  \amp =\pi \Big[\frac{y^3}{3}-\frac{y^4}{2} +\frac{y^5}{5}\Big]_{0}^{1} \\
+  \amp =\pi \Big[\frac13-\frac12 +\frac15 \Big] \\
+  \amp =  \frac{\pi}{30}  \;\;\text{ (cubic units).} \\
+\end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-area-volume/problema16.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-area-volume/problema16.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-area-volume/problema16.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=integral-area-volume/problema16.pg</server-url>
+    <pg source="integral-area-volume/problema16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-17" ww-id="webwork-17">
+    <static seed="17" source="integral-area-volume/problema17.pg">
+      <statement><p>Encontre o volume do sólido obtido girando a região delimitada pelas curvas <m>y = \sec(x),</m> <m>y = 1,</m> <m>x = -1,</m> e <m>x = 1</m> sobre o eixo <m>x</m>.</p>
+<p>Volume = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>3.50229602566009</m>
+        </p>
+      </answer>
+      <solution><p>A região a ser girada em torno do eixo <m>x</m> é mostrada abaixo.</p>
+<sidebyside widths="33.3333333333333%">
+<image source="images/webwork-17-image-1.png"/>
+</sidebyside>
+<p>A área de cada secção transversal é <m>A(x) = \pi (R^2 - r^2)</m> no qual o raio depende do valor de <m>x</m>,  e a variação de  <m>x</m> para região é  <m>-1 \leq x \leq 1</m>.</p>
+<p>O maior raio, <m>R</m>, vai do eixo <m>x-</m> para a curva <m>y = \sec x</m> , e então é <m>R=\sec x</m>.</p>
+<p>O menor raio, <m>r</m>, vai do eixo <m>x-</m> para a reta <m>y = 1</m> , e então é <m>r=1</m>.</p>
+<p>Usaremos simetria e avaliaremos duas vezes o volume do sólido obtido girando a região de <m>x=0</m> para <m>x = 1</m>.
+Então
+<me>\begin{array}{rl}
+V  \amp = {\displaystyle\int}_a^b A(x)  \,   dx=  {\displaystyle\int}_a^b \pi (R^2- r^2)\, dx\\
+  \amp = 2 {\displaystyle\int}_{0}^{1}\pi \left[ \sec^2 x  
+- 1\right]\,   dx\\
+  \amp = 2 \pi \Big[ \tan x -x  \Big]_{0}^{1}   \\
+  \amp = 2 \pi (\tan 1 -1 ) 
+\end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-area-volume/problema17.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-area-volume/problema17.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-area-volume/problema17.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=integral-area-volume/problema17.pg</server-url>
+    <pg source="integral-area-volume/problema17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-18" ww-id="webwork-18">
+    <static seed="18" source="integral-area-volume/problema18.pg">
+      <statement><p>Encontre o volume do sólido obtido girando a região delimitada pelas curvas <m>y=x^2,</m> <m>0 \le x \le 5,</m> <m>y=25,</m> e <m>x=0</m> sobre o eixo <m>y</m>.</p>
+<p>Volume = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>981.74770424681</m>
+        </p>
+      </answer>
+      <solution><p>A região a ser girada em torno do eixo <m>y</m> é mostrada abaixo.</p>
+<sidebyside widths="33.3333333333333%">
+<image source="images/webwork-18-image-1.png"/>
+</sidebyside>
+<p>A curva<m>x=\sqrt{y}</m> é a metade direita da parábola <m>y = x^2</m>.</p>
+<p>A área de cada secção transversal é<m>A(y) = \pi R^2</m>,no qual o raio depende do valor de <m>y</m>,  e a variação de  <m>y</m> para região é  
+<m>0 \leq y \leq 25</m>.</p>
+<p>O raio <m>R</m> vai do eixo <m>y</m>(<m>x=0</m>) para a curva <m>x = \sqrt{y}</m>.</p>
+<p>Então <m>R = \sqrt{y}- 0 =\sqrt{y}</m>, e
+<me>\begin{array}{rl}
+V  \amp = {\displaystyle\int}_c^d A(y)  \,   dy=  {\displaystyle\int}_c^d \pi R^2\, dy\\
+  \amp = {\displaystyle\int}_{0}^{25}\pi\left(\sqrt{y}\right)^2  \,   dy\\
+  \amp = {\displaystyle\int}_{0}^{25}\pi \left(y\right)  \,   dy\\
+  \amp =\pi \Big[\frac{y^2}{2}\Big]_{0}^{25} \\
+  \amp =\pi \Big[\frac{25^2}{2} \Big] \\
+  \amp =  {\textstyle\frac{625}{2}} \pi  \;\;\text{ (cubic units).} \\
+\end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-area-volume/problema18.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-area-volume/problema18.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-area-volume/problema18.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=integral-area-volume/problema18.pg</server-url>
+    <pg source="integral-area-volume/problema18.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-19" ww-id="webwork-19">
+    <static seed="19" source="integral-area-volume/problema19.pg">
+      <statement><p>Encontre o volume do sólido formado girando a região dentro do primeiro quadrante delimitado por
+<me>y = x^3 , \quad y = 4 x</me>
+em torno do eixo <m>x</m>.</p>
+<p>Volume = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>76.5950208875226</m>
+        </p>
+      </answer>
+      <solution><p>A região a ser girada em torno do eixo <m>x</m> é mostrada abaixo.</p>
+<sidebyside widths="33.3333333333333%">
+<image source="images/webwork-19-image-1.png"/>
+</sidebyside>
+<p>A curva <m>y = x^3</m> intercepta a reta <m>y = 4 x</m>, quando
+<m>x^3 = 4 x \implies x(x^{2} - 4 ) = 0</m>, isto é, quando <m>x=0</m> ou
+<m>x = 2</m>.</p>
+<p>A área de cada secção transversal é <m>A(x) = \pi (R^2 - r^2)</m> no qual o raio depende do valor de <m>x</m>, e a variação de  <m>x</m> para região é  
+<m>0 \leq x \leq 2</m>.</p>
+<p>O maior raio, <m>R</m>, vai do eixo <m>x-</m> para a reta <m>y = 4  x</m> , e então é <m>R=4  x</m>.</p>
+<p>O menor raio, <m>r</m>, vai do eixo <m>x-</m> para a curva <m>y = x^{3}</m> , e então é <m>r=x^{3}</m>.</p>
+<p>Então 
+<me>\begin{array}{rl}
+V  \amp = {\displaystyle\int}_a^b A(x)  \,   dx=  {\displaystyle\int}_a^b \pi (R^2- r^2)\, dx\\
+  \amp =  {\displaystyle\int}_{0}^{2}\pi \left[ (4 x)^2  
+- (x^{3})^2\right]\,   dx\\
+  \amp =  {\displaystyle\int}_{0}^{2}\pi \left[ 16  x^2  
+- x^{6}\right]\,   dx\\
+  \amp =  \pi \Big[ 16 \frac{x^3}{3} - \frac{x^{7}}{7}  \Big]_{0}^{2}   \\
+\amp = {\textstyle\frac{512}{21}} \pi
+\end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-area-volume/problema19.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-area-volume/problema19.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-area-volume/problema19.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=integral-area-volume/problema19.pg</server-url>
+    <pg source="integral-area-volume/problema19.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="integral-area-volume/problema2.pg">
+      <statement><p>Encontre a área da região delimitada pela parábola <m>y = 4x-x^{2}</m> e o eixo <m>x</m>.</p>
+<p>Área <m>=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>10.6667</m>
+        </p>
+      </answer>
+      <solution><p><m>y=4x-x^{2}</m> intersecta o eixo <m>\small{x}</m> em <m>x=0,\;x=4</m> e estes fornecerão os limites de integração sobre a função <m>y=4x-x^{2}</m>.</p>
+<p>Área <me>\displaystyle =\int_{0}^{4} \left [ 4x-x^{2}\right]\; dx= \left[\frac{4x^{2}}{2}-\frac{x^{3}}{3}\right]_{0}^{4} =\left( {\textstyle\frac{32}{3}}\right)-\left(0\right)={\textstyle\frac{32}{3}}</me>
+A área entre as curvas é <m>{\textstyle\frac{32}{3}}</m>.</p>
+<p>(click on image to enlarge)</p>
+<sidebyside widths="16.6666666666667%">
+<image source="images/webwork-2-image-1.png"/>
+</sidebyside>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=integral-area-volume/problema2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=integral-area-volume/problema2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=integral-area-volume/problema2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=integral-area-volume/problema2.pg</server-url>
+    <pg source="integral-area-volume/problema2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-20" ww-id="webwork-20">
+    <static seed="20" source="integral-area-volume/problema20.pg">
+      <statement><p>Encontre o volume do sólido resultante quando a região delimitada por <m>x= y^{2}</m> e <m>x=y+2</m> está girando em torno do eixo <m>y</m>.</p>
+<p>Volume <m>=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>{\textstyle\frac{72}{5}}\pi </m>
+        </p>
+      </answer>
+      <solution><p>Primeiro encontramos os pontos de intersecção <me>y^{2}=y+2</me><me>(y-2)(y+1)=0</me>
+Então <m>y=-1</m> e <m>y=2</m> são pontos de intersecção (e, portanto, nossos limites de integração).</p>
+<p>Área: 
+<me>A_1(y)=\pi\; r_2(y)^2=\pi\left(y+2\right)^2=\pi(y^{2}+4y+4)</me>
+<me>A_2(y)=\pi\; r_1(y)^2=\pi\left(y^{2}\right)^2=\pi \left(y^{4}\right)</me>
+Volume: <me>\displaystyle =\int_{-1}^{2}\left[A_1(y)-A_2(y)\right]\; dy =\pi \int_{-1}^{2}\left [ y^{2}+4y+4-y^{4}\right]\; dy=\pi\left[\frac{y^{3}}{3}+2y^{2}+4y-\frac{y^{5}}{5}\right]_{-1}^{2} =\pi\left[\left( {\textstyle\frac{184}{15}}\right)-\left(-{\textstyle\frac{32}{15}}\right)\right]={\textstyle\frac{72}{5}} \pi</me>
+O volume do sólido girado em torno do eixo <m>y</m> é <m>{\textstyle\frac{72}{5}} \pi</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-area-volume/problema20.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-area-volume/problema20.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-area-volume/problema20.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=integral-area-volume/problema20.pg</server-url>
+    <pg source="integral-area-volume/problema20.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-21" ww-id="webwork-21">
+    <static seed="21" source="integral-area-volume/problema21.pg">
+      <statement><p>Encontre o volume do sólido obtido girando a região delimitada pelas curvas <m>y=x^{2/3},</m> <m>x=1,</m> e <m>y=0</m> em torno do eixo <m>y</m>.</p>
+<p>Volume = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2.35619449019234</m>
+        </p>
+      </answer>
+      <solution><p>A região a ser girada em torno do eixo <m>y</m> é mostrada abaixo.</p>
+<sidebyside widths="33.3333333333333%">
+<image source="images/webwork-21-image-1.png"/>
+</sidebyside>
+<p>A curva <m>y=x^{2/3}</m> intercepta a reta <m>x=1</m> em <m>y = 1</m>.  Observe também que a metade direita da curva
+<m>y=x^{2/3}</m> é a curva <m>x = y^{3/2}</m>.</p>
+<p>A área de cada secção transversal é  <m>A(y) = \pi \left(R^2-r^2\right)</m> no qual o raio depende do valor de <m>y</m>  e a variação de  <m>y</m> para região é <m>0 \leq y \leq 1</m>.</p>
+<p>O raior maior <m>R</m> é 1 para todos os valores de <m>y</m>.</p>
+<p>O raio menor <m>r</m> vai do eixo <m>y</m> (<m>x=0</m>) para a curva <m>x = y^{3/2}</m>.</p>
+<p>Então <m>r = y^{3/2} - 0 = y^{3/2}</m>, e 
+<me>\begin{array}{rl}
+V  \amp = {\displaystyle\int}_c^d A(y)  \,   dy=  {\displaystyle\int}_c^d \pi \left(R^2-r^2\right)\, dy\\
+  \amp = {\displaystyle\int}_{0}^{1}\pi\left(1-\left(y^{3/2}\right)^2\right)  \,   dy\\
+  \amp = {\displaystyle\int}_{0}^{1}\pi\left(1-y^3\right)  \,   dy\\
+  \amp =\pi \Big[y-\frac{y^4}{4} \Big]_{0}^{1} \\
+  \amp =\pi \Big[1-\frac14 \Big] \\
+  \amp = \frac34 \pi  \;\;\text{ (unidades cúbicas).} \\
+\end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-area-volume/problema21.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-area-volume/problema21.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-area-volume/problema21.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=integral-area-volume/problema21.pg</server-url>
+    <pg source="integral-area-volume/problema21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-22" ww-id="webwork-22">
+    <static seed="22" source="integral-area-volume/problema22.pg">
+      <statement><p>Encontre o volume do sólido obtido girando a região delimitada pelas curvas <m>y=1/x,</m> <m>y=0,</m> <m>x=1,</m> e <m>x=4</m> em torno da reta <m>y=-1.</m></p>
+<p>Volume = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>11.0665388514068</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-area-volume/problema22.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-area-volume/problema22.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-area-volume/problema22.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=integral-area-volume/problema22.pg</server-url>
+    <pg source="integral-area-volume/problema22.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="integral-area-volume/problema3.pg">
+      <statement><p>Encontre a área da região abaixo <m>y = x^2 - 4 x+ 10</m> e acima <m>y=5</m>
+para <m>2\le x\le 5</m>.</p>
+<p>Área = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>12</m>
+        </p>
+      </answer>
+      <solution><p>O gráfico de <m>y=x^2 - 4 x+ 10</m> está acima da linha<m>y=5</m> para
+<m>2\le x\le 5</m>, as shown in the figure below.</p>
+<sidebyside widths="16.6666666666667%">
+<image source="images/webwork-3-image-1.png"/>
+</sidebyside>
+<p><em>(Clique no gráfico para uma versão maior.)</em></p>
+<p>Se movermos a região para baixo em <m>5</m> unidades, então será a região abaixo do gráfico de <m>y=x^2 - 4 x+ 5</m> e acima do eixo <m>x</m>
+para <m>2\le x\le 5</m>, e sua área será dada por
+<me>\begin{aligned}
+  \mbox{Área } \amp = \int_{2}^{5} (x^2 - 4 x+ 5 )\,dx \\
+    \amp = \left( \frac{x^3}{3} - 4 \frac{x^2}{2}+ 5 x \right) \biggm|_{2}^{5} \\
+    \amp = \left( \frac{5^3}{3} - 4 \frac{5^2}{2}+ 5 (5) \right) - \left( \frac{2^3}{3} - 4 \frac{2^2}{2}+ 5 (2) \right) \\
+    \amp = 12 \;.
+  \end{aligned}</me></p>
+<p>Em vez do acima, pode-se calcular a área abaixo do gráfico de
+<m>y = x^2 - 4 x+ 10</m> e acima do eixo <m>x</m> para <m>2 \le x \le 5</m>, e então
+subtraia a área do retângulo abaixo da linha <m>y = 5</m> e acima
+o eixo <m>x</m>  para <m>2 \le x \le 5</m>. A resposta acaba sendo a mesma.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=integral-area-volume/problema3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=integral-area-volume/problema3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=integral-area-volume/problema3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=integral-area-volume/problema3.pg</server-url>
+    <pg source="integral-area-volume/problema3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="integral-area-volume/problema4.pg">
+      <statement><p>Encontre a área entre as curvas: <m>y = x^3 - 12 x^2 + 27 x</m>
+    e
+ <m>y = -x^3 + 12 x^2 - 27 x</m>.</p>
+<p>Área = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>499.5</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=integral-area-volume/problema4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=integral-area-volume/problema4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=integral-area-volume/problema4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=integral-area-volume/problema4.pg</server-url>
+    <pg source="integral-area-volume/problema4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="integral-area-volume/problema5.pg">
+      <statement><p>Encontre a área da região delimitada entre 
+ <m>f(x) = x^{2}+3x+8</m> e
+ <m>g(x) = 2x^{2}+2x+2</m>.</p>
+<p>Área = <fillin name="AnSwEr0001" characters="25"/></p>
+<p>(<alert> Nota:</alert> O gráfico acima representa ambas as funções
+<m>f</m> e <m>g</m>, mas é intencionalmente deixado sem legenda.)</p>
+</statement>
+      <answer>
+        <p>
+          <m>20.8333333333333</m>
+        </p>
+      </answer>
+      <solution><p>A área entre as curvas é encontrada usando a
+integral definida <m>\int_{a}^b \left( f(x) - g(x) \right) \, dx</m>.
+Primeiro determine os pontos de intersecção resolvendo:
+<me>x^{2}+3x+8 = 2x^{2}+2x+2 \;\Rightarrow\; \cdots
+  \;\Rightarrow\; x = -2, 3.</me></p>
+<p><me>\begin{array}{rcl}
+  \textrm{Area} \amp =\amp 
+    \displaystyle \int_{-2}^{3} \left( (x^{2}+3x+8) - (2x^{2}+2x+2) \right) \, dx\\
+     \amp =\amp  \displaystyle \int_{-2}^{3} \left( -x^2 + 1 x + 6
+      \right) \, dx  \\
+    \amp =\amp  \left(-\dfrac{x^3}{3} + \dfrac{1 x^2}{2} + 
+    6 x \right)\Big|_{-2}^{3}\\
+    \amp =\amp  20.8333\\
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=integral-area-volume/problema5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=integral-area-volume/problema5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=integral-area-volume/problema5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=integral-area-volume/problema5.pg</server-url>
+    <pg source="integral-area-volume/problema5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="integral-area-volume/problema6.1.pg">
+      <statement><p>Encontre a área da região delimitada entre 
+ <m>f(x) = 0.5 x^2  +    7</m>,
+ <m>g(x) = x</m>, 
+ <m>x= -7</m>, E
+<m>x= 2</m></p>
+<p>Área = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>144</m>
+        </p>
+      </answer>
+      <solution><p>A área entre as curvas é encontrada usando a
+integral  <m>\int_{a}^b \left( f(x) - g(x) \right) \, dx</m>.
+<me>\begin{array}{rcl}
+    \displaystyle \int_{-7}^{2} \left( (0.5 x^2 + 7) - (x) \right) \, dx
+     \amp =\amp  \left( \dfrac{0.5 x^3}{3} + 7 x - \dfrac{x^2}{2} \right)
+     \Big|_{-7}^{2}  \\
+    \amp =\amp  144
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=integral-area-volume/problema6.1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=integral-area-volume/problema6.1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=integral-area-volume/problema6.1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=integral-area-volume/problema6.1.pg</server-url>
+    <pg source="integral-area-volume/problema6.1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="integral-area-volume/problema7.pg">
+      <statement><p>O fazendeiro Jones e sua esposa, Dra. Jones, ambos matemáticos, decidem
+construir uma cerca em seu campo para manter as ovelhas seguras. Sendo matemáticos, eles decidem que as cercas devem ter a forma de
+as parábolas <m>y = 9 x^2</m> e <m>y = x^2 + 9</m>. Qual é a área de
+a região fechada?</p>
+<p>Área =<fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>12.7279220613579</m>
+        </p>
+      </answer>
+      <solution><p>As duas parábolas se cruzam quando
+<me>9 x^2 = x^2+9,</me>
+i.e., quando
+<me>x = \pm \sqrt{\frac{9}{9-1}}= \pm c = \pm 1.061.</me>
+A área entre as duas parábolas é, portanto,
+<me>A= \int_{-c}^{c} x^2+9-9 x^2 \hbox{d} x = 12.728.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=integral-area-volume/problema7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=integral-area-volume/problema7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=integral-area-volume/problema7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=integral-area-volume/problema7.pg</server-url>
+    <pg source="integral-area-volume/problema7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="integral-area-volume/problema8.pg">
+      <statement><p>Esboce a região delimitada pelas curvas <m>y = 9 \cos x, y = (5 \sec(x))^2,  x = -\pi / 4,  x = \pi / 4</m>.
+Decida se deseja integrar em relação a <m>x</m> ou <m>y</m>.
+Em seguida, encontre a área da região.</p>
+<p>Área = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>37.2720779386421</m>
+        </p>
+      </answer>
+      <solution><p>Podemos ver um esboço dessas curvas no gráfico a seguir:</p>
+<sidebyside widths="16.6666666666667%">
+<image source="images/webwork-8-image-1.png"/>
+</sidebyside>
+<p>Integramos a subtração da curva inferior da curva superior de <m>-\pi/4</m> até <m>\pi/4</m>.</p>
+<p><me>\begin{aligned}
+		\int_{-\pi/4}^{\pi/4}   5^2 \sec^2(x) 
+			\amp -  9 \cos(x)   \; dx
+	=	5^2 \int_{-\pi/4}^{\pi/4} \sec^2(x) \; dx
+			- 9 \int_{\pi/4}^{\pi/4} \cos(x) \; dx	\\\\
+\amp = 
+		\left. 5^2 \tan(x) \right|_{-\pi/4}^{\pi/4}
+			- \left. 9 \sin(x) \right|_{-\pi/4}^{\pi/4}	\\\\
+\amp = 	5^2 \left( \tan(\pi/4) - \tan(-\pi/4) \right)
+			- 9 \left( \sin(\pi/4) - \sin(-\pi/4) \right)	\\\\
+\amp = 	5^2 \left( 1 - (-1) \right)
+			- 9 \left( \frac{\sqrt[]{2}}{2}
+			- \left( - \frac{\sqrt[]{2}}{2} \right) \right)	\\\\
+\amp = 	50 - 9 \sqrt[]{2} = 37.2720779386421
+\end{aligned}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=integral-area-volume/problema8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=integral-area-volume/problema8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=integral-area-volume/problema8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=integral-area-volume/problema8.pg</server-url>
+    <pg source="integral-area-volume/problema8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="integral-area-volume/problema9.pg">
+      <statement><p>Determine a integral (interpretando-a como a área entre duas curvas)
+<me>\int_{0}^{\,4} {\left|\sqrt{x+2}-x\right|} \,dx</me></p>
+<p>Área = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2.98308961236983</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-area-volume/problema9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-area-volume/problema9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-area-volume/problema9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=integral-area-volume/problema9.pg</server-url>
+    <pg source="integral-area-volume/problema9.pg"/>
+  </webwork-reps>
+</webwork-representations>
