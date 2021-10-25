@@ -83,7 +83,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </latex-image-preamble>
     </docinfo>
 
-    <article xml:id="calc-integral-log-integral">
+    <article xml:id="calc-integral-trig">
         <title>Cálculo Integral: N7</title>
 
         <frontmatter>
