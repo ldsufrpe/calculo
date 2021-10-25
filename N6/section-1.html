@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-27T18:12:34-03:00       *-->
+<!--*       on 2021-10-21T00:57:35-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,29 @@
 <title>Mais aplicações de integral</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
@@ -56,7 +49,7 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-article has-toc has-sidebar-left">
+<body class="pretext-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
 \newcommand{ctm}[1]{\color{gray}{#1}}
 
@@ -119,7 +112,7 @@ true);
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
 <span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Mais aplicações de integral</span>
@@ -141,7 +134,7 @@ true);
 <li id="li-4"><p id="p-10">Encontre o comprimento dos segmentos de reta conectando os pontos \(P_i=(x_i,f(x_i))\) e \(P_{i+1}=(x_{i+1},f(x_{i+1}))\) para \(i=0,1\ldots, n-1\text{.}\)</p></li>
 <li id="li-5"><p id="p-11">Some todos esses comprimentos para obter uma aproximação do comprimento do arco.</p></li>
 <li id="li-6"><p id="p-12">Finalmente, tomamos o limite com \(n\to \infty\) para obter o comprimento de arco.</p></li>
-</ol></article><section class="paragraphs" id="paragraphs-1"> De acordo com os <a class="xref" data-knowl="./knowl/assemblage-comprimento-aprox.html" title="[assemblage]: Calculando o comprimento de arco">passos acima</a>, o comprimento de arco \(L\) de uma curva \(y=f(x)\text{,}\) \(a\leq x\leq b\) é<div class="displaymath">
+</ol></article><section class="paragraphs" id="paragraphs-1"> De acordo com os <a href="" class="xref" data-knowl="./knowl/assemblage-comprimento-aprox.html" title="[assemblage]: Calculando o comprimento de arco">passos acima</a>, o comprimento de arco \(L\) de uma curva \(y=f(x)\text{,}\) \(a\leq x\leq b\) é<div class="displaymath">
 \begin{align}
 L = \lim_{n\to \infty}\sum_{i=0}^{n-1}|P_{i}P_{i+1}| \amp \tag{1.1}
 \end{align}
@@ -154,13 +147,13 @@ L_i =\amp \sqrt{[x_{i+1}-x_i]^2 + [f(x_{i+1})-f(x_i)]^2} \\
 \end{align*}
 </div>
 <p class="continuation">no qual \(\Delta x= x_{i+1}-x_i=\frac{b-a}{n}\) é uma constante.</p>
-<p id="p-14">Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> , existe \(c_i\) com \(x_i \lt c_i\lt x_{i+1}\) tal que \(f^{\prime}(c_i)=\frac{f(x_{i+1})-f(x_i)}{\Delta x}\text{.}\) Multiplicando ambos os lados por \(\Delta x\) obtemos:</p>
+<p id="p-14">Agora vamos fazer uso das nossas suposições do início da seção. Segundo o Teorema do Valor Médio <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> , existe \(c_i\) com \(x_i \lt c_i\lt x_{i+1}\) tal que \(f^{\prime}(c_i)=\frac{f(x_{i+1})-f(x_i)}{\Delta x}\text{.}\) Multiplicando ambos os lados por \(\Delta x\) obtemos:</p>
 <div class="displaymath">
 \begin{equation*}
 f(x_{i+1}) - f(x_i)=f^{\prime}(c_i)\cdot\Delta x.
 \end{equation*}
 </div>
-<p class="continuation">De acordo com a <a class="xref" data-knowl="./knowl/distancia.html" title="Equação">fórmula da distância</a> nós temos</p>
+<p class="continuation">De acordo com a <a href="" class="xref" data-knowl="./knowl/distancia.html" title="Equação">fórmula da distância</a> nós temos</p>
 <div class="displaymath">
 \begin{align*}
 L_i= \amp \sqrt{[\Delta x]^2 + [f^{\prime}(c_i)\cdot \Delta x]^2} \\
@@ -177,7 +170,7 @@ L_i= \amp \sqrt{[\Delta x]^2 + [f^{\prime}(c_i)\cdot \Delta x]^2} \\
 </div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Veja em https://pt.wikipedia.org/wiki/Teorema_do_valor_médio</div></div></section><article class="note remark-like" id="note-1"><h6 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
-</h6>Assumimos que \(f^{\prime}\) é contínua para garantir que a <a class="xref" data-knowl="./knowl/arc-integral.html" title="Equação">integral acima exista</a>.</article><article class="assemblage assemblage-like" id="assemblage-formula-arc"><h6 class="heading"><span class="title">Fórmula para o comprimento de arco.</span></h6>
+</h6>Assumimos que \(f^{\prime}\) é contínua para garantir que a <a href="" class="xref" data-knowl="./knowl/arc-integral.html" title="Equação">integral acima exista</a>.</article><article class="assemblage assemblage-like" id="assemblage-formula-arc"><h6 class="heading"><span class="title">Fórmula para o comprimento de arco.</span></h6>
 <p id="p-15">Se \(f^{\prime}\) é contínua no intervalo \([a,b]\text{,}\) então o comprimento de arco da curva \(y=f(x)\text{,}\) \(a\leq x \leq b\text{,}\) é</p>
 <div class="displaymath">
 \begin{equation*}
@@ -186,11 +179,11 @@ L=\integrald{\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
 </div></article><article class="technology computation-like" id="technology-1"><h6 class="heading">
 <span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
 </h6>
-<figure class="figure figure-like" id="figure-interactive-comprimento-arc"><iframe id="interactive-interactive-comprimento-arc" width="600" height="720" src="interactive-interactive-comprimento-arc-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.3<span class="period">.</span></span><span class="space"> </span>Comprimento de arco</figcaption></figure></article><article class="example example-like" id="example-1"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h6 class="heading">
+<figure class="figure figure-like" id="figure-interactive-comprimento-arc"><iframe id="interactive-interactive-comprimento-arc" width="600" height="720" src="interactive-interactive-comprimento-arc-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.3<span class="period">.</span></span><span class="space"> </span>Comprimento de arco</figcaption></figure></article><article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-19">Encontre o comprimento de arco de \(f(x)=\ln{(\sec{x})}\text{,}\) \(0\leq x\leq \frac{\pi}{4}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
 <p id="p-20">Uma vez que  \(f(x)=\ln{(\sec{x})}\text{,}\) temos \(f^{\prime}(x)=\frac{1}{\sec{x}}\sec{x}\tan{x}=\tan{x}\text{,}\) e portanto,</p>
 <div class="displaymath">
 \begin{align*}
@@ -199,7 +192,7 @@ L=\integrald{\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
 =\amp  |\sec{x}|=\sec{x} 
 \end{align*}
 </div>
-<p class="continuation">para \(0\leq x\leq \frac{\pi}{4}\text{.}\) Então, a partir da <a class="xref" data-knowl="./knowl/assemblage-formula-arc.html" title="[assemblage]: Fórmula para o comprimento de arco">fórmula para o comprimento de arco</a>, o comprimento \(L\) vale</p>
+<p class="continuation">para \(0\leq x\leq \frac{\pi}{4}\text{.}\) Então, a partir da <a href="" class="xref" data-knowl="./knowl/assemblage-formula-arc.html" title="[assemblage]: Fórmula para o comprimento de arco">fórmula para o comprimento de arco</a>, o comprimento \(L\) vale</p>
 <div class="displaymath">
 \begin{align*}
 L \amp =\integrald{\sec{x}}{0}{\frac{\pi}{4}}{x} \\
@@ -209,12 +202,12 @@ L \amp =\integrald{\sec{x}}{0}{\frac{\pi}{4}}{x} \\
 </div>
 </div></div>
 </div></article></div>
-<article class="example example-like" id="example-2"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h6 class="heading">
+<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-21">Encontre o comprimento de arco de \(f(x)= \frac{x^3}{6} + \frac{1}{2x}\text{,}\) para \(\frac{1}{2} \le x \le 1.\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<p id="p-22">De acordo com a <a class="xref" data-knowl="./knowl/assemblage-formula-arc.html" title="[assemblage]: Fórmula para o comprimento de arco">fórmula para o comprimento de arco</a>, o comprimento \(L\) vale</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-22">De acordo com a <a href="" class="xref" data-knowl="./knowl/assemblage-formula-arc.html" title="[assemblage]: Fórmula para o comprimento de arco">fórmula para o comprimento de arco</a>, o comprimento \(L\) vale</p>
 <div class="displaymath">
 \begin{align*}
 L \amp= \displaystyle \int_{1/2}^{1} \sqrt{1+\left[f^{\prime}(x) \right]^2} \; \dd x
@@ -230,12 +223,12 @@ L \amp= \displaystyle \int_{1/2}^{1} \sqrt{1+\left[f^{\prime}(x) \right]^2} \; \
 </div>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-1"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-23">Encontre o comprimento de arco de \(f(x)=x^{\frac{3}{2}}\text{,}\) para \(1\leq x\leq 2\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-24">Use a substituição \(u=1+\frac{9}{4}x\) e depois faça a mudança dos limites de integração.</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-25">\(\dfrac{22\sqrt{22}-13\sqrt{13}}{27}\approx 2,09\)</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-24">Use a substituição \(u=1+\frac{9}{4}x\) e depois faça a mudança dos limites de integração.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-25">\(\dfrac{22\sqrt{22}-13\sqrt{13}}{27}\approx 2,09\)</p></div></div>
 </div></article></div>
 <section class="subsubsection" id="subsubsec-sugestao-video-intervalos-infinitos"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">1.1.1</span> <span class="title">Sugestão de vídeo</span>
@@ -252,12 +245,12 @@ L \amp= \displaystyle \int_{1/2}^{1} \sqrt{1+\left[f^{\prime}(x) \right]^2} \; \
 \begin{equation*}
 S=\integrald{2\pi\cdot f(x)\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
 \end{equation*}
-</div></article><article class="example example-like" id="example-3"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h6 class="heading">
+</div></article><article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-31">Encontre a área da superfície gerada pela rotação em torno do eixo \(x\) do gráfico \(f(x)=x^3\) entre  \(x=0\) e \(x=1\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<p id="p-32">Como \(f(x)=x^3\text{,}\) temos \(f^{\prime}(x)=3x^2\text{,}\) e portanto, de acordo com a <a class="xref" data-knowl="./knowl/assemblage-formula-surf-x.html" title="[assemblage]: Rotação ao em torno do eixo \(x\)">fórmula para rotação em torno do eixo \(x\)</a>, a área \(S\) da superfície gerada é expressa por</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-32">Como \(f(x)=x^3\text{,}\) temos \(f^{\prime}(x)=3x^2\text{,}\) e portanto, de acordo com a <a href="" class="xref" data-knowl="./knowl/assemblage-formula-surf-x.html" title="[assemblage]: Rotação ao em torno do eixo \(x\)">fórmula para rotação em torno do eixo \(x\)</a>, a área \(S\) da superfície gerada é expressa por</p>
 <div class="displaymath">
 \begin{align*}
 S=\amp\integrald{2\pi x^3\sqrt{1+ (3x^2)^2}}{0}{1}{x} \\
@@ -275,11 +268,11 @@ S = \amp \frac{2\pi}{36}\integrald{u^{\frac{1}{2}}}{1}{10}{u} \\
 <p class="continuation"><figure class="figure figure-like" id="plot3d-ex1"><iframe src="https://www.monroecc.edu/faculty/paulseeburger/CalcPlot3D/dynamicFigure/?type=parametric;parametric=2;x=u;y=u%5E3*cos(v);z=u%5E3*sin(v);visible=true;umin=0;umax=1;usteps=30;vmin=0;vmax=2*pi;vsteps=50;alpha=-1;view=0;format=normal;constcol=rgb(20,210,70)&amp;type=spacecurve;spacecurve=curve;x=t;y=t%5E3;z=0;visible=true;width=4;view=undefined;tmin=0;tmax=1;tsteps=100;color=rgb(255,0,0);showtrace=false;tval=0;constcol=true;twod=false;arrows=0;showpt=true;trace=true;vel=true;acc=false;osc=false;k=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=true;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=true;showoscplane=false;showrectplane=false;shownormplane=false&amp;type=window;hsrmode=3;nomidpts=true;anaglyph=-1;center=-2.0557833663767604,6.8983110955904055,6.941689908011071,1;focus=0,0,0,1;up=0.08185003331277463,-0.7229913044680089,0.685991359792778,1;transparent=true;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=false;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-0.5;xmax=1.5;ymin=-1;ymax=1;zmin=-1;zmax=1;xscale=1;yscale=1;zscale=1;zcmin=-4;zcmax=4;zoom=2.610667;xscalefactor=1;yscalefactor=1;zscalefactor=1#" id="calplot3d-ex1" width="480" height="480"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
-<article class="example example-like" id="example-4"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h6 class="heading">
+<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-33">Encontre a área da superfície gerada pela rotação em torno do eixo \(x\) do gráfico de \(f(x)=(4-x^{\frac{2}{3}})^{\frac{3}{2}}\) entre  \(x=0\) e \(x=3\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
 <p id="p-34">Note que \(f^{\prime}(x)=\frac{3}{2}\sqrt{4-x^{\frac{2}{3}}}\left(-\frac{2}{3}x^{-\frac{1}{3}}\right)\) e, portanto,</p>
 <div class="displaymath">
 \begin{equation*}
@@ -301,12 +294,12 @@ S = \left.2\pi\frac{-6(4-x^{\frac{2}{3}})^{\frac{5}{3}}}{5}\right|_0^3=202.765
 <p class="continuation"><figure class="figure figure-like" id="plot3d-ex2"><iframe src="https://www.monroecc.edu/faculty/paulseeburger/CalcPlot3D/dynamicFigure/?type=parametric;parametric=2;x=u;y=(4-u%5E(2/3))%5E(3/2)*sin(v);z=(4-u%5E(2/3))%5E(3/2)*cos(v);visible=true;umin=0;umax=3;usteps=30;vmin=0;vmax=2*pi;vsteps=50;alpha=-1;view=0;format=normal;constcol=rgb(20,210,70)&amp;type=spacecurve;spacecurve=curve;x=t;y=(4-t%5E(2/3))%5E(3/2);z=0;visible=true;width=4;view=undefined;tmin=0;tmax=3;tsteps=50;color=rgb(255,0,0);showtrace=false;tval=0;constcol=true;twod=false;arrows=0;showpt=true;trace=true;vel=true;acc=false;osc=false;k=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=true;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=false;showoscplane=false;showrectplane=false;shownormplane=false&amp;type=window;hsrmode=0;nomidpts=false;anaglyph=-1;center=10.202521709374446,24.819249222212196,-29.66333458691589,1;focus=0,0,0,1;up=0.9620810614584583,-0.08618744694044446,0.2587890167160396,1;transparent=true;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=false;gridplanes=false;gridcolor=rgb(128,128,128);xmin=0;xmax=3;ymin=-8;ymax=8;zmin=-8;zmax=8;xscale=1;yscale=5;zscale=5;zcmin=-4;zcmax=4;zoom=0.168833;xscalefactor=1.2;yscalefactor=1;zscalefactor=1#" id="calcplot3d-ex1" width="480" height="480"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-35">Obtenha a área da superfície de revolução obtida pela rotação da curva \(y=4x+3\) ao longo do intervalo \([0,4]\) .</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-36">depois</p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-37">\(88\pi\sqrt{17}\)</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-36">depois</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-37">\(88\pi\sqrt{17}\)</p></div></div>
 </div></article></div>
 <article class="assemblage assemblage-like" id="assemblage-formula-surf-y"><h6 class="heading"><span class="title">Rotação em torno do eixo \(y\).</span></h6>
 <p id="p-38">Se uma função \(f(x)\gt 0\) e \(f^{\prime}\) é contínua no intervalo \([a,b]\text{,}\) a área da superfície gerada pela rotação do gráfico de \(f\) ao redor do eixo \(y\) é</p>
@@ -314,12 +307,12 @@ S = \left.2\pi\frac{-6(4-x^{\frac{2}{3}})^{\frac{5}{3}}}{5}\right|_0^3=202.765
 \begin{equation*}
 S=\integrald{2\pi x\sqrt{1+[f^{\prime}(x)]^2}}{a}{b}{x}
 \end{equation*}
-</div></article><article class="example example-like" id="example-5"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h6 class="heading">
+</div></article><article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-39">Encontre a área da superfície gerada girando em torno do eixo \(y\) do gráfico de \(f(x)=x^{1/3}\) com \(1\leq x\leq 8.\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-40">Como \(f(x)=x^{1/3}\text{,}\) temos \(f^{\prime}(x)=\frac{1}{3x^{2/3}}\text{,}\) e portanto, de acordo com a <a class="xref" data-knowl="./knowl/assemblage-formula-surf-y.html" title="[assemblage]: Rotação em torno do eixo \(y\)">fórmula para rotação em torno do eixo \(y\)</a>, a área \(S\) da superfície gerada é expressa por</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-40">Como \(f(x)=x^{1/3}\text{,}\) temos \(f^{\prime}(x)=\frac{1}{3x^{2/3}}\text{,}\) e portanto, de acordo com a <a href="" class="xref" data-knowl="./knowl/assemblage-formula-surf-y.html" title="[assemblage]: Rotação em torno do eixo \(y\)">fórmula para rotação em torno do eixo \(y\)</a>, a área \(S\) da superfície gerada é expressa por</p>
 <div class="displaymath">
 \begin{align*}
 S =\amp 2\pi\integrald{x \sqrt{1 + \frac{1}{9x^{4/3}} }}{1}{8}{x}\\
@@ -339,12 +332,12 @@ S=\amp \frac{2\pi}{3}\cdot\frac{1}{12}\integrald{\sqrt{u}}{10}{145}{u} \\
 <p class="continuation"><figure class="figure figure-like" id="plot3d-ex3"><iframe src="https://www.monroecc.edu/faculty/paulseeburger/CalcPlot3D/dynamicFigure/?type=parametric;parametric=2;x=u*cos(v);y=u%5E(1/3);z=u*sin(v);visible=true;umin=1;umax=8;usteps=30;vmin=0;vmax=2*pi;vsteps=50;alpha=-1;view=0;format=normal;constcol=rgb(20,210,70)&amp;type=spacecurve;spacecurve=curve;x=t;y=t%5E(1/3);z=0;visible=true;width=4;view=undefined;tmin=1;tmax=8;tsteps=50;color=rgb(255,0,0);showtrace=false;tval=0;constcol=true;twod=false;arrows=0;showpt=true;trace=true;vel=true;acc=false;osc=false;k=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=true;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=false;showoscplane=false;showrectplane=false;shownormplane=false&amp;type=window;hsrmode=0;nomidpts=false;anaglyph=-1;center=5.14341680179711,-5.141857818356507,39.33327550279124,1;focus=0,0,0,1;up=0.9728078169318783,0.024196301507300816,-0.23034645712404833,1;transparent=true;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=false;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-8;xmax=8;ymin=-1;ymax=3;zmin=-8;zmax=8;xscale=4;yscale=4;zscale=4;zcmin=-4;zcmax=4;zoom=0.201333;xscalefactor=1;yscalefactor=3;zscalefactor=1#" id="calcplot3d-ex3" width="600" height="600"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
-<article class="example example-like" id="example-6"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h6 class="heading">
+<article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h6 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-41">Encontre a área da superfície gerada girando em torno do eixo \(y\) do gráfico de \(f(x)=1+5x^2\) com \(0\leq x\leq 1.\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-42">Como \(f(x)=1+ 5x^2\text{,}\) temos \(f^{\prime}(x)=10x\text{,}\) e portanto, de acordo com a <a class="xref" data-knowl="./knowl/assemblage-formula-surf-y.html" title="[assemblage]: Rotação em torno do eixo \(y\)">fórmula para rotação em torno do eixo \(y\)</a>, a área \(S\) da superfície gerada é expressa por</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-42">Como \(f(x)=1+ 5x^2\text{,}\) temos \(f^{\prime}(x)=10x\text{,}\) e portanto, de acordo com a <a href="" class="xref" data-knowl="./knowl/assemblage-formula-surf-y.html" title="[assemblage]: Rotação em torno do eixo \(y\)">fórmula para rotação em torno do eixo \(y\)</a>, a área \(S\) da superfície gerada é expressa por</p>
 <div class="displaymath">
 \begin{align*}
 S =\amp\integrald{2\pi x\sqrt{1+ 100x^2}}{0}{1}{x} 
@@ -361,12 +354,12 @@ S = \amp \frac{1}{100}\integrald{\pi\sqrt{u}}{1}{101}{u} \\
 <p class="continuation"><figure class="figure figure-like" id="plot3d-ex4"><iframe src="https://www.monroecc.edu/faculty/paulseeburger/CalcPlot3D/dynamicFigure/?type=parametric;parametric=2;x=u*sin(v);y=1+5*u%5E2;z=u*cos(v);visible=true;umin=-1;umax=1;usteps=30;vmin=0;vmax=2*pi;vsteps=50;alpha=-1;view=0;format=normal;constcol=rgb(20,210,70)&amp;type=spacecurve;spacecurve=curve;x=t;y=1+5*t%5E2;z=0;visible=true;width=4;view=undefined;tmin=0;tmax=1;tsteps=50;color=rgb(255,0,0);showtrace=false;tval=0;constcol=true;twod=false;arrows=0;showpt=true;trace=true;vel=true;acc=false;osc=false;k=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=true;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=false;showoscplane=false;showrectplane=false;shownormplane=false&amp;type=window;hsrmode=0;nomidpts=false;anaglyph=-1;center=19.401854601507218,15.351683642082671,31.43077866320146,1;focus=0,0,0,1;up=0.897489183319188,-0.04306972141763428,-0.43892842801767135,1;transparent=true;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=false;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-1;xmax=1;ymin=-1;ymax=6;zmin=-1;zmax=1;xscale=1;yscale=1;zscale=1;zcmin=-4;zcmax=4;zoom=0.591619;xscalefactor=1;yscalefactor=0.7;zscalefactor=1#" id="cacplot3d-ex4" width="600" height="600"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.15<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-3"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h6 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-43">Obtenha a área da superfície obtida pela rotação da curva \(f(x)=1+3x^2\) com \(0\leq x \leq 4\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-44"></p></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-45">\(\approx 806,284 \)</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-44"></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-45">\(\approx 806,284 \)</p></div></div>
 </div></article></div></section><section class="exercises" id="exercises-mais-aplicacoes"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
 </h3></section></section></div></main>

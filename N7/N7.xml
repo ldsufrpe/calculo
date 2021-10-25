@@ -113,7 +113,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Aqui uma introdução será necessária </p>
         </introduction>
     <section>
-    <title> Integral Trigonométrica</title>
+    <title> Integral de funções trigonométrica</title>
     
          
         <objectives>
@@ -122,33 +122,249 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                         xxxxxxxx.
+                         Integrar funções formadas por potências de seno e cosseno.
                     </p>
                 </li>
                 <li>
                     <p>
-                        xxxxxxxxxxxxx.
+                        Integrar funções formadas por produtos de seno e cosseno.
                     </p>
                 </li>
+<!-- 
+                <li>
+                    <p>
+                        Integrar funções formadas por de tangente e secante.
+                    </p>
+                </li>
+                    
+                    <li>
+                    <p>
+                       Integrar funções formadas por produtos de tangente e secante.
+                    </p>
+                </li> -->
                 
             </ol>
             
         </objectives>
 
-<subsection xml:id="subsec-">
-    <title>Log integral</title>
+<introduction>
+    <p>
+        
+    </p>
+</introduction>
+
+<subsection xml:id="subsec-1">
+    <title> Integração de potências de seno e cosseno</title>
   <introduction>
         <p>
-            introdução
+            Introdução
         </p>
     </introduction>
-<subsubsection xml:id="subsubsec-sugestao-video-log-integral">
+
+<assemblage xml:id="assemblage-1">
+    <title>Fórmulas recorrência</title>
+    <p>
+        Se <m>n \geq 2</m> for um inteiro positivo então:
+
+    <ul>
+       
+   
+    <li xml:id="reducao-seno">
+        <p>
+            <m>\integral{\sin^n {x}}{x} = -\frac{\sin^{n-1} x\cos x}{n} + \frac{n-1}{n}\integral{\sin^{n-2}}{x}</m>
+        </p>
+    </li>
+
+    <li xml:id="reducao-cosseno">
+        <p>
+          <m>  \integral{\cos^n x}{x} = \frac{\cos^{n-1} x\sin x}{n} + \frac{n-1}{n}\integral{\cos^{n-2}}{x} </m>
+        </p>
+    </li>
+     </ul>
+    </p>
+</assemblage>
+
+
+<example xml:id="ex-01">
+    <statement>
+        <p>
+            Determine <m>\integral{\cos^4{x}}{x}.</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            De acordo com a <xref ref="reducao-cosseno"  text="custom"> fórmula de recorrência </xref>, com <m>n=4</m>,
+
+            <md>
+                <mrow>\integral{\cos^4{x}}{x} \amp = \frac{1}{4}\cos^3{x}\sin{x}+\frac{3}{4}\integral{\cos^2 x}{x} </mrow>
+                <mrow> \amp = \frac{1}{4}\cos^3{x}\sin{x} + \frac{3}{4}\left(\frac{1}{2}\cos{x}\sin{x} + \frac{1}{2} \integral{1}{x}\right)</mrow>
+                <mrow> \amp = \frac{1}{4}\cos^3{x}\sin{x} + \frac{3}{8}\cos{x}\sin{x} + \frac{3}{8}x + C.</mrow>
+            </md>
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-02">
+        <statement>
+        <p>Mostre que      
+          
+               
+                   <m>
+                    \integral{\sin^2}{x} = \frac{1}{2}x-\frac{1}{4}\sin{2x}+C.
+                </m>
+               </p>
+               </statement>
+           
+            <solution>
+                     <p>
+                      Estamos diante do caso <m>n=2</m> da <xref ref="reducao-seno"  text="custom"> fórmula de recorrência </xref>, logo 
+                      
+                      <md>
+                            <mrow>   \integral{\sin^2}{x} \amp =  -\frac{1}{2}\sin {x}\cos{x} + \frac{1}{2}\integral{}{x} + C\amp </mrow>
+                            <mrow>                   \amp = \frac{1}{2}x -\frac{1}{2}\sin {x}\cos{x} + C \amp\ctm{\sin{2x=2\sin{x}\cos{x}}}</mrow> 
+                               <mrow>                 \amp = \frac{1}{2}x -\frac{1}{4}\sin{2x}+C \amp </mrow> 
+                      </md>
+                   
+
+                    </p>
+            </solution>
+</example>       
+        
+ <exercise xml:id="a01">       
+          
+           <statement>
+               <p> Mostre que 
+                   <me>
+                    \integral{\cos^2}{x} = \frac{1}{2}x+\frac{1}{4}\sin{2x}+C
+                </me>
+               </p>
+               </statement>
+           
+            <hint>
+                <p>
+                    Revise o <xref ref="ex-01"/>.
+                </p>
+            </hint>
+          
+    </exercise>     
+       
+    
+  
+
+
+
+<example xml:id="ex-03">
+    <statement>
+        <p>
+            Mostre que <me>\integral{\cos^3}{x} = \sin{x}-\frac{1}{3}\sin^3{x}+C. </me>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example>
+    <statement>
+        <p>
+            Calcule <m>\integral{\sin^4{2x}}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Ecolha <m>u=2x</m>. Então <m>\dd u= 2\dd x</m>. Logo,
+
+            <md>
+                <mrow> \integral{\sin^4{2x}}{x} \amp = \frac{1}{2}\integral{\sin^4{u}}{u}  \amp <xref ref="reducao-seno" text="custom"> Fórmula de recorrência na variável <m>u</m>. </xref>   </mrow>
+                <mrow> \amp =  -\frac{1}{8}\sin^3{u}\cos{u}+ \frac{3}{8}\integral{\sin^2{u}}{u} \amp <xref ref="ex-02"/>  </mrow>
+                <mrow> \amp =  -\frac{1}{8}\sin^3{u}\cos{u}+ \frac{3}{8}\left(\frac{1}{2}u - \frac{1}{4}\sin{2u} \right) + C \amp\ct{Simplifique.}</mrow>
+                <mrow> \amp =   -\frac{1}{8}\sin^3{u}\cos{u}    +   \frac{3}{16}u - \frac{3}{32}\sin{2u} + C  \amp \ct{Retorne à variável x.}</mrow>
+                <mrow> \amp =   -\frac{1}{8}\sin^3{2x}\cos{2x}  +  \frac{3}{8}x - \frac{3}{32}\sin{4x} + C    \amp       </mrow>  
+            </md> 
+        </p>
+    </solution>
+</example>
+ 
+<exercise xml:id="exer-01">
+    <statement>
+        <p>
+             Calcule <m>\integral{\cos^4{2x}}{x}</m>.
+        </p>
+    </statement>
+    <answer>
+        <p>
+        <m> \frac{1}{2} \cos^{3}{2x}\sin{2x} + \frac{3}{8}x - \frac{1}{64}\sin{8x}+ C</m>
+        </p>
+    </answer>
+</exercise>
+
+<exercise xml:id="exer-01b">
+    <statement>
+        <p>
+             Calcule <m>\integrald{\cos^5{x}}{0}{2\pi}{x}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Faça a mudança dos limites de integração quando usar a subistituição <m>u</m>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+        <m> \frac{8}{15}</m>
+        </p>
+    </answer>
+</exercise>
+
+
+
+<technology>
+<title>Comparação Sage usando algoritmos do Máxima e SymPy.</title>
+
+
+<introduction>
+    <p>
+        Na integração de <m>\sin^4{x}</m> o SageMath produz respostas diferentes dependendo do algortimos que escolhes para calcular integral. 
+        Execute as células a seguir para conferir.
+   
+    <sage>
+        <input>
+            show(integral(sin(x)^4, x, algorithm="maxima"))
+        </input>
+        <output>
+            (for static output)
+        </output>
+    </sage>
+
+    <sage>
+        <input>
+            show(integral(sin(x)^4, x, algorithm="sympy"))
+        </input>
+        <output>
+            (for static output)
+        </output>
+    </sage>  
+Use identidades trigonométricas para conciliar os resultados das saídas acima.
+    </p>
+</introduction>
+</technology>
+
+<subsubsection xml:id="subsubsec-sugestao-video-1">
     <title>Sugestão de vídeo</title>
   
 <ul>
     <li>
         <p>
-          Problema Resolvido:  <url href="https://"> xxxxxxxxxxx.</url>
+          Resolvendo  <url href="https://youtu.be/UFimH1_w8BI">  <m>\integral{\cos^3{x}}{x}</m>  </url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Resolvendo <url href="https://youtu.be/UxZCV8pae58"> <m>\integral{\sin^4{x}}{x}</m> </url>
         </p>
     </li>
 </ul>    
@@ -159,8 +375,409 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
+<subsection xml:id="subsec-2">
+    <title> Integração de produtos de seno e cosseno</title>
+  <introduction>
+        <p>
+            introdução
+        </p>
+    </introduction>
+
+    
+                    
+
+        <assemblage xml:id="assemblage-produto-seno-cosseno">
+            <title>Integração de produtos de senos e cossenos</title>
+                   <p>
+                    <tabular >
+                    <col halign="left" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col halign="left"/>
+                    <!--  -->
+                    <row>
+                        <cell><m>\integral{\sin^m{x}\cos^n{x}}{x}</m></cell>
+                        <cell></cell>
+                        <cell colspan="4" halign="center">Procedimento</cell>
+                        <cell>Identidade </cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell></cell>
+                         <cell></cell>
+                          <cell></cell>
+                          <cell></cell>
+                           <cell></cell> 
+                            <cell></cell>
+                            <cell></cell>                             
+                              
+                    </row>
+                    <row>
+                        <cell><m>n</m> ímpar</cell>
+                        <cell></cell>
+                        <cell>Escolha a substituição <m> u=\sin{u}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell><m>\cos^2{x}=1-\sin^2{x}</m></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    
+                    
+                     <row>
+                        <cell><m>m</m> ímpar</cell>
+                        <cell></cell>
+                        <cell>Escolha a substituição <m>u=\cos{u}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell><m>\sin^2{x}=1-\cos^2{x}</m></cell>
+                    </row>
+                     <row>
+                        <cell><m>m</m> e <m>n</m> par</cell>
+                        <cell></cell>
+                        <cell>Reduza as potências de <m>\sin{x}</m> e <m>\cos{x}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell> 
+                        
+                        <md>
+                            <mrow> \sin^2{x}=\amp\frac{1}{2}(1-\cos{2x}) </mrow>
+                            <mrow>  \cos^2{x}=\amp\frac{1}{2}(1+\cos{2x}) </mrow>
+                        </md>                       
+                        
+                        </cell>
+                    </row>
+                </tabular>
+            
+
+       </p>
+        </assemblage>
+<example xml:id="ex-1">
+    <statement>
+        <p>
+            Determine a integral <m>\integral{\sin^2{x}\cos^3{x}}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Como <m>n=3</m> é ímpar, de acordo a  <xref ref="assemblage-produto-seno-cosseno" text="custom"> integração de produtos de senos e cossenos </xref>
+            temos 
+
+            <md>
+                <mrow> \integral{\sin^2{x}\cos^3{x}}{x}\amp = \integral{\sin^2{x}\cos^2{x}\cos{x}}{x}</mrow>
+                <mrow> \amp = \integral{\sin^{2}{x}(1-\sin^2{x})\cos{x}}{x} \amp \ctm{\cos^2{x}=1-\sin{x}^2}.</mrow>
+                <mrow> \amp =\integral{u^2(1-u^2)}{u}\amp \ctm{u=\sin{u},\, \dd u=\cos{x}\,\dd x}.</mrow>
+                <mrow> \amp= \integral{u^2-u^4}{u}\amp \ct{Integre na variável u}  </mrow>
+                <mrow> \amp =\frac{1}{3}u^3-\frac{1}{5}u^5+C \amp \ct{Retorne a vaariável x}.</mrow>
+                <mrow> \amp=  \frac{1}{3}\sin^3{x}-\frac{1}{5}\sin^5{x}+C </mrow>
+            </md>
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-2">
+    <statement>
+        <p>
+             Determine a integral <m>\integral{\sin^3{x}\cos^4{x}}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+             Como <m>m=3</m> é ímpar, de acordo a  <xref ref="assemblage-produto-seno-cosseno" text="custom"> integração de produtos de senos e cossenos </xref>
+            temos 
+
+            <md>
+                <mrow>\integral{\sin^3{x}\cos^4{x}}{x} \amp = \integral{\sin^2{x}\sin{x}\cos^4{x}}{x} </mrow>
+                <mrow> \amp= \integral{(1-\cos^2{x})\cos^4{x}\sin{x}}{x} \amp \ctm{\sin^2{x}=1-\cos^2{x}} </mrow>
+                <mrow> \amp =\integral{(1-u^2)u^4(-\dd u)}{u} \amp \ctm{ u=\cos{x},\, \dd u= -\sin{x}\dd x}</mrow>
+                <mrow> \amp =\integral{u^6-u^4}{u}\amp \ct{Integre na variável u.}   </mrow>
+                <mrow> \amp = \frac{1}{7}u^7 + \frac{1}{5}u^5+C\amp \ct{Retorne à variável x.}  </mrow>
+                <mrow> \amp = \frac{1}{7}\cos^{x} + \frac{1}{5}\cos^5{x}+C \amp </mrow>
+            </md>
+
+
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-3">
+    <statement>
+        <p>
+            Determine a integral <m> \integral{\sin^2{x}\cos^2{x}}{x}.</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+        Como <m>n=
+        m</m> é par, de acordo a  <xref ref="assemblage-produto-seno-cosseno" text="custom"> integração de produtos de senos e cossenos </xref>
+            temos 
+            <md>
+                <mrow> \integral{\sin^2{x}\cos^2{x}}{x}\amp=\integral{\left(\frac{1}{2}-\frac{\cos{2x}}{2}
+                \right)\left(\frac{1}{2}+\frac{\cos{2x}}{2}\right)}{u} </mrow>
+                <mrow> \amp = \frac{1}{4}\integral{1-\cos^2{2x}}{x}\amp \ctm{a^2-b^2=(a-b)(a+b)}</mrow>
+                <mrow> \amp =\frac{1}{4}\integral{\frac{1}{2} - \frac{1}{2}\cos{4x}}{x} \amp \ctm{\cos^2{2x}=\frac{1}{2}+\frac{\cos{4x}}{2}}</mrow>
+                <mrow> \amp = \frac{1}{8}x-\frac{1}{32}\sin{4x}+ C </mrow>
+                
+            </md>
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exer-1">
+    <statement>
+        <p>
+            Determine a integral <m>\integrald{\sin^7{x}\cos^5{x}}{0}{2\pi}{x}</m>.
+        </p>
+    </statement>
+    <answer>
+        <p>
+            <m>\frac{1}{120}</m>
+        </p>
+    </answer>
+    <hint>
+        <p>
+            Faça a mudança dos limites de integração quando usar a substituição <m>u</m>.
+        </p>
+    </hint>
+</exercise>
+
+<exercise xml:id="exer-01c">
+    <statement>
+        <p>
+            Determine a integral <m>\integral{\sin^3{3x}\cos^3{3x}}{x}</m>.
+        </p>
+    </statement>
+    <answer>
+        <p>
+            <m>\frac{3}{4}\sin^4{3x} - \frac{1}{18}\sin^{6}{3x} +C</m>
+        </p>
+    </answer>
+</exercise>
+
+<subsubsection xml:id="subsubsec-sugestao-video-2">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+    <li>
+        <p>
+          Resolvendo <url href="https://youtu.be/HuYmfFoQ580"> <m>\integral{\sin^2{x}\cos^3{x}}{x}.</m></url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Revisão completa <url href="https://youtu.be/yXkg3DBPBnM"/> 
+        </p>
+    </li>
+
+</ul>    
+</subsubsection>
+</subsection>
+
+
+
+<!-- <subsection xml:id="subsec-3">
+    <title> Integração de potências de tangente e secante</title>
+  <introduction>
+        <p>
+            introdução
+        </p>
+    </introduction>
+
+
+<example xml:id="ex-4">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-5">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-6">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exer-2">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+
+
+<subsubsection xml:id="subsubsec-sugestao-video-3">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido:  <url href="https://"> xxxxxxxxxxx.</url>
+        </p>
+    </li>
+</ul>    
+</subsubsection>
+</subsection> -->
+
+
+
+
+
+<!-- <subsection xml:id="subsec-4">
+    <title> Integração de produtos de tangente e secante</title>
+  <introduction>
+        <p>
+            introdução
+        </p>
+    </introduction>
+
+
+<example xml:id="ex-7">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-8">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-9">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exer-3">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+
+
+
+<subsubsection xml:id="subsubsec-sugestao-video-4">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido:  <url href="https://"> xxxxxxxxxxx.</url>
+        </p>
+    </li>
+</ul>    
+</subsubsection>
+</subsection> -->
+
+
+
+
  <exercises xml:id="exercises-log-integral">
-     
+    
+<!-- <webwork source="integral-trigonometrica/problema1.pg" /> -->
+<!-- <webwork source="integral-trigonometrica/problema6.pg" /> -->
+<!-- <webwork source="integral-trigonometrica/problema2.pg" /> -->
+<exercise>
+    <webwork source="integral-trigonometrica/problema1.pg" />
+</exercise>
+<exercise>
+    <webwork source="integral-trigonometrica/problema6.pg" />
+</exercise>
+<exercise>
+    <webwork source="integral-trigonometrica/problema2.pg"/>
+</exercise>
+<exercise>   
+<webwork source="integral-trigonometrica/problema3.pg" />
+</exercise>
+<exercise>   
+
+<webwork source="integral-trigonometrica/problema4.pg" />
+</exercise>
+<exercise>
+    <webwork source="integral-trigonometrica/problema5.pg" /> 
+</exercise>
+
  </exercises>
 
 

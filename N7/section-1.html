@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-29T17:44:08-03:00       *-->
+<!--*       on 2021-10-24T21:55:40-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,39 +11,54 @@
 <html lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Integral Trigonométrica</title>
+<title>Integral de funções trigonométrica</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Executar (Sage)'});
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Avalie (Sage)';
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
@@ -56,7 +71,7 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-article has-toc has-sidebar-left">
+<body class="pretext-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
 \newcommand{ctm}[1]{\color{gray}{#1}}
 
@@ -101,43 +116,394 @@ var ggbApp = new GGBApplet({"appName": "graphing",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-integral-log-integral.html" title="Anterior">Vol</a><a id="upbutton" class="up-button button toolbar-item" href="calc-integral-log-integral.html" title="Acima">Subir</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a></span>
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-integral-log-integral.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-integral-log-integral.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-integral-log-integral.html" title="Anterior">Vol</a><a class="up-button button toolbar-item" href="calc-integral-log-integral.html" title="Acima">Subir</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Ir</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-integral-log-integral.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-integral-log-integral.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Pré-textual</span></a></li>
 <li class="link active">
-<a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Integral Trigonométrica</span></a><ul>
-<li><a href="section-1.html#subsec-" data-scroll="subsec-">Log integral</a></li>
+<a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Integral de funções trigonométrica</span></a><ul>
+<li><a href="section-1.html#subsec-1" data-scroll="subsec-1">Integração de potências de seno e cosseno</a></li>
+<li><a href="section-1.html#subsec-2" data-scroll="subsec-2">Integração de produtos de seno e cosseno</a></li>
 <li><a href="section-1.html#exercises-log-integral" data-scroll="exercises-log-integral">Exercícios</a></li>
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Integral Trigonométrica</span>
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Integral de funções trigonométrica</span>
 </h2>
 <article class="objectives goal-like" id="objectives-1"><h6 class="heading">
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h6>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">xxxxxxxx.</p></li>
-<li id="li-2"><p id="p-4">xxxxxxxxxxxxx.</p></li>
-</ol></article><section class="subsection" id="subsec-"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Log integral</span>
+<li id="li-1"><p id="p-3">Integrar funções formadas por potências de seno e cosseno.</p></li>
+<li id="li-2"><p id="p-4">Integrar funções formadas por produtos de seno e cosseno.</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-5"></p></section><section class="subsection" id="subsec-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Integração de potências de seno e cosseno</span>
 </h3>
-<section class="introduction" id="introduction-2"><p id="p-5">introdução</p></section><section class="subsubsection" id="subsubsec-sugestao-video-log-integral"><h4 class="heading hide-type">
+<section class="introduction" id="introduction-3"><p id="p-6">Introdução</p></section><article class="assemblage assemblage-like" id="assemblage-1"><h6 class="heading"><span class="title">Fórmulas recorrência.</span></h6>
+<p id="p-7">Se \(n \geq 2\) for um inteiro positivo então:</p>
+<ul class="disc">
+<li id="reducao-seno"><p id="p-8">\(\displaystyle \integral{\sin^n {x}}{x} = -\frac{\sin^{n-1} x\cos x}{n} + \frac{n-1}{n}\integral{\sin^{n-2}}{x}\)</p></li>
+<li id="reducao-cosseno"><p id="p-9">\(\displaystyle \integral{\cos^n x}{x} = \frac{\cos^{n-1} x\sin x}{n} + \frac{n-1}{n}\integral{\cos^{n-2}}{x} \)</p></li>
+</ul></article><article class="example example-like" id="ex-01"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-01"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-01"><article class="example example-like"><p id="p-10">Determine \(\integral{\cos^4{x}}{x}.\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-11">De acordo com a <a href="" class="xref" data-knowl="./knowl/reducao-cosseno.html" title="Item">fórmula de recorrência</a>, com \(n=4\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\cos^4{x}}{x} \amp = \frac{1}{4}\cos^3{x}\sin{x}+\frac{3}{4}\integral{\cos^2 x}{x} \\
+\amp = \frac{1}{4}\cos^3{x}\sin{x} + \frac{3}{4}\left(\frac{1}{2}\cos{x}\sin{x} + \frac{1}{2} \integral{1}{x}\right)\\
+\amp = \frac{1}{4}\cos^3{x}\sin{x} + \frac{3}{8}\cos{x}\sin{x} + \frac{3}{8}x + C.
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex-02"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-02"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-02"><article class="example example-like"><p id="p-12">Mostre que \(\integral{\sin^2}{x} = \frac{1}{2}x-\frac{1}{4}\sin{2x}+C.\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-13">Estamos diante do caso \(n=2\) da <a href="" class="xref" data-knowl="./knowl/reducao-seno.html" title="Item">fórmula de recorrência</a>, logo</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\sin^2}{x} \amp =  -\frac{1}{2}\sin {x}\cos{x} + \frac{1}{2}\integral{}{x} + C\amp \\
+\amp = \frac{1}{2}x -\frac{1}{2}\sin {x}\cos{x} + C \amp\ctm{\sin{2x=2\sin{x}\cos{x}}}\\
+\amp = \frac{1}{2}x -\frac{1}{4}\sin{2x}+C \amp 
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="a01"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-a01"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-a01"><article class="exercise exercise-like"><p id="p-14">Mostre que</p>
+<div class="displaymath">
+\begin{equation*}
+\integral{\cos^2}{x} = \frac{1}{2}x+\frac{1}{4}\sin{2x}+C
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-15">Revise o <a href="" class="xref" data-knowl="./knowl/ex-01.html" title="Exemplo 1.1">Exemplo 1.1</a>.</p></div></div>
+</div></article></div>
+<article class="example example-like" id="ex-03"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-03"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-03"><article class="example example-like"><p id="p-16">Mostre que</p>
+<div class="displaymath">
+\begin{equation*}
+\integral{\cos^3}{x} = \sin{x}-\frac{1}{3}\sin^3{x}+C. 
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-17"></p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-18">Calcule \(\integral{\sin^4{2x}}{x}\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-19">Ecolha \(u=2x\text{.}\) Então \(\dd u= 2\dd x\text{.}\) Logo,</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\sin^4{2x}}{x} \amp = \frac{1}{2}\integral{\sin^4{u}}{u}  \amp \knowl{./knowl/reducao-seno.html}{\text{Fórmula de recorrência na variável \(u\text{.}\)}}   \\
+\amp =  -\frac{1}{8}\sin^3{u}\cos{u}+ \frac{3}{8}\integral{\sin^2{u}}{u} \amp \knowl{./knowl/ex-02.html}{\text{Exemplo 1.2}}  \\
+\amp =  -\frac{1}{8}\sin^3{u}\cos{u}+ \frac{3}{8}\left(\frac{1}{2}u - \frac{1}{4}\sin{2u} \right) + C \amp\ct{Simplifique.}\\
+\amp =   -\frac{1}{8}\sin^3{u}\cos{u}    +   \frac{3}{16}u - \frac{3}{32}\sin{2u} + C  \amp \ct{Retorne à variável x.}\\
+\amp =   -\frac{1}{8}\sin^3{2x}\cos{2x}  +  \frac{3}{8}x - \frac{3}{32}\sin{4x} + C    \amp       
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer-01"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-01"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-01"><article class="exercise exercise-like"><p id="p-20">Calcule \(\integral{\cos^4{2x}}{x}\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-21">\(\frac{1}{2} \cos^{3}{2x}\sin{2x} + \frac{3}{8}x - \frac{1}{64}\sin{8x}+ C\)</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer-01b"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-01b"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-01b"><article class="exercise exercise-like"><p id="p-22">Calcule \(\integrald{\cos^5{x}}{0}{2\pi}{x}\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-23">Faça a mudança dos limites de integração quando usar a subistituição \(u\text{.}\)</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-24">\(\frac{8}{15}\)</p></div></div>
+</div></article></div>
+<article class="technology computation-like" id="technology-1"><h6 class="heading">
+<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Comparação Sage usando algoritmos do Máxima e SymPy..</span>
+</h6>
+<div class="introduction" id="introduction-4"><p id="p-25">Na integração de \(\sin^4{x}\) o SageMath produz respostas diferentes dependendo do algortimos que escolhes para calcular integral. Execute as células a seguir para conferir. <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">show(integral(sin(x)^4, x, algorithm="maxima"))
+</script></div> <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">show(integral(sin(x)^4, x, algorithm="sympy"))
+</script></div> Use identidades trigonométricas para conciliar os resultados das saídas acima.</p></div></article><section class="subsubsection" id="subsubsec-sugestao-video-1"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">1.1.1</span> <span class="title">Sugestão de vídeo</span>
 </h4>
-<ul class="disc"><li id="li-3"><p id="p-6">Problema Resolvido:  <a class="external" href="https://" target="_blank">xxxxxxxxxxx.</a></p></li></ul></section></section><section class="exercises" id="exercises-log-integral"><h3 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.2</span> <span class="title">Exercícios</span>
-</h3></section></section></div></main>
+<ul class="disc">
+<li id="li-5"><p id="p-26">Resolvendo  <a class="external" href="https://youtu.be/UFimH1_w8BI" target="_blank">\(\integral{\cos^3{x}}{x}\)</a></p></li>
+<li id="li-6"><p id="p-27">Resolvendo <a class="external" href="https://youtu.be/UxZCV8pae58" target="_blank">\(\integral{\sin^4{x}}{x}\)</a></p></li>
+</ul></section></section><section class="subsection" id="subsec-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Integração de produtos de seno e cosseno</span>
+</h3>
+<section class="introduction" id="introduction-5"><p id="p-28">introdução</p></section><article class="assemblage assemblage-like" id="assemblage-produto-seno-cosseno"><h6 class="heading"><span class="title">Integração de produtos de senos e cossenos.</span></h6>
+<p id="p-29"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\integral{\sin^m{x}\cos^n{x}}{x}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="4">Procedimento</td>
+<td class="l m b0 r0 l0 t0 lines">Identidade</td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(n\) ímpar</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">Escolha a substituição \(u=\sin{u}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\cos^2{x}=1-\sin^2{x}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(m\) ímpar</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">Escolha a substituição \(u=\cos{u}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\sin^2{x}=1-\cos^2{x}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(m\) e \(n\) par</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">Reduza as potências de \(\sin{x}\) e \(\cos{x}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><div class="displaymath">
+\begin{align*}
+\sin^2{x}=\amp\frac{1}{2}(1-\cos{2x}) \\
+\cos^2{x}=\amp\frac{1}{2}(1+\cos{2x}) 
+\end{align*}
+</div></td>
+</tr>
+</table></div></p></article><article class="example example-like" id="ex-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-1"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-1"><article class="example example-like"><p id="p-30">Determine a integral \(\integral{\sin^2{x}\cos^3{x}}{x}\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-31">Como \(n=3\) é ímpar, de acordo a  <a href="" class="xref" data-knowl="./knowl/assemblage-produto-seno-cosseno.html" title="[assemblage]: Integração de produtos de senos e cossenos">integração de produtos de senos e cossenos</a> temos</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\sin^2{x}\cos^3{x}}{x}\amp = \integral{\sin^2{x}\cos^2{x}\cos{x}}{x}\\
+\amp = \integral{\sin^{2}{x}(1-\sin^2{x})\cos{x}}{x} \amp \ctm{\cos^2{x}=1-\sin{x}^2}.\\
+\amp =\integral{u^2(1-u^2)}{u}\amp \ctm{u=\sin{u},\, \dd u=\cos{x}\,\dd x}.\\
+\amp= \integral{u^2-u^4}{u}\amp \ct{Integre na variável u}  \\
+\amp =\frac{1}{3}u^3-\frac{1}{5}u^5+C \amp \ct{Retorne a vaariável x}.\\
+\amp=  \frac{1}{3}\sin^3{x}-\frac{1}{5}\sin^5{x}+C 
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-2"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-2"><article class="example example-like"><p id="p-32">Determine a integral \(\integral{\sin^3{x}\cos^4{x}}{x}\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-33">Como \(m=3\) é ímpar, de acordo a  <a href="" class="xref" data-knowl="./knowl/assemblage-produto-seno-cosseno.html" title="[assemblage]: Integração de produtos de senos e cossenos">integração de produtos de senos e cossenos</a> temos</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\sin^3{x}\cos^4{x}}{x} \amp = \integral{\sin^2{x}\sin{x}\cos^4{x}}{x} \\
+\amp= \integral{(1-\cos^2{x})\cos^4{x}\sin{x}}{x} \amp \ctm{\sin^2{x}=1-\cos^2{x}} \\
+\amp =\integral{(1-u^2)u^4(-\dd u)}{u} \amp \ctm{ u=\cos{x},\, \dd u= -\sin{x}\dd x}\\
+\amp =\integral{u^6-u^4}{u}\amp \ct{Integre na variável u.}   \\
+\amp = \frac{1}{7}u^7 + \frac{1}{5}u^5+C\amp \ct{Retorne à variável x.}  \\
+\amp = \frac{1}{7}\cos^{x} + \frac{1}{5}\cos^5{x}+C \amp 
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-3"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-3"><article class="example example-like"><p id="p-34">Determine a integral \(\integral{\sin^2{x}\cos^2{x}}{x}.\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-35">Como \(n=
+m\) é par, de acordo a  <a href="" class="xref" data-knowl="./knowl/assemblage-produto-seno-cosseno.html" title="[assemblage]: Integração de produtos de senos e cossenos">integração de produtos de senos e cossenos</a> temos</p>
+<div class="displaymath">
+\begin{align*}
+\integral{\sin^2{x}\cos^2{x}}{x}\amp=\integral{\left(\frac{1}{2}-\frac{\cos{2x}}{2}
+\right)\left(\frac{1}{2}+\frac{\cos{2x}}{2}\right)}{u} \\
+\amp = \frac{1}{4}\integral{1-\cos^2{2x}}{x}\amp \ctm{a^2-b^2=(a-b)(a+b)}\\
+\amp =\frac{1}{4}\integral{\frac{1}{2} - \frac{1}{2}\cos{4x}}{x} \amp \ctm{\cos^2{2x}=\frac{1}{2}+\frac{\cos{4x}}{2}}\\
+\amp = \frac{1}{8}x-\frac{1}{32}\sin{4x}+ C 
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-1"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-1"><article class="exercise exercise-like"><p id="p-36">Determine a integral \(\integrald{\sin^7{x}\cos^5{x}}{0}{2\pi}{x}\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-37">Faça a mudança dos limites de integração quando usar a substituição \(u\text{.}\)</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-38">\(\frac{1}{120}\)</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer-01c"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-01c"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-01c"><article class="exercise exercise-like"><p id="p-39">Determine a integral \(\integral{\sin^3{3x}\cos^3{3x}}{x}\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-40">\(\frac{3}{4}\sin^4{3x} - \frac{1}{18}\sin^{6}{3x} +C\)</p></div></div>
+</div></article></div>
+<section class="subsubsection" id="subsubsec-sugestao-video-2"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.2.1</span> <span class="title">Sugestão de vídeo</span>
+</h4>
+<ul class="disc">
+<li id="li-7"><p id="p-41">Resolvendo <a class="external" href="https://youtu.be/HuYmfFoQ580" target="_blank">\(\integral{\sin^2{x}\cos^3{x}}{x}.\)</a></p></li>
+<li id="li-8"><p id="p-42">Revisão completa <a class="external" href="https://youtu.be/yXkg3DBPBnM" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/yXkg3DBPBnM</code></a></p></li>
+</ul></section></section><section class="exercises" id="exercises-log-integral"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-43">Determine a integral \(\displaystyle\int \sin^4 (2 x) \, dx\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-45">\(-0.125\sin^{3}\!\left(2x\right)\cos\!\left(2x\right)-0.1875\sin\!\left(2x\right)\cos\!\left(2x\right)+0.375x+C\)</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-46">Use a substituição \(u = 2 x\text{,}\) \(du = 2 dx\text{,}\) seguido da fórmula de recorrência \(\sin^m x\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{aligned}
+\int \sin^4 (2 x) \, dx \amp = \frac{1}{2}\int \sin^4 u \, du \\
+\amp = -\frac{1}{8} \sin^3 u \, \cos u + \frac{3}{8} \int \sin^2 u \, du \\
+\amp  = -\frac{1}{8} \sin^3 u \, \cos u + \frac{3}{8} \left( -\frac{1}{2} \sin u \, \cos u + \frac{1}{2} \int du \right) \\
+\amp = -\frac{1}{8} \sin^3 u \, \cos u - \frac{3}{16} \sin u \, \cos u  + \frac{3}{16} u + C \\
+\amp = -\frac{1}{8} \sin^3 (2 x) \, \cos (2 x)- \frac{3}{16} \sin (2 x) \, \cos (2 x)  + \frac{3}{16} (2 x)+ C\\
+\amp = -\frac{1}{8} \sin^3 (2 x) \, \cos (2 x)- \frac{3}{16} \sin (2 x) \, \cos (2 x)  + \frac{3}{8}  x+ C\\
+\end{aligned}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-47">Determine \(\displaystyle\int 3 \sin^{4} x \, \cos^{2} x \, dx\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-49">\(3\!\left(0.166667\sin^{5}\!\left(x\right)\cos\!\left(x\right)-0.0416667\sin^{3}\!\left(x\right)\cos\!\left(x\right)-0.0625\sin\!\left(x\right)\cos\!\left(x\right)+0.0625x\right)+C\)</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-50">Use a identidade \(\cos^{2} x = 1 - \sin^{2} x\) para escrever a igualdade:</p>
+<p id="p-51">\(\int 3 \sin^{4} x \, \cos^{2} x \, dx = 3 \int \sin^{4} x \, \left(1 - \sin^2 x \right) \, dx = 3 \left[ \int \sin^4 x \, dx - \int \sin^6 x \, dx \right]\text{.}\)</p>
+<p id="p-52">Usando a fórmula de recorrência para \(\sin^m x\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{aligned}
+\int 3 \sin^{4} x \, \cos^{2} x \, dx \amp = 3 \left[ \sin^4 x \, dx - \left[ -\frac{1}{6} \sin^5 x \, \cos x + \frac{5}{6} \int \sin^4 x \, dx \right] \right] \\
+\amp  = 3 \left[ \frac{1}{6} \sin^5 x \, \cos x + \frac{1}{6} \int \sin^4 x \, dx \right] \\
+\amp = 3 \left[ \frac{1}{6} \sin^5 x \, \cos x + \frac{1}{6} \left( -\frac{1}{4} \sin^3 x \, \cos x + \frac{3}{4} \int \sin^2 x \, dx \right) \right] \\
+\amp = 3 \left[ \frac{1}{6} \sin^5 x \, \cos x - \frac{1}{24} \sin^3 x \, \cos x + \frac{1}{8} \int \sin^2 x \, dx \right] \\
+\amp  =3 \left[ \frac{1}{6} \sin^5 x \, \cos x - \frac{1}{24} \sin^3 x \, \cos x + \frac{1}{8} \left( -\frac{1}{2}\sin x \, \cos x + \frac{1}{2} \int dx \right) \right] \\
+\amp  = 3 \left[ \frac{1}{6} \sin^5 x \, \cos x - \frac{1}{24} \sin^3 x \, \cos x - \frac{1}{16} \sin x \, \cos x + \frac{1}{16}x \right] + C \\
+\end{aligned}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-53">Determine \(\displaystyle\int 4 \sin^{4} x \, \cos^{2} x \, dx\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-55">\(4\!\left(0.166667\sin^{5}\!\left(x\right)\cos\!\left(x\right)-0.0416667\sin^{3}\!\left(x\right)\cos\!\left(x\right)-0.0625\sin\!\left(x\right)\cos\!\left(x\right)+0.0625x\right)+C\)</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-56">Use a identidade \(\cos^{2} x = 1 - \sin^{2} x\) para escrever a igualdade:</p>
+<p id="p-57">\(\int 4 \sin^{4} x \, \cos^{2} x \, dx = 4 \int \sin^{4} x \, \left(1 - \sin^2 x \right) \, dx = 4 \left[ \int \sin^4 x \, dx - \int \sin^6 x \, dx \right]\text{.}\)</p>
+<p id="p-58">Usando a fórmula de recorrência para \(\sin^m x\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{aligned}
+\int 4 \sin^{4} x \, \cos^{2} x \, dx \amp = 4 \left[ \sin^4 x \, dx - \left[ -\frac{1}{6} \sin^5 x \, \cos x + \frac{5}{6} \int \sin^4 x \, dx \right] \right] \\
+\amp  = 4 \left[ \frac{1}{6} \sin^5 x \, \cos x + \frac{1}{6} \int \sin^4 x \, dx \right] \\
+\amp = 4 \left[ \frac{1}{6} \sin^5 x \, \cos x + \frac{1}{6} \left( -\frac{1}{4} \sin^3 x \, \cos x + \frac{3}{4} \int \sin^2 x \, dx \right) \right] \\
+\amp = 4 \left[ \frac{1}{6} \sin^5 x \, \cos x - \frac{1}{24} \sin^3 x \, \cos x + \frac{1}{8} \int \sin^2 x \, dx \right] \\
+\amp  =4 \left[ \frac{1}{6} \sin^5 x \, \cos x - \frac{1}{24} \sin^3 x \, \cos x + \frac{1}{8} \left( -\frac{1}{2}\sin x \, \cos x + \frac{1}{2} \int dx \right) \right] \\
+\amp  = 4 \left[ \frac{1}{6} \sin^5 x \, \cos x - \frac{1}{24} \sin^3 x \, \cos x - \frac{1}{16} \sin x \, \cos x + \frac{1}{16}x \right] + C \\
+\end{aligned}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-59">Determine a integral \(\displaystyle\int 45\cos^2(19 x)\,dx\)</p>
+<p id="p-60"><span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> \(+ C\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-61">\(\frac{45x}{2}+\frac{45\sin\!\left(38x\right)}{76}\)</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><div class="displaymath" id="p-62">
+\begin{equation*}
+\begin{aligned}
+\int 45 \cos^2(19 x)dx
+\amp =      45 \int \frac 1 2 \left( 1 + \cos(38 x) \right) dx        \\
+\amp =      \frac{45}{2} \int dx
++ \frac{45}{2} \int \cos(38 x) dx \\
+\amp =      \frac{45 x}{2} + \frac{45 \sin(38 x)}{76}+C   \\
+\amp =      22.5 x + \frac{45}{76} \sin(38 x)+C
+\end{aligned}
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-63">Encontre o valor da \(\displaystyle \int_0^{\pi/4} \sin(2x) \sin(x) \;dx\text{.}\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-65">\(0.235702260395516\)</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-66">Use a identidade trigonométrica \(\sin(2x) = 2\cos(x)\sin(x)\) e a substituição \(u = \sin(x)\text{,}\)  \(du = \cos(x)dx\text{.}\)</p>
+<div class="displaymath" id="p-67">
+\begin{equation*}
+\begin{aligned}
+\int_0^{\pi/4} \sin(2x)\sin(x)dx
+\amp =	\int_0^{\pi/4} (2\cos(x)\sin(x))\sin(x)dx	\\
+\amp =	2 \int_0^{\pi/4} \sin^2(x)cos(x)dx	\\	
+\amp =	2 \int_0^{\pi/4} u^2 du	\\
+\amp =	\frac 2 3 \left. u^3 \right|_0^{\pi/4}	\\
+\amp =	\frac 2 3 \left( \left. \sin^3(x) \right|_0^{\pi/4} \right)	\\
+\amp =	\frac 2 3 ( \sin^3(\pi/4) - \sin^3(0) )	\\
+\amp =	\frac 2 3 \sin^3(\pi/4)	\\
+\amp =	0.235702259760924
+\end{aligned}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-68">Determine a integral \(\displaystyle\int \sin(6 x)\cos(7 x)\ dx\text{.}\)</p>
+<p id="p-69"><span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> \(+C\)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-70">\(-0.5\!\left(\frac{\cos\!\left(13x\right)}{13}+\frac{\cos\!\left((-1)x\right)}{-1}\right)\)</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-71">Use a identidade \(\sin a\cos b=\frac 1 2 \left[\sin(a-b)+\sin(a+b)\right]\text{:}\)</p>
+<div class="displaymath" id="p-72">
+\begin{equation*}
+\begin{aligned}
+\int \sin(6 x)\cos(7 x)dx
+\amp =	\int \frac 1 2 \left(\sin(6 x-7 x)+\sin(6 x+7 x)\right) dx	\\
+\amp =	\frac 1 2 \int \sin(-1 x)dx
++ \frac 1 2 \int \sin(13 x)dx	\\
+\amp =	\frac{\cos(-1 x)}{-2}
++ \frac{\cos(13 x)}{26} +C
+\end{aligned}
+\end{equation*}
+</div>
+</div></div>
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>
