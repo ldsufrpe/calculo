@@ -351,9 +351,9 @@ Use identidades trigonométricas para conciliar os resultados das saídas acima.
     </p>
 </introduction>
 </technology>
-
-<subsubsection xml:id="subsubsec-sugestao-video-1">
-    <title>Sugestão de vídeo</title>
+</subsection>
+<subsection xml:id="subsubsec-sugestao-video-1">
+    <title>Sugestão de vídeos</title>
   
 <ul>
     <li>
@@ -368,8 +368,8 @@ Use identidades trigonométricas para conciliar os resultados das saídas acima.
         </p>
     </li>
 </ul>    
-</subsubsection>
 </subsection>
+
 
 
 
@@ -566,9 +566,10 @@ Use identidades trigonométricas para conciliar os resultados das saídas acima.
         </p>
     </answer>
 </exercise>
+</subsection>
 
-<subsubsection xml:id="subsubsec-sugestao-video-2">
-    <title>Sugestão de vídeo</title>
+<subsection xml:id="subsubsec-sugestao-video-2">
+    <title>Sugestão de vídeos</title>
   
 <ul>
     <li>
@@ -584,8 +585,8 @@ Use identidades trigonométricas para conciliar os resultados das saídas acima.
     </li>
 
 </ul>    
-</subsubsection>
 </subsection>
+
 
 
 
