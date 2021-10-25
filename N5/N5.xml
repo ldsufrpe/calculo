@@ -650,8 +650,8 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         </p>
     </answer>
 </exercise>
-
-<subsubsection xml:id="subsubsec-videos-sugeridos-area">
+</subsection>
+<subsection xml:id="subsubsec-videos-sugeridos-area">
     <title>Sugestão de vídeos</title>
     <ul>
         <li>
@@ -666,8 +666,8 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         </li>
     </ul>
     
-</subsubsection>
 </subsection>
+
 
 <subsection xml:id="subsec-volume">
     <title>Volume</title>
@@ -1055,9 +1055,9 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
             </p>
         </answer>
     </exercise>
-    
+</subsection>    
 
-<subsubsection xml:id="subsubsec-videos-sugeridos-volume">
+<subsection xml:id="subsubsec-videos-sugeridos-volume">
     <title>Sugestão de vídeos</title>
     <ul>
         <li>
@@ -1083,9 +1083,9 @@ A partir da <xref ref="fig-sageplot-fsobg"/>  podemos observar que  <m>x+6\geq x
         </li>
     </ul>
     
-</subsubsection>
- 
 </subsection>
+ 
+
 
 
 <!-- <subsection xml:id="subsec-outras-aplicacoes">
