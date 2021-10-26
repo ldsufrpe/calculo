@@ -296,7 +296,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </statement>
     <answer>
         <p>
-        <m> \frac{1}{2} \cos^{3}{2x}\sin{2x} + \frac{3}{8}x - \frac{1}{64}\sin{8x}+ C</m>
+        <m> \frac{1}{8} \cos^{3}{2x}\sin{2x} + \frac{3}{8}\sin{4x}+ \frac{3}{8}x + C</m>
         </p>
     </answer>
 </exercise>
@@ -304,7 +304,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercise xml:id="exer-01b">
     <statement>
         <p>
-             Calcule <m>\integrald{\cos^5{x}}{0}{2\pi}{x}</m>.
+             Calcule <m>\integrald{\cos^5{x}}{0}{\frac{\pi}{2}}{x}</m>.
         </p>
     </statement>
     <hint>
