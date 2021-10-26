@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-26T10:44:36-03:00       *-->
+<!--*       on 2021-10-26T13:43:38-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,11 +16,12 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integral{\sin^2{x}\cos^2{x}}{x}\amp=\integral{\left(\frac{1}{2}-\frac{\cos{2x}}{2}
-\right)\left(\frac{1}{2}+\frac{\cos{2x}}{2}\right)}{u} \\
-\amp = \frac{1}{4}\integral{1-\cos^2{2x}}{x}\amp \ctm{a^2-b^2=(a-b)(a+b)}\\
-\amp =\frac{1}{4}\integral{\frac{1}{2} - \frac{1}{2}\cos{4x}}{x} \amp \ctm{\cos^2{2x}=\frac{1}{2}+\frac{\cos{4x}}{2}}\\
-\amp = \frac{1}{8}x-\frac{1}{32}\sin{4x}+ C 
+\integral{\sin^3{x}\cos^4{x}}{x} \amp = \integral{\sin^2{x}\sin{x}\cos^4{x}}{x} \\
+\amp= \integral{(1-\cos^2{x})\cos^4{x}\sin{x}}{x} \amp \ctm{\sin^2{x}=1-\cos^2{x}} \\
+\amp =\integral{(1-u^2)u^4(-\dd u)}{u} \amp \ctm{ u=\cos{x},\, \dd u= -\sin{x}\dd x}\\
+\amp =\integral{u^6-u^4}{u}\amp \ct{Integre na variável u.}   \\
+\amp = \frac{1}{7}u^7 + \frac{1}{5}u^5+C\amp \ct{Retorne à variável x.}  \\
+\amp = \frac{1}{7}\cos^{x} + \frac{1}{5}\cos^5{x}+C \amp 
 \end{align*}
 </div>
 <span class="incontext"><a href="section-1.html#mjx-eqn:mrow-28">em contexto</a></span>

@@ -16,11 +16,13 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\integral{\sin^2}{x} \amp =  -\frac{1}{2}\sin {x}\cos{x} + \frac{1}{2}\integral{}{x} + C\amp \\
-\amp = \frac{1}{2}x -\frac{1}{2}\sin {x}\cos{x} + C \amp\ctm{\sin{2x=2\sin{x}\cos{x}}}\\
-\amp = \frac{1}{2}x -\frac{1}{4}\sin{2x}+C \amp 
+\integral{\sin^2{x}\cos^2{x}}{x}\amp=\integral{\left(\frac{1}{2}-\frac{\cos{2x}}{2}
+\right)\left(\frac{1}{2}+\frac{\cos{2x}}{2}\right)}{u} \\
+\amp = \frac{1}{4}\integral{1-\cos^2{2x}}{x}\amp \ctm{a^2-b^2=(a-b)(a+b)}\\
+\amp =\frac{1}{4}\integral{\frac{1}{2} - \frac{1}{2}\cos{4x}}{x} \amp \ctm{\cos^2{2x}=\frac{1}{2}+\frac{\cos{4x}}{2}}\\
+\amp = \frac{1}{8}x-\frac{1}{32}\sin{4x}+ C 
 \end{align*}
 </div>
-<span class="incontext"><a href="section-1.html#mjx-eqn:mrow-6">em contexto</a></span>
+<span class="incontext"><a href="section-1.html#mjx-eqn:mrow-31">em contexto</a></span>
 </body>
 </html>
