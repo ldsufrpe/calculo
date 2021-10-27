@@ -545,7 +545,7 @@ Use identidades trigonométricas para conciliar os resultados das saídas acima.
 <exercise xml:id="exer-1">
     <statement>
         <p>
-            Determine a integral <m>\integrald{\sin^7{x}\cos^5{x}}{0}{2\pi}{x}</m>.
+            Determine a integral <m>\integrald{\sin^7{x}\cos^5{x}}{0}{\frac{\pi}{2}}{x}</m>.
         </p>
     </statement>
     <answer>
