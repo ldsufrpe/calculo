@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-14T21:58:16-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Parágrafo</span></h6>
+<p>Para deduzir a Regra de Simpson, divida o intervalo \([a, b]\) em um número par \(n\) de subintervalos, cada um de largura</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\Delta x =\frac{b-a}{n}.
+\end{equation*}
+</div>
+<p class="continuation">Em \([x_0, x_1\) aproximamos a função \(f\) pelo polinômio de grau dois \(p(x)= Ax^2+ Bx + C\) que passa pelos pontos</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(x_0, f(x_0), \, (x_1, f(y_1)), (x_2, f(x_2)), 
+\end{equation*}
+</div>
+<p class="continuation">no qual</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+f(x_0)=  p(x_0)  = Ax_0^2 + Bx_0 + C \\
+f(x_1) =  p(x_1) = Ax_1^2 + Bx_1 + C \\
+f(x_2) =  p(x_2) = Ax_2^2 + Bx_2 + C 
+\end{gather*}
+</div>
+<p class="continuation">Além disso,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_2 - x_0 = 2\Delta x
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_2 + x_0 = 2x_1,
+\end{equation*}
+</div>
+<p class="continuation">já que \(x_1=\frac{x_2+x_0}{2}\text{.}\) Pelo Teorema Fundamenta do Cálculo</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integrald{f(x)}{x_0}{x_2}{x}\amp \approx \integrald{p(x)}{x_0}{x_2}{x} \\
+\amp = \left(\frac{A}{3}x^3 + \frac{B}{2}x^2+ Cx\right) \biggr\rvert_{x_0}^{x_2} \\
+\amp = \frac{A}{3}(x_2^3-x_0^3) + \frac{B}{2}(x_2^2-x_0^2) + C (x_2-x_0)\\
+\amp= \frac{x_2-x_0}{6}\left(2A(x_2^2+ x_2x_0+ x_0^2) + 3B(x_2+x_0) + 6C\right) \\
+\amp = \frac{\Delta x}{3}\left((Ax_2^2 + Bx_2^2+ C) +  (Ax_0^2 + Bx_0^2+ C)+ A(x_2^2+ 2x_2x_0+x_0^2 + 2B(x_2+x_0) + 4C\right)\\
+\amp =  \frac{\Delta x}{3}\left(f(x_2) + f(x_0) + A(2x_1)^2 + 2B(2x_1) + 4C\right)\\
+\amp = \frac{\Delta x}{3}\left( f(x_0) + 4f(x_1) + f(x_2)\right) 
+\end{align*}
+</div>
+<p class="continuation">A repetição desse processo nos subintervalos \([x_{i-2}, x_i]\) fornece</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\integrald{f(x)}{a}{b}{x} \amp \approx \frac{\Delta x}{3}\left[f(x_0) + 4f(x_1)+ 2f(x_2) + 4f(x_3) + 2f(x_4) + \ldots       + 4f(x_{n-1})+f(x_n)\right] .
+\end{align*}
+</div>
+<span class="incontext"><a href="section-1.html#p-20">em contexto</a></span>
+</body>
+</html>

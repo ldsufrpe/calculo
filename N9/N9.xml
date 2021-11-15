@@ -123,39 +123,199 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                         xxxxxxxx.
+                         Calcular integral aproximada usando a Regra do Trapézio
                     </p>
                 </li>
                 <li>
                     <p>
-                        xxxxxxxxxxxxx.
+                         Calcular integral aproximada usando a Regra de Simpson
                     </p>
                 </li>
                 
             </ol>
             
         </objectives>
-
+<introduction>
+    <p>
+    Em muitas aplicações de cálculo precisamos calcular uma integral definida. De fato, nem todas as funções que são integráveis 
+    tem suas primitivas conhecidas, impossibilitando a aplicação do  Teorema Fundamental do Cálculo. Diante disto, métodos numéricos
+    podem ser uma alternativa viável. Lembre-se que a integral definida <m>\int_a^b f(x)\, \dd x  </m> é definida como um limite
+    das somas de Riemann; assim, qualquer soma de Riemann pode ser usada como uma aproximação à integral. Já conhecemos 
+    a soma de Riemann do ponto médio, no qual a altura do retângulo é dada por <m>f(\tfrac{x_{n-1}+ x_n}{2})</m>. Aqui apresentaremos 
+    duas técnicas baseadas também na Soma de Riemann mas com outros critérios para aproximar o valor da integral.
+    </p>
+</introduction>
 <subsection xml:id="subsec-notacao-sigma">
     <title>Regra do Trapézio</title>
   <introduction>
         <p>
-            introdução
+         
+        Podemos aproximar o valor de uma integral definida usando trapézio em vez de retângulos. Na <xref ref="fig0"/>,
+         a área abaixo do gráfico de $y=f(x)$ é aproximada por trapézios. A tecnica para obter tais aproximações é chamada de 
+         Regra do Trapézio. Para desenvolvê-la, considere uma função não negativa e contínua no intervalo <m>[a, b]</m>. 
+         Divida o intervalo em <m>n</m> subintervalos, cada um de largura 
+        
+        <me>
+            \Delta x =\frac{b-a}{n}.
+        </me>
+       
+        De acordo com a <xref ref="fig0"/> podemos formar <m>n</m> trapézios. Note que o primeiro trapézio
+        tem área igual a 
+
+        <me>
+            \left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2}\right].
+        </me>
+        Seguindo o mesmo raciocínio como os outros trapezios temos que a área das <m>n</m> área é 
+
+         <md>
+             <mrow> \amp\left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2} + \frac{f(x_1)+f(x_1)}{2} + \ldots + \frac{f(x_{n-1})+f(x_{n})}{2}\right] </mrow>
+             <mrow> \amp = \left( \frac{b-a}{2n}\right)\left[f(x_0)+ f(x_1) + f(x_1)+ + f(x_2)\ldots f(x_{n-1} + f(x_{n-1}+ f(x_n)\right] </mrow>
+             <mrow> \amp = \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]</mrow>.
+         </md>
+         Dessa forma, o valor da integral definida usando a Regra do Trapézio é obtido por
+         <me>
+             \integrald{f(x)}{a}{b}{x}\approx \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]
+         </me>
+         
+        <note>Embora essa dedução pressuponha que <m>f</m>  seja contínua e não negativa em
+<m>[a, b]</m>, a fórmula resultante é valida sempre que <m>f</m> for contínua em <m>[a, b]</m>.</note>
+           <figure xml:id="fig0">
+            <caption>Trapézios usados ​​para aproximar a área sob o gráfico de <m>y=f(x)</m>, aproximando assim a integral definida.</caption>
+            <image source="images/fig0.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+        </figure>
         </p>
     </introduction>
+<assemblage xml:id="assemblage-trapezio">
+    <title>Regra do Trapézio</title>
+    <p>
+        Assuma que <m>f</m> contínua em <m>[a,b]</m>. Seja <m>n</m> o número de subintervalos 
+    <m>
+        [x_0, x_1], \, [x_1,x_2], \, \ldots,\,[x_{n-1}, x_{n}]    
+    </m>
+   de  <m>[a,b]</m>          e 
+        <m>\Delta x = \frac{b-a}{n}</m>. 
+    Então
+        <md>
+            <mrow>\integrald{f(x)}{a}{b}{x} \amp \approx \frac{\Delta x}{2}\left[f(x_0) + 2f(x_1)+ 2f(x_2) + \dots + 2f(x_{n-1})+ f(x_n)\right] </mrow>
+        </md>
 
-<subsubsection xml:id="subsubsec-Sage">
-    <title>Sage</title>
-    
+    </p>
+</assemblage>
+<example xml:id="ex1">
+    <statement>
+        <p>
+            Use a Regra do Trapézio para calcular <m>\integrald{x^2}{0}{1}{x}</m> usando 4 subintervalos.
+        </p>
+    </statement>
+    <solution>
+        <p>
+           Já que <m>a=0</m>, <m>b=0</m> e <m>n=4</m> temos <m>\Delta x = \frac{1-0}{4}=\frac{1}{4}</m>. 
+            Nesse caso, os subintervalos são 
 
-</subsubsection>
+            <md>
+                <mrow>\left[0, \tfrac{1}{4}\right],\, \left[\tfrac{1}{4},\, \tfrac{1}{2}\right],\, \left[\tfrac{1}{2}, \tfrac{3}{4}\right], \left[\tfrac{3}{4}, 1\right] \amp </mrow>
+            </md>. 
+        Daí, <m>x_0=0, \, x_1=\frac{1}{4}, \, x_2=\frac{1}{2},\, x_3= \frac{3}{4}, \, x_4=1</m>. Portanto, 
+        de acordo com a  <xref ref="assemblage-trapezio" text="title"/>: 
+
+        <md>
+            <mrow>\integrald{x^2}{0}{1}{x} \amp \approx \frac{1}{2}\cdot \frac{1}{4}\left[ f(0) + 2f\left(\tfrac{1}{4}\right) + 2f\left(\tfrac{1}{2}\right) + 2f\left(\tfrac{3}{4}\right)+ f(1)\right]\amp </mrow>
+            <mrow> \amp =\frac{1}{8}\left[0 + 2\cdot \frac{1}{16} + 2\cdot \frac{1}{4} + 2\cdot \frac{9}{16} + 1\right] </mrow>
+            <mrow> \amp = \frac{11}{32} </mrow>
+            <mrow> \amp \approx 0.34375</mrow>
+        </md>
+        <figure xml:id="fig1">
+            <caption></caption>
+            <image source="images/fig1.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+        </figure>
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex2">
+    <statement>
+        <p>
+            Use a Regra do Trapézio para calcular <m>\integrald{\frac{1}{x}}{1}{2}{x}</m> usando cinco subintervalos.
+        </p>
+    </statement>
+    <solution>
+        <p>
+         Já que <m>a=1</m>, <m>b=2</m> e <m>n=5</m>  temos <m>\Delta x = \frac{2-1}{5}=\frac{1}{5}</m>. 
+         Dessa forma, os subintervalos são
+
+         <me>
+             [1, \tfrac{6}{5}], \, [\tfrac{6}{5}, \tfrac{7}{5}], \,  [\tfrac{7}{5}, \tfrac{8}{5}], \, 
+              [\tfrac{8}{5}, \tfrac{9}{5}], \,  [\tfrac{9}{5}, 2].
+         </me>
+        Logo, <m>  x_0=1, \, x_1= \tfrac{6}{5}, \, x_2=\tfrac{7}{5}, x_3=\tfrac{8}{5}, \, x_4=\tfrac{9}{5},\,
+        x_5=2</m>. Portanto, de acordo com a <xref ref="assemblage-trapezio" text="title"/>: 
+
+        <md>
+             <mrow>\integrald{\frac{1}{x}}{1}{2}{x} \amp \approx \frac{1}{2}\cdot \frac{1}{5}\left[ f(1) + 2f\left(\tfrac{6}{5}\right) + 2f\left(\tfrac{7}{5}\right) + 2f\left(\tfrac{8}{5}\right) +  2f\left(\tfrac{9}{5}\right)+ f(2)\right]\amp </mrow>
+               <mrow> \amp =  \frac{1}{10}\left[1 + 2\cdot \frac{5}{6} + 2\cdot\frac{5}{7} + 2 \cdot\frac{5}{8}+ 2\cdot\frac{5}{9} + \frac{1}{2}\right]</mrow>
+                <mrow> \amp \approx 0.695634 </mrow>
+        </md>
+         <figure xml:id="fig2">
+            <caption></caption>
+            <image source="images/fig2.svg" width="50%">
+                <description>(for accessibility)</description>
+            </image>
+        </figure>
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exer1">
+    <statement>
+        <p>
+             Use a Regra do Trapézio para calcular <m>\integrald{e^x}{0}{1}{x}</m> para  <m>n=4</m>. 
+             Compare com o <xref ref="ex1"/>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+           <m> \Delta x=\frac{1}{4}</m> e <m>x_0=0,\, x_1+\frac{1}{4}, \, x_2=\frac{1}{2}, \, x_3=\frac{3}{4},\, x_4 = 1 </m>
+        </p>
+    </hint>
+<answer>
+    <p>
+        <m>\approx 1.727221</m>
+    </p>
+</answer>
+</exercise>
+
+
+<exercise xml:id="exer2">
+    <statement>
+        <p>
+             Use a Regra do Trapézio para calcular <m>\integrald{\frac{1}{x}}{1}{2}{x}</m> usando dois subintervalos. 
+             Compare com o <xref ref="ex2"/>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+           <m> \Delta x=\frac{1}{2}</m> e <m>x_0=1,\, x_1+\frac{3}{2}, \, x_2=2</m>
+        </p>
+    </hint>
+<answer>
+    <p>
+        <m>\approx 0.708333</m>
+    </p>
+</answer>
+</exercise>
+
+
 <subsubsection xml:id="subsubsec-sugestao-video-trapezio">
     <title>Sugestão de vídeo</title>
   
 <ul>
     <li>
         <p>
-          Problema Resolvido:  <url href="https://"> xxxxxxxxxxx.</url>
+          Problema Resolvido:  <url href="https://youtu.be/7_Hk6ipMD-c"> Estimativa para <m>\integrald{\sqrt{x-1}}{1}{6}{x}</m> </url>
         </p>
     </li>
 </ul>    
@@ -167,16 +327,167 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Regra de Simpson</title>
 <introduction>
         <p>
-            introdução
+            Com a regra do ponto médio, estimamos áreas de regiões sob curvas usando retângulos. 
+            Em certo sentido, aproximamos a curva com funções constantes por partes. Com a Regra do trapézio,
+            aproximamos a curva usando funções lineares por partes, em outras palavras, 
+            por polinômios do primeiro grau, em cada subintervalo. Na Regra de Simpson, <m>f</m> é 
+            aproximada em cada subintervalo por um polinômio do segundo grau.
         </p>
-    </introduction>
-<subsubsection xml:id="subsubsec-sugestao-video-simpson">
-    <title>Sugestão de vídeo</title>
-    <introduction>
+
         <p>
-            introdução
+            Para deduzir a Regra de Simpson, divida o intervalo <m>[a, b]</m> em um número par
+<m>n</m> de subintervalos, cada um de largura <me>  \Delta x =\frac{b-a}{n}.</me> Em <m>[x_0, x_1</m> aproximamos
+a função <m>f</m> pelo polinômio de grau dois <m>p(x)= Ax^2+ Bx + C</m> que passa pelos pontos 
+<me>(x_0, f(x_0), \, (x_1, f(y_1)), (x_2, f(x_2)), </me> no qual 
+
+<md>
+    <mrow>f(x_0)=  p(x_0)  = Ax_0^2 + Bx_0 + C </mrow>
+     <mrow>f(x_1) =  p(x_1) = Ax_1^2 + Bx_1 + C </mrow>
+     <mrow>f(x_2) =  p(x_2) = Ax_2^2 + Bx_2 + C </mrow>.
+</md>
+Além disso,
+<me>
+    x_2 - x_0 = 2\Delta x
+</me>
+
+e 
+<me>
+    x_2 + x_0 = 2x_1,
+</me>
+já que <m>x_1=\frac{x_2+x_0}{2}</m>. Pelo Teorema Fundamenta do Cálculo
+
+<md>
+    <mrow> \integrald{f(x)}{x_0}{x_2}{x}\amp \approx \integrald{p(x)}{x_0}{x_2}{x} </mrow>
+    <mrow> \amp = \left(\frac{A}{3}x^3 + \frac{B}{2}x^2+ Cx\right) \biggr\rvert_{x_0}^{x_2} </mrow>
+    <mrow> \amp = \frac{A}{3}(x_2^3-x_0^3) + \frac{B}{2}(x_2^2-x_0^2) + C (x_2-x_0)</mrow>
+    <mrow> \amp= \frac{x_2-x_0}{6}\left(2A(x_2^2+ x_2x_0+ x_0^2) + 3B(x_2+x_0) + 6C\right) </mrow>
+    <mrow> \amp = \frac{\Delta x}{3}\left((Ax_2^2 + Bx_2^2+ C) +  (Ax_0^2 + Bx_0^2+ C)+ A(x_2^2+ 2x_2x_0+x_0^2 + 2B(x_2+x_0) + 4C\right)</mrow>
+     <mrow> \amp =  \frac{\Delta x}{3}\left(f(x_2) + f(x_0) + A(2x_1)^2 + 2B(2x_1) + 4C\right)</mrow>
+    <mrow> \amp = \frac{\Delta x}{3}\left( f(x_0) + 4f(x_1) + f(x_2)\right) </mrow>
+</md>
+
+A repetição desse processo nos subintervalos <m>[x_{i-2}, x_i]</m> fornece
+<md>
+    <mrow>\integrald{f(x)}{a}{b}{x} \amp \approx \frac{\Delta x}{3}\left[f(x_0) + 4f(x_1)+ 2f(x_2) + 4f(x_3) + 2f(x_4) + \ldots       + 4f(x_{n-1})+f(x_n)\right] .</mrow>
+</md>
         </p>
+    <note> Caso o número de subintervalos seja ímpar os coeficientes da expressão da Regra De Simpson 
+    obedecem a seguinte regra: <m>f(x_0)</m> e <m>f(x_n)</m> ocorrem com coeficiente 1; os <m>f(x_i)</m> aparecem com coeficiente 2 
+    se <m>i</m> é par e coeficiente 4 se <m>i</m> é ímpar. </note>
     </introduction>
+
+
+<assemblage xml:id="assemblage-simpson">
+    <title>Regra de Simpson</title>
+    <p>
+        Assuma que <m>f</m> contínua em <m>[a,b]</m>. Seja <m>n</m> o número de subintervalos 
+    <m>
+        [x_0, x_1], \, [x_1,x_2], \, \ldots,\,[x_{n-1}, x_{n}]    
+    </m>
+   de  <m>[a,b]</m>          e 
+        <m>\Delta x = \frac{b-a}{n}</m>.  Então
+
+        <md>
+            <mrow>\integrald{f(x)}{a}{b}{x} \amp \approx \frac{\Delta x}{3}\left[f(x_0) + 4f(x_1)+ 2f(x_2) + 4f(x_3) + 2f(x_4) + \cdots\right.  </mrow>
+            <mrow> \amp +  \left. 4f(x_{n-1})+f(x_n)\right] </mrow>
+        </md>
+    </p>
+</assemblage>
+
+<example xml:id="ex3">
+    <statement>
+        <p>
+            Use a Regra de Simpson para aproximar <m>\integrald{x^2}{0}{1}{x}</m> usando quatro subintervalos.
+        </p>
+    </statement>
+    <solution>
+        <p>
+             Do <xref ref="ex1"/> temos que  <m>x_0=0, \, x_1=\frac{1}{4}, \, x_2=\frac{1}{2},\, x_3= \frac{3}{4}, \, x_4=1</m>. Portanto, 
+        de acordo com a  <xref ref="assemblage-simpson" text="title"/>: 
+
+        <md>
+            <mrow>\integrald{x^2}{0}{1}{x} \amp \approx \frac{1}{3}\cdot \frac{1}{4}\left[ f(0) + 4f\left(\tfrac{1}{4}\right) + 2f\left(\tfrac{1}{2}\right) + 4f\left(\tfrac{3}{4}\right)+ f(1)\right]\amp </mrow>
+            <mrow> \amp =\frac{1}{12}\left[0 + 4\cdot \frac{1}{16} + 2\cdot \frac{1}{4} + 4\cdot \frac{9}{16} + 1\right] </mrow>
+            <mrow> \amp = \frac{1}{3} </mrow>
+            <mrow> \amp \approx 0.333333 </mrow>
+        </md>
+        
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex4">
+    <statement>
+        <p>
+             Use a Regra de Simpson para calcular <m>\integrald{\frac{1}{x}}{1}{2}{x}</m> usando cinco subintervalos.
+        </p>
+    </statement>
+    <solution>
+        <p>
+             
+             Do <xref ref="ex2"/> <m>  temos que x_0=1, \, x_1= \tfrac{6}{5}, \, x_2=\tfrac{7}{5}, x_3=\tfrac{8}{5}, \, x_4=\tfrac{9}{5},\,
+        x_5=2</m>. Portanto, de acordo com a <xref ref="assemblage-simpson" text="title"/>:  
+
+         <md>
+            <mrow>\integrald{\frac{1}{x}}{1}{2}{x} \amp \approx \frac{1}{3}\cdot \frac{1}{5}\left[ f(1) + 4f\left(\tfrac{6}{5}\right) + 2f\left(\tfrac{7}{5}\right) + 4f\left(\tfrac{8}{5}\right) +  4f\left(\tfrac{9}{5}\right)+ f(2)\right]\amp </mrow>
+            <mrow> \amp =  \frac{1}{15}\left[1 + 4\cdot \frac{5}{6} + 2\cdot\frac{5}{7} + 4 \cdot\frac{5}{8}+ 2\cdot\frac{5}{9} + \frac{1}{2}\right]</mrow>
+            <mrow> \amp \approx 0.658201 </mrow>
+        </md>
+        
+
+        </p>
+    </solution>
+</example>
+
+
+<exercise>
+    <statement>
+        <p>
+             Use a Regra de Simpson para calcular <m>\integrald{e^x}{0}{1}{x}</m> para  <m>n=4</m>. 
+             Compare com a <xref ref="exer1"/>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+           depois
+        </p>
+    </hint>
+<answer>
+    <p>
+        <m> \approx 1.718282</m>
+    </p>
+</answer>
+</exercise>
+
+
+<exercise>
+    <statement>
+        <p>
+             Use a Regra de Simpson para calcular <m>\integrald{\frac{1}{x}}{1}{2}{x}</m> usando 2 subintervalos. 
+             Compare com a <xref ref="exer2"/>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+           Os coeficientes são <m>1,\,4 e 1</m>.
+        </p>
+    </hint>
+<answer>
+    <p>
+      <m> \pprox 0.694444</m>
+    </p>
+</answer>
+</exercise>
+
+<paragraphs>
+    <title>Acurácia</title>
+    Comparando o resultados obtidos usando a Regra do Trapézio (<xref ref="ex2"/>) e a
+     Regra de Simpson (<xref ref="ex4"/>)  notamos que a segunda fornece uma melhor 
+     aproximação para o valor real da integral (<m>\ln(2)\approx 0.693147</m>).
+</paragraphs>
+<!-- <subsubsection xml:id="subsubsec-sugestao-video-simpson">
+    <title>Sugestão de vídeo</title>
+
 <ul>
     <li>
         <p>
@@ -184,11 +495,58 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
     </li>
 </ul>    
-</subsubsection>
+</subsubsection> -->
 </subsection>
 
- <exercises xml:id="exercises-soma-rieamann">
-     
+<!-- <subsection xml:id="subsec-Erro">
+    <title>Erro</title>
+
+<assemblage xml:id="assemblage-erro">
+    <title>Erros na Regra do Trapézio e na Regra de Simpson</title>
+    <p>
+       Assuma que <m>f</m> seja contínua <m>[a,b]</m> e possua segunda derivada <m>f^{\prime\prime}</m>  nesse intervalo.
+    </p>
+</assemblage>
+</subsection> -->
+ <exercises xml:id="exercises-regras">
+
+<exercise>
+    <statement>
+        <p>
+             Use a Regra do Trapézio para aproximar <m>\integrald{\frac{1}{1+ x^4}}{0}{2}{x}</m> usando <m>n=4</m> .
+        </p>
+    </statement>
+    <answer>
+        <p>
+            <m>\approx 1.067768</m>
+        </p>
+    </answer>
+</exercise>
+
+ <exercise>
+     <statement>
+         <p>
+             Use a Regra de Simpson para aproximar <m>\integrald{\frac{1}{1+ x^4}}{0}{2}{x}</m> usando <m>n=4</m> .
+         </p>
+     </statement>
+     <answer>
+         <p>
+            <m> \approx 1,080553 </m>
+         </p>
+     </answer>
+     <solution>
+         <p>
+             Para <m>n=4</m>, <m>a=0</m> e <m>b=2</m> temos <m>x_0=0, \, x_1=\tfrac{1}{2}, \, x_2=1,\, x_3=\tfrac{3}{2},\, x_4=2</m>.
+             Logo, pela <xref ref="assemblage-simpson" text="title"/>:
+
+             <md>
+                 <mrow>\integrald{\frac{1}{1+ x^4}}{0}{2}{x} \approx \amp \frac{1}{6}\left[f(0) + 4 f(\tfrac{1}{2}) + 2f(1) + 4f(\tfrac{3}{2}) + f(2)\right]</mrow>
+                 <mrow> \amp \approx \frac{1}{6}\left[1 + 4\cdot \frac{16}{17} + 2\cdot\frac{1}{2} + 4\cdt\frac{16}{97} + \frac{1}{17}\right]</mrow>
+                 <mrow> \amp \approx 1,080553 </mrow>
+             </md>
+         </p>
+     </solution>
+ </exercise>
  </exercises>
 
 
@@ -196,9 +554,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <references xml:id="references-backmatter">
     <title>Referências</title>   
     <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
-    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
-    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
     <biblio type="raw" xml:id="biblio-04">Stewart, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    
+    <biblio type="raw" xml:id="biblio-06">Pamini Thangarajah. <title>Calculus for Scientists II.</title> <journal>Mount Royal University</journal>, 2020.</biblio>    
+
     <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
 Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
 </references>

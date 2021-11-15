@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-28T23:24:10-03:00       *-->
+<!--*       on 2021-11-14T21:58:15-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,29 @@
 <title>Integral aproximada</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
@@ -56,7 +49,7 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-article has-toc has-sidebar-left">
+<body class="pretext-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
 \newcommand{ctm}[1]{\color{gray}{#1}}
 
@@ -115,11 +108,11 @@ true);
 <a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Integral aproximada</span></a><ul>
 <li><a href="section-1.html#subsec-notacao-sigma" data-scroll="subsec-notacao-sigma">Regra do Trapézio</a></li>
 <li><a href="section-1.html#subsec-notacao-sigma2" data-scroll="subsec-notacao-sigma2">Regra de Simpson</a></li>
-<li><a href="section-1.html#exercises-soma-rieamann" data-scroll="exercises-soma-rieamann">Exercícios</a></li>
+<li><a href="section-1.html#exercises-regras" data-scroll="exercises-regras">Exercícios</a></li>
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
 <span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Integral aproximada</span>
@@ -128,26 +121,243 @@ true);
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h6>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">xxxxxxxx.</p></li>
-<li id="li-2"><p id="p-4">xxxxxxxxxxxxx.</p></li>
-</ol></article><section class="subsection" id="subsec-notacao-sigma"><h3 class="heading hide-type">
+<li id="li-1"><p id="p-3">Calcular integral aproximada usando a Regra do Trapézio</p></li>
+<li id="li-2"><p id="p-4">Calcular integral aproximada usando a Regra de Simpson</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-5">Em muitas aplicações de cálculo precisamos calcular uma integral definida. De fato, nem todas as funções que são integráveis tem suas primitivas conhecidas, impossibilitando a aplicação do  Teorema Fundamental do Cálculo. Diante disto, métodos numéricos podem ser uma alternativa viável. Lembre-se que a integral definida \(\int_a^b f(x)\, \dd x  \) é definida como um limite das somas de Riemann; assim, qualquer soma de Riemann pode ser usada como uma aproximação à integral. Já conhecemos a soma de Riemann do ponto médio, no qual a altura do retângulo é dada por \(f(\tfrac{x_{n-1}+ x_n}{2})\text{.}\) Aqui apresentaremos duas técnicas baseadas também na Soma de Riemann mas com outros critérios para aproximar o valor da integral.</p></section><section class="subsection" id="subsec-notacao-sigma"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Regra do Trapézio</span>
 </h3>
-<section class="introduction" id="introduction-2"><p id="p-5">introdução</p></section><section class="subsubsection" id="subsubsec-Sage"><h4 class="heading hide-type">
-<span class="type">Subsubseção</span> <span class="codenumber">1.1.1</span> <span class="title">Sage</span>
+<section class="introduction" id="introduction-3"><p id="p-6">Podemos aproximar o valor de uma integral definida usando trapézio em vez de retângulos. Na <a href="" class="xref" data-knowl="./knowl/fig0.html" title="Figura 1.2">Figura 1.2</a>, a área abaixo do gráfico de $y=f(x)$ é aproximada por trapézios. A tecnica para obter tais aproximações é chamada de Regra do Trapézio. Para desenvolvê-la, considere uma função não negativa e contínua no intervalo \([a, b]\text{.}\) Divida o intervalo em \(n\) subintervalos, cada um de largura</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta x =\frac{b-a}{n}.
+\end{equation*}
+</div>
+<p class="continuation">De acordo com a <a href="" class="xref" data-knowl="./knowl/fig0.html" title="Figura 1.2">Figura 1.2</a> podemos formar \(n\) trapézios. Note que o primeiro trapézio tem área igual a</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2}\right].
+\end{equation*}
+</div>
+<p class="continuation">Seguindo o mesmo raciocínio como os outros trapezios temos que a área das \(n\) área é</p>
+<div class="displaymath">
+\begin{align*}
+\amp\left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2} + \frac{f(x_1)+f(x_1)}{2} + \ldots + \frac{f(x_{n-1})+f(x_{n})}{2}\right] \\
+\amp = \left( \frac{b-a}{2n}\right)\left[f(x_0)+ f(x_1) + f(x_1)+ + f(x_2)\ldots f(x_{n-1} + f(x_{n-1}+ f(x_n)\right] \\
+\amp = \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]
+\end{align*}
+</div>
+<p class="continuation">Dessa forma, o valor da integral definida usando a Regra do Trapézio é obtido por</p>
+<div class="displaymath">
+\begin{equation*}
+\integrald{f(x)}{a}{b}{x}\approx \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]
+\end{equation*}
+</div>
+<p class="continuation"><article class="note remark-like" id="note-1"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h6>Embora essa dedução pressuponha que \(f\)  seja contínua e não negativa em \([a, b]\text{,}\) a fórmula resultante é valida sempre que \(f\) for contínua em \([a, b]\text{.}\)</article> <figure class="figure figure-like" id="fig0"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/fig0.svg" class="contained" alt="(for accessibility)"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span>Trapézios usados ​​para aproximar a área sob o gráfico de \(y=f(x)\text{,}\) aproximando assim a integral definida.</figcaption></figure></p></section><article class="assemblage assemblage-like" id="assemblage-trapezio"><h6 class="heading"><span class="title">Regra do Trapézio.</span></h6>
+<p id="p-7">Assuma que \(f\) contínua em \([a,b]\text{.}\) Seja \(n\) o número de subintervalos \([x_0, x_1], \, [x_1,x_2], \, \ldots,\,[x_{n-1}, x_{n}]    \) de  \([a,b]\)          e \(\Delta x = \frac{b-a}{n}\text{.}\) Então</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{f(x)}{a}{b}{x} \amp \approx \frac{\Delta x}{2}\left[f(x_0) + 2f(x_1)+ 2f(x_2) + \dots + 2f(x_{n-1})+ f(x_n)\right] 
+\end{align*}
+</div></article><article class="example example-like" id="ex1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex1"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1"><article class="example example-like"><p id="p-8">Use a Regra do Trapézio para calcular \(\integrald{x^2}{0}{1}{x}\) usando 4 subintervalos.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-9">Já que \(a=0\text{,}\) \(b=0\) e \(n=4\) temos \(\Delta x = \frac{1-0}{4}=\frac{1}{4}\text{.}\) Nesse caso, os subintervalos são</p>
+<div class="displaymath">
+\begin{align*}
+\left[0, \tfrac{1}{4}\right],\, \left[\tfrac{1}{4},\, \tfrac{1}{2}\right],\, \left[\tfrac{1}{2}, \tfrac{3}{4}\right], \left[\tfrac{3}{4}, 1\right] \amp \text{.}
+\end{align*}
+</div>
+<p class="continuation">Daí, \(x_0=0, \, x_1=\frac{1}{4}, \, x_2=\frac{1}{2},\, x_3= \frac{3}{4}, \, x_4=1\text{.}\) Portanto, de acordo com a  <a href="" class="xref" data-knowl="./knowl/assemblage-trapezio.html" title="[assemblage]: Regra do Trapézio">Regra do Trapézio</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{x^2}{0}{1}{x} \amp \approx \frac{1}{2}\cdot \frac{1}{4}\left[ f(0) + 2f\left(\tfrac{1}{4}\right) + 2f\left(\tfrac{1}{2}\right) + 2f\left(\tfrac{3}{4}\right)+ f(1)\right]\amp \\
+\amp =\frac{1}{8}\left[0 + 2\cdot \frac{1}{16} + 2\cdot \frac{1}{4} + 2\cdot \frac{9}{16} + 1\right] \\
+\amp = \frac{11}{32} \\
+\amp \approx 0.34375
+\end{align*}
+</div>
+<p class="continuation"><figure class="figure figure-like" id="fig1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/fig1.svg" class="contained" alt="(for accessibility)"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex2"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2"><article class="example example-like"><p id="p-10">Use a Regra do Trapézio para calcular \(\integrald{\frac{1}{x}}{1}{2}{x}\) usando cinco subintervalos.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-11">Já que \(a=1\text{,}\) \(b=2\) e \(n=5\)  temos \(\Delta x = \frac{2-1}{5}=\frac{1}{5}\text{.}\) Dessa forma, os subintervalos são</p>
+<div class="displaymath">
+\begin{equation*}
+[1, \tfrac{6}{5}], \, [\tfrac{6}{5}, \tfrac{7}{5}], \,  [\tfrac{7}{5}, \tfrac{8}{5}], \, 
+[\tfrac{8}{5}, \tfrac{9}{5}], \,  [\tfrac{9}{5}, 2].
+\end{equation*}
+</div>
+<p class="continuation">Logo, \(x_0=1, \, x_1= \tfrac{6}{5}, \, x_2=\tfrac{7}{5}, x_3=\tfrac{8}{5}, \, x_4=\tfrac{9}{5},\,
+x_5=2\text{.}\) Portanto, de acordo com a <a href="" class="xref" data-knowl="./knowl/assemblage-trapezio.html" title="[assemblage]: Regra do Trapézio">Regra do Trapézio</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\frac{1}{x}}{1}{2}{x} \amp \approx \frac{1}{2}\cdot \frac{1}{5}\left[ f(1) + 2f\left(\tfrac{6}{5}\right) + 2f\left(\tfrac{7}{5}\right) + 2f\left(\tfrac{8}{5}\right) +  2f\left(\tfrac{9}{5}\right)+ f(2)\right]\amp \\
+\amp =  \frac{1}{10}\left[1 + 2\cdot \frac{5}{6} + 2\cdot\frac{5}{7} + 2 \cdot\frac{5}{8}+ 2\cdot\frac{5}{9} + \frac{1}{2}\right]\\
+\amp \approx 0.695634 
+\end{align*}
+</div>
+<p class="continuation"><figure class="figure figure-like" id="fig2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/fig2.svg" class="contained" alt="(for accessibility)"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer1"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer1"><article class="exercise exercise-like"><p id="p-12">Use a Regra do Trapézio para calcular \(\integrald{e^x}{0}{1}{x}\) para  \(n=4\text{.}\) Compare com o <a href="" class="xref" data-knowl="./knowl/ex1.html" title="Exemplo 1.3">Exemplo 1.3</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-13">\(\Delta x=\frac{1}{4}\) e \(x_0=0,\, x_1+\frac{1}{4}, \, x_2=\frac{1}{2}, \, x_3=\frac{3}{4},\, x_4 = 1 \)</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-14">\(\approx 1.727221\)</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer2"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer2"><article class="exercise exercise-like"><p id="p-15">Use a Regra do Trapézio para calcular \(\integrald{\frac{1}{x}}{1}{2}{x}\) usando dois subintervalos. Compare com o <a href="" class="xref" data-knowl="./knowl/ex2.html" title="Exemplo 1.5">Exemplo 1.5</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-16">\(\Delta x=\frac{1}{2}\) e \(x_0=1,\, x_1+\frac{3}{2}, \, x_2=2\)</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-17">\(\approx 0.708333\)</p></div></div>
+</div></article></div>
+<section class="subsubsection" id="subsubsec-sugestao-video-trapezio"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.1.1</span> <span class="title">Sugestão de vídeo</span>
 </h4>
-<figure class="figure figure-like" id="figure-interactive-numerical-integral"><iframe id="interactive-numerical-integral" width="600" height="720" src="interactive-numerical-integral-if.html"></iframe><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span>Curvas integrais e campos de direções</figcaption></figure></section><section class="subsubsection" id="subsubsec-sugestao-video-trapezio"><h4 class="heading hide-type">
-<span class="type">Subsubseção</span> <span class="codenumber">1.1.2</span> <span class="title">Sugestão de vídeo</span>
-</h4>
-<ul class="disc"><li id="li-3"><p id="p-6">Problema Resolvido:  <a class="external" href="https://" target="_blank">xxxxxxxxxxx.</a></p></li></ul></section></section><section class="subsection" id="subsec-notacao-sigma2"><h3 class="heading hide-type">
+<ul class="disc"><li id="li-3"><p id="p-18">Problema Resolvido:  <a class="external" href="https://youtu.be/7_Hk6ipMD-c" target="_blank">Estimativa para \(\integrald{\sqrt{x-1}}{1}{6}{x}\)</a></p></li></ul></section></section><section class="subsection" id="subsec-notacao-sigma2"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Regra de Simpson</span>
 </h3>
-<section class="introduction" id="introduction-3"><p id="p-7">introdução</p></section><section class="subsubsection" id="subsubsec-sugestao-video-simpson"><h4 class="heading hide-type">
-<span class="type">Subsubseção</span> <span class="codenumber">1.2.1</span> <span class="title">Sugestão de vídeo</span>
-</h4>
-<section class="introduction" id="introduction-4"><p id="p-8">introdução</p></section><ul class="disc"><li id="li-4"><p id="p-9">Problema Resolvido:  <a class="external" href="https://" target="_blank">xxxxxx.</a></p></li></ul></section></section><section class="exercises" id="exercises-soma-rieamann"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-4"><p id="p-19">Com a regra do ponto médio, estimamos áreas de regiões sob curvas usando retângulos. Em certo sentido, aproximamos a curva com funções constantes por partes. Com a Regra do trapézio, aproximamos a curva usando funções lineares por partes, em outras palavras, por polinômios do primeiro grau, em cada subintervalo. Na Regra de Simpson, \(f\) é aproximada em cada subintervalo por um polinômio do segundo grau.</p>
+<p id="p-20">Para deduzir a Regra de Simpson, divida o intervalo \([a, b]\) em um número par \(n\) de subintervalos, cada um de largura</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta x =\frac{b-a}{n}.
+\end{equation*}
+</div>
+<p class="continuation">Em \([x_0, x_1\) aproximamos a função \(f\) pelo polinômio de grau dois \(p(x)= Ax^2+ Bx + C\) que passa pelos pontos</p>
+<div class="displaymath">
+\begin{equation*}
+(x_0, f(x_0), \, (x_1, f(y_1)), (x_2, f(x_2)), 
+\end{equation*}
+</div>
+<p class="continuation">no qual</p>
+<div class="displaymath">
+\begin{gather*}
+f(x_0)=  p(x_0)  = Ax_0^2 + Bx_0 + C \\
+f(x_1) =  p(x_1) = Ax_1^2 + Bx_1 + C \\
+f(x_2) =  p(x_2) = Ax_2^2 + Bx_2 + C 
+\end{gather*}
+</div>
+<p class="continuation">Além disso,</p>
+<div class="displaymath">
+\begin{equation*}
+x_2 - x_0 = 2\Delta x
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath">
+\begin{equation*}
+x_2 + x_0 = 2x_1,
+\end{equation*}
+</div>
+<p class="continuation">já que \(x_1=\frac{x_2+x_0}{2}\text{.}\) Pelo Teorema Fundamenta do Cálculo</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{f(x)}{x_0}{x_2}{x}\amp \approx \integrald{p(x)}{x_0}{x_2}{x} \\
+\amp = \left(\frac{A}{3}x^3 + \frac{B}{2}x^2+ Cx\right) \biggr\rvert_{x_0}^{x_2} \\
+\amp = \frac{A}{3}(x_2^3-x_0^3) + \frac{B}{2}(x_2^2-x_0^2) + C (x_2-x_0)\\
+\amp= \frac{x_2-x_0}{6}\left(2A(x_2^2+ x_2x_0+ x_0^2) + 3B(x_2+x_0) + 6C\right) \\
+\amp = \frac{\Delta x}{3}\left((Ax_2^2 + Bx_2^2+ C) +  (Ax_0^2 + Bx_0^2+ C)+ A(x_2^2+ 2x_2x_0+x_0^2 + 2B(x_2+x_0) + 4C\right)\\
+\amp =  \frac{\Delta x}{3}\left(f(x_2) + f(x_0) + A(2x_1)^2 + 2B(2x_1) + 4C\right)\\
+\amp = \frac{\Delta x}{3}\left( f(x_0) + 4f(x_1) + f(x_2)\right) 
+\end{align*}
+</div>
+<p class="continuation">A repetição desse processo nos subintervalos \([x_{i-2}, x_i]\) fornece</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{f(x)}{a}{b}{x} \amp \approx \frac{\Delta x}{3}\left[f(x_0) + 4f(x_1)+ 2f(x_2) + 4f(x_3) + 2f(x_4) + \ldots       + 4f(x_{n-1})+f(x_n)\right] .
+\end{align*}
+</div>
+<article class="note remark-like" id="note-2"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h6>Caso o número de subintervalos seja ímpar os coeficientes da expressão da Regra De Simpson obedecem a seguinte regra: \(f(x_0)\) e \(f(x_n)\) ocorrem com coeficiente 1; os \(f(x_i)\) aparecem com coeficiente 2 se \(i\) é par e coeficiente 4 se \(i\) é ímpar.</article></section><article class="assemblage assemblage-like" id="assemblage-simpson"><h6 class="heading"><span class="title">Regra de Simpson.</span></h6>
+<p id="p-21">Assuma que \(f\) contínua em \([a,b]\text{.}\) Seja \(n\) o número de subintervalos \([x_0, x_1], \, [x_1,x_2], \, \ldots,\,[x_{n-1}, x_{n}]    \) de  \([a,b]\)          e \(\Delta x = \frac{b-a}{n}\text{.}\)  Então</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{f(x)}{a}{b}{x} \amp \approx \frac{\Delta x}{3}\left[f(x_0) + 4f(x_1)+ 2f(x_2) + 4f(x_3) + 2f(x_4) + \cdots\right.  \\
+\amp +  \left. 4f(x_{n-1})+f(x_n)\right] 
+\end{align*}
+</div></article><article class="example example-like" id="ex3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex3"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex3"><article class="example example-like"><p id="p-22">Use a Regra de Simpson para aproximar \(\integrald{x^2}{0}{1}{x}\) usando quatro subintervalos.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-23">Do <a href="" class="xref" data-knowl="./knowl/ex1.html" title="Exemplo 1.3">Exemplo 1.3</a> temos que  \(x_0=0, \, x_1=\frac{1}{4}, \, x_2=\frac{1}{2},\, x_3= \frac{3}{4}, \, x_4=1\text{.}\) Portanto, de acordo com a  <a href="" class="xref" data-knowl="./knowl/assemblage-simpson.html" title="[assemblage]: Regra de Simpson">Regra de Simpson</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{x^2}{0}{1}{x} \amp \approx \frac{1}{3}\cdot \frac{1}{4}\left[ f(0) + 4f\left(\tfrac{1}{4}\right) + 2f\left(\tfrac{1}{2}\right) + 4f\left(\tfrac{3}{4}\right)+ f(1)\right]\amp \\
+\amp =\frac{1}{12}\left[0 + 4\cdot \frac{1}{16} + 2\cdot \frac{1}{4} + 4\cdot \frac{9}{16} + 1\right] \\
+\amp = \frac{1}{3} \\
+\amp \approx 0.333333 
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex4"><h6 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex4"><article class="example example-like"><p id="p-24">Use a Regra de Simpson para calcular \(\integrald{\frac{1}{x}}{1}{2}{x}\) usando cinco subintervalos.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-25">Do <a href="" class="xref" data-knowl="./knowl/ex2.html" title="Exemplo 1.5">Exemplo 1.5</a> \(temos que x_0=1, \, x_1= \tfrac{6}{5}, \, x_2=\tfrac{7}{5}, x_3=\tfrac{8}{5}, \, x_4=\tfrac{9}{5},\,
+x_5=2\text{.}\) Portanto, de acordo com a <a href="" class="xref" data-knowl="./knowl/assemblage-simpson.html" title="[assemblage]: Regra de Simpson">Regra de Simpson</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\frac{1}{x}}{1}{2}{x} \amp \approx \frac{1}{3}\cdot \frac{1}{5}\left[ f(1) + 4f\left(\tfrac{6}{5}\right) + 2f\left(\tfrac{7}{5}\right) + 4f\left(\tfrac{8}{5}\right) +  4f\left(\tfrac{9}{5}\right)+ f(2)\right]\amp \\
+\amp =  \frac{1}{15}\left[1 + 4\cdot \frac{5}{6} + 2\cdot\frac{5}{7} + 4 \cdot\frac{5}{8}+ 2\cdot\frac{5}{9} + \frac{1}{2}\right]\\
+\amp \approx 0.658201 
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-26">Use a Regra de Simpson para calcular \(\integrald{e^x}{0}{1}{x}\) para  \(n=4\text{.}\) Compare com a <a href="" class="xref" data-knowl="./knowl/exer1.html" title="Autoavaliação 1.7">Autoavaliação 1.7</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-27">depois</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-28">\(\approx 1.718282\)</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h6 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-29">Use a Regra de Simpson para calcular \(\integrald{\frac{1}{x}}{1}{2}{x}\) usando 2 subintervalos. Compare com a <a href="" class="xref" data-knowl="./knowl/exer2.html" title="Autoavaliação 1.8">Autoavaliação 1.8</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-30">Os coeficientes são \(1,\,4 e 1\text{.}\)</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-31">\(\pprox 0.694444\)</p></div></div>
+</div></article></div>
+<section class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Acurácia.</span></h5> Comparando o resultados obtidos usando a Regra do Trapézio (<a href="" class="xref" data-knowl="./knowl/ex2.html" title="Exemplo 1.5">Exemplo 1.5</a>) e a Regra de Simpson (<a href="" class="xref" data-knowl="./knowl/ex4.html" title="Exemplo 1.11">Exemplo 1.11</a>)  notamos que a segunda fornece uma melhor aproximação para o valor real da integral (\(\ln(2)\approx 0.693147\)).</section></section><section class="exercises" id="exercises-regras"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
-</h3></section></section></div></main>
+</h3>
+<article class="exercise exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-32">Use a Regra do Trapézio para aproximar \(\integrald{\frac{1}{1+ x^4}}{0}{2}{x}\) usando \(n=4\) .</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-33">\(\approx 1.067768\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-34">Use a Regra de Simpson para aproximar \(\integrald{\frac{1}{1+ x^4}}{0}{2}{x}\) usando \(n=4\) .</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-35">\(\approx 1,080553 \)</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-36">Para \(n=4\text{,}\) \(a=0\) e \(b=2\) temos \(x_0=0, \, x_1=\tfrac{1}{2}, \, x_2=1,\, x_3=\tfrac{3}{2},\, x_4=2\text{.}\) Logo, pela <a href="" class="xref" data-knowl="./knowl/assemblage-simpson.html" title="[assemblage]: Regra de Simpson">Regra de Simpson</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\integrald{\frac{1}{1+ x^4}}{0}{2}{x} \approx \amp \frac{1}{6}\left[f(0) + 4 f(\tfrac{1}{2}) + 2f(1) + 4f(\tfrac{3}{2}) + f(2)\right]\\
+\amp \approx \frac{1}{6}\left[1 + 4\cdot \frac{16}{17} + 2\cdot\frac{1}{2} + 4\cdt\frac{16}{97} + \frac{1}{17}\right]\\
+\amp \approx 1,080553 
+\end{align*}
+</div>
+</div></div>
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>

@@ -399,9 +399,9 @@ Mais geralmente, considere <m>f</m> uma função definida um intervalo <m>[a,b]<
    
 que dividem o intervalo <m>[a,b]</m>  em <m>n</m> subintervalos 
 
-<md>
-    <mrow> \amp [x_0, x_1], \, [x_1,x_2], \, \ldots,\,[x_{n-1}-x_{n}]</mrow>
-</md>
+<me>
+   [x_0, x_1], \, [x_1,x_2], \, \ldots,\,[x_{n-1}, x_{n}]
+</me>
 cujos comprimentos valem 
 <md>
     <mrow> \Delta x_1 = \amp \,x_1-x_0 </mrow>
