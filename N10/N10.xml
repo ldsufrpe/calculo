@@ -161,15 +161,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                        \integrald{\frac{1}{x^2}}{1}{\infty}{x}.
                    </me>
                    
-                Outro caso de minteresse  é quando  <m>f</m> tende ao infinito em algum valor do intervalo se integração, como é o caso a seguir
+                Outro caso de interesse  é quando  <m>f</m> tende ao infinito em algum valor do intervalo se integração, como é o caso a seguir
                
                <me>
                    \integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}.
                </me>
                
         As integrais que possuem uma dessas características são chamadas  <term> integrais impróprias</term>. 
-        Entre outras utilidades, as integrais impróprias permite determinar se uma região infinita que está sob a curva
-        <m>\frac{1}{x^2}</m>, como ilustado na <xref ref="fig-intro-impropria-sageplot"/>, possui ou não área infinita.          
+        Entre outras utilidades, as integrais impróprias permitem determinar se uma região infinita que está sob a curva
+        <m>\frac{1}{x^2}</m>, como ilustrado na <xref ref="fig-intro-impropria-sageplot"/>, possui ou não área infinita.          
             
 
     <figure xml:id="fig-intro-impropria-sageplot">
@@ -654,7 +654,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <li xml:id="assemblage-impropria-5">
             <p>
                   Se <m>f</m> for contínua no intervalo <m>[a,b]</m>, exceto para algum <m>c</m> 
-       em <m>(a,b)</m> no qual <m>f</m> tende a infnito, então
+       em <m>(a,b)</m> no qual <m>f</m> tende a infinito, então
 
        <me>
            \integrald{f(x)}{a}{b}{x}=\integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x}.
