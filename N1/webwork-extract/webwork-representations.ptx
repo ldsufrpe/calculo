@@ -405,7 +405,7 @@ Seja <m>F(t)</m> a primitiva de <m>f(t)</m> com <m>F(0) = 0</m>.</p>
         </p>
       </answer>
       <solution><p>Para resolver este problema, você precisa lembrar que a derivada de
-<m>\rm{tg(t)}</m> é <m>\sec^2(t)</m>.  Não é difícil derivar isso usando a identidade <m>\rm{tg}(t) = \frac{\rm{sen(t)}}{\cos(t)}</m> e a regra de cocientes para derivadas.</p>
+<m>\rm{tg(t)}</m> é <m>\sec^2(t)</m>.  Não é difícil derivar isso usando a identidade <m>\rm{tg}(t) = \frac{\rm{sen(t)}}{\cos(t)}</m> e a regra do quociente para derivadas.</p>
 <p>Com isso em mente, encontre a primitiva geral de  <m>f(t) =  9\sec^2(t)-{4}t^2</m> que será <m>F(t) = 9\rm{tg(t)} - \frac{ {4}t^3 }{ 3} + 
 C</m>. Agora usando o fato de <m>F(0) = 0</m> e que <m>\rm{tg}(0) = 0</m>, devemos ter <m>C = 0</m>.</p>
 <p>Portanto, pondo 1.5 nesta expressão, obtemos:</p>
