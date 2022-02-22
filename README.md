@@ -20,11 +20,11 @@ por Leon Silva e Deibsom Silva
 
 
 ### Cálculo Diferencial em 10 Semanas
-- [N1 - O Limite de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
-- [N2 - Propriedades dos Limites](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [N1 - O Limite de uma Função](https://ldsufrpe.github.io/calculon1/N1). 
+- [N2 - Propriedades dos Limites](https://ldsufrpe.github.io/calculon1/N2). 
 - [N3 - Continuidade e Propriedades das Funções Contínuas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [N4 - Limites Infinitos e Limites no Infinito](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
-- [N5 - A Derivada de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [N5 - A Derivada de uma Função](https://ldsufrpe.github.io/calculon1/N5). (*Em construção*) 
 - [N6 - Regras de Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [N7 - A Regra da Cadeia](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [N8 - Derivação Implícita](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 

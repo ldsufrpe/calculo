@@ -961,7 +961,7 @@ integral de modo permitir aplicar as fórmulas sugeridas na <xref ref="tabela2-i
     <title>Sintaxe dos comandos</title>
     <p>Com o <em> SageMath</em>, usando o comando <c>integral(f, x)</c> é possível
 calcular a integral indefinida de <m>f(x)</m> em relação a variável <m>x</m>.
-Por exemplo, o <xref ref="ex4"/> pode ser resolvida com o comando:
+Por exemplo, o <xref ref="ex4"/> pode ser resolvido com o comando:
 <sage>
     <input>
         integral(x^2/(x^2+1), x)
