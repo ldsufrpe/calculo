@@ -7,10 +7,10 @@ por Leon Silva e Deibsom Silva
 - [N1 - Números Reais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [N2 - Equações e Inequações](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [N3 - Funções Reais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
-- [N4 - Funções Polinômiais e Racionais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [N4 - Funções Polinomiais e Racionais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [N5 - Funções Definidas por Várias Sentenças](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [N6 - Função Composta e a Inversa de uma Função](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
-- [N7 - Funções Exponênciais e Logaritmicas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [N7 - Funções Exponenciais e Logarítmicas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [N8 - Funções Trigonométricas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [N9 - Mais Sobre Gráficos](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 - [N10 - Outras Funções Reais](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
@@ -28,7 +28,7 @@ por Leon Silva e Deibsom Silva
 - [N6 - Regras de Derivação](https://ldsufrpe.github.io/calculon1/N6). 
 - [N7 - A Regra da Cadeia](https://ldsufrpe.github.io/calculon1/N7). 
 - [N8 - Derivada da função logaritmo](https://ldsufrpe.github.io/calculon1/N8). 
-- [N9 - Derivação Implícita](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [N9 - Derivação Implícita](https://ldsufrpe.github.io/calculon1/N9). 
 - [N10 - Aplicações da Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 
 
