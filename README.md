@@ -27,7 +27,7 @@ por Leon Silva e Deibsom Silva
 - [N5 - A Derivada de uma Função](https://ldsufrpe.github.io/calculon1/N5).  
 - [N6 - Regras de Derivação](https://ldsufrpe.github.io/calculon1/N6). 
 - [N7 - A Regra da Cadeia](https://ldsufrpe.github.io/calculon1/N7). 
-- [N8 - Derivada da função logaritmo](https://ldsufrpe.github.io/calculon1/N8). 
+- [N8 - Derivada da Função Logaritmo](https://ldsufrpe.github.io/calculon1/N8). 
 - [N9 - Derivação Implícita](https://ldsufrpe.github.io/calculon1/N9). 
 - [N10 - Aplicações da Derivação](https://ldsufrpe.github.io/calculon1/N10).
 
