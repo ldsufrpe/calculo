@@ -29,7 +29,7 @@ por Leon Silva e Deibsom Silva
 - [N7 - A Regra da Cadeia](https://ldsufrpe.github.io/calculon1/N7). 
 - [N8 - Derivada da função logaritmo](https://ldsufrpe.github.io/calculon1/N8). 
 - [N9 - Derivação Implícita](https://ldsufrpe.github.io/calculon1/N9). 
-- [N10 - Aplicações da Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
+- [N10 - Aplicações da Derivação](https://ldsufrpe.github.io/calculon1/N10).
 
 
 
