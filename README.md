@@ -19,7 +19,7 @@ por Leon Silva e Deibsom Silva
 
 
 
-### Cálculo Diferencial em 10 Semanas
+### Cálculo Diferencial em 12 Semanas
 - [N1 - O Limite de uma Função](https://ldsufrpe.github.io/calculon1/N1). 
 - [N2 - Propriedades dos Limites](https://ldsufrpe.github.io/calculon1/N2). 
 - [N3 - Continuidade e Propriedades das Funções Contínuas](https://ldsufrpe.github.io/calculon1/N3).
@@ -29,7 +29,9 @@ por Leon Silva e Deibsom Silva
 - [N7 - A Regra da Cadeia](https://ldsufrpe.github.io/calculon1/N7). 
 - [N8 - Derivada da Função Logaritmo](https://ldsufrpe.github.io/calculon1/N8). 
 - [N9 - Derivação Implícita](https://ldsufrpe.github.io/calculon1/N9). 
-- [N10 - Aplicações da Derivação](https://ldsufrpe.github.io/calculon1/N10).
+- [N10 - Taxas Relacionadas](https://ldsufrpe.github.io/calculon1/N10).
+- [N11 - Regra de L'Hôpital](https://ldsufrpe.github.io/calculon1/N11).
+- [N12 - Otimização](https://ldsufrpe.github.io/calculon1/SS1).(*Em construção*)
 
 
 
