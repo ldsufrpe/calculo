@@ -647,7 +647,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </p>
             </statement>
 
-            </task>
+
 
             <solution>
                 <p>
@@ -661,6 +661,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </md>
                 </p>
             </solution>
+                   </task>
         <task>
             <statement>
             <p>
@@ -1685,17 +1686,17 @@ Para obter a integral com a notação matemática usual, o <em> Sage</em> possui
 
     </ul>
     </subsection>
-   <exercise>
-<webwork source="local/Library/Pretext/N1/pretext-6.pg" />
-</exercise>
+<!--   <exercise>-->
+<!--<webwork source="local/Library/Pretext/N1/pretext-6.pg" />-->
+<!--</exercise>-->
 
-<exercise>
-<title>A Statistical Test</title>
-<introduction>
-    <p>This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previosly.  (HTML Note: The resizer for the knowl is not functioning yet.)</p>
-</introduction>
-<myopenmath problem="7492" />
-</exercise>
+<!--<exercise>-->
+<!--<title>A Statistical Test</title>-->
+<!--<introduction>-->
+<!--    <p>This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previosly.  (HTML Note: The resizer for the knowl is not functioning yet.)</p>-->
+<!--</introduction>-->
+<!--<myopenmath problem="7492" />-->
+<!--</exercise>-->
 
     <exercises xml:id="exercises-eq-diferencial">
         <!-- <exercisegroup >

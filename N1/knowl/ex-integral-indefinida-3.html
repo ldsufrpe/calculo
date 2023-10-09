@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-12-29T23:46:16-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,14 +12,48 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
-<span class="type">Exemplo</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">1.13</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="title"><span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\integral{\frac{1}{x}}{x}\)</span>.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\integral{\frac{1}{x}}{x}\)</span>.</span>
 </h4>
-<p>Integral da função potência para <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(q=-1\text{:}\)</span></p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+<div class="para logical">
+<div class="para">Integral da função potência para <span class="process-math">\(q=-1\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \integral{\frac{1}{x}}{x} = \ln{|x|} + C\text{.}
 \end{equation*}
 </div>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-10-hidden.html" title="Solução 1.13.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solução</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span></a></div></article><span class="incontext"><a href="sec-integral-indefinida.html#ex-integral-indefinida-3">em contexto</a></span>
+</div>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">A fórmula da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="Coleção: Integral da função potência">Integral da função potência</a> não é válida para <span class="process-math">\(q=-1\text{.}\)</span> Logo não é possível utilizá-la para obter a integral indefinida de <span class="process-math">\(1/x\text{.}\)</span> O passo natural é encontrar uma função cuja derivada seja <span class="process-math">\(1/x\text{.}\)</span> Sabe-se que</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
+\begin{equation*}
+\frac{\dd}{\dd x}\ln{x}= \frac{1}{x}\text{.}
+\end{equation*}
+</div>
+<div class="para">Então,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
+\begin{align}
+\integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  \text{.}\tag{✶}
+\end{align}
+</div>
+<div class="para">De fato, o logaritmo natural não está definido para valores menores que zero. Mas,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
+\begin{gather}
+\frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x}  \text{,}\tag{✶✶}
+\end{gather}
+</div>
+<div class="para">para <span class="process-math">\(x \lt 0\text{.}\)</span> Então,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
+\begin{equation*}
+\integral{\frac{1}{x}}{x}= \ln{(-x)} + C, \quad x \lt 0\text{.}
+\end{equation*}
+</div>
+<div class="para">De <a href="" class="xref" data-knowl="./knowl/ln-primitiva-positiva.html" title="Equação">(✶)</a> e <a href="" class="xref" data-knowl="./knowl/ln-primitiva-negativa.html" title="Equação">(✶✶)</a> concluímos que <span class="process-math">\(\ln{x}\)</span> é primitiva de  <span class="process-math">\(\sfrac{1}{x}\)</span> se <span class="process-math">\(x\gt 0\)</span> e que  <span class="process-math">\(\ln{(-x)}\)</span> é primitiva de <span class="process-math">\(1/x\)</span> se <span class="process-math">\(x\lt 0\text{.}\)</span> Mais diretamente, podemos afirmar que <span class="process-math">\(\ln{|x|}\)</span> é uma primitiva de <span class="process-math">\(1/x\text{.}\)</span> Portanto,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
+\begin{equation*}
+\integral{\frac{1}{x}}{x} = \ln{|x|} + C\text{.}
+\end{equation*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="sec-integral-indefinida.html#ex-integral-indefinida-3">em contexto</a></span>
 </body>
 </html>

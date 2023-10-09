@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-12-29T23:46:17-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,9 +12,38 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
-<span class="type">Exemplo</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">1.18</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="title">Primitiva particular.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Primitiva particular.</span>
 </h4>
-<p>Encontre <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(F(x)\)</span> sabendo que <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(F''(x)=12x^2+6x-4\)</span> , <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(F(0)=4\)</span> e <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(F(1)=1\text{.}\)</span></p>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-17-hidden.html" title="Solução 1.18.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solução</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span></a></div></article><span class="incontext"><a href="sec-integral-indefinida.html#primitiva-segunda-derivada">em contexto</a></span>
+<div class="para">Encontre <span class="process-math">\(F(x)\)</span> sabendo que <span class="process-math">\(F''(x)=12x^2+6x-4\)</span> , <span class="process-math">\(F(0)=4\)</span> e <span class="process-math">\(F(1)=1\text{.}\)</span>
+</div>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">A família de primitivas de <span class="process-math">\(F''(x)\)</span> é naturalmente</div>
+<div class="displaymath process-math">
+\begin{align*}
+F'(x) \amp = 12\frac{x^3}{3} + 6\frac{x^2}{2} -4x+ C \amp  \color{gray}{\frac{\dd}{\dd x}\left[F'(x)\right]=F''(x)} \\
+\amp =4x^3 + 3x^2-4x+C 
+\end{align*}
+</div>
+<div class="para">Assim como todas as primitivas de <span class="process-math">\(F'(x)\)</span> tem a forma</div>
+<div class="displaymath process-math">
+\begin{align*}
+F(x)\amp = 4\frac{x^4}{4} + 3\frac{x^3}{3} -4\frac{x^2}{2} + Cx + D \amp \color{gray}{\frac{\dd}{\dd x}\left[F(x)\right]=F'(x)} \\
+\amp = x^4 + x^3-2x^2+Cx+D 
+\end{align*}
+</div>
+<div class="para">Uma vez que <span class="process-math">\(F\)</span> deve satisfazer <span class="process-math">\(F(0)=4\)</span> e <span class="process-math">\(F(1)=1\)</span> temos</div>
+<div class="displaymath process-math">
+\begin{align*}
+F(0)  \amp = 0+D =4 \\
+F(1) \amp = 1+ 1-2+C+4=1 
+\end{align*}
+</div>
+<div class="para">que nos fornece <span class="process-math">\(D=4\)</span> e <span class="process-math">\(C=-3\text{.}\)</span> Por fim, encontramos</div>
+<div class="displaymath process-math">
+\begin{align*}
+F(x) = x^4+ x^3-2x^2-3x+4 \amp \text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="sec-integral-indefinida.html#primitiva-segunda-derivada">em contexto</a></span>
 </body>
 </html>

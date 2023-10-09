@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-12-29T23:46:16-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Integral Indefinida</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    useLabelIds: true,
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+<meta property="og:type" content="article">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -37,72 +53,103 @@
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
-  },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
-  },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
-  },
-/* support for the sfrac command in MathJax (Beveled fraction) */
-  startup: {
-    ready() {
-      //
-      // Creating a simple "sfrac" package on-the-fly
-      //
-      const Configuration = MathJax._.input.tex.Configuration.Configuration;
-      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
-      
-      new CommandMap('sfrac', {
-        sfrac: 'SFrac'
-        }, {
-        SFrac(parser, name) {
-        const num = parser.ParseArg(name);
-        const den = parser.ParseArg(name);
-        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
-        parser.Push(frac);
-        }
-      });
-      //
-      // Create the package for the overridden macros
-      //
-      Configuration.create('sfrac', {
-        handler: {macro: ['sfrac']}
-      });
-      
-    MathJax.startup.defaultReady();
+        },
+        ""
+      ]
     }
   },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Executar (Sage)'});
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Executar (Sage)"
 });
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\doubler}[1]{2#1}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Ir ao conteúdo principal</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://www.dm.ufrpe.br"><img src="images/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="integral.html"><span class="title">Cálculo Integral: N1</span></a></h1>
+<p class="byline">Leon Silva, Deibsom Silva</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Sumário"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Sumário</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Buscando por: </h2>
+<div id="searchempty" class="searchempty"><span>Não encontrado.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-1.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="up-button button" href="integral.html" title="Acima"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Acima</span></a><a class="next-button button" href="sec-eq-diferenciais.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\doubler}[1]{2#1}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
 \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
@@ -117,345 +164,318 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="integral.html"><span class="title">Cálculo Integral: N1</span></a></h1>
-<p class="byline">Leon Silva, Deibsom Silva</p>
-</div>
-</div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
-<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "graphing",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter-1.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="integral.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-eq-diferenciais.html" title="Próximo">Próximo</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="frontmatter-1.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="integral.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="sec-eq-diferenciais.html" title="Próximo">Próximo</a>
-</div>
-</div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Pré-textual</span></a></li>
-<li class="link active">
-<a href="sec-integral-indefinida.html" data-scroll="sec-integral-indefinida"><span class="codenumber">1</span> <span class="title">Integral Indefinida</span></a><ul>
-<li><a href="sec-integral-indefinida.html#subsec-integral-indefinida" data-scroll="subsec-integral-indefinida">Primitiva</a></li>
-<li><a href="sec-integral-indefinida.html#subsec-tabela-integrais" data-scroll="subsec-tabela-integrais">Tabela de integrais</a></li>
-<li><a href="sec-integral-indefinida.html#subsubsec-videos-1" data-scroll="subsubsec-videos-1">Sugestão de Vídeos</a></li>
-<li><a href="sec-integral-indefinida.html#subsubsec-teconologia" data-scroll="subsubsec-teconologia">Tecnologia</a></li>
-<li><a href="sec-integral-indefinida.html#exercises-1" data-scroll="exercises-1">Exercícios</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter-1.html" class="internal"><span class="title">Pré-textual</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="frontmatter-1.html#abstract-1" class="internal"><span class="title">Resumo</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-integral-indefinida.html" class="internal"><span class="codenumber">1</span> <span class="title">Integral Indefinida</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integral-indefinida.html#subsec-integral-indefinida" class="internal"><span class="codenumber">1.1</span> <span class="title">Primitiva</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integral-indefinida.html#subsec-tabela-integrais" class="internal"><span class="codenumber">1.2</span> <span class="title">Tabela de integrais</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integral-indefinida.html#subsubsec-videos-1" class="internal"><span class="codenumber">1.3</span> <span class="title">Sugestão de Vídeos</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integral-indefinida.html#subsubsec-teconologia" class="internal"><span class="codenumber">1.4</span> <span class="title">Tecnologia</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-integral-indefinida.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercícios</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="sec-eq-diferenciais.html" data-scroll="sec-eq-diferenciais"><span class="codenumber">2</span> <span class="title">Equações Diferenciais</span></a><ul>
-<li><a href="sec-eq-diferenciais.html#subsec-curvas-integrais" data-scroll="subsec-curvas-integrais">Curvas Integrais</a></li>
-<li><a href="sec-eq-diferenciais.html#subsec-integral-ed" data-scroll="subsec-integral-ed">Integral e Equações diferenciais</a></li>
-<li><a href="sec-eq-diferenciais.html#subsec-resolvendo-e-diferenciais" data-scroll="subsec-resolvendo-e-diferenciais">Campos de Direções</a></li>
-<li><a href="sec-eq-diferenciais.html#subsubsec-2" data-scroll="subsubsec-2">Sugestão de Vídeos</a></li>
-<li><a href="sec-eq-diferenciais.html#exercises-eq-diferencial" data-scroll="exercises-eq-diferencial">Exercícios</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eq-diferenciais.html" class="internal"><span class="codenumber">2</span> <span class="title">Equações Diferenciais</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eq-diferenciais.html#subsec-curvas-integrais" class="internal"><span class="codenumber">2.1</span> <span class="title">Curvas Integrais</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-eq-diferenciais.html#subsec-integral-ed" class="internal"><span class="codenumber">2.2</span> <span class="title">Integral e Equações diferenciais</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eq-diferenciais.html#subsubsec-videos-eq" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Sugestão de Vídeos</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eq-diferenciais.html#subsec-resolvendo-e-diferenciais" class="internal"><span class="codenumber">2.3</span> <span class="title">Campos de Direções</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eq-diferenciais.html#subsubsec-2" class="internal"><span class="codenumber">2.4</span> <span class="title">Sugestão de Vídeos</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-eq-diferenciais.html#exercises-eq-diferencial" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercícios</span></a></div></li>
 </ul>
 </li>
-<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter"><span class="codenumber">3</span> <span class="title">Referências</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-integral-indefinida"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Integral Indefinida</span>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="references-backmatter.html" class="internal"><span class="codenumber">3</span> <span class="title">Referências</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-integral-indefinida"><h2 class="heading hide-type">
+<span class="type">Seção</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">Integral Indefinida</span>
 </h2>
 <article class="objectives goal-like" id="objectives-1"><h3 class="heading">
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-1"><p id="p-2">Calcular a primitiva de uma função.</p></li>
-<li id="li-2"><p id="p-3">Definir a integral indefinida.</p></li>
-<li id="li-3"><p id="p-4">Introduzir o conceito de equações diferenciais.</p></li>
+<li id="li-1"><div class="para" id="p-2">Calcular a primitiva de uma função.</div></li>
+<li id="li-2"><div class="para" id="p-3">Definir a integral indefinida.</div></li>
+<li id="li-3"><div class="para" id="p-4">Introduzir o conceito de equações diferenciais.</div></li>
 </ol></article><section class="subsection" id="subsec-integral-indefinida"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Primitiva</span>
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Primitiva</span>
 </h3>
 <article class="definition definition-like" id="def-primitiva"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
-<p id="p-5">Seja <span class="process-math">\(f\)</span> uma função definida em um intervalo aberto<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> <span class="process-math">\(I\text{.}\)</span> Uma <dfn class="terminology">primitiva</dfn> é uma função <span class="process-math">\(F\)</span> definida em <span class="process-math">\(I\text{,}\)</span> de modo que</p>
-<div class="displaymath process-math">
+<div class="para logical" id="p-5">
+<div class="para">Seja <span class="process-math">\(f\)</span> uma função definida em um intervalo aberto<a class="xref" id="fn-1" href="" data-knowl="./knowl/fn-1.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a> <span class="process-math">\(I\text{.}\)</span> Uma <dfn class="terminology">primitiva</dfn> é uma função <span class="process-math">\(F\)</span> definida em <span class="process-math">\(I\text{,}\)</span> de modo que</div>
+<div class="displaymath process-math" id="mdn-1">
 \begin{gather}
-\frac{\dd}{\dd x}\left[F(x)\right]=f(x). \label{eq-primitiva}\tag{1.1}
+\frac{\dd}{\dd x}\left[F(x)\right]=f(x). \tag{1.1}
 \end{gather}
 </div>
-<p class="continuation">para todo <span class="process-math">\(x\)</span> em <span class="process-math">\(I\text{.}\)</span></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">veja em <a class="external" href="https://pt.wikipedia.org/wiki/Intervalo_(matem%C3%A1tica)" target="_blank">wikipedia</a>
-</div></div></article><article class="note remark-like" id="note-1"><h4 class="heading">
+<div class="para">para todo <span class="process-math">\(x\)</span> em <span class="process-math">\(I\text{.}\)</span>
+</div>
+</div></article><article class="note remark-like" id="note-1"><h4 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h4>
-<p id="p-6">É comum reescrever <a href="" class="xref" data-knowl="./knowl/eq-primitiva.html" title="Equação 1.1">(1.1)</a> como <span class="process-math">\(F'(x)=f(x)\text{.}\)</span></p></article><article class="example example-like" id="ex-primitiva1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-primitiva1"><h4 class="heading">
+<div class="para" id="p-6">É comum reescrever <a href="" class="xref" data-knowl="./knowl/eq-primitiva.html" title="Equação 1.1">(1.1)</a> como <span class="process-math">\(F'(x)=f(x)\text{.}\)</span>
+</div></article><details id="ex-primitiva1" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Determinando Primitivas.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-primitiva1"><article class="example example-like"><p id="p-7">A primitiva de <span class="process-math">\(f(x)=x^2\)</span> em <span class="process-math">\((-\infty, +\infty)\)</span> é <span class="process-math">\(F(x)=\frac{1}{3}x^3\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<p id="p-8">De fato, uma vez que para todo <span class="process-math">\(x\text{,}\)</span></p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-7">A primitiva de <span class="process-math">\(f(x)=x^2\)</span> em <span class="process-math">\((-\infty, +\infty)\)</span> é <span class="process-math">\(F(x)=\frac{1}{3}x^3\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-1" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-8">
+<div class="para">De fato, uma vez que para todo <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="md-1">
 \begin{align*}
 \frac{\dd}{\dd x}\left[\frac{1}{3}x^3\right]\amp = x^2
 \end{align*}
 </div>
-<p class="continuation">para todo <span class="process-math">\(x\)</span> em <span class="process-math">\((-\infty, +\infty)\text{.}\)</span></p>
-</div></div>
-</div></article></div>
-<article class="example example-like" id="ex-primitiva2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-primitiva2"><h4 class="heading">
+<div class="para">para todo <span class="process-math">\(x\)</span> em <span class="process-math">\((-\infty, +\infty)\text{.}\)</span>
+</div>
+</div></div></details></div></article></details><details id="ex-primitiva2" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Primitivas mais gerais.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-primitiva2"><article class="example example-like"><p id="p-9"><span class="fas fa-"></span> Considere <span class="process-math">\(C \in \mathbb{R}\text{.}\)</span> A função <span class="process-math">\(G(x)= \frac{1}{3}x^3 + C\)</span> é, também, uma primitiva de <span class="process-math">\(f(x)=x^2\)</span> em <span class="process-math">\((-\infty, +\infty)\text{.}\)</span></p>
+</h4></summary><article class="example example-like"><div class="para" id="p-9">
+<span class="fas fa-"></span> Considere <span class="process-math">\(C \in \mathbb{R}\text{.}\)</span> A função <span class="process-math">\(G(x)= \frac{1}{3}x^3 + C\)</span> é, também, uma primitiva de <span class="process-math">\(f(x)=x^2\)</span> em <span class="process-math">\((-\infty, +\infty)\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-2" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-10">Segue do fato de <span class="process-math">\(\frac{\dd}{\dd x}(C)=0\text{,}\)</span> seja qual for o número <span class="process-math">\(C\text{.}\)</span>
+</div></div></details></div></article></details><details id="exc-primitiva1" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-11">Encontre pelo menos 3 primitivas para a função constante <span class="process-math">\(f(x)=k\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-10">Segue do fato de <span class="process-math">\(\frac{\dd}{\dd x}(C)=0\text{,}\)</span> seja qual for o número <span class="process-math">\(C\text{.}\)</span></p></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exc-primitiva1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exc-primitiva1"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exc-primitiva1"><article class="exercise exercise-like"><p id="p-11">Encontre pelo menos 3 primitivas para a função constante <span class="process-math">\(f(x)=k\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-12"><span class="process-math">\(F(x)=kx\text{,}\)</span> <span class="process-math">\(G(x)=kx +1\text{,}\)</span> <span class="process-math">\(H(x)=kx+\frac{1}{2}\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-13">Se <span class="process-math">\(k\)</span> é constante então a derivada de <span class="process-math">\(kx\)</span> é <span class="process-math">\(k\text{,}\)</span> logo <span class="process-math">\(F(x)=kx\)</span> é uma primitiva de <span class="process-math">\(f(x)=k\text{.}\)</span> O mesmo acontece  para <span class="process-math">\(G(x)=kx +1\)</span> e <span class="process-math">\(H(x)=kx+\frac{1}{2}\text{.}\)</span> É fácil perceber que <span class="process-math">\(kx+C\text{,}\)</span> na qual <span class="process-math">\(C\)</span> é uma constante, é uma primitiva de <span class="process-math">\(f\)</span> para qualquer que seja o valor de <span class="process-math">\(C\text{.}\)</span></p></div></div>
-</div></article></div>
-<section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Quantas  primitivas pode ter uma função?</span></h4></section><article class="theorem theorem-like" id="thm-primitiva"><h4 class="heading">
+<details id="answer-1" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-12">
+<span class="process-math">\(F(x)=kx\text{,}\)</span> <span class="process-math">\(G(x)=kx +1\text{,}\)</span> <span class="process-math">\(H(x)=kx+\frac{1}{2}\text{.}\)</span>
+</div></div></details><details id="solution-3" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-13">Se <span class="process-math">\(k\)</span> é constante então a derivada de <span class="process-math">\(kx\)</span> é <span class="process-math">\(k\text{,}\)</span> logo <span class="process-math">\(F(x)=kx\)</span> é uma primitiva de <span class="process-math">\(f(x)=k\text{.}\)</span> O mesmo acontece  para <span class="process-math">\(G(x)=kx +1\)</span> e <span class="process-math">\(H(x)=kx+\frac{1}{2}\text{.}\)</span> É fácil perceber que <span class="process-math">\(kx+C\text{,}\)</span> na qual <span class="process-math">\(C\)</span> é uma constante, é uma primitiva de <span class="process-math">\(f\)</span> para qualquer que seja o valor de <span class="process-math">\(C\text{.}\)</span>
+</div></div></details>
+</div></article></details><section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Quantas  primitivas pode ter uma função?</span></h4></section><article class="theorem theorem-like" id="thm-primitiva"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h4>
-<p id="p-14">Se  <span class="process-math">\(F(x)\)</span> é uma primitiva de <span class="process-math">\(f(x)\)</span> em um intervalo aberto <span class="process-math">\(I\)</span> , então <span class="process-math">\(F(x) + C\text{,}\)</span> seja qual for o valor da constante <span class="process-math">\(C\text{,}\)</span> é também uma primitiva de <span class="process-math">\(f(x)\)</span> em <span class="process-math">\(I\text{.}\)</span></p></article><p id="p-15">O  <a href="" class="xref" data-knowl="./knowl/thm-primitiva.html" title="Teorema 1.6">Teorema 1.6</a> garante que uma vez conhecida uma primitiva de um função, todas as outras são iguais, a menos de uma constante, como o leitor pôde verificar no <a href="" class="xref" data-knowl="./knowl/exc-primitiva1.html" title="Autoavaliação 1.5">Autoavaliação 1.5</a>. É comum se referir a expressão <span class="process-math">\(F(x)+C\)</span> como a <dfn class="terminology">família</dfn>  de primitivas de <span class="process-math">\(f(x)\text{.}\)</span></p>
-<p id="p-16">O processo para encontrar a primitiva de uma função <span class="process-math">\(f(x)\)</span> define uma operação denominada <dfn class="terminology">integral indefinida</dfn>  de <span class="process-math">\(f(x)\)</span> em relação a <span class="process-math">\(x\text{.}\)</span> Como todas as primitivas de <span class="process-math">\(f(x)\)</span> são da forma <span class="process-math">\(F(x) + C\text{,}\)</span> usaremos a notação</p>
-<div class="displaymath process-math">
+<div class="para" id="p-14">Se  <span class="process-math">\(F(x)\)</span> é uma primitiva de <span class="process-math">\(f(x)\)</span> em um intervalo aberto <span class="process-math">\(I\)</span> , então <span class="process-math">\(F(x) + C\text{,}\)</span> seja qual for o valor da constante <span class="process-math">\(C\text{,}\)</span> é também uma primitiva de <span class="process-math">\(f(x)\)</span> em <span class="process-math">\(I\text{.}\)</span>
+</div> </article><div class="para" id="p-15">O  <a href="" class="xref" data-knowl="./knowl/thm-primitiva.html" title="Teorema 1.6">Teorema 1.6</a> garante que uma vez conhecida uma primitiva de um função, todas as outras são iguais, a menos de uma constante, como o leitor pôde verificar no <a href="" class="xref" data-knowl="./knowl/exc-primitiva1.html" title="Exercício de Verificação 1.5">Exercício de Verificação 1.5</a>. É comum se referir a expressão <span class="process-math">\(F(x)+C\)</span> como a <dfn class="terminology">família</dfn>  de primitivas de <span class="process-math">\(f(x)\text{.}\)</span>
+</div>
+<div class="para logical" id="p-16">
+<div class="para">O processo para encontrar a primitiva de uma função <span class="process-math">\(f(x)\)</span> define uma operação denominada <dfn class="terminology">integral indefinida</dfn>  de <span class="process-math">\(f(x)\)</span> em relação a <span class="process-math">\(x\text{.}\)</span> Como todas as primitivas de <span class="process-math">\(f(x)\)</span> são da forma <span class="process-math">\(F(x) + C\text{,}\)</span> usaremos a notação</div>
+<div class="displaymath process-math" id="mdn-2">
 \begin{gather}
-\integral{f(x)}{x}=F(x) + C \text{,}\label{eq-integral-indefinida}\tag{1.2}
+\integral{f(x)}{x}=F(x) + C \text{,}\tag{1.2}
 \end{gather}
 </div>
-<p class="continuation">na qual <span class="process-math">\(f(x)\)</span> é chamada de <dfn class="terminology">integrando</dfn>  e <span class="process-math">\(C\)</span>  de <dfn class="terminology">constante de integração</dfn>.</p>
+<div class="para">na qual <span class="process-math">\(f(x)\)</span> é chamada de <dfn class="terminology">integrando</dfn>  e <span class="process-math">\(C\)</span>  de <dfn class="terminology">constante de integração</dfn>.</div>
+</div>
 <article class="assemblage assemblage-like" id="assemblage-integral-indefinida"><h4 class="heading"><span class="title">Como se lê.</span></h4>
-<div class="displaymath process-math" id="p-17">
+<div class="para logical" id="p-17"><div class="displaymath process-math">
 \begin{equation*}
 \integral{f(x)}{x}=F(x) + C
 \end{equation*}
-</div>
-<p id="p-18">A integral de <span class="process-math">\(f(x)\)</span> em relação a <span class="process-math">\(x\)</span> é igual a <span class="process-math">\(F(x)\)</span> mais uma constante.</p></article><article class="note remark-like" id="note-2"><h4 class="heading">
+</div></div>
+<div class="para" id="p-18">A integral de <span class="process-math">\(f(x)\)</span> em relação a <span class="process-math">\(x\)</span> é igual a <span class="process-math">\(F(x)\)</span> mais uma constante.</div></article><article class="note remark-like" id="note-2"><h4 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">O símbolo <span class="process-math">\((\displaystyle\int)\)</span> e o símbolo <span class="process-math">\((\dd x)\)</span>.</span>
-</h4>
-<p id="p-19">O símbolo que parece um "S esticado verticalmente" é denominado <dfn class="terminology">sinal de integral</dfn>. Sua origem vem da palavra <em class="emphasis">sum</em> (soma, em português) que diz respeito a definição de integral definida, tópico que será apresentado no momento adequado.</p>
-<p id="p-20">O símbolo de <dfn class="terminology">diferencial</dfn> <span class="process-math">\(\dd x\)</span> serve para identificar a variável independente. Neste contexto, quando estamos diante da diferencial<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>   <span class="process-math">\(\dd x\)</span> devemos calcular a integral em relação a <span class="process-math">\(x\text{,}\)</span> assim como <span class="process-math">\(\dd t\)</span> indica integração em relação a variável <span class="process-math">\(t\text{.}\)</span></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">saiba mais em <a class="external" href="https://pt.wikipedia.org/wiki/Diferencial_(infinitesimal)" target="_blank">wikipedia</a>
-</div></div></article><article class="example example-like" id="ex-integral-indefinida-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-integral-indefinida-1"><h4 class="heading">
+</h4> <div class="para" id="p-19">O símbolo que parece um "S esticado verticalmente" é denominado <dfn class="terminology">sinal de integral</dfn>. Sua origem vem da palavra <em class="emphasis">sum</em> (soma, em português) que diz respeito a definição de integral definida, tópico que será apresentado no momento adequado.</div> <div class="para" id="p-20">O símbolo de <dfn class="terminology">diferencial</dfn> <span class="process-math">\(\dd x\)</span> serve para identificar a variável independente. Neste contexto, quando estamos diante da diferencial<a class="xref" id="fn-2" href="" data-knowl="./knowl/fn-2.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a>   <span class="process-math">\(\dd x\)</span> devemos calcular a integral em relação a <span class="process-math">\(x\text{,}\)</span> assim como <span class="process-math">\(\dd t\)</span> indica integração em relação a variável <span class="process-math">\(t\text{.}\)</span>
+</div></article><details id="ex-integral-indefinida-1" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Determinação de integrais indefinidas.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-integral-indefinida-1"><article class="example example-like"><p id="p-21">Determine cada integral a seguir: <article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-22"><span class="process-math">\(\integral{2}{x}.\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-23">Já que <span class="process-math">\(F(x)=2x\)</span> é uma primitiva para <span class="process-math">\(f(x)=2\text{,}\)</span> segue da igualdade <a href="" class="xref" data-knowl="./knowl/eq-integral-indefinida.html" title="Equação 1.2">(1.2)</a> que</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"> <div class="para" id="p-21">Determine cada integral a seguir: <article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-22"><span class="process-math">\(\integral{2}{x}.\)</span></div>
+<div class="solutions"><details id="solution-4" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-23">
+<div class="para">Já que <span class="process-math">\(F(x)=2x\)</span> é uma primitiva para <span class="process-math">\(f(x)=2\text{,}\)</span> segue da igualdade <a href="" class="xref" data-knowl="./knowl/eq-integral-indefinida.html" title="Equação 1.2">(1.2)</a> que</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-integral-indefinida.html">
 \begin{equation*}
 \integral{2}{x}=2x + C\text{.}
 \end{equation*}
 </div>
-</div></div>
-</div></article> <article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-24"><span class="process-math">\(\integral{x}{x}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-25">Uma vez que <span class="process-math">\(\frac{\dd}{\dd x}[\frac{x^2}{2}]=x\text{,}\)</span> obtem-se</p>
+</div></div></details></div></article> <article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-24"><span class="process-math">\(\integral{x}{x}\)</span></div>
+<div class="solutions"><details id="solution-5" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-25">
+<div class="para">Uma vez que <span class="process-math">\(\frac{\dd}{\dd x}[\frac{x^2}{2}]=x\text{,}\)</span> obtem-se</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integral{x}{x}=\frac{x^2}{2} + C\text{.}
 \end{equation*}
 </div>
-</div></div>
-</div></article> <article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-26"><span class="process-math">\(\integral{x^2}{x}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-27">Como <span class="process-math">\(\frac{x^3}{3}\)</span> é uma primitiva de <span class="process-math">\(x^2\text{,}\)</span> pois <span class="process-math">\(\frac{\dd}{\dd x}[\frac{x^3}{3}]=x^2\text{,}\)</span> concluímos que</p>
+</div></div></details></div></article> <article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-26"><span class="process-math">\(\integral{x^2}{x}\)</span></div>
+<div class="solutions"><details id="solution-6" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-27">
+<div class="para">Como <span class="process-math">\(\frac{x^3}{3}\)</span> é uma primitiva de <span class="process-math">\(x^2\text{,}\)</span> pois <span class="process-math">\(\frac{\dd}{\dd x}[\frac{x^3}{3}]=x^2\text{,}\)</span> concluímos que</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integral{x^2}{x}=\frac{x^3}{3} +C\text{.}
 \end{equation*}
 </div>
-</div></div>
-</div></article></p></article></div>
-<article class="example example-like" id="exer-primitiva-particular"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exer-primitiva-particular"><h4 class="heading">
+</div></div></details></div></article>
+</div></article></details><details id="exer-primitiva-particular" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Primitiva particular.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-primitiva-particular"><article class="example example-like"><p id="p-28">Para a função <span class="process-math">\(f(x)=3x+1\text{,}\)</span> determine a primitiva, <span class="process-math">\(F(x)\text{,}\)</span> que satisfaça <span class="process-math">\(F(2)=4\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
-<p id="p-29">A função <span class="process-math">\(F(x)= 3\left(\frac{x^2}{2}\right) + x+ C\)</span> é a família de primitivas, uma vez que</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-28">Para a função <span class="process-math">\(f(x)=3x+1\text{,}\)</span> determine a primitiva, <span class="process-math">\(F(x)\text{,}\)</span> que satisfaça <span class="process-math">\(F(2)=4\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-7" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-29">
+<div class="para">A função <span class="process-math">\(F(x)= 3\left(\frac{x^2}{2}\right) + x+ C\)</span> é a família de primitivas, uma vez que</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-primitiva.html" id="md-2">
 \begin{align*}
 \frac{\dd }{\dd x}\left[3\left(\frac{x^2}{2}\right) + x+ C\right]= 3x+1 \amp \quad \color{gray}{(\text{veja Equação} \,\,  \knowl{./knowl/eq-primitiva.html}{\text{(1.1)}})}\text{.}
 \end{align*}
 </div>
-<p class="continuation">A condição <span class="process-math">\(F(2)=4\)</span> fornece a possibilidade de determinar o valor de <span class="process-math">\(C\)</span> fazendo</p>
-<div class="displaymath process-math">
+<div class="para">A condição <span class="process-math">\(F(2)=4\)</span> fornece a possibilidade de determinar o valor de <span class="process-math">\(C\)</span> fazendo</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-primitiva.html">
 \begin{equation*}
 F(2)=   3\left(\frac{2^2}{2}\right) + 2 + C = 4
 \end{equation*}
 </div>
-<p class="continuation">para obter <span class="process-math">\(C=-4\text{.}\)</span> Portanto, a primitiva desejada é</p>
-<div class="displaymath process-math">
+<div class="para">para obter <span class="process-math">\(C=-4\text{.}\)</span> Portanto, a primitiva desejada é</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-primitiva.html">
 \begin{equation*}
 F(x)= 3\left(\frac{x^2}{2}\right) + x - 4\text{.}
 \end{equation*}
 </div>
-</div></div>
-</div></article></div>
-<article class="assemblage assemblage-like" id="prob-integral-funcao-potencia"><h4 class="heading"><span class="title">Integral da função potência.</span></h4>
-<div class="displaymath process-math" id="p-30">
+</div></div></details></div></article></details><article class="assemblage assemblage-like" id="prob-integral-funcao-potencia"><h4 class="heading"><span class="title">Integral da função potência.</span></h4>
+<div class="para logical" id="p-30"><div class="displaymath process-math">
 \begin{equation*}
 \integral{x^q}{x} = \frac{x^{q+1}}{q+1} + C, \qquad q\neq - 1.
 \end{equation*}
-</div></article><article class="example example-like" id="ex-integral-indefinida-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-integral-indefinida-2"><h4 class="heading">
+</div></div></article><details id="ex-integral-indefinida-2" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Integração da função potência.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-integral-indefinida-2"><article class="example example-like"><p id="p-31"><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-32">Determine <span class="process-math">\(\integral{t^7}{t}\text{.}\)</span></p>
+</h4></summary><article class="example example-like"><div class="para" id="p-31">
+<article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-32">Determine <span class="process-math">\(\integral{t^7}{t}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-8" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-33">O integrando é uma função potência, então basta usar a fórmula da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="Coleção: Integral da função potência">Integral da função potência</a> e obter <span class="process-math">\(\frac{t^8}{8} + C\text{.}\)</span>
+</div></div></details></div></article> <article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-34">Determine <span class="process-math">\(\integral{x^{-2}}{x}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-9" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-35">Novamente usando a fórmula da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="Coleção: Integral da função potência">Integral da função potência</a>  resultamos em <span class="process-math">\(\frac{x^{-1}}{-1} + C\text{,}\)</span> que de forma simplificada se torna igual a <span class="process-math">\(-\frac{1}{x} + C\text{.}\)</span>
+</div></div></details></div></article>
+</div></article></details><details id="exercise-2" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-36">Para a função <span class="process-math">\(f(x)=2(x-1)\text{,}\)</span> encontre a primitiva, <span class="process-math">\(F(x)\text{,}\)</span> que satisfaça <span class="process-math">\(F(3)=2\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><p id="p-33">O integrando é uma função potência, então basta usar a fórmula da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="[assemblage]: Integral da função potência">Integral da função potência</a> e obter <span class="process-math">\(\frac{t^8}{8} + C\text{.}\)</span></p></div></div>
-</div></article> <article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-34">Determine <span class="process-math">\(\integral{x^{-2}}{x}\text{.}\)</span></p>
+<details id="hint-1" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-37">Revise o <a href="" class="xref" data-knowl="./knowl/exer-primitiva-particular.html" title="Exemplo 1.9: Primitiva particular">Exemplo 1.9</a>
+</div></div></details><details id="answer-2" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-38"><span class="process-math">\(x^2-2x-1\)</span></div></div></details>
+</div></article></details><details id="exercise-3" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-39">Para a função <span class="process-math">\(f(x)=x^{-\frac{1}{3}}-1\text{,}\)</span> encontre a primitiva, <span class="process-math">\(F(x)\text{,}\)</span> que satisfaça <span class="process-math">\(F(8)=4\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><p id="p-35">Novamente usando a fórmula da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="[assemblage]: Integral da função potência">Integral da função potência</a>  resultamos em <span class="process-math">\(\frac{x^{-1}}{-1} + C\text{,}\)</span> que de forma simplificada se torna igual a <span class="process-math">\(-\frac{1}{x} + C\text{.}\)</span></p></div></div>
-</div></article></p></article></div>
-<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-36">Para a função <span class="process-math">\(f(x)=2(x-1)\text{,}\)</span> encontre a primitiva, <span class="process-math">\(F(x)\text{,}\)</span> que satisfaça <span class="process-math">\(F(3)=2\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-37">Revise o <a href="" class="xref" data-knowl="./knowl/exer-primitiva-particular.html" title="Exemplo 1.9: Primitiva particular">Exemplo 1.9</a></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-38"><span class="process-math">\(x^2-2x-1\)</span></p></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-39">Para a função <span class="process-math">\(f(x)=x^{-\frac{1}{3}}-1\text{,}\)</span> encontre a primitiva, <span class="process-math">\(F(x)\text{,}\)</span> que satisfaça <span class="process-math">\(F(8)=4\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-40">Revise o <a href="" class="xref" data-knowl="./knowl/exer-primitiva-particular.html" title="Exemplo 1.9: Primitiva particular">Exemplo 1.9</a></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-41"><span class="process-math">\(\frac{3}{2}  x^{\frac{2}{3}} - x + 6\)</span></p></div></div>
-</div></article></div>
-<article class="activity project-like" id="activity-1"><h4 class="heading">
+<details id="hint-2" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-40">Revise o <a href="" class="xref" data-knowl="./knowl/exer-primitiva-particular.html" title="Exemplo 1.9: Primitiva particular">Exemplo 1.9</a>
+</div></div></details><details id="answer-3" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-41"><span class="process-math">\(\frac{3}{2}  x^{\frac{2}{3}} - x + 6\)</span></div></div></details>
+</div></article></details><article class="activity project-like" id="activity-1"><h4 class="heading">
 <span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Verificando fatos.</span>
 </h4>
-<p id="p-42">Usando o que foi aprendido até aqui, faça uma demonstração da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="[assemblage]: Integral da função potência">Integral da função potência</a>.</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-43">Experimente derivar o lado direito da igualdade solicitada.</p></div></div>
-</div></article><article class="example example-like" id="ex-integral-indefinida-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-integral-indefinida-3"><h4 class="heading">
+<div class="para" id="p-42">Usando o que foi aprendido até aqui, faça uma demonstração da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="Coleção: Integral da função potência">Integral da função potência</a>.</div>
+<div class="solutions"><details id="hint-3" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-43">Experimente derivar o lado direito da igualdade solicitada.</div></div></details></div></article><details id="ex-integral-indefinida-3" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\integral{\frac{1}{x}}{x}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-integral-indefinida-3"><article class="example example-like"><p id="p-44">Integral da função potência para <span class="process-math">\(q=-1\text{:}\)</span></p>
+</h4></summary><article class="example example-like"><div class="para logical" id="p-44">
+<div class="para">Integral da função potência para <span class="process-math">\(q=-1\text{:}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integral{\frac{1}{x}}{x} = \ln{|x|} + C\text{.}
 \end{equation*}
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<p id="p-45">A fórmula da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="[assemblage]: Integral da função potência">Integral da função potência</a> não é válida para <span class="process-math">\(q=-1\text{.}\)</span> Logo não é possível utilizá-la para obter a integral indefinida de <span class="process-math">\(1/x\text{.}\)</span> O passo natural é encontrar uma função cuja derivada seja <span class="process-math">\(1/x\text{.}\)</span> Sabe-se que</p>
-<div class="displaymath process-math">
+</div>
+<div class="solutions"><details id="solution-10" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-45">
+<div class="para">A fórmula da <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="Coleção: Integral da função potência">Integral da função potência</a> não é válida para <span class="process-math">\(q=-1\text{.}\)</span> Logo não é possível utilizá-la para obter a integral indefinida de <span class="process-math">\(1/x\text{.}\)</span> O passo natural é encontrar uma função cuja derivada seja <span class="process-math">\(1/x\text{.}\)</span> Sabe-se que</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
 \begin{equation*}
 \frac{\dd}{\dd x}\ln{x}= \frac{1}{x}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Então,</p>
-<div class="displaymath process-math">
+<div class="para">Então,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html" id="md-3">
 \begin{align}
-\integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  \text{.}\label{ln-primitiva-positiva}\tag{✶}
+\integral{\frac{1}{x}}{x} \amp= \ln{x} + C, \, x \gt 0  \text{.}\tag{✶}
 \end{align}
 </div>
-<p class="continuation">De fato, o logaritmo natural não está definido para valores menores que zero. Mas,</p>
-<div class="displaymath process-math">
+<div class="para">De fato, o logaritmo natural não está definido para valores menores que zero. Mas,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html" id="md-4">
 \begin{gather}
-\frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x}  \text{,}\label{ln-primitiva-negativa}\tag{✶✶}
+\frac{\dd}{\dd x}\ln{(-x)} = (-1)\frac{1}{-x}=\frac{1}{x}  \text{,}\tag{✶✶}
 \end{gather}
 </div>
-<p class="continuation">para <span class="process-math">\(x \lt 0\text{.}\)</span> Então,</p>
-<div class="displaymath process-math">
+<div class="para">para <span class="process-math">\(x \lt 0\text{.}\)</span> Então,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
 \begin{equation*}
 \integral{\frac{1}{x}}{x}= \ln{(-x)} + C, \quad x \lt 0\text{.}
 \end{equation*}
 </div>
-<p class="continuation">De <a href="" class="xref" data-knowl="./knowl/ln-primitiva-positiva.html" title="Equação">(✶)</a> e <a href="" class="xref" data-knowl="./knowl/ln-primitiva-negativa.html" title="Equação">(✶✶)</a> concluímos que <span class="process-math">\(\ln{x}\)</span> é primitiva de  <span class="process-math">\(\sfrac{1}{x}\)</span> se <span class="process-math">\(x\gt 0\)</span> e que  <span class="process-math">\(\ln{(-x)}\)</span> é primitiva de <span class="process-math">\(1/x\)</span> se <span class="process-math">\(x\lt 0\text{.}\)</span> Mais diretamente, podemos afirmar que <span class="process-math">\(\ln{|x|}\)</span> é uma primitiva de <span class="process-math">\(1/x\text{.}\)</span> Portanto,</p>
-<div class="displaymath process-math">
+<div class="para">De <a href="" class="xref" data-knowl="./knowl/ln-primitiva-positiva.html" title="Equação">(✶)</a> e <a href="" class="xref" data-knowl="./knowl/ln-primitiva-negativa.html" title="Equação">(✶✶)</a> concluímos que <span class="process-math">\(\ln{x}\)</span> é primitiva de  <span class="process-math">\(\sfrac{1}{x}\)</span> se <span class="process-math">\(x\gt 0\)</span> e que  <span class="process-math">\(\ln{(-x)}\)</span> é primitiva de <span class="process-math">\(1/x\)</span> se <span class="process-math">\(x\lt 0\text{.}\)</span> Mais diretamente, podemos afirmar que <span class="process-math">\(\ln{|x|}\)</span> é uma primitiva de <span class="process-math">\(1/x\text{.}\)</span> Portanto,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob-integral-funcao-potencia.html ./knowl/ln-primitiva-positiva.html ./knowl/ln-primitiva-negativa.html">
 \begin{equation*}
 \integral{\frac{1}{x}}{x} = \ln{|x|} + C\text{.}
 \end{equation*}
 </div>
-</div></div>
-</div></article></div>
-<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
+</div></div></details></div></article></details><details id="example-7" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\integral{e^x}{x}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-46">Integral da função exponencial:</p>
+</h4></summary><article class="example example-like"><div class="para logical" id="p-46">
+<div class="para">Integral da função exponencial:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integral{e^x}{x}=e^x + C 
 \end{equation*}
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<p id="p-47">Como <span class="process-math">\(\frac{\dd }{\dd x}[e^x]=e^x\text{,}\)</span> concluímos que a função exponencial é sua própria primitiva. Logo,</p>
+</div>
+<div class="solutions"><details id="solution-11" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-47">
+<div class="para">Como <span class="process-math">\(\frac{\dd }{\dd x}[e^x]=e^x\text{,}\)</span> concluímos que a função exponencial é sua própria primitiva. Logo,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integral{e^x}{x}= e^x + C.
 \end{equation*}
 </div>
-</div></div>
-</div></article></div>
-<article class="example example-like" id="ex-integral-indefinida4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-integral-indefinida4"><h4 class="heading">
+</div></div></details></div></article></details><details id="ex-integral-indefinida4" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\integral{\sin{x}}{x}\)</span> e <span class="process-math">\(\integral{\cos{x}}{x}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-integral-indefinida4"><article class="example example-like"><p id="p-48">A integral das funções seno e cosseno:</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para logical" id="p-48">
+<div class="para">A integral das funções seno e cosseno:</div>
+<div class="displaymath process-math" id="int-sen-cos">
 \begin{align*}
 \integral{\sin{x}}{x}\amp =-\cos{x}+C\\
 \integral{\cos{x}}{x} \amp=\sin{x}+C 
 \end{align*}
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
-<p id="p-49">Seguem do fato de</p>
-<div class="displaymath process-math">
+</div>
+<div class="solutions"><details id="solution-12" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-49">
+<div class="para">Seguem do fato de</div>
+<div class="displaymath process-math" id="md-6">
 \begin{align*}
 \frac{\dd }{\dd x}[\cos{x}]=-\sin{x} \amp \quad  \text{e} \quad \frac{\dd }{\dd x}[\sin{x}]=\cos{x}\text{.}
 \end{align*}
 </div>
-</div></div>
-</div></article></div>
-<article class="assemblage assemblage-like" id="thm-prop-integral-indefinida"><h4 class="heading"><span class="title">Propriedadades da Integral Indefinida.</span></h4>
-<p id="p-50">Se  <span class="process-math">\(k\)</span> uma constante e <span class="process-math">\(F(x)\)</span> e <span class="process-math">\(G(x)\)</span> são primitivas de <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\text{,}\)</span> respectivamente, então</p>
+</div></div></details></div></article></details><article class="assemblage assemblage-like" id="thm-prop-integral-indefinida"><h4 class="heading"><span class="title">Propriedadades da Integral Indefinida.</span></h4>
+<div class="para logical" id="p-50">
+<div class="para">Se  <span class="process-math">\(k\)</span> uma constante e <span class="process-math">\(F(x)\)</span> e <span class="process-math">\(G(x)\)</span> são primitivas de <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\text{,}\)</span> respectivamente, então</div>
 <ol class="upper-roman">
-<li id="thm-prop-integral-indefinida-a"><p id="p-51"><span class="process-math">\(\displaystyle \small{\integral{kf(x)}{x}=k\integral{f(x)}{x}}\)</span></p></li>
-<li id="thm-prop-integral-indefinida-b"><p id="p-52"><span class="process-math">\(\displaystyle \small{\integral{\left[ f(x) + g(x)\right]}{x}=\integral{f(x)}{x} + \integral{g(x)}{x}}\)</span></p></li>
-<li id="thm-prop-integral-indefinida-c"><p id="p-53"><span class="process-math">\(\displaystyle \small{\integral{\left[f(x) - g(x)\right]}{x}=\integral{f(x)}{x} - \integral{g(x)}{x}}\)</span></p></li>
-</ol></article><article class="example example-like" id="ex1-prop-integral-indefinida"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex1-prop-integral-indefinida"><h4 class="heading">
+<li id="thm-prop-integral-indefinida-a"><div class="para" id="p-51"><span class="process-math">\(\displaystyle \small{\integral{kf(x)}{x}=k\integral{f(x)}{x}}\)</span></div></li>
+<li id="thm-prop-integral-indefinida-b"><div class="para" id="p-52"><span class="process-math">\(\displaystyle \small{\integral{\left[ f(x) + g(x)\right]}{x}=\integral{f(x)}{x} + \integral{g(x)}{x}}\)</span></div></li>
+<li id="thm-prop-integral-indefinida-c"><div class="para" id="p-53"><span class="process-math">\(\displaystyle \small{\integral{\left[f(x) - g(x)\right]}{x}=\integral{f(x)}{x} - \integral{g(x)}{x}}\)</span></div></li>
+</ol>
+</div></article><details id="ex1-prop-integral-indefinida" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Aplicando propriedades.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex1-prop-integral-indefinida"><article class="example example-like"><p id="p-54">Determine cada integral: <article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-55"><span class="process-math">\(\integral{2\cos{x}}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><div class="displaymath process-math" id="p-56">
+</h4></summary><article class="example example-like"><div class="para" id="p-54">Determine cada integral: <article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-55"><span class="process-math">\(\integral{2\cos{x}}{x}\text{.}\)</span></div>
+<div class="solutions"><details id="solution-13" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-56"><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-prop-integral-indefinida-a.html" id="md-7">
 \begin{align*}
 \integral{2\cos{x}}{x} \amp = 2\integral{\cos{x}}{x} \amp \knowl{./knowl/thm-prop-integral-indefinida-a.html}{\text{Propriedade I}}\\
 \amp = 2\sin{x} + C\amp \color{gray}{\frac{\dd}{\dd x}\left[\cos{x}\right]=\sin{x}} 
 \end{align*}
-</div></div></div>
-</div></article> <article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-57"><span class="process-math">\(\integral{(x^2+ e^x)}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="displaymath process-math" id="p-58">
+</div></div></div></details></div></article> <article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-57"><span class="process-math">\(\integral{(x^2+ e^x)}{x}\text{.}\)</span></div>
+<div class="solutions"><details id="solution-14" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-58"><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-prop-integral-indefinida-b.html ./knowl/prob-integral-funcao-potencia.html" id="md-8">
 \begin{align*}
 \integral{(x^2+ e^x)}{x}\amp = \integral{x^2}{x} + \integral{e^x}{x} \amp \knowl{./knowl/thm-prop-integral-indefinida-b.html}{\text{Propriedade II}}\\
 \amp = \frac{x^3}{3} + e^x + C \amp \knowl{./knowl/prob-integral-funcao-potencia.html}{\text{Integral da função potência}}
 \end{align*}
-</div></div></div>
-</div></article></p></article></div>
-<article class="example example-like" id="ex2-prop-integral-indefinida"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex2-prop-integral-indefinida"><h4 class="heading">
+</div></div></div></details></div></article>
+</div></article></details><details id="ex2-prop-integral-indefinida" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Integração de funções polinomiais.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex2-prop-integral-indefinida"><article class="example example-like"><p id="p-59">Determine cada integral. <article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-60"><span class="process-math">\(\integral{(t^5 + 2t^3 - t + 1)}{t}\text{.}\)</span></p></article> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="displaymath process-math" id="p-61">
+</h4></summary><article class="example example-like"><div class="para" id="p-59">Determine cada integral. <article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-60"><span class="process-math">\(\integral{(t^5 + 2t^3 - t + 1)}{t}\text{.}\)</span></div>
+<div class="solutions"><details id="solution-15" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-61"><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-prop-integral-indefinida.html ./knowl/prob-integral-funcao-potencia.html" id="md-9">
 \begin{align*}
 \integral{(t^5 + 2t^3 - t + 1)}{t}\amp =
 \integral{t^5}{t} + 2\integral{t^3}{t} - \integral{t}{t} +
@@ -463,65 +483,60 @@ F(x)= 3\left(\frac{x^2}{2}\right) + x - 4\text{.}
 \amp \knowl{./knowl/thm-prop-integral-indefinida.html}{\text{Propriedadades da Integral Indefinida}}\\
 \amp = \frac{t^{6}}{6}  + \frac{t^{4}}{2} - \frac{t^{2} }{2}  + t + C \amp \knowl{./knowl/prob-integral-funcao-potencia.html}{\text{Integral da função potência}}
 \end{align*}
-</div></div></div> <article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-62"><span class="process-math">\(\integral{(x^2+x)}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><div class="displaymath process-math" id="p-63">
+</div></div></div></details></div></article> <article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-62"><span class="process-math">\(\integral{(x^2+x)}{x}\text{.}\)</span></div>
+<div class="solutions"><details id="solution-16" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-63"><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-prop-integral-indefinida-b.html ./knowl/prob-integral-funcao-potencia.html" id="md-10">
 \begin{align*}
 \integral{(x^2+x)}{x}\amp = \integral{x^2}{x} + \integral{x}{x} \amp \knowl{./knowl/thm-prop-integral-indefinida-b.html}{\text{Propriedade II}}\\
 \amp = \frac{x^3}{3} + \frac{x^2}{2} + C \amp \knowl{./knowl/prob-integral-funcao-potencia.html}{\text{Integral da função potência}}
 \end{align*}
-</div></div></div>
-</div></article></p></article></div>
-<article class="example example-like" id="primitiva-segunda-derivada"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-primitiva-segunda-derivada"><h4 class="heading">
+</div></div></div></details></div></article>
+</div></article></details><details id="primitiva-segunda-derivada" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Primitiva particular.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-primitiva-segunda-derivada"><article class="example example-like"><p id="p-64">Encontre <span class="process-math">\(F(x)\)</span> sabendo que <span class="process-math">\(F''(x)=12x^2+6x-4\)</span> , <span class="process-math">\(F(0)=4\)</span> e <span class="process-math">\(F(1)=1\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
-<p id="p-65">A família de primitivas de <span class="process-math">\(F''(x)\)</span> é naturalmente</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-64">Encontre <span class="process-math">\(F(x)\)</span> sabendo que <span class="process-math">\(F''(x)=12x^2+6x-4\)</span> , <span class="process-math">\(F(0)=4\)</span> e <span class="process-math">\(F(1)=1\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-17" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-65">
+<div class="para">A família de primitivas de <span class="process-math">\(F''(x)\)</span> é naturalmente</div>
+<div class="displaymath process-math" id="md-11">
 \begin{align*}
 F'(x) \amp = 12\frac{x^3}{3} + 6\frac{x^2}{2} -4x+ C \amp  \color{gray}{\frac{\dd}{\dd x}\left[F'(x)\right]=F''(x)} \\
 \amp =4x^3 + 3x^2-4x+C 
 \end{align*}
 </div>
-<p class="continuation">Assim como todas as primitivas de <span class="process-math">\(F'(x)\)</span> tem a forma</p>
-<div class="displaymath process-math">
+<div class="para">Assim como todas as primitivas de <span class="process-math">\(F'(x)\)</span> tem a forma</div>
+<div class="displaymath process-math" id="md-12">
 \begin{align*}
 F(x)\amp = 4\frac{x^4}{4} + 3\frac{x^3}{3} -4\frac{x^2}{2} + Cx + D \amp \color{gray}{\frac{\dd}{\dd x}\left[F(x)\right]=F'(x)} \\
 \amp = x^4 + x^3-2x^2+Cx+D 
 \end{align*}
 </div>
-<p class="continuation">Uma vez que <span class="process-math">\(F\)</span> deve satisfazer <span class="process-math">\(F(0)=4\)</span> e <span class="process-math">\(F(1)=1\)</span> temos</p>
-<div class="displaymath process-math">
+<div class="para">Uma vez que <span class="process-math">\(F\)</span> deve satisfazer <span class="process-math">\(F(0)=4\)</span> e <span class="process-math">\(F(1)=1\)</span> temos</div>
+<div class="displaymath process-math" id="md-13">
 \begin{align*}
 F(0)  \amp = 0+D =4 \\
 F(1) \amp = 1+ 1-2+C+4=1 
 \end{align*}
 </div>
-<p class="continuation">que nos fornece <span class="process-math">\(D=4\)</span> e <span class="process-math">\(C=-3\text{.}\)</span> Por fim, encontramos</p>
-<div class="displaymath process-math">
+<div class="para">que nos fornece <span class="process-math">\(D=4\)</span> e <span class="process-math">\(C=-3\text{.}\)</span> Por fim, encontramos</div>
+<div class="displaymath process-math" id="md-14">
 \begin{align*}
 F(x) = x^4+ x^3-2x^2-3x+4 \amp \text{.}
 \end{align*}
 </div>
-</div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exe-trig"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-trig"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-trig"><article class="exercise exercise-like"><p id="p-66">Determine <span class="process-math">\(\integral{\left(\sin{t}+3\cos{t}\right)}{t}\)</span></p>
+</div></div></details></div></article></details><details id="exe-trig" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-66">Determine <span class="process-math">\(\integral{\left(\sin{t}+3\cos{t}\right)}{t}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-67">Revise o <a href="" class="xref" data-knowl="./knowl/ex-integral-indefinida4.html" title="Exemplo 1.15: \(\integral{\sin{x}}{x}\) e \(\integral{\cos{x}}{x}\)">Exemplo 1.15</a> e <a href="" class="xref" data-knowl="./knowl/thm-prop-integral-indefinida.html" title="[assemblage]: Propriedadades da Integral Indefinida">Propriedadades da Integral Indefinida</a>.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-68"><span class="process-math">\(-\cos{t} + 3\sin{t} + C\)</span></p></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exe-primitiva-segunda-derivada"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-primitiva-segunda-derivada"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-primitiva-segunda-derivada"><article class="exercise exercise-like"><p id="p-69">Encontre <span class="process-math">\(F(x)\)</span> sabendo que <span class="process-math">\(F''(x)=\frac{6}{\sqrt{x}} + 3\)</span> , <span class="process-math">\(F'(1)=12\)</span> e <span class="process-math">\(F(4)=56\text{.}\)</span></p>
+<details id="hint-4" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-67">Revise o <a href="" class="xref" data-knowl="./knowl/ex-integral-indefinida4.html" title="Exemplo 1.15: \integral{\sin{x}}{x} e \integral{\cos{x}}{x}">Exemplo 1.15</a> e <a href="" class="xref" data-knowl="./knowl/thm-prop-integral-indefinida.html" title="Coleção: Propriedadades da Integral Indefinida">Propriedadades da Integral Indefinida</a>.</div></div></details><details id="answer-4" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-68"><span class="process-math">\(-\cos{t} + 3\sin{t} + C\)</span></div></div></details>
+</div></article></details><details id="exe-primitiva-segunda-derivada" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-69">Encontre <span class="process-math">\(F(x)\)</span> sabendo que <span class="process-math">\(F''(x)=\frac{6}{\sqrt{x}} + 3\)</span> , <span class="process-math">\(F'(1)=12\)</span> e <span class="process-math">\(F(4)=56\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-70">Revise  o <a href="" class="xref" data-knowl="./knowl/primitiva-segunda-derivada.html" title="Exemplo 1.18: Primitiva particular">Exemplo 1.18</a> e <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="[assemblage]: Integral da função potência">Integral da função potência</a>.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-71"><span class="process-math">\(\frac{3}{2}x^{2} + 8x^{\frac{3}{2}} - 3x - 20\)</span></p></div></div>
-</div></article></div></section><section class="subsection" id="subsec-tabela-integrais"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Tabela de integrais</span>
+<details id="hint-5" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-70">Revise  o <a href="" class="xref" data-knowl="./knowl/primitiva-segunda-derivada.html" title="Exemplo 1.18: Primitiva particular">Exemplo 1.18</a> e <a href="" class="xref" data-knowl="./knowl/prob-integral-funcao-potencia.html" title="Coleção: Integral da função potência">Integral da função potência</a>.</div></div></details><details id="answer-5" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-71"><span class="process-math">\(\frac{3}{2}x^{2} + 8x^{\frac{3}{2}} - 3x - 20\)</span></div></div></details>
+</div></article></details></section><section class="subsection" id="subsec-tabela-integrais"><h3 class="heading hide-type">
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Tabela de integrais</span>
 </h3>
 <figure class="table table-like" id="tabela1-integrais"><figcaption><span class="type">Tabela</span><span class="space"> </span><span class="codenumber">1.21<span class="period">.</span></span><span class="space"> </span>Tabela de integração</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="c m b1 r0 l0 t3 lines">Fórmula</td></tr>
@@ -541,227 +556,214 @@ F(x) = x^4+ x^3-2x^2-3x+4 \amp \text{.}
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\integral{\frac{1}{1+x^2}}{x}=\arctan{x} + C\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\integral{\frac{1}{\sqrt{1-x^2}}}{x}=\arcsin{x} + C\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\integral{\frac{1}{x\sqrt{x^2-1}}}{x}=\arcsec{|x|} + C\)</span></td></tr>
-</table></div></figure><article class="example example-like" id="ex3-prop-integral-indefinida"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex3-prop-integral-indefinida"><h4 class="heading">
+</table></div></figure><details id="ex3-prop-integral-indefinida" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Reescrever antes de integrar.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex3-prop-integral-indefinida"><article class="example example-like"><p id="p-72"><article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-73"><span class="process-math">\(\integral{\frac{x^2}{x^2+1}}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
-<p id="p-74">Somando e subtraindo 1 do numerador do integrando, podemos reescrever a integral de modo permitir aplicar as fórmulas sugeridas na <a href="" class="xref" data-knowl="./knowl/tabela2-integrais.html" title="Tabela 1.22: Tabela de integração">Tabela 1.22</a>. Os passos seguintes são ilustramos logo abaixo:</p>
-<div class="displaymath process-math" id="p-75">
+</h4></summary><article class="example example-like"><div class="para" id="p-72">
+<article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-73"><span class="process-math">\(\integral{\frac{x^2}{x^2+1}}{x}\text{.}\)</span></div>
+<div class="solutions"><details id="solution-18" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-74">Somando e subtraindo 1 do numerador do integrando, podemos reescrever a integral de modo permitir aplicar as fórmulas sugeridas na <a href="" class="xref" data-knowl="./knowl/tabela2-integrais.html" title="Tabela 1.22: Tabela de integração">Tabela 1.22</a>. Os passos seguintes são ilustramos logo abaixo:</div> <div class="para logical" id="p-75"><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-prop-integral-indefinida-c.html ./knowl/tabela2-integrais.html" id="md-15">
 \begin{align*}
 \integral{\frac{x^2}{x^2+1}}{x} \amp = \integral{\left(\frac{x^2+1}{x^2+1}-\frac{1}{x^2+1}\right)}{x} \amp \color{gray}{\text{(reescrevendo o integrando)}}\\
 \amp =\integral{\left(1-\frac{1}{x^2+1}\right)}{x} \\
 \amp = \integral{1}{x} - \integral{\left(\frac{1}{x^2+1}\right)}{x} \quad \amp \knowl{./knowl/thm-prop-integral-indefinida-c.html}{\text{Propriedade III}}\\
 \amp = x - \arctan{x} + C \quad  \quad \amp \knowl{./knowl/tabela2-integrais.html}{\text{Tabela 1.22}}
 \end{align*}
-</div>
 </div></div>
-</div></article> <article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-76"><span class="process-math">\(\integral{\frac{x^2- 2x^4}{x^4}}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="displaymath process-math" id="p-77">
+</div></details></div></article> <article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-76"><span class="process-math">\(\integral{\frac{x^2- 2x^4}{x^4}}{x}\text{.}\)</span></div>
+<div class="solutions"><details id="solution-19" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-77"><div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-prop-integral-indefinida-b.html ./knowl/tabela2-integrais.html" id="md-16">
 \begin{align*}
 \integral{\frac{x^2- 2x^4}{x^4}}{x} = \amp \integral{\left(\frac{1}{x^2}-2\right)}{x} \quad \amp \color{gray}{\text{(reescrevendo o integrando)}}\\
 \amp =\integral{x^{-2}}{x}-\integral{2}{x} \amp \knowl{./knowl/thm-prop-integral-indefinida-b.html}{\text{Propriedade II}}\\
 \amp =\frac{x^{-1}}{-1}-2x + C  \amp \knowl{./knowl/tabela2-integrais.html}{\text{Tabela 1.22}}\\
 \amp =-\frac{1}{x}-2x + C \amp \color{gray}{\text{(simplificando)}}
 \end{align*}
-</div></div></div>
-</div></article></p></article></div>
-<article class="example example-like" id="ex4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex4"><h4 class="heading">
+</div></div></div></details></div></article>
+</div></article></details><details id="ex4" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Identidades trigonométricas.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex4"><article class="example example-like"><p id="p-78">Determine <span class="process-math">\(\integral{\frac{\cos{x}}{\sin^2{x}}}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="displaymath process-math" id="p-79">
+</h4></summary><article class="example example-like"><div class="para" id="p-78">Determine <span class="process-math">\(\integral{\frac{\cos{x}}{\sin^2{x}}}{x}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-20" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-79"><div class="displaymath process-math" data-contains-math-knowls="./knowl/tabela2-integrais.html" id="md-17">
 \begin{align*}
 \integral{\frac{\cos{x}}{\sin^2{x}}}{x}\amp = \integral{\left(\frac{1}{\sin{x}}\frac{\cos{x}}{\sin{x}}\right)}{x} \quad \amp\color{gray}{\text{(reescrevendo o integrando)}}\\
 \amp = \integral{\csc{x}\cot{x}}{x} \amp \color{gray}{\text{(identidades trigonométricas)}}\\
 \amp = -\csc{x} + C \quad \amp \knowl{./knowl/tabela2-integrais.html}{\text{Tabela 1.22}}
 \end{align*}
-</div></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-6"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-80">Determine <span class="process-math">\(\integral{\frac{x^5+ 2x-1}{x^4}}{x}\text{.}\)</span></p>
+</div></div></div></details></div></article></details><details id="exercise-6" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-80">Determine <span class="process-math">\(\integral{\frac{x^5+ 2x-1}{x^4}}{x}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like">
-<p id="p-81">Verifique que a igualdade</p>
+<details id="hint-6" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para logical" id="p-81">
+<div class="para">Verifique que a igualdade</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{x^5+ 2x-1}{x^4}=-\frac{1}{x^4}+ \frac{2}{x^3} + x
 \end{equation*}
 </div>
-<p class="continuation">é verdadeira.</p>
-</div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-82"><span class="process-math">\(\frac{3x^5-6x+2}{6x^3} + C\)</span></p></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-7"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-7"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><p id="p-83">Determine <span class="process-math">\(\integral{\left(\frac{2}{x}+3e^x\right)}{x}\text{.}\)</span></p>
+<div class="para">é verdadeira.</div>
+</div></div></details><details id="answer-6" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-82"><span class="process-math">\(\frac{3x^5-6x+2}{6x^3} + C\)</span></div></div></details>
+</div></article></details><details id="exercise-7" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-83">Determine <span class="process-math">\(\integral{\left(\frac{2}{x}+3e^x\right)}{x}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-84">Consulte a <a href="" class="xref" data-knowl="./knowl/tabela2-integrais.html" title="Tabela 1.22: Tabela de integração">Tabela 1.22</a>.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-85"><span class="process-math">\(3 e^{x} + 2 \ln{|x|} + C\)</span></p></div></div>
-</div></article></div></section><section class="subsection" id="subsubsec-videos-1"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Sugestão de Vídeos</span>
+<details id="hint-7" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-84">Consulte a <a href="" class="xref" data-knowl="./knowl/tabela2-integrais.html" title="Tabela 1.22: Tabela de integração">Tabela 1.22</a>.</div></div></details><details id="answer-7" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-85"><span class="process-math">\(3 e^{x} + 2 \ln{|x|} + C\)</span></div></div></details>
+</div></article></details></section><section class="subsection" id="subsubsec-videos-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Sugestão de Vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-7"><p id="p-86">Conceito de Primitivas: <a class="external" href="https://youtu.be/LviZwZMVMgA" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/LviZwZMVMgA</code></a></p></li>
-<li id="li-8"><p id="p-87">Resolvendo <a class="external" href="https://youtu.be/f1epDo4u7bE" target="_blank"><span class="process-math">\(\integral{(3x^2 - 2x)}{x}\)</span> e <span class="process-math">\(\integral{e^x}{x}.\)</span></a></p></li>
-<li id="li-9"><p id="p-88">Integrais de funções constantes: <a class="external" href="https://youtu.be/28RKYYlVaK4" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/28RKYYlVaK4</code></a></p></li>
-<li id="li-10"><p id="p-89">Resolvendo <a class="external" href="https://youtu.be/bcD4aFioMFI" target="_blank"><span class="process-math">\(\integral{\frac{1}{x}}{x}\)</span></a></p></li>
-<li id="li-11"><p id="p-90">Integral de funções básicas:  <a class="external" href="https://youtu.be/upYYltnJwn0" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/upYYltnJwn0</code></a></p></li>
+<li id="li-7"><div class="para" id="p-86">Conceito de Primitivas: <a class="external" href="https://youtu.be/LviZwZMVMgA" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/LviZwZMVMgA</code></a>
+</div></li>
+<li id="li-8"><div class="para" id="p-87">Resolvendo <a class="external" href="https://youtu.be/f1epDo4u7bE" target="_blank"><span class="process-math">\(\integral{(3x^2 - 2x)}{x}\)</span> e <span class="process-math">\(\integral{e^x}{x}.\)</span></a><a class="xref" id="fn-3" href="" data-knowl="./knowl/fn-3.html" title="Nota de rodapé 1.3"><sup> 3 </sup></a>
+</div></li>
+<li id="li-9"><div class="para" id="p-88">Integrais de funções constantes: <a class="external" href="https://youtu.be/28RKYYlVaK4" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/28RKYYlVaK4</code></a>
+</div></li>
+<li id="li-10"><div class="para" id="p-89">Resolvendo <a class="external" href="https://youtu.be/bcD4aFioMFI" target="_blank"><span class="process-math">\(\integral{\frac{1}{x}}{x}\)</span></a><a class="xref" id="fn-4" href="" data-knowl="./knowl/fn-4.html" title="Nota de rodapé 1.4"><sup> 4 </sup></a>
+</div></li>
+<li id="li-11"><div class="para" id="p-90">Integral de funções básicas:  <a class="external" href="https://youtu.be/upYYltnJwn0" target="_blank"><code class="code-inline tex2jax_ignore">https://youtu.be/upYYltnJwn0</code></a>
+</div></li>
 </ul></section><section class="subsection" id="subsubsec-teconologia"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Tecnologia</span>
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Tecnologia</span>
 </h3>
 <article class="technology computation-like" id="technology-1"><h4 class="heading">
 <span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o software SageMath.</span>
-</h4>
-<div class="introduction" id="introduction-1">
-<p id="p-91">Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema de computação algébrica  <a class="external" href="https://www.sagemath.org" target="_blank">SageMath</a>. Com uma sintaxe simples e baseada em <em class="emphasis">Python</em><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> O <em class="emphasis">SageMath</em> (abreviaremos como <em class="emphasis">Sage</em>) é <em class="emphasis">open-source</em> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a> e tem sido bastante utilizado por professores e  estudantes de todos os níveis para conferir cálculos algébricos complicados. Uma boa referência em língua portuguesa para este software pode ser encontrado na página  <a class="external" href="https://www.sagectu.com.br" target="_blank"><code class="code-inline tex2jax_ignore">https://www.sagectu.com.br</code></a>. Detalhes sobre os comandos são resumidos em <a class="external" href="https://sagectu.com.br/sagecell.html" target="_blank"><code class="code-inline tex2jax_ignore">https://sagectu.com.br/sagecell.html</code></a>.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Linguagem de programação.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Uso gratuito e de código aberto.</div></div>
-</div>
-<section class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Sintaxe dos comandos.</span></h5>
-<p id="p-92">Com o <em class="emphasis">SageMath</em>, usando o comando <code class="code-inline tex2jax_ignore">integral(f, x)</code> é possível calcular a integral indefinida de <span class="process-math">\(f(x)\)</span> em relação a variável <span class="process-math">\(x\text{.}\)</span> Por exemplo, o <a href="" class="xref" data-knowl="./knowl/ex4.html" title="Exemplo 1.24: Identidades trigonométricas">Exemplo 1.24</a> pode ser resolvida com o comando: <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">integral(x^2/(x^2+1), x)
-</script></div> Mas se a função depender da variável <span class="process-math">\(t\text{,}\)</span> por exemplo, <span class="process-math">\(f(t)=t^3-2t^2+ 3t + 1 \text{?}\)</span> Basta declarar a variável <span class="process-math">\(t\)</span> usando o comando <code class="code-inline tex2jax_ignore">var('t')</code>. <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">var('t')
+</h4> <div class="introduction" id="introduction-1"><div class="para" id="p-91">Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema de computação algébrica  <a class="external" href="https://www.sagemath.org" target="_blank">SageMath</a><a class="xref" id="fn-5" href="" data-knowl="./knowl/fn-5.html" title="Nota de rodapé 1.5"><sup> 5 </sup></a>. Com uma sintaxe simples e baseada em <em class="emphasis">Python</em><a class="xref" id="fn-6" href="" data-knowl="./knowl/fn-6.html" title="Nota de rodapé 1.6"><sup> 6 </sup></a> O <em class="emphasis">SageMath</em> (abreviaremos como <em class="emphasis">Sage</em>) é <em class="emphasis">open-source</em> <a class="xref" id="fn-7" href="" data-knowl="./knowl/fn-7.html" title="Nota de rodapé 1.7"><sup> 7 </sup></a> e tem sido bastante utilizado por professores e  estudantes de todos os níveis para conferir cálculos algébricos complicados. Uma boa referência em língua portuguesa para este software pode ser encontrado na página  <a class="external" href="https://www.sagectu.com.br" target="_blank"><code class="code-inline tex2jax_ignore">https://www.sagectu.com.br</code></a>. Detalhes sobre os comandos são resumidos em <a class="external" href="https://sagectu.com.br/sagecell.html" target="_blank"><code class="code-inline tex2jax_ignore">https://sagectu.com.br/sagecell.html</code></a>.</div></div> <section class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Sintaxe dos comandos.</span></h5> <div class="para" id="p-92">Com o <em class="emphasis">SageMath</em>, usando o comando <code class="code-inline tex2jax_ignore">integral(f, x)</code> é possível calcular a integral indefinida de <span class="process-math">\(f(x)\)</span> em relação a variável <span class="process-math">\(x\text{.}\)</span> Por exemplo, o <a href="" class="xref" data-knowl="./knowl/ex4.html" title="Exemplo 1.24: Identidades trigonométricas">Exemplo 1.24</a> pode ser resolvido com o comando: <pre id="sage-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">integral(x^2/(x^2+1), x)
+</script></pre> Mas se a função depender da variável <span class="process-math">\(t\text{,}\)</span> por exemplo, <span class="process-math">\(f(t)=t^3-2t^2+ 3t + 1 \text{?}\)</span> Basta declarar a variável <span class="process-math">\(t\)</span> usando o comando <code class="code-inline tex2jax_ignore">var('t')</code>. <pre id="sage-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('t')
 integral(t^3-2*t^2+ 3*t + 1, t )
-</script></div> Para obter a integral com a notação matemática usual, o <em class="emphasis">Sage</em> possui o comando <code class="code-inline tex2jax_ignore">show</code>, observe: <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">var('t')
+</script></pre> Para obter a integral com a notação matemática usual, o <em class="emphasis">Sage</em> possui o comando <code class="code-inline tex2jax_ignore">show</code>, observe: <pre id="sage-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('t')
 F = integral(t^3-2*t^2+ 3*t + 1, t)
 show(F)
-</script></div></p>
-<p id="p-93">Nas células acima pode-se notar que os comandos <code class="code-inline tex2jax_ignore">/</code>, <code class="code-inline tex2jax_ignore">*</code>, <code class="code-inline tex2jax_ignore">^</code> <code class="code-inline tex2jax_ignore">+</code>, <code class="code-inline tex2jax_ignore">-</code>, representam a operações de divisão, multiplicação, potenciação,  soma e subtração, respectivamente. Existe muitos outros comandos de operações matemáticas importantes, confira em <a class="external" href="https://sagectu.com.br/sagecell.html" target="_blank"><code class="code-inline tex2jax_ignore">https://sagectu.com.br/sagecell.html</code></a>.</p>
-<article class="activity project-like" id="activity-2"><h6 class="heading">
+</script></pre>
+</div> <div class="para" id="p-93">Nas células acima pode-se notar que os comandos <code class="code-inline tex2jax_ignore">/</code>, <code class="code-inline tex2jax_ignore">*</code>, <code class="code-inline tex2jax_ignore">^</code> <code class="code-inline tex2jax_ignore">+</code>, <code class="code-inline tex2jax_ignore">-</code>, representam a operações de divisão, multiplicação, potenciação,  soma e subtração, respectivamente. Existe muitos outros comandos de operações matemáticas importantes, confira em <a class="external" href="https://sagectu.com.br/sagecell.html" target="_blank"><code class="code-inline tex2jax_ignore">https://sagectu.com.br/sagecell.html</code></a>.</div> <article class="activity project-like" id="activity-2"><h6 class="heading">
 <span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h6>
-<p id="p-94">Usando a célula do <em class="emphasis">Sage</em> abaixo, confira todas as integrais apresentadas até aqui. Se a resposta produzida  não estiver de acordo com a sua, mostre que elas são equivalentes. <div class="sagecell-sage" id="sage-4"><script type="text/x-sage">
-</script></div></p></article><article class="activity project-like" id="activity-3"><h6 class="heading">
+<div class="para" id="p-94">Usando a célula do <em class="emphasis">Sage</em> abaixo, confira todas as integrais apresentadas até aqui. Se a resposta produzida  não estiver de acordo com a sua, mostre que elas são equivalentes. <pre id="sage-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></pre>
+</div></article> <article class="activity project-like" id="activity-3"><h6 class="heading">
 <span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
 </h6>
-<p id="p-95">O avanço dos softwares matemáticos tornou possível calcular vários tipos de integrais que dariam muito trabalho se feitos à mão. <article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-96">Usando o conteúdo aprendido até aqui encontre</p>
+<div class="para" id="p-95">O avanço dos softwares matemáticos tornou possível calcular vários tipos de integrais que dariam muito trabalho se feitos à mão. <article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para logical" id="p-96">
+<div class="para">Usando o conteúdo aprendido até aqui encontre</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integral{\frac{5x^2}{(1+x)^{1/3}}}{x} \text{.}
 \end{equation*}
+</div>
 </div></article> <article class="task exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-97">Use <em class="emphasis">Sage</em> para encontrar a integral do item anterior.</p></article> <div class="sagecell-sage" id="sage-5"><script type="text/x-sage">
-</script></div></p></article></section></article></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.5</span> <span class="title">Exercícios</span>
+<div class="para" id="p-97">Use <em class="emphasis">Sage</em> para encontrar a integral do item anterior.</div></article> <pre id="sage-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></pre>
+</div></article></section></article></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Exercícios</span><span class="space"> </span><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Exercícios</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-98">Determine as integrais indefinidas abaixo:</p>
-<p id="p-99">a) <span class="process-math">\(\displaystyle\int 4 e^t  \, dt\)</span> = <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> <span class="process-math">\(+ C\text{.}\)</span></p>
-<p id="p-100">b) <span class="process-math">\(\displaystyle\int 3^r  \, dr\)</span> = <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> <span class="process-math">\(+ C\text{.}\)</span></p>
-<p id="p-101">c) <span class="process-math">\(\displaystyle\int \dfrac{10^x}{18}  \,dx\)</span> = <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> <span class="process-math">\(+ C\text{.}\)</span></p>
+<div class="para" id="p-98">Determine as integrais indefinidas abaixo:</div> <div class="para" id="p-99">a) <span class="process-math">\(\displaystyle\int 4 e^t  \, dt\)</span> = <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> <span class="process-math">\(+ C\text{.}\)</span>
+</div> <div class="para" id="p-100">b) <span class="process-math">\(\displaystyle\int 3^r  \, dr\)</span> = <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> <span class="process-math">\(+ C\text{.}\)</span>
+</div> <div class="para" id="p-101">c) <span class="process-math">\(\displaystyle\int \dfrac{10^x}{18}  \,dx\)</span> = <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> <span class="process-math">\(+ C\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-102"><span class="process-math">\(4e^{t}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-103"><span class="process-math">\(\frac{3^{r}}{1.09861}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-104"><span class="process-math">\(\frac{10^{x}}{18\cdot 2.30259}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like">
-<div class="displaymath process-math" id="p-105">
+<details id="answer-8" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-102"><span class="process-math">\(4e^{t}\)</span></div></div></details><details id="answer-9" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-103"><span class="process-math">\(\frac{3^{r}}{1.09861}\)</span></div></div></details><details id="answer-10" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-104"><span class="process-math">\(\frac{10^{x}}{18\cdot 2.30259}\)</span></div></div></details><details id="solution-21" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-105"><div class="displaymath process-math">
 \begin{equation*}
 \int 4 e^t \, dt = 4 \int e^t \, dt = 4 e^t + C.
 \end{equation*}
-</div>
-<div class="displaymath process-math" id="p-106">
+</div></div> <div class="para logical" id="p-106"><div class="displaymath process-math">
 \begin{equation*}
 \int 3^r \, dr = 
 \dfrac{3^r}{\ln 3} + C.
 \end{equation*}
-</div>
-<div class="displaymath process-math" id="p-107">
+</div></div> <div class="para logical" id="p-107"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}
 \displaystyle\int \dfrac{10^x}{18} \, dx = \dfrac{1}{18} \displaystyle\int 10^x \, dx =
 \dfrac{10^x}{18 \ln 10} + C.
 \end{array}
 \end{equation*}
-</div>
 </div></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-108">Considere a função  <span class="process-math">\(f(x) = 3 x^ {10} + 5 x^{7} - 7 x^{3} - 7\text{.}\)</span> Qual a primitiva de <span class="process-math">\(f(x)\text{?}\)</span></p>
+<div class="para" id="p-108">Considere a função  <span class="process-math">\(f(x) = 3 x^ {10} + 5 x^{7} - 7 x^{3} - 7\text{.}\)</span> Qual a primitiva de <span class="process-math">\(f(x)\text{?}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-110"><span class="process-math">\(0.272727x^{11}+0.625x^{8}-1.75x^{4}-7x\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like">
-<p id="p-111">Relembre que para um termos na forma <span class="process-math">\(Ax^n\)</span>a primitiva é apenas o termo cuja derivada é <span class="process-math">\(Ax^n\text{.}\)</span>  Isto é, <span class="process-math">\(\frac{A}{n+1}x^{n+1} + C\)</span> na qual <span class="process-math">\(C\)</span> é uma constante desconhecida. A primitiva da constante <span class="process-math">\(A\)</span> é dada por <span class="process-math">\(Ax\text{.}\)</span>  Então, para encontrar a primitiva desta expressão, aplicamos esta regra termo a termos obtendo:</p>
-<div class="displaymath process-math" id="p-112">
+<details id="answer-11" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-109"><span class="process-math">\(0.272727x^{11}+0.625x^{8}-1.75x^{4}-7x\)</span></div></div></details><details id="solution-22" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-110">Relembre que para um termos na forma <span class="process-math">\(Ax^n\)</span>a primitiva é apenas o termo cuja derivada é <span class="process-math">\(Ax^n\text{.}\)</span>  Isto é, <span class="process-math">\(\frac{A}{n+1}x^{n+1} + C\)</span> na qual <span class="process-math">\(C\)</span> é uma constante desconhecida. A primitiva da constante <span class="process-math">\(A\)</span> é dada por <span class="process-math">\(Ax\text{.}\)</span>  Então, para encontrar a primitiva desta expressão, aplicamos esta regra termo a termos obtendo:</div> <div class="para logical" id="p-111"><div class="displaymath process-math">
 \begin{equation*}
 F(x) = \frac{3}{11}x^{11} + 
 \frac{5}{8}x^{8} - 
 \frac{7}{4}x^{4} - 
 {7}x + C
 \end{equation*}
-</div>
-<p id="p-113">Na qual <span class="process-math">\(C\)</span> é uma constante arbitrária.</p>
-</div></div>
+</div></div> <div class="para" id="p-112">Na qual <span class="process-math">\(C\)</span> é uma constante arbitrária.</div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-114">Determine a integral indefinida:</p>
-<p id="p-115"><span class="process-math">\(\displaystyle{ \int \left(4 x^2 + 3 x - 3\right) \,dx} =\)</span> <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span> + <span class="process-math">\(C\text{.}\)</span></p>
+<div class="para" id="p-113">Determine a integral indefinida:</div> <div class="para" id="p-114">
+<span class="process-math">\(\displaystyle{ \int \left(4 x^2 + 3 x - 3\right) \,dx} =\)</span> <span class="fillin underline" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span> + <span class="process-math">\(C\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-116"><span class="process-math">\(\frac{4x^{3}}{3}+\frac{3x^{2}}{2}-3x+C\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like">
-<p id="p-117">Basta verificar que</p>
+<details id="answer-12" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-115"><span class="process-math">\(\frac{4x^{3}}{3}+\frac{3x^{2}}{2}-3x+C\)</span></div></div></details><details id="solution-23" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-116">
+<div class="para">Basta verificar que</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int \left(4 x^2 + 3 x - 3\right) \,dx 
 = \frac{4x^{3}}{3}+\frac{3x^{2}}{2}-3x+C
 \end{equation*}
 </div>
-</div></div>
+</div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-118">Considere a função <span class="process-math">\(\displaystyle f(x) = x^5 + 2 \sqrt{x}\text{.}\)</span></p>
-<p id="p-119">Seja <span class="process-math">\(F(x)\)</span> a primitiva de <span class="process-math">\(f(x)\)</span> com <span class="process-math">\(F(1) = -6\text{.}\)</span></p>
-<p id="p-120">Então <span class="process-math">\(F(x) =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="para" id="p-117">Considere a função <span class="process-math">\(\displaystyle f(x) = x^5 + 2 \sqrt{x}\text{.}\)</span>
+</div> <div class="para" id="p-118">Seja <span class="process-math">\(F(x)\)</span> a primitiva de <span class="process-math">\(f(x)\)</span> com <span class="process-math">\(F(1) = -6\text{.}\)</span>
+</div> <div class="para" id="p-119">Então <span class="process-math">\(F(x) =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-121"><span class="process-math">\(\frac{x^{6}}{6}+\frac{4x^{1.5}}{3}-7.5\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like">
+<details id="answer-13" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-120"><span class="process-math">\(\frac{x^{6}}{6}+\frac{4x^{1.5}}{3}-7.5\)</span></div></div></details><details id="solution-24" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
 <span class="process-math">\(\displaystyle f(x) = x^5 + 2 \sqrt{x} = x^5 + 2 x^{1/2}\text{:}\)</span> <span class="process-math">\(\displaystyle F(x) = \frac{x^6}{6} + \frac{2 x^{3/2}}{3/2} + c  = 
-\frac{x^6}{6} + \frac{4 x^{3/2}}{3} + c\)</span> Já que <span class="process-math">\(F(1) = -6\text{,}\)</span> temos <span class="process-math">\(\displaystyle \frac{1}{6} + \frac{4}{3} + c = -6\)</span><span class="process-math">\(\displaystyle c = -6 -  \frac{1}{6} - \frac{4}{3} = \frac{-135}{18} = -7.5\)</span> Portanto <span class="process-math">\(\displaystyle F(x) = \frac{x^6}{6} + \frac{4 x^{3/2}}{3}  - 7.5\)</span>
-</div></div>
+\frac{x^6}{6} + \frac{4 x^{3/2}}{3} + c\)</span> Já que <span class="process-math">\(F(1) = -6\text{,}\)</span> temos <span class="process-math">\(\displaystyle \frac{1}{6} + \frac{4}{3} + c = -6\)</span> <span class="process-math">\(\displaystyle c = -6 -  \frac{1}{6} - \frac{4}{3} = \frac{-135}{18} = -7.5\)</span> Portanto <span class="process-math">\(\displaystyle F(x) = \frac{x^6}{6} + \frac{4 x^{3/2}}{3}  - 7.5\)</span>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-122">Encontre a primitiva mais geral da função <span class="process-math">\(\displaystyle{ \frac{4}{\sqrt[3]{x}} - 6 \sqrt[3]{x^2}}\text{.}\)</span></p>
-<p id="p-123">Primitiva =  <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">
-<p id="p-124">Primeiro reescreva a função como segue:</p>
+<div class="para" id="p-121">Encontre a primitiva mais geral da função <span class="process-math">\(\displaystyle{ \frac{4}{\sqrt[3]{x}} - 6 \sqrt[3]{x^2}}\text{.}\)</span>
+</div> <div class="para" id="p-122">Primitiva =  <span class="fillin underline" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span>
+</div>
+<div class="solutions"><details id="solution-25" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-123">
+<div class="para">Primeiro reescreva a função como segue:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{4}{\sqrt[3]{x}} - 6 \sqrt[3]{x^2} = 4 x^{-1/3} -6 x^{2/3}
 \end{equation*}
 </div>
-<p class="continuation">Então a primitiva mais geral é:</p>
+<div class="para">Então a primitiva mais geral é:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 4 \cdot \frac{3}{2} x^{2/3} - 6\cdot \frac{3}{5} x^{5/3} + C  
 =  6  x^{2/3} - {\textstyle\frac{18}{5}} x^{5/3} + C
 \end{equation*}
 </div>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-125">Dada a função</p>
+</div></div></details></div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para logical" id="p-124">
+<div class="para">Dada a função</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f''(x) =
 5x  -    6
 \end{equation*}
 </div>
-<p class="continuation">com <span class="process-math">\(f'(  -2) =5\)</span> e <span class="process-math">\(f(  -2)=4\text{.}\)</span></p>
-<p id="p-126">Encontre <span class="process-math">\(f'(x) =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
-<p id="p-127">e determine <span class="process-math">\(f(   3) =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="para">com <span class="process-math">\(f'(  -2) =5\)</span> e <span class="process-math">\(f(  -2)=4\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-125">Encontre <span class="process-math">\(f'(x) =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div> <div class="para" id="p-126">e determine <span class="process-math">\(f(   3) =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-128"><span class="process-math">\(2.5x^{2}+\left(-6\right)x+\left(-17\right)\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-129"><span class="process-math">\(-66.8333333333333\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
-<p id="p-130">Para resolver esses problemas, usaremos o fato de que a primitiva mais geral de <span class="process-math">\(f (x)\)</span> é <span class="process-math">\(F (x) + C\)</span> para alguma constante <span class="process-math">\(C\text{.}\)</span> Então, começamos encontrando a primitiva da segunda derivada <span class="process-math">\(f''(x)\text{.}\)</span></p>
-<div class="displaymath process-math" id="p-131">
+<details id="answer-14" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-127"><span class="process-math">\(2.5x^{2}+\left(-6\right)x+\left(-17\right)\)</span></div></div></details><details id="answer-15" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-128"><span class="process-math">\(-66.8333333333333\)</span></div></div></details><details id="solution-26" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-129">Para resolver esses problemas, usaremos o fato de que a primitiva mais geral de <span class="process-math">\(f (x)\)</span> é <span class="process-math">\(F (x) + C\)</span> para alguma constante <span class="process-math">\(C\text{.}\)</span> Então, começamos encontrando a primitiva da segunda derivada <span class="process-math">\(f''(x)\text{.}\)</span>
+</div> <div class="para logical" id="p-130"><div class="displaymath process-math">
 \begin{equation*}
 f''(x) =    5x  -    6 
 = \frac{d}{dx} f'(x) 
 = \frac{d}{dx}\left( \frac{5}{2}x^2  -    6x + C_1 \right)
 \end{equation*}
-</div>
-<p id="p-132">Precisamos descobrir qual é essa constante <span class="process-math">\(C_1\text{.}\)</span>  Para isso, vamos usar as informações fornecidas no problema sobre<span class="process-math">\(f'(-2)\text{.}\)</span>  A saber, <span class="process-math">\(f'(  -2) = 5\text{.}\)</span>  Logo, temos</p>
+</div></div> <div class="para logical" id="p-131">
+<div class="para">Precisamos descobrir qual é essa constante <span class="process-math">\(C_1\text{.}\)</span>  Para isso, vamos usar as informações fornecidas no problema sobre<span class="process-math">\(f'(-2)\text{.}\)</span>  A saber, <span class="process-math">\(f'(  -2) = 5\text{.}\)</span>  Logo, temos</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
@@ -771,17 +773,15 @@ f'(  -2) \amp  = \frac{5}{2}(  -2)^2  -    6(  -2) + C_1 \\
 \end{aligned}
 \end{equation*}
 </div>
-<p id="p-133">Portanto, <span class="process-math">\(f'(x) = \frac{5}{2}x^2  -    6x  - 17\text{.}\)</span></p>
-<p id="p-134">Agora, procedemos como antes, desta vez encontrando a primitiva de  <span class="process-math">\(f'(x)\)</span> e usar informações sobre <span class="process-math">\(f(3)\)</span> para encontrar <span class="process-math">\(f(x)\text{.}\)</span>  A primitive, e o valor de <span class="process-math">\(C_2\text{,}\)</span> são obtidos como segue:</p>
-<div class="displaymath process-math" id="p-135">
+</div> <div class="para" id="p-132">Portanto, <span class="process-math">\(f'(x) = \frac{5}{2}x^2  -    6x  - 17\text{.}\)</span>
+</div> <div class="para" id="p-133">Agora, procedemos como antes, desta vez encontrando a primitiva de  <span class="process-math">\(f'(x)\)</span> e usar informações sobre <span class="process-math">\(f(3)\)</span> para encontrar <span class="process-math">\(f(x)\text{.}\)</span>  A primitive, e o valor de <span class="process-math">\(C_2\text{,}\)</span> são obtidos como segue:</div> <div class="para logical" id="p-134"><div class="displaymath process-math">
 \begin{equation*}
 f'(x) = \frac{5}{2}x^2  -    6x  - 17 
 = \frac{d}{dx} f(x) 
 = \frac{d}{dx}\left( \frac{1}{3}\left(\frac{5}{2}x^3\right)  -    6\left(\frac{1}{2}x^2\right) 
 - 17x + C_2\right)
 \end{equation*}
-</div>
-<div class="displaymath process-math" id="p-136">
+</div></div> <div class="para logical" id="p-135"><div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 f(-2) \amp  = \frac{1}{3}\left(\frac{5}{2}(-2)^3\right)  -    6\left(\frac{1}{2}(-2)^2\right) 
@@ -790,53 +790,55 @@ f(-2) \amp  = \frac{1}{3}\left(\frac{5}{2}(-2)^3\right)  -    6\left(\frac{1}{2}
 -11.33 \amp  = C_2
 \end{aligned}
 \end{equation*}
+</div></div> <div class="para" id="p-136">Portanto, a função <span class="process-math">\(f(x) = \frac{5}{6}x^3 + \frac{-6}{2}x^2  - 17x  - 11.33\)</span> de modo que <span class="process-math">\(f(3) = -66.83\text{.}\)</span>
 </div>
-<p id="p-137">Portanto, a função <span class="process-math">\(f(x) = \frac{5}{6}x^3 + \frac{-6}{2}x^2  - 17x  - 11.33\)</span> de modo que <span class="process-math">\(f(3) = -66.83\text{.}\)</span></p>
-</div></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<p id="p-138">Determine a seguinte integral definida <span class="process-math">\(\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right)  \,dx=\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(+C\)</span></p>
+<div class="para" id="p-137">Determine a seguinte integral definida <span class="process-math">\(\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right)  \,dx=\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(+C\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-139"><span class="process-math">\(-12\cos\!\left(x\right)-4\sin\!\left(x\right)\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
-<p id="p-140"><span class="process-math">\(\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right) \,dx= 12 \int \sin(x) \, dx - 4 \int \cos(x) \,dx\)</span></p>
-<p id="p-141"><span class="process-math">\(\quad = -12\cos\!\left(x\right)-4\sin\!\left(x\right) + C\)</span></p>
-</div></div>
+<details id="answer-16" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-138"><span class="process-math">\(-12\cos\!\left(x\right)-4\sin\!\left(x\right)\)</span></div></div></details><details id="solution-27" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-139"><span class="process-math">\(\displaystyle \int 12\sin\!\left(x\right)-4\cos\!\left(x\right) \,dx= 12 \int \sin(x) \, dx - 4 \int \cos(x) \,dx\)</span></div> <div class="para" id="p-140"><span class="process-math">\(\quad = -12\cos\!\left(x\right)-4\sin\!\left(x\right) + C\)</span></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<p id="p-142">Considere a função  <span class="process-math">\(f(t) =  9 \sec ^2(t) - 4 t^ { 2 }\text{.}\)</span> Seja <span class="process-math">\(F(t)\)</span> a primitiva de <span class="process-math">\(f(t)\)</span> com <span class="process-math">\(F(0) = 0\text{.}\)</span></p>
-<p id="p-143">Então <span class="process-math">\(F(1.5) =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="para" id="p-141">Considere a função  <span class="process-math">\(f(t) =  9 \sec ^2(t) - 4 t^ { 2 }\text{.}\)</span> Seja <span class="process-math">\(F(t)\)</span> a primitiva de <span class="process-math">\(f(t)\)</span> com <span class="process-math">\(F(0) = 0\text{.}\)</span>
+</div> <div class="para" id="p-142">Então <span class="process-math">\(F(1.5) =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-144"><span class="process-math">\(122.412779524545\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
-<p id="p-145">Para resolver este problema, você precisa lembrar que a derivada de <span class="process-math">\(\rm{tg(t)}\)</span> é <span class="process-math">\(\sec^2(t)\text{.}\)</span>  Não é difícil derivar isso usando a identidade <span class="process-math">\(\rm{tg}(t) = \frac{\rm{sen(t)}}{\cos(t)}\)</span> e a regra do quociente para derivadas.</p>
-<p id="p-146">Com isso em mente, encontre a primitiva geral de  <span class="process-math">\(f(t) =  9\sec^2(t)-{4}t^2\)</span> que será <span class="process-math">\(F(t) = 9\rm{tg(t)} - \frac{ {4}t^3 }{ 3} + 
-C\text{.}\)</span> Agora usando o fato de <span class="process-math">\(F(0) = 0\)</span> e que <span class="process-math">\(\rm{tg}(0) = 0\text{,}\)</span> devemos ter <span class="process-math">\(C = 0\text{.}\)</span></p>
-<p id="p-147">Portanto, pondo 1.5 nesta expressão, obtemos:</p>
-<div class="displaymath process-math" id="p-148">
+<details id="answer-17" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-143"><span class="process-math">\(122.412779524545\)</span></div></div></details><details id="solution-28" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-144">Para resolver este problema, você precisa lembrar que a derivada de <span class="process-math">\(\rm{tg(t)}\)</span> é <span class="process-math">\(\sec^2(t)\text{.}\)</span>  Não é difícil derivar isso usando a identidade <span class="process-math">\(\rm{tg}(t) = \frac{\rm{sen(t)}}{\cos(t)}\)</span> e a regra do quociente para derivadas.</div> <div class="para" id="p-145">Com isso em mente, encontre a primitiva geral de  <span class="process-math">\(f(t) =  9\sec^2(t)-{4}t^2\)</span> que será <span class="process-math">\(F(t) = 9\rm{tg(t)} - \frac{ {4}t^3 }{ 3} + 
+C\text{.}\)</span> Agora usando o fato de <span class="process-math">\(F(0) = 0\)</span> e que <span class="process-math">\(\rm{tg}(0) = 0\text{,}\)</span> devemos ter <span class="process-math">\(C = 0\text{.}\)</span>
+</div> <div class="para" id="p-146">Portanto, pondo 1.5 nesta expressão, obtemos:</div> <div class="para logical" id="p-147"><div class="displaymath process-math">
 \begin{equation*}
 F(1.5) = 9\rm{tg}(1.5) - \frac{ 4(1.5)^3 }{ 3 }
 = 122.413
 \end{equation*}
-</div>
 </div></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-16"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<p id="p-149">Encontre uma função <span class="process-math">\(f(x)\)</span> tal que <span class="process-math">\(f''(x) = x + \cos{x}\)</span> e, além disso, <span class="process-math">\(f (0) = 1\)</span> e <span class="process-math">\(f'(0) = 2\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-150">Encontre a função <span class="process-math">\(f(x)\)</span> sabendo que</p>
+<div class="para" id="p-148">Encontre uma função <span class="process-math">\(f(x)\)</span> tal que <span class="process-math">\(f''(x) = x + \cos{x}\)</span> e, além disso, <span class="process-math">\(f (0) = 1\)</span> e <span class="process-math">\(f'(0) = 2\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para logical" id="p-149">
+<div class="para">Encontre a função <span class="process-math">\(f(x)\)</span> sabendo que</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f''(x) = 8 \sin x, \quad f'(\pi) = 5, \quad f(\pi) = 0
 \end{equation*}
 </div>
-<p id="p-151"><span class="process-math">\(f(x) =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+</div> <div class="para" id="p-150">
+<span class="process-math">\(f(x) =\)</span> <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-152"><span class="process-math">\(-8\sin\!\left(x\right)+\left(-3\right)x+0-\left(-3\right)\pi \)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like">
-<p id="p-153">Note que</p>
+<details id="answer-18" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-151"><span class="process-math">\(-8\sin\!\left(x\right)+\left(-3\right)x+0-\left(-3\right)\pi \)</span></div></div></details><details id="solution-29" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-152">
+<div class="para">Note que</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f'(x) = \int 8 \sin x \, dx = -8 \cos x + C_1.
 \end{equation*}
 </div>
-<p class="continuation">Encontre <span class="process-math">\(C_1\)</span> usando <span class="process-math">\(f'(\pi) = 5\text{.}\)</span></p>
+<div class="para">Encontre <span class="process-math">\(C_1\)</span> usando <span class="process-math">\(f'(\pi) = 5\text{.}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
@@ -846,13 +848,15 @@ C_1 \amp =\amp  -3
 \end{array}
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="p-154">
+</div> <div class="para logical" id="p-153">
+<div class="displaymath process-math">
 \begin{equation*}
 f(x) = \int \left( -8 \cos x  - 3 \right) \, dx 
 = -8 \sin x  - 3 x + C_2.
 \end{equation*}
 </div>
-<p class="continuation">Encontre  <span class="process-math">\(C_2\)</span> usando <span class="process-math">\(f(\pi) = 0\text{.}\)</span></p>
+<div class="para">Encontre  <span class="process-math">\(C_2\)</span> usando <span class="process-math">\(f(\pi) = 0\text{.}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
@@ -861,56 +865,62 @@ C_2 \amp =\amp  0  + 3 \pi
 \end{array}
 \end{equation*}
 </div>
-<p id="p-155">Logo, <span class="process-math">\(f(x) = -8 \sin x  - 3 x + 0  + 3 \pi\text{.}\)</span></p>
-</div></div>
+</div> <div class="para" id="p-154">Logo, <span class="process-math">\(f(x) = -8 \sin x  - 3 x + 0  + 3 \pi\text{.}\)</span>
+</div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-18"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<p id="p-156">Encontre a seguinte derivada e estabeleça uma fórmula de integração correspondente.</p>
+<div class="para logical" id="p-155">
+<div class="para">Encontre a seguinte derivada e estabeleça uma fórmula de integração correspondente.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{d}{dx}\left[\frac{x+3}{3x^{2}-x+5}\right]
 \end{equation*}
 </div>
-<p id="p-157"><span class="process-math">\(\displaystyle \int\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span> <span class="process-math">\(+\)</span> <span class="process-math">\(C\)</span></p>
+</div> <div class="para" id="p-156">
+<span class="process-math">\(\displaystyle \int\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span> <span class="process-math">\(+\)</span> <span class="process-math">\(C\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-158"><span class="process-math">\(\frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-159"><span class="process-math">\(\frac{x+3}{3x^{2}-x+5}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like">
-<p id="p-160">Usaremos a Regra do Quociente para computar a derivada.</p>
-<div class="displaymath process-math" id="p-161">
+<details id="answer-19" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-157"><span class="process-math">\(\frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}\)</span></div></div></details><details id="answer-20" class="answer solution-like"><summary><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-158"><span class="process-math">\(\frac{x+3}{3x^{2}-x+5}\)</span></div></div></details><details id="solution-30" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-159">Usaremos a Regra do Quociente para computar a derivada.</div> <div class="para logical" id="p-160"><div class="displaymath process-math">
 \begin{equation*}
 \frac{d}{dx}\left[\frac{x+3}{3x^{2}-x+5}\right]=\frac{\frac{d}{dx}\left[x+3\right]\cdot (3x^{2}-x+5)-(x+3)\cdot \frac{d}{dx}[3x^{2}-x+5]}{(3x^{2}-x+5)^2}
 \end{equation*}
-</div>
-<div class="displaymath process-math" id="p-162">
+</div></div> <div class="para logical" id="p-161"><div class="displaymath process-math">
 \begin{equation*}
 =\frac{3x^{2}-x+5-\left(x+3\right)\!\left(3\cdot 2x-1\right)}{\left(3x^{2}-x+5\right)^{2}}=\frac{3x^{2}-x+5-6x^{2}+x-18x+3}{\left(3x^{2}-x+5\right)^{2}}=\frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}
 \end{equation*}
-</div>
-<p id="p-163">Se integrarmos isso, teremos o que começamos com mais uma constante arbitrária.</p>
+</div></div> <div class="para logical" id="p-162">
+<div class="para">Se integrarmos isso, teremos o que começamos com mais uma constante arbitrária.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \displaystyle \int \left[ \frac{-3x^{2}-18x+8}{\left(3x^{2}-x+5\right)^{2}}\right]dx= \frac{x+3}{3x^{2}-x+5} +C
 \end{equation*}
 </div>
-</div></div>
+</div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-19"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<p id="p-164">Determine a integral indefinida e verifique sua resposta usando derivada.</p>
-<p id="p-165"><span class="process-math">\(\displaystyle \int\left [\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)}\right] dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> <span class="process-math">\(+\)</span> <span class="process-math">\(C\)</span></p>
+<div class="para" id="p-163">Determine a integral indefinida e verifique sua resposta usando derivada.</div> <div class="para" id="p-164">
+<span class="process-math">\(\displaystyle \int\left [\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)}\right] dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> <span class="process-math">\(+\)</span> <span class="process-math">\(C\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-166"><span class="process-math">\(\frac{\tan\!\left(x\right)+x}{3}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like">
-<div class="displaymath process-math" id="p-167">
+<details id="answer-21" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-165"><span class="process-math">\(\frac{\tan\!\left(x\right)+x}{3}\)</span></div></div></details><details id="solution-31" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-166"><div class="displaymath process-math">
 \begin{equation*}
 \displaystyle \int \left [\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)} \right] dx= \frac{1}{3}\int  \sec^{2}\!\left(x\right)  \;dx+\frac{1}{3}\int    \;dx= \frac{1}{3}\left(\tan\!\left(x\right)+x\right)+C
 \end{equation*}
-</div>
-<div class="displaymath process-math" id="p-168">
+</div></div> <div class="para logical" id="p-167"><div class="displaymath process-math">
 \begin{equation*}
 \frac{d}{dx}\left[\frac{1}{3}\left(\tan\!\left(x\right)+x\right)+C\right]=\frac{1}{3}\left(\sec^{2}\!\left(x\right)+1\right)=\frac{\sec\!\left(x\right)+\cos\!\left(x\right)}{3\cos\!\left(x\right)}
 \end{equation*}
-</div>
 </div></div>
-</div></article></section></section></div></main>
+</div></details>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="frontmatter-1.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-eq-diferenciais.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
