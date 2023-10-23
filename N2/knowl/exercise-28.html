@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-11T22:50:44-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,13 +10,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
 <span class="type">Exercício</span><span class="space"> </span><span class="codenumber">17<span class="period">.</span></span>
-</h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle\int {\frac{8}{\sqrt{x^2+16}}}\, dx\, =\,\) <span class="fillin" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span></p>
+</h5>
+<div class="para">
+<span class="process-math">\(\displaystyle\int {\frac{8}{\sqrt{x^2+16}}}\, dx\, =\,\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</div>
 <div class="solutions">
-<a class="answer-knowl original" data-knowl="./knowl/answer-32-hidden.html" title="Resposta 1.5.17.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Resposta</span></a><a class="solution-knowl original" data-knowl="./knowl/solution-27-hidden.html" title="Solução 1.5.17.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solução</span></a>
-</div></article><span class="incontext"><a href="section-1.html#exercise-28">em contexto</a></span>
+<details class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para"><span class="process-math">\(8\ln\!\left(x+\sqrt{x^{2}+16}\right)+C\)</span></div></div></details><details class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para">SOLUTION</div> <div class="para">Usamos a substituição trigonométrica: <span class="process-math">\(x=4\tan\theta\)</span>  onde <span class="process-math">\(-\frac{\pi}{2} \lt \theta \lt \frac{\pi}{2}\text{.}\)</span>
+</div> <div class="para">Então <span class="process-math">\(dx=4\sec^2\theta\,d\theta\)</span> e</div> <div class="para logical">
+<div class="para">
+<span class="process-math">\(\sqrt{x^2 + 16} = \sqrt{16\tan^2 \theta +16} = 4\sqrt{1+\tan^2\theta} = 4 \sqrt{\sec^2\theta} 
+= 4 \sec \theta\text{.}\)</span> Assim</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rl}
+\displaystyle \int \frac{8}{\sqrt{x^2 + 16} }  \, dx 
+\amp = \displaystyle 8 \int \frac{1}{4 \sec \theta} \;\big(4\sec^2\theta\big)\,d\theta\\
+\amp = 8\int \sec\theta\,d\theta\\
+\amp =8 \ln|\sec\theta + \tan \theta| + C
+\end{array}
+\end{equation*}
+</div>
+<div class="para">Agora precisamos retornar à variável original, <span class="process-math">\(x\text{.}\)</span> Da substituição original, <span class="process-math">\(x=4\tan\theta\implies 
+\tan\theta=\frac{x}{4}\text{.}\)</span> Se interpretarmos <span class="process-math">\(\theta\text{,}\)</span> como sendo um ângulo em um triângulo retângulo e nomeando o lado oposto a <span class="process-math">\(\theta\)</span> como <span class="process-math">\(x\)</span> eo lado adjacente a <span class="process-math">\(\theta\)</span> como <span class="process-math">\(4\text{,}\)</span> obtemos um triângulo como mostrado abaixo (com <span class="process-math">\(t\)</span> representando o angulo <span class="process-math">\(\theta\)</span>).</div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/webwork-16-image-1.png" class="contained"></div></div></div> <div class="para">Usando o teorema de Pitágoras, resolvemos para a hipotenusa e obtemos <span class="process-math">\(c=\sqrt{x^2+16}\text{.}\)</span> Assim <span class="process-math">\(\cos\theta=\frac{4}{\sqrt{x^2+16}}\text{,}\)</span> e <span class="process-math">\(\sec\theta=\frac{\sqrt{x^2+16}}{4}\)</span> ( para todos os valores de <span class="process-math">\(\theta\)</span> com <span class="process-math">\(-\frac{\pi}{2} \lt \theta \lt \frac{\pi}{2}\)</span>) .</div> <div class="para logical">
+<div class="para">Portanto, a integral indefinida continua como</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rl}
+8 \displaystyle \int \frac{1}{\sqrt{x^2 + 16}}   \, dx  \amp = 8 \ln|\sec\theta + \tan \theta| + C\\
+\amp = 8 \ln\left( \frac{\sqrt{x^2+16}}{4}+\frac{x}{4}\right) + C \\
+\amp = 8 \ln\left( \frac{\sqrt{x^2+16}+x}{4} \right)+ C \\
+\amp  = 8 \ln \left( \sqrt{x^2+16} + x \right) - 8 \ln 4 + C \\
+\amp  = 8 \ln \left( \sqrt{x^2+16} + x \right)  + C \\
+\end{array}
+\end{equation*}
+</div>
+</div>
+</div></details>
+</div></article><span class="incontext"><a class="internal" href="section-1.html#exercise-28">em contexto</a></span>
 </body>
 </html>

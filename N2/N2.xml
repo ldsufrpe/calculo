@@ -707,7 +707,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         para integrandos que envolvem a expressões do tipo
 
         <mdn xml:id="integra-subs-trig">
-            <mrow> \sqrt{a-x^2} </mrow>
+            <mrow> \sqrt{a^2-x^2} </mrow>
         </mdn>, no caso da substitução por <m>\sin{u}</m> e
         <mdn>
             <mrow> a^2 + x^2 \, \text{ou} \, \sqrt{a^2+ x^2}</mrow>
