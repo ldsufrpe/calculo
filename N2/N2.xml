@@ -714,7 +714,28 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </mdn>
             para substituições por <m>\tan{u}</m>.
         </p>
-        
+<!--        <figure xml:id="fig-tikz">-->
+<!--  <caption>A figure generated with TikZ in-->
+<!--  <latex /></caption>-->
+<!--  <image >-->
+<!--          <latex-image >-->
+<!--\begin{tikzpicture}-->
+<!--    \draw (0,0) &#45;&#45; (4,0) &#45;&#45; (4,3) &#45;&#45; cycle;-->
+<!--    \node at (2,-0.5) {a};-->
+<!--    \node at (4.5,1.5) {$\sqrt{x^2 - a^2}$};-->
+<!--    \node at (-0.5,1.5) {x};-->
+<!--    \draw (0.5,0) arc (0:37:0.5);-->
+<!--    \node at (0.8,0.3) {$\theta$};-->
+<!--\end{tikzpicture}-->
+<!--          </latex-image>-->
+
+<!--  </image>-->
+
+<!--        </figure>-->
+<!---->
+
+
+
         <!-- <paragraphs>
             <title>Momento Khan Academy</title>
             <p>
