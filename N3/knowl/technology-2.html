@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-09T20:49:33-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -12,33 +9,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Executar (Sage)'});
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Executar (Sage)"
 });
 </script>
 </head>
-<body>
-<article class="technology computation-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<body class="ignore-math">
+<article class="technology computation-like"><h4 class="heading">
 <span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span><span class="space"> </span><span class="title">Faça você mesmo.</span>
-</h6>
-<div class="sagecell-sage" id="sage-1"><script type="text/x-sage">integral(x^2, (x, -1, 1))
-</script></div>
-<p>Se a função estiver definida em uma variável simbólica diferente de \(x\text{,}\) é necessário proceder de uma das formas a seguir:</p>
+</h4> <pre id="sage-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">integral(x^2, (x, -1, 1))
+</script></pre> <div class="para logical">
+<div class="para">Se a função estiver definida em uma variável simbólica diferente de <span class="process-math">\(x\text{,}\)</span> é necessário proceder de uma das formas a seguir:</div>
 <ol class="decimal">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Substituir essa variável original por \(x\) quando for inserir o comando na célula.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Definir a nova variável usando comando <code class="code-inline tex2jax_ignore">var()</code>.</p></li>
+<li><div class="para">Substituir essa variável original por <span class="process-math">\(x\)</span> quando for inserir o comando na célula.</div></li>
+<li><div class="para">Definir a nova variável usando comando <code class="code-inline tex2jax_ignore">var()</code>.</div></li>
 </ol>
-<p xmlns:svg="http://www.w3.org/2000/svg">Logo abaixo vamos cálcular a integral \(\integrald{t^5}{-1}{1}{t}\) de ambas as formas.</p>
-<section class="paragraphs"><h5 class="heading"><span class="title">Usando a variável \(x\).</span></h5>
-<div class="sagecell-sage" id="sage-2"><script type="text/x-sage">integral(x^5, (x, -1, 1))
-</script></div></section><section class="paragraphs"><h5 class="heading"><span class="title">Usando a variável apresentada no problema.</span></h5>
-<div class="sagecell-sage" id="sage-3"><script type="text/x-sage">t =  var('t')
+</div> <div class="para">Logo abaixo vamos cálcular a integral <span class="process-math">\(\integrald{t^5}{-1}{1}{t}\)</span> de ambas as formas.</div> <section class="paragraphs"><h5 class="heading"><span class="title">Usando a variável <span class="process-math">\(x\)</span>.</span></h5> <pre id="sage-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">integral(x^5, (x, -1, 1))
+</script></pre></section> <section class="paragraphs"><h5 class="heading"><span class="title">Usando a variável apresentada no problema.</span></h5> <pre id="sage-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t =  var('t')
 integral(t^5, (t, -1, 1))
-</script></div></section></article><span class="incontext"><a href="section-1.html#technology-2">em contexto</a></span>
+</script></pre></section></article><span class="incontext"><a class="internal" href="section-1.html#technology-2">em contexto</a></span>
 </body>
 </html>

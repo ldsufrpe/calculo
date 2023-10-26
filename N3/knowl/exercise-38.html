@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-09T20:49:34-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,13 +10,39 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
 <span class="type">Exercício</span><span class="space"> </span><span class="codenumber">25<span class="period">.</span></span>
-</h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Determine o valor da integral \(\displaystyle \int_{0}^{0.7} \frac{dx}{\sqrt{1-x^2}} =\) <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+</h4>
+<div class="para">Determine o valor da integral <span class="process-math">\(\displaystyle \int_{0}^{0.7} \frac{dx}{\sqrt{1-x^2}} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
 <div class="solutions">
-<a class="answer-knowl original" data-knowl="./knowl/answer-57-hidden.html" title="Resposta 1.8.25.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Resposta</span></a><a class="solution-knowl original" data-knowl="./knowl/solution-38-hidden.html" title="Solução 1.8.25.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solução</span></a>
-</div></article><span class="incontext"><a href="section-1.html#exercise-38">em contexto</a></span>
+<details class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para"><span class="process-math">\(0.775397496610753\)</span></div></div></details><details class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para">Nosso passo inicial é encontrar a primitiva de <span class="process-math">\(\frac{dx}{\sqrt{1-x^2}}\text{.}\)</span> A melhor maneira de fazer isso é usar as tabelas de integração disponíveis no apêndice. Observe que esta integral tem uma forma semelhante à entrada abaixo, tirada de suas tabelas:</div> <div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{du}{\sqrt{a^2-u^2}} = \sin^{-1} \frac{u}{a} + C
+\end{equation*}
+</div>
+<div class="para">No nosso caso, <span class="process-math">\(a = 1\)</span> e <span class="process-math">\(u = x\text{.}\)</span>  Portanto, nossa primitiva é:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(x) = \left(\sin^{-1} x \right) + C
+\end{equation*}
+</div>
+<div class="para">Então, aplicando o Teorema Fundamental do Cálculo e usando uma calculadora para calcular, obtemos:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\int_0^{0.7} \frac{dx}{\sqrt{1-x^2}} dx \amp = F(0.7) - F(0) \\
+\amp = \left(\sin^{-1} 0.7\right) + C -
+\left(\sin^{-1} 0\right) - C\\
+\amp = 0.7754
+\end{aligned}
+\end{equation*}
+</div>
+</div>
+</div></details>
+</div></article><span class="incontext"><a class="internal" href="section-1.html#exercise-38">em contexto</a></span>
 </body>
 </html>

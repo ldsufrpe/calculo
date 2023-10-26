@@ -418,7 +418,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Teorema Fundamental do Cálculo - parte 2 (TFC2)</title>
         <statement>
             <p>
-                Se <m>f</m> é contínua no intervalo <m>[a,b]</m>, e  <m>F</m> é igual a <m>f(x)</m> para todo <m>x</m> em <m>[a,b]</m>, então
+                Se <m>f</m> é contínua no intervalo <m>[a,b]</m>, e  <m>F'</m> é igual a <m>f(x)</m> para todo <m>x</m> em <m>[a,b]</m>, então
                 <md>
                     <mrow> \integrald{f(x)}{a}{b}{x}= F(b) - F(a) </mrow>
                 </md>. 
