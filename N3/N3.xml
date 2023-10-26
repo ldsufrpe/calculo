@@ -449,7 +449,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <p>
             Há uma significativa diferença entre integral indefinida e integral definida.
             A <em>integral indefinida</em> <me>\integral{f(x)}{x}</me> denota uma família de 
-            funções na qual cada membro é uma primitiva de <m>f(x)</m>, enquanto a <em>integral indefinida</em> 
+            funções na qual cada membro é uma primitiva de <m>f(x)</m>, enquanto a <em>integral definida</em>
             <me>
                 \integrald{f(x)}{a}{b}{x}
             </me>
