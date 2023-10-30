@@ -1366,7 +1366,7 @@ fazer uso da mudança dos limites de integração para a nova variável.
     </statement>
     <solution>
         <p>
-            A escolha <u>u=5-x</u>, fornece <m>\dd u=(-1)\dd x </m>. Além disso, quando <m>x=1</m>, <m>u=4</m>, e , 
+            A escolha <m>u=5-x</m>, fornece <m>\dd u=(-1)\dd x </m>. Além disso, quando <m>x=1</m>, <m>u=4</m>, e ,
             quando <m>x=3</m>, <m>u=2</m>. Então,
 
             <md>
@@ -1406,7 +1406,7 @@ fazer uso da mudança dos limites de integração para a nova variável.
     </statement>
     <solution>
         <p>
-            Fazendo <m>u=\ln{u}</m>, obtemos <m>\frac{\dd u}{\dd x} = 1/x</m>. Então  <m>\dd u = (1/x)\dd x</m>. Quando
+            Fazendo <m>u=\ln{x}</m>, obtemos <m>\frac{\dd u}{\dd x} = 1/x</m>. Então  <m>\dd u = (1/x)\dd x</m>. Quando
             <m>x=1</m>, <m>u=\ln{1}=0</m>, e, quando <m>x=e</m> , <m>u=\ln{e}=1</m>. Assim,
 
             <md>
@@ -1503,7 +1503,7 @@ calcular a integral definida de <m>f(x)</m> de <m>a</m> até <m>b</m>.
     <title>Usando a variável <m>x</m></title>
 <sage>
     <input>
-        integral(x^5, (x, -1, 1))
+        integral(x^5, (x, 0, 1))
     </input>
     <output>
         0
@@ -1517,7 +1517,7 @@ calcular a integral definida de <m>f(x)</m> de <m>a</m> até <m>b</m>.
 <sage>
     <input>
     t =  var('t')
-    integral(t^5, (t, -1, 1))
+    integral(t^5, (t, 0, 1))
     </input>
     <output>
         0

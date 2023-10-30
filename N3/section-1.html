@@ -342,7 +342,7 @@ F'(x) = \frac{1}{3+\sqrt{x}}
 \integral{f(x)}{x}
 \end{equation*}
 </div>
-<div class="para">denota uma família de funções na qual cada membro é uma primitiva de <span class="process-math">\(f(x)\text{,}\)</span> enquanto a <em class="emphasis">integral indefinida</em>
+<div class="para">denota uma família de funções na qual cada membro é uma primitiva de <span class="process-math">\(f(x)\text{,}\)</span> enquanto a <em class="emphasis">integral definida</em>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -693,7 +693,7 @@ x+ 1, \amp  x \lt  0 \\
 </h4></summary><article class="example example-like"><div class="para" id="p-133">Calcule <span class="process-math">\(\integrald{\frac{1}{5-x}}{1}{3}{x}\text{.}\)</span>
 </div>
 <div class="solutions"><details id="solution-18" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-134">
-<div class="para">A escolha u=5-x, fornece <span class="process-math">\(\dd u=(-1)\dd x \text{.}\)</span> Além disso, quando <span class="process-math">\(x=1\text{,}\)</span> <span class="process-math">\(u=4\text{,}\)</span> e , quando <span class="process-math">\(x=3\text{,}\)</span> <span class="process-math">\(u=2\text{.}\)</span> Então,</div>
+<div class="para">A escolha <span class="process-math">\(u=5-x\text{,}\)</span> fornece <span class="process-math">\(\dd u=(-1)\dd x \text{.}\)</span> Além disso, quando <span class="process-math">\(x=1\text{,}\)</span> <span class="process-math">\(u=4\text{,}\)</span> e , quando <span class="process-math">\(x=3\text{,}\)</span> <span class="process-math">\(u=2\text{.}\)</span> Então,</div>
 <div class="displaymath process-math" id="md-20">
 \begin{align*}
 \integrald{\frac{1}{5-x}}{1}{3}{x} \amp  = \integrald{-\frac{1}{u}}{4}{2}{u}\\
@@ -713,7 +713,7 @@ x+ 1, \amp  x \lt  0 \\
 </h4></summary><article class="example example-like"><div class="para" id="p-138">Calcule <span class="process-math">\(\integrald{\frac{\ln{x}}{x}}{1}{e}{x}\text{.}\)</span>
 </div>
 <div class="solutions"><details id="solution-19" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-139">
-<div class="para">Fazendo <span class="process-math">\(u=\ln{u}\text{,}\)</span> obtemos <span class="process-math">\(\frac{\dd u}{\dd x} = 1/x\text{.}\)</span> Então  <span class="process-math">\(\dd u = (1/x)\dd x\text{.}\)</span> Quando <span class="process-math">\(x=1\text{,}\)</span> <span class="process-math">\(u=\ln{1}=0\text{,}\)</span> e, quando <span class="process-math">\(x=e\)</span> , <span class="process-math">\(u=\ln{e}=1\text{.}\)</span> Assim,</div>
+<div class="para">Fazendo <span class="process-math">\(u=\ln{x}\text{,}\)</span> obtemos <span class="process-math">\(\frac{\dd u}{\dd x} = 1/x\text{.}\)</span> Então  <span class="process-math">\(\dd u = (1/x)\dd x\text{.}\)</span> Quando <span class="process-math">\(x=1\text{,}\)</span> <span class="process-math">\(u=\ln{1}=0\text{,}\)</span> e, quando <span class="process-math">\(x=e\)</span> , <span class="process-math">\(u=\ln{e}=1\text{.}\)</span> Assim,</div>
 <div class="displaymath process-math" id="md-21">
 \begin{align*}
 \integrald{\frac{\ln{x}}{x}}{1}{e}{x}\amp = \integrald{u}{0}{1}{u} = \frac{u^2}{2}\Biggr\rvert_0^{1} \\
@@ -748,9 +748,9 @@ x+ 1, \amp  x \lt  0 \\
 <li id="li-32"><div class="para" id="p-147">Substituir essa variável original por <span class="process-math">\(x\)</span> quando for inserir o comando na célula.</div></li>
 <li id="li-33"><div class="para" id="p-148">Definir a nova variável usando comando <code class="code-inline tex2jax_ignore">var()</code>.</div></li>
 </ol>
-</div> <div class="para" id="p-149">Logo abaixo vamos cálcular a integral <span class="process-math">\(\integrald{t^5}{-1}{1}{t}\)</span> de ambas as formas.</div> <section class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Usando a variável <span class="process-math">\(x\)</span>.</span></h5> <pre id="sage-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">integral(x^5, (x, -1, 1))
+</div> <div class="para" id="p-149">Logo abaixo vamos cálcular a integral <span class="process-math">\(\integrald{t^5}{-1}{1}{t}\)</span> de ambas as formas.</div> <section class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Usando a variável <span class="process-math">\(x\)</span>.</span></h5> <pre id="sage-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">integral(x^5, (x, 0, 1))
 </script></pre></section> <section class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Usando a variável apresentada no problema.</span></h5> <pre id="sage-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t =  var('t')
-integral(t^5, (t, -1, 1))
+integral(t^5, (t, 0, 1))
 </script></pre></section></article><article class="activity project-like" id="sage-integral-definida"><h4 class="heading">
 <span class="type">Atividade</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h4>
