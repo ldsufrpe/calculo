@@ -1527,10 +1527,11 @@ calcular a integral definida de <m>f(x)</m> de <m>a</m> até <m>b</m>.
 
 </technology>
 
-<activity xml:id="sage-integral-definida">
+
+    <activity xml:id="sage-integral-definida">
 <p>Utilize a célular abaixo para calcular as integrais dos exemplos desta seção.</p>
 <sage>
-    <input>        
+    <input>
 
     </input>
     <output>

@@ -1122,7 +1122,66 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     
 </subsection>
 
+<subsection><title>Usando SageMath</title>
+    <p>
+        O SageMath consegue calcular integrais em que o método de integração por partes:
+    </p>
+    <sage>
+    <input>
+    integral(x*e^x, x)
+    </input>
+    <output>
+        x*e^x - e^x
+    </output>
+    </sage>
+        <p>Além disso, podemos decompor uma expressão do tipo <m>f(x) = \frac{x+3}{x^2-3*x+2}</m> em frações parciais usando o comando <c>partial_fraction()</c>. Veja a seguir: </p>
 
+    <sage>
+        <input>
+            f = (x+3)/(x^2-3*x+2)
+            show(f.partial_fraction())
+        </input>
+    </sage>
+
+        <p>A integral então pode ser calculada da forma que desejar. Integrando a expressão diretamente</p>
+        <sage>
+    <input>
+    f = (x+3)/(x^2-3*x+2)
+    integral(f, x)
+    </input>
+    <output>
+
+    </output>
+</sage>
+   <p> ou decompondo a expressão em frações parciais e em seguinda calculando a integral</p>
+
+    <sage>
+        <input>
+            f = (x+3)/(x^2-3*x+2)
+            f_dec_parc = f.partial_fraction()
+            integral(f_dec_parc, x)
+        </input>
+    </sage>
+<note>
+    Escrever uma nota sobre a função <c>log</c> do sage.
+</note>
+
+
+    <activity xml:id="sage-integral-partes-parciais">
+<p>Utilize a célular abaixo para calcular as integrais dos exemplos desta seção.</p>
+<sage>
+    <input>
+
+    </input>
+    <output>
+        (for static output)
+    </output>
+</sage>
+
+</activity>
+
+
+</subsection>
 
 
 <exercises xml:id="exercises-integral-por-partes">
@@ -1130,7 +1189,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <exercisegroup>
 <introduction>
     <p>
-        Resolva as integrais a seguir usando a técnica de  integração por partes.
+        Resolva as integrais a seguir usando a técnica de integração por partes.
     </p>
 </introduction>
 
