@@ -795,7 +795,7 @@ C-2B \amp =-1
 <div class="para" id="p-86">O SageMath consegue calcular integrais em que o método de integração por partes:</div>
 <pre id="sage-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">integral(x*e^x, x)
 </script></pre>
-<div class="para" id="p-87">Além disso, podemos decompor uma expressão do tipo <span class="process-math">\(f(x) = \frac{x+3}{x^2-3*x+2}\)</span> em frações parciais usando o comando <code class="code-inline tex2jax_ignore">partial_fraction()</code>. Veja a seguir:</div>
+<div class="para" id="p-87">Além disso, podemos decompor uma expressão do tipo <span class="process-math">\(f(x) = \dfrac{x+3}{x^2-3x+2}\)</span> em frações parciais usando o comando <code class="code-inline tex2jax_ignore">partial_fraction()</code>. Veja a seguir:</div>
 <pre id="sage-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = (x+3)/(x^2-3*x+2)
 show(f.partial_fraction())
 </script></pre>
