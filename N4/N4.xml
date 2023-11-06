@@ -1134,7 +1134,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         x*e^x - e^x
     </output>
     </sage>
-        <p>Além disso, podemos decompor uma expressão do tipo <m>f(x) = \frac{x+3}{x^2-3*x+2}</m> em frações parciais usando o comando <c>partial_fraction()</c>. Veja a seguir: </p>
+        <p>Além disso, podemos decompor uma expressão do tipo <m>f(x) = \dfrac{x+3}{x^2-3x+2}</m> em frações parciais usando o comando <c>partial_fraction()</c>. Veja a seguir: </p>
 
     <sage>
         <input>
