@@ -314,7 +314,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <mrow xml:id="vez1" tag="star"> \integral{x^2e^x}{x}\amp = x^2e^x-\integral{2xe^x}{x} \amp \ct{Integração por partes nª 1.}</mrow>
         </md>
     Para calcular a integral do lado direito de <xref ref="vez1"/>, precisamos aplicar novamente a fórmula de integração por partes. Para isso,
-    escolhemos <m>\dd v = e^x\,\dd x</m> e <m>u=2\dd x</m>. Logo,
+    escolhemos <m>\dd v = e^x\,\dd x</m> e <m>u=2 x</m>. Logo,
 
             <md>
                <mrow> v\amp= \integral{e^x}{x}=e^x,  </mrow>
@@ -893,7 +893,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <solution>
         <p>
           Uma estratégia para fatorar o denominador <m>x^3-2x^2+x-2</m> é encontrando uma de suas raízes  <m>\alpha</m> e
-           depois efetuar a  divisão  por <m>x-\alpha</m>. Observe que
+           depois efetuar a divisão por <m>x-\alpha</m>. Observe que
 
 
         <md>
@@ -942,7 +942,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         Logo, 
         <md>
             <mrow>\integral{\frac{2x^2-x-2}{x^3-2x^2+x-1}}{x} \amp = \integral{\frac{x}{x^2+1}}{x} + \integral{\frac{1}{x^2+1}}{x} + \integral{\frac{1}{x-2}}{x} </mrow>
-            <mrow> \amp = \frac{1}{2}\ln{|x^2-1|} + \arctan{x} + \ln{|x-2|} + C</mrow>.
+            <mrow> \amp = \frac{1}{2}\ln{|x^2+1|} + \arctan{x} + \ln{|x-2|} + C</mrow>.
         </md>
         </p>
     </solution>
