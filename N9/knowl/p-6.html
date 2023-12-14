@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-14T21:58:15-03:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,38 +10,42 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Parágrafo</span></h6>
-<p>Podemos aproximar o valor de uma integral definida usando trapézio em vez de retângulos. Na <a href="" class="xref" data-knowl="./knowl/fig0.html" title="Figura 1.2">Figura 1.2</a>, a área abaixo do gráfico de $y=f(x)$ é aproximada por trapézios. A tecnica para obter tais aproximações é chamada de Regra do Trapézio. Para desenvolvê-la, considere uma função não negativa e contínua no intervalo \([a, b]\text{.}\) Divida o intervalo em \(n\) subintervalos, cada um de largura</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<div class="para logical">
+<div class="para">Podemos aproximar o valor de uma integral definida usando trapézio em vez de retângulos. Na <a href="" class="xref" data-knowl="./knowl/fig0.html" title="Figura 1.2">Figura 1.2</a>, a área abaixo do gráfico de $y=f(x)$ é aproximada por trapézios. A tecnica para obter tais aproximações é chamada de Regra do Trapézio. Para desenvolvê-la, considere uma função não negativa e contínua no intervalo <span class="process-math">\([a, b]\text{.}\)</span> Divida o intervalo em <span class="process-math">\(n\)</span> subintervalos, cada um de largura</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig0.html ./knowl/fig0.html">
 \begin{equation*}
 \Delta x =\frac{b-a}{n}.
 \end{equation*}
 </div>
-<p class="continuation">De acordo com a <a href="" class="xref" data-knowl="./knowl/fig0.html" title="Figura 1.2">Figura 1.2</a> podemos formar \(n\) trapézios. Note que o primeiro trapézio tem área igual a</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">De acordo com a <a href="" class="xref" data-knowl="./knowl/fig0.html" title="Figura 1.2">Figura 1.2</a> podemos formar <span class="process-math">\(n\)</span> trapézios. Note que o primeiro trapézio tem área igual a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig0.html ./knowl/fig0.html">
 \begin{equation*}
 \left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2}\right].
 \end{equation*}
 </div>
-<p class="continuation">Seguindo o mesmo raciocínio como os outros trapezios temos que a área das \(n\) área é</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">Seguindo o mesmo raciocínio como os outros trapezios temos que a área das <span class="process-math">\(n\)</span> área é</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig0.html ./knowl/fig0.html">
 \begin{align*}
-\amp\left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2} + \frac{f(x_1)+f(x_1)}{2} + \ldots + \frac{f(x_{n-1})+f(x_{n})}{2}\right] \\
-\amp = \left( \frac{b-a}{2n}\right)\left[f(x_0)+ f(x_1) + f(x_1)+ + f(x_2)\ldots f(x_{n-1} + f(x_{n-1}+ f(x_n)\right] \\
+\amp\left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2} + \frac{f(x_1)+f(x_2)}{2} + \ldots + \frac{f(x_{n-1})+f(x_{n})}{2}\right] \\
+\amp = \left( \frac{b-a}{2n}\right)\left[f(x_0)+ f(x_1) + f(x_1)+  f(x_2)\ldots f(x_{n-1}) + f(x_{n-1})+ f(x_n)\right] \\
 \amp = \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]
 \end{align*}
 </div>
-<p class="continuation">Dessa forma, o valor da integral definida usando a Regra do Trapézio é obtido por</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">Dessa forma, o valor da integral definida usando a Regra do Trapézio é obtido por</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig0.html ./knowl/fig0.html">
 \begin{equation*}
-\integrald{f(x)}{a}{b}{x}\approx \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]
+\integrald{f(x)}{a}{b}{x}\approx \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1}) + f(x_n)\right]
 \end{equation*}
 </div>
-<p class="continuation"><article class="note remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<div class="para">
+<article class="note remark-like"><h4 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
-</h6>Embora essa dedução pressuponha que \(f\)  seja contínua e não negativa em \([a, b]\text{,}\) a fórmula resultante é valida sempre que \(f\) for contínua em \([a, b]\text{.}\)</article> <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/fig0.svg" class="contained" alt="(for accessibility)"></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span>Trapézios usados ​​para aproximar a área sob o gráfico de \(y=f(x)\text{,}\) aproximando assim a integral definida.</figcaption></figure></p>
-<span class="incontext"><a href="section-1.html#p-6">em contexto</a></span>
+</h4>Embora essa dedução pressuponha que <span class="process-math">\(f\)</span>  seja contínua e não negativa em <span class="process-math">\([a, b]\text{,}\)</span> a fórmula resultante é valida sempre que <span class="process-math">\(f\)</span> for contínua em <span class="process-math">\([a, b]\text{.}\)</span></article> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/fig0.svg" class="contained" alt="(for accessibility)"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span>Trapézios usados para aproximar a área sob o gráfico de <span class="process-math">\(y=f(x)\text{,}\)</span> aproximando assim a integral definida.</figcaption></figure>
+</div>
+</div>
+<span class="incontext"><a class="internal" href="section-1.html#p-6">em contexto</a></span>
 </body>
 </html>

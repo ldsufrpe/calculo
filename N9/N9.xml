@@ -168,19 +168,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         Seguindo o mesmo raciocínio como os outros trapezios temos que a área das <m>n</m> área é 
 
          <md>
-             <mrow> \amp\left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2} + \frac{f(x_1)+f(x_1)}{2} + \ldots + \frac{f(x_{n-1})+f(x_{n})}{2}\right] </mrow>
-             <mrow> \amp = \left( \frac{b-a}{2n}\right)\left[f(x_0)+ f(x_1) + f(x_1)+ + f(x_2)\ldots f(x_{n-1} + f(x_{n-1}+ f(x_n)\right] </mrow>
+             <mrow> \amp\left( \frac{b-a}{n}\right)\left[\frac{f(x_0)+f(x_1)}{2} + \frac{f(x_1)+f(x_2)}{2} + \ldots + \frac{f(x_{n-1})+f(x_{n})}{2}\right] </mrow>
+             <mrow> \amp = \left( \frac{b-a}{2n}\right)\left[f(x_0)+ f(x_1) + f(x_1)+  f(x_2)\ldots f(x_{n-1}) + f(x_{n-1})+ f(x_n)\right] </mrow>
              <mrow> \amp = \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]</mrow>.
          </md>
          Dessa forma, o valor da integral definida usando a Regra do Trapézio é obtido por
          <me>
-             \integrald{f(x)}{a}{b}{x}\approx \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1} + f(x_n)\right]
+             \integrald{f(x)}{a}{b}{x}\approx \left( \frac{b-a}{2n}\right)\left[f(x_0) + 2f(x_1) + 2f(x_2) + 2f(x_{n-1}) + f(x_n)\right]
          </me>
          
         <note>Embora essa dedução pressuponha que <m>f</m>  seja contínua e não negativa em
 <m>[a, b]</m>, a fórmula resultante é valida sempre que <m>f</m> for contínua em <m>[a, b]</m>.</note>
            <figure xml:id="fig0">
-            <caption>Trapézios usados ​​para aproximar a área sob o gráfico de <m>y=f(x)</m>, aproximando assim a integral definida.</caption>
+            <caption>Trapézios usados para aproximar a área sob o gráfico de <m>y=f(x)</m>, aproximando assim a integral definida.</caption>
             <image source="images/fig0.svg" width="50%">
                 <description>(for accessibility)</description>
             </image>
@@ -336,7 +336,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>
             Para deduzir a Regra de Simpson, divida o intervalo <m>[a, b]</m> em um número par
-<m>n</m> de subintervalos, cada um de largura <me>  \Delta x =\frac{b-a}{n}.</me> Em <m>[x_0, x_1</m> aproximamos
+<m>n</m> de subintervalos, cada um de largura <me>  \Delta x =\frac{b-a}{n}.</me> Em <m>[x_0, x_1]</m> aproximamos
 a função <m>f</m> pelo polinômio de grau dois <m>p(x)= Ax^2+ Bx + C</m> que passa pelos pontos 
 <me>(x_0, f(x_0), \, (x_1, f(y_1)), (x_2, f(x_2)), </me> no qual 
 
