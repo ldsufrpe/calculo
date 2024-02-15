@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<<<<<<< HEAD
-<!--*       on 2021-11-21T13:09:04-03:00       *-->
-=======
-<!--*       on 2021-11-21T12:30:00-03:00       *-->
->>>>>>> d67d593e1879cf47296e4b15cbd68c09aed4ed35
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Integral Imprópia</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    useLabelIds: true,
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -41,34 +53,90 @@
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://54.39.15.62/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="http://54.39.15.62/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Executar (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+<script src="http://54.39.15.62/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Ir ao conteúdo principal</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Ir ao conteúdo principal</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://www.dm.ufrpe.br"><img src="images/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-integral-impropia.html"><span class="title">Cálculo Integral: N10</span></a></h1>
+<p class="byline">Leon Silva, Deibsom Silva</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Sumário"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Sumário</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Buscando por: </h2>
+<div id="searchempty" class="searchempty"><span>Não encontrado.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="calc-integral-impropia.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="up-button button" href="calc-integral-impropia.html" title="Acima"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Acima</span></a><a class="next-button button" href="references-backmatter.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
 \newcommand{ctm}[1]{\color{gray}{#1}}
 
 \newcommand{\doubler}[1]{2#1}
@@ -88,117 +156,97 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="calc-integral-impropia.html"><span class="title">Cálculo Integral: N10</span></a></h1>
-<p class="byline">Leon Silva, Deibsom Silva</p>
-</div>
-</div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
-<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "graphing",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-integral-impropia.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-integral-impropia.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-integral-impropia.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-integral-impropia.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
-</div>
-</div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Pré-textual</span></a></li>
-<li class="link active">
-<a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Integral Imprópia</span></a><ul>
-<li><a href="section-1.html#subsec-intervalos-infinitos" data-scroll="subsec-intervalos-infinitos">Intervalos infinitos</a></li>
-<li><a href="section-1.html#subsec-notacao-integrandos-infinitos" data-scroll="subsec-notacao-integrandos-infinitos">Integrandos infinitos</a></li>
-<li><a href="section-1.html#exercises-impropia" data-scroll="exercises-impropia">Exercícios</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter-1.html" class="internal"><span class="title">Pré-textual</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="frontmatter-1.html#abstract-1" class="internal"><span class="title">Resumo</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Integral Imprópia</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="section-1.html#subsec-intervalos-infinitos" class="internal"><span class="codenumber">1.1</span> <span class="title">Intervalos infinitos</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="section-1.html#subsubsec-sugestao-video-intervalos-infinitos" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Sugestão de vídeo</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-notacao-integrandos-infinitos" class="internal"><span class="codenumber">1.2</span> <span class="title">Integrandos infinitos</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-1.html#exercises-impropia" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercícios</span></a></div></li>
 </ul>
 </li>
-<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Integral Imprópia</span>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="references-backmatter.html" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">Integral Imprópia</span>
 </h2>
 <article class="objectives goal-like" id="objectives-1"><h3 class="heading">
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">Reconhecer integrais impróprias</p></li>
-<li id="li-2"><p id="p-4">Calcular integrais impróprias com limites infinitos de integração.</p></li>
-<li id="li-3"><p id="p-5">Calcular integrais impróprias com integrandos infinitos.</p></li>
-</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Vimos anteriormente que uma função <span class="process-math">\(f(x)\)</span> é integrável em um intervalo <span class="process-math">\([a,b]\text{,}\)</span> quando é contínua nesse intervalo. Aqui estamos interessados em calcular integrais em que um ou ambos os lados do intervalo é infinito. Como por exemplo, <aside class="aside aside-like" id="aside-1"></aside></p>
-<div class="displaymath process-math">
+<li id="li-1"><div class="para" id="p-3">Reconhecer integrais impróprias</div></li>
+<li id="li-2"><div class="para" id="p-4">Calcular integrais impróprias com limites infinitos de integração.</div></li>
+<li id="li-3"><div class="para" id="p-5">Calcular integrais impróprias com integrandos infinitos.</div></li>
+</ol></article><section class="introduction" id="introduction-2"><div class="para logical" id="p-6">
+<div class="para">Vimos anteriormente que uma função <span class="process-math">\(f(x)\)</span> é integrável em um intervalo <span class="process-math">\([a,b]\text{,}\)</span> quando é contínua nesse intervalo. Aqui estamos interessados em calcular integrais em que um ou ambos os lados do intervalo é infinito. Como por exemplo, <aside class="aside aside-like" id="aside-1"></aside>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-intro-impropria-sageplot.html">
 \begin{equation*}
 \integrald{\frac{1}{x^2}}{1}{\infty}{x}.
 \end{equation*}
 </div>
-<p class="continuation">Outro caso de interesse  é quando  <span class="process-math">\(f\)</span> tende ao infinito em algum valor do intervalo se integração, como é o caso a seguir</p>
-<div class="displaymath process-math">
+<div class="para">Outro caso de interesse  é quando  <span class="process-math">\(f\)</span> tende ao infinito em algum valor do intervalo se integração, como é o caso a seguir</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-intro-impropria-sageplot.html">
 \begin{equation*}
 \integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}.
 \end{equation*}
 </div>
-<p class="continuation">As integrais que possuem uma dessas características são chamadas  <dfn class="terminology">integrais impróprias</dfn>. Entre outras utilidades, as integrais impróprias permitem determinar se uma região infinita que está sob a curva <span class="process-math">\(\frac{1}{x^2}\text{,}\)</span> como ilustrado na <a href="" class="xref" data-knowl="./knowl/fig-intro-impropria-sageplot.html" title="Figura 1.1">Figura 1.1</a>, possui ou não área infinita. <figure class="figure figure-like" id="fig-intro-impropria-sageplot"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/image-sage-plot.svg" role="img" class="contained" onerror="this.src='images/image-sage-plot.png';this.onerror=null;"></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></section><section class="subsection" id="subsec-intervalos-infinitos"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Intervalos infinitos</span>
+<div class="para">As integrais que possuem uma dessas características são chamadas  <dfn class="terminology">integrais impróprias</dfn>. Entre outras utilidades, as integrais impróprias permitem determinar se uma região infinita que está sob a curva <span class="process-math">\(\frac{1}{x^2}\text{,}\)</span> como ilustrado na <a href="" class="xref" data-knowl="./knowl/fig-intro-impropria-sageplot.html" title="Figura 1.1">Figura 1.1</a>, possui ou não área infinita. <figure class="figure figure-like" id="fig-intro-impropria-sageplot"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/image-sage-plot.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div>
+</div></section><section class="subsection" id="subsec-intervalos-infinitos"><h3 class="heading hide-type">
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Intervalos infinitos</span>
 </h3>
-<article class="assemblage assemblage-like" id="assemblage-impropria-intervalo-infinito"><ul id="p-8" class="disc">
-<li id="assemblage-impropria-1">
-<p id="p-9">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\([a, \infty)\text{,}\)</span> então</p>
+<article class="assemblage assemblage-like" id="assemblage-impropria-intervalo-infinito"><div class="para logical" id="p-8"><ul class="disc">
+<li id="assemblage-impropria-1"><div class="para logical" id="p-9">
+<div class="para">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\([a, \infty)\text{,}\)</span> então</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integrald{f(x)}{a}{\infty}{x} = \lim_{b\to\infty} \integrald{f(x)}{a}{b}{x} 
 \end{equation*}
 </div>
-</li>
-<li id="assemblage-impropria-2">
-<p id="p-10">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\((-\infty,a]\text{,}\)</span> então</p>
+</div></li>
+<li id="assemblage-impropria-2"><div class="para logical" id="p-10">
+<div class="para">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\((-\infty,a]\text{,}\)</span> então</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integrald{f(x)}{-\infty}{b}{x} = \lim_{a\to -\infty} \integrald{f(x)}{a}{b}{x} 
 \end{equation*}
 </div>
-</li>
-<li id="li-6"><p id="p-11">Se qualquer das integrais acima for um número, dizemos que a integral é <dfn class="terminology">convergente</dfn>. Por outro lado, se o resultado for <span class="process-math">\(\pm \infty\)</span> a integral é dita <dfn class="terminology">divergente</dfn>.</p></li>
-</ul></article><article class="example example-like" id="ex-impropria-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-impropria-1"><h4 class="heading">
+</div></li>
+<li id="li-6"><div class="para" id="p-11">Se qualquer das integrais acima for um número, dizemos que a integral é <dfn class="terminology">convergente</dfn>. Por outro lado, se o resultado for <span class="process-math">\(\pm \infty\)</span> a integral é dita <dfn class="terminology">divergente</dfn>.</div></li>
+</ul></div></article><details id="ex-impropria-1" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-impropria-1"><article class="example example-like"><p id="p-12">Determine a integral <span class="process-math">\(\integrald{\frac{1}{x^2}}{1}{\infty}{x} \text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<p id="p-13">De acordo com <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-1.html" title="Item">Item </a>, temos</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-12">Determine a integral <span class="process-math">\(\integrald{\frac{1}{x^2}}{1}{\infty}{x} \text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-1" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-13">
+<div class="para">De acordo com <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-1.html" title="Item">Item </a>, temos</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-1.html" id="md-1">
 \begin{align*}
 \integrald{\frac{1}{x^2}}{1}{\infty}{x}\amp =\lim_{b\to\infty} \integrald{\frac{1}{x^2}}{1}{b}{x} \amp \quad \ct{calcule a integral indefinida}\\
 \amp =\lim_{b\to\infty}\left(\left. -\frac{1}{x} \right]_1^b\right)\amp \quad \ct{Teorema Fundamental do Cálculo.}\\
 \amp = \lim_{b\to\infty}\left(1-\frac{1}{b}\right) =1 \amp\quad \ct{calcule o limite.} 
 \end{align*}
 </div>
-<p class="continuation">Logo a integral é convergente.</p>
-</div></div>
-</div></article></div>
-<article class="example example-like" id="ex-impropria-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-impropria-2"><h4 class="heading">
+<div class="para">Logo a integral é convergente.</div>
+</div></div></details></div></article></details><details id="ex-impropria-2" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-impropria-2"><article class="example example-like"><p id="p-14">Determine a integral <span class="process-math">\(\integrald{\frac{1}{\sqrt[4]{1+x}}}{0}{\infty}{x} \text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<p id="p-15">De acordo com <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-1.html" title="Item">Item </a>, temos</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-14">Determine a integral <span class="process-math">\(\integrald{\frac{1}{\sqrt[4]{1+x}}}{0}{\infty}{x} \text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-2" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-15">
+<div class="para">De acordo com <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-1.html" title="Item">Item </a>, temos</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-1.html" id="md-2">
 \begin{align*}
 \integrald{\frac{1}{\sqrt[4]{1+x}}}{0}{\infty}{x} \amp = \lim_{b\to\infty} \integrald{\frac{1}{\sqrt[4]{1+x}}}{0}{b}{x} \amp \quad \ct{calcule a integral indefinida}\\
 \amp = \lim_{b\to\infty} \left(\left. \frac{4}{3}{\left(x + 1\right)}^{\frac{3}{4}} \right]_0^b\right) \amp \quad \ct{Teorema Fundamental do Cálculo.} \\
@@ -206,105 +254,95 @@ true);
 \amp = \infty - \frac{4}{3} = \infty 
 \end{align*}
 </div>
-<p class="continuation">Nesse caso a integral é divergente.</p>
-</div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-16">Determine a integral <span class="process-math">\(\integrald{\frac{1}{x^3}}{1}{\infty}{x} \text{.}\)</span></p>
+<div class="para">Nesse caso a integral é divergente.</div>
+</div></div></details></div></article></details><details id="exercise-1" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-16">Determine a integral <span class="process-math">\(\integrald{\frac{1}{x^3}}{1}{\infty}{x} \text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-17">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-1.html" title="Exemplo 1.2">Exemplo 1.2</a>.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-18"><span class="process-math">\(\frac{1}{2}\)</span></p></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-19">Determine a integral <span class="process-math">\(\integrald{\frac{1}{x}}{1}{\infty}{x} \text{.}\)</span></p>
+<details id="hint-1" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-17">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-1.html" title="Exemplo 1.2">Exemplo 1.2</a>.</div></div></details><details id="answer-1" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-18"><span class="process-math">\(\frac{1}{2}\)</span></div></div></details>
+</div></article></details><details id="exercise-2" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-19">Determine a integral <span class="process-math">\(\integrald{\frac{1}{x}}{1}{\infty}{x} \text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-20">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-1.html" title="Exemplo 1.2">Exemplo 1.2</a>.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-21"><span class="process-math">\(\infty\)</span></p></div></div>
-</div></article></div>
-<article class="example example-like" id="ex-impropria-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-impropria-3"><h4 class="heading">
+<details id="hint-2" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-20">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-1.html" title="Exemplo 1.2">Exemplo 1.2</a>.</div></div></details><details id="answer-2" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-21"><span class="process-math">\(\infty\)</span></div></div></details>
+</div></article></details><details id="ex-impropria-3" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-impropria-3"><article class="example example-like"><p id="p-22">Determine a integral <span class="process-math">\(\integrald{\frac{1}{(1-x)^{4/3}}}{-\infty}{0}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<p id="p-23">Aplicando a igualdade <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-2.html" title="Item">Item </a>, temos</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-22">Determine a integral <span class="process-math">\(\integrald{\frac{1}{(1-x)^{4/3}}}{-\infty}{0}{x}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-3" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-23">
+<div class="para">Aplicando a igualdade <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-2.html" title="Item">Item </a>, temos</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-2.html" id="md-3">
 \begin{align*}
 \integrald{\frac{1}{(1-x)^{4/3}}}{-\infty}{0}{x} \amp = \lim_{a\to -\infty}\integrald{\frac{1}{(1-x)^{4/3}}}{a}{0}{x}  \amp \quad \ct{calcule a integral indefinida.}\\
-\amp =  \lim_{a\to -\infty}\left(\left. \frac{3}{{\sqrt[3]{1-x}}} \right]_0^a\right) \amp \quad  \ct{Teorema Fundamental do Cálculo.} \\
-\amp = \lim_{a\to -\infty}\left(\frac{3}{{\sqrt[3]{1-a }}} + 3   \right) \amp \quad \ct{Calcule o limite.} \\
+\amp =  \lim_{a\to -\infty}\left(\left. -\frac{3}{{\sqrt[3]{1-x}}} \right]_0^a\right) \amp \quad  \ct{Teorema Fundamental do Cálculo.} \\
+\amp = \lim_{a\to -\infty}\left(-\frac{3}{{\sqrt[3]{1-a }}} + 3   \right) \amp \quad \ct{Calcule o limite.} \\
 \amp =3
 \end{align*}
 </div>
-</div></div>
-</div></article></div>
-<article class="example example-like" id="ex-impropia-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-impropia-4"><h4 class="heading">
+</div></div></details></div></article></details><details id="ex-impropia-4" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-impropia-4"><article class="example example-like"><p id="p-24">Determine <span class="process-math">\(\integrald{xe^x}{-\infty}{0}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-25">Usando <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-2.html" title="Item">Item </a>, temos</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-24">Determine <span class="process-math">\(\integrald{xe^x}{-\infty}{0}{x}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-4" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-25">
+<div class="para">Usando <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-2.html" title="Item">Item </a>, temos</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-2.html" id="md-4">
 \begin{align*}
 \integrald{xe^x}{-\infty}{0}{x}\amp = \lim_{a\to -\infty}\integrald{xe^x}{a}{0}{x} 
 \end{align*}
 </div>
-<p class="continuation">A integral acima requer a aplicação do método de integração por partes. Fazendo   <span class="process-math">\(u=x\text{,}\)</span> <span class="process-math">\(\dd v=e^x\text{,}\)</span> obtemos <span class="process-math">\(\dd u=dx\text{,}\)</span> <span class="process-math">\(v=e^x\text{.}\)</span> Então,</p>
-<div class="displaymath process-math">
+<div class="para">A integral acima requer a aplicação do método de integração por partes. Fazendo   <span class="process-math">\(u=x\text{,}\)</span> <span class="process-math">\(\dd v=e^x\text{,}\)</span> obtemos <span class="process-math">\(\dd u=dx\text{,}\)</span> <span class="process-math">\(v=e^x\text{.}\)</span> Então,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-2.html" id="md-5">
 \begin{align*}
 \integrald{xe^x}{a}{0}{x} \amp = \left. xe^x\right]_a^0 - \integrald{e^x}{a}{0}{x}  \\
 \amp = -ae^a-1+ e^a 
 \end{align*}
 </div>
-<p class="continuation">Portanto,</p>
-<div class="displaymath process-math">
+<div class="para">Portanto,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-2.html" id="md-6">
 \begin{align*}
 \integrald{xe^x}{-\infty}{0}{x} \amp = \lim_{a\to -\infty}(-ae^a-1+ e^a) \\
 \amp = \lim_{a\to -\infty}(-ae^a)-\lim_{a\to -\infty}(1)+ \lim_{a\to -\infty}(e^a) \\
 \amp  = -0 -1 + 0 =-1\text{.}
 \end{align*}
 </div>
-<p class="continuation">O primeiro limite acima deve-se a aplicação da regra de L'Hôspital:</p>
-<div class="displaymath process-math">
+<div class="para">O primeiro limite acima deve-se a aplicação da regra de L’Hôspital:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-2.html" id="md-7">
 \begin{align*}
-\lim_{a\to -\infty}ae^a  \amp = \lim_{a\to -\infty}\frac{a}{e^a}=\lim_{a\to -\infty}{1}{-e^{-a}}\\
+\lim_{a\to -\infty}ae^a  \amp = \lim_{a\to -\infty}\frac{a}{e^{-a}}=\lim_{a\to -\infty}\frac{1}{-e^{-a}}\\
 \amp = \lim_{a\to -\infty}(-e^{a})=0 \text{.}
 \end{align*}
 </div>
-</div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-26">Determine <span class="process-math">\(\integrald{(x-1)^2}{-\infty}{0}{x}\text{.}\)</span></p>
+</div></div></details></div></article></details><details id="exercise-3" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-26">Determine <span class="process-math">\(\integrald{(x-1)^2}{-\infty}{0}{x}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-27">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-3.html" title="Exemplo 1.6">Exemplo 1.6</a>.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-28"><span class="process-math">\(divergente\)</span></p></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-29">Determine <span class="process-math">\(\integrald{e^{5x}}{-\infty}{0}{x}\text{.}\)</span></p>
+<details id="hint-3" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-27">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-3.html" title="Exemplo 1.6">Exemplo 1.6</a>.</div></div></details><details id="answer-3" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-28"><span class="process-math">\(divergente\)</span></div></div></details>
+</div></article></details><details id="exercise-4" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-29">Determine <span class="process-math">\(\integrald{e^{5x}}{-\infty}{0}{x}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-30">Faça <span class="process-math">\(u=5x\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-31"><span class="process-math">\(\frac{1}{5}\)</span></p></div></div>
-</div></article></div>
-<article class="assemblage assemblage-like" id="assemblage-2"><ul id="p-32" class="disc">
-<li id="assemblage-impropria-3">
-<p id="p-33">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\((-\infty, \infty)\text{,}\)</span> então</p>
+<details id="hint-4" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-30">Faça <span class="process-math">\(u=5x\text{.}\)</span>
+</div></div></details><details id="answer-4" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-31"><span class="process-math">\(\frac{1}{5}\)</span></div></div></details>
+</div></article></details><article class="assemblage assemblage-like" id="assemblage-2"><div class="para logical" id="p-32"><ul class="disc">
+<li id="assemblage-impropria-3"><div class="para logical" id="p-33">
+<div class="para">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\((-\infty, \infty)\text{,}\)</span> então</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integrald{f(x)}{-\infty}{\infty}{x} = \integrald{f(x)}{-\infty}{c}{x} + \integrald{f(x)}{c}{\infty}{x}  
 \end{equation*}
 </div>
-</li>
-<li id="li-8"><p id="p-34">Se qualquer das integrais acima for um número, dizemos que a integral é <dfn class="terminology">convergente</dfn>. Por outro lado, se o resultado for <span class="process-math">\(\pm \infty\)</span> a integral é dita <dfn class="terminology">divergente</dfn>.</p></li>
-</ul></article><article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
+</div></li>
+<li id="li-8"><div class="para" id="p-34">Se qualquer das integrais acima for um número, dizemos que a integral é <dfn class="terminology">convergente</dfn>. Por outro lado, se o resultado for <span class="process-math">\(\pm \infty\)</span> a integral é dita <dfn class="terminology">divergente</dfn>.</div></li>
+</ul></div></article><details id="example-5" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-35">Determine <span class="process-math">\(\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}\)</span> é convergente ou divergente.</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-36">Aqui vamos escolher <span class="process-math">\(c=0\)</span> em <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-3.html" title="Item">Item </a>. Dessa forma,</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-35">Determine <span class="process-math">\(\integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}\)</span> é convergente ou divergente.</div>
+<div class="solutions"><details id="solution-5" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-36">
+<div class="para">Aqui vamos escolher <span class="process-math">\(c=0\)</span> em <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-3.html" title="Item">Item </a>. Dessa forma,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-3.html" id="md-8">
 \begin{align*}
 \integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}\amp = \integrald{\frac{1}{1+ x^2}}{-\infty}{0}{x}
 +  \integrald{\frac{1}{1+ x^2}}{0}{\infty}{x}\\
@@ -312,173 +350,161 @@ true);
 \lim_{b\to \infty}\integrald{\frac{1}{1+ x^2}}{0}{b}{x} \text{.}
 \end{align*}
 </div>
-<p class="continuation">Uma vez que</p>
-<div class="displaymath process-math">
+<div class="para">Uma vez que</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-3.html" id="md-9">
 \begin{align*}
 \lim_{a\to -\infty}\integrald{\frac{1}{1+ x^2}}{a}{0}{x} \amp =  \lim_{a\to -\infty}  \left(\left. \arctan{x} \right]_a^0\right) \\
 \amp =  \lim_{a\to -\infty}(-\arctan{a})=\frac{\pi}{2}
 \end{align*}
 </div>
-<p class="continuation">e</p>
-<div class="displaymath process-math">
+<div class="para">e</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-3.html" id="md-10">
 \begin{align*}
 \lim_{b\to \infty}\integrald{\frac{1}{1+ x^2}}{0}{b}{x} \amp=  \lim_{b\to \infty}  \left(\left. \arctan{x} \right]_0^b\right) \\
 \amp =  \lim_{b\to \infty}(\arctan{a})=\frac{\pi}{2}\text{,}
 \end{align*}
 </div>
-<p class="continuation">o valor da integral imprópria desejada é</p>
-<div class="displaymath process-math">
+<div class="para">o valor da integral imprópria desejada é</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-3.html">
 \begin{equation*}
 \integrald{\frac{1}{1+ x^2}}{-\infty}{\infty}{x}=\frac{\pi}{2}+\frac{\pi}{2}=\pi.
 \end{equation*}
 </div>
-<p class="continuation">Nesse caso a integral é convergente.</p>
-</div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-5"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-37">Determine  <span class="process-math">\(\integrald{\frac{x}{(x^2+3)^2}}{-\infty}{\infty}{x}\text{.}\)</span></p>
+<div class="para">Nesse caso a integral é convergente.</div>
+</div></div></details></div></article></details><details id="exercise-5" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-37">Determine  <span class="process-math">\(\integrald{\frac{x}{(x^2+3)^2}}{-\infty}{\infty}{x}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-38"><span class="process-math">\(\integral{\frac{x}{(x^2+3)^2}}{x}= -\frac{1}{2 {\left(x^{2} + 3\right)}}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-39">0</p></div></div>
-</div></article></div>
-<section class="subsubsection" id="subsubsec-sugestao-video-intervalos-infinitos"><h4 class="heading hide-type">
-<span class="type">Subsubseção</span> <span class="codenumber">1.1.1</span> <span class="title">Sugestão de vídeo</span>
+<details id="hint-5" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-38"><span class="process-math">\(\integral{\frac{x}{(x^2+3)^2}}{x}= -\frac{1}{2 {\left(x^{2} + 3\right)}}\)</span></div></div></details><details id="answer-5" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-39">0</div></div></details>
+</div></article></details><section class="subsubsection" id="subsubsec-sugestao-video-intervalos-infinitos"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">Sugestão de vídeo</span>
 </h4>
 <ul class="disc">
-<li id="li-9"><p id="p-40">Problema Resolvido:  <a class="external" href="https://youtu.be/N9YqbxYQVBo" target="_blank">Uma simples introdução.</a></p></li>
-<li id="li-10"><p id="p-41">Problema Resolvido:  <a class="external" href="https://youtu.be/ObjZSz-wsPk" target="_blank">Integral imprópria divergente.</a></p></li>
-<li id="li-11"><p id="p-42">Problema Resolvido:  <a class="external" href="https://youtu.be/0snA6YXf-hE" target="_blank">Dois limites infinitos.</a></p></li>
+<li id="li-9"><div class="para" id="p-40">Problema Resolvido:  <a class="external" href="https://youtu.be/N9YqbxYQVBo" target="_blank">Uma simples introdução.</a><a class="xref" id="fn-1" href="" data-knowl="./knowl/fn-1.html" title="Nota de rodapé 1.1"><sup> 1 </sup></a>
+</div></li>
+<li id="li-10"><div class="para" id="p-41">Problema Resolvido:  <a class="external" href="https://youtu.be/ObjZSz-wsPk" target="_blank">Integral imprópria divergente.</a><a class="xref" id="fn-2" href="" data-knowl="./knowl/fn-2.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a>
+</div></li>
+<li id="li-11"><div class="para" id="p-42">Problema Resolvido:  <a class="external" href="https://youtu.be/0snA6YXf-hE" target="_blank">Dois limites infinitos.</a><a class="xref" id="fn-3" href="" data-knowl="./knowl/fn-3.html" title="Nota de rodapé 1.3"><sup> 3 </sup></a>
+</div></li>
 </ul></section></section><section class="subsection" id="subsec-notacao-integrandos-infinitos"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Integrandos infinitos</span>
+<span class="type">Subseção</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Integrandos infinitos</span>
 </h3>
-<article class="assemblage assemblage-like" id="assemblage-impropria-4"><ul id="p-43" class="disc">
-<li id="li-12">
-<p id="p-44">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\([a,b)\text{,}\)</span> e tender a infinito em <span class="process-math">\(b\text{,}\)</span> então</p>
+<article class="assemblage assemblage-like" id="assemblage-impropria-4"><div class="para logical" id="p-43"><ul class="disc">
+<li id="li-12"><div class="para logical" id="p-44">
+<div class="para">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\([a,b)\text{,}\)</span> e tender a infinito em <span class="process-math">\(b\text{,}\)</span> então</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integrald{f(x)}{a}{b}{x} = \lim_{c\to b^{-}}\integrald{f(x)}{a}{c}{x} \text{.}
 \end{equation*}
 </div>
-</li>
-<li id="li-13">
-<p id="p-45">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\((a,b]\text{,}\)</span> e tender a infinito em <span class="process-math">\(a\text{,}\)</span> então</p>
+</div></li>
+<li id="li-13"><div class="para logical" id="p-45">
+<div class="para">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\((a,b]\text{,}\)</span> e tender a infinito em <span class="process-math">\(a\text{,}\)</span> então</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integrald{f(x)}{a}{b}{x} = \lim_{c\to a^{+}}\integrald{f(x)}{c}{b}{x} \text{.}
 \end{equation*}
 </div>
-</li>
-</ul></article><article class="example example-like" id="ex-impropria-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-impropria-6"><h4 class="heading">
+</div></li>
+</ul></div></article><details id="ex-impropria-6" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-impropria-6"><article class="example example-like"><p id="p-46">Determine se a integral <span class="process-math">\(\integrald{\frac{3}{x^2-3x}}{1}{3}{x}\)</span> é convergente ou divergente.</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><div class="displaymath process-math" id="p-47">
+</h4></summary><article class="example example-like"><div class="para" id="p-46">Determine se a integral <span class="process-math">\(\integrald{\frac{3}{x^2-3x}}{1}{3}{x}\)</span> é convergente ou divergente.</div>
+<div class="solutions"><details id="solution-6" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-47"><div class="displaymath process-math" id="md-11">
 \begin{align*}
-\integrald{\frac{3}{x^2-3x}}{1}{3}{x}\amp =\lim_{c\to 3^-}\integrald{\left(\frac{1}{3{\left(x - 3\right)}} - \frac{1}{3x}\right)}{1}{3}{x}\\
+\integrald{\frac{3}{x^2-3x}}{1}{3}{x}\amp =\lim_{c\to 3^-}\integrald{\left(\frac{1}{{\left(x - 3\right)}} - \frac{1}{x}\right)}{1}{3}{x}\\
 \amp = \lim_{c\to 3^-}\frac{1}{3}\left(\ln{|x-3|} - \ln{|x|}\Biggr]_1^c\right) \\
 \amp = -\infty 
 \end{align*}
-</div></div></div>
-</div></article></div>
-<article class="example example-like" id="ex-impropria-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-impropria-7"><h4 class="heading">
+</div></div></div></details></div></article></details><details id="ex-impropria-7" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-impropria-7"><article class="example example-like"><p id="p-48">Determine <span class="process-math">\(\integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}\text{.}\)</span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><div class="displaymath process-math" id="p-49">
+</h4></summary><article class="example example-like"><div class="para" id="p-48">Determine <span class="process-math">\(\integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-7" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-49"><div class="displaymath process-math" id="md-12">
 \begin{align*}
 \integrald{\frac{1}{\sqrt{x-1}}}{1}{2}{x}\amp =  \lim_{c\to 1^+}\integrald{\frac{1}{\sqrt{x-1}}}{c}{2}{x}\\
 \amp = \lim_{c\to 1^+}\left( 2\sqrt{x - 1}\Biggr]_c^2\right) \\
 \amp = \lim_{c\to 1^+}\left(2 -2\sqrt{c - 1} \right) \\
 \amp = 2 
 \end{align*}
-</div></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-6"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-50">Verifique se <span class="process-math">\(\integrald{\frac{1}{x^2-5x}}{1}{5}{x}\)</span> converge ou diverge.</p>
+</div></div></div></details></div></article></details><details id="exercise-6" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-50">Verifique se <span class="process-math">\(\integrald{\frac{1}{x^2-5x}}{1}{5}{x}\)</span> converge ou diverge.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-51">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-7.html" title="Exemplo 1.13">Exemplo 1.13</a>.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-52">A integral é imprópria e  divergente.</p></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-7"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-7"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><p id="p-53">Determine <span class="process-math">\(\integrald{\frac{1}{\sqrt{x-2}}}{2}{5}{x}\text{.}\)</span></p>
+<details id="hint-6" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-51">Revise <a href="" class="xref" data-knowl="./knowl/ex-impropria-7.html" title="Exemplo 1.13">Exemplo 1.13</a>.</div></div></details><details id="answer-6" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-52">A integral é imprópria é divergente.</div></div></details>
+</div></article></details><details id="exercise-7" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-53">Determine <span class="process-math">\(\integrald{\frac{1}{\sqrt{x-2}}}{2}{5}{x}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-54"><span class="process-math">\(f(x)=\frac{1}{\sqrt{x-2}}\)</span> tem assíntota vertical em <span class="process-math">\(x=2\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-55"><span class="process-math">\(2\sqrt{3}\)</span></p></div></div>
-</div></article></div>
-<article class="assemblage assemblage-like" id="assemblage-4"><ul id="p-56" class="disc"><li id="assemblage-impropria-5">
-<p id="p-57">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\([a,b]\text{,}\)</span> exceto para algum <span class="process-math">\(c\)</span> em <span class="process-math">\((a,b)\)</span> no qual <span class="process-math">\(f\)</span> tende a infinito, então</p>
+<details id="hint-7" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-54">
+<span class="process-math">\(f(x)=\frac{1}{\sqrt{x-2}}\)</span> tem assíntota vertical em <span class="process-math">\(x=2\text{.}\)</span>
+</div></div></details><details id="answer-7" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-55"><span class="process-math">\(2\sqrt{3}\)</span></div></div></details>
+</div></article></details><article class="assemblage assemblage-like" id="assemblage-4"><div class="para logical" id="p-56"><ul class="disc"><li id="assemblage-impropria-5"><div class="para logical" id="p-57">
+<div class="para">Se <span class="process-math">\(f\)</span> for contínua no intervalo <span class="process-math">\([a,b]\text{,}\)</span> exceto para algum <span class="process-math">\(c\)</span> em <span class="process-math">\((a,b)\)</span> no qual <span class="process-math">\(f\)</span> tende a infinito, então</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \integrald{f(x)}{a}{b}{x}=\integrald{f(x)}{a}{c}{x} + \integrald{f(x)}{c}{b}{x}.
 \end{equation*}
 </div>
-</li></ul></article><article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h4 class="heading">
+</div></li></ul></div></article><details id="example-8" class="example example-like"><summary><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-58">Determine <span class="process-math">\(\integrald{\frac{1}{x-1}}{0}{3}{x}\text{,}\)</span> se possível.</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-59">O integrando possui uma descontinuidade em <span class="process-math">\(x=1\text{.}\)</span> Assim, de acordo com <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-5.html" title="Item">Item </a>, temos</p>
-<div class="displaymath process-math">
+</h4></summary><article class="example example-like"><div class="para" id="p-58">Determine <span class="process-math">\(\integrald{\frac{1}{x-1}}{0}{3}{x}\text{,}\)</span> se possível.</div>
+<div class="solutions"><details id="solution-8" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-59">
+<div class="para">O integrando possui uma descontinuidade em <span class="process-math">\(x=1\text{.}\)</span> Assim, de acordo com <a href="" class="xref" data-knowl="./knowl/assemblage-impropria-5.html" title="Item">Item </a>, temos</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-5.html" id="md-13">
 \begin{align*}
 \integrald{\frac{1}{x-1}}{0}{3}{x}\amp =\integrald{\frac{1}{x-1}}{0}{1}{x} + \integrald{\frac{1}{x-1}}{1}{3}{x}.
 \end{align*}
 </div>
-<p class="continuation">Mas,</p>
-<div class="displaymath process-math">
+<div class="para">Mas,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-5.html" id="md-14">
 \begin{align*}
 \integrald{\frac{1}{x-1}}{0}{1}{x} \amp = \lim_{c\to 1^-} \integrald{\frac{1}{x-1}}{0}{c}{x} \\\
 \amp = \lim_{c\to 1^-} \left( \ln{|c-1|}-\ln{|-1|}\right) \\
 \amp = \lim_{c\to 1^-} \ln(1-c)=-\infty \text{.}
 \end{align*}
 </div>
-<p class="continuation">Então</p>
-<div class="displaymath process-math">
+<div class="para">Então</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-5.html">
 \begin{equation*}
 \integrald{\frac{1}{x-1}}{0}{1}{x}
 \end{equation*}
 </div>
-<p class="continuation">é divergente. Daí,</p>
-<div class="displaymath process-math">
+<div class="para">é divergente. Daí,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-impropria-5.html">
 \begin{equation*}
 \integrald{\frac{1}{x-1}}{0}{3}{x}
 \end{equation*}
 </div>
-<p class="continuation">diverge.</p>
-</div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-8"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-8"><h4 class="heading">
-<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-60">Determine <span class="process-math">\(\integrald{\ln{x}}{0}{1}{x}\text{.}\)</span></p>
+<div class="para">diverge.</div>
+</div></div></details></div></article></details><details id="exercise-8" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">Exercício de Verificação</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="p-60">Determine <span class="process-math">\(\integrald{\ln{x}}{0}{1}{x}\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-61">Use integral por partes com <span class="process-math">\(u=\ln{x}\)</span> e <span class="process-math">\(\dd v= \dd x\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-62"><span class="process-math">\(-1\)</span></p></div></div>
-</div></article></div></section><section class="exercises" id="exercises-impropia"><h3 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+<details id="hint-8" class="hint solution-like"><summary><span class="type">Dica</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-61">Use integral por partes com <span class="process-math">\(u=\ln{x}\)</span> e <span class="process-math">\(\dd v= \dd x\text{.}\)</span>
+</div></div></details><details id="answer-8" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-62"><span class="process-math">\(-1\)</span></div></div></details>
+</div></article></details></section><section class="exercises" id="exercises-impropia"><h3 class="heading hide-type">
+<span class="type">Exercícios</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Exercícios</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-63">Avalie as integrais que convergem, insira 'divergente' se a integral diverge.</p>
-<p id="p-64">Determine a integral imprópria</p>
-<p id="p-65"><span class="process-math">\(\displaystyle  \int_{-\infty}^{1}  \frac{7}{x^{2}+4} \;dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> insira 'divergente' se a integral não convergir.</p>
+<div class="para" id="p-63">Avalie as integrais que convergem, insira ’divergente’ se a integral diverge.</div> <div class="para" id="p-64">Determine a integral imprópria</div> <div class="para" id="p-65">
+<span class="process-math">\(\displaystyle  \int_{-\infty}^{1}  \frac{7}{x^{2}+4} \;dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> insira ’divergente’ se a integral não convergir.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-66"><span class="process-math">\(\frac{7\tan^{-1}\!\left(\frac{1}{2}\right)}{2}+\frac{7\pi }{4}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="displaymath process-math">
+<details id="answer-9" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-66"><span class="process-math">\(\frac{7\tan^{-1}\!\left(\frac{1}{2}\right)}{2}+\frac{7\pi }{4}\)</span></div></div></details><details id="solution-9" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like"><div class="displaymath process-math">
 \begin{equation*}
 \displaystyle\int_{-\infty}^{1}  \frac{7}{x^{2}+4} \;dx=\lim_{a\to -\infty}\int_{a}^{1}  \frac{7}{x^{2}+4} \;dx=\lim_{a\to -\infty} \left[\frac{7\tan^{-1}\!\left(\frac{x}{2}\right)}{2}\right]_{a}^{1}=\lim_{a\to -\infty}\left[{\textstyle\frac{7}{2}}\tan^{-1}({\textstyle\frac{1}{2}})-\frac{7\tan^{-1}\!\left(\frac{a}{2}\right)}{2}\right]={\textstyle\frac{7}{2}}\tan^{-1}({\textstyle\frac{1}{2}})+\frac{7\pi }{4}
 \end{equation*}
-</div></div></div>
+</div></div></details>
 </div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-67">Determine se a integral é divergente ou convergente. Se for convergente, calcule. Caso contrário, dê a resposta -1.</p>
-<div class="displaymath process-math" id="p-68">
+<div class="para" id="p-67">Determine se a integral é divergente ou convergente. Se for convergente, calcule. Caso contrário, dê a resposta -1.</div> <div class="para logical" id="p-68"><div class="displaymath process-math">
 \begin{equation*}
 \int_{6}^{\infty} x e^{-4x} dx
 \end{equation*}
-</div>
+</div></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-70"><span class="process-math">\(5.89864772543609\times 10^{-11}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">Será necessário usar a integração por partes. Para recordar, segue a fórmula:<div class="displaymath process-math">
+<details id="answer-10" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-69"><span class="process-math">\(5.89864772543609\times 10^{-11}\)</span></div></div></details><details id="solution-10" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">Será necessário usar a integração por partes. Para recordar, segue a fórmula:<div class="displaymath process-math">
 \begin{equation*}
 \int u \; dv = u v - \int v \; du.
 \end{equation*}
@@ -502,13 +528,13 @@ e^{-4 x} \right|_{6}^{\infty}	\\\\
 \end{aligned}
 \end{equation*}
 </div>(O limite  acima desapareceu porque o termo <span class="process-math">\(e^{4 x}\)</span> em seu denominador cresce muito mais rápido do que qualquer polinômio, especialmente o linear <span class="process-math">\(-4 x - 1\)</span>
-</div></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-71">Verifique se a integral abaixo converge, informe 'divergente' se for divergente.</p>
-<p id="p-72"><span class="process-math">\(\displaystyle  \int_{-\infty}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="para" id="p-70">Verifique se a integral abaixo converge, informe ’divergente’ se for divergente.</div> <div class="para" id="p-71">
+<span class="process-math">\(\displaystyle  \int_{-\infty}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx\)</span> <span class="process-math">\(=\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-73"><span class="process-math">\(0\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<details id="answer-11" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-72"><span class="process-math">\(0\)</span></div></div></details><details id="solution-11" class="solution solution-like"><summary><span class="type">Solução</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="displaymath process-math">
 \begin{equation*}
 \displaystyle\int_{-\infty}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx=\int_{-\infty}^{c}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx+\int_{c}^{\infty}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx=\lim_{a\to -\infty}\int_{a}^{c}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx+\lim_{b\to +\infty}\int_{c}^{b}  \frac{3x}{\left(x^{2}+1\right)^{2}} \;dx
@@ -519,37 +545,40 @@ e^{-4 x} \right|_{6}^{\infty}	\\\\
 =\lim_{a\to -\infty} \left[-\frac{3}{2\!\left(x^{2}+1\right)}\right]_{a}^{c}+\lim_{b\to +\infty} \left[-\frac{3}{2\!\left(x^{2}+1\right)}\right]_{c}^{b}=0
 \end{equation*}
 </div>
-</div></div>
+</div></details>
 </div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-74">Determine se a integral é divergente ou convergente. Se for convergente, calcule. Se não,  responda como "divergente".</p>
-<div class="displaymath process-math" id="p-75">
+<div class="para" id="p-73">Determine se a integral é divergente ou convergente. Se for convergente, calcule. Se não,  responda como "divergente".</div> <div class="para logical" id="p-74"><div class="displaymath process-math">
 \begin{equation*}
 \int_{-\infty}^{\infty} (-1 x^2 + 4 x  - 1) dx
 \end{equation*}
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-77">divergente</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-78">Considere a integral</p>
+</div></div>
+<div class="solutions"><details id="answer-12" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-75">divergente</div></div></details></div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-76">
+<div class="para">Considere a integral</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_{0}^{\,2} {\frac{-6 x  + 18}{2x-3}}\, dx
 \end{equation*}
 </div>
-<p class="continuation">Se a integral é divergente ponha o "D" maiusculo. Caso contrário, calcule a integral.</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-80"><span class="process-math">\(\text{D}\)</span></p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-81">Calcule o valor da integral imprópria a seguir. Se for divergente ponha, 'divergente'.</p>
-<div class="displaymath process-math" id="p-82">
+<div class="para">Se a integral é divergente ponha o "D" maiusculo. Caso contrário, calcule a integral.</div>
+</div>
+<div class="solutions"><details id="answer-13" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-77"><span class="process-math">\(\text{D}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-78">Calcule o valor da integral imprópria a seguir. Se for divergente ponha, ’divergente’.</div> <div class="para logical" id="p-79">
+<div class="displaymath process-math">
 \begin{equation*}
 \int_{0}^{2}\! \frac{dx}{x^{2}-6x+5}
 \end{equation*}
 </div>
-<p class="continuation">Resposta: <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-83"><span class="process-math">\(\text{divergente}\)</span></p></div></div>
-</div></article></section></section></div></main>
+<div class="para">Resposta: <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>
+</div>
+</div>
+<div class="solutions"><details id="answer-14" class="answer solution-like"><summary><span class="type">Resposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-80"><span class="process-math">\(\text{divergente}\)</span></div></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="calc-integral-impropia.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="references-backmatter.html" title="Próximo"><span class="name">Próximo</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
